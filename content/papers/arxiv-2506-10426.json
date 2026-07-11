@@ -1,0 +1,150 @@
+{
+  "work_id": "arxiv-2506-10426",
+  "slug": "towards-understanding-bugs-in-distributed-training-and-inference-framewo-2506-10426",
+  "title": {
+    "original": "Towards Understanding Bugs in Distributed Training and Inference Frameworks for Large Language Models",
+    "zh": "理解大型语言模型分布式训练与推理框架中的缺陷",
+    "en": "Towards Understanding Bugs in Distributed Training and Inference Frameworks for Large Language Models"
+  },
+  "authors": [
+    {
+      "name": "Xiao Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Haoxuan Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Feifei Niu",
+      "affiliations": []
+    },
+    {
+      "name": "Xing Hu",
+      "affiliations": []
+    },
+    {
+      "name": "Jacky Wai Keung",
+      "affiliations": []
+    },
+    {
+      "name": "Xin Xia",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2506.10426",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-06-12",
+      "latest_revision_date": "2025-06-12",
+      "url": "https://arxiv.org/abs/2506.10426"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-06-12",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-06-12"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-2",
+  "tags": [
+    "distributed-training",
+    "parallelism",
+    "fault-tolerance"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "该研究发布跨三个主流框架的缺陷分类与修复模式，为分布式训练/推理的测试和自动修复工具提供可复用知识基础。",
+    "en": "The study supplies a cross-framework defect taxonomy and repair patterns that reusable testing and automated-repair tools for distributed training and inference can build on."
+  },
+  "abstract": {
+    "zh": "该研究系统分析 DeepSpeed、Megatron-LM 和 Colossal-AI 的已修复缺陷，从症状、根因、定位成本和修复方式总结分布式训练与推理框架的可靠性模式。",
+    "en": "This empirical study analyzes fixed defects from DeepSpeed, Megatron-LM, and Colossal-AI, characterizing symptoms, root causes, diagnosis effort, and repair patterns in distributed training and inference frameworks."
+  },
+  "problem": {
+    "zh": "框架复杂度快速上升，但缺少大样本证据说明缺陷如何表现、为何产生以及哪些修复可自动化，质量保障工具因而缺乏设计依据。",
+    "en": "Framework complexity is rising without large-sample evidence on how defects manifest, why they occur, or which repairs are automatable, leaving reliability tooling without a grounded design basis."
+  },
+  "approach": {
+    "zh": "作者整理三个项目的修复记录并人工编码，比较症状与根因、复现和修复投入、分布式特有错误以及常见低改动修复策略。",
+    "en": "The authors curate and manually code repairs from three projects, comparing symptoms with causes, reproduction and fix effort, distributed-specific failures, and recurring low-change repair strategies."
+  },
+  "system_design": {
+    "zh": "研究管线由缺陷采集、筛选、分类编码、跨框架统计和可自动化机会提炼组成，输出面向测试与修复系统的缺陷分类。",
+    "en": "The study pipeline collects and filters defect reports, applies a coding taxonomy, aggregates patterns across frameworks, and derives opportunities for testing and automated repair."
+  },
+  "key_results": {
+    "zh": "分析揭示通信与资源分配等分布式特有根因，症状常与根因脱节；同时相当一部分修复遵循小范围条件、参数或兼容性修改。",
+    "en": "The analysis identifies distributed-specific causes such as communication and allocation errors, a frequent symptom-cause disconnect, and many repairs that follow small conditional, parameter, or compatibility changes."
+  },
+  "limitations": {
+    "zh": "数据只包含公开且已修复的问题，受报告质量和项目选择偏差影响；历史统计不能直接检测新缺陷，也未覆盖闭源训练栈。",
+    "en": "The dataset contains only public, fixed issues and inherits reporting and project-selection bias; historical patterns do not directly detect new defects and exclude proprietary stacks."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "DeepSpeed bug analysis",
+      "Megatron-LM bug analysis",
+      "Colossal-AI bug analysis"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Fixed bugs analyzed",
+        "value": 308,
+        "unit": "bugs",
+        "higher_is_better": null
+      },
+      {
+        "name": "Bug fixes requiring no more than ten changed lines",
+        "value": 48,
+        "unit": "%",
+        "higher_is_better": null
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.10426",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2506.10426",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2506.10426"
+  }
+}

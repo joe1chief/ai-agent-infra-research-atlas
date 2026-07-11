@@ -1,0 +1,127 @@
+{
+  "work_id": "arxiv-2603-27299",
+  "slug": "from-inference-routing-to-agent-orchestration-declarative-policy-compila-2603-27299",
+  "title": {
+    "original": "From Inference Routing to Agent Orchestration: Declarative Policy Compilation with Cross-Layer Verification",
+    "zh": "从推理路由到智能体编排：具备跨层验证的声明式策略编译",
+    "en": "From Inference Routing to Agent Orchestration: Declarative Policy Compilation with Cross-Layer Verification"
+  },
+  "authors": [
+    {
+      "name": "Huamin Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Xunzhuo Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Bowei He",
+      "affiliations": []
+    },
+    {
+      "name": "Xue Liu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2603.27299",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-03-28",
+      "latest_revision_date": "2026-03-28",
+      "url": "https://arxiv.org/abs/2603.27299"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-03-28",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-28"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Semantic Router DSL 将同一可验证策略编译到推理、Agent、Kubernetes 和协议边界，是跨层控制基础设施。",
+    "en": "The Semantic Router DSL compiles one verifiable policy into inference, agent, Kubernetes, and protocol-boundary targets, making it cross-layer control infrastructure."
+  },
+  "abstract": {
+    "zh": "该论文把生产推理路由使用的 Semantic Router DSL 扩展到多步 Agent 编排和基础设施策略。一个非图灵完备的声明源可同时编译为 LangGraph/OpenClaw 决策节点、Kubernetes 策略、YANG/NETCONF 配置及 MCP/A2A 边界门。",
+    "en": "This paper extends the production Semantic Router DSL from per-request inference routing to multi-step orchestration and infrastructure policy. One non-Turing-complete source compiles to LangGraph/OpenClaw decision nodes, Kubernetes policy, YANG/NETCONF payloads, and MCP/A2A boundary gates."
+  },
+  "problem": {
+    "zh": "模型网关、Agent 图、协议门和集群策略由不同团队维护时，同一隐私或安全阈值会跨层漂移，审计轨迹也难与实际决策逻辑保持一致。",
+    "en": "When model gateways, agent graphs, protocol gates, and cluster policy are maintained separately, privacy and safety thresholds drift across layers and audit traces diverge from executed logic."
+  },
+  "approach": {
+    "zh": "DSL 用内容信号、加权投影和有优先级决策树描述策略；编译器复用同一信号定义生成各层目标，并静态检查分支冲突、穷尽性和引用完整性。",
+    "en": "The DSL expresses policy through content signals, weighted projections, and prioritized decision trees; a compiler reuses signal definitions across targets and statically checks conflicts, exhaustiveness, and referential integrity."
+  },
+  "system_design": {
+    "zh": "编译前端构建可验证策略 IR，后端分别发射编排节点、NetworkPolicy/Sandbox CRD/ConfigMap、网络设备配置和协议边界检查；审计事件由同一决策树结构生成。",
+    "en": "A compiler front end builds a verifiable policy IR; target back ends emit orchestration nodes, NetworkPolicy/Sandbox CRD/ConfigMap resources, network-device payloads, and protocol gates, with audit events generated from the same decision tree."
+  },
+  "key_results": {
+    "zh": "论文给出跨层策略编译体系，并基于语言限制声明路由穷尽、分支无冲突、引用完整及审计与决策结构耦合等保证；摘要未提供性能基准。",
+    "en": "The paper presents a cross-layer compilation system and, through language restrictions, claims exhaustive routing, conflict-free branching, referential integrity, and structurally coupled audit traces; no performance benchmark is reported in the abstract."
+  },
+  "limitations": {
+    "zh": "非图灵完备提升可验证性但限制动态策略表达；静态保证依赖信号实现和各后端语义正确，无法证明运行时分类器、集群或外部协议本身无错。",
+    "en": "Non-Turing-completeness aids verification but limits dynamic expressiveness; guarantees depend on correct signal implementations and target semantics and cannot prove runtime classifiers, clusters, or external protocols correct."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["production inference routing", "multi-step agent policy compilation", "Kubernetes and protocol-boundary policy generation"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["separately maintained cross-layer policies"],
+    "metrics": [
+      {"name": "static guarantees", "value": "exhaustive routing, conflict-free branching, referential integrity, and coupled audit traces", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "部署目标和静态保证来自官方摘要；摘要未给出性能、规模、模型或硬件实验，证明细节与各后端验证待全文审计。",
+      "en": "Deployment targets and static guarantees come from the official abstract; it reports no performance, scale, model, or hardware experiment, and proof details and target validation await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.27299",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2603.27299",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2603.27299"
+  }
+}

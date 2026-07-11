@@ -1,0 +1,132 @@
+{
+  "work_id": "arxiv-2504-14738",
+  "slug": "promptevals-a-dataset-of-assertions-and-guardrails-for-custom-production-2504-14738",
+  "title": {
+    "original": "PROMPTEVALS: A Dataset of Assertions and Guardrails for Custom Production Large Language Model Pipelines",
+    "zh": "PROMPTEVALS：面向定制化生产 LLM 流水线的断言与护栏数据集",
+    "en": "PROMPTEVALS: A Dataset of Assertions and Guardrails for Custom Production Large Language Model Pipelines"
+  },
+  "authors": [
+    {
+      "name": "Reya Vir",
+      "affiliations": []
+    },
+    {
+      "name": "Shreya Shankar",
+      "affiliations": []
+    },
+    {
+      "name": "Harrison Chase",
+      "affiliations": []
+    },
+    {
+      "name": "Will Fu-Hinthorn",
+      "affiliations": []
+    },
+    {
+      "name": "Aditya Parameswaran",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2504.14738",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-04-20",
+      "latest_revision_date": "2025-04-20",
+      "url": "https://arxiv.org/abs/2504.14738"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-04-20",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-04-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "PROMPTEVALS 把生产提示与可执行断言配对，为 guardrail 生成、比较和流水线旁路验证提供公共评测基础。",
+    "en": "PROMPTEVALS pairs production prompts with executable assertions, creating reusable evaluation infrastructure for guardrail generation, comparison, and pipeline-side validation."
+  },
+  "abstract": {
+    "zh": "PROMPTEVALS 汇集生产 LLM 数据流水线中的提示及其开发者定义断言，用于研究如何自动生成贴合任务要求的 guardrail。数据来自开源流水线工具的真实使用场景，连接了提示工程、可靠性检查与生产评测。",
+    "en": "PROMPTEVALS pairs production LLM-pipeline prompts with developer-authored assertions for studying automatic guardrail generation. Drawn from real use of open-source pipeline tools, it links prompt requirements to executable reliability checks."
+  },
+  "problem": {
+    "zh": "定制 LLM 流水线常在批量生产输入上偏离指令，但开发者难以系统地写出覆盖真实需求的输出断言与护栏。",
+    "en": "Custom LLM pipelines often violate instructions at production scale, yet developers lack a systematic way to derive output assertions that capture the task's actual requirements."
+  },
+  "approach": {
+    "zh": "作者从开发者工具中整理提示—断言配对，划分保留测试集，并比较闭源、开源及针对该任务微调的模型生成相关断言的能力。",
+    "en": "The authors curate prompt–assertion pairs from developer tooling, create a held-out benchmark split, and compare proprietary, open, and task-fine-tuned models on assertion generation."
+  },
+  "system_design": {
+    "zh": "数据契约将每条生产提示关联到一组可执行断言标准，支持训练断言生成器、离线比较候选 guardrail，并将选中的检查嵌入流水线旁路运行。",
+    "en": "Its data contract associates each production prompt with executable assertion criteria, enabling assertion-generator training, offline guardrail comparison, and eventual sidecar checks beside a pipeline."
+  },
+  "key_results": {
+    "zh": "在保留集上，面向 PROMPTEVALS 微调的 Mistral 与 Llama 3 模型被报告在断言相关性上优于 GPT-4o，同时具有更低时延。",
+    "en": "On the held-out split, Mistral and Llama 3 models fine-tuned for PROMPTEVALS are reported to generate more relevant assertions than GPT-4o with lower latency."
+  },
+  "limitations": {
+    "zh": "数据来源于特定开源工具的自选择开发者，断言相关性不等同于线上故障拦截率；跨行业覆盖、误报成本和 guardrail 漂移仍需生产验证。",
+    "en": "The corpus reflects self-selected users of particular tools, and assertion relevance is not the same as online failure prevention; domain coverage, false-positive cost, and guardrail drift need production validation."
+  },
+  "evaluation": {
+    "models": ["fine-tuned Mistral", "fine-tuned Llama 3", "GPT-4o", "closed- and open-source assertion generators"],
+    "workloads": ["2,087 production LLM pipeline prompts", "12,623 assertion criteria", "held-out assertion-generation benchmark"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["GPT-4o", "previous assertion collections"],
+    "metrics": [
+      {"name": "dataset scale vs previous collections", "value": "5x", "higher_is_better": true},
+      {"name": "average assertion-generation improvement", "value": "20.93%", "baseline": "GPT-4o", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "数据规模、具名模型、GPT-4o 基线和平均改进来自官方摘要；评分定义、领域分布、硬件与时延数值待全文审计。",
+      "en": "Dataset scale, named models, the GPT-4o baseline, and average improvement come from the official abstract; scoring, domain mix, hardware, and latency values await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.14738",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "PROMPTEVALS",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2504.14738",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2504.14738"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "work_id": "arxiv-2504-13161",
+  "slug": "nemotron-climb-clustering-based-iterative-data-mixture-bootstrapping-for-2504-13161",
+  "title": {
+    "original": "Nemotron-CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+    "zh": "Nemotron-CLIMB：面向语言模型预训练的聚类式迭代数据配比自举",
+    "en": "Nemotron-CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training"
+  },
+  "authors": [
+    {
+      "name": "Shizhe Diao",
+      "affiliations": []
+    },
+    {
+      "name": "Yu Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Yonggan Fu",
+      "affiliations": []
+    },
+    {
+      "name": "Xin Dong",
+      "affiliations": []
+    },
+    {
+      "name": "Dan Su",
+      "affiliations": []
+    },
+    {
+      "name": "Markus Kliegl",
+      "affiliations": []
+    },
+    {
+      "name": "Zijia Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Peter Belcak",
+      "affiliations": []
+    },
+    {
+      "name": "Yoshi Suhara",
+      "affiliations": []
+    },
+    {
+      "name": "Hongxu Yin",
+      "affiliations": []
+    },
+    {
+      "name": "Mostofa Patwary",
+      "affiliations": []
+    },
+    {
+      "name": "Yingyan Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Jan Kautz",
+      "affiliations": []
+    },
+    {
+      "name": "Pavlo Molchanov",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2504.13161",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-04-17",
+      "latest_revision_date": "2025-11-30",
+      "url": "https://arxiv.org/abs/2504.13161"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-04-17",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-11-30"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-1",
+  "tags": [
+    "data-curation",
+    "data-provenance",
+    "governance"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Nemotron-CLIMB 将语义聚类、代理训练和配比搜索组合成自动化数据混合系统，并开放中间语料供复用。",
+    "en": "Nemotron-CLIMB combines semantic clustering, proxy training, and mixture search into an automated data-mixing system and releases intermediate corpora for reuse."
+  },
+  "abstract": {
+    "zh": "Nemotron-CLIMB 通过语义聚类和代理模型迭代搜索预训练数据配比，并发布带簇标注的大规模语料与最终混合数据集。",
+    "en": "Nemotron-CLIMB discovers pretraining mixtures by combining semantic clustering with iterative proxy-model search, and releases both a clustered corpus and a selected training mixture."
+  },
+  "problem": {
+    "zh": "Common Crawl 等网页语料没有天然领域标签，人工划分昂贵，导致团队很难系统发现对总体或特定领域最有效的数据组合。",
+    "en": "Web corpora such as Common Crawl lack native domain labels, while manual partitioning is expensive, making effective global or domain-specific mixture discovery difficult."
+  },
+  "approach": {
+    "zh": "框架先把大规模文档嵌入并聚类，再用较小代理模型评估候选配比，由预测器引导下一轮搜索和混合精炼。",
+    "en": "The framework embeds and clusters documents, evaluates candidate mixtures with a smaller proxy model, and uses a predictor to guide successive mixture-search and refinement rounds."
+  },
+  "system_design": {
+    "zh": "数据层生成语义簇，实验层以代理训练采样不同簇权重，预测层更新配比；最终权重用于构建 ClimbMix，并保留 ClimbLab 供复现实验。",
+    "en": "A data layer creates semantic clusters, an experiment layer trains proxies under sampled weights, and a predictor updates the mixture; final weights produce ClimbMix while ClimbLab supports follow-up research."
+  },
+  "key_results": {
+    "zh": "自动优化的混合在相同 token 预算下优于随机配比和所比较的小模型基线，针对特定领域优化时也带来额外收益。",
+    "en": "The optimized mixture beats random mixing and the compared small-model baselines under equal token budgets, with further gains when the search targets a specific domain."
+  },
+  "limitations": {
+    "zh": "语义簇未必对应可解释或稳定的领域，代理模型排序可能无法迁移到更大架构；搜索还会继承原始网页语料的覆盖偏差。",
+    "en": "Semantic clusters may not form stable, interpretable domains, proxy rankings may not transfer to larger architectures, and the search inherits coverage biases in the source web corpus."
+  },
+  "evaluation": {
+    "models": [
+      "Nemotron-CLIMB 1B",
+      "Llama-3.2-1B"
+    ],
+    "workloads": [
+      "400B-token continual pretraining",
+      "Social Sciences domain mixture optimization"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Llama-3.2-1B",
+      "random sampling"
+    ],
+    "metrics": [
+      {
+        "name": "Performance improvement",
+        "value": 2,
+        "unit": "%",
+        "baseline": "Llama-3.2-1B",
+        "higher_is_better": true
+      },
+      {
+        "name": "Domain-targeted improvement",
+        "value": 5,
+        "unit": "%",
+        "baseline": "random sampling",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "OLMo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 69,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.13161",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {
+      "type": "data",
+      "title": "Nemotron-CLIMB data and project page",
+      "url": "https://research.nvidia.com/labs/lpr/climb/",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Nemotron-CLIMB",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2504.13161",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2504.13161"
+  }
+}

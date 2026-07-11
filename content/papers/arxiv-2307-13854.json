@@ -1,0 +1,198 @@
+{
+  "work_id": "arxiv-2307-13854",
+  "slug": "webarena-a-realistic-web-environment-for-building-autonomous-agents-2307-13854",
+  "title": {
+    "original": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+    "zh": "WebArena：构建自主智能体的真实网页环境",
+    "en": "WebArena: A Realistic Web Environment for Building Autonomous Agents"
+  },
+  "authors": [
+    {
+      "name": "Shuyan Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Frank F. Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Hao Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Xuhui Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Robert Lo",
+      "affiliations": []
+    },
+    {
+      "name": "Abishek Sridhar",
+      "affiliations": []
+    },
+    {
+      "name": "Xianyi Cheng",
+      "affiliations": []
+    },
+    {
+      "name": "Tianyue Ou",
+      "affiliations": []
+    },
+    {
+      "name": "Yonatan Bisk",
+      "affiliations": []
+    },
+    {
+      "name": "Daniel Fried",
+      "affiliations": []
+    },
+    {
+      "name": "Uri Alon",
+      "affiliations": []
+    },
+    {
+      "name": "Graham Neubig",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2307.13854",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v4",
+      "first_public_date": "2023-07-25",
+      "latest_revision_date": "2024-04-16",
+      "url": "https://arxiv.org/abs/2307.13854"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2023-07-25",
+    "venue_publication_date": null,
+    "latest_revision_date": "2024-04-16"
+  },
+  "window_status": "context",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "context",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "execution-environment",
+    "sandbox"
+  ],
+  "category_confidence": 0.99,
+  "inclusion_reason": {
+    "zh": "WebArena 提供可复现的完整网站、工具、知识库、长时程任务和功能正确性判定，是网页智能体执行与评测基础设施。",
+    "en": "WebArena provides reproducible full websites, tools, knowledge bases, long-horizon tasks, and functional-correctness checks as execution and evaluation infrastructure for web agents."
+  },
+  "abstract": {
+    "zh": "WebArena 构建覆盖电商、社交论坛、协作开发和内容管理的可复现真实网站环境，并发布面向日常长时程任务的基准。",
+    "en": "WebArena builds reproducible realistic websites spanning commerce, social forums, collaborative development, and content management, together with a benchmark of long-horizon daily tasks."
+  },
+  "problem": {
+    "zh": "早期网页智能体多在简化合成环境中测试，无法反映真实网站状态、跨页面依赖、外部知识和任务完成的功能正确性。",
+    "en": "Earlier web agents were tested in simplified synthetic settings that omit real site state, cross-page dependencies, external knowledge, and functional correctness."
+  },
+  "approach": {
+    "zh": "作者部署可操作网站，加入地图和用户手册等工具与知识源，设计仿真人类日常操作的任务，并以最终网站状态验证完成。",
+    "en": "The authors deploy functional sites, add tools and knowledge sources such as maps and manuals, design tasks modeled on daily web use, and verify completion from final site state."
+  },
+  "system_design": {
+    "zh": "环境服务器承载网站与状态，智能体通过浏览器执行动作，任务规范定义初始条件和目标，验证器读取站点状态计算功能成功。",
+    "en": "Environment servers host sites and state, agents act through a browser, task specifications define initial conditions and goals, and verifiers inspect site state for functional success."
+  },
+  "key_results": {
+    "zh": "官方摘要显示最佳 GPT-4 智能体成功率远低于人类，表明该环境能暴露真实网页任务中的显著能力缺口。",
+    "en": "The official abstract shows the best GPT-4 agent far below human success, demonstrating that the environment exposes substantial capability gaps on realistic web tasks."
+  },
+  "limitations": {
+    "zh": "自托管网站仍不能完全复现开放互联网的变化、反机器人机制和安全风险；固定任务可能被专门调优，环境维护成本也较高。",
+    "en": "Self-hosted sites cannot fully reproduce open-web drift, anti-bot systems, or safety risks; fixed tasks can be overfit and the environment is costly to maintain."
+  },
+  "evaluation": {
+    "models": [
+      "GPT-4-based agent",
+      "human participants"
+    ],
+    "workloads": [
+      "e-commerce web tasks",
+      "social-forum tasks",
+      "collaborative software-development tasks",
+      "content-management tasks",
+      "long-horizon web navigation"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "best GPT-4-based agent",
+      "human performance"
+    ],
+    "metrics": [
+      {
+        "name": "Best GPT-4-based agent task success rate",
+        "value": 14.41,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Human task success rate",
+        "value": 78.24,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "模型、任务、硬件、基线与指标仅转录自官方 arXiv 摘要；摘要未披露的表格和部署细节仍待全文审计。",
+      "en": "Models, workloads, hardware, baselines, and metrics are transcribed only from the official arXiv abstract; undisclosed tables and deployment details still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2307.13854",
+      "title": "Official arXiv record",
+      "accessed_at": "2026-07-11"
+    },
+    {
+      "type": "author_project",
+      "url": "https://webarena.dev/",
+      "title": "WebArena code, data, environment, and demonstrations",
+      "accessed_at": "2026-07-11"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "manual_curation",
+  "artifacts": [
+    {
+      "type": "demo",
+      "title": "WebArena code, data, environment, and demonstrations",
+      "url": "https://webarena.dev/",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "WebArena",
+    "extends": [],
+    "supersedes": [],
+    "related": [
+      "arxiv-2511-11672"
+    ]
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2307.13854",
+    "mirror_status": "external_only",
+    "license": null,
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2307.13854"
+  }
+}

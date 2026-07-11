@@ -1,0 +1,130 @@
+{
+  "work_id": "arxiv-2501-00001",
+  "slug": "test-infra-system",
+  "title": {
+    "original": "Test Infra System",
+    "zh": "测试基础设施系统",
+    "en": "Test Infra System"
+  },
+  "authors": [
+    {
+      "name": "Atlas Maintainer",
+      "affiliations": ["Open Systems Lab"]
+    }
+  ],
+  "institutions": ["Open Systems Lab"],
+  "identifiers": {
+    "arxiv": "2501.00001",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "type": "arxiv",
+      "date": "2025-01-02",
+      "url": "https://arxiv.org/abs/2501.00001",
+      "identifier": "2501.00001"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-01-02",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-01-03"
+  },
+  "window_status": "new_in_window",
+  "venue": null,
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": ["inference-serving", "scheduling"],
+  "category_confidence": 0.95,
+  "inclusion_reason": {
+    "zh": "提供可复用的推理服务基础设施。",
+    "en": "Provides reusable infrastructure for inference serving."
+  },
+  "abstract": {
+    "zh": "用于流水线测试的双语摘要。",
+    "en": "A bilingual abstract used by pipeline tests."
+  },
+  "problem": {
+    "zh": "测试目录中的推理服务效率较低。",
+    "en": "Inference serving is inefficient in the test catalog."
+  },
+  "approach": {
+    "zh": "使用确定性调度器处理请求。",
+    "en": "Uses a deterministic scheduler to process requests."
+  },
+  "system_design": {
+    "zh": "系统由路由器、调度器和工作节点组成。",
+    "en": "The system consists of a router, scheduler, and workers."
+  },
+  "key_results": {
+    "zh": "在合成负载上吞吐提升 20%。",
+    "en": "Improves throughput by 20 percent on a synthetic workload."
+  },
+  "limitations": {
+    "zh": "仅在单一测试集群上评估。",
+    "en": "Evaluated on only one test cluster."
+  },
+  "evaluation": {
+    "models": ["FixtureLM-7B"],
+    "workloads": ["Synthetic serving trace"],
+    "hardware": ["8x TestGPU"],
+    "cluster_scale": "1 node / 8 accelerators",
+    "baselines": ["FIFO"],
+    "metrics": [
+      {
+        "name": "throughput",
+        "value": 120,
+        "unit": "requests/s",
+        "baseline": "100 requests/s",
+        "higher_is_better": true
+      }
+    ]
+  },
+  "seed_reports": [
+    {
+      "report_title": "Example Technical Report",
+      "seed_report_path": "reports/example.pdf",
+      "report_blob_sha": "0123456789abcdef0123456789abcdef01234567",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": 42,
+      "page": 88,
+      "context": "[42] Atlas Maintainer. Test Infra System. arXiv:2501.00001."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.00001",
+      "title": "Test Infra System",
+      "accessed_at": "2026-07-11"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {
+      "type": "code",
+      "url": "https://github.com/example/test-infra-system",
+      "title": "Reference implementation",
+      "license": "MIT"
+    }
+  ],
+  "reproducibility_badges": ["code-available"],
+  "relations": {
+    "system_family": "Test Infra",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2501.00001",
+    "mirror_status": "not_mirrored",
+    "license": null,
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2501.00001"
+  }
+}

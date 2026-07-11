@@ -1,0 +1,142 @@
+{
+  "work_id": "arxiv-2508-18298",
+  "slug": "murakkab-resource-efficient-agentic-workflow-orchestration-in-cloud-plat-2508-18298",
+  "title": {
+    "original": "Murakkab: Resource-Efficient Agentic Workflow Orchestration in Cloud Platforms",
+    "zh": "Murakkab：云平台中的资源高效代理工作流程编排",
+    "en": "Murakkab: Resource-Efficient Agentic Workflow Orchestration in Cloud Platforms"
+  },
+  "authors": [
+    {
+      "name": "Gohar Irfan Chaudhry",
+      "affiliations": []
+    },
+    {
+      "name": "Esha Choukse",
+      "affiliations": []
+    },
+    {
+      "name": "Haoran Qiu",
+      "affiliations": []
+    },
+    {
+      "name": "Íñigo Goiri",
+      "affiliations": []
+    },
+    {
+      "name": "Rodrigo Fonseca",
+      "affiliations": []
+    },
+    {
+      "name": "Adam Belay",
+      "affiliations": []
+    },
+    {
+      "name": "Ricardo Bianchini",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2508.18298",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-08-22",
+      "latest_revision_date": "2025-09-03",
+      "url": "https://arxiv.org/abs/2508.18298"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-08-22",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-09-03"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Murakkab 的声明式工作流、跨层优化器和自适应云运行时构成可复用的 Agent 资源编排基础设施。",
+    "en": "Murakkab's declarative workflow, cross-layer optimizer, and adaptive cloud runtime form reusable resource-orchestration infrastructure for agents."
+  },
+  "abstract": {
+    "zh": "Murakkab 是云端 Agent 工作流的资源感知服务系统，以声明式抽象分离业务流程和模型/硬件执行配置。画像驱动优化器与自适应运行时跨工作流组件、模型和设备联合配置，以满足用户定义的 SLO。",
+    "en": "Murakkab is a resource-aware serving system for cloud agent workflows that separates workflow intent from model and hardware configuration through a declarative abstraction. A profile-guided optimizer and adaptive runtime jointly map components to resources under user-defined SLOs."
+  },
+  "problem": {
+    "zh": "现有框架把 Agent 逻辑暴露为不透明的模型/工具序列，并与具体模型和硬件绑定，云调度器无法跨节点权衡准确率、时延、能耗和成本。",
+    "en": "Existing frameworks expose opaque model/tool sequences tightly coupled to model and hardware choices, preventing cloud schedulers from optimizing accuracy, latency, energy, and cost across the workflow."
+  },
+  "approach": {
+    "zh": "声明式工作流暴露组件依赖和 SLO；离线画像估计各模型/硬件组合，优化器给出映射，运行时再根据实际负载和质量信号动态重配置。",
+    "en": "A declarative workflow exposes dependencies and SLOs; profiling estimates model–hardware choices, an optimizer selects a mapping, and the runtime reconfigures it from observed load and quality signals."
+  },
+  "system_design": {
+    "zh": "Murakkab 控制面解析工作流 DAG、SLO 与画像，统一决定组件编排、模型选择和硬件放置；数据面执行图并向控制器反馈时延、资源与质量观测。",
+    "en": "Murakkab's control plane reads the workflow DAG, SLOs, and profiles to jointly choose orchestration, models, and placement. The data plane executes the graph and returns latency, resource, and quality observations."
+  },
+  "key_results": {
+    "zh": "多类工作流评测报告 Murakkab 在维持 SLO 时减少 GPU 使用、能耗和成本，显示跨层配置比不透明执行更高效。",
+    "en": "Across diverse workflows, Murakkab is reported to reduce GPU use, energy, and cost while maintaining SLOs, demonstrating the value of cross-layer configuration."
+  },
+  "limitations": {
+    "zh": "优化依赖画像对动态工作流的代表性，重配置可能产生冷启动和状态迁移成本；摘要未讨论跨组织组件、隐私约束或故障恢复。",
+    "en": "Optimization depends on profiles remaining representative of dynamic workflows, while reconfiguration can add cold-start and state-migration cost; cross-owner components, privacy constraints, and recovery are not discussed."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["diverse agentic workflows under user-defined SLOs"],
+    "hardware": ["cloud GPU platforms"],
+    "cluster_scale": null,
+    "baselines": ["existing agent frameworks and cloud schedulers"],
+    "metrics": [
+      {"name": "GPU usage reduction", "value": "up to 2.8x", "higher_is_better": true},
+      {"name": "energy reduction", "value": "up to 3.7x", "higher_is_better": true},
+      {"name": "cost reduction", "value": "up to 4.3x", "higher_is_better": true},
+      {"name": "SLO attainment", "value": "maintained", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "云 GPU、SLO 场景及资源/能耗/成本上限来自官方摘要；工作流、模型、设备和具名基线待全文审计。",
+      "en": "Cloud GPUs, SLO setting, and resource/energy/cost bounds come from the official abstract; workflows, models, devices, and named baselines await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.18298",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Murakkab",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2508.18298",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2508.18298"
+  }
+}

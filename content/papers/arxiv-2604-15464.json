@@ -1,0 +1,150 @@
+{
+  "work_id": "arxiv-2604-15464",
+  "slug": "ragged-paged-attention-a-high-performance-and-flexible-llm-inference-ker-2604-15464",
+  "title": {
+    "original": "Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU",
+    "zh": "非等长分页注意力：面向 TPU 的高性能灵活 LLM 推理内核",
+    "en": "Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU"
+  },
+  "authors": [
+    {
+      "name": "Jevin Jiang",
+      "affiliations": []
+    },
+    {
+      "name": "Ying Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Blake A. Hechtman",
+      "affiliations": []
+    },
+    {
+      "name": "Fenghui Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Yarong Mu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2604.15464",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-04-16",
+      "latest_revision_date": "2026-04-16",
+      "url": "https://arxiv.org/abs/2604.15464"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-04-16",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-04-16"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "RPA 提供面向 TPU 的非等长分页注意力 kernel、分布特化编译和 vLLM/SGLang 集成，是生产推理后端。",
+    "en": "RPA supplies a ragged paged-attention kernel, distribution-specialized compilation, and vLLM/SGLang integration for TPU, making it a production inference backend."
+  },
+  "abstract": {
+    "zh": "Ragged Paged Attention 用 Pallas/Mosaic 为 TPU 实现动态非等长分页注意力，通过细粒度 tile、KV 更新融合和按工作负载分布特化的编译覆盖 decode、prefill 与混合流量。",
+    "en": "Ragged Paged Attention implements dynamic paged attention for TPU in Pallas and Mosaic, combining fine-grained tiling, fused KV updates, and distribution-specialized compilation for decode, prefill, and mixed traffic."
+  },
+  "problem": {
+    "zh": "主流注意力 kernel 以 GPU 为中心，难映射 TPU 的存储和执行模型，尤其不能高效处理服务中的非等长序列与动态分页。",
+    "en": "Most attention kernels are GPU-centric and map poorly to TPU memory and execution, particularly for ragged sequences and dynamic paging in serving."
+  },
+  "approach": {
+    "zh": "RPA 用细粒度 tile 支持动态切片，软件流水线把 KV 缓存更新与注意力融合，并根据线上长度分布生成不同阶段的特化 kernel。",
+    "en": "RPA uses fine-grained tiles for dynamic slicing, a software pipeline that fuses KV-cache updates with attention, and workload-distribution-aware compilation for specialized phase kernels."
+  },
+  "system_design": {
+    "zh": "分页元数据驱动 Pallas tile 读取非等长 KV，流水线交错更新和计算；编译器依据 decode/prefill 分布选取特化版本，并作为 vLLM 与 SGLang 的 TPU 后端。",
+    "en": "Paged metadata drives Pallas tiles over ragged KV, the pipeline interleaves updates and computation, and the compiler selects decode/prefill specializations integrated as TPU backends for vLLM and SGLang."
+  },
+  "key_results": {
+    "zh": "TPU7x 上 RPA 在 decode 和 prefill 都达到较高硬件利用率，并已作为两个主流推理服务框架的主要 TPU 路径。",
+    "en": "On TPU7x, RPA reaches high hardware utilization in both decode and prefill and serves as a primary TPU path in two major inference frameworks."
+  },
+  "limitations": {
+    "zh": "实现深度绑定 TPU 编译栈，分布特化在流量漂移时可能需要重新编译；对其他模型、量化和多租户干扰的覆盖仍有限。",
+    "en": "The implementation is tied closely to the TPU compiler stack, distribution specialization may require recompilation under traffic drift, and coverage of other models, quantization, and multi-tenant interference is limited."
+  },
+  "evaluation": {
+    "models": [
+      "Llama 3 8B"
+    ],
+    "workloads": [
+      "decode",
+      "prefill",
+      "mixed inference workloads"
+    ],
+    "hardware": [
+      "TPU7x"
+    ],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Decode memory-bandwidth utilization",
+        "value": 86,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Prefill model-FLOPs utilization",
+        "value": 73,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2604.15464",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Ragged Paged Attention",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2604.15464",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2604.15464"
+  }
+}

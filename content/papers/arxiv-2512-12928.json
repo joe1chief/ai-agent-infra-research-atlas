@@ -1,0 +1,140 @@
+{
+  "work_id": "arxiv-2512-12928",
+  "slug": "proserve-unified-multi-priority-request-scheduling-for-llm-serving-2512-12928",
+  "title": {
+    "original": "ProServe: Unified Multi-Priority Request Scheduling for LLM Serving",
+    "zh": "ProServe：LLM服务的统一多优先级请求调度",
+    "en": "ProServe: Unified Multi-Priority Request Scheduling for LLM Serving"
+  },
+  "authors": [
+    {
+      "name": "Weizhe Huang",
+      "affiliations": []
+    },
+    {
+      "name": "Tao Peng",
+      "affiliations": []
+    },
+    {
+      "name": "Tongxuan Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Donghe Jin",
+      "affiliations": []
+    },
+    {
+      "name": "Kang Meng",
+      "affiliations": []
+    },
+    {
+      "name": "Xianzhe Dong",
+      "affiliations": []
+    },
+    {
+      "name": "Ke Zhang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2512.12928",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-12-15",
+      "latest_revision_date": "2026-06-12",
+      "url": "https://arxiv.org/abs/2512.12928"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-12-15",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-06-12"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "ProServe 将优先级收益、实例内组批和跨实例路由统一为可复用的分布式 LLM 服务调度框架。",
+    "en": "ProServe unifies priority-aware gain, engine batching, and cross-instance routing in a reusable distributed LLM scheduling framework."
+  },
+  "abstract": {
+    "zh": "ProServe 将多优先级 LLM 请求调度形式化为服务收益最大化问题，同时考虑 SLO 达成与客户业务价值。其两级架构在单实例内自适应组批，并在分布式实例间按收益与能力路由。",
+    "en": "ProServe formulates multi-priority LLM scheduling as service-gain maximization, combining SLO attainment with client value. Its two-tier architecture adapts batches inside each engine and routes by expected gain and instance capability across the service."
+  },
+  "problem": {
+    "zh": "既有调度器通常只优化统一的时延目标，无法让业务关键请求获得更强保证，也不能把优先级收益与集群能力联合考虑。",
+    "en": "Existing schedulers usually optimize a uniform latency objective and cannot jointly account for differentiated client value, latency targets, and heterogeneous instance capability."
+  },
+  "approach": {
+    "zh": "SlideBatching 用滑动边界在负载与优先级间动态组批；异步换出、流水重载和复制预算降低抢占代价；GoRouting 则为未来高优先级或长请求预留容量。",
+    "en": "SlideBatching uses a moving boundary to form priority-aware batches; asynchronous offload, pipelined reload, and copy budgeting reduce preemption cost; GoRouting reserves capacity for likely high-value or long requests."
+  },
+  "system_design": {
+    "zh": "引擎层维护滑动批次边界和可抢占 KV 块管理器，服务层汇总实例能力与收益预测进行分发；两层共享请求优先级与 SLO 信号。",
+    "en": "The engine layer maintains sliding batch boundaries and a preemptible KV-block manager, while the service layer dispatches from capability and gain estimates; both consume common priority and SLO signals."
+  },
+  "key_results": {
+    "zh": "在四个开源与一个工业数据集上，ProServe 被报告可提高总体服务收益和 SLO 达成率。",
+    "en": "Across four open datasets and one industrial workload, ProServe is reported to improve aggregate service gain and SLO attainment over prior schedulers."
+  },
+  "limitations": {
+    "zh": "服务收益取决于业务赋值与请求长度预测；摘要未讨论错误优先级、低优先级饥饿或跨租户策略公平性。",
+    "en": "Service gain depends on business valuation and request-length forecasts; mislabeled priorities, starvation of low-priority traffic, and cross-tenant policy fairness are not addressed in the abstract."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["four open-source request datasets", "one industrial request dataset", "multi-priority LLM serving"],
+    "hardware": ["distributed LLM serving instances"],
+    "cluster_scale": null,
+    "baselines": ["state-of-the-art LLM schedulers"],
+    "metrics": [
+      {"name": "system gain improvement", "value": "up to 35%", "higher_is_better": true},
+      {"name": "SLO attainment improvement", "value": "up to 52%", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "数据集数量、优先级场景和两项上限来自官方摘要；模型、硬件、工业数据身份和具体基线待全文审计。",
+      "en": "Dataset counts, priority setting, and two upper bounds come from the official abstract; models, hardware, industrial dataset identity, and named baselines await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.12928",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "ProServe",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2512.12928",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2512.12928"
+  }
+}

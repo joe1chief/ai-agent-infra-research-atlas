@@ -1,0 +1,137 @@
+{
+  "work_id": "arxiv-2607-01510",
+  "slug": "janus-a-playground-for-user-involved-agentic-permission-management-2607-01510",
+  "title": {
+    "original": "Janus: a Playground for User-Involved Agentic Permission Management",
+    "zh": "Janus：用户参与式智能体权限管理实验平台",
+    "en": "Janus: a Playground for User-Involved Agentic Permission Management"
+  },
+  "authors": [
+    {
+      "name": "Natalie Grace Brigham",
+      "affiliations": []
+    },
+    {
+      "name": "Eugene Bagdasarian",
+      "affiliations": []
+    },
+    {
+      "name": "Tadayoshi Kohno",
+      "affiliations": []
+    },
+    {
+      "name": "Franziska Roesner",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2607.01510",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-07-01",
+      "latest_revision_date": "2026-07-01",
+      "url": "https://arxiv.org/abs/2607.01510"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-07-01",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-07-01"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Janus-Core 与 Janus-Harness 提供可插拔权限助手、用户行为模拟和安全/负担测量，是用户参与权限研究的共享试验场。",
+    "en": "Janus-Core and Janus-Harness provide pluggable permission assistants, user-behavior simulation, and security/burden measurement as a shared permission-research testbed."
+  },
+  "abstract": {
+    "zh": "Janus 是研究用户参与 Agent 权限管理的可编程试验场，由可插拔权限执行核心和自动评测 Harness 组成。",
+    "en": "Janus is a programmable testbed for user-involved agent permissions, combining a modular permission-enforcement core with an automated evaluation harness."
+  },
+  "problem": {
+    "zh": "Agent 权限设计常只讨论模型或策略，缺少系统化比较用户在何时介入、看到什么、由 AI 如何辅助及疲劳如何影响安全。",
+    "en": "Agent permission designs rarely compare when users intervene, what they see, how AI assists them, and how permission fatigue affects security."
+  },
+  "approach": {
+    "zh": "作者以用户参与设计轴构造六种权限助手，在多个场景和不同合成响应者上比较隐私、安全与认知负担。",
+    "en": "Six permission assistants are instantiated from design axes for user involvement and compared across scenarios and synthetic responders for privacy, security, and cognitive burden."
+  },
+  "system_design": {
+    "zh": "Janus-Core 提供 Agent、工具和权限决策的模块接口；Janus-Harness 重放场景、模拟用户回答并记录允许、拒绝、泄露与交互成本。",
+    "en": "Janus-Core modularizes agents, tools, and permission decisions; Janus-Harness replays scenarios, simulates responses, and records allowance, denial, leakage, and interaction cost."
+  },
+  "key_results": {
+    "zh": "用户输入能显著增强隐私与安全，AI 辅助可减轻负担，但权限疲劳会改变结果，且没有一种设计适合所有上下文。",
+    "en": "User input materially improves privacy and security, AI assistance can reduce burden, fatigue changes outcomes, and no design is optimal across all contexts."
+  },
+  "limitations": {
+    "zh": "评测依赖少量场景和合成响应者，无法替代真实用户的长期适应、误解和风险偏好；用户研究与高风险部署仍待开展。",
+    "en": "A small scenario set and synthetic responders cannot replace real users' long-term adaptation, misunderstanding, and risk preferences; user studies and high-risk deployments remain needed."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Three user-involved permission-management scenarios"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Six permission-assistant designs",
+      "Three synthetic user responders"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2607.01510",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "Janus code and data repository",
+      "url": "https://github.com/GraceBrigham/Janus",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Janus",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2607.01510",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2607.01510"
+  }
+}

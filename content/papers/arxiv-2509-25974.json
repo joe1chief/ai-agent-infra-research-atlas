@@ -1,0 +1,120 @@
+{
+  "work_id": "arxiv-2509-25974",
+  "slug": "openid-connect-for-agents-oidc-a-1-0-a-standard-extension-for-llm-based-2509-25974",
+  "title": {
+    "original": "OpenID Connect for Agents (OIDC-A) 1.0: A Standard Extension for LLM-Based Agent Identity and Authorization",
+    "zh": "OpenID Connect for 智能体 (OIDC-A) 1.0：基于LLM的代理身份和授权的标准扩展",
+    "en": "OpenID Connect for Agents (OIDC-A) 1.0: A Standard Extension for LLM-Based Agent Identity and Authorization"
+  },
+  "authors": [
+    {
+      "name": "Subramanya Nagabhushanaradhya",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2509.25974",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-09-30",
+      "latest_revision_date": "2025-09-30",
+      "url": "https://arxiv.org/abs/2509.25974"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-09-30",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-09-30"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-7",
+  "tags": [
+    "agent-protocol",
+    "identity",
+    "governance"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "OIDC-A 定义兼容 OAuth/OIDC 的 Agent Claims、证明和委托链验证流程，是可实现的跨服务身份授权协议。",
+    "en": "OIDC-A defines OAuth/OIDC-compatible agent claims, attestation, and delegation-chain validation as an implementable cross-service identity and authorization protocol."
+  },
+  "abstract": {
+    "zh": "OIDC-A 1.0 扩展 OpenID Connect/OAuth，为 LLM Agent 定义身份、证明、委托链和基于能力属性的授权协议。",
+    "en": "OIDC-A 1.0 extends OpenID Connect and OAuth with agent identity, attestation, delegation-chain, and capability-attribute authorization mechanisms."
+  },
+  "problem": {
+    "zh": "自治 Agent 接入服务时缺少兼容现有身份基础设施的标准方式来证明“是谁、代表谁、经何委托、拥有什么能力”。",
+    "en": "Autonomous agents lack a standard compatible with existing identity infrastructure for proving who they are, whom they represent, their delegation path, and capabilities."
+  },
+  "approach": {
+    "zh": "规范在 OIDC 中增加 Agent 标准 Claims、端点和验证流程，并把委托链、证明材料与细粒度授权映射到 OAuth 生态。",
+    "en": "The specification adds standard agent claims, endpoints, and validation flows to OIDC and maps delegation, attestation, and fine-grained authorization into OAuth."
+  },
+  "system_design": {
+    "zh": "身份提供方签发含 Agent 与委托属性的 token，资源服务验证证明和链路，再依据能力、主体与范围执行访问决策。",
+    "en": "Identity providers issue tokens carrying agent and delegation attributes; resource services validate attestations and chains before enforcing capability-, principal-, and scope-based access."
+  },
+  "key_results": {
+    "zh": "该规范给出可与既有 OAuth/OIDC 部署共存的完整协议骨架，为 Agent 到服务的可信身份与授权提供共同语义。",
+    "en": "The specification supplies a protocol skeleton that coexists with OAuth/OIDC deployments and gives agent-to-service identity and authorization shared semantics."
+  },
+  "limitations": {
+    "zh": "这是规范提案而非互操作性实测；信任锚、证明签发、撤销、委托滥用和不同提供方治理仍需部署共识。",
+    "en": "This is a specification proposal rather than an interoperability deployment; trust anchors, attestation issuance, revocation, delegation abuse, and provider governance remain unresolved."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "实验矩阵与数值将在全文人工复核后补充；当前留空以避免从摘要推断。",
+      "en": "The experiment matrix and numbers await full-text manual review; fields remain empty to avoid inferring them from an abstract."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2509.25974",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "documentation",
+      "title": "OIDC-A specification repository",
+      "url": "https://github.com/subramanya1997/oidc-a/",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2509.25974",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2509.25974"
+  }
+}

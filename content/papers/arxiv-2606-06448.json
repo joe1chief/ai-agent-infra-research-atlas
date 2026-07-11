@@ -1,0 +1,148 @@
+{
+  "work_id": "arxiv-2606-06448",
+  "slug": "agent-memory-characterization-and-system-implications-of-stateful-long-h-2606-06448",
+  "title": {
+    "original": "Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads",
+    "zh": "代理内存：状态长时间工作负载的表征和系统影响",
+    "en": "Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads"
+  },
+  "authors": [
+    {
+      "name": "Yasmine Omri",
+      "affiliations": []
+    },
+    {
+      "name": "Ziyu Gan",
+      "affiliations": []
+    },
+    {
+      "name": "Zachary Broveak",
+      "affiliations": []
+    },
+    {
+      "name": "Robin Geens",
+      "affiliations": []
+    },
+    {
+      "name": "Zexue He",
+      "affiliations": []
+    },
+    {
+      "name": "Alex Pentland",
+      "affiliations": []
+    },
+    {
+      "name": "Marian Verhelst",
+      "affiliations": []
+    },
+    {
+      "name": "Tsachy Weissman",
+      "affiliations": []
+    },
+    {
+      "name": "Thierry Tambe",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2606.06448",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-06-04",
+      "latest_revision_date": "2026-06-04",
+      "url": "https://arxiv.org/abs/2606.06448"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-06-04",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-06-04"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "四轴 taxonomy 与阶段感知 profiling harness 为 Agent 记忆提供可复用的系统比较和容量规划基础设施。",
+    "en": "The four-axis taxonomy and phase-aware profiling harness provide reusable systems-comparison and capacity-planning infrastructure for agent memory."
+  },
+  "abstract": {
+    "zh": "该工作首次从系统角度刻画 Agent 记忆，提出四轴分类，并构建按构建、检索、生成阶段归因成本的 profiling harness。作者在两套基准上比较十个代表系统，分析设计选择如何把开销在写路径和读路径之间转移。",
+    "en": "This work presents a systems characterization of agent memory, introducing a four-axis taxonomy and a phase-aware profiler that attributes cost to construction, retrieval, and generation. Ten representative systems are compared across two benchmark suites to reveal read/write-path trade-offs."
+  },
+  "problem": {
+    "zh": "平面检索、LLM 抽取、事实巩固和 Agent 控制等记忆架构快速涌现，但其构建、查询、生成成本与新鲜度权衡缺少统一系统测量。",
+    "en": "Flat retrieval, LLM extraction, consolidating fact stores, and agentic control have proliferated without a common characterization of construction, query, generation cost, and freshness trade-offs."
+  },
+  "approach": {
+    "zh": "研究先用四个轴统一描述记忆系统，再以阶段感知 harness 分离写入构建、召回和回答开销，并在相同基准条件下横向运行十种系统。",
+    "en": "The study first describes systems through four common axes, then uses a phase-aware harness to separate write construction, recall, and answer cost while running ten designs under shared benchmark conditions."
+  },
+  "system_design": {
+    "zh": "profiling harness 在记忆构建、检索与生成边界插桩，记录延迟与成本并关联体系结构特征；分析层据此比较写读转移、查询摊销和新鲜度策略。",
+    "en": "The profiler instruments construction, retrieval, and generation boundaries, associates latency and cost with architectural features, and compares write/read shifting, query amortization, and freshness policy."
+  },
+  "key_results": {
+    "zh": "跨十个系统的刻画揭示不同设计把成本移向写路径或读路径的方式，并导出关于构建调度、能力下限、查询量摊销、新鲜度—时延和集群管理的十条建议。",
+    "en": "The characterization reveals how designs shift cost between write and read paths and derives ten recommendations spanning construction scheduling, capability floors, query-volume amortization, freshness–latency, and fleet management."
+  },
+  "limitations": {
+    "zh": "结论取决于所选十个系统、两套基准和当时实现版本；安全、隐私、正确性和跨租户资源争用并非摘要中测量的主要维度。",
+    "en": "Conclusions depend on the selected ten systems, two benchmarks, and implementation versions; safety, privacy, correctness, and cross-tenant contention are not primary measured dimensions in the abstract."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["two agent-memory benchmark suites", "construction, retrieval, and generation profiling"],
+    "hardware": ["phase-aware agent-memory profiling harness"],
+    "cluster_scale": "10 representative memory systems",
+    "baselines": ["10 systems spanning flat retrieval, LLM extraction, consolidating stores, and agentic control"],
+    "metrics": [
+      {"name": "systems characterized", "value": 10, "unit": "systems", "higher_is_better": null},
+      {"name": "system recommendations", "value": 10, "unit": "recommendations", "higher_is_better": null}
+    ],
+    "notes": {
+      "zh": "十个系统、两套基准、三阶段画像和十条建议来自官方摘要；系统/基准名称、硬件和逐阶段成本待全文审计。",
+      "en": "Ten systems, two suites, three profiling phases, and ten recommendations come from the official abstract; system/benchmark names, hardware, and per-phase costs await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2606.06448",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Agent Memory",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2606.06448",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2606.06448"
+  }
+}

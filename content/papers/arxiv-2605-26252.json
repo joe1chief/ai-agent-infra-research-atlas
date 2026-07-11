@@ -1,0 +1,120 @@
+{
+  "work_id": "arxiv-2605-26252",
+  "slug": "is-agent-memory-a-database-rethinking-data-foundations-for-long-term-ai-2605-26252",
+  "title": {
+    "original": "Is Agent Memory a Database? Rethinking Data Foundations for Long-Term AI Agent Memory",
+    "zh": "智能体记忆是数据库吗？重新思考长期 AI 智能体记忆的数据基础",
+    "en": "Is Agent Memory a Database? Rethinking Data Foundations for Long-Term AI Agent Memory"
+  },
+  "authors": [
+    {
+      "name": "Abdelghny Orogat",
+      "affiliations": []
+    },
+    {
+      "name": "Essam Mansour",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2605.26252",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-05-25",
+      "latest_revision_date": "2026-05-25",
+      "url": "https://arxiv.org/abs/2605.26252"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-05-25",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-25"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "GEM 的状态算子、正确性条件和 MemState 原型为长期记忆提出独立于存储后端的数据管理基础。",
+    "en": "GEM's state operators, correctness conditions, and MemState prototype establish storage-backend-independent data-management foundations for long-term memory."
+  },
+  "abstract": {
+    "zh": "该论文把长期 Agent 记忆定义为状态轨迹正确性问题，而非记录、向量或图边的静态存储。Governed Evolving Memory（GEM）以摄取、修订、遗忘、检索四个状态算子和六项正确性条件约束记忆演化，并以 MemState 图后端原型验证可行性。",
+    "en": "This paper treats long-term agent memory as correctness over a state trajectory rather than static records, vectors, or edges. Governed Evolving Memory (GEM) defines ingestion, revision, forgetting, and retrieval as state operators under six correctness conditions, with a MemState graph prototype demonstrating feasibility."
+  },
+  "problem": {
+    "zh": "把记忆当普通存储会反复出现无控制增长、缺少语义修订、按容量遗忘和只读检索；单条记录正确并不能保证长期状态演化正确。",
+    "en": "Storage-centric memory repeatedly suffers unregulated growth, missing semantic revision, capacity-driven forgetting, and read-only retrieval; correct records do not imply a correct long-term state trajectory."
+  },
+  "approach": {
+    "zh": "GEM 用状态级算子替换记录级 CRUD，并以六项条件约束每次演化；理论论证说明无论底层存储模型如何，纯记录系统都无法满足全部条件。",
+    "en": "GEM replaces record-level CRUD with state-level operators and constrains every transition with six conditions; structural arguments show that record-level systems cannot satisfy all conditions regardless of storage model."
+  },
+  "system_design": {
+    "zh": "MemState 在属性图上实现 GEM 抽象：控制层接收四类状态操作，检查演化条件，维护版本与关系，再向 Agent 暴露受治理的检索视图。",
+    "en": "MemState realizes GEM over a property graph: a control layer accepts four state operations, checks evolution conditions, maintains versions and relations, and exposes governed retrieval views to agents."
+  },
+  "key_results": {
+    "zh": "主要结果是 GEM 抽象、六项状态正确性条件和记录级系统不足的结构性论证；MemState 原型证明可在现有图后端实现但也暴露对原生引擎的需求。",
+    "en": "The primary results are the GEM abstraction, six state-correctness conditions, and structural limits of record systems; MemState shows feasibility on a graph backend while exposing the need for a native engine."
+  },
+  "limitations": {
+    "zh": "这是研究愿景与原型而非成熟数据库，摘要未给出吞吐、并发、恢复或大规模轨迹评测；六项条件如何在不确定 LLM 写入下执行仍需系统化。",
+    "en": "This is a vision and prototype rather than a mature database, with no abstract-level evidence on throughput, concurrency, recovery, or large trajectories; enforcing the conditions under uncertain LLM writes remains open."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["Governed Evolving Memory operator feasibility"],
+    "hardware": ["property-graph backend"],
+    "cluster_scale": null,
+    "baselines": ["record-level memory and database abstractions"],
+    "metrics": [
+      {"name": "correctness conditions", "value": 6, "unit": "state-evolution conditions", "higher_is_better": null},
+      {"name": "state-level operators", "value": 4, "unit": "ingestion, revision, forgetting, retrieval", "higher_is_better": null}
+    ],
+    "notes": {
+      "zh": "属性图原型、记录级比较、四算子与六条件来自官方摘要；摘要未给出性能评测，数据规模、吞吐和正确性实验待全文审计。",
+      "en": "The property-graph prototype, record-level contrast, four operators, and six conditions come from the official abstract; it reports no performance evaluation, and data scale, throughput, and correctness experiments await audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2605.26252",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2605.26252",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2605.26252"
+  }
+}

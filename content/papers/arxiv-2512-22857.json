@@ -1,0 +1,174 @@
+{
+  "work_id": "arxiv-2512-22857",
+  "slug": "autoforge-automated-environment-synthesis-for-agentic-reinforcement-lear-2512-22857",
+  "title": {
+    "original": "AutoForge: Automated Environment Synthesis for Agentic Reinforcement Learning",
+    "zh": "AutoForge：面向智能体强化学习的自动化环境合成",
+    "en": "AutoForge: Automated Environment Synthesis for Agentic Reinforcement Learning"
+  },
+  "authors": [
+    {
+      "name": "Shihao Cai",
+      "affiliations": []
+    },
+    {
+      "name": "Runnan Fang",
+      "affiliations": []
+    },
+    {
+      "name": "Jialong Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Baixuan Li",
+      "affiliations": []
+    },
+    {
+      "name": "Xinyu Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Yong Jiang",
+      "affiliations": []
+    },
+    {
+      "name": "Liangcai Su",
+      "affiliations": []
+    },
+    {
+      "name": "Liwen Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Wenbiao Yin",
+      "affiliations": []
+    },
+    {
+      "name": "Zhen Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Fuli Feng",
+      "affiliations": []
+    },
+    {
+      "name": "Pengjun Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaobin Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2512.22857",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-12-28",
+      "latest_revision_date": "2025-12-28",
+      "url": "https://arxiv.org/abs/2512.22857"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-12-28",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-12-28"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "sandbox",
+    "execution-environment"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AutoForge 把高难可验证环境合成与环境级 RL 统一为可扩展训练管线，解决的是跨环境基础设施稳定性。",
+    "en": "AutoForge unifies hard verifiable environment synthesis with environment-level RL in a scalable training pipeline addressing cross-environment stability."
+  },
+  "abstract": {
+    "zh": "AutoForge 自动合成高难度、易验证的模拟环境，并以环境级强化学习稳定跨环境训练及含模拟用户的 Agent 交互。",
+    "en": "AutoForge automatically synthesizes difficult yet verifiable simulated environments and applies environment-level reinforcement learning to stabilize cross-environment training with simulated users."
+  },
+  "problem": {
+    "zh": "既有 Agent 环境合成仍需大量人工、任务不够难，同时模拟用户不稳定和环境异质性会破坏逐轨迹优势估计。",
+    "en": "Prior agent-environment synthesis remains labor-intensive and insufficiently difficult, while unstable simulated users and environment heterogeneity corrupt trajectory-level advantage estimates."
+  },
+  "approach": {
+    "zh": "作者建立端到端环境与任务生成流水线，并把优势估计提升到环境层级，以聚合相同环境信号并缓解用户模拟波动。",
+    "en": "An end-to-end environment and task generator is paired with environment-level advantage estimation that aggregates signals within an environment and dampens simulator variation."
+  },
+  "system_design": {
+    "zh": "系统包含模拟环境生成器、可验证高难任务构造器、用户模拟器、统一交互接口及按环境分组的 RL 优化器。",
+    "en": "The system combines simulated-environment generation, verifiable hard-task construction, user simulation, a unified interaction interface, and an environment-grouped RL optimizer."
+  },
+  "key_results": {
+    "zh": "在多个对话式 Agent 基准上，环境级训练改善效果与稳定性，并表现出跨分布泛化收益。",
+    "en": "Across several conversational-agent benchmarks, environment-level training improves effectiveness and stability and shows out-of-domain generalization gains."
+  },
+  "limitations": {
+    "zh": "结论仍取决于模拟用户和验证器的忠实度；环境级聚合可能掩盖同一环境内的重要轨迹差异或少数失败模式。",
+    "en": "Conclusions depend on simulator and verifier fidelity, and environment-level aggregation may hide important within-environment trajectory differences or rare failures."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "τ-bench",
+      "τ²-Bench",
+      "VitaBench"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning",
+      "seed_report_path": "2026/snowflake/2026-02_arctic-awm.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 9,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.22857",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "AutoForge",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2512.22857",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2512.22857"
+  }
+}

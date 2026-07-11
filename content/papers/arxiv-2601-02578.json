@@ -1,0 +1,119 @@
+{
+  "work_id": "arxiv-2601-02578",
+  "slug": "dataparasite-enables-scalable-and-repurposable-online-data-curation-2601-02578",
+  "title": {
+    "original": "DataParasite Enables Scalable and Repurposable Online Data Curation",
+    "zh": "DataParasite支持可扩展和可重新利用的在线数据管理",
+    "en": "DataParasite Enables Scalable and Repurposable Online Data Curation"
+  },
+  "authors": [
+    {
+      "name": "Mengyi Sun",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.02578",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-01-05",
+      "latest_revision_date": "2026-01-05",
+      "url": "https://arxiv.org/abs/2601.02578"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-05",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-05"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-1",
+  "tags": [
+    "data-curation",
+    "data-provenance",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "DataParasite 以通用脚本和轻量配置复用实体搜索与结构化抽取，提供透明、可扩展的在线数据组装基础设施。",
+    "en": "DataParasite reuses entity search and structured extraction through one generic runner and lightweight configuration, providing transparent, scalable online data-assembly infrastructure."
+  },
+  "abstract": {
+    "zh": "DataParasite 是面向在线表格数据收集的开源模块化流水线，把任务拆成独立实体搜索，并用轻量配置和通用脚本复用于不同社会科学数据集。",
+    "en": "DataParasite is an open-source modular pipeline for online tabular collection that decomposes work into entity-level searches and reuses a lightweight configuration plus task-agnostic script across datasets."
+  },
+  "problem": {
+    "zh": "从异构网站组装研究数据通常依赖大量人工劳动，现有智能体搜索系统又常因不透明、难配置而不利于科学复现。",
+    "en": "Assembling research data from heterogeneous sites is labor intensive, while existing agentic search systems are often opaque and hard to configure for reproducible science."
+  },
+  "approach": {
+    "zh": "用户以配置文件或自然语言描述表结构和搜索目标，框架并行执行实体级检索与结构化抽取，再将结果汇入统一表格。",
+    "en": "Users describe table structure and search goals through configuration or natural language; the framework runs independent entity searches and structured extraction before consolidating a common table."
+  },
+  "system_design": {
+    "zh": "共享 Python 执行器读取任务配置，将实体分发到可复用搜索单元，记录抽取结果并输出结构化数据；无预设实体列表的任务也可由指令生成搜索范围。",
+    "en": "A shared Python runner reads the task configuration, dispatches entities to reusable search units, records extracted results, and emits structured data; instructions can also establish scope when no entity list exists."
+  },
+  "key_results": {
+    "zh": "在多项计算社会科学任务上，流水线保持较高准确性，并相对人工整理显著降低数据收集成本。",
+    "en": "Across several computational-social-science tasks, the pipeline maintains high accuracy while materially reducing collection cost relative to manual curation."
+  },
+  "limitations": {
+    "zh": "网页变化、访问限制和模型抽取错误会影响复现；实体独立假设不适合强关联任务，当前评测领域也不足以代表所有在线数据场景。",
+    "en": "Web drift, access restrictions, and model extraction errors affect reproducibility; entity independence does not fit strongly coupled tasks, and the evaluated domains do not represent all online-data settings."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "faculty hiring history collection",
+      "elite death-event collection",
+      "political career trajectory collection"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "manual data curation"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.02578",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.02578",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.02578"
+  }
+}

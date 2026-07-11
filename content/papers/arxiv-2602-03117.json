@@ -1,0 +1,157 @@
+{
+  "work_id": "arxiv-2602-03117",
+  "slug": "agentdyn-are-your-agent-security-defenses-deployable-in-real-world-dynam-2602-03117",
+  "title": {
+    "original": "AgentDyn: Are Your Agent Security Defenses Deployable in Real-World Dynamic Environments?",
+    "zh": "AgentDyn：您的代理安全防御是否可以部署在真实动态环境中？",
+    "en": "AgentDyn: Are Your Agent Security Defenses Deployable in Real-World Dynamic Environments?"
+  },
+  "authors": [
+    {
+      "name": "Hao Li",
+      "affiliations": []
+    },
+    {
+      "name": "Ruoyao Wen",
+      "affiliations": []
+    },
+    {
+      "name": "Shanghao Shi",
+      "affiliations": []
+    },
+    {
+      "name": "Ning Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Yevgeniy Vorobeychik",
+      "affiliations": []
+    },
+    {
+      "name": "Chaowei Xiao",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2602.03117",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v3",
+      "first_public_date": "2026-02-03",
+      "latest_revision_date": "2026-05-07",
+      "url": "https://arxiv.org/abs/2602.03117"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-02-03",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-07"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AgentDyn 的动态环境、混合可信指令和安全—效用双重评分可持续检验防御是否因过度阻断而不可部署。",
+    "en": "AgentDyn's dynamic environments, mixed-trust instructions, and security-utility scoring repeatedly test whether defenses are deployable rather than merely overblocking."
+  },
+  "abstract": {
+    "zh": "AgentDyn 以开放式动态任务、带帮助性的第三方内容和复杂用户目标检验间接提示注入防御是否真正可部署。",
+    "en": "AgentDyn tests whether indirect-prompt-injection defenses are deployable using open-ended dynamic tasks, helpful third-party content, and complex user goals."
+  },
+  "problem": {
+    "zh": "静态安全基准缺少动态规划，把所有外部指令都视为恶意且用户任务过简，容易奖励严重过度防御。",
+    "en": "Static security benchmarks omit dynamic planning, treat external instructions as uniformly malicious, and use simplistic user goals, rewarding severe over-defense."
+  },
+  "approach": {
+    "zh": "作者在购物、GitHub 和日常生活域人工设计开放任务与大量注入案例，让防御同时保留有用第三方指令并阻止恶意内容。",
+    "en": "Open tasks and many injections are manually built across shopping, GitHub, and daily life, requiring defenses to retain helpful external instructions while blocking malicious ones."
+  },
+  "system_design": {
+    "zh": "基准运行真实规划型 Agent，动态装载任务状态与混合可信内容，并分别记录攻击成功、正常任务完成和过度拦截。",
+    "en": "The benchmark runs planning agents with dynamic state and mixed-trust content, separately recording attack success, legitimate completion, and overblocking."
+  },
+  "key_results": {
+    "zh": "对多种先进防御的评测显示，大多数方案要么仍不够安全，要么因过度防御显著损害正常任务。",
+    "en": "Evaluation of many advanced defenses shows that most remain insecure or substantially impair legitimate tasks through over-defense."
+  },
+  "limitations": {
+    "zh": "人工任务只覆盖三个域，攻击者和防御均可能针对公开基准适配；真实网站持续变化会引入更多混合可信语义。",
+    "en": "Manual tasks cover only three domains, attackers and defenses may adapt to the public benchmark, and changing real sites introduce additional mixed-trust semantics."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "AgentDyn Shopping tasks",
+      "AgentDyn GitHub tasks",
+      "AgentDyn Daily Life tasks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Ten state-of-the-art prompt-injection defenses"
+    ],
+    "metrics": [
+      {
+        "name": "Open-ended tasks",
+        "value": 60,
+        "unit": "tasks"
+      },
+      {
+        "name": "Prompt-injection test cases",
+        "value": 560,
+        "unit": "cases"
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2602.03117",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "data",
+      "title": "AgentDyn benchmark repository",
+      "url": "https://github.com/leolee99/AgentDyn",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "AgentDyn",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2602.03117",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2602.03117"
+  }
+}

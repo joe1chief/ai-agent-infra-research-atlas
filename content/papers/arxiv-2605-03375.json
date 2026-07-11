@@ -1,0 +1,149 @@
+{
+  "work_id": "arxiv-2605-03375",
+  "slug": "tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving-2605-03375",
+  "title": {
+    "original": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+    "zh": "Tutti：让 SSD 支撑的 KV 缓存适用于长上下文 LLM 服务",
+    "en": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving"
+  },
+  "authors": [
+    {
+      "name": "Shi Qiu",
+      "affiliations": []
+    },
+    {
+      "name": "Yifan Hu",
+      "affiliations": []
+    },
+    {
+      "name": "Xintao Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Wenhao Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Jianqin Yan",
+      "affiliations": []
+    },
+    {
+      "name": "Hao Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Kaiqiang Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Kai Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Yiming Zhang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2605.03375",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-05-05",
+      "latest_revision_date": "2026-05-05",
+      "url": "https://arxiv.org/abs/2605.03375"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-05-05",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-05"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Tutti 提供 GPU 原生 KV 对象存储、I/O 提交和松弛调度，是可集成到服务引擎的 SSD 缓存数据路径。",
+    "en": "Tutti provides a GPU-native KV object store, I/O submission path, and slack scheduler that can be integrated as an SSD cache data plane."
+  },
+  "abstract": {
+    "zh": "Tutti 为长上下文 LLM 构建 GPU 主导的 SSD KV 缓存路径，把 CPU 从关键数据和 I/O 控制环路中移除。其 GPU 原生对象存储、GPU io_uring 与松弛感知调度把碎片化小 I/O 合并为高并行传输。",
+    "en": "Tutti makes SSD-backed KV caching GPU-centric, removing the CPU from critical data and I/O-control paths. A GPU-native object store, GPU io_uring, and slack-aware scheduling turn fragmented cache traffic into highly parallel transfers."
+  },
+  "problem": {
+    "zh": "KV 缓存超出 HBM/DRAM 后必须落到 NVMe，但 GPU 内存布局造成海量小型随机 I/O；即便使用 GDS，CPU 逐次发起请求仍限制并行度并让 GPU 停顿。",
+    "en": "Once KV state spills beyond HBM and DRAM, fragmented GPU layouts create many tiny random NVMe operations; even GDS depends on CPU submission and leaves GPU execution stalled."
+  },
+  "approach": {
+    "zh": "Tutti 以对象抽象批量管理 KV，令 GPU 直接提交异步对象 I/O，并在有执行余量时安排存储操作，避免与推理内核争用资源。",
+    "en": "Tutti manages KV in bulk objects, lets the GPU submit asynchronous object I/O directly, and schedules transfers into execution slack to avoid contention with inference kernels."
+  },
+  "system_design": {
+    "zh": "集成到 vLLM 后，CPU 仅异步加载每层 I/O 内核；GPU 对象目录与 io_uring 控制 HBM–SSD 搬运，调度器根据层执行窗口发出读写以饱和 NVMe。",
+    "en": "In the vLLM integration, the CPU only loads per-layer I/O kernels asynchronously. A GPU object directory and io_uring path control HBM–SSD movement, with transfers scheduled around layer execution to saturate NVMe."
+  },
+  "key_results": {
+    "zh": "相比启用 GDS 的 SSD LMCache，Tutti 被报告可降低 TTFT、提高可承载请求率并降低服务成本，性能接近 DRAM 缓存方案。",
+    "en": "Compared with GDS-enabled SSD LMCache, Tutti is reported to reduce TTFT, raise sustainable request rate, and lower serving cost while approaching DRAM-backed performance."
+  },
+  "limitations": {
+    "zh": "系统需要支持 GPU 直达存储的 NVMe 栈和特定 vLLM 集成；摘要未覆盖 SSD 故障、磨损、混合 I/O 干扰或不具备 GDS 的平台。",
+    "en": "The system requires a GPU-direct NVMe stack and a specific vLLM integration; SSD failure, wear, mixed-I/O interference, and platforms without GDS are outside the abstract's evidence."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["long-context LLM serving with SSD-backed prefix cache", "strict SLO request load"],
+    "hardware": ["GPU HBM", "CPU DRAM", "NVMe SSD", "GPU Direct Storage"],
+    "cluster_scale": null,
+    "baselines": ["GDS-enabled SSD-backed LMCache", "DRAM-backed LMCache"],
+    "metrics": [
+      {"name": "TTFT reduction", "value": 78.3, "unit": "%", "baseline": "GDS-enabled SSD-backed LMCache", "higher_is_better": true},
+      {"name": "achievable request rate", "value": "2x", "baseline": "GDS-enabled SSD-backed LMCache", "higher_is_better": true},
+      {"name": "serving cost reduction", "value": 27, "unit": "%", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "存储层级、两类 LMCache 基线及 TTFT/请求率/成本结果来自官方摘要；模型、SSD/GPU 型号和 SLO 细节待全文审计。",
+      "en": "Storage tiers, two LMCache baselines, and TTFT/request-rate/cost results come from the official abstract; models, SSD/GPU models, and SLO details await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2605.03375",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Tutti",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2605.03375",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2605.03375"
+  }
+}

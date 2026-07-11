@@ -1,0 +1,130 @@
+{
+  "work_id": "arxiv-2603-25268",
+  "slug": "craft-grounded-multi-agent-coordination-under-partial-information-2603-25268",
+  "title": {
+    "original": "CRAFT: Grounded Multi-Agent Coordination Under Partial Information",
+    "zh": "CRAFT：部分信息条件下的有依据多智能体协调",
+    "en": "CRAFT: Grounded Multi-Agent Coordination Under Partial Information"
+  },
+  "authors": [
+    {
+      "name": "Abhijnan Nath",
+      "affiliations": []
+    },
+    {
+      "name": "Hannah VanderHoeven",
+      "affiliations": []
+    },
+    {
+      "name": "Nikhil Krishnaswamy",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2603.25268",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-03-26",
+      "latest_revision_date": "2026-04-28",
+      "url": "https://arxiv.org/abs/2603.25268"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-03-26",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-04-28"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-4",
+  "tags": [
+    "multi-agent",
+    "coordination",
+    "communication"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "CRAFT 交付部分信息环境、协作任务和分层错误诊断，可重复测量空间落地、信念和语用通信。",
+    "en": "CRAFT supplies a partial-information environment, coordination tasks, and layered error diagnosis for repeatable measurement of grounding, belief, and pragmatic communication."
+  },
+  "abstract": {
+    "zh": "CRAFT 在严格部分可观测条件下要求多个 Agent 通过自然语言共同搭建无人能独自看全的 3D 结构，用以诊断务实沟通能力。",
+    "en": "CRAFT requires agents with strictly partial views to communicate in natural language and jointly build a 3D structure no agent can fully observe, diagnosing pragmatic coordination."
+  },
+  "problem": {
+    "zh": "既有多 Agent 基准很难分离空间落地、他心建模和沟通错误，也无法检验单体推理强是否真的转化为团队协作。",
+    "en": "Existing multi-agent benchmarks rarely separate spatial grounding, belief modeling, and communication errors or test whether stronger individual reasoning yields teamwork."
+  },
+  "approach": {
+    "zh": "作者将任务形式化为多发送者有界务实说话者问题，并用互补视角、共享建造目标和行为失败谱系评估协作。",
+    "en": "The task is formalized as a multi-sender bounded pragmatic-speaker problem with complementary views, a shared construction goal, and a taxonomy of behavioral failures."
+  },
+  "system_design": {
+    "zh": "环境为每个 Agent 提供不同局部观测和通信通道，执行器合并建造动作，诊断器按空间、信念与语用层级标注失败。",
+    "en": "The environment gives each agent a different local observation and communication channel, merges construction actions, and labels failures across spatial, belief, and pragmatic layers."
+  },
+  "key_results": {
+    "zh": "更强推理能力并不稳定带来更好协作，小型开放模型有时可匹敌前沿系统，个体表达质量也不足以保证共同成功。",
+    "en": "Stronger reasoning does not reliably yield better coordination; smaller open models sometimes match frontier systems, and good individual communication does not ensure joint success."
+  },
+  "limitations": {
+    "zh": "单一 3D 建造范式可能偏重空间语言，未覆盖竞争激励、工具故障、长期角色变化或现实组织中的不对称权限。",
+    "en": "A single 3D construction paradigm emphasizes spatial language and does not cover competing incentives, tool failures, evolving roles, or asymmetric permissions in real organizations."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "CRAFT partial-information 3D construction"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.25268",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "CRAFT benchmark repository",
+      "url": "https://github.com/csu-signal/CRAFT",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "CRAFT",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2603.25268",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2603.25268"
+  }
+}

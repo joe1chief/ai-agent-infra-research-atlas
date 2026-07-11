@@ -1,0 +1,221 @@
+{
+  "work_id": "arxiv-2509-23866",
+  "slug": "efficient-multi-turn-rl-for-gui-agents-via-decoupled-training-and-adapti-2509-23866",
+  "title": {
+    "original": "Efficient Multi-turn RL for GUI Agents via Decoupled Training and Adaptive Data Curation",
+    "zh": "面向 GUI 智能体的高效多轮强化学习：解耦训练与自适应数据筛选",
+    "en": "Efficient Multi-turn RL for GUI Agents via Decoupled Training and Adaptive Data Curation"
+  },
+  "authors": [
+    {
+      "name": "Pengxiang Li",
+      "affiliations": []
+    },
+    {
+      "name": "Zechen Hu",
+      "affiliations": []
+    },
+    {
+      "name": "Zirui Shang",
+      "affiliations": []
+    },
+    {
+      "name": "Jingrong Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Yang Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Hui Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Zhi Gao",
+      "affiliations": []
+    },
+    {
+      "name": "Chenrui Shi",
+      "affiliations": []
+    },
+    {
+      "name": "Bofei Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Zihao Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaochuan Shi",
+      "affiliations": []
+    },
+    {
+      "name": "Zedong YU",
+      "affiliations": []
+    },
+    {
+      "name": "Yuwei Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Xinxiao Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Yunde Jia",
+      "affiliations": []
+    },
+    {
+      "name": "Liuyu Xiang",
+      "affiliations": []
+    },
+    {
+      "name": "Zhaofeng He",
+      "affiliations": []
+    },
+    {
+      "name": "Qing Li",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2509.23866",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-09-28",
+      "latest_revision_date": "2025-09-28",
+      "url": "https://arxiv.org/abs/2509.23866"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-09-28",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-09-28"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-3",
+  "tags": [
+    "post-training",
+    "reinforcement-learning",
+    "rollout"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "DART 将环境、rollout、数据和训练解耦为可独立扩展模块，并配套轨迹筛选控制，形成 GUI 智能体 RL 系统。",
+    "en": "DART separates environment, rollout, data, and training into independently scalable modules with trajectory-curation control, forming a GUI-agent RL system."
+  },
+  "abstract": {
+    "zh": "DART 将 GUI 智能体 RL 解耦为环境集群、轨迹服务、数据管理器和训练器四个异步模块，并按任务难度与关键决策自适应筛选轨迹。",
+    "en": "DART decouples GUI-agent RL into four asynchronous modules—environment cluster, rollout service, data manager, and trainer—and adaptively curates trajectories by task difficulty and decision importance."
+  },
+  "problem": {
+    "zh": "GUI 环境交互慢且成功轨迹稀缺，若把采样、训练和环境锁步执行，GPU 与桌面实例会相互等待，在线数据也不足以稳定学习。",
+    "en": "GUI interaction is slow and successful trajectories are scarce; lockstep sampling, training, and environments make GPUs and desktop instances wait on one another while providing weak learning data."
+  },
+  "approach": {
+    "zh": "四模块以非阻塞通信运行，按轨迹同步 worker 权重；数据侧补充困难任务成功轨迹、动态调整采样长度与次数、选择高熵步骤并校正策略偏差。",
+    "en": "The four modules communicate non-blockingly with per-worker weight synchronization; curation supplements hard-task successes, adapts rollout count and length, selects high-entropy steps, and corrects policy mismatch."
+  },
+  "system_design": {
+    "zh": "环境集群执行 GUI，rollout 服务调度策略，数据管理器合并在线与预收集轨迹并标记关键步骤，训练器异步更新后向各 worker 发布版本。",
+    "en": "The environment cluster executes GUIs, rollout services schedule policies, the data manager merges online and pre-collected trajectories and marks critical steps, and the trainer publishes asynchronous updates to workers."
+  },
+  "key_results": {
+    "zh": "系统实验表明，模块解耦提高环境、生成和训练资源利用率，配合数据筛选后显著改善 GUI 任务成功率。",
+    "en": "System experiments show better utilization of environments, rollout, and training resources, with adaptive curation materially improving GUI task success."
+  },
+  "limitations": {
+    "zh": "预收集成功轨迹可能引入任务偏差，重要性采样校正无法消除全部陈旧性；真实 GUI 更新、隐私和操作安全仍是部署风险。",
+    "en": "Pre-collected successes can bias the task distribution, importance correction cannot remove all staleness, and real GUI drift, privacy, and action safety remain deployment risks."
+  },
+  "evaluation": {
+    "models": [
+      "DART-GUI-7B",
+      "base VLM"
+    ],
+    "workloads": [
+      "OSWorld",
+      "multi-turn GUI-agent reinforcement learning"
+    ],
+    "hardware": [
+      "GPU rollout and training workers",
+      "GUI environment workers"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "base model",
+      "open-source state of the art"
+    ],
+    "metrics": [
+      {
+        "name": "OSWorld task success rate",
+        "value": 42.13,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Absolute success-rate gain",
+        "value": 14.61,
+        "unit": "percentage points",
+        "baseline": "base model",
+        "higher_is_better": true
+      },
+      {
+        "name": "Success-rate gain",
+        "value": 7.34,
+        "unit": "percentage points",
+        "baseline": "open-source state of the art",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2509.23866",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "other",
+      "title": "DART-GUI project page",
+      "url": "https://computer-use-agents.github.io/dart-gui",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2509.23866",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2509.23866"
+  }
+}

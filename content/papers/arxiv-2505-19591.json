@@ -1,0 +1,175 @@
+{
+  "work_id": "arxiv-2505-19591",
+  "slug": "multi-agent-collaboration-via-evolving-orchestration-2505-19591",
+  "title": {
+    "original": "Multi-Agent Collaboration via Evolving Orchestration",
+    "zh": "通过演进式编排实现多智能体协作",
+    "en": "Multi-Agent Collaboration via Evolving Orchestration"
+  },
+  "authors": [
+    {
+      "name": "Yufan Dang",
+      "affiliations": []
+    },
+    {
+      "name": "Chen Qian",
+      "affiliations": []
+    },
+    {
+      "name": "Xueheng Luo",
+      "affiliations": []
+    },
+    {
+      "name": "Jingru Fan",
+      "affiliations": []
+    },
+    {
+      "name": "Zihao Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Ruijie Shi",
+      "affiliations": []
+    },
+    {
+      "name": "Weize Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Cheng Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaoyin Che",
+      "affiliations": []
+    },
+    {
+      "name": "Ye Tian",
+      "affiliations": []
+    },
+    {
+      "name": "Xuantang Xiong",
+      "affiliations": []
+    },
+    {
+      "name": "Lei Han",
+      "affiliations": []
+    },
+    {
+      "name": "Zhiyuan Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Maosong Sun",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2505.19591",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-05-26",
+      "latest_revision_date": "2025-10-21",
+      "url": "https://arxiv.org/abs/2505.19591"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-05-26",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-10-21"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-4",
+  "tags": [
+    "multi-agent",
+    "coordination",
+    "communication"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "强化学习木偶师编排器可作为动态多 Agent 运行时复用，按任务状态控制参与者顺序和终止。",
+    "en": "The reinforcement-learned puppeteer is a reusable multi-agent runtime component that controls participant order and termination from task state."
+  },
+  "abstract": {
+    "zh": "Evolving Orchestration 采用“木偶师”式中心编排器，通过强化学习随任务状态动态安排各专长 Agent，而非预先固定协作图。",
+    "en": "Evolving Orchestration uses a reinforcement-learned central 'puppeteer' to schedule specialist agents as task state evolves instead of fixing the collaboration graph upfront."
+  },
+  "problem": {
+    "zh": "静态多 Agent 组织在任务复杂度和 Agent 数量增长后无法及时重排，容易产生重复推理、无效通信与计算浪费。",
+    "en": "Static multi-agent organizations cannot reorganize as task complexity and team size grow, causing redundant reasoning, unnecessary communication, and wasted compute."
+  },
+  "approach": {
+    "zh": "编排器观察当前协作状态，学习下一位 Agent 的选择、顺序和优先级，使组织结构随解题过程演化。",
+    "en": "The orchestrator observes collaboration state and learns which agent should act next, in what order and priority, allowing organization to evolve during problem solving."
+  },
+  "system_design": {
+    "zh": "系统以中心状态汇总层连接多个角色 Agent，RL 策略控制调用序列和终止，执行反馈再更新后续调度。",
+    "en": "A central state aggregator connects role agents, an RL policy controls invocation order and termination, and execution feedback informs subsequent scheduling."
+  },
+  "key_results": {
+    "zh": "动态编排在开放与封闭领域任务上以更低计算成本取得更好表现，收益与更紧凑的循环推理结构共同出现。",
+    "en": "Dynamic orchestration improves closed- and open-domain performance at lower compute cost, with gains associated with compact cyclic reasoning structures."
+  },
+  "limitations": {
+    "zh": "中心编排器形成单点瓶颈并需要特定训练分布；摘要未证明在超大团队、异构模型或编排器故障时仍可扩展。",
+    "en": "The central orchestrator is a bottleneck trained on particular distributions; scalability to very large heterogeneous teams and orchestrator failures is not established."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Closed-domain multi-agent tasks",
+      "Open-domain multi-agent tasks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.19591",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "Evolving Orchestration implementation",
+      "url": "https://github.com/OpenBMB/ChatDev/tree/puppeteer",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2505.19591",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2505.19591"
+  }
+}

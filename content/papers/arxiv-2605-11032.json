@@ -1,0 +1,116 @@
+{
+  "work_id": "arxiv-2605-11032",
+  "slug": "portable-agent-memory-a-protocol-for-cryptographically-verified-memory-t-2605-11032",
+  "title": {
+    "original": "Portable Agent Memory: A Protocol for Cryptographically-Verified Memory Transfer Across Heterogeneous AI Agents",
+    "zh": "便携式代理内存：跨异构AI代理的加密验证内存传输协议",
+    "en": "Portable Agent Memory: A Protocol for Cryptographically-Verified Memory Transfer Across Heterogeneous AI Agents"
+  },
+  "authors": [
+    {
+      "name": "Santhosh Kumar Ravindran",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2605.11032",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-05-10",
+      "latest_revision_date": "2026-05-10",
+      "url": "https://arxiv.org/abs/2605.11032"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-05-10",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-10"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Portable Agent Memory 定义带来源证明、能力授权和安全 rehydration 的跨供应商记忆互操作协议。",
+    "en": "Portable Agent Memory defines a cross-vendor interoperability protocol with provenance proof, capability authorization, and safe rehydration."
+  },
+  "abstract": {
+    "zh": "Portable Agent Memory 是跨异构 Agent 迁移持久状态的开放协议与参考实现。它定义五类记忆模型，以内容寻址条目和 Merkle-DAG 记录防篡改来源，并结合能力访问控制、抗提示注入的 rehydration 与 JSON/CBOR 序列化。",
+    "en": "Portable Agent Memory is an open protocol and reference implementation for moving persistent state across heterogeneous agents. It defines five memory components, content-addressed entries linked by a tamper-evident Merkle-DAG, capability access control, injection-resistant rehydration, and JSON/CBOR serialization."
+  },
+  "problem": {
+    "zh": "Agent 积累的事件、知识、技能、工作状态和偏好被锁在供应商运行时中，直接导出既缺少完整性证明，也可能把恶意记忆注入目标模型。",
+    "en": "Agents accumulate events, knowledge, skills, working state, and preferences inside vendor runtimes, while naive export lacks integrity proof and can inject malicious memory into a target model."
+  },
+  "approach": {
+    "zh": "协议按五类结构打包记忆，用哈希与 Merkle 来源图验证内容，能力令牌控制选择性披露，目标侧 rehydration 在适配模型时对间接注入进行隔离。",
+    "en": "The protocol packages five structured memory classes, verifies content through hashes and a Merkle provenance graph, scopes disclosure with capabilities, and sanitizes indirect injection during target-side rehydration."
+  },
+  "system_design": {
+    "zh": "导出器生成内容寻址包、Merkle-DAG 与能力范围，传输层使用 JSON 或紧凑 CBOR；导入器验证完整性和权限后，通过模型适配 rehydration 将安全内容注入新 Agent。",
+    "en": "An exporter creates a content-addressed bundle, Merkle-DAG, and capability scope; transport uses JSON or compact CBOR; an importer verifies integrity and authority before model-adaptive rehydration."
+  },
+  "key_results": {
+    "zh": "参考实现含通过测试的 Python SDK 和多平台 Agent skill，并展示 GPT、Claude、Gemini 与 Llama 架构之间的跨模型记忆迁移。",
+    "en": "The reference implementation includes a tested Python SDK and skills for multiple platforms and demonstrates memory transfer across GPT, Claude, Gemini, and Llama architectures."
+  },
+  "limitations": {
+    "zh": "密码学完整性不能证明记忆内容真实或安全，能力撤销和长期密钥管理也未在摘要中展开；不同模型对同一记忆的语义解释仍可能不一致。",
+    "en": "Cryptographic integrity does not prove that memory content is true or safe, and capability revocation and long-term key management are not detailed; target models may still interpret identical memory differently."
+  },
+  "evaluation": {
+    "models": ["GPT-4", "Claude", "Gemini", "Llama"],
+    "workloads": ["cross-model persistent-memory transfer", "SDK protocol tests"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {"name": "Python SDK tests", "value": "54 passing tests", "higher_is_better": true},
+      {"name": "transfer coverage", "value": "GPT-4, Claude, Gemini, and Llama architectures", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "四个模型家族、跨模型迁移和 54 项 SDK 测试来自官方摘要；具体版本、迁移任务、攻击测试与硬件待全文审计。",
+      "en": "Four model families, cross-model transfer, and 54 SDK tests come from the official abstract; versions, transfer tasks, adversarial tests, and hardware await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2605.11032",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Portable Agent Memory",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2605.11032",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2605.11032"
+  }
+}

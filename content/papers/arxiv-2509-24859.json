@@ -1,0 +1,165 @@
+{
+  "work_id": "arxiv-2509-24859",
+  "slug": "harp-orchestrating-automated-parallel-training-on-heterogeneous-gpu-clus-2509-24859",
+  "title": {
+    "original": "HARP: Orchestrating Automated Parallel Training on Heterogeneous GPU Clusters",
+    "zh": "HARP：在异构GPU集群上编排自动化并行训练",
+    "en": "HARP: Orchestrating Automated Parallel Training on Heterogeneous GPU Clusters"
+  },
+  "authors": [
+    {
+      "name": "Antian Liang",
+      "affiliations": []
+    },
+    {
+      "name": "Zhigang Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Kai Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Xuri Shi",
+      "affiliations": []
+    },
+    {
+      "name": "Chuantao Li",
+      "affiliations": []
+    },
+    {
+      "name": "Chunxiao Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Zhenying He",
+      "affiliations": []
+    },
+    {
+      "name": "Yinan Jing",
+      "affiliations": []
+    },
+    {
+      "name": "X. Sean Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2509.24859",
+    "doi": "10.1145/3767295.3803603",
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-09-29",
+      "latest_revision_date": "2026-05-04",
+      "url": "https://arxiv.org/abs/2509.24859"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-09-29",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-04"
+  },
+  "window_status": "new_in_window",
+  "venue": "Proceedings of the 21st European Conference on Computer Systems, 2026, 1160-1180",
+  "publication_status": "published",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-2",
+  "tags": [
+    "distributed-training",
+    "parallelism",
+    "fault-tolerance"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "HARP 的异构画像、算子级并行搜索和网络感知 1F1B 调度共同构成自动并行训练编排器。",
+    "en": "HARP's heterogeneity profiling, operator-level parallel search, and network-aware 1F1B scheduling form an automated parallel-training orchestrator."
+  },
+  "abstract": {
+    "zh": "HARP 为异构 GPU 集群自动搜索算子间并行策略，并用感知网络差异的 1F1B 调度重新安排微批，以平衡负载并扩大通信重叠。",
+    "en": "HARP automatically searches inter-operator parallel strategies for heterogeneous GPU clusters and uses a network-aware 1F1B schedule to reorder microbatches for load balance and communication overlap."
+  },
+  "problem": {
+    "zh": "面向同构集群设计的训练框架无法同时利用不同代际加速器和跨集群链路，常出现设备空闲和通信瓶颈。",
+    "en": "Training frameworks designed for homogeneous clusters cannot jointly exploit mixed accelerator generations and cross-cluster links, leading to device idle time and communication bottlenecks."
+  },
+  "approach": {
+    "zh": "细粒度规划器在广泛的算子并行空间中搜索负载与通信权衡，异构调度器再依据链路特征自适应决定微批的执行时刻和顺序。",
+    "en": "A fine-grained planner searches operator-parallel trade-offs between load and communication, then a heterogeneity-aware scheduler adapts microbatch timing and order to observed link characteristics."
+  },
+  "system_design": {
+    "zh": "硬件和网络画像进入并行规划器生成映射，1F1B 运行时按设备速度和互连调整微批序列，并以较小额外内存保持计算—通信重叠。",
+    "en": "Hardware and network profiles feed a parallel planner, and the 1F1B runtime adjusts microbatch sequences to device and interconnect speeds while maintaining overlap with little additional memory."
+  },
+  "key_results": {
+    "zh": "在异构集群评测中，HARP 比所比较的先进训练框架取得更高吞吐，主要收益来自更平衡的设备负载和跨链路重叠。",
+    "en": "On heterogeneous-cluster evaluations, HARP achieves higher throughput than the compared advanced frameworks, driven by better load balance and overlap across unequal links."
+  },
+  "limitations": {
+    "zh": "计划依赖稳定的设备与链路画像；快速资源变化、不可切分算子和调度搜索开销可能降低收益，内存优势也需在更大模型上确认。",
+    "en": "Plans depend on stable device and link profiles; rapid resource changes, indivisible operators, and search overhead can reduce benefits, and memory behavior needs confirmation at larger scale."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "automated parallel training on heterogeneous clusters"
+    ],
+    "hardware": [
+      "heterogeneous GPU clusters",
+      "cross-cluster interconnects"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "state-of-the-art training frameworks"
+    ],
+    "metrics": [
+      {
+        "name": "Training performance improvement",
+        "value": "1.3-1.6",
+        "unit": "x",
+        "baseline": "state-of-the-art training frameworks",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2509.24859",
+      "title": "Official arXiv record"
+    },
+    {
+      "type": "publisher",
+      "url": "https://doi.org/10.1145/3767295.3803603",
+      "title": "Publisher record via DOI"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "HARP",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2509.24859",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2509.24859"
+  }
+}

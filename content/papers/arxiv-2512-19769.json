@@ -1,0 +1,118 @@
+{
+  "work_id": "arxiv-2512-19769",
+  "slug": "a-declarative-language-for-building-and-orchestrating-llm-powered-agent-2512-19769",
+  "title": {
+    "original": "A Declarative Language for Building And Orchestrating LLM-Powered Agent Workflows",
+    "zh": "用于构建与编排 LLM 智能体工作流的声明式语言",
+    "en": "A Declarative Language for Building And Orchestrating LLM-Powered Agent Workflows"
+  },
+  "authors": [
+    {
+      "name": "Ivan Daunis",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2512.19769",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-12-22",
+      "latest_revision_date": "2025-12-22",
+      "url": "https://arxiv.org/abs/2512.19769"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-12-22",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-12-22"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "该 DSL、后端无关中间表示和多语言适配器使 Agent 工作流可跨部署复用、配置更新和 A/B 评测。",
+    "en": "The DSL, backend-neutral IR, and multi-language adapters make agent workflows reusable across deployments and support configuration updates and A/B evaluation."
+  },
+  "abstract": {
+    "zh": "该系统以声明式 DSL 分离 Agent 工作流规范与 Java、Python、Go 等后端实现，使同一流水线可在云原生或本地环境执行。语言覆盖序列化、过滤、RAG、API 编排等常见模式，并原生支持多个策略变体的 A/B 评测。",
+    "en": "This system separates agent workflow specification from Java, Python, and Go implementations through a declarative DSL, allowing one pipeline to run in cloud-native or on-premises environments. It covers serialization, filtering, RAG, and API orchestration and supports native A/B testing of strategy variants."
+  },
+  "problem": {
+    "zh": "部署级 Agent 将工具、数据与控制流紧耦合到语言和部署模型，任何行为调整都可能需要重新编码与发布，阻碍跨环境复用和安全实验。",
+    "en": "Deployment-ready agents tightly couple tools, data, and control flow to a language and deployment model, forcing code changes and releases for behavior tuning and hindering portability and controlled experimentation."
+  },
+  "approach": {
+    "zh": "DSL 把常见 Agent 步骤、数据边和分支表达为配置，编译/运行层将规范映射到不同语言后端；策略变体共享基础设施并自动收集比较指标。",
+    "en": "The DSL expresses common agent steps, data edges, and branches as configuration, which compilation and runtime layers map to different language backends; variants share infrastructure and collect comparison metrics automatically."
+  },
+  "system_design": {
+    "zh": "系统包含 DSL schema、后端无关的工作流中间表示、Java/Python/Go 执行适配器和实验遥测层；工具或行为可通过规范更新而非应用重新部署。",
+    "en": "The stack comprises a DSL schema, backend-neutral workflow representation, Java/Python/Go execution adapters, and experiment telemetry, so tools and behavior can change through specification updates rather than application redeployment."
+  },
+  "key_results": {
+    "zh": "在 PayPal 每日数百万交互的电商流程中，作者报告开发时间缩短、部署迭代更快，并以远少于命令式实现的 DSL 行数表达复杂流程。",
+    "en": "In PayPal e-commerce workflows processing millions of daily interactions, the authors report shorter development time, faster deployment iteration, and far more compact specifications than imperative implementations."
+  },
+  "limitations": {
+    "zh": "声明式表达能力受预置模式和适配器限制，复杂动态控制仍可能回落到代码；证据主要来自单一企业场景，跨组织治理与调试体验未量化。",
+    "en": "Declarative expressiveness is bounded by available patterns and adapters, with highly dynamic control likely falling back to code; evidence is centered on one enterprise, and cross-organization governance and debugging are not quantified."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["PayPal e-commerce product search", "personalization", "cart management"],
+    "hardware": ["cloud-native and on-premises deployments"],
+    "cluster_scale": "millions of daily interactions",
+    "baselines": ["imperative agent implementations"],
+    "metrics": [
+      {"name": "development-time reduction", "value": 60, "unit": "%", "baseline": "imperative implementation", "higher_is_better": true},
+      {"name": "deployment velocity", "value": "3x", "baseline": "imperative implementation", "higher_is_better": true},
+      {"name": "orchestration overhead", "value": "below 100 ms", "higher_is_better": false},
+      {"name": "workflow specification size", "value": "under 50 DSL lines vs 500+ imperative lines", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "PayPal 场景、日交互规模、命令式基线和四项结果来自官方摘要；后端配置、模型、统计方法和分场景结果待全文审计。",
+      "en": "PayPal scenarios, daily scale, imperative baseline, and four results come from the official abstract; backends, models, statistics, and per-scenario results await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.19769",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2512.19769",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2512.19769"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "work_id": "arxiv-2512-22087",
+  "slug": "context-as-a-tool-context-management-for-long-horizon-swe-agents-2512-22087",
+  "title": {
+    "original": "Context as a Tool: Context Management for Long-Horizon SWE-Agents",
+    "zh": "上下文作为工具：长期SWE代理的上下文管理",
+    "en": "Context as a Tool: Context Management for Long-Horizon SWE-Agents"
+  },
+  "authors": [
+    {
+      "name": "Shukai Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Jian Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Bo Jiang",
+      "affiliations": []
+    },
+    {
+      "name": "Yizhi Li",
+      "affiliations": []
+    },
+    {
+      "name": "Jinyang Guo",
+      "affiliations": []
+    },
+    {
+      "name": "Xianglong Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Bryan Dai",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2512.22087",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-12-26",
+      "latest_revision_date": "2025-12-26",
+      "url": "https://arxiv.org/abs/2512.22087"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-12-26",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-12-26"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "CAT 把结构化上下文工作区、主动压缩工具和轨迹级监督实现为长程 Agent 可复用的上下文控制层。",
+    "en": "CAT implements a structured workspace, proactive compression tool, and trajectory-level supervision as a reusable context-control layer for long-horizon agents."
+  },
+  "abstract": {
+    "zh": "CAT 将上下文维护提升为 SWE Agent 可主动调用的工具。它把工作区拆为稳定任务语义、压缩长期记忆和高保真短期交互，并训练 SWE-Compressor 在合适里程碑把历史轨迹压成可操作摘要。",
+    "en": "CAT turns context maintenance into a tool that software-engineering agents can invoke proactively. It divides the workspace into stable task semantics, compressed long-term memory, and high-fidelity recent interaction, and trains SWE-Compressor to summarize trajectories at useful milestones."
+  },
+  "problem": {
+    "zh": "长周期代码任务采用追加式上下文或被动阈值压缩时，容易发生上下文爆炸、语义漂移和关键仓库证据丢失。",
+    "en": "Append-only context and passive threshold compression in long software tasks cause context explosion, semantic drift, and loss of repository evidence."
+  },
+  "approach": {
+    "zh": "CAT-GENERATOR 离线在完整轨迹中注入上下文管理动作，形成轨迹级监督；训练出的压缩器由 Agent 自主决定何时整理历史，并写回结构化工作区。",
+    "en": "CAT-GENERATOR injects context-management actions into full trajectories to create trajectory-level supervision; the trained compressor lets the agent choose when to condense history and update the structured workspace."
+  },
+  "system_design": {
+    "zh": "运行时把 context-management 作为普通动作暴露给 Agent，工具读取当前三段式工作区、生成里程碑摘要并更新长期段，同时保留最近交互的原始细节。",
+    "en": "The runtime exposes context management as an ordinary agent action. The tool reads the three-part workspace, writes a milestone summary into long-term state, and preserves recent interactions at full fidelity."
+  },
+  "key_results": {
+    "zh": "在 SWE-Bench-Verified 上，SWE-Compressor 被报告比 ReAct 和静态压缩基线解决更多任务，并在固定上下文预算下保持较稳定的长程推理。",
+    "en": "On SWE-Bench-Verified, SWE-Compressor is reported to solve more tasks than ReAct and static-compression baselines while sustaining long-horizon reasoning within a bounded context budget."
+  },
+  "limitations": {
+    "zh": "监督由离线注入动作构造，可能偏向训练轨迹的里程碑模式；压缩一旦遗漏关键信息难以恢复，跨非 SWE 任务的适用性也未建立。",
+    "en": "Supervision comes from injected offline actions and may reflect training-trajectory milestone patterns; omitted evidence is hard to recover, and transfer beyond software engineering is not established."
+  },
+  "evaluation": {
+    "models": ["SWE-Compressor"],
+    "workloads": ["SWE-Bench-Verified", "long-horizon repository-scale software engineering"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["ReAct-based agents", "static compression"],
+    "metrics": [
+      {"name": "SWE-Bench-Verified solved rate", "value": 57.6, "unit": "%", "higher_is_better": true},
+      {"name": "context budget", "value": "bounded context with stable long-horizon reasoning", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "模型名、SWE-Bench-Verified、两类基线和解决率来自官方摘要；底座模型、硬件、上下文长度和成本待全文审计。",
+      "en": "Model name, SWE-Bench-Verified, two baseline classes, and solved rate come from the official abstract; base model, hardware, context length, and cost await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.22087",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Context as a Tool",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2512.22087",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2512.22087"
+  }
+}

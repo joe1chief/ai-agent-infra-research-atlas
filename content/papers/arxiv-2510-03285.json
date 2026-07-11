@@ -1,0 +1,127 @@
+{
+  "work_id": "arxiv-2510-03285",
+  "slug": "warex-web-agent-reliability-evaluation-on-existing-benchmarks-2510-03285",
+  "title": {
+    "original": "WAREX: Web Agent Reliability Evaluation on Existing Benchmarks",
+    "zh": "WAREX：对现有基准的Web 智能体可靠性评估",
+    "en": "WAREX: Web Agent Reliability Evaluation on Existing Benchmarks"
+  },
+  "authors": [
+    {
+      "name": "Su Kara",
+      "affiliations": []
+    },
+    {
+      "name": "Fazle Faisal",
+      "affiliations": []
+    },
+    {
+      "name": "Suman Nath",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2510.03285",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-09-28",
+      "latest_revision_date": "2025-09-28",
+      "url": "https://arxiv.org/abs/2510.03285"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-09-28",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-09-28"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-5",
+  "tags": [
+    "agent-evaluation",
+    "observability",
+    "reliability"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "WAREX 是可叠加到现有 Web 基准的网络、服务和页面故障注入层，用于系统化测量生产可靠性。",
+    "en": "WAREX is a network, service, and page-fault injection layer reusable atop existing web benchmarks for systematic production-reliability measurement."
+  },
+  "abstract": {
+    "zh": "WAREX 为现有 Web Agent 基准注入网络、HTTPS、客户端/服务端故障和页面攻击变化，以测量受控环境分数之外的可靠性。",
+    "en": "WAREX injects network, HTTPS, client/server failures, and hostile page variations into existing web-agent benchmarks to measure reliability beyond controlled-environment scores."
+  },
+  "problem": {
+    "zh": "容器化稳定网站几乎不呈现真实网络波动、服务故障、页面更新和恶意弹窗，因而把一次成功误当作可部署可靠性。",
+    "en": "Stable containerized sites omit real network variation, service failures, page changes, and malicious pop-ups, so one-run success is mistaken for deployable reliability."
+  },
+  "approach": {
+    "zh": "框架在 WebArena、WebVoyager 和 REAL 的既有任务上系统施加多源故障与网页扰动，再比较 Agent 的成功率退化。",
+    "en": "The framework overlays controlled multi-source faults and web perturbations on tasks from WebArena, WebVoyager, and REAL and measures degradation."
+  },
+  "system_design": {
+    "zh": "WAREX 作为故障代理位于 Agent 与浏览器/网络/站点之间，调度可复现的异常场景并复用原基准任务与验证器。",
+    "en": "WAREX acts as a fault proxy between agent and browser, network, and site, scheduling reproducible anomalies while reusing original tasks and evaluators."
+  },
+  "key_results": {
+    "zh": "加入 WAREX 后，多种先进 Web Agent 的任务成功率明显下滑，暴露控制环境排行榜未体现的脆弱性。",
+    "en": "Adding WAREX substantially lowers success for advanced web agents, exposing fragility hidden by controlled-environment leaderboards."
+  },
+  "limitations": {
+    "zh": "注入故障只是现实失效的样本，强度和组合未必匹配生产分布；复用原验证器也继承其奖励与任务缺陷。",
+    "en": "Injected faults sample only part of production failure distributions, and reusing original evaluators inherits their task and reward shortcomings."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "WebArena",
+      "WebVoyager",
+      "REAL"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Original benchmark environments without WAREX faults"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.03285",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "WAREX",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2510.03285",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2510.03285"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "work_id": "arxiv-2511-00330",
+  "slug": "sherlock-reliable-and-efficient-agentic-workflow-execution-2511-00330",
+  "title": {
+    "original": "Sherlock: Reliable and Efficient Agentic Workflow Execution",
+    "zh": "Sherlock：可靠高效的代理工作流程执行",
+    "en": "Sherlock: Reliable and Efficient Agentic Workflow Execution"
+  },
+  "authors": [
+    {
+      "name": "Yeonju Ro",
+      "affiliations": []
+    },
+    {
+      "name": "Haoran Qiu",
+      "affiliations": []
+    },
+    {
+      "name": "Íñigo Goiri",
+      "affiliations": []
+    },
+    {
+      "name": "Rodrigo Fonseca",
+      "affiliations": []
+    },
+    {
+      "name": "Ricardo Bianchini",
+      "affiliations": []
+    },
+    {
+      "name": "Aditya Akella",
+      "affiliations": []
+    },
+    {
+      "name": "Zhangyang Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Mattan Erez",
+      "affiliations": []
+    },
+    {
+      "name": "Esha Choukse",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2511.00330",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-11-01",
+      "latest_revision_date": "2025-11-01",
+      "url": "https://arxiv.org/abs/2511.00330"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-11-01",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-11-01"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Sherlock 的节点风险分析、验证器放置、投机执行和回滚检查点构成可复用的可靠 Agent 工作流运行时。",
+    "en": "Sherlock combines node-risk analysis, verifier placement, speculative execution, and rollback checkpoints into a reusable reliable-workflow runtime."
+  },
+  "abstract": {
+    "zh": "Sherlock 用反事实分析识别 Agent 工作流中最容易传播错误的节点，只在必要位置附加成本最优验证器。运行时让下游任务与后台验证投机并行，验证失败时回滚到最近的已验证输出。",
+    "en": "Sherlock uses counterfactual analysis to identify workflow nodes whose errors are most consequential and attaches cost-optimal verifiers only there. At runtime, downstream work executes speculatively beside background verification and rolls back to the last verified output on failure."
+  },
+  "problem": {
+    "zh": "工作流早期的部分错误会在后续放大，但逐节点使用自省、辩论或 LLM Judge 会带来不可接受的时延和调用成本。",
+    "en": "Partial errors at early nodes can amplify downstream, but verifying every step with reflection, debate, or LLM judges adds prohibitive latency and cost."
+  },
+  "approach": {
+    "zh": "离线反事实分析估计节点出错对最终结果的影响并选择验证器；在线阶段投机执行验证节点的后继，失败后取消结果并从检查点重放。",
+    "en": "Offline counterfactual analysis estimates each node's impact and selects a verifier; online execution speculates beyond verification points, discarding work and replaying from a checkpoint when a check fails."
+  },
+  "system_design": {
+    "zh": "Sherlock 的规划器生成节点风险与验证器映射，执行器维护已验证检查点、后台验证任务和投机分支；回滚控制器负责撤销失败分支并恢复状态。",
+    "en": "A planner produces node-risk and verifier mappings, an executor tracks verified checkpoints, background checks, and speculative branches, and a rollback controller restores state after failed verification."
+  },
+  "key_results": {
+    "zh": "跨基准结果报告 Sherlock 提高工作流准确率，同时以投机执行缩短相对非投机验证的运行时间，并降低相对搜索式方法的验证成本。",
+    "en": "Across benchmarks, Sherlock is reported to improve workflow accuracy, reduce runtime relative to non-speculative verification, and lower verification cost versus search-based selection."
+  },
+  "limitations": {
+    "zh": "反事实风险估计可能随模型、提示和工具变化而失效；对外部有副作用的工具无法总是安全回滚，投机工作在高失败率下也会浪费资源。",
+    "en": "Counterfactual risk estimates may drift with models, prompts, and tools; external side effects are not always rollback-safe, and speculative work can waste resources when failures are frequent."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["agentic workflow benchmarks with selective verification"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["non-verifying workflow", "non-speculative verification", "Monte Carlo search-based verifier selection"],
+    "metrics": [
+      {"name": "average accuracy gain", "value": 18.3, "unit": "%", "baseline": "non-verifying workflow", "higher_is_better": true},
+      {"name": "workflow execution-time reduction", "value": "up to 48.7%", "baseline": "non-speculative verification", "higher_is_better": true},
+      {"name": "verification-cost reduction", "value": 26, "unit": "%", "baseline": "Monte Carlo search-based method", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "三类基线和准确率/时间/成本结果来自官方摘要；基准、模型、验证器、硬件与平均方式待全文审计。",
+      "en": "Three baseline classes and accuracy/time/cost results come from the official abstract; benchmarks, models, verifiers, hardware, and averaging await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.00330",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Sherlock",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2511.00330",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2511.00330"
+  }
+}

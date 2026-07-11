@@ -1,0 +1,125 @@
+{
+  "work_id": "arxiv-2509-02121",
+  "slug": "batch-query-processing-and-optimization-for-agentic-workflows-2509-02121",
+  "title": {
+    "original": "Batch Query Processing and Optimization for Agentic Workflows",
+    "zh": "代理工作流程的批量查询处理和优化",
+    "en": "Batch Query Processing and Optimization for Agentic Workflows"
+  },
+  "authors": [
+    {
+      "name": "Junyi Shen",
+      "affiliations": []
+    },
+    {
+      "name": "Noppanat Wadlom",
+      "affiliations": []
+    },
+    {
+      "name": "Yao Lu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2509.02121",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-09-02",
+      "latest_revision_date": "2026-01-19",
+      "url": "https://arxiv.org/abs/2509.02121"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-09-02",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-19"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Halo 将 Agent 图编译为可优化查询计划，并在统一执行器中复用计算、KV 和异构硬件，属于批量工作流运行时。",
+    "en": "Halo compiles agent graphs into optimizable query plans and reuses computation, KV state, and heterogeneous hardware in a shared processor, making it a batch-workflow runtime."
+  },
+  "abstract": {
+    "zh": "Halo 把批量 Agent 工作流表示为查询计划 DAG，并将多个查询合并成暴露共享计算的统一图。成本模型联合考虑异构资源、预填充/解码、缓存复用与 GPU 放置，执行器再结合动态批处理、KV 共享迁移和 CPU–GPU 流水线。",
+    "en": "Halo represents batched agent workflows as query-plan DAGs and consolidates them into a graph that exposes shared computation. A cost model covers heterogeneous resources, prefill/decode, cache reuse, and GPU placement, while the processor combines adaptive batching, KV sharing/migration, and CPU–GPU pipelining."
+  },
+  "problem": {
+    "zh": "服务引擎逐调用优化、Agent 框架只管逻辑，导致批量分析中的重复提示、重叠上下文和碎片化 CPU/GPU 步骤无法被全局消除。",
+    "en": "Serving engines optimize calls independently and agent frameworks optimize only logic, leaving repeated prompts, overlapping context, and fragmented CPU/GPU work unexploited in batch analytics."
+  },
+  "approach": {
+    "zh": "Halo 合并多个工作流图并依据成本模型重写计划，识别可共享的预填充、工具和中间状态，再把优化图映射到异构处理器。",
+    "en": "Halo merges workflow graphs, rewrites the consolidated plan with a cost model, identifies reusable prefill, tool, and intermediate state, and maps the optimized graph to heterogeneous processors."
+  },
+  "system_design": {
+    "zh": "查询规划器构建跨请求 DAG 与共享子图，成本优化器选择放置和复用，Processor 在运行时执行自适应批次、KV 迁移及细粒度 CPU–GPU 重叠。",
+    "en": "A planner builds cross-request DAGs and shared subgraphs, a cost optimizer selects placement and reuse, and the runtime Processor executes adaptive batches, KV migration, and fine-grained CPU–GPU overlap."
+  },
+  "key_results": {
+    "zh": "六个基准的结果报告 Halo 提高批量推理速度与在线吞吐，可扩展到数千查询和复杂图，同时保持输出质量。",
+    "en": "Across six benchmarks, Halo is reported to accelerate batch inference and online throughput, scaling to thousands of queries and complex graphs without reducing output quality."
+  },
+  "limitations": {
+    "zh": "共享收益取决于批次间结构与上下文重合，成本模型误差会导致不佳放置；高度动态、带副作用工具或严格隔离的工作流可能难以合并。",
+    "en": "Benefits depend on structural and contextual overlap, and cost-model error can misplace work; highly dynamic workflows, side-effecting tools, or strict tenant isolation may prevent consolidation."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["six agentic-workflow benchmarks", "batch inference", "online serving", "workloads with thousands of queries"],
+    "hardware": ["heterogeneous CPU-GPU execution"],
+    "cluster_scale": "thousands of queries and complex workflow graphs",
+    "baselines": ["existing LLM serving and agent orchestration systems"],
+    "metrics": [
+      {"name": "batch inference speedup", "value": "up to 3.6x", "higher_is_better": true},
+      {"name": "online throughput improvement", "value": "up to 2.6x", "higher_is_better": true},
+      {"name": "output quality", "value": "no compromise reported", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "六项基准、千级查询规模、异构执行与三项结论来自官方摘要；模型、GPU、基准名称和质量指标待全文审计。",
+      "en": "Six benchmarks, thousand-query scale, heterogeneous execution, and three conclusions come from the official abstract; models, GPUs, benchmark names, and quality metrics await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2509.02121",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2509.02121",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2509.02121"
+  }
+}

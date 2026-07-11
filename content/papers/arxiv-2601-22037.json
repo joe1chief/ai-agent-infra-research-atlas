@@ -1,0 +1,132 @@
+{
+  "work_id": "arxiv-2601-22037",
+  "slug": "optimizing-agentic-workflows-using-meta-tools-2601-22037",
+  "title": {
+    "original": "Optimizing Agentic Workflows using Meta-tools",
+    "zh": "使用元工具优化智能体工作流",
+    "en": "Optimizing Agentic Workflows using Meta-tools"
+  },
+  "authors": [
+    {
+      "name": "Sami Abuzakuk",
+      "affiliations": []
+    },
+    {
+      "name": "Anne-Marie Kermarrec",
+      "affiliations": []
+    },
+    {
+      "name": "Rishi Sharma",
+      "affiliations": []
+    },
+    {
+      "name": "Rasmus Moorits Veski",
+      "affiliations": []
+    },
+    {
+      "name": "Martijn de Vos",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.22037",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-01-29",
+      "latest_revision_date": "2026-02-02",
+      "url": "https://arxiv.org/abs/2601.22037"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-29",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-02-02"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AWO 的轨迹挖掘与 meta-tool 编译器可把重复工具路径沉淀为确定性运行时原语，减少中间 LLM 控制开销。",
+    "en": "AWO's trace mining and meta-tool compiler turn repeated tool paths into deterministic runtime primitives that remove intermediate LLM control overhead."
+  },
+  "abstract": {
+    "zh": "Agent Workflow Optimization（AWO）从既有执行轨迹中发现重复工具调用序列，并把它们编译成确定性的复合 meta-tool。一次 meta-tool 调用替代多轮 LLM 推理和工具往返，从而缩短执行路径、降低成本并减少幻觉暴露点。",
+    "en": "Agent Workflow Optimization (AWO) mines recurring tool-call sequences from execution traces and compiles them into deterministic composite meta-tools. One meta-tool invocation replaces several LLM reasoning and tool round trips, shortening paths and reducing cost and hallucination exposure."
+  },
+  "problem": {
+    "zh": "Agent 经常重复相同的多工具模式，却每次重新进行中间 LLM 推理，造成额外调用、端到端延迟和沿途幻觉或失败。",
+    "en": "Agents repeatedly execute the same multi-tool patterns but regenerate intermediate reasoning every time, adding calls, end-to-end latency, and opportunities for hallucination or failure."
+  },
+  "approach": {
+    "zh": "AWO 分析历史轨迹，识别高频且可确定组合的工具子序列，生成带固定数据流和错误处理的 meta-tool，并让 Agent 在后续任务中直接选择它。",
+    "en": "AWO analyzes traces, identifies frequent tool subsequences that can be composed deterministically, generates meta-tools with fixed data flow and error handling, and exposes them for later agent selection."
+  },
+  "system_design": {
+    "zh": "离线轨迹分析器产生候选模式，编译器把经验证序列封装为新工具契约，运行时工具注册表同时提供原子工具与 meta-tool，并记录收益供后续更新。",
+    "en": "An offline trace analyzer proposes patterns, a compiler wraps validated sequences in new tool contracts, and the runtime registry exposes both atomic and meta-tools while logging realized benefit for future updates."
+  },
+  "key_results": {
+    "zh": "两个 Agent 基准上的实验报告 AWO 减少 LLM 调用，并同时提升任务成功率，说明压缩冗余路径可兼顾效率与鲁棒性。",
+    "en": "On two agent benchmarks, AWO is reported to reduce LLM calls while improving task success, indicating that collapsing redundant paths can help both efficiency and robustness."
+  },
+  "limitations": {
+    "zh": "meta-tool 只适合稳定、可组合且副作用明确的序列；工具版本或业务规则变化会使封装过期，过度合并也可能削弱 Agent 的自适应分支能力。",
+    "en": "Meta-tools suit stable, composable sequences with understood side effects; tool or policy changes can stale the wrapper, and over-composition may remove adaptive branching the agent still needs."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["two agentic AI benchmarks", "workflows with recurring tool-call sequences"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["original workflows without meta-tools"],
+    "metrics": [
+      {"name": "LLM-call reduction", "value": "up to 11.9%", "higher_is_better": true},
+      {"name": "task-success increase", "value": "up to 4.2 percentage points", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "两项基准、原始流程基线和调用/成功率结果来自官方摘要；基准名、模型、工具集、时延与成本待全文审计。",
+      "en": "Two benchmarks, the original-workflow baseline, and call/success results come from the official abstract; benchmark names, models, tools, latency, and cost await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.22037",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.22037",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.22037"
+  }
+}

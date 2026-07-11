@@ -1,0 +1,158 @@
+{
+  "work_id": "arxiv-2602-19128",
+  "slug": "k-search-llm-kernel-generation-via-co-evolving-intrinsic-world-model-2602-19128",
+  "title": {
+    "original": "K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model",
+    "zh": "K-Search：通过共同演化内在世界模型生成LLM内核",
+    "en": "K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model"
+  },
+  "authors": [
+    {
+      "name": "Shiyi Cao",
+      "affiliations": []
+    },
+    {
+      "name": "Ziming Mao",
+      "affiliations": []
+    },
+    {
+      "name": "Joseph E. Gonzalez",
+      "affiliations": []
+    },
+    {
+      "name": "Ion Stoica",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2602.19128",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-02-22",
+      "latest_revision_date": "2026-02-26",
+      "url": "https://arxiv.org/abs/2602.19128"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-02-22",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-02-26"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "K-Search 提供带世界模型、计划—实例化分离、编译验证和性能反馈的自动 kernel 搜索系统，而非一次性生成算法。",
+    "en": "K-Search provides an automated kernel-search system with a world model, planning/instantiation separation, compile validation, and performance feedback rather than one-shot generation."
+  },
+  "abstract": {
+    "zh": "K-Search 用与候选程序共同演化的内在世界模型指导 GPU kernel 搜索，把高层优化规划与低层代码实例化分离，以跨越暂时变慢或错误的非单调搜索路径。",
+    "en": "K-Search guides GPU-kernel search with an intrinsic world model that co-evolves with candidate programs, separating high-level optimization planning from low-level code instantiation to traverse non-monotonic paths."
+  },
+  "problem": {
+    "zh": "把 LLM 仅当随机代码生成器的进化搜索缺少多步规划，复杂结构变换中的临时错误会让有潜力的方向过早被淘汰。",
+    "en": "Evolutionary search that treats an LLM only as a stochastic coder lacks multi-step planning, so temporary defects during structural transformations prematurely discard promising directions."
+  },
+  "approach": {
+    "zh": "世界模型积累优化空间知识并提出高层计划，代码生成器负责实例化；两者随编译、正确性和性能反馈共同更新，允许保留尚未完成的策略。",
+    "en": "A world model accumulates optimization-space knowledge and proposes plans, a code generator instantiates them, and both evolve from compile, correctness, and performance feedback while retaining unfinished strategies."
+  },
+  "system_design": {
+    "zh": "搜索状态包含计划、kernel 候选和实验反馈；规划器选择结构变换，实例化器生成代码，验证/基准执行器回传结果供世界模型和种群更新。",
+    "en": "Search state holds plans, kernel candidates, and experiment feedback; a planner chooses structural transformations, an instantiator writes code, and validation plus benchmarking update the world model and population."
+  },
+  "key_results": {
+    "zh": "在多类 FlashInfer 复杂 kernel 与独立任务上，K-Search 优于既有进化方法，并找到超过若干人工实现的方案。",
+    "en": "Across several complex FlashInfer kernels and an independent task, K-Search outperforms prior evolutionary methods and discovers implementations that beat multiple human-designed solutions."
+  },
+  "limitations": {
+    "zh": "结果依赖模型先验、编译器和目标 GPU，搜索仍消耗大量验证计算；通过测试不等于形式正确，世界模型也可能过拟合已见 kernel。",
+    "en": "Results depend on model priors, compiler, and target GPU, while search consumes substantial validation compute; passing tests is not formal correctness, and the world model may overfit seen kernels."
+  },
+  "evaluation": {
+    "models": [
+      "large language models used for kernel generation"
+    ],
+    "workloads": [
+      "FlashInfer GQA kernels",
+      "FlashInfer MLA kernels",
+      "FlashInfer MoE kernels",
+      "GPUMode TriMul"
+    ],
+    "hardware": [
+      "NVIDIA H100 GPU"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "state-of-the-art evolutionary kernel search",
+      "human-designed kernels"
+    ],
+    "metrics": [
+      {
+        "name": "Average kernel-performance improvement",
+        "value": 2.1,
+        "unit": "x",
+        "baseline": "state-of-the-art evolutionary search",
+        "higher_is_better": true
+      },
+      {
+        "name": "Maximum complex-MoE-kernel improvement",
+        "value": 14.3,
+        "unit": "x",
+        "baseline": "state-of-the-art evolutionary search",
+        "higher_is_better": true
+      },
+      {
+        "name": "H100 TriMul runtime",
+        "value": 1030,
+        "unit": "microseconds",
+        "higher_is_better": false
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2602.19128",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "K-Search",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2602.19128",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2602.19128"
+  }
+}

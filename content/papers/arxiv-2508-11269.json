@@ -1,0 +1,135 @@
+{
+  "work_id": "arxiv-2508-11269",
+  "slug": "inference-performance-evaluation-for-llms-on-edge-devices-with-a-novel-b-2508-11269",
+  "title": {
+    "original": "Inference performance evaluation for LLMs on edge devices with a novel benchmarking framework and metric",
+    "zh": "使用新颖的基准框架和指标对边缘设备上的LLM进行推理性能评估",
+    "en": "Inference performance evaluation for LLMs on edge devices with a novel benchmarking framework and metric"
+  },
+  "authors": [
+    {
+      "name": "Hao Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Cong Tian",
+      "affiliations": []
+    },
+    {
+      "name": "Zixuan He",
+      "affiliations": []
+    },
+    {
+      "name": "Bin Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Yepang Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Jialun Cao",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2508.11269",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-08-15",
+      "latest_revision_date": "2025-08-15",
+      "url": "https://arxiv.org/abs/2508.11269"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-08-15",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-08-15"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "ELIB 与 MBU 形成可跨边缘设备、量化模型和引擎复用的推理测量工具及内存效率指标。",
+    "en": "ELIB and MBU form a reusable inference harness and memory-efficiency metric across edge devices, quantized models, and engines."
+  },
+  "abstract": {
+    "zh": "ELIB 是用于比较边缘设备 LLM 推理的基准工具，并提出内存带宽利用率指标 MBU，衡量特定模型在设备上接近理论带宽效率的程度。框架联合报告 FLOPS、吞吐、时延、准确率与 MBU。",
+    "en": "ELIB benchmarks LLM inference across edge platforms and introduces Memory Bandwidth Utilization (MBU), which expresses how closely a model approaches the device's theoretical bandwidth efficiency. It reports MBU alongside FLOPS, throughput, latency, and accuracy."
+  },
+  "problem": {
+    "zh": "边缘平台硬件差异巨大且常受内存容量/带宽约束，传统吞吐或时延指标无法解释模型是否有效利用了设备可用带宽。",
+    "en": "Edge platforms vary widely and are often memory-capacity or bandwidth bound, while ordinary latency and throughput metrics do not reveal whether a model uses the available bandwidth efficiently."
+  },
+  "approach": {
+    "zh": "作者在三类边缘平台上部署五个量化模型，统一采集模型质量和系统性能，并用 MBU 对实际内存流量与理论带宽进行归一化比较。",
+    "en": "The study deploys five quantized models on three edge platforms, collects quality and systems metrics under one harness, and normalizes observed memory behavior against theoretical bandwidth through MBU."
+  },
+  "system_design": {
+    "zh": "ELIB 把模型、量化格式与边缘设备作为可交换配置，运行标准推理负载并输出多指标记录；MBU 分析层用于定位带宽利用的约束与不可预测因素。",
+    "en": "ELIB treats model, quantization, and edge device as interchangeable configurations, runs standardized inference workloads, and emits a multi-metric record with an MBU analysis layer for bandwidth bottlenecks."
+  },
+  "key_results": {
+    "zh": "跨平台结果揭示 MBU 优化受到模型量化、设备内存系统及其他性能指标共同影响，可用于指导边缘部署选择，而非依赖单一吞吐排名。",
+    "en": "Cross-platform results show that MBU is shaped jointly by quantization, the device memory system, and other performance constraints, supporting deployment choices beyond a single throughput ranking."
+  },
+  "limitations": {
+    "zh": "评测仅覆盖三种平台和五个量化模型，理论带宽也未必代表共享内存与热限制下的可用上限；MBU 不能单独代表能效或用户体验。",
+    "en": "Coverage is limited to three platforms and five quantized models, and theoretical bandwidth may not reflect shared-memory or thermal limits; MBU alone is not a measure of energy efficiency or user experience."
+  },
+  "evaluation": {
+    "models": ["five quantized LLMs"],
+    "workloads": ["edge-device LLM inference benchmarking"],
+    "hardware": ["three edge platforms"],
+    "cluster_scale": "single edge device per benchmark run",
+    "baselines": [],
+    "metrics": [
+      {"name": "metrics reported", "value": "MBU, FLOPS, throughput, latency, and accuracy", "higher_is_better": null}
+    ],
+    "notes": {
+      "zh": "五个量化模型、三种边缘平台和指标集合由官方摘要明示；模型名、设备名及逐项结果待全文审计。",
+      "en": "Five quantized models, three edge platforms, and the metric set are stated in the official abstract; model/device names and per-run results await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.11269",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2508.11269",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2508.11269"
+  }
+}

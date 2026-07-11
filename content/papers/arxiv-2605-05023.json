@@ -1,0 +1,157 @@
+{
+  "work_id": "arxiv-2605-05023",
+  "slug": "cubridge-an-llm-based-framework-for-understanding-and-reconstructing-hig-2605-05023",
+  "title": {
+    "original": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels",
+    "zh": "CuBridge：理解并重建高性能注意力内核的 LLM 框架",
+    "en": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels"
+  },
+  "authors": [
+    {
+      "name": "Xing Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Yangjie Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Wu Sun",
+      "affiliations": []
+    },
+    {
+      "name": "Zihan Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Jingwen Leng",
+      "affiliations": []
+    },
+    {
+      "name": "Yun Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Shixuan Sun",
+      "affiliations": []
+    },
+    {
+      "name": "Minyi Guo",
+      "affiliations": []
+    },
+    {
+      "name": "Jin Song Dong",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2605.05023",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-05-06",
+      "latest_revision_date": "2026-05-06",
+      "url": "https://arxiv.org/abs/2605.05023"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-05-06",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-06"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "CuBridge 的可执行 IR、验证器和参考引导 lowering 构成从专家 CUDA 到新注意力变体的可复用 kernel 迁移工具链。",
+    "en": "CuBridge's executable IR, verifier, and reference-guided lowering form a reusable toolchain for transferring expert CUDA kernels to new attention variants."
+  },
+  "abstract": {
+    "zh": "CuBridge 通过 lift-transfer-lower 流程改造专家编写的注意力 CUDA kernel：先提升为可执行 IR，再按 PyTorch 目标规范迁移，最后参考原实现还原优化 CUDA。",
+    "en": "CuBridge adapts expert attention CUDA kernels through a lift-transfer-lower workflow: it raises them into executable IR, transfers to a PyTorch target specification, then reconstructs optimized CUDA using the reference."
+  },
+  "problem": {
+    "zh": "专家 kernel 性能高却难适配新注意力变体，通用编译器牺牲性能，直接让 LLM 生成复杂 CUDA 又经常不正确或明显变慢。",
+    "en": "Expert kernels are fast but hard to adapt, general compilers trade performance for flexibility, and direct LLM generation of complex CUDA is often incorrect or slow."
+  },
+  "approach": {
+    "zh": "框架从可信 CUDA 提取显式执行编排并抽象语法细节，LLM 在 IR 层生成目标程序，经验证后再以参考引导的 lowering 恢复低层优化。",
+    "en": "The framework lifts trusted CUDA into an IR that exposes orchestration while hiding syntax, lets the LLM produce a target IR program, verifies it, and lowers with reference-guided low-level optimization."
+  },
+  "system_design": {
+    "zh": "输入包括专家 kernel 与用户 PyTorch 规范；lifter 生成可执行 IR，transfer 模块提出并测试变体，lowerer 结合参考模式输出 CUDA，验证器检查正确性和性能。",
+    "en": "Inputs are an expert kernel and user PyTorch specification; a lifter builds executable IR, transfer proposes and tests variants, lowering emits CUDA with reference patterns, and validation checks correctness and performance."
+  },
+  "key_results": {
+    "zh": "在多种注意力变体和 GPU 上，CuBridge 稳定生成正确 kernel，并优于通用框架、编译器方法和既有 LLM kernel 生成方案。",
+    "en": "Across attention variants and GPUs, CuBridge consistently produces correct kernels and outperforms general frameworks, compiler approaches, and prior LLM-based kernel generation."
+  },
+  "limitations": {
+    "zh": "方法需要相近的专家参考 kernel，IR 未覆盖的结构难以迁移；测试集验证仍可能漏掉边界错误，新 GPU 也需扩展 lowering 知识。",
+    "en": "The method requires a related expert reference, cannot transfer structures outside IR coverage, can miss edge cases not exercised by tests, and needs new lowering knowledge for new GPUs."
+  },
+  "evaluation": {
+    "models": [
+      "attention kernels defined by PyTorch specifications"
+    ],
+    "workloads": [
+      "attention-kernel lifting",
+      "IR transfer",
+      "CUDA lowering"
+    ],
+    "hardware": [
+      "diverse GPU platforms"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "general deep-learning frameworks",
+      "compiler-based kernel generation",
+      "prior LLM-based kernel generation"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2605.05023",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "CuBridge",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2605.05023",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2605.05023"
+  }
+}

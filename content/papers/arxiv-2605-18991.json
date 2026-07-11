@@ -1,0 +1,165 @@
+{
+  "work_id": "arxiv-2605-18991",
+  "slug": "agent-security-is-a-systems-problem-2605-18991",
+  "title": {
+    "original": "Agent Security is a Systems Problem",
+    "zh": "代理安全是一个系统问题",
+    "en": "Agent Security is a Systems Problem"
+  },
+  "authors": [
+    {
+      "name": "Mihai Christodorescu",
+      "affiliations": []
+    },
+    {
+      "name": "Earlence Fernandes",
+      "affiliations": []
+    },
+    {
+      "name": "Ashish Hooda",
+      "affiliations": []
+    },
+    {
+      "name": "Somesh Jha",
+      "affiliations": []
+    },
+    {
+      "name": "Johann Rehberger",
+      "affiliations": []
+    },
+    {
+      "name": "Kamalika Chaudhuri",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaohan Fu",
+      "affiliations": []
+    },
+    {
+      "name": "Khawaja Shams",
+      "affiliations": []
+    },
+    {
+      "name": "Guy Amir",
+      "affiliations": []
+    },
+    {
+      "name": "Jihye Choi",
+      "affiliations": []
+    },
+    {
+      "name": "Sarthak Choudhary",
+      "affiliations": []
+    },
+    {
+      "name": "Nils Palumbo",
+      "affiliations": []
+    },
+    {
+      "name": "Andrey Labunets",
+      "affiliations": []
+    },
+    {
+      "name": "Nishit V. Pandya",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2605.18991",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-05-18",
+      "latest_revision_date": "2026-05-20",
+      "url": "https://arxiv.org/abs/2605.18991"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-05-18",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "论文给出把模型视为不可信组件的参考架构和系统安全不变量，可指导隔离、中介与最小权限基础设施建设。",
+    "en": "The paper provides a reference architecture and system-security invariants for treating models as untrusted, guiding isolation, mediation, and least-privilege infrastructure."
+  },
+  "abstract": {
+    "zh": "该立场论文主张把 Agent 模型视为不可信组件，在系统边界以操作系统、网络、形式方法和最小权限机制强制安全不变量。",
+    "en": "This position paper argues that agent models should be treated as untrusted components and that operating-system, network, formal, and least-privilege mechanisms should enforce invariants."
+  },
+  "problem": {
+    "zh": "提高模型抗攻击性无法提供可预测保证，因为 Agent 仍能通过工具产生真实副作用，且模型行为会随输入和版本变化。",
+    "en": "Improving model robustness cannot provide predictable guarantees because agents still create real effects through tools and model behavior changes with inputs and versions."
+  },
+  "approach": {
+    "zh": "作者从系统安全经验提炼核心原则，并复盘代表性真实攻击，分析若实现隔离、中介、最小权限和可审计性如何阻断攻击链。",
+    "en": "The authors derive principles from systems security and analyze representative attacks to show how isolation, mediation, least privilege, and auditability could break attack chains."
+  },
+  "system_design": {
+    "zh": "建议架构把不可信规划器置于受限执行环境，所有能力经参考监视器授权，状态和通信受隔离并留下可验证审计记录。",
+    "en": "The proposed architecture places an untrusted planner in a constrained environment, mediates every capability through reference monitors, isolates state and communication, and records audits."
+  },
+  "key_results": {
+    "zh": "对多起现实 Agent 攻击的系统化复盘表明，许多失败源于缺少经典系统不变量，而非仅是模型拒答能力不足。",
+    "en": "Systematic review of real agent attacks indicates that many failures stem from missing classical systems invariants rather than insufficient model refusal alone."
+  },
+  "limitations": {
+    "zh": "论文提供原则和反事实分析而非完整实现；如何在保持可用性的同时覆盖语义权限、隐式通道和开放工具仍是研究问题。",
+    "en": "The paper offers principles and counterfactual analysis rather than an implementation; usable enforcement for semantic permissions, covert channels, and open tools remains unresolved."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "实验矩阵与数值将在全文人工复核后补充；当前留空以避免从摘要推断。",
+      "en": "The experiment matrix and numbers await full-text manual review; fields remain empty to avoid inferring them from an abstract."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2605.18991",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2605.18991",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2605.18991"
+  }
+}

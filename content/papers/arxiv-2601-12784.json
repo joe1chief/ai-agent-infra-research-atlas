@@ -1,0 +1,160 @@
+{
+  "work_id": "arxiv-2601-12784",
+  "slug": "unleashing-efficient-asynchronous-rl-post-training-via-staleness-constra-2601-12784",
+  "title": {
+    "original": "Unleashing Efficient Asynchronous RL Post-Training via Staleness-Constrained Rollout Coordination",
+    "zh": "通过停滞约束的轨迹采样协调来释放高效的异步强化学习后训练",
+    "en": "Unleashing Efficient Asynchronous RL Post-Training via Staleness-Constrained Rollout Coordination"
+  },
+  "authors": [
+    {
+      "name": "Haoyang Li",
+      "affiliations": []
+    },
+    {
+      "name": "Sheng Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Fangcheng Fu",
+      "affiliations": []
+    },
+    {
+      "name": "Yuming Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaodong Ji",
+      "affiliations": []
+    },
+    {
+      "name": "Yanfeng Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Lefeng Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Jie Jiang",
+      "affiliations": []
+    },
+    {
+      "name": "Bin Cui",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.12784",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-01-19",
+      "latest_revision_date": "2026-01-19",
+      "url": "https://arxiv.org/abs/2601.12784"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-19",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-19"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-3",
+  "tags": [
+    "post-training",
+    "reinforcement-learning",
+    "rollout"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "StaleFlow 用一致性协议、轨迹/参数服务和陈旧感知调度统一治理异步 RL 数据流，是后训练协调基础设施。",
+    "en": "StaleFlow uses a consistency protocol, trajectory and parameter services, and staleness-aware scheduling to govern asynchronous RL dataflow as post-training coordination infrastructure."
+  },
+  "abstract": {
+    "zh": "StaleFlow 在解耦异步 RL 中联合处理轨迹陈旧和长度偏斜，通过全局一致性协议、轨迹/参数数据服务与陈旧感知调度协调 rollout。",
+    "en": "StaleFlow jointly handles trajectory staleness and length skew in disaggregated asynchronous RL through a global consistency protocol, trajectory and parameter servers, and staleness-aware rollout scheduling."
+  },
+  "problem": {
+    "zh": "异步 rollout、奖励和训练提高利用率，却使轨迹基于旧参数生成；长度长尾又造成负载失衡，而单独优化任一问题常恶化另一个。",
+    "en": "Asynchronous rollout, reward, and training improve utilization but generate trajectories from old parameters; length tails create imbalance, and optimizing either issue alone often worsens the other."
+  },
+  "approach": {
+    "zh": "一致性协议跟踪每条轨迹全生命周期并限制版本差，数据服务解耦参数与轨迹流，调度器在陈旧预算内优先提高吞吐。",
+    "en": "A consistency protocol tracks every trajectory lifecycle and bounds version lag, data services decouple parameter and trajectory flow, and scheduling maximizes throughput within a staleness budget."
+  },
+  "system_design": {
+    "zh": "参数服务器发布策略版本，轨迹服务器缓存与分发样本，生命周期元数据连接 rollout 到训练消费；协调器根据长度和版本动态派发任务。",
+    "en": "A parameter server publishes policy versions, a trajectory server buffers samples, lifecycle metadata links rollout to training consumption, and a coordinator dispatches work from length and version state."
+  },
+  "key_results": {
+    "zh": "评测显示 StaleFlow 在不牺牲收敛的情况下提高训练吞吐，证明陈旧与偏斜可以在一个协调层中共同控制。",
+    "en": "Evaluation shows higher training throughput without loss of convergence, indicating that staleness and skew can be controlled jointly in one coordination layer."
+  },
+  "limitations": {
+    "zh": "全局协议和双数据服务增加元数据、存储与故障恢复复杂度；陈旧上限对不同算法和奖励分布需要重新校准。",
+    "en": "The global protocol and dual data services add metadata, storage, and recovery complexity, while acceptable staleness bounds must be recalibrated for different algorithms and reward distributions."
+  },
+  "evaluation": {
+    "models": [
+      "large models"
+    ],
+    "workloads": [
+      "asynchronous rollout, reward, and policy training",
+      "variable-length trajectory generation"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "state-of-the-art asynchronous RL systems"
+    ],
+    "metrics": [
+      {
+        "name": "Training throughput speedup",
+        "value": "1.42-2.68",
+        "unit": "x",
+        "baseline": "state-of-the-art asynchronous RL systems",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.12784",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.12784",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.12784"
+  }
+}

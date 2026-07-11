@@ -1,0 +1,155 @@
+{
+  "work_id": "arxiv-2502-10341",
+  "slug": "organize-the-web-constructing-domains-enhances-pre-training-data-curatio-2502-10341",
+  "title": {
+    "original": "Organize the Web: Constructing Domains Enhances Pre-Training Data Curation",
+    "zh": "组织互联网：通过构建领域结构增强预训练数据筛选",
+    "en": "Organize the Web: Constructing Domains Enhances Pre-Training Data Curation"
+  },
+  "authors": [
+    {
+      "name": "Alexander Wettig",
+      "affiliations": []
+    },
+    {
+      "name": "Kyle Lo",
+      "affiliations": []
+    },
+    {
+      "name": "Sewon Min",
+      "affiliations": []
+    },
+    {
+      "name": "Hannaneh Hajishirzi",
+      "affiliations": []
+    },
+    {
+      "name": "Danqi Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Luca Soldaini",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2502.10341",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v3",
+      "first_public_date": "2025-02-14",
+      "latest_revision_date": "2025-07-16",
+      "url": "https://arxiv.org/abs/2502.10341"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-02-14",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-07-16"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-1",
+  "tags": [
+    "data-curation",
+    "data-provenance",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "WebOrganizer 提供可复用的网页领域分类、自动标注与预训练配比控制流水线，直接补足数据基础设施的可观测与调度能力。",
+    "en": "WebOrganizer supplies a reusable pipeline for web-domain taxonomy, automatic annotation, and pretraining-mixture control, directly adding observability and scheduling to data infrastructure."
+  },
+  "abstract": {
+    "zh": "WebOrganizer 将网页同时按主题与页面格式组织成可解释的领域，并把大模型标注蒸馏到轻量分类器，以便在万亿 token 级语料中分析和调节预训练数据配比。",
+    "en": "WebOrganizer organizes web pages along complementary topic and format taxonomies, distilling large-model annotations into efficient classifiers so that pretraining mixtures can be inspected and controlled at corpus scale."
+  },
+  "problem": {
+    "zh": "海量网页语料通常被视为一个不可解释的整体，团队难以判断其中包含什么，也难以区分“样本质量”与“领域配比”各自对模型能力的影响。",
+    "en": "Web-scale corpora are usually treated as opaque monoliths, making it hard to understand their contents or separate the effect of sample quality from the effect of domain composition."
+  },
+  "approach": {
+    "zh": "论文建立主题和格式两套分类体系，自动标注网页，再通过受控混合实验寻找对下游任务更有效的领域配比，并分析质量筛选方法如何隐式改变配比。",
+    "en": "The study builds topic and format taxonomies, automatically labels pages, runs controlled mixture experiments, and measures how quality-based selectors implicitly reshape the resulting domain distribution."
+  },
+  "system_design": {
+    "zh": "流水线由大模型标注、蒸馏后的领域分类器、全量语料注释、领域配比搜索以及与质量筛选器的组合分析构成。",
+    "en": "The pipeline consists of large-model labeling, distilled domain classifiers, corpus-wide annotation, domain-mixture selection, and an analysis layer that composes mixture control with quality filters."
+  },
+  "key_results": {
+    "zh": "主题与格式配比提供了质量筛选之外的独立增益；二者结合时，下游表现优于仅按质量选择数据。",
+    "en": "Topic and format mixture control provides gains beyond quality-only selection, and combining the two signals improves downstream performance over quality filtering alone."
+  },
+  "limitations": {
+    "zh": "分类体系和蒸馏分类器会继承标注模型的偏差；结论依赖所选网页快照、任务与模型规模，且不断变化的新网页领域需要重新标注。",
+    "en": "The taxonomies and distilled classifiers can inherit labeling-model bias; conclusions depend on the web snapshot, tasks, and model scales studied, and emerging domains require renewed annotation."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "web pretraining data annotation",
+      "domain-mixture selection",
+      "downstream task evaluation"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "quality-based data selection methods"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "OLMo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 80,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.10341",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {
+      "type": "other",
+      "title": "WebOrganizer project page",
+      "url": "https://weborganizer.allen.ai",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Organize the Web",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2502.10341",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2502.10341"
+  }
+}

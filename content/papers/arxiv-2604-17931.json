@@ -1,0 +1,165 @@
+{
+  "work_id": "arxiv-2604-17931",
+  "slug": "literesearcher-a-scalable-agentic-rl-training-framework-for-deep-researc-2604-17931",
+  "title": {
+    "original": "LiteResearcher: A Scalable Agentic RL Training Framework for Deep Research Agent",
+    "zh": "LiteResearcher：面向深度研究智能体的可扩展智能体强化学习训练框架",
+    "en": "LiteResearcher: A Scalable Agentic RL Training Framework for Deep Research Agent"
+  },
+  "authors": [
+    {
+      "name": "Wanli Li",
+      "affiliations": []
+    },
+    {
+      "name": "Bince Qu",
+      "affiliations": []
+    },
+    {
+      "name": "Bo Pan",
+      "affiliations": []
+    },
+    {
+      "name": "Jianyu Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Zheng Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Pan Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Wei Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Bo Zhang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2604.17931",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v4",
+      "first_public_date": "2026-04-20",
+      "latest_revision_date": "2026-07-01",
+      "url": "https://arxiv.org/abs/2604.17931"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-04-20",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-07-01"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-3",
+  "tags": [
+    "post-training",
+    "reinforcement-learning",
+    "rollout"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "LiteResearcher 的虚拟搜索环境、轨迹服务和环境改进闭环可反复承载深度研究智能体 RL，属于训练环境基础设施。",
+    "en": "LiteResearcher's virtual search environment, rollout service, and environment-improvement loop repeatedly host deep-research agent RL, qualifying as training-environment infrastructure."
+  },
+  "abstract": {
+    "zh": "LiteResearcher 为深度研究智能体构建轻量虚拟搜索世界，在不持续依赖昂贵真实搜索的情况下进行可扩展智能体 RL，并让环境随训练配方持续改进。",
+    "en": "LiteResearcher builds a lightweight virtual search world for scalable deep-research agent RL, avoiding continuous dependence on costly real search while allowing the training environment to improve over time."
+  },
+  "problem": {
+    "zh": "手工合成任务难以训练真实搜索能力，而在 RL 每步调用真实搜索又昂贵、波动大，限制数据规模和实验稳定性。",
+    "en": "Handcrafted synthetic tasks fail to teach authentic search behavior, while invoking real search throughout RL is expensive and unstable, limiting both scale and repeatability."
+  },
+  "approach": {
+    "zh": "框架构造映射真实搜索动态的虚拟世界，在其中反复生成交互与奖励并更新小型搜索智能体，再用真实研究基准检验迁移。",
+    "en": "The framework constructs a virtual world that mirrors real search dynamics, repeatedly generates interactions and rewards for a small search agent, and evaluates transfer on real research benchmarks."
+  },
+  "system_design": {
+    "zh": "虚拟搜索环境提供查询、页面和反馈接口，rollout 服务采集研究轨迹，RL 训练器更新策略，环境改进循环再根据失败补充世界内容。",
+    "en": "A virtual search environment exposes query, page, and feedback interfaces; rollout services collect research trajectories, an RL trainer updates policy, and an environment loop expands the world from failures."
+  },
+  "key_results": {
+    "zh": "小规模模型经过该流程后在多个深度研究基准上超过更大的开源和商业对照，支持环境质量而非模型规模是关键杠杆。",
+    "en": "After training, the small model exceeds larger open and commercial comparisons on several deep-research benchmarks, supporting environment quality as a major lever beyond model size."
+  },
+  "limitations": {
+    "zh": "虚拟世界可能遗漏真实网页变化、权限、广告和对抗内容；基准优势不等于生产研究的事实性、安全性或长期维护能力。",
+    "en": "The virtual world can omit web drift, permissions, ads, and adversarial content; benchmark gains do not establish production factuality, safety, or long-term maintainability."
+  },
+  "evaluation": {
+    "models": [
+      "LiteResearcher-4B",
+      "Tongyi DeepResearch",
+      "Claude-4.5 Sonnet"
+    ],
+    "workloads": [
+      "GAIA",
+      "XBench",
+      "deep-research agent reinforcement learning"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Tongyi DeepResearch",
+      "Claude-4.5 Sonnet"
+    ],
+    "metrics": [
+      {
+        "name": "GAIA score",
+        "value": 71.3,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "XBench score",
+        "value": 78,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2604.17931",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "LiteResearcher",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2604.17931",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2604.17931"
+  }
+}

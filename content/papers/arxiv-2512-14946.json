@@ -1,0 +1,168 @@
+{
+  "work_id": "arxiv-2512-14946",
+  "slug": "evicpress-joint-kv-cache-compression-and-eviction-for-efficient-llm-serv-2512-14946",
+  "title": {
+    "original": "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving",
+    "zh": "EVICPRESS：联合KV缓存压缩和逐出以实现高效LLM服务",
+    "en": "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving"
+  },
+  "authors": [
+    {
+      "name": "Shaoting Feng",
+      "affiliations": []
+    },
+    {
+      "name": "Yuhan Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Hanchen Li",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaokun Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Samuel Shen",
+      "affiliations": []
+    },
+    {
+      "name": "Kuntai Du",
+      "affiliations": []
+    },
+    {
+      "name": "Zhuohan Gu",
+      "affiliations": []
+    },
+    {
+      "name": "Rui Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Yuyang Huang",
+      "affiliations": []
+    },
+    {
+      "name": "Yihua Cheng",
+      "affiliations": []
+    },
+    {
+      "name": "Jiayi Yao",
+      "affiliations": []
+    },
+    {
+      "name": "Qizheng Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Ganesh Ananthanarayanan",
+      "affiliations": []
+    },
+    {
+      "name": "Junchen Jiang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2512.14946",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-12-16",
+      "latest_revision_date": "2025-12-16",
+      "url": "https://arxiv.org/abs/2512.14946"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-12-16",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-12-16"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "EVICPRESS 以统一效用和跨层放置器联合管理 KV 压缩与逐出，是独立于单一模型的缓存基础设施。",
+    "en": "EVICPRESS jointly manages KV compression and eviction through a common utility and cross-tier placer, providing model-independent cache infrastructure."
+  },
+  "abstract": {
+    "zh": "EVICPRESS 不再分别处理 KV 缓存压缩与逐出，而是跨多级存储联合选择两者，以兼顾生成质量和平均时延。系统用统一效用函数评估所有上下文的压缩敏感度与放置收益。",
+    "en": "EVICPRESS jointly chooses lossy KV compression and eviction across storage tiers rather than optimizing either in isolation. A shared utility objective balances generation quality against average delay across all active contexts."
+  },
+  "problem": {
+    "zh": "单独压缩或逐出会忽略二者对全局命中率、恢复时延和质量的联动影响，导致快层容量利用不佳或敏感上下文被过度压缩。",
+    "en": "Independent compression or eviction ignores their coupled effect on global hit rate, restore delay, and quality, wasting fast-tier capacity or over-compressing sensitive contexts."
+  },
+  "approach": {
+    "zh": "分析器周期性估计每个上下文在不同压缩/逐出配置下的质量与时延效用，快速启发式算法再按各层容量重新布置 KV 缓存。",
+    "en": "A profiler periodically scores compression–eviction choices for each context by quality and latency utility, then a fast heuristic rearranges KV state subject to tier capacities."
+  },
+  "system_design": {
+    "zh": "EVICPRESS 由在线效用画像器、跨层放置优化器和执行压缩/迁移的缓存管理器组成；敏感上下文获得更保守压缩，低敏感缓存则让出快速层空间。",
+    "en": "EVICPRESS consists of an online utility profiler, cross-tier placement optimizer, and cache manager that executes compression or movement, preserving conservative settings for quality-sensitive contexts."
+  },
+  "key_results": {
+    "zh": "跨多个数据集与模型的评测显示，该联合策略提高快速设备命中率并缩短 TTFT，同时维持与基线相当的生成质量。",
+    "en": "Across several models and datasets, the joint policy is reported to improve fast-tier hit rate and TTFT while preserving generation quality comparable to baselines."
+  },
+  "limitations": {
+    "zh": "系统依赖持续画像来估计有损误差，画像成本与分布漂移可能影响决策；摘要未说明新任务或快速变化上下文的冷启动风险。",
+    "en": "The policy relies on ongoing profiling of lossy error; profiling cost and distribution shift can distort utility estimates, and cold-start behavior on new tasks is not described."
+  },
+  "evaluation": {
+    "models": ["five LLMs (names not stated in abstract)"],
+    "workloads": ["12 datasets", "multi-tier KV-cache serving"],
+    "hardware": ["multiple KV-cache storage tiers"],
+    "cluster_scale": null,
+    "baselines": ["eviction-only KV management", "compression-only KV management"],
+    "metrics": [
+      {"name": "TTFT speedup at equivalent generation quality", "value": "up to 2.19x", "higher_is_better": true},
+      {"name": "generation quality", "value": "equivalent quality reported", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "模型/数据集数量、基线类型与 TTFT 结果来自官方摘要；模型名、设备层级和质量指标待全文审计。",
+      "en": "Model/dataset counts, baseline classes, and the TTFT result come from the official abstract; model names, device tiers, and quality metrics await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.14946",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "EVICPRESS",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2512.14946",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2512.14946"
+  }
+}

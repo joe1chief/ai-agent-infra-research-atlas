@@ -1,0 +1,113 @@
+{
+  "work_id": "arxiv-2510-24937",
+  "slug": "orchvis-hierarchical-multi-agent-orchestration-for-human-oversight-2510-24937",
+  "title": {
+    "original": "OrchVis: Hierarchical Multi-Agent Orchestration for Human Oversight",
+    "zh": "OrchVis：用于人工监督的分层多代理编排",
+    "en": "OrchVis: Hierarchical Multi-Agent Orchestration for Human Oversight"
+  },
+  "authors": [
+    {
+      "name": "Jieyu Zhou",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2510.24937",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-10-28",
+      "latest_revision_date": "2025-10-28",
+      "url": "https://arxiv.org/abs/2510.24937"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-10-28",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-10-28"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "OrchVis 将目标树、依赖、验证和人工重规划封装为通用监督控制面，而非针对单一 Agent 应用的界面。",
+    "en": "OrchVis packages goal trees, dependencies, verification, and human replanning as a general oversight control plane rather than an application-specific interface."
+  },
+  "abstract": {
+    "zh": "OrchVis 将多 Agent 协作的层级目标、任务分配、依赖、验证与冲突解决可视化，让人类在不逐步微操的情况下监督复杂执行。用户意图被解析为结构化目标，系统持续验证执行并在冲突时给出可选重规划。",
+    "en": "OrchVis visualizes hierarchical goals, task assignment, dependencies, verification, and conflict resolution so people can oversee complex multi-agent execution without micromanaging every step. It structures user intent, monitors progress, and presents alternative replans when conflicts arise."
+  },
+  "problem": {
+    "zh": "随着 Agent 数与依赖增加，人类难以理解协作如何对应原始目标，也无法在不接管所有步骤的情况下发现冲突和选择性干预。",
+    "en": "As agent count and dependencies grow, supervisors struggle to see how collaboration serves the original goal or intervene selectively without taking over the whole workflow."
+  },
+  "approach": {
+    "zh": "框架把用户意图分解为层级目标，按目标分配 Agent 与任务，以自动验证器监控结果，并在依赖冲突时生成可供人选择的重规划分支。",
+    "en": "The framework decomposes intent into hierarchical goals, assigns agents and tasks, monitors results with automated verification, and generates human-selectable replan branches when dependencies conflict."
+  },
+  "system_design": {
+    "zh": "OrchVis 的规划面板呈现目标树、Agent—任务映射和跨 Agent 依赖；验证器把运行状态反馈到图中，冲突管理器提供局部替代方案并保留人工批准点。",
+    "en": "An interactive planning panel renders the goal tree, agent–task mapping, and inter-agent dependencies. Verifiers feed execution state back into the graph, while conflict management offers local alternatives behind human approval points."
+  },
+  "key_results": {
+    "zh": "论文的主要贡献是把透明可视化、层级目标对齐和自适应自治组合为可监督的多 Agent 编排机制；摘要未给出量化用户研究结果。",
+    "en": "The main contribution is an oversight mechanism combining transparent visualization, hierarchical goal alignment, and adaptive autonomy; the abstract does not report quantitative user-study results."
+  },
+  "limitations": {
+    "zh": "有效监督依赖目标解析和自动验证的正确性，复杂图也可能造成新的认知负担；摘要未量化用户决策质量、规模上限或恶意 Agent 场景。",
+    "en": "Oversight depends on correct goal parsing and verification, and large graphs may create new cognitive load; decision quality, scale limits, and adversarial agents are not quantified in the abstract."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["human oversight of hierarchical multi-agent collaboration"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "监督场景和系统能力来自官方摘要；摘要未给出模型、硬件、用户数、任务集或量化指标，相关评测待全文审计。",
+      "en": "The oversight setting and system capabilities come from the official abstract; it states no models, hardware, user count, task set, or quantitative metrics, all of which await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.24937",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "OrchVis",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2510.24937",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2510.24937"
+  }
+}

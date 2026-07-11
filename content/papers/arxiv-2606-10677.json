@@ -1,0 +1,155 @@
+{
+  "work_id": "arxiv-2606-10677",
+  "slug": "infini-memory-maintainable-topic-documents-for-long-term-llm-agent-memor-2606-10677",
+  "title": {
+    "original": "Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory",
+    "zh": "Infini Memory：长期LLM代理记忆的可维护主题文档",
+    "en": "Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory"
+  },
+  "authors": [
+    {
+      "name": "Suozhao Ji",
+      "affiliations": []
+    },
+    {
+      "name": "Baodong Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Zehao Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Lei Xia",
+      "affiliations": []
+    },
+    {
+      "name": "Qingping Li",
+      "affiliations": []
+    },
+    {
+      "name": "Ruisong Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Wenbo Ding",
+      "affiliations": []
+    },
+    {
+      "name": "Zhenhua Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Boxun Li",
+      "affiliations": []
+    },
+    {
+      "name": "Guohao Dai",
+      "affiliations": []
+    },
+    {
+      "name": "Yu Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2606.10677",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-06-09",
+      "latest_revision_date": "2026-06-09",
+      "url": "https://arxiv.org/abs/2606.10677"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-06-09",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-06-09"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Infini Memory 的主题文档、缓冲整合和工具化迭代阅读构成可维护的长期 Agent 记忆服务。",
+    "en": "Infini Memory's topic documents, buffered consolidation, and tool-mediated iterative reading form a maintainable long-term agent-memory service."
+  },
+  "abstract": {
+    "zh": "Infini Memory 把长期 Agent 记忆组织为可维护的主题文档，而非孤立记录、摘要或碎片。新观测先进入缓冲区，再周期性整合到带元数据、可修订的主题文本；推理时 Agent 通过多轮工具调用迭代阅读证据。",
+    "en": "Infini Memory organizes long-term agent state as maintainable topic documents rather than isolated records, summaries, or fragments. New observations are buffered and periodically consolidated into revisable, metadata-rich documents, which an agent reads through iterative tool calls."
+  },
+  "problem": {
+    "zh": "孤立记忆条目使相关证据难以聚合、事实变化难以修订，单次检索也不足以支持跨记录的长期问题。",
+    "en": "Isolated memory entries make related evidence hard to aggregate and changing facts hard to revise, while one-shot retrieval is inadequate for questions spanning records and time."
+  },
+  "approach": {
+    "zh": "写入先暂存观测，再按主题合并、重写文档并保留元数据；读取由 Agent 多步选择主题、检查文档和追踪补充证据，而不是一次向量召回。",
+    "en": "Writes stage observations before topic-based consolidation and document revision with metadata; reads let an agent select topics, inspect documents, and follow evidence over several steps rather than one vector lookup."
+  },
+  "system_design": {
+    "zh": "持久层由观测缓冲、主题路由器、文档整合器和元数据存储组成；读侧把主题浏览与文档读取暴露为工具，允许 LLM 按证据缺口继续查询。",
+    "en": "The persistent layer comprises an observation buffer, topic router, document consolidator, and metadata store. Topic browsing and document reading are exposed as tools so the LLM can continue when evidence is incomplete."
+  },
+  "key_results": {
+    "zh": "在 MemoryAgentBench 上，Infini Memory 获得较强总体表现；消融显示主题化维护与迭代证据检查分别改善长期记忆维护和使用的不同方面。",
+    "en": "On MemoryAgentBench, Infini Memory reports strong overall performance, with ablations showing complementary gains from topic-structured maintenance and iterative evidence inspection."
+  },
+  "limitations": {
+    "zh": "主题路由和文档重写可能合并无关事实或覆盖少数证据，迭代读取也增加 token 与时延；并发更新、删除和主题分裂策略未在摘要中说明。",
+    "en": "Topic routing and document rewriting may merge unrelated facts or overwrite minority evidence, while iterative reading adds tokens and latency; concurrent updates, deletion, and topic splitting are not described."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["MemoryAgentBench", "long-term memory maintenance and iterative evidence retrieval"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["ablations without topic-structured maintenance or iterative inspection"],
+    "metrics": [
+      {"name": "MemoryAgentBench overall score", "value": 64.7, "unit": "%", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "MemoryAgentBench、总体分数与两类消融结论来自官方摘要；模型、硬件、分项得分和运行成本待全文审计。",
+      "en": "MemoryAgentBench, the overall score, and two ablation conclusions come from the official abstract; models, hardware, component scores, and runtime cost await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2606.10677",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Infini Memory",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2606.10677",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2606.10677"
+  }
+}

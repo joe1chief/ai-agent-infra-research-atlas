@@ -1,0 +1,124 @@
+{
+  "work_id": "arxiv-2603-01889",
+  "slug": "bent-optimizing-persistent-memory-programs-2603-01889",
+  "title": {
+    "original": "Bentō: Optimizing Persistent Memory Programs",
+    "zh": "Bentō：优化持久记忆程序",
+    "en": "Bentō: Optimizing Persistent Memory Programs"
+  },
+  "authors": [
+    {
+      "name": "Sebastião Amaro",
+      "affiliations": []
+    },
+    {
+      "name": "João Gonçalves",
+      "affiliations": []
+    },
+    {
+      "name": "Miguel Matos",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2603.01889",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-03-02",
+      "latest_revision_date": "2026-03-02",
+      "url": "https://arxiv.org/abs/2603.01889"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-03-02",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-02"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Bentō 是保持崩溃一致性的持久内存二进制优化器，贡献位于可复用的底层持久状态基础设施。",
+    "en": "Bentō is a crash-consistency-preserving binary optimizer for persistent-memory programs, contributing reusable low-level persistent-state infrastructure."
+  },
+  "abstract": {
+    "zh": "Bentō 面向字节寻址持久内存程序，自动移除或重排过度保守的 flush/fence 组合，同时保持原有崩溃一致性语义。它以黑盒二进制重写方式优化现有程序，无需开发者手工修改持久化代码。",
+    "en": "Bentō optimizes byte-addressable persistent-memory programs by removing or rearranging overly conservative flush/fence combinations while preserving their crash-consistency semantics. It operates as a black-box binary rewriter, requiring minimal programmer effort."
+  },
+  "problem": {
+    "zh": "缓存易失和写入重排要求开发者显式使用持久化指令；为避免崩溃错误，程序常加入不必要的顺序约束并牺牲持久内存性能。",
+    "en": "Cache volatility and store reordering require explicit persistence instructions, so developers often add unnecessary ordering constraints to avoid crash bugs and forfeit persistent-memory performance."
+  },
+  "approach": {
+    "zh": "作者分析多种持久化指令组合对程序性能和语义的影响，识别可安全替换的模式，并在二进制层自动重写这些序列。",
+    "en": "The authors study how persistence-instruction combinations affect performance and semantics, identify safely replaceable patterns, and automatically rewrite matching binary sequences."
+  },
+  "system_design": {
+    "zh": "Bentō 接收已编译持久内存程序，定位 flush/fence 与相关存储顺序，应用经验证的等价变换并输出优化二进制，保留应用原有恢复路径。",
+    "en": "Bentō consumes a compiled persistent-memory application, locates flush/fence and related store orderings, applies validated equivalent transformations, and emits an optimized binary that retains the original recovery path."
+  },
+  "key_results": {
+    "zh": "在多个持久内存程序上，自动重写在保持原崩溃一致性语义的同时带来最高约一成多的性能提升。",
+    "en": "Across several persistent-memory programs, automatic rewriting is reported to improve performance by up to the low double digits while preserving original crash-consistency semantics."
+  },
+  "limitations": {
+    "zh": "该工作针对底层持久内存程序而非 Agent 语义记忆；可优化范围受识别模式、指令集和原程序恢复语义限制，新型硬件需重新验证等价性。",
+    "en": "This work targets low-level persistent-memory programs rather than semantic agent memory; optimization is bounded by recognized patterns, ISA, and recovery semantics, and new hardware requires renewed equivalence validation."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["several persistent-memory programs"],
+    "hardware": ["byte-addressable persistent memory"],
+    "cluster_scale": null,
+    "baselines": ["original unmodified persistent-memory binaries"],
+    "metrics": [
+      {"name": "performance improvement", "value": "up to 15%", "baseline": "original binary", "higher_is_better": true},
+      {"name": "crash-consistency semantics", "value": "preserved", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "持久内存程序范围、原二进制基线、性能上限和语义保持来自官方摘要；程序名、硬件、工作负载和验证方法待全文审计。",
+      "en": "Persistent-memory program scope, original-binary baseline, performance bound, and semantic preservation come from the official abstract; program names, hardware, workloads, and validation await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.01889",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Bentō",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2603.01889",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2603.01889"
+  }
+}

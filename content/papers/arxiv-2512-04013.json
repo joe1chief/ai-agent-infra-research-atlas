@@ -1,0 +1,138 @@
+{
+  "work_id": "arxiv-2512-04013",
+  "slug": "augserve-adaptive-request-scheduling-for-augmented-large-language-model-2512-04013",
+  "title": {
+    "original": "AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving",
+    "zh": "AugServe：增强型大型语言模型推理服务的自适应请求调度",
+    "en": "AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving"
+  },
+  "authors": [
+    {
+      "name": "Ying Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Zhen Jin",
+      "affiliations": []
+    },
+    {
+      "name": "Jiexiong Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Wenhai Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Yiquan Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Wenzhi Chen",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2512.04013",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-12-03",
+      "latest_revision_date": "2025-12-16",
+      "url": "https://arxiv.org/abs/2512.04013"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-12-03",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-12-16"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "AugServe 的两阶段请求排序和动态 token 批次控制器可作为增强型 LLM 服务的通用 SLO 调度层。",
+    "en": "AugServe's two-stage request ordering and dynamic token-budget controller form a reusable SLO scheduling layer for augmented LLM services."
+  },
+  "abstract": {
+    "zh": "AugServe 面向带外部工具的增强型 LLM 请求，以有效吞吐——在时延 SLO 内完成的请求数——为优化目标。它用两阶段自适应调度重排请求，并依据实时硬件状态与负载调整批次 token 上限。",
+    "en": "AugServe optimizes effective throughput for tool-augmented LLM requests—the number completed within latency SLOs. A two-stage scheduler reorders requests and adapts the batch token budget to live load and hardware conditions."
+  },
+  "problem": {
+    "zh": "FCFS 会让长或工具增强请求阻塞队首，固定批次 token 限额也无法适应负载和设备状态，导致大量请求排队超出 SLO。",
+    "en": "FCFS lets long or augmented requests block the head of the queue, while a static token budget cannot react to load or device state, pushing many requests beyond their SLOs."
+  },
+  "approach": {
+    "zh": "第一阶段利用增强请求的推理特征确定初始顺序，第二阶段用运行时反馈持续修正决策；另一个控制环动态改变每批 token 容量。",
+    "en": "A first stage orders requests using augmented-inference features, a second refines those choices from runtime feedback, and a separate control loop adjusts token capacity per batch."
+  },
+  "system_design": {
+    "zh": "AugServe 在请求队列前加入特征感知排序器和运行时重评分器，并把硬件利用率、实时到达率等信号反馈给批处理控制器，协同降低等待时间。",
+    "en": "AugServe places a feature-aware ordering stage and runtime re-ranker ahead of the queue, feeding hardware and arrival-rate signals into a batching controller so queueing and execution adapt together."
+  },
+  "key_results": {
+    "zh": "实验表明 AugServe 相比 vLLM 和 InferCept 可提高 SLO 内有效吞吐，并显著缩短首 token 时间。",
+    "en": "Experiments report higher SLO-compliant effective throughput and substantially shorter time to first token than vLLM and InferCept."
+  },
+  "limitations": {
+    "zh": "摘要未描述工具调用时延分布变化、特征预测误差或不同优先级请求的公平性；两阶段策略对新型增强工作流的迁移性仍需验证。",
+    "en": "The abstract does not characterize shifting tool latency, feature-prediction error, or fairness across request classes; transfer to unseen augmented workflows remains unproven."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["augmented LLM inference requests under fluctuating load"],
+    "hardware": ["GPU serving system"],
+    "cluster_scale": null,
+    "baselines": ["vLLM", "InferCept"],
+    "metrics": [
+      {"name": "effective throughput vs vLLM", "value": "4.7x", "baseline": "vLLM", "higher_is_better": true},
+      {"name": "effective throughput vs InferCept", "value": "3.3x", "baseline": "InferCept", "higher_is_better": true},
+      {"name": "TTFT reduction vs vLLM", "value": "up to 96.3%", "baseline": "vLLM", "higher_is_better": true},
+      {"name": "TTFT reduction vs InferCept", "value": "up to 95.0%", "baseline": "InferCept", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "增强请求、vLLM/InferCept 及摘要明示的吞吐和 TTFT 上限已录入；模型、硬件、工具类型与负载曲线待全文审计。",
+      "en": "Augmented requests, vLLM/InferCept, and abstract-stated throughput and TTFT bounds are recorded; models, hardware, tool types, and load curves await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.04013",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "AugServe",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2512.04013",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2512.04013"
+  }
+}

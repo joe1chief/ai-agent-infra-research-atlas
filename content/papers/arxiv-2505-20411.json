@@ -1,0 +1,177 @@
+{
+  "work_id": "arxiv-2505-20411",
+  "slug": "swe-rebench-an-automated-pipeline-for-task-collection-and-decontaminated-2505-20411",
+  "title": {
+    "original": "SWE-rebench: An Automated Pipeline for Task Collection and Decontaminated Evaluation of Software Engineering Agents",
+    "zh": "SWE-rebench：软件工程代理的任务收集和净化评估自动化管道",
+    "en": "SWE-rebench: An Automated Pipeline for Task Collection and Decontaminated Evaluation of Software Engineering Agents"
+  },
+  "authors": [
+    {
+      "name": "Ibragim Badertdinov",
+      "affiliations": []
+    },
+    {
+      "name": "Alexander Golubev",
+      "affiliations": []
+    },
+    {
+      "name": "Maksim Nekrashevich",
+      "affiliations": []
+    },
+    {
+      "name": "Anton Shevtsov",
+      "affiliations": []
+    },
+    {
+      "name": "Simon Karasik",
+      "affiliations": []
+    },
+    {
+      "name": "Andrei Andriushchenko",
+      "affiliations": []
+    },
+    {
+      "name": "Maria Trofimova",
+      "affiliations": []
+    },
+    {
+      "name": "Daria Litvintseva",
+      "affiliations": []
+    },
+    {
+      "name": "Boris Yangel",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2505.20411",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-05-26",
+      "latest_revision_date": "2025-11-04",
+      "url": "https://arxiv.org/abs/2505.20411"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-05-26",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-11-04"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-5",
+  "tags": [
+    "agent-evaluation",
+    "observability",
+    "reliability"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "SWE-rebench 的持续采集、环境构建、验证和时间版本化流水线可重复生产训练任务与去污染评测。",
+    "en": "SWE-rebench's continuous collection, environment construction, verification, and temporal versioning repeatedly produce both training tasks and decontaminated evaluations."
+  },
+  "abstract": {
+    "zh": "SWE-rebench 是持续从 GitHub 仓库抽取可交互软件工程任务的自动流水线，同时产出大规模 RL 数据和随时间更新的去污染评测集。",
+    "en": "SWE-rebench continuously extracts interactive software-engineering tasks from GitHub, supplying both large-scale RL data and a time-refreshed evaluation set designed to reduce contamination."
+  },
+  "problem": {
+    "zh": "真实 SWE 交互数据既稀缺又昂贵，静态小型基准还会随模型训练语料扩张而过时，导致能力和污染效应难以区分。",
+    "en": "Real interactive SWE data is scarce and expensive, while small static benchmarks become stale as training corpora grow, confounding capability with contamination."
+  },
+  "approach": {
+    "zh": "流水线自动发现合适仓库与任务、构建执行环境和测试验证器，并持续采集新任务形成训练库及按时间切分的评测。",
+    "en": "The pipeline discovers suitable repositories and tasks, builds executable environments and test verifiers, and continually collects fresh items for training and time-sliced evaluation."
+  },
+  "system_design": {
+    "zh": "系统包含 GitHub 采集器、任务筛选与环境构建、可执行验证、质量门控、数据版本管理以及新鲜评测发布层。",
+    "en": "The system combines GitHub ingestion, task filtering and environment construction, executable verification, quality gates, dataset versioning, and fresh benchmark releases."
+  },
+  "key_results": {
+    "zh": "该方法构建了大规模交互式 Python SWE 任务，并显示部分模型在固定 SWE-bench 上的优势可能受污染放大。",
+    "en": "The method yields a large interactive Python SWE corpus and indicates that some models' apparent advantage on fixed SWE-bench evaluations may be inflated by contamination."
+  },
+  "limitations": {
+    "zh": "任务以公开 GitHub 和 Python 为主，自动测试可能遗漏语义回归；“新鲜”只能降低已知污染，不能证明训练语料中完全不存在任务。",
+    "en": "Tasks emphasize public GitHub and Python, automated tests may miss semantic regressions, and freshness reduces known contamination without proving absence from training data."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "SWE-rebench",
+      "SWE-bench Verified",
+      "Interactive Python software-engineering tasks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Collected interactive SWE tasks",
+        "value": ">21000",
+        "unit": "tasks"
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Qwen3-Coder-Next Technical Report",
+      "seed_report_path": "2026/alibaba_qwen/2026-02_qwen3-coder-next.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 15,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.20411",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {
+      "type": "data",
+      "title": "SWE-rebench dataset",
+      "url": "https://huggingface.co/datasets/nebius/SWE-rebench",
+      "license": null
+    },
+    {
+      "type": "documentation",
+      "title": "SWE-rebench leaderboard and project site",
+      "url": "https://swe-rebench.com",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "SWE-rebench",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2505.20411",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2505.20411"
+  }
+}

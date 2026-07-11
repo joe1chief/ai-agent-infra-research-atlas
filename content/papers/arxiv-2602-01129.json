@@ -1,0 +1,137 @@
+{
+  "work_id": "arxiv-2602-01129",
+  "slug": "smcp-secure-model-context-protocol-2602-01129",
+  "title": {
+    "original": "SMCP: Secure Model Context Protocol",
+    "zh": "SMCP：安全模型上下文协议",
+    "en": "SMCP: Secure Model Context Protocol"
+  },
+  "authors": [
+    {
+      "name": "Xinyi Hou",
+      "affiliations": []
+    },
+    {
+      "name": "Shenao Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Yifan Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Ziluo Xue",
+      "affiliations": []
+    },
+    {
+      "name": "Yanjie Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Cai Fu",
+      "affiliations": []
+    },
+    {
+      "name": "Haoyu Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2602.01129",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-02-01",
+      "latest_revision_date": "2026-02-01",
+      "url": "https://arxiv.org/abs/2602.01129"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-02-01",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-02-01"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-7",
+  "tags": [
+    "agent-protocol",
+    "identity",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "SMCP 把身份、双向认证、安全上下文、策略执行和审计统一到 MCP 工作流，是协议级安全增强层。",
+    "en": "SMCP unifies identity, mutual authentication, security context, policy enforcement, and audit across MCP as a protocol-level security layer."
+  },
+  "abstract": {
+    "zh": "SMCP 在 MCP 上增加统一身份、双向认证、安全上下文传播、细粒度策略与完整审计，形成协议级纵深防护。",
+    "en": "SMCP augments MCP with unified identity, mutual authentication, security-context propagation, fine-grained policy, and comprehensive audit logging for protocol-level defense."
+  },
+  "problem": {
+    "zh": "开放 MCP 连接 Agent、工具和资源后暴露越权、工具投毒、提示注入、提权和供应链风险，而现有对策多是局部补丁。",
+    "en": "Open MCP connections expose unauthorized access, tool poisoning, prompt injection, escalation, and supply-chain risks, while existing mitigations are fragmented patches."
+  },
+  "approach": {
+    "zh": "作者沿 MCP 工作流统一身份与会话安全语义，使认证上下文随调用传播，并在每层执行策略和审计。",
+    "en": "The design unifies identity and session-security semantics across the MCP workflow, propagates authenticated context through calls, and enforces policy and audit at each layer."
+  },
+  "system_design": {
+    "zh": "协议组件包括身份服务、双向认证握手、安全上下文载体、策略决策/执行点和不可抵赖审计日志，并保持 MCP 工具接口。",
+    "en": "Protocol components include identity service, mutual-authentication handshake, security-context carrier, policy decision/enforcement points, and audit logs while retaining MCP tool interfaces."
+  },
+  "key_results": {
+    "zh": "论文给出 SMCP 主要组件和实际应用示例，展示如何把分散的 MCP 风险控制统一到端到端协议流程。",
+    "en": "The paper specifies SMCP components and practical examples showing how fragmented MCP controls can be unified across an end-to-end protocol flow."
+  },
+  "limitations": {
+    "zh": "目前缺少跨实现互操作、性能和对抗评测，也未形式化证明上下文传播不会被降级或绕过；部署仍依赖身份与策略治理。",
+    "en": "Cross-implementation interoperability, performance, adversarial tests, and formal downgrade resistance are not yet demonstrated; deployment still depends on identity and policy governance."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "实验矩阵与数值将在全文人工复核后补充；当前留空以避免从摘要推断。",
+      "en": "The experiment matrix and numbers await full-text manual review; fields remain empty to avoid inferring them from an abstract."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2602.01129",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "SMCP",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2602.01129",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2602.01129"
+  }
+}

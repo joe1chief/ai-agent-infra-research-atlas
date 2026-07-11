@@ -1,0 +1,113 @@
+{
+  "work_id": "arxiv-2511-19933",
+  "slug": "failure-modes-in-llm-systems-a-system-level-taxonomy-for-reliable-ai-app-2511-19933",
+  "title": {
+    "original": "Failure Modes in LLM Systems: A System-Level Taxonomy for Reliable AI Applications",
+    "zh": "LLM系统中的故障模式：可靠AI应用的系统级分类",
+    "en": "Failure Modes in LLM Systems: A System-Level Taxonomy for Reliable AI Applications"
+  },
+  "authors": [
+    {
+      "name": "Vaishali Vinay",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2511.19933",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-11-25",
+      "latest_revision_date": "2025-11-26",
+      "url": "https://arxiv.org/abs/2511.19933"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-11-25",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-11-26"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "十五类生产失效构成可复用的系统测试与观测 taxonomy，把可靠性检查从模型输出扩展到工作流和运维状态。",
+    "en": "The fifteen production failure classes form a reusable testing and observability taxonomy that extends reliability checks from model outputs to workflow and operational state."
+  },
+  "abstract": {
+    "zh": "该论文提出生产 LLM 应用的系统级失效分类，覆盖多步推理漂移、潜在不一致、上下文边界退化、错误工具调用、版本漂移和成本驱动的性能崩塌等十五类隐蔽问题。它把可靠性从模型能力扩展到工作流集成、可复现性、可观测性和运维成本。",
+    "en": "This paper organizes fifteen hidden failure modes in production LLM applications, including reasoning drift, latent inconsistency, context-boundary degradation, wrong tool calls, version drift, and cost-driven collapse. It broadens reliability from model capability to workflow integration, reproducibility, observability, and operational cost."
+  },
+  "problem": {
+    "zh": "知识和推理基准很少衡量生产系统的稳定性、漂移、复现与工具链交互，因此许多跨步骤故障在部署后才显现。",
+    "en": "Knowledge and reasoning benchmarks rarely measure stability, drift, reproducibility, or toolchain interaction, leaving cross-step production failures largely invisible before deployment."
+  },
+  "approach": {
+    "zh": "作者从端到端应用视角归纳十五种失效模式，分析现有评测与监控的覆盖缺口，并据此提出可靠、可维护和成本感知系统的设计原则。",
+    "en": "The authors derive fifteen failure classes from an end-to-end application view, map gaps in current evaluation and monitoring, and formulate reliability, maintainability, and cost-aware design principles."
+  },
+  "system_design": {
+    "zh": "分类法可作为观测与测试 schema：每类故障关联模型输出、上下文、工具动作、版本和成本信号，帮助团队把检测点布置到完整工作流而非仅最终回答。",
+    "en": "The taxonomy can serve as an observability and test schema, linking each class to model output, context, tool action, version, and cost signals so checks span the workflow rather than only final answers."
+  },
+  "key_results": {
+    "zh": "核心产出是十五类系统失效及其评测/监控缺口，表明可靠性需要覆盖工作流状态和运维条件，而不能只依赖模型 benchmark。",
+    "en": "The main result is a fifteen-class systems taxonomy and its evaluation/monitoring gaps, arguing that reliability must cover workflow state and operating conditions rather than model benchmarks alone."
+  },
+  "limitations": {
+    "zh": "论文提供分析分类与高层原则，而非带标注规模、发生率或检测器性能的实证数据集；类别边界和行业普适性仍需生产事故验证。",
+    "en": "The work offers an analytical taxonomy and high-level principles rather than a labeled corpus with prevalence or detector performance; category boundaries and sector generality need validation on production incidents."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["system-level analysis of 15 hidden production LLM failure modes"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["model-centric knowledge and reasoning benchmarks"],
+    "metrics": [],
+    "notes": {
+      "zh": "十五类失效和与模型基准的分析性比较来自官方摘要；该工作未在摘要中给出模型、硬件或量化实验指标，全文案例证据待审计。",
+      "en": "Fifteen failure modes and the analytical contrast with model benchmarks come from the official abstract; no model, hardware, or quantitative experiment is stated there, and full-text case evidence awaits audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.19933",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Failure Modes in LLM Systems",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2511.19933",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2511.19933"
+  }
+}

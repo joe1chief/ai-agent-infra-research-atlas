@@ -1,0 +1,148 @@
+{
+  "work_id": "arxiv-2503-09122",
+  "slug": "training-data-provenance-verification-did-your-model-use-synthetic-data-2503-09122",
+  "title": {
+    "original": "Training Data Provenance Verification: Did Your Model Use Synthetic Data from My Generative Model for Training?",
+    "zh": "训练数据来源验证：你的模型是否使用了我的生成模型所产生的合成数据？",
+    "en": "Training Data Provenance Verification: Did Your Model Use Synthetic Data from My Generative Model for Training?"
+  },
+  "authors": [
+    {
+      "name": "Yuechen Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Jie Song",
+      "affiliations": []
+    },
+    {
+      "name": "Huiqiong Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Mingli Song",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2503.09122",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-03-12",
+      "latest_revision_date": "2025-03-12",
+      "url": "https://arxiv.org/abs/2503.09122"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-03-12",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-03-12"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-1",
+  "tags": [
+    "data-curation",
+    "data-provenance",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "TrainProVe 把合成训练数据来源验证封装为可复用的黑盒审计流程，属于训练数据治理与权利追踪基础设施。",
+    "en": "TrainProVe packages synthetic training-data provenance verification as a reusable black-box audit workflow, making it infrastructure for data governance and rights tracing."
+  },
+  "abstract": {
+    "zh": "TrainProVe 研究如何判断可疑任务模型是否使用了某个生成模型产生的合成图像训练，并将训练分布接近程度与模型泛化行为联系起来进行来源验证。",
+    "en": "TrainProVe tests whether a suspicious task model was trained on synthetic images from a particular generator by relating training-distribution proximity to the model's generalization behavior."
+  },
+  "problem": {
+    "zh": "生成模型所有者缺少一种黑盒式手段来证明下游模型未经许可使用了其合成数据，尤其在真实训练集不可见时更难追踪。",
+    "en": "Generator owners lack a black-box way to verify that a downstream model used their synthetic data without permission, particularly when the downstream training set is inaccessible."
+  },
+  "approach": {
+    "zh": "方法依据泛化误差界的直觉，比较同任务模型在候选合成数据分布上的行为相似性，并在四类文本生成图像模型上验证来源判别能力。",
+    "en": "The method uses the intuition of generalization bounds to compare same-task models under candidate synthetic-data distributions, then evaluates provenance decisions across four text-to-image generators."
+  },
+  "system_design": {
+    "zh": "验证流程由候选生成器采样、面向同一任务的探测数据构造、可疑模型响应测量以及基于分布接近性的来源判定组成。",
+    "en": "The verification pipeline samples candidate generators, constructs task-aligned probes, measures the suspicious model, and converts distribution-proximity evidence into a provenance decision."
+  },
+  "key_results": {
+    "zh": "论文报告该方法在所测四种生成器上能够高精度识别训练数据来源，并优于所比较的既有验证方法。",
+    "en": "The paper reports highly accurate provenance decisions across the four evaluated generators and better performance than the compared prior verification methods."
+  },
+  "limitations": {
+    "zh": "论证依赖模型任务一致和分布距离可反映训练来源等假设；结论主要来自图像生成场景，面对混合数据、强数据增强或自适应规避仍需验证。",
+    "en": "The method assumes comparable downstream tasks and that distribution distance reflects data origin; evidence is image-centric, and mixed data, heavy augmentation, or adaptive evasion need further study."
+  },
+  "evaluation": {
+    "models": [
+      "Stable Diffusion v1.4",
+      "Latent Consistency Model",
+      "PixArt-alpha",
+      "Stable Cascade"
+    ],
+    "workloads": [
+      "synthetic training-data provenance verification"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "previous provenance verification methods"
+    ],
+    "metrics": [
+      {
+        "name": "Provenance verification accuracy",
+        "value": ">99",
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.09122",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "TrainProVe source code",
+      "url": "https://github.com/xieyc99/TrainProVe",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2503.09122",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2503.09122"
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "work_id": "arxiv-2510-21652",
+  "slug": "astabench-rigorous-benchmarking-of-ai-agents-with-a-scientific-research-2510-21652",
+  "title": {
+    "original": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite",
+    "zh": "AstaBench：使用科学研究套件对人工智能代理进行严格的基准测试",
+    "en": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite"
+  },
+  "authors": [
+    {
+      "name": "Jonathan Bragg",
+      "affiliations": []
+    },
+    {
+      "name": "Mike D'Arcy",
+      "affiliations": []
+    },
+    {
+      "name": "Nishant Balepur",
+      "affiliations": []
+    },
+    {
+      "name": "Dan Bareket",
+      "affiliations": []
+    },
+    {
+      "name": "Bhavana Dalvi",
+      "affiliations": []
+    },
+    {
+      "name": "Sergey Feldman",
+      "affiliations": []
+    },
+    {
+      "name": "Dany Haddad",
+      "affiliations": []
+    },
+    {
+      "name": "Jena D. Hwang",
+      "affiliations": []
+    },
+    {
+      "name": "Peter Jansen",
+      "affiliations": []
+    },
+    {
+      "name": "Varsha Kishore",
+      "affiliations": []
+    },
+    {
+      "name": "Bodhisattwa Prasad Majumder",
+      "affiliations": []
+    },
+    {
+      "name": "Aakanksha Naik",
+      "affiliations": []
+    },
+    {
+      "name": "Sigal Rahamimov",
+      "affiliations": []
+    },
+    {
+      "name": "Kyle Richardson",
+      "affiliations": []
+    },
+    {
+      "name": "Amanpreet Singh",
+      "affiliations": []
+    },
+    {
+      "name": "Harshit Surana",
+      "affiliations": []
+    },
+    {
+      "name": "Aryeh Tiktinsky",
+      "affiliations": []
+    },
+    {
+      "name": "Rosni Vasu",
+      "affiliations": []
+    },
+    {
+      "name": "Guy Wiener",
+      "affiliations": []
+    },
+    {
+      "name": "Chloe Anastasiades",
+      "affiliations": []
+    },
+    {
+      "name": "Stefan Candra",
+      "affiliations": []
+    },
+    {
+      "name": "Jason Dunkelberger",
+      "affiliations": []
+    },
+    {
+      "name": "Dan Emery",
+      "affiliations": []
+    },
+    {
+      "name": "Rob Evans",
+      "affiliations": []
+    },
+    {
+      "name": "Malachi Hamada",
+      "affiliations": []
+    },
+    {
+      "name": "Regan Huff",
+      "affiliations": []
+    },
+    {
+      "name": "Rodney Kinney",
+      "affiliations": []
+    },
+    {
+      "name": "Matt Latzke",
+      "affiliations": []
+    },
+    {
+      "name": "Jaron Lochner",
+      "affiliations": []
+    },
+    {
+      "name": "Ruben Lozano-Aguilera",
+      "affiliations": []
+    },
+    {
+      "name": "Cecile Nguyen",
+      "affiliations": []
+    },
+    {
+      "name": "Smita Rao",
+      "affiliations": []
+    },
+    {
+      "name": "Amber Tanaka",
+      "affiliations": []
+    },
+    {
+      "name": "Brooke Vlahos",
+      "affiliations": []
+    },
+    {
+      "name": "Peter Clark",
+      "affiliations": []
+    },
+    {
+      "name": "Doug Downey",
+      "affiliations": []
+    },
+    {
+      "name": "Yoav Goldberg",
+      "affiliations": []
+    },
+    {
+      "name": "Ashish Sabharwal",
+      "affiliations": []
+    },
+    {
+      "name": "Daniel S. Weld",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2510.21652",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-10-24",
+      "latest_revision_date": "2026-04-21",
+      "url": "https://arxiv.org/abs/2510.21652"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-10-24",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-04-21"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-5",
+  "tags": [
+    "agent-evaluation",
+    "observability",
+    "reliability"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AstaBench 提供受控科研工具环境、统一 Agent 接口、真实任务和分阶段评分，可复用于科学 Agent 的严谨比较。",
+    "en": "AstaBench supplies controlled research tools, a common agent interface, realistic tasks, and stage-specific scoring for rigorous reusable comparison of science agents."
+  },
+  "abstract": {
+    "zh": "AstaBench 是覆盖科学发现全过程的 Agent 评测套件，配套生产级搜索环境、标准接口、科学专用 Agent 与多层基线。",
+    "en": "AstaBench evaluates agents across the scientific-discovery lifecycle with production-grade search tools, standardized interfaces, science-focused agents, and layered baselines."
+  },
+  "problem": {
+    "zh": "科学 Agent 基准常缺可复现工具，无法控制模型成本和访问权限等混杂因素，也缺少贴近真实科研请求的整体任务。",
+    "en": "Scientific-agent benchmarks often lack reproducible tools, fail to control cost and access confounders, and omit holistic tasks reflecting real research requests."
+  },
+  "approach": {
+    "zh": "作者按严谨评测原则构建跨学科问题集和受控搜索环境，并用多类 Asta Agent、通用 Agent 与基线进行广泛比较。",
+    "en": "The authors build a cross-domain problem suite and controlled search environment under rigorous evaluation principles, then compare many Asta, general, and baseline agents."
+  },
+  "system_design": {
+    "zh": "套件统一任务模式、搜索与科研工具 API、成本和工具权限配置、执行记录及分阶段科学能力评分。",
+    "en": "The suite unifies task schemas, search and science-tool APIs, cost/access configurations, execution logging, and stage-specific scientific capability scoring."
+  },
+  "key_results": {
+    "zh": "广泛评测显示 Agent 在部分科研子能力上已有进展，但尚不能稳定完成端到端科学研究辅助。",
+    "en": "Broad evaluation shows progress on selected scientific sub-capabilities while agents remain far from reliable end-to-end research assistance."
+  },
+  "limitations": {
+    "zh": "生产级搜索仍是特定工具实现，自动评分难覆盖新颖性和科学有效性；实际科研还包含长期协作、实验设施和伦理审查。",
+    "en": "Production-grade search is still one tool stack, automated scoring cannot fully assess novelty or scientific validity, and real research includes long collaboration, laboratories, and ethics."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "AstaBench scientific-research suite",
+      "Literature review",
+      "Experiment replication",
+      "Data analysis",
+      "Scientific hypothesis generation"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Nine science-optimized Asta agent classes",
+      "Scientific-research agent baselines"
+    ],
+    "metrics": [
+      {
+        "name": "Benchmark problems",
+        "value": ">2400",
+        "unit": "problems"
+      },
+      {
+        "name": "Agents evaluated",
+        "value": 57,
+        "unit": "agents"
+      },
+      {
+        "name": "Agent classes evaluated",
+        "value": 22,
+        "unit": "classes"
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "OLMo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 67,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.21652",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "AstaBench",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2510.21652",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2510.21652"
+  }
+}

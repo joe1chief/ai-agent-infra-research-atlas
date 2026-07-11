@@ -1,0 +1,249 @@
+{
+  "work_id": "arxiv-2511-11672",
+  "slug": "osgym-scalable-os-infra-for-computer-use-agents-2511-11672",
+  "title": {
+    "original": "OSGym: Scalable OS Infra for Computer Use Agents",
+    "zh": "OSGym：面向计算机使用代理的可扩展OS Infra",
+    "en": "OSGym: Scalable OS Infra for Computer Use Agents"
+  },
+  "authors": [
+    {
+      "name": "Zengyi Qin",
+      "affiliations": []
+    },
+    {
+      "name": "Jinyuan Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Yunze Man",
+      "affiliations": []
+    },
+    {
+      "name": "Shengcao Cao",
+      "affiliations": []
+    },
+    {
+      "name": "Ziqi Pang",
+      "affiliations": []
+    },
+    {
+      "name": "Zhuoyuan Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Han Fang",
+      "affiliations": []
+    },
+    {
+      "name": "Ling Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Zixin Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Zibu Wei",
+      "affiliations": []
+    },
+    {
+      "name": "Tianshu Ran",
+      "affiliations": []
+    },
+    {
+      "name": "Haoran Geng",
+      "affiliations": []
+    },
+    {
+      "name": "Ray Pan",
+      "affiliations": []
+    },
+    {
+      "name": "Qizhen Sun",
+      "affiliations": []
+    },
+    {
+      "name": "Zachary Bright",
+      "affiliations": []
+    },
+    {
+      "name": "Yuyang Cai",
+      "affiliations": []
+    },
+    {
+      "name": "Chongye Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Jiace Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Tianrui Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Han Cao",
+      "affiliations": []
+    },
+    {
+      "name": "Yeyang Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Rui Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Song Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Xiang Ren",
+      "affiliations": []
+    },
+    {
+      "name": "Bo Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Yutong Ban",
+      "affiliations": []
+    },
+    {
+      "name": "Pieter Abbeel",
+      "affiliations": []
+    },
+    {
+      "name": "Brian Anthony",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2511.11672",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v5",
+      "first_public_date": "2025-11-11",
+      "latest_revision_date": "2026-04-02",
+      "url": "https://arxiv.org/abs/2511.11672"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-11-11",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-04-02"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "sandbox",
+    "execution-environment"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "OSGym 的 VM 编排、写时复制存储和分层恢复构成可复用的千副本级计算机 Agent 沙箱运行基础设施。",
+    "en": "OSGym's VM orchestration, copy-on-write storage, and layered recovery form reusable thousand-replica sandbox infrastructure for computer agents."
+  },
+  "abstract": {
+    "zh": "OSGym 是面向计算机使用 Agent 的大规模操作系统沙箱基础设施，通过虚拟化、去中心化状态和故障恢复降低并行轨迹采集成本。",
+    "en": "OSGym is large-scale operating-system sandbox infrastructure for computer-use agents, reducing parallel trajectory-collection cost through virtualization, decentralized state, and fault recovery."
+  },
+  "problem": {
+    "zh": "完整 GUI 操作系统副本消耗大量 CPU、内存和磁盘，软件随机故障又会在规模化训练时放大并拖垮中心化管理。",
+    "en": "Full GUI OS replicas consume substantial CPU, memory, and disk, while stochastic software failures amplify at training scale and overwhelm centralized management."
+  },
+  "approach": {
+    "zh": "系统采用副本级去中心化状态、硬件感知编排、KVM 与写时复制磁盘，并以多层容器池恢复隔离和替换故障实例。",
+    "en": "The design combines replica-local state, hardware-aware orchestration, KVM with copy-on-write disks, and a multilayer container pool that isolates and replaces failed instances."
+  },
+  "system_design": {
+    "zh": "控制面进行资源感知放置，数据面运行共享基础盘的 VM 副本；本地状态管理器和分层恢复器负责故障边界、重试与池补充。",
+    "en": "A resource-aware control plane places VM replicas sharing a base disk, while local state managers and layered recovery replenish pools and contain failures."
+  },
+  "key_results": {
+    "zh": "该架构在受限资源下管理上千副本并提高并行轨迹吞吐，同时大幅减少磁盘占用、配置时间与单副本成本。",
+    "en": "The architecture manages over a thousand replicas under constrained resources, raises trajectory throughput, and markedly reduces disk use, provisioning time, and per-replica cost."
+  },
+  "limitations": {
+    "zh": "收益依赖 KVM、写时复制和特定硬件瓶颈；摘要未覆盖异构操作系统镜像、安全隔离强度及长期软件漂移的维护成本。",
+    "en": "Benefits depend on KVM, copy-on-write, and particular hardware bottlenecks; heterogeneous images, isolation assurance, and long-term software drift are not established."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Computer-use agent trajectory generation",
+      "End-to-end computer-use data collection and training"
+    ],
+    "hardware": [],
+    "cluster_scale": "Over 1,000 OS replicas",
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Physical disk consumption reduction",
+        "value": 88,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Disk provisioning speedup",
+        "value": 37,
+        "unit": "×",
+        "higher_is_better": true
+      },
+      {
+        "name": "Parallel multi-turn trajectory throughput",
+        "value": 1420,
+        "unit": "trajectories/minute",
+        "higher_is_better": true
+      },
+      {
+        "name": "Per-replica daily cost",
+        "value": "0.2–0.3",
+        "unit": "USD/day",
+        "higher_is_better": false
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.11672",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "OSGym",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2511.11672",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2511.11672"
+  }
+}

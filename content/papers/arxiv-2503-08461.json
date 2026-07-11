@@ -1,0 +1,141 @@
+{
+  "work_id": "arxiv-2503-08461",
+  "slug": "fastcache-optimizing-multimodal-llm-serving-through-lightweight-kv-cache-2503-08461",
+  "title": {
+    "original": "FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework",
+    "zh": "FastCache：通过轻量级KV缓存压缩框架优化多模态LLM服务",
+    "en": "FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework"
+  },
+  "authors": [
+    {
+      "name": "Jianian Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Hang Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Haojie Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Yinghui Li",
+      "affiliations": []
+    },
+    {
+      "name": "Biao Hou",
+      "affiliations": []
+    },
+    {
+      "name": "Ruixuan Li",
+      "affiliations": []
+    },
+    {
+      "name": "Jidong Zhai",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2503.08461",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-03-11",
+      "latest_revision_date": "2025-03-11",
+      "url": "https://arxiv.org/abs/2503.08461"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-03-11",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-03-11"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "FastCache 将跨阶段批处理和无碎片 KV 内存池实现为可接入多模态推理引擎的服务基础设施。",
+    "en": "FastCache packages cross-stage batching and a fragmentation-resistant KV pool as reusable infrastructure for multimodal serving engines."
+  },
+  "abstract": {
+    "zh": "FastCache 针对多模态大模型服务中 KV 缓存压缩带来的处理开销与排队延迟，联合优化预填充、压缩和解码阶段的批处理。它还提供专用 KV 内存池，以减少碎片并维持并发场景下的 GPU 利用率。",
+    "en": "FastCache targets the processing and queueing overhead introduced by KV-cache compression in multimodal LLM serving. It couples stage-aware dynamic batching with a dedicated KV memory pool to preserve GPU utilization under concurrency."
+  },
+  "problem": {
+    "zh": "现有 KV 压缩方案虽节省显存，却会在并发服务时引入额外压缩工作、队列等待和内存碎片，抵消其端到端收益。",
+    "en": "KV compression saves memory but can add compression work, queueing delay, and fragmentation that erase end-to-end gains during concurrent serving."
+  },
+  "approach": {
+    "zh": "框架按请求在预填充、缓存压缩与解码阶段的状态动态组成批次，并用连续的缓存内存池消除频繁分配造成的碎片。",
+    "en": "The framework dynamically batches requests across prefill, compression, and decode stages, while a pooled KV allocator avoids fragmentation from repeated cache allocation."
+  },
+  "system_design": {
+    "zh": "FastCache 在服务引擎中加入跨三阶段的调度器，并由 KV 内存池统一管理压缩后的缓存块；两者共同控制队列推进、缓存占用和 GPU 执行并行度。",
+    "en": "FastCache inserts a scheduler spanning three inference stages and centralizes compressed-cache blocks in a KV memory pool, coordinating queue progress, memory occupancy, and GPU parallelism."
+  },
+  "key_results": {
+    "zh": "在 GQA 与 MileBench 工作负载上，论文报告 FastCache 显著降低首 token 延迟、提高吞吐，并在高并发下减少平均显存占用。",
+    "en": "On GQA and MileBench workloads, FastCache is reported to substantially reduce time to first token, improve throughput, and lower average memory use under high concurrency."
+  },
+  "limitations": {
+    "zh": "公开摘要的评测集中在两个多模态基准和特定压缩路径，尚不能说明不同视觉 token 分布、模型架构或压缩质量约束下的收益。",
+    "en": "The abstract evaluates two multimodal benchmarks and a particular compression path; gains under other visual-token distributions, architectures, or quality constraints are not established."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["GQA", "MileBench", "concurrent multimodal inference up to 40 requests/s"],
+    "hardware": ["GPU serving system"],
+    "cluster_scale": null,
+    "baselines": ["state-of-the-art KV-cache compression serving baselines"],
+    "metrics": [
+      {"name": "TTFT reduction", "value": "up to 19.3x", "higher_is_better": true},
+      {"name": "throughput improvement", "value": "up to 12.1x", "higher_is_better": true},
+      {"name": "average memory reduction", "value": 20, "unit": "%", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "基准、并发规模和上限结果均由官方摘要明示；具体模型、GPU、压缩配置和各基线名称待全文审计。",
+      "en": "Benchmarks, concurrency, and upper-bound results are stated in the official abstract; models, GPUs, compression settings, and named baselines await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.08461",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "FastCache",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2503.08461",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2503.08461"
+  }
+}

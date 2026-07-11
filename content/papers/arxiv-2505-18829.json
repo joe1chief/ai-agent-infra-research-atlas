@@ -1,0 +1,140 @@
+{
+  "work_id": "arxiv-2505-18829",
+  "slug": "litecua-computer-as-mcp-server-for-computer-use-agent-on-aios-2505-18829",
+  "title": {
+    "original": "LiteCUA: Computer as MCP Server for Computer-Use Agent on AIOS",
+    "zh": "LiteCUA：在 AIOS 上将计算机作为计算机使用智能体的 MCP 服务器",
+    "en": "LiteCUA: Computer as MCP Server for Computer-Use Agent on AIOS"
+  },
+  "authors": [
+    {
+      "name": "Kai Mei",
+      "affiliations": []
+    },
+    {
+      "name": "Xi Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Hang Gao",
+      "affiliations": []
+    },
+    {
+      "name": "Shuhang Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Yongfeng Zhang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2505.18829",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-05-24",
+      "latest_revision_date": "2025-10-31",
+      "url": "https://arxiv.org/abs/2505.18829"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-05-24",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-10-31"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "sandbox",
+    "execution-environment"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AIOS 将计算机状态和动作标准化为 MCP 接口，提供可被不同计算机使用 Agent 复用的环境抽象层。",
+    "en": "AIOS standardizes computer state and actions behind MCP, providing an environment-abstraction layer reusable by different computer-use agents."
+  },
+  "abstract": {
+    "zh": "AIOS 1.0 将计算机包装成 MCP 上下文环境，LiteCUA 在其上以轻量 Agent 验证了“先语义化操作系统、再让模型决策”的计算机使用路径。",
+    "en": "AIOS 1.0 exposes a computer as an MCP-contextualized environment, and LiteCUA demonstrates a lightweight computer-use agent built around separating environment semantics from model decisions."
+  },
+  "problem": {
+    "zh": "语言模型的语义世界与 GUI、应用状态和底层操作接口之间存在结构性断层，使 Agent 将大量推理预算耗在界面解码而非任务决策上。",
+    "en": "A structural gap between a language model's semantic view and GUI, application-state, and operating interfaces forces agents to spend reasoning capacity decoding interfaces rather than deciding tasks."
+  },
+  "approach": {
+    "zh": "作者通过 MCP Server 抽象计算机状态与动作，把界面复杂性封装为模型可理解的上下文与工具，再以简化的 LiteCUA 执行任务。",
+    "en": "An MCP server abstracts computer states and actions into model-readable context and tools, after which a deliberately simple LiteCUA performs the task reasoning."
+  },
+  "system_design": {
+    "zh": "AIOS 位于操作系统和 Agent 之间，负责状态感知、动作抽象与 MCP 暴露；LiteCUA 只消费统一协议并形成决策循环。",
+    "en": "AIOS sits between the operating system and agent to sense state, abstract actions, and expose MCP interfaces; LiteCUA consumes that uniform protocol in its decision loop."
+  },
+  "key_results": {
+    "zh": "尽管 Agent 架构较轻，LiteCUA 在 OSWorld 上超过若干专用框架，说明环境上下文化本身能带来可测收益，但绝对成功率仍低。",
+    "en": "Despite its lightweight agent design, LiteCUA surpasses several specialized frameworks on OSWorld, showing measurable value from contextualization while retaining a low absolute success rate."
+  },
+  "limitations": {
+    "zh": "验证主要基于 OSWorld，尚不足以说明 MCP 抽象能覆盖不同操作系统、无障碍接口、动态应用更新及高风险动作的权限语义。",
+    "en": "Validation is largely on OSWorld and does not yet establish coverage across operating systems, accessibility APIs, changing applications, or permission semantics for high-risk actions."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "OSWorld"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Specialized computer-use agent frameworks"
+    ],
+    "metrics": [
+      {
+        "name": "OSWorld task success rate",
+        "value": 14.66,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.18829",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "LiteCUA",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2505.18829",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2505.18829"
+  }
+}

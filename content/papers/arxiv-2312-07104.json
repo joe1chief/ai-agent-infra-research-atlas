@@ -1,0 +1,193 @@
+{
+  "work_id": "arxiv-2312-07104",
+  "slug": "sglang-efficient-execution-of-structured-language-model-programs-2312-07104",
+  "title": {
+    "original": "SGLang: Efficient Execution of Structured Language Model Programs",
+    "zh": "SGLang：结构化语言模型程序的高效执行",
+    "en": "SGLang: Efficient Execution of Structured Language Model Programs"
+  },
+  "authors": [
+    {
+      "name": "Lianmin Zheng",
+      "affiliations": []
+    },
+    {
+      "name": "Liangsheng Yin",
+      "affiliations": []
+    },
+    {
+      "name": "Zhiqiang Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Chuyue Sun",
+      "affiliations": []
+    },
+    {
+      "name": "Jeff Huang",
+      "affiliations": []
+    },
+    {
+      "name": "Cody Hao Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Shiyi Cao",
+      "affiliations": []
+    },
+    {
+      "name": "Christos Kozyrakis",
+      "affiliations": []
+    },
+    {
+      "name": "Ion Stoica",
+      "affiliations": []
+    },
+    {
+      "name": "Joseph E. Gonzalez",
+      "affiliations": []
+    },
+    {
+      "name": "Clark Barrett",
+      "affiliations": []
+    },
+    {
+      "name": "Ying Sheng",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2312.07104",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2023-12-12",
+      "latest_revision_date": "2024-06-06",
+      "url": "https://arxiv.org/abs/2312.07104"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2023-12-12",
+    "venue_publication_date": null,
+    "latest_revision_date": "2024-06-06"
+  },
+  "window_status": "context",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "context",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "runtime",
+    "scheduling"
+  ],
+  "category_confidence": 0.99,
+  "inclusion_reason": {
+    "zh": "SGLang 以专用前端语言、RadixAttention 和结构化解码运行时统一执行多调用 LLM 程序，为后续智能体与 RAG 服务提供基础 Context。",
+    "en": "SGLang unifies multi-call LLM programs through a frontend language, RadixAttention, and structured-decoding runtime, providing foundational context for later agent and RAG serving systems."
+  },
+  "abstract": {
+    "zh": "SGLang 由面向生成与并行控制的前端语言和高性能运行时组成，针对复杂、多调用且带结构化输入输出的语言模型程序。",
+    "en": "SGLang combines a frontend language for generation and parallelism with a high-performance runtime for complex, multi-call language-model programs with structured inputs and outputs."
+  },
+  "problem": {
+    "zh": "智能体、RAG 和多轮对话包含控制流与重复前缀，普通逐请求 API 无法表达程序结构，也会重复计算 KV 和结构化解码状态。",
+    "en": "Agents, RAG, and multi-turn chat contain control flow and repeated prefixes; request-at-a-time APIs neither expose program structure nor avoid repeated KV and structured-decoding work."
+  },
+  "approach": {
+    "zh": "前端以生成和并行原语描述程序，运行时用 RadixAttention 复用树状前缀 KV，并以压缩有限状态机加速约束输出。",
+    "en": "The frontend expresses programs with generation and parallelism primitives, while the runtime uses RadixAttention for tree-prefix KV reuse and compressed finite-state machines for constrained output."
+  },
+  "system_design": {
+    "zh": "程序被编译为运行时请求图，radix 树管理跨调用前缀缓存，调度器批处理可执行节点，结构化解码器按有限状态机限制 token。",
+    "en": "Programs compile into runtime request graphs, a radix tree manages cross-call prefix caches, a scheduler batches ready nodes, and the structured decoder constrains tokens with finite-state machines."
+  },
+  "key_results": {
+    "zh": "摘要报告 SGLang 在语言与多模态模型的多种复杂任务上，相比先进推理系统取得最高数倍吞吐优势。",
+    "en": "The abstract reports up to several-fold higher throughput than advanced inference systems across complex language and multimodal tasks."
+  },
+  "limitations": {
+    "zh": "性能取决于可复用前缀和可静态表达的控制结构；外部工具延迟、分布式故障和动态程序变更不完全由该运行时解决。",
+    "en": "Performance depends on reusable prefixes and expressible control structure; external-tool latency, distributed failures, and highly dynamic program changes are not fully addressed."
+  },
+  "evaluation": {
+    "models": [
+      "large language models",
+      "multimodal models"
+    ],
+    "workloads": [
+      "agent control",
+      "logical reasoning",
+      "few-shot learning",
+      "JSON decoding",
+      "retrieval-augmented generation",
+      "multi-turn chat"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "state-of-the-art inference systems"
+    ],
+    "metrics": [
+      {
+        "name": "Maximum throughput improvement",
+        "value": "up to 6.4",
+        "unit": "x",
+        "baseline": "state-of-the-art inference systems",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "模型、任务、硬件、基线与指标仅转录自官方 arXiv 摘要；摘要未披露的表格和部署细节仍待全文审计。",
+      "en": "Models, workloads, hardware, baselines, and metrics are transcribed only from the official arXiv abstract; undisclosed tables and deployment details still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2312.07104",
+      "title": "Official arXiv record",
+      "accessed_at": "2026-07-11"
+    },
+    {
+      "type": "official_repository",
+      "url": "https://github.com/sgl-project/sglang",
+      "title": "SGLang source code",
+      "accessed_at": "2026-07-11"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "manual_curation",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "SGLang source code",
+      "url": "https://github.com/sgl-project/sglang",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "SGLang",
+    "extends": [],
+    "supersedes": [],
+    "related": [
+      "arxiv-2503-08461"
+    ]
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2312.07104",
+    "mirror_status": "external_only",
+    "license": null,
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2312.07104"
+  }
+}

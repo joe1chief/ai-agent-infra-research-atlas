@@ -1,0 +1,177 @@
+{
+  "work_id": "arxiv-2308-08155",
+  "slug": "autogen-enabling-next-gen-llm-applications-via-multi-agent-conversation-2308-08155",
+  "title": {
+    "original": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+    "zh": "AutoGen：通过多智能体对话支持下一代 LLM 应用",
+    "en": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation"
+  },
+  "authors": [
+    {
+      "name": "Qingyun Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Gagan Bansal",
+      "affiliations": []
+    },
+    {
+      "name": "Jieyu Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Yiran Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Beibin Li",
+      "affiliations": []
+    },
+    {
+      "name": "Erkang Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Li Jiang",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaoyun Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Shaokun Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Jiale Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Ahmed Hassan Awadallah",
+      "affiliations": []
+    },
+    {
+      "name": "Ryen W White",
+      "affiliations": []
+    },
+    {
+      "name": "Doug Burger",
+      "affiliations": []
+    },
+    {
+      "name": "Chi Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2308.08155",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2023-08-16",
+      "latest_revision_date": "2023-10-03",
+      "url": "https://arxiv.org/abs/2308.08155"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2023-08-16",
+    "venue_publication_date": null,
+    "latest_revision_date": "2023-10-03"
+  },
+  "window_status": "context",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "context",
+  "domain": "agent_infra",
+  "primary_category": "AG-4",
+  "tags": [
+    "multi-agent",
+    "coordination",
+    "orchestration"
+  ],
+  "category_confidence": 0.99,
+  "inclusion_reason": {
+    "zh": "AutoGen 将可对话智能体、工具/人类输入和可编程交互模式封装为通用多智能体框架，是后续协调系统的基础 Context。",
+    "en": "AutoGen packages conversable agents, tool and human input, and programmable interaction patterns into a general multi-agent framework, making it foundational context for later coordination systems."
+  },
+  "abstract": {
+    "zh": "AutoGen 是开源多智能体应用框架，允许可定制智能体通过对话协作，并把 LLM、人类输入和工具以不同运行模式组合。",
+    "en": "AutoGen is an open-source multi-agent application framework in which customizable agents collaborate through conversation while combining LLMs, humans, and tools in varied modes."
+  },
+  "problem": {
+    "zh": "复杂 LLM 应用需要多个角色、工具和人类协作，但开发者缺少统一方式表达对话拓扑、角色行为和自动/人工控制切换。",
+    "en": "Complex LLM applications need multiple roles, tools, and human collaboration, but developers lack one abstraction for conversation topology, role behavior, and human/automatic control transitions."
+  },
+  "approach": {
+    "zh": "框架把智能体定义为可配置、可对话的组件，并允许用自然语言或代码定义消息路由、回复规则和多智能体交互模式。",
+    "en": "The framework defines agents as configurable conversable components and lets developers express message routing, reply policies, and interaction patterns in natural language or code."
+  },
+  "system_design": {
+    "zh": "智能体封装模型、工具与人工接口，对话管理层传递消息并执行自定义行为，应用以多个智能体及其交互规则组合。",
+    "en": "Each agent encapsulates models, tools, and human interfaces; a conversation layer routes messages and executes custom behavior, and applications compose agents plus interaction rules."
+  },
+  "key_results": {
+    "zh": "论文在数学、编程、问答、运筹、在线决策和娱乐等示例中展示同一框架可承载不同复杂度与模型能力的应用。",
+    "en": "The paper demonstrates one framework across mathematics, coding, question answering, operations research, online decision-making, and entertainment applications of varying complexity."
+  },
+  "limitations": {
+    "zh": "框架的灵活对话并不自动保证任务终止、正确性或安全隔离；成本控制、并发伸缩和失控交互需要上层策略。",
+    "en": "Flexible conversation does not guarantee termination, correctness, or sandboxing; cost control, concurrency scaling, and runaway interactions require higher-level policy."
+  },
+  "evaluation": {
+    "models": [
+      "large language models"
+    ],
+    "workloads": [
+      "mathematics",
+      "coding",
+      "question answering",
+      "operations research",
+      "online decision-making",
+      "entertainment"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "模型、任务、硬件、基线与指标仅转录自官方 arXiv 摘要；摘要未披露的表格和部署细节仍待全文审计。",
+      "en": "Models, workloads, hardware, baselines, and metrics are transcribed only from the official arXiv abstract; undisclosed tables and deployment details still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2308.08155",
+      "title": "Official arXiv record",
+      "accessed_at": "2026-07-11"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "manual_curation",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "AutoGen",
+    "extends": [],
+    "supersedes": [],
+    "related": [
+      "arxiv-2507-01701"
+    ]
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2308.08155",
+    "mirror_status": "external_only",
+    "license": null,
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2308.08155"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "work_id": "arxiv-2510-13223",
+  "slug": "banaserve-unified-kv-cache-and-dynamic-module-migration-for-balancing-di-2510-13223",
+  "title": {
+    "original": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure",
+    "zh": "BanaServe：以统一 KV 缓存与动态模块迁移平衡解耦式 LLM 服务",
+    "en": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure"
+  },
+  "authors": [
+    {
+      "name": "Yiyuan He",
+      "affiliations": []
+    },
+    {
+      "name": "Minxian Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Jingfeng Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Jianmin Hu",
+      "affiliations": []
+    },
+    {
+      "name": "Chong Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Min Shen",
+      "affiliations": []
+    },
+    {
+      "name": "Le Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Chengzhong Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Lin Qu",
+      "affiliations": []
+    },
+    {
+      "name": "Kejiang Ye",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2510.13223",
+    "doi": "10.1002/spe.70054",
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-10-15",
+      "latest_revision_date": "2025-10-15",
+      "url": "https://arxiv.org/abs/2510.13223"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-10-15",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-10-15"
+  },
+  "window_status": "new_in_window",
+  "venue": "Software: Practice and Experience 2026",
+  "publication_status": "published",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "BanaServe 统一层迁移、注意力级 KV 迁移和全局缓存共享，为解耦推理集群提供可复用动态再平衡控制面。",
+    "en": "BanaServe unifies layer migration, attention-level KV movement, and global cache sharing into a reusable rebalancing control plane for disaggregated clusters."
+  },
+  "abstract": {
+    "zh": "BanaServe 为预填充与解码解耦的 LLM 集群提供动态再平衡：它迁移模型层、在注意力粒度迁移 KV 缓存，并共享全局 KV 存储。目标是在负载波动与前缀缓存热点下持续调整计算和内存资源。",
+    "en": "BanaServe dynamically rebalances disaggregated prefill and decode clusters by migrating model layers, moving KV state at attention granularity, and sharing a global KV store. The design targets workload shifts and prefix-cache hotspots that static allocation cannot absorb."
+  },
+  "problem": {
+    "zh": "解耦服务中的预填充计算瓶颈与解码内存瓶颈会随负载变化失衡，而缓存感知路由又把请求集中到高命中节点，形成热点。",
+    "en": "Compute-bound prefill and memory-bound decode tiers drift out of balance as load changes, while cache-aware routing concentrates requests on high-hit nodes and creates hotspots."
+  },
+  "approach": {
+    "zh": "系统结合层级权重迁移、注意力级 KV 迁移与全局缓存共享，并把传输按层与计算重叠，以支持粗细两级的负载再分配。",
+    "en": "The system combines layer-level weight migration, attention-level KV migration, and a shared global cache, overlapping layer-wise transfer with execution to rebalance at two granularities."
+  },
+  "system_design": {
+    "zh": "BanaServe 的协调器持续评估预填充/解码实例压力，按需移动层或注意力状态；统一 KV 存储解耦缓存位置与路由，使前端可按纯负载指标分发请求。",
+    "en": "A coordinator monitors pressure across prefill and decode instances and moves layers or attention state as needed. The unified KV store decouples cache location from routing, allowing the front end to dispatch by load rather than cache affinity."
+  },
+  "key_results": {
+    "zh": "论文报告 BanaServe 相比 vLLM 与 DistServe 在不同负载下取得更高吞吐和更低总处理延迟。",
+    "en": "The evaluation reports higher throughput and lower total processing latency than vLLM and DistServe across the tested loads."
+  },
+  "limitations": {
+    "zh": "跨节点迁移收益依赖网络带宽、迁移频率和全局缓存一致性；摘要未说明故障恢复、超大集群元数据开销或剧烈负载振荡下的稳定性。",
+    "en": "Benefits depend on network bandwidth, migration frequency, and shared-cache consistency; failure recovery, metadata cost at very large scale, and stability under oscillating load are not characterized in the abstract."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["dynamic disaggregated prefill/decode serving workloads"],
+    "hardware": ["disaggregated GPU serving cluster"],
+    "cluster_scale": "multiple prefill and decode instances",
+    "baselines": ["vLLM", "DistServe"],
+    "metrics": [
+      {"name": "throughput vs vLLM", "value": "1.2x-3.9x", "baseline": "vLLM", "higher_is_better": true},
+      {"name": "total processing time reduction vs vLLM", "value": "3.9%-78.4%", "baseline": "vLLM", "higher_is_better": true},
+      {"name": "throughput vs DistServe", "value": "1.1x-2.8x", "baseline": "DistServe", "higher_is_better": true},
+      {"name": "latency reduction vs DistServe", "value": "1.4%-70.1%", "baseline": "DistServe", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "解耦负载、两项具名基线和结果区间来自官方摘要；模型、硬件型号、规模及区间条件待全文审计。",
+      "en": "The disaggregated workload, two named baselines, and result ranges come from the official abstract; models, hardware, scale, and range conditions await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.13223",
+      "title": "Official arXiv record"
+    },
+    {
+      "type": "publisher",
+      "url": "https://doi.org/10.1002/spe.70054",
+      "title": "Publisher record via DOI"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "BanaServe",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2510.13223",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2510.13223"
+  }
+}

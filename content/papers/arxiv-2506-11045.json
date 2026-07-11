@@ -1,0 +1,133 @@
+{
+  "work_id": "arxiv-2506-11045",
+  "slug": "procedural-environment-generation-for-tool-use-agents-2506-11045",
+  "title": {
+    "original": "Procedural Environment Generation for Tool-Use Agents",
+    "zh": "面向工具使用智能体的程序化环境生成",
+    "en": "Procedural Environment Generation for Tool-Use Agents"
+  },
+  "authors": [
+    {
+      "name": "Michael Sullivan",
+      "affiliations": []
+    },
+    {
+      "name": "Mareike Hartmann",
+      "affiliations": []
+    },
+    {
+      "name": "Alexander Koller",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2506.11045",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-05-21",
+      "latest_revision_date": "2025-09-24",
+      "url": "https://arxiv.org/abs/2506.11045"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-05-21",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-09-24"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "sandbox",
+    "execution-environment"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "RandomWorld 是可程序化生成交互工具、状态环境和组合轨迹的数据基础设施，而不是针对单一工具任务的模型技巧。",
+    "en": "RandomWorld is infrastructure for procedurally generating interactive tools, stateful environments, and compositional trajectories rather than a model trick for one task."
+  },
+  "abstract": {
+    "zh": "RandomWorld 是面向工具 Agent 的程序化数据工厂，可生成交互式工具、环境反馈和需要组合调用的训练任务，并用于 SFT 与在线 RL。",
+    "en": "RandomWorld is a procedural data factory for tool agents that generates interactive tools, environment feedback, and compositional calling tasks for both SFT and online RL."
+  },
+  "problem": {
+    "zh": "既有合成工具数据多为静态或单步样本，无法提供在线强化学习所需的交互反馈，也难训练跨工具组合能力。",
+    "en": "Existing synthetic tool data is often static or single-step, offering neither the interactive feedback needed by online RL nor sufficient supervision for cross-tool composition."
+  },
+  "approach": {
+    "zh": "流水线随机生成工具及其可执行世界，再采样具有依赖关系的多步调用轨迹，以同一合成分布产生监督和奖励训练数据。",
+    "en": "The pipeline generates executable tools and worlds, then samples dependency-bearing multi-step call trajectories to supply supervised and reward-based training data from one synthetic distribution."
+  },
+  "system_design": {
+    "zh": "RandomWorld 包含工具/模式生成器、状态化执行环境、组合任务构造器、轨迹收集器以及面向 SFT 和 RL 的数据导出层。",
+    "en": "RandomWorld contains tool/schema generators, a stateful execution environment, a compositional task constructor, trajectory collection, and exporters for SFT and RL."
+  },
+  "key_results": {
+    "zh": "在合成数据上调优的模型跨多个工具基准获得一致改善，且下游表现随生成数据量增长，显示程序化扩展仍有余量。",
+    "en": "Models tuned on the synthetic data improve across multiple tool benchmarks, and downstream performance rises with generated-data scale, indicating additional procedural scaling headroom."
+  },
+  "limitations": {
+    "zh": "完全合成的工具语义和错误分布可能偏离真实 API；摘要未证明规模趋势可无限外推或覆盖权限、延迟与服务故障。",
+    "en": "Fully synthetic tool semantics and error distributions may differ from real APIs; the evidence does not show indefinite scaling or coverage of permissions, latency, and service failures."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "NESTFUL",
+      "Tool-use benchmarks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning",
+      "seed_report_path": "2026/snowflake/2026-02_arctic-awm.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 11,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.11045",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2506.11045",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2506.11045"
+  }
+}

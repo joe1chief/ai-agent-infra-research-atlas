@@ -1,0 +1,131 @@
+{
+  "work_id": "arxiv-2606-21631",
+  "slug": "curatorkit-data-curation-and-synthetic-data-generation-for-llm-post-trai-2606-21631",
+  "title": {
+    "original": "CuratorKIT : Data Curation and Synthetic Data Generation for LLM Post-Training",
+    "zh": "CuratorKIT：面向 LLM 后训练的数据筛选与合成数据生成",
+    "en": "CuratorKIT : Data Curation and Synthetic Data Generation for LLM Post-Training"
+  },
+  "authors": [
+    {
+      "name": "Soham Bhattacharjee",
+      "affiliations": []
+    },
+    {
+      "name": "Karun Sharma",
+      "affiliations": []
+    },
+    {
+      "name": "Vinay Kumar Sankarapu",
+      "affiliations": []
+    },
+    {
+      "name": "Pratinav Seth",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2606.21631",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-06-19",
+      "latest_revision_date": "2026-06-19",
+      "url": "https://arxiv.org/abs/2606.21631"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-06-19",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-06-19"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-1",
+  "tags": [
+    "data-curation",
+    "data-provenance",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "CuratorKIT 统一读取、清洗、生成、质量门控、恢复、导出和样本级来源链，是完整的后训练数据工具链。",
+    "en": "CuratorKIT unifies ingestion, hygiene, generation, quality gates, recovery, export, and per-example provenance into a complete post-training data stack."
+  },
+  "abstract": {
+    "zh": "CuratorKIT 将后训练数据的读取、隐私与毒性清洗、合成生成、质量门控、失败恢复和训练格式导出统一到可配置的开源 Python 工具链。",
+    "en": "CuratorKIT unifies post-training data ingestion, privacy and toxicity hygiene, synthetic generation, quality gates, failure recovery, and training-format export in a configurable open-source Python stack."
+  },
+  "problem": {
+    "zh": "现有工具把后训练数据生命周期拆成互不相连的阶段，样本为何被修改或拒绝缺少一致审计记录，也难以复现实验配方。",
+    "en": "Existing tools fragment the post-training data lifecycle, leaving no consistent audit trail for why an example was changed or rejected and making recipes difficult to reproduce."
+  },
+  "approach": {
+    "zh": "库通过多格式读取和自动模式识别接入数据，先执行凭据、PII 与毒性检查，再运行多类生成任务和互补质量门，并对失败样本结构化恢复。",
+    "en": "The library ingests multiple formats with schema detection, checks credentials, PII, and toxicity, runs several generation tasks and complementary quality gates, and applies structured recovery to failures."
+  },
+  "system_design": {
+    "zh": "流水线依次包含 Reader、数据卫生层、LLM 生成器、带来源核验的质量门、恢复控制器和训练导出器；每个决策追加到样本级不可变来源链。",
+    "en": "The pipeline links readers, a hygiene layer, LLM generators, provenance-aware quality gates, a recovery controller, and training exporters; every decision is appended to an immutable per-example provenance chain."
+  },
+  "key_results": {
+    "zh": "论文展示该工具链可跨多种模型提供方和训练框架串联完整数据生命周期，并把静默丢弃替换为可审计的失败原因。",
+    "en": "The paper demonstrates an end-to-end lifecycle across many model providers and training formats, replacing silent drops with auditable failure reasons."
+  },
+  "limitations": {
+    "zh": "自动质量门和幻觉核验仍可能误判，供应商行为变化会影响复现；摘要未给出跨规模吞吐和人工质量审计的系统性比较。",
+    "en": "Automated gates and hallucination checks can misclassify examples, provider drift can affect reproducibility, and the abstract does not establish systematic throughput or human-quality comparisons across scale."
+  },
+  "evaluation": {
+    "models": [
+      "LLMs accessed through LiteLLM"
+    ],
+    "workloads": [
+      "post-training data ingestion",
+      "synthetic data generation",
+      "quality filtering and export"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2606.21631",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "CuratorKIT",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2606.21631",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2606.21631"
+  }
+}

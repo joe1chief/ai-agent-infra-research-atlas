@@ -1,0 +1,129 @@
+{
+  "work_id": "arxiv-2508-15294",
+  "slug": "a-multi-memory-segment-system-for-generating-high-quality-long-term-memo-2508-15294",
+  "title": {
+    "original": "A Multi-Memory Segment System for Generating High-Quality Long-Term Memory Content in Agents",
+    "zh": "一种在智能体中生成高质量长期内存内容的多内存段系统",
+    "en": "A Multi-Memory Segment System for Generating High-Quality Long-Term Memory Content in Agents"
+  },
+  "authors": [
+    {
+      "name": "Gaoke Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Bo Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Yunlong Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Dongming Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Zifei Yu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2508.15294",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v4",
+      "first_public_date": "2025-08-21",
+      "latest_revision_date": "2026-05-08",
+      "url": "https://arxiv.org/abs/2508.15294"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-08-21",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-08"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "MMS 提供从短期对话生成多类长期片段、双单元存储和映射检索的完整可复用记忆流水线。",
+    "en": "MMS provides a reusable end-to-end memory pipeline from short-term dialogue through multi-segment generation, paired storage, and mapped retrieval."
+  },
+  "abstract": {
+    "zh": "MMS 受认知心理学启发，将短期对话加工成多个长期记忆片段，而非只保存单一摘要。每个片段生成一一对应的检索单元和高保真上下文单元，查询时先匹配轻量索引，再取回配套内容供回答。",
+    "en": "MMS converts short-term interaction into multiple long-term memory segments rather than a single summary. Each segment yields a lightweight retrieval unit paired one-to-one with a richer context unit, so queries match the former and responses consume the latter."
+  },
+  "problem": {
+    "zh": "多数 Agent 记忆研究优化检索，却把历史压成低质量摘要；摘要丢失多维细节后，即使召回正确也会降低回答质量。",
+    "en": "Most agent-memory work optimizes retrieval while storing low-fidelity dialogue summaries; once multidimensional detail is lost, even correct recall may not support a good response."
+  },
+  "approach": {
+    "zh": "系统从短期记忆生成多类片段，再分别构造检索表征和上下文表征；用户查询只在检索单元上匹配，并通过映射获取对应的完整上下文。",
+    "en": "The system derives multiple segment types from short-term memory and builds separate retrieval and context representations; queries search only retrieval units and follow the pairing to full context."
+  },
+  "system_design": {
+    "zh": "MMS 包含短期记忆分段器、片段内容生成器、双单元存储和检索映射；索引与回答上下文分离，使召回效率不必以压缩内容质量为代价。",
+    "en": "MMS comprises a short-term segmenter, segment-content generator, paired-unit store, and retrieval mapping. Separating the index from response context avoids making recall efficiency depend on compressed content."
+  },
+  "key_results": {
+    "zh": "LoCoMo、消融、输入记忆规模鲁棒性和开销实验共同表明，多片段内容设计改善长期记忆利用，并具备实际运行价值。",
+    "en": "LoCoMo, ablation, memory-count robustness, and overhead experiments collectively report better long-term memory use and practical viability from multi-segment content."
+  },
+  "limitations": {
+    "zh": "片段类型与生成质量依赖模型和认知假设，一一映射也难以表达跨片段关系；证据集中在 LoCoMo，长期更新、冲突与遗忘机制未见摘要说明。",
+    "en": "Segment types and quality depend on model and cognitive assumptions, while one-to-one pairing cannot naturally express cross-segment relations; evidence centers on LoCoMo and does not describe revision, conflict, or forgetting."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["LoCoMo", "ablation studies", "input-memory-count robustness", "runtime overhead evaluation"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "LoCoMo、消融、记忆数量鲁棒性和开销实验来自官方摘要；模型、基线、硬件及具体结果待全文审计。",
+      "en": "LoCoMo, ablations, memory-count robustness, and overhead evaluation come from the official abstract; models, baselines, hardware, and values await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.15294",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2508.15294",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2508.15294"
+  }
+}

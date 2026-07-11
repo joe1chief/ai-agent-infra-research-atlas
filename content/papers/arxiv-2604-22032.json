@@ -1,0 +1,138 @@
+{
+  "work_id": "arxiv-2604-22032",
+  "slug": "kernel-contracts-a-specification-language-for-ml-kernel-correctness-acro-2604-22032",
+  "title": {
+    "original": "Kernel Contracts: A Specification Language for ML Kernel Correctness Across Heterogeneous Silicon",
+    "zh": "内核合约：跨异构硅的ML内核正确性的规范语言",
+    "en": "Kernel Contracts: A Specification Language for ML Kernel Correctness Across Heterogeneous Silicon"
+  },
+  "authors": [
+    {
+      "name": "Cooper Veit",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2604.22032",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-04-23",
+      "latest_revision_date": "2026-04-23",
+      "url": "https://arxiv.org/abs/2604.22032"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-04-23",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-04-23"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Kernel Contracts 定义可机测的 kernel 语义、容差、oracle 与违规签名，为异构芯片一致性测试提供规范基础设施。",
+    "en": "Kernel Contracts defines machine-testable semantics, tolerances, oracles, and violation signatures as specification infrastructure for cross-silicon conformance testing."
+  },
+  "abstract": {
+    "zh": "Kernel Contracts 提出描述机器学习 kernel 正确性的规范语言，用八部分契约和可测违规签名统一表达精度、顺序、编译器与异常值故障。",
+    "en": "Kernel Contracts proposes a specification language for ML-kernel correctness, using eight-part contracts and measurable violation signatures across precision, ordering, compiler, and exceptional-value failures."
+  },
+  "problem": {
+    "zh": "不同芯片上的 kernel 发生分歧时，通常没有书面语义、容差或测量协议判断谁违反了预期，基本功能测试也会漏掉静默错误。",
+    "en": "When kernels disagree across silicon, there is usually no written semantics, tolerance, or measurement protocol to determine which violates expectations, and basic functional tests miss silent errors."
+  },
+  "approach": {
+    "zh": "每份契约明确标识、范围、前后条件、容差、参考 oracle、测量协议和违规签名，并要求同时校准一个合规实现与一个能通过基础测试的违规实现。",
+    "en": "Each contract specifies identity, scope, pre/postconditions, tolerance, reference oracle, measurement protocol, and violation signature, calibrated with both a conforming and deceptively functional violating implementation."
+  },
+  "system_design": {
+    "zh": "规范套件按故障类别组织契约，执行器在目标 kernel 与 oracle 上运行测量协议，分级器依据容差和签名输出合规、违规或未决状态。",
+    "en": "A suite groups contracts by failure class, a runner executes the measurement protocol against target and oracle kernels, and a grader uses tolerance plus signatures to report conformance, violation, or uncertainty."
+  },
+  "key_results": {
+    "zh": "作者把三个已记录的跨硬件或自动优化事故映射为具体可测契约违规，说明形式化描述能把非正式诊断转化为一致评审。",
+    "en": "Three documented cross-hardware or automated-optimization incidents map to concrete measurable contract violations, showing how informal diagnoses can become consistent conformance checks."
+  },
+  "limitations": {
+    "zh": "当前契约类别和案例仍有限，规范编写与 oracle 选择需要专家判断；它提供可测准则，但不是对所有输入的形式化验证。",
+    "en": "Current classes and cases are limited, authoring contracts and selecting oracles require expert judgment, and the approach provides measurable criteria rather than formal verification over all inputs."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "precision contract checking",
+      "ordering contract checking",
+      "compiler-induced failure checking",
+      "exceptional-value checking",
+      "three documented kernel incidents"
+    ],
+    "hardware": [
+      "Huawei Ascend",
+      "AMD GPU",
+      "NVIDIA GPU"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "basic functional tests"
+    ],
+    "metrics": [
+      {
+        "name": "Kernel contract classes specified",
+        "value": 12,
+        "unit": "classes",
+        "higher_is_better": null
+      },
+      {
+        "name": "Documented incidents analyzed",
+        "value": 3,
+        "unit": "incidents",
+        "higher_is_better": null
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2604.22032",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Kernel Contracts",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2604.22032",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2604.22032"
+  }
+}

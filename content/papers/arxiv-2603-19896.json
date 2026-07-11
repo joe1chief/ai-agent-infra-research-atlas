@@ -1,0 +1,121 @@
+{
+  "work_id": "arxiv-2603-19896",
+  "slug": "utility-guided-agent-orchestration-for-efficient-llm-tool-use-2603-19896",
+  "title": {
+    "original": "Utility-Guided Agent Orchestration for Efficient LLM Tool Use",
+    "zh": "面向高效 LLM 工具使用的效用引导式智能体编排",
+    "en": "Utility-Guided Agent Orchestration for Efficient LLM Tool Use"
+  },
+  "authors": [
+    {
+      "name": "Boyan Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Gongming Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Hongli Xu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2603.19896",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-03-20",
+      "latest_revision_date": "2026-03-20",
+      "url": "https://arxiv.org/abs/2603.19896"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-03-20",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "该效用策略为回答、检索、工具、验证和停止提供显式、可调的运行时决策层，可跨工具 Agent 复用。",
+    "en": "The utility policy provides an explicit, tunable runtime decision layer over answer, retrieve, tool, verify, and stop actions that can be reused across tool agents."
+  },
+  "abstract": {
+    "zh": "该工作把工具 Agent 编排显式建模为效用决策，而非完全交给提示中的自由推理。策略在回答、检索、工具调用、验证和停止之间选择，综合估计收益、步骤成本、不确定性与冗余，提供可控的质量—成本权衡。",
+    "en": "This work models tool-agent orchestration as an explicit utility decision rather than leaving control entirely to free-form prompting. A policy chooses among answer, retrieve, tool, verify, and stop actions by combining expected gain, step cost, uncertainty, and redundancy."
+  },
+  "problem": {
+    "zh": "固定流程稳定但缺乏适应性，ReAct 等自由多步方法又可能过度调用工具、延长轨迹并增加 token 与时延，运行时缺少明确的停止和验证控制。",
+    "en": "Fixed workflows are stable but inflexible, whereas free-form methods such as ReAct can overuse tools, lengthen trajectories, and increase tokens and latency without explicit stopping or verification control."
+  },
+  "approach": {
+    "zh": "策略为候选动作计算轻量效用，按潜在质量增益扣除成本、不确定性和重复惩罚，并通过阈值与冗余控制决定继续、验证或停止。",
+    "en": "The policy scores candidate actions with a lightweight utility that balances potential quality gain against cost, uncertainty, and repetition penalties, using thresholds to continue, verify, or stop."
+  },
+  "system_design": {
+    "zh": "编排器在每步收集当前答案、工具历史、置信与成本信号，效用模块对动作打分，策略层执行最高价值动作并将新状态反馈到下一轮。",
+    "en": "At each step, the orchestrator collects the current answer, tool history, confidence, and cost signals; a utility module scores actions, executes the best option, and feeds the resulting state into the next decision."
+  },
+  "key_results": {
+    "zh": "与直接回答、固定流程、阈值控制和 ReAct 的比较表明，显式效用信号会系统改变调用与停止行为，并可用轻量规则获得可解释的质量—成本折中。",
+    "en": "Comparisons with direct answering, fixed workflows, threshold control, and ReAct show that explicit utility signals materially change tool and stopping behavior and can produce interpretable quality–cost trade-offs."
+  },
+  "limitations": {
+    "zh": "效用取决于人工选择的成本、增益与不确定性代理，校准偏差可能过早停止或过度验证；论文不宣称该策略在所有任务上达到最佳质量。",
+    "en": "Utility depends on hand-chosen proxies for cost, gain, and uncertainty; miscalibration can stop too early or over-verify, and the paper explicitly does not claim universally best task quality."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["tool-using LLM agent tasks"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["direct answering", "threshold control", "fixed workflows", "ReAct", "multiple utility-policy variants"],
+    "metrics": [],
+    "notes": {
+      "zh": "工具 Agent 场景和五类策略比较来自官方摘要；摘要没有给出模型、任务集、硬件或统一数值，成本定义与策略分项待全文审计。",
+      "en": "The tool-agent setting and five policy classes come from the official abstract; it gives no model, task set, hardware, or aggregate number, and cost definitions and per-policy results await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.19896",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2603.19896",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2603.19896"
+  }
+}

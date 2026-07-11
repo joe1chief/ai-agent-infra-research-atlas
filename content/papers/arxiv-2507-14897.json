@@ -1,0 +1,158 @@
+{
+  "work_id": "arxiv-2507-14897",
+  "slug": "agentfly-extensible-and-scalable-reinforcement-learning-for-lm-agents-2507-14897",
+  "title": {
+    "original": "AgentFly: Extensible and Scalable Reinforcement Learning for LM Agents",
+    "zh": "AgentFly：面向语言模型智能体的可扩展强化学习框架",
+    "en": "AgentFly: Extensible and Scalable Reinforcement Learning for LM Agents"
+  },
+  "authors": [
+    {
+      "name": "Renxi Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Rifo Ahmad Genadi",
+      "affiliations": []
+    },
+    {
+      "name": "Bilal El Bouardi",
+      "affiliations": []
+    },
+    {
+      "name": "Yongxin Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Fajri Koto",
+      "affiliations": []
+    },
+    {
+      "name": "Zhengzhong Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Timothy Baldwin",
+      "affiliations": []
+    },
+    {
+      "name": "Haonan Li",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2507.14897",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-07-20",
+      "latest_revision_date": "2025-07-20",
+      "url": "https://arxiv.org/abs/2507.14897"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-07-20",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-07-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-3",
+  "tags": [
+    "post-training",
+    "reinforcement-learning",
+    "rollout"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "AgentFly 将多轮 mask、工具/奖励注册、异步执行和环境资源管理封装为通用智能体 RL 框架。",
+    "en": "AgentFly packages multi-turn masking, tool and reward registration, asynchronous execution, and environment resource management into a general agent-RL framework."
+  },
+  "abstract": {
+    "zh": "AgentFly 是可扩展的语言模型智能体 RL 框架，支持多轮交互、可插拔工具和奖励函数，并以异步执行和集中资源管理提高环境训练吞吐。",
+    "en": "AgentFly is a scalable RL framework for language-model agents with multi-turn interaction, pluggable tools and rewards, asynchronous execution, and centralized resource management."
+  },
+  "problem": {
+    "zh": "传统 RL 接口面向单步或固定环境，难以表达智能体的多轮 token、外部工具调用和异构奖励计算，也缺少统一的扩展方式。",
+    "en": "Conventional RL interfaces target fixed or single-step environments and do not naturally represent multi-turn tokens, external tool calls, heterogeneous rewards, or extensible agent tasks."
+  },
+  "approach": {
+    "zh": "框架用 token 级 mask 适配传统 RL 算法，以装饰器定义工具与奖励，并异步执行工具调用和奖励计算来隐藏环境等待。",
+    "en": "The framework adapts standard RL algorithms with token-level masks, defines tools and rewards through decorators, and overlaps environment delay through asynchronous tool and reward execution."
+  },
+  "system_design": {
+    "zh": "训练器连接多轮轨迹缓冲区、工具/奖励注册表和环境协调器；集中资源管理器分配环境与算力，并让异步任务把完成的轨迹送回学习端。",
+    "en": "A trainer connects a multi-turn trajectory buffer, tool and reward registries, and an environment coordinator; centralized resource management assigns capacity and returns completed trajectories asynchronously."
+  },
+  "key_results": {
+    "zh": "预置工具和环境上的实验表明，同一框架能够训练多类智能体任务，并通过异步执行维持较高吞吐。",
+    "en": "Experiments with the included tools and environments show that one framework can train agents across several tasks while sustaining throughput through asynchronous execution."
+  },
+  "limitations": {
+    "zh": "集中资源管理可能成为超大规模瓶颈；token mask 对复杂信用分配仍较粗，工具副作用、安全隔离和真实 API 波动也未被充分覆盖。",
+    "en": "Centralized resource management may bottleneck at extreme scale; token masking remains coarse for credit assignment, and tool side effects, sandboxing, and real-API variability are not fully covered."
+  },
+  "evaluation": {
+    "models": [
+      "language-model agents"
+    ],
+    "workloads": [
+      "multi-turn tool-use agent training",
+      "asynchronous tool-call and reward execution"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "prompt engineering",
+      "supervised fine-tuning"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning",
+      "seed_report_path": "2026/snowflake/2026-02_arctic-awm.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 12,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.14897",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "AgentFly",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2507.14897",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2507.14897"
+  }
+}

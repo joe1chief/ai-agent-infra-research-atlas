@@ -1,0 +1,381 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://joe1chief.github.io/agent-infra-atlas/schema/paper.schema.json",
+  "title": "AI Infra & Agent Infra Research Atlas paper",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "work_id",
+    "slug",
+    "title",
+    "authors",
+    "institutions",
+    "identifiers",
+    "versions",
+    "dates",
+    "window_status",
+    "venue",
+    "publication_status",
+    "curation_tier",
+    "domain",
+    "primary_category",
+    "tags",
+    "category_confidence",
+    "inclusion_reason",
+    "abstract",
+    "problem",
+    "approach",
+    "system_design",
+    "key_results",
+    "limitations",
+    "evaluation",
+    "seed_reports",
+    "first_party_sources",
+    "verified_at",
+    "discovery_method",
+    "artifacts",
+    "reproducibility_badges",
+    "relations",
+    "pdf"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "work_id": {
+      "type": "string",
+      "pattern": "^(?:arxiv|openreview|doi)-[a-z0-9._-]+$"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "minLength": 3,
+      "maxLength": 100
+    },
+    "title": { "$ref": "#/$defs/title" },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/author" }
+    },
+    "institutions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "identifiers": { "$ref": "#/$defs/identifiers" },
+    "versions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/version" }
+    },
+    "dates": { "$ref": "#/$defs/dates" },
+    "window_status": {
+      "enum": ["new_in_window", "venue_carry_in", "context"]
+    },
+    "venue": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "minLength": 1 },
+        { "$ref": "#/$defs/venue" }
+      ]
+    },
+    "publication_status": {
+      "enum": ["preprint", "submitted", "accepted", "published", "withdrawn", "retracted"]
+    },
+    "curation_tier": { "enum": ["core", "watchlist", "context"] },
+    "domain": { "enum": ["ai_infra", "agent_infra"] },
+    "primary_category": {
+      "enum": [
+        "AI-1", "AI-2", "AI-3", "AI-4", "AI-5", "AI-6",
+        "AG-1", "AG-2", "AG-3", "AG-4", "AG-5", "AG-6", "AG-7"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "agent-evaluation", "agent-memory", "agent-protocol", "agent-runtime", "agent-security",
+          "communication", "compiler", "context-management", "coordination", "data-curation",
+          "data-provenance", "distributed-training", "execution-environment", "fault-tolerance",
+          "governance", "identity", "inference-serving", "kernel", "kv-cache", "multi-agent",
+          "observability", "orchestration", "parallelism", "permissions", "persistent-state",
+          "policy-enforcement", "post-training", "reinforcement-learning", "reliability", "rollout",
+          "runtime", "sandbox", "scheduling", "systems-measurement", "tool-use", "workflow"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "category_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "inclusion_reason": { "$ref": "#/$defs/bilingual" },
+    "abstract": { "$ref": "#/$defs/bilingual" },
+    "problem": { "$ref": "#/$defs/bilingual" },
+    "approach": { "$ref": "#/$defs/bilingual" },
+    "system_design": { "$ref": "#/$defs/bilingual" },
+    "key_results": { "$ref": "#/$defs/bilingual" },
+    "limitations": { "$ref": "#/$defs/bilingual" },
+    "evaluation": { "$ref": "#/$defs/evaluation" },
+    "seed_reports": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/seedReport" }
+    },
+    "first_party_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "verified_at": { "type": "string", "format": "date" },
+    "discovery_method": {
+      "enum": [
+        "seed_report_reference", "arxiv_search", "openreview_search",
+        "venue_search", "author_project", "manual_curation", "mixed",
+        "official-expansion"
+      ]
+    },
+    "artifacts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/artifact" }
+    },
+    "reproducibility_badges": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "relations": { "$ref": "#/$defs/relations" },
+    "pdf": { "$ref": "#/$defs/pdf" }
+  },
+  "$defs": {
+    "nullableString": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "minLength": 1 }
+      ]
+    },
+    "bilingual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["zh", "en"],
+      "properties": {
+        "zh": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 }
+      }
+    },
+    "title": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["original", "zh", "en"],
+      "properties": {
+        "original": { "type": "string", "minLength": 1 },
+        "zh": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 }
+      }
+    },
+    "author": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "affiliations"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "affiliations": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "orcid": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "identifiers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["arxiv", "doi", "openreview"],
+      "properties": {
+        "arxiv": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "pattern": "^(?:[a-z-]+(?:\\.[A-Z]{2})?/[0-9]{7}|[0-9]{4}\\.[0-9]{4,5})(?:v[0-9]+)?$" }
+          ]
+        },
+        "doi": { "$ref": "#/$defs/nullableString" },
+        "openreview": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "version": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "date", "url"],
+          "properties": {
+            "type": { "enum": ["arxiv", "openreview", "conference", "journal", "project", "withdrawal"] },
+            "date": { "type": "string", "format": "date" },
+            "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+            "identifier": { "$ref": "#/$defs/nullableString" },
+            "label": { "$ref": "#/$defs/nullableString" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source", "version", "first_public_date", "latest_revision_date", "url"],
+          "properties": {
+            "source": { "enum": ["arxiv", "openreview", "conference", "journal", "publisher", "project"] },
+            "version": { "$ref": "#/$defs/nullableString" },
+            "first_public_date": { "type": "string", "format": "date" },
+            "latest_revision_date": { "type": "string", "format": "date" },
+            "url": { "type": "string", "format": "uri", "pattern": "^https://" }
+          }
+        }
+      ]
+    },
+    "dates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["first_public_date", "venue_publication_date", "latest_revision_date"],
+      "properties": {
+        "first_public_date": { "type": "string", "format": "date" },
+        "venue_publication_date": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "format": "date" }
+          ]
+        },
+        "latest_revision_date": { "type": "string", "format": "date" }
+      }
+    },
+    "venue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "acronym": { "$ref": "#/$defs/nullableString" },
+        "type": { "enum": ["conference", "workshop", "journal", "preprint", "other"] },
+        "url": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "format": "uri", "pattern": "^https://" }
+          ]
+        }
+      }
+    },
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "value"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "value": { "oneOf": [{ "type": "number" }, { "type": "string", "minLength": 1 }] },
+        "unit": { "$ref": "#/$defs/nullableString" },
+        "baseline": { "$ref": "#/$defs/nullableString" },
+        "higher_is_better": { "oneOf": [{ "type": "boolean" }, { "type": "null" }] },
+        "notes": { "$ref": "#/$defs/bilingual" }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["models", "workloads", "hardware", "cluster_scale", "baselines", "metrics"],
+      "properties": {
+        "models": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "workloads": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "hardware": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "cluster_scale": { "$ref": "#/$defs/nullableString" },
+        "baselines": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "metrics": { "type": "array", "items": { "$ref": "#/$defs/metric" } },
+        "notes": { "$ref": "#/$defs/bilingual" }
+      }
+    },
+    "seedReport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["report_title", "seed_report_path", "reference_number", "page", "context"],
+      "properties": {
+        "report_title": { "type": "string", "minLength": 1 },
+        "seed_report_path": { "type": "string", "minLength": 1 },
+        "report_blob_sha": { "$ref": "#/$defs/nullableString" },
+        "repository_url": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "format": "uri", "pattern": "^https://" }
+          ]
+        },
+        "reference_number": { "oneOf": [{ "type": "integer", "minimum": 1 }, { "type": "string", "minLength": 1 }] },
+        "page": { "oneOf": [{ "type": "integer", "minimum": 1 }, { "type": "null" }] },
+        "context": { "type": "string", "minLength": 1 }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "url", "title"],
+      "properties": {
+        "type": {
+          "enum": [
+            "arxiv", "openreview", "mlsys", "usenix", "acl_anthology",
+            "publisher", "author_project", "official_repository", "doi"
+          ]
+        },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "title": { "type": "string", "minLength": 1 },
+        "accessed_at": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "format": "date" }
+          ]
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "url", "title"],
+      "properties": {
+        "type": { "enum": ["code", "data", "demo", "model", "documentation", "other"] },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "title": { "type": "string", "minLength": 1 },
+        "license": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "relations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system_family", "extends", "supersedes", "related"],
+      "properties": {
+        "system_family": { "$ref": "#/$defs/nullableString" },
+        "extends": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "supersedes": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "related": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "pdf": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["official_url", "mirror_status", "license", "sha256", "size_bytes", "fallback_url"],
+      "properties": {
+        "official_url": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "format": "uri", "pattern": "^https://" }
+          ]
+        },
+        "mirror_status": { "enum": ["not_mirrored", "external_only", "approved", "cached", "unavailable"] },
+        "license": { "$ref": "#/$defs/nullableString" },
+        "sha256": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+          ]
+        },
+        "size_bytes": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "integer", "minimum": 1 }
+          ]
+        },
+        "fallback_url": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "format": "uri", "pattern": "^https://" }
+          ]
+        }
+      }
+    }
+  }
+}

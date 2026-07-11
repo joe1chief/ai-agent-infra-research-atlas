@@ -1,0 +1,143 @@
+{
+  "work_id": "arxiv-2601-06112",
+  "slug": "reliabilitybench-evaluating-llm-agent-reliability-under-production-like-2601-06112",
+  "title": {
+    "original": "ReliabilityBench: Evaluating LLM Agent Reliability Under Production-Like Stress Conditions",
+    "zh": "ReliabilityBench：在类似生产的压力条件下评估LLM代理的可靠性",
+    "en": "ReliabilityBench: Evaluating LLM Agent Reliability Under Production-Like Stress Conditions"
+  },
+  "authors": [
+    {
+      "name": "Aayush Gupta",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.06112",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-01-03",
+      "latest_revision_date": "2026-01-03",
+      "url": "https://arxiv.org/abs/2601.06112"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-03",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-03"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-5",
+  "tags": [
+    "agent-evaluation",
+    "observability",
+    "reliability"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "ReliabilityBench 的重复调度、语义变形、故障代理和可靠性曲面为工具 Agent 提供统一生产压力测试框架。",
+    "en": "ReliabilityBench's repeat scheduler, semantic metamorphosis, fault proxy, and reliability surface provide a unified production stress-testing framework for tool agents."
+  },
+  "abstract": {
+    "zh": "ReliabilityBench 用重复执行、语义等价扰动和工具故障三个轴构造可靠性曲面，并引入基于终态等价的动作变形关系。",
+    "en": "ReliabilityBench constructs a reliability surface over repeated execution, semantically equivalent perturbations, and tool faults, using action metamorphic relations based on end-state equivalence."
+  },
+  "problem": {
+    "zh": "单次成功率无法反映重复一致性、提示改写鲁棒性或 API 超时、限流、部分响应和模式漂移下的生产行为。",
+    "en": "Single-run success misses repeat consistency, robustness to equivalent task wording, and production behavior under timeouts, rate limits, partial responses, and schema drift."
+  },
+  "approach": {
+    "zh": "基准系统扫描 k、扰动强度 ε 和故障强度 λ，通过混沌注入执行任务，并以等价终态而非文本匹配判定正确。",
+    "en": "The benchmark sweeps repetition k, perturbation intensity ε, and fault intensity λ, injects chaos during execution, and judges correctness by equivalent end state rather than text."
+  },
+  "system_design": {
+    "zh": "框架包括任务变形器、重复运行调度器、工具/API 故障代理、终态规范与可靠性曲面聚合器。",
+    "en": "The framework consists of task metamorphosis, repeated-run scheduling, a tool/API fault proxy, end-state specifications, and reliability-surface aggregation."
+  },
+  "key_results": {
+    "zh": "语义扰动和故障都会降低成功，限流尤为破坏性；不同 Agent 架构在组合压力下呈现与普通成功率不同的排序。",
+    "en": "Semantic perturbations and faults reduce success, rate limiting is especially damaging, and agent architectures rank differently under combined stress than under ordinary success."
+  },
+  "limitations": {
+    "zh": "实验模型、架构和领域数量有限，故障分布由人工注入；终态等价也难描述交互质量、隐私泄露和不可逆副作用。",
+    "en": "Models, architectures, and domains are limited, faults are synthetic, and end-state equivalence does not capture interaction quality, privacy leaks, or irreversible side effects."
+  },
+  "evaluation": {
+    "models": [
+      "Gemini 2.0 Flash",
+      "GPT-4o"
+    ],
+    "workloads": [
+      "Scheduling",
+      "Travel",
+      "Customer support",
+      "E-commerce"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "ReAct",
+      "Reflexion"
+    ],
+    "metrics": [
+      {
+        "name": "Success without semantic perturbation",
+        "value": 96.9,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Success at perturbation intensity ε=0.2",
+        "value": 88.1,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Evaluation episodes",
+        "value": 1280,
+        "unit": "episodes",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.06112",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "ReliabilityBench",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.06112",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.06112"
+  }
+}

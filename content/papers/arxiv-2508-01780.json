@@ -1,0 +1,187 @@
+{
+  "work_id": "arxiv-2508-01780",
+  "slug": "livemcpbench-can-agents-navigate-an-ocean-of-mcp-tools-2508-01780",
+  "title": {
+    "original": "LiveMCPBench: Can Agents Navigate an Ocean of MCP Tools?",
+    "zh": "LiveMCPBench：代理可以在MCP工具的海洋中导航吗？",
+    "en": "LiveMCPBench: Can Agents Navigate an Ocean of MCP Tools?"
+  },
+  "authors": [
+    {
+      "name": "Guozhao Mo",
+      "affiliations": []
+    },
+    {
+      "name": "Wenliang Zhong",
+      "affiliations": []
+    },
+    {
+      "name": "Jiawei Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Qianhao Yuan",
+      "affiliations": []
+    },
+    {
+      "name": "Xuanang Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Yaojie Lu",
+      "affiliations": []
+    },
+    {
+      "name": "Hongyu Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Ben He",
+      "affiliations": []
+    },
+    {
+      "name": "Xianpei Han",
+      "affiliations": []
+    },
+    {
+      "name": "Le Sun",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2508.01780",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-08-03",
+      "latest_revision_date": "2026-02-26",
+      "url": "https://arxiv.org/abs/2508.01780"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-08-03",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-02-26"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-7",
+  "tags": [
+    "agent-protocol",
+    "identity",
+    "governance"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "LiveMCPBench 的可部署 Server 池、检索层、执行 Harness 和动态终态 Judge 构成大工具空间的可复现评测基础设施。",
+    "en": "LiveMCPBench's deployable server pool, retrieval layer, execution harness, and dynamic outcome judge form reproducible infrastructure for large tool spaces."
+  },
+  "abstract": {
+    "zh": "LiveMCPBench 以可直接部署的多 Server 工具套件和现实日常任务，测量 MCP Agent 在大工具海洋中的检索、组合与终态完成。",
+    "en": "LiveMCPBench uses a deployable multi-server tool suite and realistic daily tasks to measure MCP-agent retrieval, tool composition, and end-state completion at large tool-space scale."
+  },
+  "problem": {
+    "zh": "现有工具基准常把单个 Server 的工具直接塞入上下文，绕过了真实 MCP 生态中的跨 Server 检索、选择和多工具组合。",
+    "en": "Existing tool benchmarks inject tools from one server directly into context, bypassing cross-server retrieval, selection, and composition in the real MCP ecosystem."
+  },
+  "approach": {
+    "zh": "基准部署多类真实 MCP Server，为任务构造需要跨工具完成的目标，并用 LLM Judge 直接检查动态数据下的任务终态。",
+    "en": "The benchmark deploys diverse real MCP servers, creates goals requiring cross-tool execution, and uses an LLM judge to verify outcomes under dynamic data."
+  },
+  "system_design": {
+    "zh": "系统包含统一部署的 Server/工具池、可扩展检索层、Agent 执行 Harness、动态任务状态和支持多条合法路径的终态 Judge。",
+    "en": "The system combines a uniformly deployed server/tool pool, scalable retrieval, an agent execution harness, dynamic task state, and an outcome judge supporting multiple valid paths."
+  },
+  "key_results": {
+    "zh": "模型间存在巨大成功差距；有效工具组合与成功高度相关，而检索错误贡献了近半失败，表明路由是首要瓶颈。",
+    "en": "Models show a wide success gap; active tool composition correlates strongly with success, while retrieval errors account for nearly half of failures, making routing the primary bottleneck."
+  },
+  "limitations": {
+    "zh": "工具套件虽大仍是受控快照，动态 Judge 可能受模型偏差影响；真实凭据、权限、限流和 Server 漂移会增加额外失败。",
+    "en": "The large suite remains a controlled snapshot, the dynamic judge may be biased, and real credentials, permissions, rate limits, and server drift add unmeasured failures."
+  },
+  "evaluation": {
+    "models": [
+      "Claude Sonnet 4"
+    ],
+    "workloads": [
+      "LiveMCPBench 95 real-world daily tasks",
+      "Multi-server MCP routing and tool composition"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Claude Sonnet 4 task success rate",
+        "value": 78.95,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "MCP servers in deployable suite",
+        "value": 70,
+        "unit": "servers"
+      },
+      {
+        "name": "Tools in deployable suite",
+        "value": 527,
+        "unit": "tools"
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning",
+      "seed_report_path": "2026/snowflake/2026-02_arctic-awm.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 11,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.01780",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {
+      "type": "documentation",
+      "title": "LiveMCPBench code and data project page",
+      "url": "https://icip-cas.github.io/LiveMCPBench",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "LiveMCPBench",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2508.01780",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2508.01780"
+  }
+}

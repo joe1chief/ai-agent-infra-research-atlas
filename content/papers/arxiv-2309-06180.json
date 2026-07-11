@@ -1,0 +1,178 @@
+{
+  "work_id": "arxiv-2309-06180",
+  "slug": "efficient-memory-management-for-large-language-model-serving-with-pageda-2309-06180",
+  "title": {
+    "original": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "zh": "使用 PagedAttention 实现大语言模型服务的高效内存管理",
+    "en": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+  },
+  "authors": [
+    {
+      "name": "Woosuk Kwon",
+      "affiliations": []
+    },
+    {
+      "name": "Zhuohan Li",
+      "affiliations": []
+    },
+    {
+      "name": "Siyuan Zhuang",
+      "affiliations": []
+    },
+    {
+      "name": "Ying Sheng",
+      "affiliations": []
+    },
+    {
+      "name": "Lianmin Zheng",
+      "affiliations": []
+    },
+    {
+      "name": "Cody Hao Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Joseph E. Gonzalez",
+      "affiliations": []
+    },
+    {
+      "name": "Hao Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Ion Stoica",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2309.06180",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2023-09-12",
+      "latest_revision_date": "2023-09-12",
+      "url": "https://arxiv.org/abs/2309.06180"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2023-09-12",
+    "venue_publication_date": null,
+    "latest_revision_date": "2023-09-12"
+  },
+  "window_status": "context",
+  "venue": "SOSP 2023",
+  "publication_status": "published",
+  "curation_tier": "context",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "kv-cache",
+    "scheduling"
+  ],
+  "category_confidence": 0.99,
+  "inclusion_reason": {
+    "zh": "vLLM 将分页式 KV 缓存、跨请求共享和连续批处理落实为通用服务运行时，是后续 LLM 推理系统的基础 Context 节点。",
+    "en": "vLLM turns paged KV-cache allocation, cross-request sharing, and continuous batching into a general serving runtime, making it a foundational context node for later LLM inference systems."
+  },
+  "abstract": {
+    "zh": "vLLM 以操作系统虚拟内存为灵感提出 PagedAttention，用非连续页管理动态增长的 KV 缓存，并在服务层实现请求内与请求间共享。",
+    "en": "vLLM introduces PagedAttention, inspired by virtual memory, to manage dynamically growing KV caches in non-contiguous pages and share them within and across requests."
+  },
+  "problem": {
+    "zh": "高吞吐 LLM 服务需要大批量并发，但每个请求的 KV 缓存体积大、长度动态变化，碎片与重复副本会快速耗尽显存。",
+    "en": "High-throughput LLM serving needs large batches, yet each request has a large, dynamically sized KV cache whose fragmentation and duplicate copies rapidly exhaust memory."
+  },
+  "approach": {
+    "zh": "PagedAttention 把 KV 块映射到独立物理页，服务调度器按需分配、回收和共享这些页，从而避免连续内存预留。",
+    "en": "PagedAttention maps KV blocks to independent physical pages, and the serving scheduler allocates, reclaims, and shares those pages on demand instead of reserving contiguous memory."
+  },
+  "system_design": {
+    "zh": "运行时维护每个序列的逻辑—物理块表，注意力 kernel 通过表访问 KV；调度器利用节省的显存扩大批量，并为共享前缀复用物理块。",
+    "en": "The runtime maintains logical-to-physical block tables per sequence, attention kernels dereference those tables, and the scheduler uses saved memory for larger batches and physical-block reuse."
+  },
+  "key_results": {
+    "zh": "官方摘要报告，在相同延迟水平下，vLLM 相比 FasterTransformer 和 Orca 获得数倍吞吐提升，长序列和复杂解码时收益更大。",
+    "en": "The official abstract reports several-fold higher throughput than FasterTransformer and Orca at the same latency, with larger gains for long sequences and complex decoding."
+  },
+  "limitations": {
+    "zh": "分页元数据和专用 kernel 增加运行时复杂度；收益依赖请求长度与共享模式，论文也未覆盖后续出现的多节点 KV 解耦场景。",
+    "en": "Paging metadata and specialized kernels add runtime complexity; gains depend on request lengths and sharing, and the paper predates later multi-node KV-disaggregation scenarios."
+  },
+  "evaluation": {
+    "models": [
+      "popular large language models"
+    ],
+    "workloads": [
+      "high-throughput LLM serving",
+      "long-sequence serving",
+      "complex decoding algorithms"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "FasterTransformer",
+      "Orca"
+    ],
+    "metrics": [
+      {
+        "name": "Serving throughput improvement at the same latency",
+        "value": "2-4",
+        "unit": "x",
+        "baseline": "FasterTransformer and Orca",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "模型、任务、硬件、基线与指标仅转录自官方 arXiv 摘要；摘要未披露的表格和部署细节仍待全文审计。",
+      "en": "Models, workloads, hardware, baselines, and metrics are transcribed only from the official arXiv abstract; undisclosed tables and deployment details still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2309.06180",
+      "title": "Official arXiv record",
+      "accessed_at": "2026-07-11"
+    },
+    {
+      "type": "official_repository",
+      "url": "https://github.com/vllm-project/vllm",
+      "title": "vLLM source code",
+      "accessed_at": "2026-07-11"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "manual_curation",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "vLLM source code",
+      "url": "https://github.com/vllm-project/vllm",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "vLLM",
+    "extends": [],
+    "supersedes": [],
+    "related": [
+      "arxiv-2512-12928"
+    ]
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2309.06180",
+    "mirror_status": "external_only",
+    "license": null,
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2309.06180"
+  }
+}

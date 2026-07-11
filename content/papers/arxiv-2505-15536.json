@@ -1,0 +1,163 @@
+{
+  "work_id": "arxiv-2505-15536",
+  "slug": "deepcee-efficient-cross-region-model-distributed-training-system-under-h-2505-15536",
+  "title": {
+    "original": "DeepCEE: Efficient Cross-Region Model Distributed Training System under Heterogeneous GPUs and Networks",
+    "zh": "DeepCEE：异构GPU和网络下的高效跨区域模型分布式训练系统",
+    "en": "DeepCEE: Efficient Cross-Region Model Distributed Training System under Heterogeneous GPUs and Networks"
+  },
+  "authors": [
+    {
+      "name": "Jinquan Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaojian Liao",
+      "affiliations": []
+    },
+    {
+      "name": "Xuzhao Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Jiashun Suo",
+      "affiliations": []
+    },
+    {
+      "name": "Zhisheng Huo",
+      "affiliations": []
+    },
+    {
+      "name": "Chenhao Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Xiangrong Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Runnan Shen",
+      "affiliations": []
+    },
+    {
+      "name": "Xilong Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Limin Xiao",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2505.15536",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-05-21",
+      "latest_revision_date": "2025-05-27",
+      "url": "https://arxiv.org/abs/2505.15536"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-05-21",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-05-27"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-2",
+  "tags": [
+    "distributed-training",
+    "parallelism",
+    "fault-tolerance"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "DeepCEE 将异构设备分组、自动流水线并行和动态网络适配集成为跨区域训练运行时，明显越过单一算法边界。",
+    "en": "DeepCEE integrates heterogeneous device grouping, automatic pipeline parallelism, and dynamic network adaptation into a cross-region training runtime, clearly exceeding an algorithm-only contribution."
+  },
+  "abstract": {
+    "zh": "DeepCEE 是面向云—边—端异构 GPU 与不稳定跨区域网络的训练系统，以通信为中心完成设备分组、紧凑流水线并行和运行时自适应。",
+    "en": "DeepCEE is a communication-centric training system for cloud-edge-end deployments with heterogeneous GPUs and unstable cross-region links, combining device grouping, compact pipeline parallelism, and runtime adaptation."
+  },
+  "problem": {
+    "zh": "分层跨区域拓扑同时存在算力差异、慢链路和网络波动，单区域训练系统的并行策略会产生长气泡或频繁失衡。",
+    "en": "Hierarchical cross-region topologies combine compute disparity, slow links, and network variation, causing strategies designed for one region to develop long bubbles and recurring imbalance."
+  },
+  "approach": {
+    "zh": "系统按计算与网络特征联合画像和分组设备，为设备组自动推导紧凑的零气泡流水线策略，并通过环境适配器响应链路变化。",
+    "en": "The system profiles and groups devices jointly by compute and network characteristics, derives compact zero-bubble pipeline strategies for those groups, and reacts to link changes through an environment adapter."
+  },
+  "system_design": {
+    "zh": "异构画像器生成设备组，策略模块选择阶段与通信映射，流水线运行时执行微批，动态适配器监测网络并更新调度参数。",
+    "en": "A heterogeneity profiler creates device groups, a planner maps stages and communication, the pipeline runtime executes microbatches, and a dynamic adapter monitors the network and updates scheduling parameters."
+  },
+  "key_results": {
+    "zh": "跨区域实验中，DeepCEE 的训练吞吐明显高于所比较的通用和先进训练系统。",
+    "en": "In the reported cross-region experiments, DeepCEE delivers materially higher training throughput than the compared general-purpose and state-of-the-art systems."
+  },
+  "limitations": {
+    "zh": "零气泡流水线依赖模型可合理切分；频繁网络震荡可能造成重配置开销，结论也未覆盖所有云计费和跨境数据约束。",
+    "en": "Zero-bubble execution assumes the model can be partitioned effectively; rapid network oscillation can add reconfiguration overhead, and the study does not cover every cloud-pricing or data-sovereignty constraint."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "cloud-edge-end cross-region model training"
+    ],
+    "hardware": [
+      "heterogeneous GPUs and networks"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "widely used and state-of-the-art training systems"
+    ],
+    "metrics": [
+      {
+        "name": "Training throughput improvement",
+        "value": "1.3-2.8",
+        "unit": "x",
+        "baseline": "widely used and state-of-the-art training systems",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.15536",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "DeepCEE",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2505.15536",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2505.15536"
+  }
+}

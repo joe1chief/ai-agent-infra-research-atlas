@@ -1,0 +1,155 @@
+{
+  "work_id": "arxiv-2602-03100",
+  "slug": "risky-bench-probing-agentic-safety-risks-under-real-world-deployment-2602-03100",
+  "title": {
+    "original": "Risky-Bench: Probing Agentic Safety Risks under Real-World Deployment",
+    "zh": "Risky-Bench：探究真实世界部署下的代理安全风险",
+    "en": "Risky-Bench: Probing Agentic Safety Risks under Real-World Deployment"
+  },
+  "authors": [
+    {
+      "name": "Jingnan Zheng",
+      "affiliations": []
+    },
+    {
+      "name": "Yanzhen Luo",
+      "affiliations": []
+    },
+    {
+      "name": "Jingjun Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Bingnan Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Yuxin Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Chenhang Cui",
+      "affiliations": []
+    },
+    {
+      "name": "Gelei Deng",
+      "affiliations": []
+    },
+    {
+      "name": "Chaochao Lu",
+      "affiliations": []
+    },
+    {
+      "name": "Xiang Wang",
+      "affiliations": []
+    },
+    {
+      "name": "An Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Tat-Seng Chua",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2602.03100",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-02-03",
+      "latest_revision_date": "2026-02-03",
+      "url": "https://arxiv.org/abs/2602.03100"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-02-03",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-02-03"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Risky-Bench 能从通用原则生成环境特定 Rubric、任务和威胁配置，是可迁移的部署安全评测工厂。",
+    "en": "Risky-Bench turns general principles into environment-specific rubrics, tasks, and threat configurations as a portable deployment-safety evaluation factory."
+  },
+  "abstract": {
+    "zh": "Risky-Bench 从领域无关安全原则推导具体部署情境的安全 Rubric，并在不同威胁假设下运行真实长时程任务。",
+    "en": "Risky-Bench derives deployment-specific safety rubrics from domain-agnostic principles and executes realistic long-horizon tasks under varying threat assumptions."
+  },
+  "problem": {
+    "zh": "为单一 Agent 场景手工设计的风险任务覆盖面窄，难迁移到不同工具配置，也无法系统扫描现实部署中的安全空间。",
+    "en": "Risk tasks hand-built for one agent setting cover little of the safety space, transfer poorly across tool configurations, and do not systematically scan real deployments."
+  },
+  "approach": {
+    "zh": "框架先用通用原则定义安全维度，再结合环境上下文生成 Rubric、任务和威胁条件，执行 Agent 后按该空间定位风险。",
+    "en": "General principles define safety dimensions, which are contextualized into rubrics, tasks, and threat conditions before agent execution is mapped back to the safety space."
+  },
+  "system_design": {
+    "zh": "流水线由原则库、环境/能力建模器、Rubric 与任务生成、威胁配置、交互执行和风险覆盖报告组成，可适配新部署。",
+    "en": "The pipeline combines a principle library, environment/capability modeling, rubric and task generation, threat configuration, interactive execution, and coverage reporting."
+  },
+  "key_results": {
+    "zh": "在生活助理部署中，系统性扫描发现先进 Agent 仍有大量现实安全风险，并展示方法可构造成其他环境的评测。",
+    "en": "In life-assistant deployments, systematic scanning uncovers substantial risks in strong agents and demonstrates a path to constructing evaluations for other environments."
+  },
+  "limitations": {
+    "zh": "Rubric 完整性取决于原则解释和环境建模，适配新域仍需专家审核；摘要未证明自动生成任务能覆盖罕见高影响事件。",
+    "en": "Rubric completeness depends on principle interpretation and environment modeling, new domains still need expert review, and rare high-impact events may remain uncovered."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Risky-Bench life-assistant deployment tasks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2602.03100",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Risky-Bench",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2602.03100",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2602.03100"
+  }
+}

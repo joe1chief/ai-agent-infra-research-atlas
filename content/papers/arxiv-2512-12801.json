@@ -1,0 +1,133 @@
+{
+  "work_id": "arxiv-2512-12801",
+  "slug": "fine-grained-energy-prediction-for-parallellized-llm-inference-with-pie-2512-12801",
+  "title": {
+    "original": "Fine-Grained Energy Prediction For Parallellized LLM Inference With PIE-P",
+    "zh": "使用PIE-P进行并行LLM推理的精细能量预测",
+    "en": "Fine-Grained Energy Prediction For Parallellized LLM Inference With PIE-P"
+  },
+  "authors": [
+    {
+      "name": "Anurag Dutt",
+      "affiliations": []
+    },
+    {
+      "name": "Young Won Choi",
+      "affiliations": []
+    },
+    {
+      "name": "Avirup Sil",
+      "affiliations": []
+    },
+    {
+      "name": "Anshul Gandhi",
+      "affiliations": []
+    },
+    {
+      "name": "Aruna Balasubramanian",
+      "affiliations": []
+    },
+    {
+      "name": "Niranjan Balasubramanian",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2512.12801",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-12-14",
+      "latest_revision_date": "2025-12-14",
+      "url": "https://arxiv.org/abs/2512.12801"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-12-14",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-12-14"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "PIE-P 为张量、流水线和数据并行推理提供阶段级多 GPU 能耗预测，是可复用的资源测量基础设施。",
+    "en": "PIE-P provides phase-level multi-GPU energy prediction across tensor, pipeline, and data parallelism, making it reusable resource-measurement infrastructure."
+  },
+  "abstract": {
+    "zh": "PIE-P 是面向多 GPU LLM 推理的细粒度能耗预测框架，覆盖张量、流水线和数据并行。它显式建模跨 GPU 通信、同步和并行化额外开销，以在缺少可靠硬件功耗计时器时估计各阶段能耗。",
+    "en": "PIE-P predicts fine-grained energy for multi-GPU LLM inference across tensor, pipeline, and data parallelism. It explicitly models inter-GPU communication, synchronization, and parallelization overhead when reliable hardware power monitors are unavailable."
+  },
+  "problem": {
+    "zh": "现有预测器多针对单 GPU，无法分离并行推理中非确定通信、同步阶段和额外数据搬运的能耗，而实际功耗监控又常不可用或不准确。",
+    "en": "Most predictors assume one GPU and cannot isolate nondeterministic communication, synchronization, and transfer energy in parallel inference, while direct power telemetry is often inaccessible or inaccurate."
+  },
+  "approach": {
+    "zh": "框架通过精确采样、通信阶段的细粒度模型和并行额外开销核算，分别学习计算与通信能耗，再按所选并行策略组合预测。",
+    "en": "The framework combines precise sampling, fine-grained communication modeling, and explicit accounting of parallel overhead, composing compute and communication estimates for each parallelism strategy."
+  },
+  "system_design": {
+    "zh": "PIE-P 的采样层采集推理阶段与通信事件，模型层分解各 GPU 的计算、传输和等待成本，聚合器再输出请求及阶段粒度的多卡能耗预测。",
+    "en": "A sampling layer records inference phases and communication events, a model decomposes per-GPU compute, transfer, and wait cost, and an aggregator emits request- and phase-level multi-GPU energy estimates."
+  },
+  "key_results": {
+    "zh": "评测表明 PIE-P 在多种并行策略下给出准确、细粒度的能耗预测，并显著优于未充分建模通信的基线。",
+    "en": "Evaluation reports accurate fine-grained predictions across parallelism strategies and clear improvement over baselines that do not model communication adequately."
+  },
+  "limitations": {
+    "zh": "预测模型需要针对硬件、互连和并行实现校准；摘要未说明动态电压频率、共享集群干扰或新 GPU 架构上的外推误差。",
+    "en": "The predictor requires calibration to hardware, interconnect, and parallel implementation; extrapolation under DVFS, shared-cluster interference, or new GPU architectures is not described."
+  },
+  "evaluation": {
+    "models": ["parallelized large language model inference"],
+    "workloads": ["tensor-parallel inference", "pipeline-parallel inference", "data-parallel inference"],
+    "hardware": ["multi-GPU systems"],
+    "cluster_scale": "multiple GPUs",
+    "baselines": ["existing LLM energy-prediction techniques"],
+    "metrics": [],
+    "notes": {
+      "zh": "三种并行策略、多 GPU 范围和预测基线类型来自官方摘要；模型、GPU、并行度、误差指标和数值待全文审计。",
+      "en": "Three parallelism strategies, multi-GPU scope, and predictor baseline class come from the official abstract; models, GPUs, degrees, error metrics, and values await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.12801",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2512.12801",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2512.12801"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "work_id": "arxiv-2504-03601",
+  "slug": "apigen-mt-agentic-pipeline-for-multi-turn-data-generation-via-simulated-2504-03601",
+  "title": {
+    "original": "APIGen-MT: Agentic Pipeline for Multi-Turn Data Generation via Simulated Agent-Human Interplay",
+    "zh": "APIGen-MT：通过模拟智能体—人类交互生成多轮数据的智能体流水线",
+    "en": "APIGen-MT: Agentic Pipeline for Multi-Turn Data Generation via Simulated Agent-Human Interplay"
+  },
+  "authors": [
+    {
+      "name": "Akshara Prabhakar",
+      "affiliations": []
+    },
+    {
+      "name": "Zuxin Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Ming Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Jianguo Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Tulika Awalgaonkar",
+      "affiliations": []
+    },
+    {
+      "name": "Shiyu Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Zhiwei Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Haolin Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Thai Hoang",
+      "affiliations": []
+    },
+    {
+      "name": "Juan Carlos Niebles",
+      "affiliations": []
+    },
+    {
+      "name": "Shelby Heinecke",
+      "affiliations": []
+    },
+    {
+      "name": "Weiran Yao",
+      "affiliations": []
+    },
+    {
+      "name": "Huan Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Silvio Savarese",
+      "affiliations": []
+    },
+    {
+      "name": "Caiming Xiong",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2504.03601",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v4",
+      "first_public_date": "2025-04-04",
+      "latest_revision_date": "2025-07-19",
+      "url": "https://arxiv.org/abs/2504.03601"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-04-04",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-07-19"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "APIGen-MT 的蓝图生成、委员会验证和双角色模拟组成可复用的多轮 Agent 数据生产与轨迹校验流水线。",
+    "en": "APIGen-MT combines blueprint generation, committee verification, and two-role simulation into reusable infrastructure for producing and validating multi-turn agent trajectories."
+  },
+  "abstract": {
+    "zh": "APIGen-MT 是生成可验证、多样化多轮 Agent 训练轨迹的两阶段流水线。第一阶段由 Agent 生成带真实动作的任务蓝图并经 LLM 委员会迭代审核，第二阶段通过模拟人类—Agent 互动把蓝图展开为完整对话和工具轨迹。",
+    "en": "APIGen-MT is a two-phase pipeline for generating diverse, verifiable multi-turn agent trajectories. Agents first create task blueprints with ground-truth actions under iterative LLM-committee review, then simulated human–agent interaction expands each blueprint into a complete trajectory."
+  },
+  "problem": {
+    "zh": "真实多轮人机数据昂贵且稀缺，简单自生成又缺少可验证的动作序列和稳定的人类反馈动态，难以训练可靠工具 Agent。",
+    "en": "Real multi-turn interaction data is scarce and expensive, while naive self-generation lacks verifiable action sequences and realistic feedback dynamics needed for reliable tool agents."
+  },
+  "approach": {
+    "zh": "流水线先生成任务目标、API 调用和预期状态组成的蓝图，用多审阅者反馈修正，再由模拟用户和 Agent 按蓝图执行并记录每轮决策。",
+    "en": "The pipeline specifies goals, API actions, and expected states in a blueprint, repairs it through multiple reviewers, and has simulated users and agents execute it while recording each turn."
+  },
+  "system_design": {
+    "zh": "编排器连接蓝图生成器、LLM 审核委员会、反馈循环和双角色模拟器；真实动作作为控制面约束，使最终轨迹可自动检查而不是只依赖自然语言评分。",
+    "en": "An orchestrator connects blueprint generation, an LLM review committee, iterative feedback, and a two-role simulator. Ground-truth actions constrain control flow so trajectories can be checked rather than judged only from prose."
+  },
+  "key_results": {
+    "zh": "由该数据训练的 xLAM-2-fc-r 系列在多轮工具基准上被报告优于多种前沿模型，且较小模型在部分设置中超过更大模型；团队开放了轨迹与模型。",
+    "en": "Models trained on the generated data are reported to outperform several frontier systems on multi-turn tool benchmarks, with smaller variants sometimes beating larger ones; trajectories and models are released."
+  },
+  "limitations": {
+    "zh": "质量仍受蓝图生成模型、审阅者共识和模拟用户真实性限制；可验证动作不保证自然语言行为无偏，也未替代真实用户分布验证。",
+    "en": "Quality remains bounded by blueprint models, reviewer agreement, and simulator realism; verifiable actions do not ensure unbiased language behavior or coverage of real user distributions."
+  },
+  "evaluation": {
+    "models": ["xLAM-2-fc-r family (1B-70B)", "GPT-4o", "Claude 3.5"],
+    "workloads": ["tau-bench", "BFCL", "multi-turn tool interaction"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["GPT-4o", "Claude 3.5"],
+    "metrics": [],
+    "notes": {
+      "zh": "模型规模、两项基准和前沿模型基线来自官方摘要；硬件、各模型得分、试验重复与一致性数值待全文审计。",
+      "en": "Model range, two benchmarks, and frontier-model baselines come from the official abstract; hardware, per-model scores, repetitions, and consistency values await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Qwen3-Coder-Next Technical Report",
+      "seed_report_path": "2026/alibaba_qwen/2026-02_qwen3-coder-next.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 17,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.03601",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {"type": "model", "url": "https://huggingface.co/collections/Salesforce/xlam-2-67ef5be12949d8dcdae354c4", "title": "xLAM-2 model collection"},
+    {"type": "data", "url": "https://huggingface.co/datasets/Salesforce/APIGen-MT-5k", "title": "APIGen-MT-5k trajectories"},
+    {"type": "demo", "url": "https://apigen-mt.github.io", "title": "APIGen-MT project website"}
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "APIGen-MT",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2504.03601",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2504.03601"
+  }
+}

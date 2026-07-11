@@ -1,0 +1,170 @@
+{
+  "work_id": "arxiv-2601-03044",
+  "slug": "sop-a-scalable-online-post-training-system-for-vision-language-action-mo-2601-03044",
+  "title": {
+    "original": "SOP: A Scalable Online Post-Training System for Vision-Language-Action Models",
+    "zh": "SOP：面向视觉—语言—动作模型的可扩展在线后训练系统",
+    "en": "SOP: A Scalable Online Post-Training System for Vision-Language-Action Models"
+  },
+  "authors": [
+    {
+      "name": "Mingjie Pan",
+      "affiliations": []
+    },
+    {
+      "name": "Siyuan Feng",
+      "affiliations": []
+    },
+    {
+      "name": "Qinglin Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Xinchen Li",
+      "affiliations": []
+    },
+    {
+      "name": "Jianheng Song",
+      "affiliations": []
+    },
+    {
+      "name": "Chendi Qu",
+      "affiliations": []
+    },
+    {
+      "name": "Yi Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Chuankang Li",
+      "affiliations": []
+    },
+    {
+      "name": "Ziyu Xiong",
+      "affiliations": []
+    },
+    {
+      "name": "Zhi Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Yi Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Jianlan Luo",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.03044",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-01-06",
+      "latest_revision_date": "2026-01-06",
+      "url": "https://arxiv.org/abs/2601.03044"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-06",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-06"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-3",
+  "tags": [
+    "post-training",
+    "reinforcement-learning",
+    "rollout"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "SOP 将机器人机群、数据流、人类干预、云端学习和策略发布闭成可复用的真实世界在线后训练系统。",
+    "en": "SOP closes robot fleets, data streaming, human intervention, cloud learning, and policy deployment into a reusable real-world online post-training system."
+  },
+  "abstract": {
+    "zh": "SOP 把机器人机群的真实执行、人类干预和云端学习闭合成在线后训练循环，让通用视觉—语言—动作策略在多任务物理环境中持续更新。",
+    "en": "SOP closes the loop between robot-fleet execution, human intervention, and cloud learning so a general vision-language-action policy can be updated online across real-world tasks."
+  },
+  "problem": {
+    "zh": "现有 VLA 后训练多为离线、单机器人或单任务，无法高效收集同策略经验，也难在适应专门技能时保持通用能力。",
+    "en": "Existing VLA post-training is largely offline, single-robot, or task-specific, limiting on-policy experience collection and making it hard to preserve generality during specialization."
+  },
+  "approach": {
+    "zh": "多台机器人并行流式上传轨迹和人类纠正，中心学习器异步更新共享策略再下发机群；系统可承载交互模仿学习或强化学习算法。",
+    "en": "Multiple robots stream trajectories and human corrections to a central learner, which asynchronously updates and redistributes a shared policy; the system can host interactive imitation or reinforcement learning."
+  },
+  "system_design": {
+    "zh": "边缘执行器记录观测、动作和干预信号，数据通道汇聚到云端训练器，策略发布服务进行版本化下发，各机器人继续采集新同策略数据。",
+    "en": "Edge executors record observations, actions, and intervention signals; a data plane aggregates them at the cloud trainer, and versioned policy serving redistributes updates for continued on-policy collection."
+  },
+  "key_results": {
+    "zh": "真实操作任务中，机群在线后训练提升了预训练 VLA 的任务熟练度，同时维持单一多任务策略，经验收集随机器人数量近似扩展。",
+    "en": "On real manipulation tasks, fleet-based online post-training improves pretrained VLA proficiency while retaining one multi-task policy, with experience collection scaling approximately with fleet size."
+  },
+  "limitations": {
+    "zh": "真实机器人数据昂贵且有安全风险，中心学习器和网络可能成为故障点；结果来自有限硬件与任务，近线性扩展未必延伸到更大机群。",
+    "en": "Real-robot data is costly and safety critical, the central learner and network can fail, and results from limited hardware and tasks may not preserve near-linear scaling in larger fleets."
+  },
+  "evaluation": {
+    "models": [
+      "generalist vision-language-action models"
+    ],
+    "workloads": [
+      "cloth folding",
+      "box assembly",
+      "grocery restocking",
+      "interactive imitation learning with HG-DAgger",
+      "reinforcement learning with RECAP"
+    ],
+    "hardware": [
+      "robot fleet",
+      "centralized cloud learner"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "large pretrained VLA models"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.03044",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "SOP",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.03044",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.03044"
+  }
+}

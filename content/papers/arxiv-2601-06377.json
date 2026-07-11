@@ -1,0 +1,131 @@
+{
+  "work_id": "arxiv-2601-06377",
+  "slug": "himem-hierarchical-long-term-memory-for-llm-long-horizon-agents-2601-06377",
+  "title": {
+    "original": "HiMem: Hierarchical Long-Term Memory for LLM Long-Horizon Agents",
+    "zh": "HiMem：面向长时程 LLM 智能体的分层长期记忆",
+    "en": "HiMem: Hierarchical Long-Term Memory for LLM Long-Horizon Agents"
+  },
+  "authors": [
+    {
+      "name": "Ningning Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Xingxing Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Zhizhong Tan",
+      "affiliations": []
+    },
+    {
+      "name": "Weiping Deng",
+      "affiliations": []
+    },
+    {
+      "name": "Wenyong Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.06377",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-01-10",
+      "latest_revision_date": "2026-01-10",
+      "url": "https://arxiv.org/abs/2601.06377"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-10",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-10"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "HiMem 的 Episode/Note 层级、跨层检索和冲突再巩固构成可复用的自演化长期记忆运行时。",
+    "en": "HiMem's Episode/Note hierarchy, cross-level retrieval, and conflict reconsolidation form a reusable self-evolving long-term memory runtime."
+  },
+  "abstract": {
+    "zh": "HiMem 为长程对话构建层级长期记忆：Episode Memory 保存具体交互事件，Note Memory 提炼稳定知识，两者用语义边连接。系统还通过冲突感知的记忆再巩固，根据召回反馈修订和补充已有状态。",
+    "en": "HiMem builds hierarchical long-term memory for extended dialogue: Episode Memory preserves interaction events, Note Memory extracts stable knowledge, and semantic links connect the two. Conflict-aware reconsolidation revises and supplements state from retrieval feedback."
+  },
+  "problem": {
+    "zh": "现有长期记忆在持续交互中难兼顾事件细节、稳定知识、检索效率和自我更新，旧事实与新信息冲突时尤其容易失真。",
+    "en": "Existing long-term memory struggles to preserve event detail, stable knowledge, retrieval efficiency, and self-update simultaneously, especially when new information conflicts with stored facts."
+  },
+  "approach": {
+    "zh": "Topic-Aware Event–Surprise 双通道策略切分事件，多阶段抽取生成笔记；混合或 best-effort 检索跨两层取证，再巩固模块处理冲突与补充。",
+    "en": "Topic-aware event/surprise channels segment episodes, a multi-stage extractor creates notes, hybrid or best-effort retrieval traverses both levels, and reconsolidation handles conflict and supplementation."
+  },
+  "system_design": {
+    "zh": "写路径依次执行事件切分、Episode 存储、知识抽取和 Note 链接；读路径按需求在层间检索，反馈路径比较新旧事实并对相关节点执行再巩固。",
+    "en": "The write path segments events, stores episodes, extracts notes, and links levels; the read path retrieves across the hierarchy, and a feedback path compares new and old evidence to reconsolidate affected nodes."
+  },
+  "key_results": {
+    "zh": "长程对话基准上，HiMem 被报告在准确率、一致性和长期推理方面持续优于代表性基线，同时保持有竞争力的效率。",
+    "en": "On long-horizon dialogue benchmarks, HiMem is reported to outperform representative baselines in accuracy, consistency, and long-term reasoning while retaining favorable efficiency."
+  },
+  "limitations": {
+    "zh": "事件惊奇度、笔记抽取和冲突判断都依赖模型推断，错误可能在层级中累积；摘要未说明隐私删除、并发写入或超长期存储增长。",
+    "en": "Surprise scoring, note extraction, and conflict detection are model-dependent and can compound errors across levels; privacy deletion, concurrent writes, and very-long-term growth are not described."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["long-horizon dialogue benchmarks"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["representative long-term memory systems"],
+    "metrics": [],
+    "notes": {
+      "zh": "长程对话、代表性基线及准确率/一致性/长期推理/效率维度来自官方摘要；模型、基准名、硬件和数值待全文审计。",
+      "en": "Long-horizon dialogue, representative baselines, and accuracy/consistency/reasoning/efficiency dimensions come from the official abstract; models, benchmark names, hardware, and values await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.06377",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {"type": "code", "url": "https://github.com/jojopdq/HiMem", "title": "HiMem source code"}
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "HiMem",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.06377",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.06377"
+  }
+}

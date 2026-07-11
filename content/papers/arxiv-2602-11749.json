@@ -1,0 +1,144 @@
+{
+  "work_id": "arxiv-2602-11749",
+  "slug": "air-improving-agent-safety-through-incident-response-2602-11749",
+  "title": {
+    "original": "AIR: Improving Agent Safety through Incident Response",
+    "zh": "AIR：通过事件响应提升智能体安全",
+    "en": "AIR: Improving Agent Safety through Incident Response"
+  },
+  "authors": [
+    {
+      "name": "Zibo Xiao",
+      "affiliations": []
+    },
+    {
+      "name": "Jun Sun",
+      "affiliations": []
+    },
+    {
+      "name": "Junjie Chen",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2602.11749",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-02-12",
+      "latest_revision_date": "2026-06-20",
+      "url": "https://arxiv.org/abs/2602.11749"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-02-12",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-06-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AIR 的响应 DSL、运行监视、工具化修复和规则合成把事故响应做成可嵌入 Agent 循环的一等运行机制。",
+    "en": "AIR's response DSL, runtime monitoring, tool-mediated remediation, and rule synthesis make incident response a first-class mechanism embeddable in agent loops."
+  },
+  "abstract": {
+    "zh": "AIR 把事件响应引入 LLM Agent，在执行循环中用专用 DSL 编排检测、遏制、恢复和根除，而非只依赖事前预防。",
+    "en": "AIR brings incident response into the LLM-agent loop, using a domain-specific language to orchestrate detection, containment, recovery, and eradication rather than prevention alone."
+  },
+  "problem": {
+    "zh": "现有 Agent 安全机制重点阻止事故，却缺乏事故发生后的状态检测、影响遏制、工具化恢复和同类事件防复发能力。",
+    "en": "Most agent safety mechanisms focus on prevention and lack state-aware detection, impact containment, tool-mediated recovery, and prevention of recurrence after incidents."
+  },
+  "approach": {
+    "zh": "AIR 以环境状态和近期上下文做语义检查，指导 Agent 调用原工具执行处置，并从事故生成后续 Guardrail 规则。",
+    "en": "AIR performs semantic checks grounded in environment state and recent context, guides remediation through existing tools, and synthesizes guardrail rules from incidents."
+  },
+  "system_design": {
+    "zh": "DSL 定义响应生命周期，运行时监视器触发事件，响应编排器选择遏制/恢复动作，规则合成器在根除阶段更新防线。",
+    "en": "A DSL defines the response lifecycle; a runtime monitor triggers incidents, an orchestrator selects containment and recovery actions, and rule synthesis updates defenses."
+  },
+  "key_results": {
+    "zh": "在三类 Agent 上，AIR 的检测、修复和根除均表现出高成功率，自动生成规则接近开发者规则且开销适中。",
+    "en": "Across three agent types, AIR achieves high detection, remediation, and eradication success, with generated rules approaching developer-authored effectiveness at moderate overhead."
+  },
+  "limitations": {
+    "zh": "响应依赖事故可观测且工具动作可逆；语义检测器和自动规则本身可能误判、扩大损害或在新域中形成过度阻断。",
+    "en": "Response assumes observable incidents and reversible tool actions; semantic checks and generated rules can misclassify, amplify harm, or overblock in new domains."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Incident response for three representative LLM-agent types"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Developer-authored incident-eradication rules"
+    ],
+    "metrics": [
+      {
+        "name": "Incident detection success rate",
+        "value": ">90",
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Incident remediation success rate",
+        "value": ">90",
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Incident eradication success rate",
+        "value": ">90",
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2602.11749",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "AIR",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2602.11749",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2602.11749"
+  }
+}

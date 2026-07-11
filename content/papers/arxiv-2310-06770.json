@@ -1,0 +1,176 @@
+{
+  "work_id": "arxiv-2310-06770",
+  "slug": "swe-bench-can-language-models-resolve-real-world-github-issues-2310-06770",
+  "title": {
+    "original": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "zh": "SWE-bench：语言模型能否解决真实 GitHub 问题？",
+    "en": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+  },
+  "authors": [
+    {
+      "name": "Carlos E. Jimenez",
+      "affiliations": []
+    },
+    {
+      "name": "John Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Alexander Wettig",
+      "affiliations": []
+    },
+    {
+      "name": "Shunyu Yao",
+      "affiliations": []
+    },
+    {
+      "name": "Kexin Pei",
+      "affiliations": []
+    },
+    {
+      "name": "Ofir Press",
+      "affiliations": []
+    },
+    {
+      "name": "Karthik Narasimhan",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2310.06770",
+    "doi": null,
+    "openreview": "VTF8yNQM66"
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v3",
+      "first_public_date": "2023-10-10",
+      "latest_revision_date": "2024-11-11",
+      "url": "https://arxiv.org/abs/2310.06770"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2023-10-10",
+    "venue_publication_date": null,
+    "latest_revision_date": "2024-11-11"
+  },
+  "window_status": "context",
+  "venue": "ICLR 2024",
+  "publication_status": "published",
+  "curation_tier": "context",
+  "domain": "agent_infra",
+  "primary_category": "AG-5",
+  "tags": [
+    "agent-evaluation",
+    "execution-environment",
+    "tool-use"
+  ],
+  "category_confidence": 0.99,
+  "inclusion_reason": {
+    "zh": "SWE-bench 将真实 issue、代码仓库、补丁执行和测试判定封装为可复现评测框架，是软件工程智能体生态的基础 Context。",
+    "en": "SWE-bench packages real issues, repositories, patch execution, and test-based grading into a reproducible evaluation framework, making it foundational context for software-engineering agents."
+  },
+  "abstract": {
+    "zh": "SWE-bench 从真实 GitHub issue 与对应 pull request 构建软件工程任务，要求模型阅读代码库并生成能通过执行验证的修改。",
+    "en": "SWE-bench builds software-engineering tasks from real GitHub issues and corresponding pull requests, requiring models to inspect repositories and produce execution-validated changes."
+  },
+  "problem": {
+    "zh": "传统代码生成基准多为孤立函数，无法评估跨文件理解、长上下文、环境交互和真实维护问题的端到端解决能力。",
+    "en": "Traditional code-generation benchmarks use isolated functions and do not measure cross-file understanding, long context, environment interaction, or end-to-end maintenance."
+  },
+  "approach": {
+    "zh": "框架冻结问题描述和仓库版本，在隔离环境中应用模型补丁并运行测试，以真实修复是否成功作为可执行指标。",
+    "en": "The framework freezes an issue description and repository revision, applies model patches in an isolated environment, and runs tests to grade whether the real issue is resolved."
+  },
+  "system_design": {
+    "zh": "数据管线关联 issue、pull request 和仓库快照，任务运行器准备依赖并应用补丁，测试 harness 以回归与新增测试输出解决状态。",
+    "en": "A data pipeline links issues, pull requests, and repository snapshots; a runner installs dependencies and applies patches, and a test harness reports resolution from regression and issue-specific tests."
+  },
+  "key_results": {
+    "zh": "摘要报告 Claude 2 是当时最佳模型但仅解决少量问题，说明真实仓库级软件工程明显超出传统生成任务。",
+    "en": "The abstract reports Claude 2 as the strongest evaluated model while solving only a small fraction of issues, showing that repository-scale engineering is much harder than conventional generation."
+  },
+  "limitations": {
+    "zh": "任务受公开仓库、可重放依赖和测试质量限制；训练数据污染、环境漂移及测试不完备会影响分数解释。",
+    "en": "Tasks are limited by public repositories, reproducible dependencies, and test quality; contamination, environment drift, and incomplete tests complicate score interpretation."
+  },
+  "evaluation": {
+    "models": [
+      "Claude 2",
+      "SWE-Llama",
+      "state-of-the-art proprietary language models"
+    ],
+    "workloads": [
+      "2,294 software-engineering issues from 12 Python repositories",
+      "repository-level code editing and test execution"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Claude 2",
+      "SWE-Llama"
+    ],
+    "metrics": [
+      {
+        "name": "Claude 2 issue-resolution rate",
+        "value": 1.96,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "模型、任务、硬件、基线与指标仅转录自官方 arXiv 摘要；摘要未披露的表格和部署细节仍待全文审计。",
+      "en": "Models, workloads, hardware, baselines, and metrics are transcribed only from the official arXiv abstract; undisclosed tables and deployment details still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2310.06770",
+      "title": "Official arXiv record",
+      "accessed_at": "2026-07-11"
+    },
+    {
+      "type": "author_project",
+      "url": "https://www.swebench.com",
+      "title": "SWE-bench data, code, and leaderboard",
+      "accessed_at": "2026-07-11"
+    },
+    {
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=VTF8yNQM66",
+      "title": "Official ICLR 2024 OpenReview record",
+      "accessed_at": "2026-07-11"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "manual_curation",
+  "artifacts": [
+    {
+      "type": "data",
+      "title": "SWE-bench data, code, and leaderboard",
+      "url": "https://www.swebench.com",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "SWE-bench",
+    "extends": [],
+    "supersedes": [],
+    "related": [
+      "arxiv-2505-20411"
+    ]
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2310.06770",
+    "mirror_status": "external_only",
+    "license": null,
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2310.06770"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "work_id": "arxiv-2503-12626",
+  "slug": "automated-planning-for-optimal-data-pipeline-instantiation-2503-12626",
+  "title": {
+    "original": "Automated Planning for Optimal Data Pipeline Instantiation",
+    "zh": "优化数据管道实例化的自动化规划",
+    "en": "Automated Planning for Optimal Data Pipeline Instantiation"
+  },
+  "authors": [
+    {
+      "name": "Leonardo Rosa Amado",
+      "affiliations": []
+    },
+    {
+      "name": "Adriano Vogel",
+      "affiliations": []
+    },
+    {
+      "name": "Dalvan Griebler",
+      "affiliations": []
+    },
+    {
+      "name": "Gabriel Paludo Licks",
+      "affiliations": []
+    },
+    {
+      "name": "Eric Simon",
+      "affiliations": []
+    },
+    {
+      "name": "Felipe Meneguzzi",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2503.12626",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-03-16",
+      "latest_revision_date": "2025-03-16",
+      "url": "https://arxiv.org/abs/2503.12626"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-03-16",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-03-16"
+  },
+  "window_status": "new_in_window",
+  "venue": "Proceedings of the ECAI Workshop on AI-based Planning for Complex Real-World Applications (CAIPI 2025)",
+  "publication_status": "published",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-1",
+  "tags": [
+    "data-curation",
+    "data-provenance",
+    "governance"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "该规划器将算子、资源和链路代价统一为可执行部署计划，为数据流水线提供可复用的集群实例化控制面。",
+    "en": "The planner turns operators, resources, and link costs into executable deployment plans, providing a reusable control plane for instantiating data pipelines."
+  },
+  "abstract": {
+    "zh": "该工作把数据流水线部署建模为带动作代价的自动规划问题，使系统可在算子需求、通信开销和执行时间之间搜索资源分配方案。",
+    "en": "This work formulates data-pipeline deployment as cost-sensitive automated planning, enabling a search over resource assignments that accounts for operator requirements, communication, and execution overhead."
+  },
+  "problem": {
+    "zh": "流水线框架能抽象算子逻辑，却仍需决定算子放在哪些集群资源上；不恰当的部署会同时放大数据传输和计算等待。",
+    "en": "Pipeline frameworks abstract operator logic but still must place operators on cluster resources, where poor placement can amplify both data movement and compute delay."
+  },
+  "approach": {
+    "zh": "作者将资源、算子与部署动作编码为规划状态和带成本动作，并设计多种启发式函数以近似最小化端到端执行时间。",
+    "en": "The authors encode resources, operators, and deployment choices as planning states and weighted actions, then design heuristics that approximate minimum end-to-end execution time."
+  },
+  "system_design": {
+    "zh": "规划器读取算子依赖图、执行需求和集群连接信息，评估候选放置动作的通信与计算代价，最终输出可实例化的部署计划。",
+    "en": "The planner consumes the operator DAG, execution requirements, and cluster connectivity, scores placement actions by communication and compute cost, and emits an executable deployment plan."
+  },
+  "key_results": {
+    "zh": "所提启发式部署方案优于基线，其中显式利用连接关系的启发式在比较中表现最好。",
+    "en": "The proposed heuristic deployments outperform the baseline, with the connectivity-aware heuristic performing best among the strategies compared."
+  },
+  "limitations": {
+    "zh": "规划质量依赖执行和网络代价估计的准确性；模型未必覆盖突发负载、运行时故障或数据倾斜，较大流水线还可能遭遇搜索空间膨胀。",
+    "en": "Plan quality depends on accurate runtime and network cost estimates; bursty workloads, failures, and skew may violate the model, while larger DAGs can expand the search space sharply."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "data-pipeline deployment planning"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "baseline deployment"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.12626",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2503.12626",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2503.12626"
+  }
+}

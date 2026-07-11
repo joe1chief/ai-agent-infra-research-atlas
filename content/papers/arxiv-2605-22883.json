@@ -1,0 +1,122 @@
+{
+  "work_id": "arxiv-2605-22883",
+  "slug": "energy-per-successful-goal-goal-level-energy-accounting-for-agentic-ai-s-2605-22883",
+  "title": {
+    "original": "Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems",
+    "zh": "每个成功目标的能耗：智能体 AI 系统的目标级能耗核算",
+    "en": "Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems"
+  },
+  "authors": [
+    {
+      "name": "Deepak Panigrahy",
+      "affiliations": []
+    },
+    {
+      "name": "Aakash Tyagi",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2605.22883",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-05-20",
+      "latest_revision_date": "2026-05-20",
+      "url": "https://arxiv.org/abs/2605.22883"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-05-20",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "A-LEMS 的 EpG、OOI 和跨层归因流水线为 Agent 工作流提供目标级、可复现的能源核算标准。",
+    "en": "A-LEMS contributes EpG, OOI, and a cross-layer attribution pipeline as reusable goal-level energy-accounting infrastructure for agent workflows."
+  },
+  "abstract": {
+    "zh": "A-LEMS 把 Agent 系统的能耗核算单位从单次推理改为“每个成功目标能耗”EpG，汇总工具调用、重试、失败恢复和所有执行尝试。框架还定义编排开销指数 OOI，用同一任务标准隔离编排结构相对线性执行的能源成本。",
+    "en": "A-LEMS shifts agent energy accounting from per inference to Energy per Successful Goal (EpG), aggregating tool calls, retries, recovery, and failed attempts. It also defines an Orchestration Overhead Index (OOI) that isolates structural orchestration cost against linear execution under matched task criteria."
+  },
+  "problem": {
+    "zh": "Agent 为完成一个目标可能触发不同数量的推理、工具与重试，按调用次数归一化会把实现细节当成任务属性，并遗漏失败路径的能耗。",
+    "en": "One agent goal may trigger varying numbers of inferences, tools, and retries, so per-call normalization treats an implementation detail as the task unit and ignores failed execution paths."
+  },
+  "approach": {
+    "zh": "A-LEMS 用时间边界模型将 RAPL 信号映射到五层观测流水线，按目标聚合所有尝试并只以成功目标数归一化；OOI 再与匹配的线性执行比较。",
+    "en": "A temporal-boundary model maps RAPL readings through a five-layer observation pipeline, aggregates every attempt by goal, normalizes by successful goals, and compares orchestration with matched linear execution through OOI."
+  },
+  "system_design": {
+    "zh": "测量系统跨工作流、运行时与硬件计数器对齐事件时间，把单次调用能源归因到目标及尝试，并将硬件/运行配置绑定到记录以支持复现。",
+    "en": "The measurement system time-aligns workflow, runtime, and hardware-counter events, attributes invocation energy to goals and attempts, and binds hardware/runtime configuration to each record for reproducibility."
+  },
+  "key_results": {
+    "zh": "在推理与工具增强任务上，研究发现 Agent 编排的每成功目标能耗通常高于线性基线，但工具任务中也会出现 OOI 低于一的情形，说明指标能区分结构而非固定惩罚 Agent。",
+    "en": "Across reasoning and tool-augmented tasks, agentic execution often uses more energy per successful goal than linear baselines, yet some tool workloads produce OOI below one, showing the metric measures structure rather than imposing a fixed agent penalty."
+  },
+  "limitations": {
+    "zh": "当前归因以 RAPL 和所测任务/硬件为基础，未覆盖 GPU 外部工具服务、网络与隐含碳；成功判定和线性基线设计也会显著影响 EpG/OOI。",
+    "en": "Attribution is grounded in RAPL and the tested tasks/hardware, omitting external tool services, network energy, and embodied carbon; goal-success criteria and linear-baseline design materially affect EpG and OOI."
+  },
+  "evaluation": {
+    "models": ["agentic and linear LLM workflows"],
+    "workloads": ["five reasoning task families", "three tool-augmented task families"],
+    "hardware": ["RAPL-observed compute platform"],
+    "cluster_scale": null,
+    "baselines": ["linear execution under matched task criteria"],
+    "metrics": [
+      {"name": "mean Energy per Successful Goal ratio", "value": "4.33x", "baseline": "linear execution", "higher_is_better": false},
+      {"name": "agentic mean Energy per Successful Goal", "value": 888.1, "unit": "J", "higher_is_better": false},
+      {"name": "linear mean Energy per Successful Goal", "value": 205.3, "unit": "J", "higher_is_better": false},
+      {"name": "tool-task Orchestration Overhead Index", "value": "below 1.0x", "baseline": "linear execution", "higher_is_better": false}
+    ],
+    "notes": {
+      "zh": "任务族、RAPL 五层归因、线性基线与 EpG/OOI 数值来自官方摘要；模型、CPU、每任务分布和统计检验待全文审计。",
+      "en": "Task families, RAPL-based attribution, linear baseline, and EpG/OOI values come from the official abstract; models, CPUs, per-task distributions, and statistical tests await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2605.22883",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Energy per Successful Goal",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2605.22883",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2605.22883"
+  }
+}

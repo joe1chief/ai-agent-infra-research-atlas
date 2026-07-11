@@ -1,0 +1,132 @@
+{
+  "work_id": "arxiv-2506-17226",
+  "slug": "dcmf-a-dynamic-context-monitoring-and-caching-framework-for-context-mana-2506-17226",
+  "title": {
+    "original": "DCMF: A Dynamic Context Monitoring and Caching Framework for Context Management Platforms",
+    "zh": "DCMF：上下文管理平台的动态上下文监控和缓存框架",
+    "en": "DCMF: A Dynamic Context Monitoring and Caching Framework for Context Management Platforms"
+  },
+  "authors": [
+    {
+      "name": "Ashish Manchanda",
+      "affiliations": []
+    },
+    {
+      "name": "Prem Prakash Jayaraman",
+      "affiliations": []
+    },
+    {
+      "name": "Abhik Banerjee",
+      "affiliations": []
+    },
+    {
+      "name": "Kaneez Fizza",
+      "affiliations": []
+    },
+    {
+      "name": "Arkady Zaslavsky",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2506.17226",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-04-25",
+      "latest_revision_date": "2025-04-25",
+      "url": "https://arxiv.org/abs/2506.17226"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-04-25",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-04-25"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "DCMF 的上下文访问概率、新鲜度证据和缓存生命周期控制器可复用于动态上下文平台的数据平面管理。",
+    "en": "DCMF's access-probability model, freshness evidence, and cache lifecycle controller are reusable data-plane management infrastructure for dynamic context platforms."
+  },
+  "abstract": {
+    "zh": "DCMF 为 Context-as-a-Service 平台动态决定 IoT 上下文的缓存、刷新与逐出。其评估引擎综合服务质量、上下文质量、获取成本、时效和 SLA 计算访问概率，管理模块再用 Dempster–Shafer 证据融合维护新鲜度置信。",
+    "en": "DCMF dynamically decides when an IoT context item should be cached, refreshed, or evicted in a Context-as-a-Service platform. Its evaluator combines QoS, context quality, acquisition cost, timeliness, and SLAs into access probability, while Dempster–Shafer evidence updates freshness confidence."
+  },
+  "problem": {
+    "zh": "聚合与推断得到的 IoT 上下文变化快，传统缓存策略无法同时保证高频查询时延和数据新鲜度，过早过期或保留陈旧值都很常见。",
+    "en": "Derived IoT context changes rapidly, and conventional caches cannot jointly preserve low latency for frequent queries and freshness, leading to premature expiry or stale values."
+  },
+  "approach": {
+    "zh": "CEE 对多维上下文信号加权计算访问概率，CMM 将概率与新鲜度证据融合成 belief/confidence，并据此选择缓存、刷新或逐出动作。",
+    "en": "The Context Evaluation Engine weights multiple context signals into access probability, and the management module fuses it with freshness evidence into belief and confidence scores that drive cache actions."
+  },
+  "system_design": {
+    "zh": "DCMF 作为上下文管理平台的缓存控制面：CEE 持续接收查询、SLA 与质量遥测，CMM 维护每个对象的证据状态并向底层缓存发出生命周期操作。",
+    "en": "DCMF acts as a cache control plane: CEE consumes query, SLA, and quality telemetry, while CMM maintains evidence state per object and issues lifecycle operations to the underlying cache."
+  },
+  "key_results": {
+    "zh": "在真实智慧城市交通与道路施工数据上，DCMF 被报告比 m-CAC 获得更高命中率并显著减少缓存过期，从而降低上下文访问时延。",
+    "en": "On real smart-city traffic and roadwork data, DCMF is reported to improve cache hit rate and sharply reduce expiry relative to m-CAC, lowering context-access latency."
+  },
+  "limitations": {
+    "zh": "权重、访问概率和证据更新需要按领域校准；智慧城市结果不直接证明其适用于 Agent 语义记忆，概念漂移或传感器故障下的鲁棒性也未在摘要中说明。",
+    "en": "Weights, access probabilities, and evidence updates require domain calibration; smart-city results do not directly establish agent-memory behavior, and robustness to concept drift or sensor failure is not described."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["smart-city traffic context", "roadwork context", "dynamic IoT context queries"],
+    "hardware": ["Context-as-a-Service IoT platform"],
+    "cluster_scale": null,
+    "baselines": ["m-CAC"],
+    "metrics": [
+      {"name": "cache-hit-rate increase", "value": 12.5, "unit": "%", "baseline": "m-CAC", "higher_is_better": true},
+      {"name": "cache-expiry reduction", "value": "up to 60%", "baseline": "m-CAC", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "智慧城市场景、CoaaS、m-CAC 和命中/过期结果来自官方摘要；数据规模、部署硬件、时延和权重配置待全文审计。",
+      "en": "Smart-city scenarios, CoaaS, m-CAC, and hit/expiry results come from the official abstract; dataset scale, hardware, latency, and weighting await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.17226",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "DCMF",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2506.17226",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2506.17226"
+  }
+}

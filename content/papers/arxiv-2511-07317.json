@@ -1,0 +1,207 @@
+{
+  "work_id": "arxiv-2511-07317",
+  "slug": "rlve-scaling-up-reinforcement-learning-for-language-models-with-adaptive-2511-07317",
+  "title": {
+    "original": "RLVE: Scaling Up Reinforcement Learning for Language Models with Adaptive Verifiable Environments",
+    "zh": "RLVE：扩展具有自适应可验证环境的语言模型的强化学习",
+    "en": "RLVE: Scaling Up Reinforcement Learning for Language Models with Adaptive Verifiable Environments"
+  },
+  "authors": [
+    {
+      "name": "Zhiyuan Zeng",
+      "affiliations": []
+    },
+    {
+      "name": "Hamish Ivison",
+      "affiliations": []
+    },
+    {
+      "name": "Yiping Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Lifan Yuan",
+      "affiliations": []
+    },
+    {
+      "name": "Shuyue Stella Li",
+      "affiliations": []
+    },
+    {
+      "name": "Zhuorui Ye",
+      "affiliations": []
+    },
+    {
+      "name": "Siting Li",
+      "affiliations": []
+    },
+    {
+      "name": "Jacqueline He",
+      "affiliations": []
+    },
+    {
+      "name": "Runlong Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Tong Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Chenyang Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Yulia Tsvetkov",
+      "affiliations": []
+    },
+    {
+      "name": "Simon Shaolei Du",
+      "affiliations": []
+    },
+    {
+      "name": "Natasha Jaques",
+      "affiliations": []
+    },
+    {
+      "name": "Hao Peng",
+      "affiliations": []
+    },
+    {
+      "name": "Pang Wei Koh",
+      "affiliations": []
+    },
+    {
+      "name": "Hannaneh Hajishirzi",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2511.07317",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-11-10",
+      "latest_revision_date": "2026-06-06",
+      "url": "https://arxiv.org/abs/2511.07317"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-11-10",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-06-06"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-3",
+  "tags": [
+    "post-training",
+    "reinforcement-learning",
+    "rollout"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "RLVE-Gym 提供程序化环境、验证器、难度控制和跨环境训练接口，是可扩展的可验证 RL 环境基础设施。",
+    "en": "RLVE-Gym provides procedural environments, verifiers, difficulty control, and shared training interfaces as scalable infrastructure for verifiable RL."
+  },
+  "abstract": {
+    "zh": "RLVE 让可验证环境按当前策略能力动态调整题目难度，并以 RLVE-Gym 的大规模程序化环境集合研究环境数量对通用推理的扩展效应。",
+    "en": "RLVE lets verifiable environments adapt problem difficulty to the current policy and uses the large procedural RLVE-Gym suite to study how environment breadth scales general reasoning."
+  },
+  "problem": {
+    "zh": "静态题目分布会随着策略进步变得过易，或一开始就过难，导致可验证奖励迅速失去有效学习信号。",
+    "en": "Static problem distributions become too easy as a policy improves or remain too hard initially, causing verifiable rewards to lose useful learning signal."
+  },
+  "approach": {
+    "zh": "每个环境程序化生成问题并算法验证奖励，同时根据策略表现更新难度分布；训练时联合采样多个环境以扩大技能覆盖。",
+    "en": "Each environment procedurally generates problems and verifies rewards algorithmically while updating its difficulty distribution from policy performance; training jointly samples many environments."
+  },
+  "system_design": {
+    "zh": "RLVE-Gym 提供环境注册表、生成器和验证器，难度控制器读取近期成功率调整采样，统一 rollout 与训练层跨环境汇总轨迹。",
+    "en": "RLVE-Gym provides an environment registry, generators, and verifiers; a difficulty controller adjusts sampling from recent performance, and shared rollout and training layers aggregate trajectories across environments."
+  },
+  "key_results": {
+    "zh": "环境集合扩展带来持续的跨基准推理提升，联合自适应训练优于继续沿用原有静态 RL 数据分布。",
+    "en": "Expanding the environment collection yields consistent cross-benchmark reasoning gains, and joint adaptive training outperforms continuing on the original static RL distribution."
+  },
+  "limitations": {
+    "zh": "大量环境依赖人工工程和可靠验证器，生成分布仍可能与真实任务脱节；难度适配也可能追逐短期指标而忽略技能多样性。",
+    "en": "The large suite depends on manual environment engineering and reliable verifiers, generated tasks can diverge from real use, and difficulty adaptation may chase short-term scores over skill diversity."
+  },
+  "evaluation": {
+    "models": [
+      "1.5B-parameter reasoning language model"
+    ],
+    "workloads": [
+      "400 adaptive verifiable environments",
+      "six reasoning benchmarks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "continuation of the model's original RL training"
+    ],
+    "metrics": [
+      {
+        "name": "Average reasoning-benchmark improvement",
+        "value": 3.37,
+        "unit": "percentage points",
+        "higher_is_better": true
+      },
+      {
+        "name": "Average improvement from continued original RL training",
+        "value": 0.49,
+        "unit": "percentage points",
+        "baseline": "continuation of the original RL recipe",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "OLMo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 81,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.07317",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "RLVE",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2511.07317",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2511.07317"
+  }
+}

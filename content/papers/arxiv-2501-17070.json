@@ -1,0 +1,122 @@
+{
+  "work_id": "arxiv-2501-17070",
+  "slug": "contextual-agent-security-a-policy-for-every-purpose-2501-17070",
+  "title": {
+    "original": "Contextual Agent Security: A Policy for Every Purpose",
+    "zh": "情境化智能体安全：面向不同用途的策略",
+    "en": "Contextual Agent Security: A Policy for Every Purpose"
+  },
+  "authors": [
+    {
+      "name": "Lillian Tsai",
+      "affiliations": []
+    },
+    {
+      "name": "Eugene Bagdasarian",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2501.17070",
+    "doi": "10.1145/3713082.3730378",
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v3",
+      "first_public_date": "2025-01-28",
+      "latest_revision_date": "2025-04-17",
+      "url": "https://arxiv.org/abs/2501.17070"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-01-28",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-04-17"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "published",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Conseca 的上下文采集、即时策略生成、人可读表示和动作门构成可嵌入通用 Agent 的权限控制框架。",
+    "en": "Conseca's context collection, just-in-time policy generation, human-readable representation, and action gate form an embeddable permission-control framework."
+  },
+  "abstract": {
+    "zh": "Conseca 提出上下文 Agent 安全框架，为每个具体目标、内容和账户情境即时生成可由人理解并确认的动作策略。",
+    "en": "Conseca proposes contextual agent security: generating just-in-time, human-verifiable action policies from the concrete goal, content, account, and operating context."
+  },
+  "problem": {
+    "zh": "通用 Agent 的任务和能力组合远超静态 App 权限或 ACL 的枚举范围，同一动作在不同目标、数据和身份上下文中安全性相反。",
+    "en": "Generalist agents exceed what static app permissions or ACLs can enumerate, and the same action can be safe or unsafe depending on goals, data, and identity context."
+  },
+  "approach": {
+    "zh": "框架在动作执行前提取当前目的与环境属性，生成针对该次行动的细粒度策略，并把关键约束呈现给用户核验。",
+    "en": "Before execution, the framework extracts purpose and environment attributes, generates an action-specific policy, and presents key constraints for user verification."
+  },
+  "system_design": {
+    "zh": "概念架构由上下文收集器、策略生成器、人可读策略表示、确认界面和动作执行门组成，策略随任务即时产生。",
+    "en": "The conceptual architecture combines context collection, policy generation, a human-readable representation, confirmation, and an action gate, producing policies per task."
+  },
+  "key_results": {
+    "zh": "论文确立了从“固定权限”转向“目的与上下文绑定策略”的设计方向，并以邮件删除等案例说明静态授权的不足。",
+    "en": "The paper establishes a shift from fixed permissions to purpose- and context-bound policies, using cases such as email deletion to expose static authorization limits."
+  },
+  "limitations": {
+    "zh": "该工作主要是框架探索，未证明上下文抽取和策略生成在对抗输入下可靠；频繁人工确认也可能引发疲劳。",
+    "en": "This is primarily a framework exploration; reliable context extraction and policy generation under attack are not demonstrated, and frequent confirmation may cause fatigue."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "实验矩阵与数值将在全文人工复核后补充；当前留空以避免从摘要推断。",
+      "en": "The experiment matrix and numbers await full-text manual review; fields remain empty to avoid inferring them from an abstract."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.17070",
+      "title": "Official arXiv record"
+    },
+    {
+      "type": "publisher",
+      "url": "https://doi.org/10.1145/3713082.3730378",
+      "title": "Publisher record via DOI"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Contextual Agent Security",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2501.17070",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2501.17070"
+  }
+}

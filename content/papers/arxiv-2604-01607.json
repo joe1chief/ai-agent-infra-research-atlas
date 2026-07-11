@@ -1,0 +1,119 @@
+{
+  "work_id": "arxiv-2604-01607",
+  "slug": "modtrans-translating-real-world-models-for-distributed-training-simulato-2604-01607",
+  "title": {
+    "original": "ModTrans: Translating Real-world Models for Distributed Training Simulator",
+    "zh": "ModTrans：为分布式训练模拟器转换真实模型",
+    "en": "ModTrans: Translating Real-world Models for Distributed Training Simulator"
+  },
+  "authors": [
+    {
+      "name": "Yi Lyu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2604.01607",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-04-02",
+      "latest_revision_date": "2026-04-02",
+      "url": "https://arxiv.org/abs/2604.01607"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-04-02",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-04-02"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-2",
+  "tags": [
+    "distributed-training",
+    "parallelism",
+    "fault-tolerance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "ModTrans 将真实模型自动转换为 ASTRA-sim 输入，作为连接模型开发与分布式训练仿真的可复用适配层。",
+    "en": "ModTrans automatically converts real models into ASTRA-sim inputs, serving as a reusable adapter between model development and distributed-training simulation."
+  },
+  "abstract": {
+    "zh": "ModTrans 把真实机器学习模型自动转换为 ASTRA-sim 可接收的表示，使研究者无需手工重写模型即可仿真分布式训练通信。",
+    "en": "ModTrans automatically translates real machine-learning models into ASTRA-sim inputs, allowing distributed-training simulation without manually recreating model descriptions."
+  },
+  "problem": {
+    "zh": "分布式训练实验需要昂贵硬件，仿真器虽可替代实机，却因输入格式与实际开发模型脱节而形成使用门槛。",
+    "en": "Distributed-training experiments require expensive hardware, yet simulators remain difficult to use because their input formats are disconnected from models built in normal ML workflows."
+  },
+  "approach": {
+    "zh": "工具解析真实模型的结构与相关执行信息，映射到 ASTRA-sim 所需的模型格式，并检验转换开销和仿真可用性。",
+    "en": "The tool parses a real model's structure and relevant execution information, maps them into ASTRA-sim's model format, and evaluates translation overhead and simulator usability."
+  },
+  "system_design": {
+    "zh": "前端接收开发框架中的模型，规范化层提取算子和通信关系，后端生成 ASTRA-sim 输入文件，从而连接模型开发与系统仿真流程。",
+    "en": "A frontend ingests models from development frameworks, a normalization layer extracts operators and communication relationships, and a backend emits ASTRA-sim input files linking model development to systems simulation."
+  },
+  "key_results": {
+    "zh": "论文报告转换成本相对仿真实验可以忽略，说明该桥接层不会成为主要性能负担。",
+    "en": "The paper reports negligible translation cost relative to the simulation workflow, indicating that the bridge does not become a material performance burden."
+  },
+  "limitations": {
+    "zh": "转换正确性受前端支持的算子和动态控制流限制；仿真结果仍继承 ASTRA-sim 的硬件与网络模型误差。",
+    "en": "Correctness is limited by supported operators and dynamic control flow, while resulting experiments still inherit ASTRA-sim's hardware and network modeling errors."
+  },
+  "evaluation": {
+    "models": [
+      "real-world machine-learning models"
+    ],
+    "workloads": [
+      "ASTRA-sim distributed-training simulation"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "manual simulator model translation"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2604.01607",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "ModTrans",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2604.01607",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2604.01607"
+  }
+}

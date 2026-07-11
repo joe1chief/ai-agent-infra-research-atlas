@@ -1,0 +1,265 @@
+{
+  "work_id": "arxiv-2510-20171",
+  "slug": "collective-communication-for-100k-gpus-2510-20171",
+  "title": {
+    "original": "Collective Communication for 100k+ GPUs",
+    "zh": "用于10万+ GPU的集体通信",
+    "en": "Collective Communication for 100k+ GPUs"
+  },
+  "authors": [
+    {
+      "name": "Min Si",
+      "affiliations": []
+    },
+    {
+      "name": "Pavan Balaji",
+      "affiliations": []
+    },
+    {
+      "name": "Yongzhou Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Ching-Hsiang Chu",
+      "affiliations": []
+    },
+    {
+      "name": "Adi Gangidi",
+      "affiliations": []
+    },
+    {
+      "name": "Saif Hasan",
+      "affiliations": []
+    },
+    {
+      "name": "Subodh Iyengar",
+      "affiliations": []
+    },
+    {
+      "name": "Dan Johnson",
+      "affiliations": []
+    },
+    {
+      "name": "Bingzhe Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Regina Ren",
+      "affiliations": []
+    },
+    {
+      "name": "Deep Shah",
+      "affiliations": []
+    },
+    {
+      "name": "Ashmitha Jeevaraj Shetty",
+      "affiliations": []
+    },
+    {
+      "name": "Greg Steinbrecher",
+      "affiliations": []
+    },
+    {
+      "name": "Yulun Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Bruce Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Xinfeng Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Jingyi Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Mingran Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Kenny Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Minlan Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Cen Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Wes Bland",
+      "affiliations": []
+    },
+    {
+      "name": "Denis Boyda",
+      "affiliations": []
+    },
+    {
+      "name": "Suman Gumudavelli",
+      "affiliations": []
+    },
+    {
+      "name": "Prashanth Kannan",
+      "affiliations": []
+    },
+    {
+      "name": "Cristian Lumezanu",
+      "affiliations": []
+    },
+    {
+      "name": "Rui Miao",
+      "affiliations": []
+    },
+    {
+      "name": "Zhe Qu",
+      "affiliations": []
+    },
+    {
+      "name": "Venkat Ramesh",
+      "affiliations": []
+    },
+    {
+      "name": "Maxim Samoylov",
+      "affiliations": []
+    },
+    {
+      "name": "Jan Seidel",
+      "affiliations": []
+    },
+    {
+      "name": "Srikanth Sundaresan",
+      "affiliations": []
+    },
+    {
+      "name": "Feng Tian",
+      "affiliations": []
+    },
+    {
+      "name": "Qiye Tan",
+      "affiliations": []
+    },
+    {
+      "name": "Shuqiang Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Yimeng Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Shengbao Zheng",
+      "affiliations": []
+    },
+    {
+      "name": "Art Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Hongyi Zeng",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2510.20171",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v4",
+      "first_public_date": "2025-10-23",
+      "latest_revision_date": "2026-01-09",
+      "url": "https://arxiv.org/abs/2510.20171"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-10-23",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-09"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "NCCLX 是同时服务十万级 GPU 训练与推理的集合通信运行时，直接构成超大模型生命周期的底层基础设施。",
+    "en": "NCCLX is a collective runtime for training and inference across 100k-plus GPUs, directly supplying low-level infrastructure for the full model lifecycle."
+  },
+  "abstract": {
+    "zh": "NCCLX 是 Meta 面向十万级 GPU 集群开发的集合通信框架，覆盖大规模同步训练与低时延推理两类生命周期需求。它针对超大集群中的吞吐、时延和可靠数据交换进行联合工程优化，并以 Llama 4 工作负载验证。",
+    "en": "NCCLX is Meta's collective-communication framework for clusters beyond 100,000 GPUs, spanning synchronous large-scale training and latency-sensitive inference. It jointly engineers throughput, latency, and reliable data exchange and is evaluated with Llama 4 workloads."
+  },
+  "problem": {
+    "zh": "训练规模扩展到十万 GPU 后，传统集合通信的带宽、端到端时延与故障暴露会成为模型扩展和部署的关键限制。",
+    "en": "At 100,000-GPU scale, collective bandwidth, end-to-end latency, and failure exposure become primary limits on both model development and deployment."
+  },
+  "approach": {
+    "zh": "框架围绕超大 GPU 拓扑优化集合操作及传输路径，使同一通信层可适应训练的持续高吞吐和推理的低时延交换。",
+    "en": "The framework optimizes collective operations and transport paths for very large GPU topologies so one communication layer can serve sustained training bandwidth and low-latency inference exchange."
+  },
+  "system_design": {
+    "zh": "NCCLX 作为模型运行时下方的集合通信层，面向跨越十万 GPU 的复杂拓扑提供统一原语、路径调度和可靠交换，供训练与推理执行器共同调用。",
+    "en": "NCCLX sits beneath model runtimes as a shared collective layer, exposing common primitives, path scheduling, and reliable exchange over complex 100k-plus-GPU topologies to both training and inference executors."
+  },
+  "key_results": {
+    "zh": "Llama 4 的实证评测报告集合通信效率得到明显改善，支持超大集群上的高吞吐、低时延数据交换。",
+    "en": "Empirical evaluation with Llama 4 reports substantial communication-efficiency gains and sustained high-throughput, low-latency exchange at extreme scale."
+  },
+  "limitations": {
+    "zh": "摘要未公开通信算法细节、故障注入结果或不同网络拓扑的可移植性；评测以 Meta 规模和 Llama 4 为主，外部复现门槛很高。",
+    "en": "The abstract omits algorithmic detail, fault-injection evidence, and portability across network topologies; evaluation is tied to Meta-scale infrastructure and Llama 4, making independent reproduction difficult."
+  },
+  "evaluation": {
+    "models": ["Llama 4"],
+    "workloads": ["large-scale synchronous LLM training", "low-latency LLM inference collective communication"],
+    "hardware": ["GPU clusters exceeding 100,000 GPUs"],
+    "cluster_scale": ">100,000 GPUs",
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "Llama 4、训练/推理场景与十万级 GPU 规模来自官方摘要；网络拓扑、比较库和量化通信结果待全文审计。",
+      "en": "Llama 4, training/inference scenarios, and 100k-plus-GPU scale come from the official abstract; topology, comparison libraries, and quantitative communication results await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.20171",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2510.20171",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2510.20171"
+  }
+}

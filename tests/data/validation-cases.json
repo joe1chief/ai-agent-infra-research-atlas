@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "window": {
+    "start": "2025-01-01",
+    "end": "2026-07-11"
+  },
+  "invalid_cases": [
+    {"name": "duplicate_work_id", "expect": "duplicate work_id"},
+    {"name": "duplicate_slug", "expect": "duplicate slug"},
+    {"name": "duplicate_arxiv", "expect": "duplicate arXiv id"},
+    {"name": "new_before_window", "expect": "new_in_window first_public_date"},
+    {"name": "taxonomy_domain_mismatch", "expect": "belongs to domain agent_infra"},
+    {"name": "unknown_tag", "expect": "schema tags.0"},
+    {"name": "missing_bilingual", "expect": "schema abstract.en"},
+    {"name": "editorial_placeholder", "expect": "editorial placeholder remains"},
+    {"name": "duplicate_editorial", "expect": "duplicate editorial text"},
+    {"name": "contradictory_evaluation_note", "expect": "contradicts populated metrics"},
+    {"name": "source_host_mismatch", "expect": "source type arxiv"},
+    {"name": "dangling_relation", "expect": "references missing work_id"},
+    {"name": "lineage_cycle", "expect": "lineage cycle detected"},
+    {"name": "withdrawn_core", "expect": "cannot remain in the core tier"},
+    {"name": "unlicensed_pdf", "expect": "not on the redistribution whitelist"},
+    {"name": "duplicate_seed_alias", "expect": "duplicate seed report citation"}
+  ],
+  "valid_cases": [
+    "new_window_start_boundary",
+    "new_window_end_boundary",
+    "venue_carry_in_dual_dates",
+    "withdrawn_watchlist"
+  ]
+}

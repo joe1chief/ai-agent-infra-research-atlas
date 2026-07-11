@@ -1,0 +1,143 @@
+{
+  "work_id": "arxiv-2511-11581",
+  "slug": "the-anatomy-of-a-triton-attention-kernel-2511-11581",
+  "title": {
+    "original": "The Anatomy of a Triton Attention Kernel",
+    "zh": "Triton 注意力内核剖析",
+    "en": "The Anatomy of a Triton Attention Kernel"
+  },
+  "authors": [
+    {
+      "name": "Burkhard Ringlein",
+      "affiliations": []
+    },
+    {
+      "name": "Jan van Lunteren",
+      "affiliations": []
+    },
+    {
+      "name": "Radu Stoica",
+      "affiliations": []
+    },
+    {
+      "name": "Thomas Parnell",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2511.11581",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-10-07",
+      "latest_revision_date": "2025-10-07",
+      "url": "https://arxiv.org/abs/2511.11581"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-10-07",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-10-07"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "该 Triton 实现连同自动调优和推理服务接口提供跨 NVIDIA/AMD 的可移植分页注意力执行层。",
+    "en": "The Triton implementation, autotuning, and serving interface provide a portable paged-attention execution layer across NVIDIA and AMD."
+  },
+  "abstract": {
+    "zh": "该工作用纯 Triton 实现跨 NVIDIA 与 AMD 的高性能分页注意力，并总结算法重构、系统优化、参数自动调优和推理服务集成的完整路径。",
+    "en": "This work builds a high-performance paged-attention kernel entirely in Triton for NVIDIA and AMD GPUs and documents the algorithmic changes, system optimizations, autotuning, and serving integration needed."
+  },
+  "problem": {
+    "zh": "分页注意力通常依赖厂商特定手写 kernel；通用 DSL 虽可移植，却常因内存布局、调度参数和服务接口不匹配而性能落后。",
+    "en": "Paged attention usually relies on vendor-specific handwritten kernels; portable DSL code often lags because memory layout, launch parameters, and serving integration are not jointly optimized."
+  },
+  "approach": {
+    "zh": "作者逐步改造 Triton 算法和数据路径，加入关键系统级优化，并自动搜索硬件相关参数，最后将 kernel 集成到实际推理服务器。",
+    "en": "The authors iteratively restructure the Triton algorithm and data path, add system-level optimizations, autotune hardware-dependent parameters, and integrate the result into a production inference server."
+  },
+  "system_design": {
+    "zh": "统一 Triton 源码通过 JIT 针对不同 GPU 编译，自动调优器选择块和并行配置，分页 KV 接口连接服务端批处理与内核执行。",
+    "en": "One Triton source is JIT-compiled for each GPU, an autotuner selects tiling and parallel settings, and a paged-KV interface links server batching to kernel execution."
+  },
+  "key_results": {
+    "zh": "经过联合优化后，通用 Triton kernel 从明显落后提升到与厂商优化实现相当甚至略优，并在两家 GPU 平台保持可移植性。",
+    "en": "After joint optimization, the generic Triton kernel moves from a large deficit to parity or slight advantage over vendor-tuned implementations across both GPU vendors."
+  },
+  "limitations": {
+    "zh": "高性能仍依赖每种硬件和形状的自动调优，编译与搜索成本不可忽略；结论集中于分页注意力，不能直接外推到全部推理算子。",
+    "en": "Performance still depends on per-hardware and per-shape autotuning with nontrivial compile cost; evidence centers on paged attention and does not automatically extend to all inference operators."
+  },
+  "evaluation": {
+    "models": [
+      "large language models"
+    ],
+    "workloads": [
+      "paged attention",
+      "LLM inference serving"
+    ],
+    "hardware": [
+      "NVIDIA GPUs",
+      "AMD GPUs"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "state-of-the-art vendor-tuned attention implementation"
+    ],
+    "metrics": [
+      {
+        "name": "Final performance relative to state of the art",
+        "value": 105.9,
+        "unit": "%",
+        "baseline": "state-of-the-art attention implementation",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.11581",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2511.11581",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2511.11581"
+  }
+}

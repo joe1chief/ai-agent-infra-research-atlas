@@ -1,0 +1,138 @@
+{
+  "work_id": "arxiv-2603-17884",
+  "slug": "debuglm-learning-traceable-training-data-provenance-for-llms-2603-17884",
+  "title": {
+    "original": "DebugLM: Learning Traceable Training Data Provenance for LLMs",
+    "zh": "DebugLM：学习LLM的可追溯训练数据来源",
+    "en": "DebugLM: Learning Traceable Training Data Provenance for LLMs"
+  },
+  "authors": [
+    {
+      "name": "Wenjie Jacky Mo",
+      "affiliations": []
+    },
+    {
+      "name": "Qin Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaofei Wen",
+      "affiliations": []
+    },
+    {
+      "name": "Wenxuan Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Zhe Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Muhao Chen",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2603.17884",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-03-18",
+      "latest_revision_date": "2026-03-18",
+      "url": "https://arxiv.org/abs/2603.17884"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-03-18",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-18"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-1",
+  "tags": [
+    "data-curation",
+    "data-provenance",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "DebugLM 把来源标签、行为归因接口和测试时缓解控制面嵌入训练管线，形成可复用的数据调试基础设施。",
+    "en": "DebugLM embeds source tags, behavior-attribution interfaces, and a test-time remediation control plane into training, forming reusable data-debugging infrastructure."
+  },
+  "abstract": {
+    "zh": "DebugLM 在多阶段训练中为数据源引入可学习的来源标签，使模型能够把自身回答追溯到负责的数据集，并在推理时针对指定来源触发定向拒答。",
+    "en": "DebugLM introduces learnable provenance tags across multi-stage training so a model can trace responses to responsible datasets and selectively refuse content associated with a specified source at inference time."
+  },
+  "problem": {
+    "zh": "开发者通常无法定位某个失败行为究竟来自哪段训练流程或数据源，只能反复补丁式修复，模型更新后问题还可能再次出现。",
+    "en": "Developers typically cannot locate which training stage or dataset produced a failure, reducing debugging to patches that may recur after distribution shifts or model updates."
+  },
+  "approach": {
+    "zh": "训练阶段把唯一数据源标签与样本和响应关联，模型学习输出来源归属；部署阶段利用归属结果定位问题数据，并无需改参数即可施加来源级拒答。",
+    "en": "During training, unique source tags are associated with examples and responses; at deployment, predicted attribution identifies problematic data and enables source-level refusal without parameter updates."
+  },
+  "system_design": {
+    "zh": "来源标记贯穿预训练和后训练数据管线，模型侧提供行为—数据集关联，调试控制面据此查询责任来源并下发测试时缓解策略。",
+    "en": "Source tags flow through pretraining and post-training, the model exposes behavior-to-dataset associations, and a debugging control plane queries those associations and applies test-time remediation policies."
+  },
+  "key_results": {
+    "zh": "实验表明该框架能够在多阶段训练中准确追踪行为来源，并在保持模型总体效用的同时执行定向缓解。",
+    "en": "Experiments show accurate behavior tracing across multi-stage training and targeted remediation while preserving the model's broader utility."
+  },
+  "limitations": {
+    "zh": "方法要求从训练开始就具备来源标签与管线控制权，主要归因到数据集而非单个样本；模型学到的标签关联也不等同于严格因果证明。",
+    "en": "The method requires provenance labels and pipeline control from training time, attributes mainly at dataset rather than example level, and learned tag associations are not a formal causal proof."
+  },
+  "evaluation": {
+    "models": [
+      "large language models"
+    ],
+    "workloads": [
+      "multi-stage training-data provenance tracing",
+      "source-targeted test-time refusal"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.17884",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "DebugLM",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2603.17884",
+    "mirror_status": "approved",
+    "license": "CC-BY-4.0",
+    "sha256": "d63a68cd5621a824f9c334dde8fbd488ffa77c05d301ddc29a165ca20221fc9b",
+    "size_bytes": 1537628,
+    "fallback_url": "https://arxiv.org/abs/2603.17884"
+  }
+}

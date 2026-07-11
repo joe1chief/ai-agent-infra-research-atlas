@@ -1,0 +1,194 @@
+{
+  "work_id": "arxiv-2601-07526",
+  "slug": "megaflow-large-scale-distributed-orchestration-system-for-the-agentic-er-2601-07526",
+  "title": {
+    "original": "MegaFlow: Large-Scale Distributed Orchestration System for the Agentic Era",
+    "zh": "MegaFlow：智能体时代的大规模分布式编排系统",
+    "en": "MegaFlow: Large-Scale Distributed Orchestration System for the Agentic Era"
+  },
+  "authors": [
+    {
+      "name": "Lei Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Mouxiang Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Ruisheng Cao",
+      "affiliations": []
+    },
+    {
+      "name": "Jiawei Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Fan Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Yiheng Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Jiaxi Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Zeyao Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Liang Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Changwei Luo",
+      "affiliations": []
+    },
+    {
+      "name": "Kai Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Fan Yan",
+      "affiliations": []
+    },
+    {
+      "name": "KaShun Shum",
+      "affiliations": []
+    },
+    {
+      "name": "Jiajun Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Zeyu Cui",
+      "affiliations": []
+    },
+    {
+      "name": "Feng Hu",
+      "affiliations": []
+    },
+    {
+      "name": "Junyang Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Binyuan Hui",
+      "affiliations": []
+    },
+    {
+      "name": "Min Yang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.07526",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-01-12",
+      "latest_revision_date": "2026-01-13",
+      "url": "https://arxiv.org/abs/2601.07526"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-12",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-13"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "MegaFlow 以统一接口解耦模型、Agent 和环境服务，为数万级训练/评测任务提供可独立扩缩的分布式编排基础。",
+    "en": "MegaFlow decouples Model, Agent, and Environment Services behind common interfaces, providing independently scalable orchestration for large training and evaluation fleets."
+  },
+  "abstract": {
+    "zh": "MegaFlow 是面向 Agent 训练与评测的大规模分布式编排系统，把基础设施拆分为模型服务、Agent 服务和环境服务，并以统一接口连接。三个服务可独立扩缩和分配资源，以协调软件工程、计算机使用等复杂 Agent—环境交互。",
+    "en": "MegaFlow is a distributed orchestration system for large-scale agent training and evaluation. It separates infrastructure into Model, Agent, and Environment Services connected by common interfaces so each can scale and receive resources independently for complex agent–environment workloads."
+  },
+  "problem": {
+    "zh": "复杂 Agent 训练不仅需要高吞吐模型推理，还要协调大量有状态环境和细粒度任务；现有开源设施无法在大规模下独立调度这些异构资源。",
+    "en": "Complex agent training requires both model throughput and coordination of many stateful environments and fine-grained tasks, which existing open infrastructure cannot schedule independently at scale."
+  },
+  "approach": {
+    "zh": "MegaFlow 以三服务解耦模型计算、Agent 逻辑与环境执行，通过统一任务接口和分布式调度器分别分配资源、扩缩实例并跟踪交互生命周期。",
+    "en": "MegaFlow decouples model compute, agent logic, and environment execution into three services, with common task interfaces and distributed scheduling for allocation, scaling, and interaction lifecycle management."
+  },
+  "system_design": {
+    "zh": "模型服务批量承载推理，Agent 服务维护策略和轨迹，环境服务管理沙箱状态；中央编排面按任务阶段连接三者，并支持细粒度并发、故障隔离和异构配置。",
+    "en": "Model Services batch inference, Agent Services maintain policy and trajectories, and Environment Services own sandbox state. An orchestration plane connects them by task phase and supports fine-grained concurrency and heterogeneous configurations."
+  },
+  "key_results": {
+    "zh": "在实际 Agent 训练部署中，MegaFlow 被报告可稳定编排数万并发任务并保持较高资源利用率，填补复杂 Agent 负载的开放基础设施缺口。",
+    "en": "In agent-training deployments, MegaFlow is reported to orchestrate tens of thousands of concurrent tasks with high stability and efficient resource utilization."
+  },
+  "limitations": {
+    "zh": "摘要未说明三服务间一致性、环境快照恢复或跨地域网络成本，数万任务的结果也来自特定训练部署，外部硬件与环境类型上的复现仍待验证。",
+    "en": "The abstract does not detail cross-service consistency, environment snapshot recovery, or multi-region network cost; tens-of-thousands scale is shown in specific deployments and remains to be reproduced across other hardware and environments."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["software-engineering agent tasks", "computer-use agent tasks", "agent training and evaluation"],
+    "hardware": ["distributed model, agent, and environment services"],
+    "cluster_scale": "tens of thousands of concurrent agent tasks",
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "任务类型、三服务部署和数万并发规模来自官方摘要；模型、GPU/环境数量、利用率与稳定性指标待全文审计。",
+      "en": "Task types, three-service deployment, and tens-of-thousands concurrency come from the official abstract; models, GPU/environment counts, utilization, and stability metrics await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Qwen3-Coder-Next Technical Report",
+      "seed_report_path": "2026/alibaba_qwen/2026-02_qwen3-coder-next.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 18,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.07526",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "MegaFlow",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.07526",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.07526"
+  }
+}

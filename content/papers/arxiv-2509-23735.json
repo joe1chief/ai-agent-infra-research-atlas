@@ -1,0 +1,137 @@
+{
+  "work_id": "arxiv-2509-23735",
+  "slug": "demystifying-the-lifecycle-of-failures-in-platform-orchestrated-agentic-2509-23735",
+  "title": {
+    "original": "Demystifying the Lifecycle of Failures in Platform-Orchestrated Agentic Workflows",
+    "zh": "揭示平台编排的代理工作流程中故障的生命周期",
+    "en": "Demystifying the Lifecycle of Failures in Platform-Orchestrated Agentic Workflows"
+  },
+  "authors": [
+    {
+      "name": "Xuyan Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaofei Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Yawen Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Junjie Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Boyu Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Mingyang Li",
+      "affiliations": []
+    },
+    {
+      "name": "Qing Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2509.23735",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-09-28",
+      "latest_revision_date": "2026-02-27",
+      "url": "https://arxiv.org/abs/2509.23735"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-09-28",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-02-27"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AgentFail 的失效生命周期 schema 与真实平台案例可复用于运行时遥测设计、根因诊断和修复策略评测。",
+    "en": "AgentFail's failure-lifecycle schema and real platform incidents are reusable for runtime telemetry design, root-cause diagnosis, and repair evaluation."
+  },
+  "abstract": {
+    "zh": "该研究从失效生命周期分析低代码平台编排的 Agent 工作流，并发布 AgentFail：来自两个代表性平台的真实故障案例集。论文关联故障表现、根因、所在节点、修复策略和修复难度，为运行时诊断与工作流设计提供经验依据。",
+    "en": "This study analyzes failures across the lifecycle of low-code, platform-orchestrated agent workflows and releases AgentFail, a corpus of real incidents from two representative platforms. It links manifestations, root causes, workflow nodes, repair strategies, and repair difficulty."
+  },
+  "problem": {
+    "zh": "自然语言交互、工具调用和动态控制会让故障跨异构节点传播，传统软件的局部错误定位方法难以解释 Agent 工作流中的表现与根因。",
+    "en": "Natural-language interaction, tool use, and dynamic control let failures propagate across heterogeneous nodes, making traditional local fault attribution ineffective for agent workflows."
+  },
+  "approach": {
+    "zh": "研究者收集并编码 307 个平台故障案例，从表现、根因和修复三个阶段建立分类，并比较不同根因与节点的修复难度。",
+    "en": "The researchers collect and code 307 platform failures into manifestation, root-cause, and repair stages, then compare repair difficulty across causes and workflow nodes."
+  },
+  "system_design": {
+    "zh": "AgentFail 的生命周期 schema 可映射到运行时事件：节点输入/输出记录表现，依赖与调用轨迹支持根因归因，补丁与重配置记录修复方式，便于构建诊断工具。",
+    "en": "AgentFail's lifecycle schema maps naturally to runtime telemetry: node I/O captures symptoms, dependency and call traces support attribution, and patches or reconfiguration encode repair actions for diagnostic tooling."
+  },
+  "key_results": {
+    "zh": "案例分析揭示了平台 Agent 工作流的关键传播机制、根因分布与修复难点，并形成针对可靠修复和流程设计的可操作建议。",
+    "en": "The case analysis identifies important propagation mechanisms, root-cause patterns, and repair bottlenecks and yields actionable guidance for workflow design and reliable repair."
+  },
+  "limitations": {
+    "zh": "案例仅来自两个平台并受公开报告完整性影响，难以估计未报告故障和真实发生率；分类结论对自建代码框架的可迁移性仍需验证。",
+    "en": "Cases come from two platforms and depend on report completeness, so silent failures and true prevalence are unknown; transfer to code-first, self-hosted frameworks remains to be validated."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["307 real-world agent-workflow failures", "two platform-orchestrated agent systems"],
+    "hardware": [],
+    "cluster_scale": "307 failure cases",
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "案例数、平台数和故障生命周期分析来自官方摘要；平台名称、分类频次、节点分布和修复难度统计待全文审计。",
+      "en": "Case count, platform count, and failure-lifecycle analysis come from the official abstract; platform names, category frequencies, node distribution, and repair statistics await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2509.23735",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2509.23735",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2509.23735"
+  }
+}

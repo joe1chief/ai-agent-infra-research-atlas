@@ -1,0 +1,165 @@
+{
+  "work_id": "arxiv-2507-06134",
+  "slug": "openagentsafety-a-comprehensive-framework-for-evaluating-real-world-ai-a-2507-06134",
+  "title": {
+    "original": "OpenAgentSafety: A Comprehensive Framework for Evaluating Real-World AI Agent Safety",
+    "zh": "OpenAgentSafety：评估真实世界AI 智能体安全性的综合框架",
+    "en": "OpenAgentSafety: A Comprehensive Framework for Evaluating Real-World AI Agent Safety"
+  },
+  "authors": [
+    {
+      "name": "Sanidhya Vijayvargiya",
+      "affiliations": []
+    },
+    {
+      "name": "Aditya Bharat Soni",
+      "affiliations": []
+    },
+    {
+      "name": "Xuhui Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Zora Zhiruo Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Nouha Dziri",
+      "affiliations": []
+    },
+    {
+      "name": "Graham Neubig",
+      "affiliations": []
+    },
+    {
+      "name": "Maarten Sap",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2507.06134",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-07-08",
+      "latest_revision_date": "2026-02-16",
+      "url": "https://arxiv.org/abs/2507.06134"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-07-08",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-02-16"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "OpenAgentSafety 的真实工具 Harness、风险分类、任务扩展接口和混合 Judge 构成模块化安全评测平台。",
+    "en": "OpenAgentSafety's real-tool harness, risk taxonomy, task-extension interfaces, and hybrid judges form a modular safety-evaluation platform."
+  },
+  "abstract": {
+    "zh": "OpenAgentSafety 是真实工具驱动的模块化 Agent 安全评测框架，覆盖浏览器、代码、文件、Shell 和消息等多轮、多用户任务。",
+    "en": "OpenAgentSafety is a modular real-tool safety framework spanning browser, code, filesystem, shell, and messaging interactions in multi-turn, multi-user tasks."
+  },
+  "problem": {
+    "zh": "既有安全基准多用模拟环境、狭窄领域或不真实工具抽象，难观察 Agent 在真实副作用和良性/恶意混合意图下的风险。",
+    "en": "Existing safety benchmarks use simulated environments, narrow domains, or unrealistic tool abstractions, hiding risks under real side effects and mixed benign/adversarial intent."
+  },
+  "approach": {
+    "zh": "框架定义八类关键风险，组织大量多轮任务并接入真实工具，以规则分析和 LLM Judge 联合检测显性与隐性不安全行为。",
+    "en": "The framework defines eight risk categories, runs many multi-turn tasks against real tools, and combines rule checks with LLM judges for overt and subtle unsafe behavior."
+  },
+  "system_design": {
+    "zh": "可扩展 Harness 注册工具、任务、网站和攻击策略，隔离执行 Agent 轨迹，再由确定性规则与语义 Judge 汇总风险标签。",
+    "en": "An extensible harness registers tools, tasks, sites, and attacks, runs isolated agent trajectories, and aggregates deterministic rules with semantic-judge risk labels."
+  },
+  "key_results": {
+    "zh": "多种主流模型在安全脆弱任务中频繁出现不安全行为，说明更强通用能力尚未转化为可部署的工具安全性。",
+    "en": "Prominent models frequently behave unsafely on vulnerable tasks, showing that stronger general capability has not translated into deployable tool safety."
+  },
+  "limitations": {
+    "zh": "LLM Judge 可能误判微妙风险，真实工具仍在受控账户和任务中运行；八类风险和现有攻击不能覆盖长期现实滥用。",
+    "en": "LLM judges may misclassify subtle harm, real tools still run in controlled accounts and tasks, and the current taxonomy cannot cover all long-term misuse."
+  },
+  "evaluation": {
+    "models": [
+      "Claude 3.7 Sonnet",
+      "OpenAI o3-mini"
+    ],
+    "workloads": [
+      "OpenAgentSafety multi-turn real-tool tasks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Unsafe behavior on safety-vulnerable tasks with Claude 3.7 Sonnet",
+        "value": 51.2,
+        "unit": "%",
+        "higher_is_better": false
+      },
+      {
+        "name": "Unsafe behavior on safety-vulnerable tasks with o3-mini",
+        "value": 72.7,
+        "unit": "%",
+        "higher_is_better": false
+      },
+      {
+        "name": "Safety risk categories",
+        "value": 8,
+        "unit": "categories"
+      },
+      {
+        "name": "Multi-turn multi-user tasks",
+        "value": ">350",
+        "unit": "tasks"
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.06134",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "OpenAgentSafety",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2507.06134",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2507.06134"
+  }
+}

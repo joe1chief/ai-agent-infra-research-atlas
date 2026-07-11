@@ -1,0 +1,132 @@
+{
+  "work_id": "arxiv-2507-03616",
+  "slug": "evoagentx-an-automated-framework-for-evolving-agentic-workflows-2507-03616",
+  "title": {
+    "original": "EvoAgentX: An Automated Framework for Evolving Agentic Workflows",
+    "zh": "EvoAgentX：用于演进智能体工作流的自动化框架",
+    "en": "EvoAgentX: An Automated Framework for Evolving Agentic Workflows"
+  },
+  "authors": [
+    {
+      "name": "Yingxu Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Siwei Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Jinyuan Fang",
+      "affiliations": []
+    },
+    {
+      "name": "Zaiqiao Meng",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2507.03616",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-07-04",
+      "latest_revision_date": "2025-09-23",
+      "url": "https://arxiv.org/abs/2507.03616"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-07-04",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-09-23"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-1",
+  "tags": [
+    "agent-runtime",
+    "workflow",
+    "orchestration"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "EvoAgentX 以统一五层运行时承载工作流生成、执行、进化和评测，并提供可替换的多 Agent 优化器接口。",
+    "en": "EvoAgentX supplies a common five-layer runtime for workflow generation, execution, evolution, and evaluation with swappable multi-agent optimizer interfaces."
+  },
+  "abstract": {
+    "zh": "EvoAgentX 是自动生成、执行并进化优化多 Agent 工作流的开源平台。其五层模块化架构把基础组件、Agent、工作流、进化算法和评测解耦，并集成 TextGrad、AFlow 与 MIPRO 来迭代修改提示、工具配置和拓扑。",
+    "en": "EvoAgentX is an open platform for generating, executing, and evolutionarily optimizing multi-agent workflows. Its five-layer architecture separates components, agents, workflows, evolution, and evaluation, integrating TextGrad, AFlow, and MIPRO to refine prompts, tools, and topology."
+  },
+  "problem": {
+    "zh": "多 Agent 框架通常依赖人工配置，优化算法又分散在独立实现中，导致工作流难以持续演化或在统一运行时中比较优化策略。",
+    "en": "Multi-agent frameworks usually require manual configuration, while optimization algorithms live in isolated implementations, preventing continuous evolution and controlled comparison within one runtime."
+  },
+  "approach": {
+    "zh": "平台把提示、工具和工作流图表示为可变配置，以评测反馈驱动选定优化器提出新版本，再由统一执行与评估层闭环比较。",
+    "en": "The platform represents prompts, tools, and workflow graphs as mutable configurations, lets a chosen optimizer propose revisions from evaluation feedback, and compares versions through common execution and evaluation layers."
+  },
+  "system_design": {
+    "zh": "五层栈自下而上提供组件接口、Agent 封装、工作流图执行、进化算法适配和任务评测；优化层可替换而不改变底层 Agent 与执行契约。",
+    "en": "Five layers provide component interfaces, agent wrappers, graph execution, optimizer adapters, and task evaluation. Evolution algorithms are swappable without changing the underlying agent or runtime contract."
+  },
+  "key_results": {
+    "zh": "在 HotPotQA、MBPP、MATH 和 GAIA 上，进化后的工作流被报告在多跳问答、代码、数学与真实任务中持续优于初始配置。",
+    "en": "On HotPotQA, MBPP, MATH, and GAIA, evolved workflows are reported to consistently improve over initial configurations across reasoning, coding, mathematics, and real-world tasks."
+  },
+  "limitations": {
+    "zh": "进化质量受评测集和搜索预算约束，反复调用 LLM 的成本可能较高；基准上的拓扑改进也可能过拟合，摘要未讨论安全约束或线上回滚。",
+    "en": "Evolution is bounded by benchmark feedback and search budget and can require many LLM calls; optimized topologies may overfit, while safety constraints and online rollback are not covered in the abstract."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["HotPotQA", "MBPP", "MATH", "GAIA"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["initial non-evolved workflows"],
+    "metrics": [
+      {"name": "HotPotQA F1 increase", "value": 7.44, "unit": "%", "higher_is_better": true},
+      {"name": "MBPP pass@1 increase", "value": 10, "unit": "%", "higher_is_better": true},
+      {"name": "MATH solve-accuracy increase", "value": 10, "unit": "%", "higher_is_better": true},
+      {"name": "GAIA overall accuracy increase", "value": "up to 20%", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "四项基准和四个改进值来自官方摘要；底座模型、硬件、优化预算及 TextGrad/AFlow/MIPRO 分项结果待全文审计。",
+      "en": "Four benchmarks and four improvement values come from the official abstract; base models, hardware, optimization budget, and per-optimizer results await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.03616",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {"type": "code", "url": "https://github.com/EvoAgentX/EvoAgentX", "title": "EvoAgentX source code"}
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "EvoAgentX",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2507.03616",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2507.03616"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://joe1chief.github.io/agent-infra-atlas/schema/pdf-mirror-manifest.schema.json",
+  "title": "Approved open PDF mirror manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "pdfs"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "pdfs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["work_id", "url", "license", "sha256", "size_bytes", "output_filename"],
+        "properties": {
+          "work_id": { "type": "string", "pattern": "^(?:arxiv|openreview|doi)-[a-z0-9._-]+$" },
+          "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+          "license": { "enum": ["CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC0-1.0", "PDDL-1.0", "PUBLIC-DOMAIN"] },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "size_bytes": { "type": "integer", "minimum": 1, "maximum": 20971520 },
+          "output_filename": { "type": "string", "pattern": "^[A-Za-z0-9._-]+\\.pdf$" }
+        }
+      }
+    }
+  }
+}

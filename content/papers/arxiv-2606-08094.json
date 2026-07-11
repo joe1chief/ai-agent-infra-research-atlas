@@ -1,0 +1,181 @@
+{
+  "work_id": "arxiv-2606-08094",
+  "slug": "vla-cpp-a-unified-inference-runtime-for-vision-language-action-models-2606-08094",
+  "title": {
+    "original": "vla.cpp: A Unified Inference Runtime for Vision-Language-Action Models",
+    "zh": "vla.cpp：视觉-语言-动作模型的统一推理运行时",
+    "en": "vla.cpp: A Unified Inference Runtime for Vision-Language-Action Models"
+  },
+  "authors": [
+    {
+      "name": "Khanh D. Nguyen",
+      "affiliations": []
+    },
+    {
+      "name": "Hung T. Ho",
+      "affiliations": []
+    },
+    {
+      "name": "Chinh T. Nguyen",
+      "affiliations": []
+    },
+    {
+      "name": "Thanh Q. Duong",
+      "affiliations": []
+    },
+    {
+      "name": "Linh D. Le",
+      "affiliations": []
+    },
+    {
+      "name": "Duy M. H. Nguyen",
+      "affiliations": []
+    },
+    {
+      "name": "Vien A. Ngo",
+      "affiliations": []
+    },
+    {
+      "name": "An T. Le",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2606.08094",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-06-06",
+      "latest_revision_date": "2026-06-06",
+      "url": "https://arxiv.org/abs/2606.08094"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-06-06",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-06-06"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "vla.cpp 以统一 C++ 运行时、模型 bundle、动作头执行和跨硬件后端替代模型专用 Python 栈，属于具身推理基础设施。",
+    "en": "vla.cpp replaces model-specific Python stacks with a unified C++ runtime, model bundles, action-head execution, and cross-hardware backends, making it embodied-inference infrastructure."
+  },
+  "abstract": {
+    "zh": "vla.cpp 基于 llama.cpp 构建便携式 C++ VLA 推理运行时，以统一请求协议服务多种骨干和动作头，并原生执行带缓存视觉语言前缀的 flow-matching/扩散动作生成。",
+    "en": "vla.cpp is a portable C++ VLA runtime built on llama.cpp, serving multiple backbones and action heads through one protocol and natively executing flow-matching or diffusion action generation from a cached vision-language prefix."
+  },
+  "problem": {
+    "zh": "VLA 策略通常以依赖工作站 GPU 的 Python/PyTorch 工程交付，与机器人上的嵌入式硬件、低时延和可部署包要求不匹配。",
+    "en": "VLA policies are usually shipped as workstation-oriented Python/PyTorch projects that do not fit embedded robot hardware, low-latency execution, or self-contained deployment."
+  },
+  "approach": {
+    "zh": "运行时抽象共同的视觉语言前缀与跨注意力动作专家路径，将模型打包为自包含 bundle，并用跨硬件 roofline 分析定向优化 batch-1 GEMM。",
+    "en": "The runtime abstracts a shared vision-language prefix plus cross-attending action-expert path, packages models as self-contained bundles, and uses cross-hardware roofline analysis to optimize batch-one GEMM."
+  },
+  "system_design": {
+    "zh": "bundle 包含权重、模型描述和 tokenizer，统一前端处理观测，缓存骨干前缀，动作头跨多个求解步生成控制序列，后端映射到桌面或嵌入式设备。",
+    "en": "A bundle contains weights, model description, and tokenizer; a common frontend processes observations, caches the backbone prefix, action heads integrate control over solver steps, and backends target desktop or embedded devices."
+  },
+  "key_results": {
+    "zh": "同一 bundle 可跨多个硬件层运行并保持任务表现，针对计算受限特征设计的 GEMM 显著降低动作步时延和内存需求。",
+    "en": "The same bundle runs across several hardware tiers while preserving task behavior, and a compute-aware GEMM materially reduces action-step latency and memory needs."
+  },
+  "limitations": {
+    "zh": "当前覆盖的架构和机器人任务有限，模型转换与量化可能引入误差；运行时解决推理部署，但不提供机器人安全、驱动兼容或闭环稳定保证。",
+    "en": "Architecture and robot-task coverage remains limited and conversion or quantization can introduce error; the runtime addresses inference, not robot safety, driver compatibility, or closed-loop stability guarantees."
+  },
+  "evaluation": {
+    "models": [
+      "BitVLA",
+      "seven VLA architectures across five backbones and four action-head families"
+    ],
+    "workloads": [
+      "LIBERO-Object",
+      "ALOHA moving-target stress test",
+      "flow-matching VLA inference",
+      "diffusion VLA inference"
+    ],
+    "hardware": [
+      "consumer GPU",
+      "8 GB embedded module",
+      "three hardware tiers"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "state-of-the-art LIBERO-Object checkpoint"
+    ],
+    "metrics": [
+      {
+        "name": "BitVLA task success rate",
+        "value": 100,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "BitVLA runtime memory",
+        "value": 1.3,
+        "unit": "GiB",
+        "higher_is_better": false
+      },
+      {
+        "name": "Per-step latency speedup from IMMA ladder GEMM",
+        "value": 4.5,
+        "unit": "x",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2606.08094",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "demo",
+      "title": "vla.cpp code, demos, and benchmark scaffold",
+      "url": "https://fai-modelopt-tech.github.io/vla-cpp.github.io/",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "vla.cpp",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2606.08094",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2606.08094"
+  }
+}

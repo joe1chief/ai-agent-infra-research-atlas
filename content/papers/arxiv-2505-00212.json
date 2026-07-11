@@ -1,0 +1,180 @@
+{
+  "work_id": "arxiv-2505-00212",
+  "slug": "which-agent-causes-task-failures-and-when-on-automated-failure-attributi-2505-00212",
+  "title": {
+    "original": "Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems",
+    "zh": "哪个代理导致任务失败以及何时失败？关于LLM多智能体系统的自动故障归因",
+    "en": "Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems"
+  },
+  "authors": [
+    {
+      "name": "Shaokun Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Ming Yin",
+      "affiliations": []
+    },
+    {
+      "name": "Jieyu Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Jiale Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Zhiguang Han",
+      "affiliations": []
+    },
+    {
+      "name": "Jingyang Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Beibin Li",
+      "affiliations": []
+    },
+    {
+      "name": "Chi Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Huazheng Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Yiran Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Qingyun Wu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2505.00212",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v3",
+      "first_public_date": "2025-04-30",
+      "latest_revision_date": "2025-06-02",
+      "url": "https://arxiv.org/abs/2505.00212"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-04-30",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-06-02"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-4",
+  "tags": [
+    "multi-agent",
+    "coordination",
+    "communication"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Who&When 将跨 Agent 日志、责任标注和自动归因器组成可复用诊断数据与评测基础设施。",
+    "en": "Who&When combines cross-agent logs, responsibility labels, and automated attributers into reusable diagnostic data and evaluation infrastructure."
+  },
+  "abstract": {
+    "zh": "该工作把多 Agent 任务失败归因定义为独立诊断问题，并以 Who&When 日志集研究“哪个 Agent、在哪一步”导致最终失败。",
+    "en": "This work formulates multi-agent failure attribution as a distinct diagnostic problem and uses Who&When logs to identify which agent and which step caused a task failure."
+  },
+  "problem": {
+    "zh": "多 Agent 系统出错后，最终失败与上游责任 Agent、决定性错误步骤相隔很远，人工追溯成本高且难形成一致标签。",
+    "en": "After a multi-agent system fails, the responsible upstream agent and decisive step may be far from the final outcome, making manual tracing costly and inconsistent."
+  },
+  "approach": {
+    "zh": "作者收集多种 LLM 多 Agent 系统的失败日志，细粒度标注责任主体和步骤，并比较三类自动归因方法。",
+    "en": "The authors collect failure logs from diverse LLM multi-agent systems, annotate responsible agents and decisive steps, and compare three automated attribution methods."
+  },
+  "system_design": {
+    "zh": "Who&When 流水线连接任务运行、跨 Agent 消息与工具轨迹、人工责任标签、候选归因器以及按 Agent/步骤拆分的评分。",
+    "en": "The Who&When pipeline links task runs, cross-agent messages and tool traces, human responsibility labels, candidate attributers, and separate agent/step scoring."
+  },
+  "key_results": {
+    "zh": "最佳方法尚能一定程度定位责任 Agent，但决定性步骤识别远弱于主体识别，先进推理模型也未达到实用诊断水平。",
+    "en": "The best method has some ability to locate the responsible agent, but decisive-step attribution is much weaker, and frontier reasoning models remain impractical diagnosticians."
+  },
+  "limitations": {
+    "zh": "归因标签依赖对单一责任链的人工判断，数据覆盖有限的系统与失败类型；共同诱因、延迟影响和多主体责任仍难表达。",
+    "en": "Labels rely on human judgments of responsibility over a limited set of systems and failures; joint causes, delayed effects, and shared responsibility remain difficult to represent."
+  },
+  "evaluation": {
+    "models": [
+      "OpenAI o1",
+      "DeepSeek R1"
+    ],
+    "workloads": [
+      "Who&When multi-agent failure logs"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Random failure attribution"
+    ],
+    "metrics": [
+      {
+        "name": "Failure-responsible agent attribution accuracy",
+        "value": 53.5,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Decisive failure-step attribution accuracy",
+        "value": 14.2,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.00212",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "Who&When code and dataset repository",
+      "url": "https://github.com/mingyin1/Agents_Failure_Attribution",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2505.00212",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2505.00212"
+  }
+}

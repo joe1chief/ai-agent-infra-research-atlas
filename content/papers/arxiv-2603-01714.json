@@ -1,0 +1,168 @@
+{
+  "work_id": "arxiv-2603-01714",
+  "slug": "topocurate-modeling-interaction-topology-for-tool-use-agent-training-2603-01714",
+  "title": {
+    "original": "TopoCurate:Modeling Interaction Topology for Tool-Use Agent Training",
+    "zh": "TopoCurate：工具使用代理训练的交互拓扑建模",
+    "en": "TopoCurate:Modeling Interaction Topology for Tool-Use Agent Training"
+  },
+  "authors": [
+    {
+      "name": "Jinluan Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Yuxin Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Zhengyu Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Chengcheng Han",
+      "affiliations": []
+    },
+    {
+      "name": "Yueqing Sun",
+      "affiliations": []
+    },
+    {
+      "name": "Qi Gu",
+      "affiliations": []
+    },
+    {
+      "name": "Hui Su",
+      "affiliations": []
+    },
+    {
+      "name": "Xunliang Cai",
+      "affiliations": []
+    },
+    {
+      "name": "Fei Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Kun Kuang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2603.01714",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-03-02",
+      "latest_revision_date": "2026-03-02",
+      "url": "https://arxiv.org/abs/2603.01714"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-03-02",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-02"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "sandbox",
+    "execution-environment"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "TopoCurate 将多次工具交互压缩为可计算拓扑，并输出 SFT/RL 选择信号，是可插入训练栈的数据治理组件。",
+    "en": "TopoCurate turns repeated tool interactions into a computable topology and emits SFT/RL selection signals as a reusable training-stack curation component."
+  },
+  "abstract": {
+    "zh": "TopoCurate 将同一工具任务的多次 rollout 投影为交互拓扑，据此选择具恢复性和策略多样性的 SFT 轨迹及信息量更高的 RL 任务。",
+    "en": "TopoCurate projects repeated rollouts of a tool task into an interaction topology, selecting recovery-rich, diverse SFT trajectories and structurally informative RL tasks."
+  },
+  "problem": {
+    "zh": "仅按成功与通过率筛选会保留冗余轨迹、忽略错误恢复，并把结构丰富任务和简单任务视为同等训练信号。",
+    "en": "Outcome-only filtering retains redundant trajectories, overlooks error recovery, and treats structurally rich tasks as equivalent to trivial ones."
+  },
+  "approach": {
+    "zh": "方法把语义等价的动作—观察状态合并成商拓扑，再用恢复、效率、策略多样性、错误分支和异质性指标进行双通道筛选。",
+    "en": "Semantically equivalent action-observation states are merged into a quotient topology, then recovery, efficiency, diversity, error branching, and heterogeneity drive dual selection."
+  },
+  "system_design": {
+    "zh": "系统先收集每任务多次轨迹，构建统一状态图与分支统计，再分别输出 SFT 轨迹队列和高信噪比 RL 任务队列。",
+    "en": "The system gathers multiple trials per task, builds a unified state graph with branch statistics, and emits separate SFT-trajectory and high-signal RL-task queues."
+  },
+  "key_results": {
+    "zh": "交互感知选择在工具调用基准上同时改善 SFT 与 RL，说明结构信息可缓解模式坍缩和稀疏奖励下的弱梯度。",
+    "en": "Interaction-aware selection improves both SFT and RL on tool-use benchmarks, indicating that structure can reduce mode collapse and weak gradients under sparse rewards."
+  },
+  "limitations": {
+    "zh": "拓扑质量依赖语义等价判断，多次 rollout 和图构建增加前置成本；当前证据只覆盖少数工具基准。",
+    "en": "Topology quality depends on semantic-equivalence judgments, multi-trial graph construction adds cost, and evidence currently covers only a small set of tool benchmarks."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "BFCLv3",
+      "Tau2 Bench"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "State-of-the-art SFT curation baselines",
+      "State-of-the-art RL task-selection baselines"
+    ],
+    "metrics": [
+      {
+        "name": "SFT improvement over baseline",
+        "value": 4.2,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "RL improvement over baseline",
+        "value": 6.9,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.01714",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "TopoCurate",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2603.01714",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2603.01714"
+  }
+}

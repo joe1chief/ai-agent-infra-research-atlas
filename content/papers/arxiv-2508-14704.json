@@ -1,0 +1,198 @@
+{
+  "work_id": "arxiv-2508-14704",
+  "slug": "mcp-universe-benchmarking-large-language-models-with-real-world-model-co-2508-14704",
+  "title": {
+    "original": "MCP-Universe: Benchmarking Large Language Models with Real-World Model Context Protocol Servers",
+    "zh": "MCP-Universe：使用真实世界模型上下文协议服务器对大型语言模型进行基准测试",
+    "en": "MCP-Universe: Benchmarking Large Language Models with Real-World Model Context Protocol Servers"
+  },
+  "authors": [
+    {
+      "name": "Ziyang Luo",
+      "affiliations": []
+    },
+    {
+      "name": "Zhiqi Shen",
+      "affiliations": []
+    },
+    {
+      "name": "Wenzhuo Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Zirui Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Prathyusha Jwalapuram",
+      "affiliations": []
+    },
+    {
+      "name": "Amrita Saha",
+      "affiliations": []
+    },
+    {
+      "name": "Doyen Sahoo",
+      "affiliations": []
+    },
+    {
+      "name": "Silvio Savarese",
+      "affiliations": []
+    },
+    {
+      "name": "Caiming Xiong",
+      "affiliations": []
+    },
+    {
+      "name": "Junnan Li",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2508.14704",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-08-20",
+      "latest_revision_date": "2025-08-20",
+      "url": "https://arxiv.org/abs/2508.14704"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-08-20",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-08-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-7",
+  "tags": [
+    "agent-protocol",
+    "identity",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "MCP-Universe 交付真实 Server 适配、长时程 Runner 和静态/动态执行评测器，可扩展到新 Agent 与工具。",
+    "en": "MCP-Universe delivers real-server adapters, a long-horizon runner, and static/dynamic execution evaluators extensible to new agents and tools."
+  },
+  "abstract": {
+    "zh": "MCP-Universe 让 LLM 与真实 MCP Server 交互完成六类长时程任务，并以静态、动态和格式执行器核验真实世界结果。",
+    "en": "MCP-Universe makes LLMs interact with real MCP servers on six long-horizon domains and verifies outcomes with format, static, and dynamic execution-based evaluators."
+  },
+  "problem": {
+    "zh": "简化工具基准无法覆盖不熟悉 Server、长交互导致的上下文膨胀，以及时间敏感结果需要实时真值的评测难题。",
+    "en": "Simplified tool benchmarks omit unfamiliar servers, context growth over long interactions, and the need for live ground truth on time-sensitive outcomes."
+  },
+  "approach": {
+    "zh": "基准接入跨导航、仓库、金融、3D、浏览器和搜索的真实 Server，并按任务类型选择格式、静态内容或实时真值评测器。",
+    "en": "Real servers span navigation, repositories, finance, 3D design, browser automation, and search, with format, static-content, or live-ground-truth evaluators per task."
+  },
+  "system_design": {
+    "zh": "可扩展框架提供 Server 适配、Agent Runner、交互/上下文记录、三类执行评测器和 UI，允许新增 Agent 与 Server。",
+    "en": "An extensible framework provides server adapters, an agent runner, interaction/context logging, three evaluator classes, and a UI for adding agents and servers."
+  },
+  "key_results": {
+    "zh": "先进模型和企业 Agent 在真实 Server 上仍表现有限，主要受到长上下文增长和不熟悉工具语义的双重挑战。",
+    "en": "Advanced models and enterprise agents remain limited on real servers, with interaction-driven context growth and unfamiliar tool semantics emerging as dual challenges."
+  },
+  "limitations": {
+    "zh": "只覆盖少数 Server 和六个域，实时评测会受外部 API 变化影响；凭据、成本和副作用也限制完全可复现性。",
+    "en": "Coverage is limited to a small server set and six domains, live evaluation changes with external APIs, and credentials, cost, and side effects constrain reproducibility."
+  },
+  "evaluation": {
+    "models": [
+      "GPT-5",
+      "Grok 4",
+      "Claude 4 Sonnet",
+      "Cursor"
+    ],
+    "workloads": [
+      "Location Navigation",
+      "Repository Management",
+      "Financial Analysis",
+      "3D Design",
+      "Browser Automation",
+      "Web Searching"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Standard ReAct frameworks"
+    ],
+    "metrics": [
+      {
+        "name": "GPT-5 task success rate",
+        "value": 43.72,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Grok 4 task success rate",
+        "value": 33.33,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Claude 4 Sonnet task success rate",
+        "value": 29.44,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "DeepSeek-V3.2",
+      "seed_report_path": "2025/deepseek/2025-12_deepseek-v3.2.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 18,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.14704",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {
+      "type": "documentation",
+      "title": "MCP-Universe project page",
+      "url": "https://mcp-universe.github.io",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "MCP-Universe",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2508.14704",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2508.14704"
+  }
+}

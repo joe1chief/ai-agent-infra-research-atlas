@@ -1,0 +1,170 @@
+{
+  "work_id": "arxiv-2606-08340",
+  "slug": "benchmarking-open-ended-multi-agent-coordination-in-language-agents-2606-08340",
+  "title": {
+    "original": "Benchmarking Open-Ended Multi-Agent Coordination in Language Agents",
+    "zh": "语言智能体开放式多智能体协调基准评测",
+    "en": "Benchmarking Open-Ended Multi-Agent Coordination in Language Agents"
+  },
+  "authors": [
+    {
+      "name": "Kale-ab Abebe Tessera",
+      "affiliations": []
+    },
+    {
+      "name": "Andras Szecsenyi",
+      "affiliations": []
+    },
+    {
+      "name": "Cameron Barker",
+      "affiliations": []
+    },
+    {
+      "name": "Alexander Rutherford",
+      "affiliations": []
+    },
+    {
+      "name": "Davide Paglieri",
+      "affiliations": []
+    },
+    {
+      "name": "Aidan Scannell",
+      "affiliations": []
+    },
+    {
+      "name": "Henry Gouk",
+      "affiliations": []
+    },
+    {
+      "name": "Elliot J. Crowley",
+      "affiliations": []
+    },
+    {
+      "name": "Tim Rocktäschel",
+      "affiliations": []
+    },
+    {
+      "name": "Amos Storkey",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2606.08340",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-06-06",
+      "latest_revision_date": "2026-06-06",
+      "url": "https://arxiv.org/abs/2606.08340"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-06-06",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-06-06"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-4",
+  "tags": [
+    "multi-agent",
+    "coordination",
+    "communication"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "alem 提供 JAX 并行环境、程序化协调难度和分离奖励，是长期开放式多 Agent 训练与评测底座。",
+    "en": "alem provides a parallel JAX environment, procedural coordination difficulty, and separated rewards as a foundation for long-horizon multi-agent training and evaluation."
+  },
+  "abstract": {
+    "zh": "alem 是基于 JAX 的开放式多 Agent 生存世界，将程序化协作任务、软专长、通信和难度控制嵌入探索、制作、交易与战斗。",
+    "en": "alem is a JAX-based open-ended multi-agent survival world embedding procedural coordination tasks, soft specialization, communication, and controllable difficulty into exploration, crafting, trade, and combat."
+  },
+  "problem": {
+    "zh": "现有评测通常只考单 Agent、短交互或高度结构化合作，无法同时测量长时程计划、角色分配和开放式协调。",
+    "en": "Existing evaluations usually isolate single agents, short interactions, or highly structured cooperation and cannot jointly measure long-horizon planning, role allocation, and open coordination."
+  },
+  "approach": {
+    "zh": "基准在可程序化的 Craftax 式世界中控制协调难度，让同模型团队零样本协作，并以训练充分的 MARL Agent 作为参照。",
+    "en": "The benchmark controls coordination difficulty in a procedural Craftax-like world, evaluates homogeneous LLM teams zero-shot, and compares trained MARL references."
+  },
+  "system_design": {
+    "zh": "JAX 环境并行模拟局部观测、资源、角色能力、消息和团队奖励，记录基础任务收益与协调收益以分离两类能力。",
+    "en": "The JAX environment parallelizes local observations, resources, role capabilities, messages, and team rewards, separating base-task return from coordination return."
+  },
+  "key_results": {
+    "zh": "当前 LLM 整体远未解决该环境，且强单体任务收益不保证协调收益；通信是最大贡献因素，记忆和推理主要帮助维持多步计划。",
+    "en": "Current LLM teams remain far from solving the environment, and strong individual-task return does not ensure coordination; communication contributes most, with memory and reasoning aiding plans."
+  },
+  "limitations": {
+    "zh": "同质、零样本团队和游戏化世界不能覆盖现实组织的异构工具、持久身份、经济激励或人类参与。",
+    "en": "Homogeneous zero-shot teams in a game world do not cover heterogeneous tools, persistent identity, economic incentives, or human participation in real organizations."
+  },
+  "evaluation": {
+    "models": [
+      "Gemini 3.1 Pro High",
+      "GPT-5.4 High"
+    ],
+    "workloads": [
+      "alem open-ended multi-agent coordination"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "MARL agents trained for one billion steps"
+    ],
+    "metrics": [
+      {
+        "name": "Average normalized return of evaluated LLM agents",
+        "value": "~6",
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2606.08340",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "alem benchmark environment",
+      "url": "https://github.com/alem-world/alem-env",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2606.08340",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2606.08340"
+  }
+}

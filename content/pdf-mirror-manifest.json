@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "pdfs": [
+    {
+      "work_id": "arxiv-2603-17884",
+      "url": "https://arxiv.org/pdf/2603.17884",
+      "license": "CC-BY-4.0",
+      "sha256": "d63a68cd5621a824f9c334dde8fbd488ffa77c05d301ddc29a165ca20221fc9b",
+      "size_bytes": 1537628,
+      "output_filename": "arxiv-2603-17884.pdf"
+    }
+  ]
+}

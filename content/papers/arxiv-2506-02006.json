@@ -1,0 +1,141 @@
+{
+  "work_id": "arxiv-2506-02006",
+  "slug": "morphserve-efficient-and-workload-aware-llm-serving-via-runtime-quantize-2506-02006",
+  "title": {
+    "original": "MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing",
+    "zh": "MorphServe：通过运行时量化层交换和KV缓存调整大小提供高效且具有工作负载感知的LLM服务",
+    "en": "MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing"
+  },
+  "authors": [
+    {
+      "name": "Zhaoyuan Su",
+      "affiliations": []
+    },
+    {
+      "name": "Zeyu Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Tingfeng Lan",
+      "affiliations": []
+    },
+    {
+      "name": "Zirui Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Haiying Shen",
+      "affiliations": []
+    },
+    {
+      "name": "Juncheng Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Yue Cheng",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2506.02006",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-05-24",
+      "latest_revision_date": "2026-01-07",
+      "url": "https://arxiv.org/abs/2506.02006"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-05-24",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-07"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "MorphServe 提供运行时量化层切换和压力感知 KV 调节两个可复用控制环，直接作用于动态负载下的服务 SLO。",
+    "en": "MorphServe contributes reusable control loops for runtime quantized-layer swapping and pressure-aware KV resizing that directly manage serving SLOs under dynamic load."
+  },
+  "abstract": {
+    "zh": "MorphServe 是面向突发与动态负载的弹性 LLM 服务框架，可在运行时异步替换部分量化层并按内存压力调整 KV 缓存容量。它试图避免全精度服务在高负载下违约，以及静态量化长期损伤生成质量的二选一。",
+    "en": "MorphServe is an elastic LLM serving framework for bursty workloads that asynchronously swaps selected layers for quantized alternatives and resizes KV capacity in response to memory pressure. It avoids choosing permanently between full-precision SLO failures and static-quantization quality loss."
+  },
+  "problem": {
+    "zh": "固定精度和固定缓存配置无法跟随负载与显存压力变化：满精度可能导致 SLO 违约，永久量化又会持续降低质量。",
+    "en": "Fixed precision and cache sizing cannot track changing load and memory pressure: full precision may miss SLOs, while permanent quantization imposes persistent quality degradation."
+  },
+  "approach": {
+    "zh": "系统在 token 粒度异步切换影响较小的量化层，并依据实时内存压力缩放 KV 缓存，使模型状态在配置转换期间保持连续。",
+    "en": "The runtime asynchronously swaps less influential layers at token granularity and pressure-sizes the KV cache, preserving request state while configurations change."
+  },
+  "system_design": {
+    "zh": "MorphServe 将量化层替换器与压力感知缓存控制器并入推理运行时；两个异步机制可与现有调度和注意力优化配合，在负载回落后恢复更高精度与缓存配置。",
+    "en": "MorphServe embeds a quantized-layer swapper and a pressure-aware cache controller in the serving runtime. Both mechanisms operate asynchronously alongside existing schedulers and attention optimizations, allowing configurations to recover as pressure subsides."
+  },
+  "key_results": {
+    "zh": "在 Vicuna 与 Llama 系列及真实负载上，MorphServe 被报告可大幅减少 SLO 违约并改善尾部首 token 延迟，同时保持生成质量。",
+    "en": "Across Vicuna and Llama-family models with production-like traces, MorphServe is reported to sharply reduce SLO violations and improve tail time to first token without degrading generation quality."
+  },
+  "limitations": {
+    "zh": "收益来自特定模型族和负载；摘要未交代层影响估计失准、频繁切换抖动或其他量化格式与硬件上的质量边界。",
+    "en": "Evidence is limited to selected model families and traces; the abstract does not characterize misestimated layer sensitivity, swap thrashing, or quality limits across other quantizers and hardware."
+  },
+  "evaluation": {
+    "models": ["Vicuna family", "Llama family"],
+    "workloads": ["real-world dynamic serving workloads"],
+    "hardware": ["GPU serving system"],
+    "cluster_scale": null,
+    "baselines": ["full-precision serving"],
+    "metrics": [
+      {"name": "average SLO violation reduction", "value": 92.45, "unit": "%", "higher_is_better": true},
+      {"name": "P95 TTFT improvement", "value": "2.2x-3.9x", "higher_is_better": true},
+      {"name": "generation quality", "value": "no compromise reported", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "模型族、真实负载和摘要给出的 SLO/TTFT 结果已录入；GPU、数据集、质量指标和比较系统待全文审计。",
+      "en": "Model families, real workloads, and abstract-reported SLO/TTFT results are captured; GPUs, datasets, quality metrics, and comparison systems await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.02006",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "MorphServe",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2506.02006",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2506.02006"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "work_id": "arxiv-2603-19935",
+  "slug": "memori-a-persistent-memory-layer-for-efficient-context-aware-llm-agents-2603-19935",
+  "title": {
+    "original": "Memori: A Persistent Memory Layer for Efficient, Context-Aware LLM Agents",
+    "zh": "Memori：高效的上下文感知LLM代理的持久内存层",
+    "en": "Memori: A Persistent Memory Layer for Efficient, Context-Aware LLM Agents"
+  },
+  "authors": [
+    {
+      "name": "Luiz C. Borro",
+      "affiliations": []
+    },
+    {
+      "name": "Luiz A. B. Macarini",
+      "affiliations": []
+    },
+    {
+      "name": "Gordon Tindall",
+      "affiliations": []
+    },
+    {
+      "name": "Michael Montero",
+      "affiliations": []
+    },
+    {
+      "name": "Adam B. Struck",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2603.19935",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-03-20",
+      "latest_revision_date": "2026-03-20",
+      "url": "https://arxiv.org/abs/2603.19935"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-03-20",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Memori 以模型无关 API 层实现三元组抽取、摘要存储和紧凑召回，为跨模型会话提供持久记忆基础。",
+    "en": "Memori implements triple extraction, summary storage, and compact recall at a model-agnostic API layer, supplying persistent memory across models and sessions."
+  },
+  "abstract": {
+    "zh": "Memori 是模型无关的 API 层持久记忆，把原始多轮对话转化为紧凑语义三元组和会话摘要。Advanced Augmentation 流水线以结构化表示支持跨模型、跨会话的精确召回，减少把完整历史重复注入提示的 token 成本。",
+    "en": "Memori is a model-agnostic persistent-memory layer at the API boundary that converts raw dialogue into compact semantic triples and conversation summaries. Its Advanced Augmentation pipeline enables cross-model, cross-session recall without repeatedly injecting full history."
+  },
+  "problem": {
+    "zh": "现有记忆常锁定供应商，或把大量原始对话塞回上下文，造成 token 成本、噪声和跨模型迁移困难。",
+    "en": "Existing memory often creates vendor lock-in or reinjects large raw transcripts, increasing token cost and noise while making cross-model portability difficult."
+  },
+  "approach": {
+    "zh": "Advanced Augmentation 从对话抽取实体—关系—值三元组并生成会话摘要，查询时检索少量相关结构和摘要，为任意兼容 LLM 组成紧凑上下文。",
+    "en": "Advanced Augmentation extracts entity–relation–value triples and session summaries, then retrieves a small relevant subset to assemble compact context for any compatible LLM."
+  },
+  "system_design": {
+    "zh": "Memori 拦截 API 对话流，异步执行结构化抽取并写入持久层；请求前检索器选择三元组与摘要，增强器将其注入目标模型而不依赖供应商会话格式。",
+    "en": "Memori intercepts API dialogue, structures and persists it, then retrieves triples and summaries before a request and injects them into the target model without relying on a vendor session format."
+  },
+  "key_results": {
+    "zh": "LoCoMo 评测报告 Memori 以远小于完整上下文的 token 数获得较高准确率，并比其他记忆方案进一步减少输入成本。",
+    "en": "On LoCoMo, Memori is reported to achieve high accuracy with a small fraction of full-context tokens and to use fewer tokens than competing memory systems."
+  },
+  "limitations": {
+    "zh": "三元组抽取会丢失语气和复杂时序，错误结构可能长期固化；摘要未说明冲突更新、用户删除、抽取成本或非对话工具状态。",
+    "en": "Triple extraction can lose tone and complex temporal relations, while incorrect structure may persist; conflict updates, user deletion, extraction cost, and non-dialogue tool state are not described."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["LoCoMo"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": ["competing memory systems", "full-context prompting"],
+    "metrics": [
+      {"name": "LoCoMo accuracy", "value": 81.95, "unit": "%", "higher_is_better": true},
+      {"name": "tokens per query", "value": 1294, "unit": "tokens", "higher_is_better": false},
+      {"name": "fraction of full context", "value": "approximately 5%", "baseline": "full context", "higher_is_better": true},
+      {"name": "token reduction vs competing memory systems", "value": 67, "unit": "%", "higher_is_better": true},
+      {"name": "token savings vs full context", "value": "over 20x", "baseline": "full context", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "LoCoMo、两类基线和准确率/token 结果来自官方摘要；模型、硬件、竞争系统名称和成本计算待全文审计。",
+      "en": "LoCoMo, two baseline classes, and accuracy/token results come from the official abstract; models, hardware, competing system names, and cost calculations await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.19935",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Memori",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2603.19935",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2603.19935"
+  }
+}

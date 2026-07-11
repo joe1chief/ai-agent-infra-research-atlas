@@ -1,0 +1,159 @@
+{
+  "work_id": "arxiv-2504-17096",
+  "slug": "sailor-automating-distributed-training-over-dynamic-heterogeneous-and-ge-2504-17096",
+  "title": {
+    "original": "Sailor: Automating Distributed Training over Dynamic, Heterogeneous, and Geo-distributed Clusters",
+    "zh": "SAILOR：在动态、异构和地理分布式集群上自动化分布式训练",
+    "en": "Sailor: Automating Distributed Training over Dynamic, Heterogeneous, and Geo-distributed Clusters"
+  },
+  "authors": [
+    {
+      "name": "Foteini Strati",
+      "affiliations": []
+    },
+    {
+      "name": "Zhendong Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "George Manos",
+      "affiliations": []
+    },
+    {
+      "name": "Ixeia Sánchez Périz",
+      "affiliations": []
+    },
+    {
+      "name": "Qinghao Hu",
+      "affiliations": []
+    },
+    {
+      "name": "Tiancheng Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Berk Buzcu",
+      "affiliations": []
+    },
+    {
+      "name": "Song Han",
+      "affiliations": []
+    },
+    {
+      "name": "Pamela Delgado",
+      "affiliations": []
+    },
+    {
+      "name": "Ana Klimovic",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2504.17096",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-04-23",
+      "latest_revision_date": "2025-09-26",
+      "url": "https://arxiv.org/abs/2504.17096"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-04-23",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-09-26"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-2",
+  "tags": [
+    "distributed-training",
+    "parallelism",
+    "fault-tolerance"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Sailor 的资源画像、性能仿真、配置搜索与异构运行时共同支持动态跨地域训练，是可迁移的集群编排系统。",
+    "en": "Sailor combines resource profiling, simulation, configuration search, and a heterogeneous runtime for dynamic geo-distributed training, forming a portable cluster orchestrator."
+  },
+  "abstract": {
+    "zh": "Sailor 面向动态、异构且跨地域的 GPU 资源，联合配置搜索、运行时与内存仿真以及支持多种异构性的训练框架来自动选择训练方案。",
+    "en": "Sailor targets dynamic, heterogeneous, geo-distributed GPUs by combining configuration search, runtime and memory simulation, and a training framework that executes across several forms of heterogeneity."
+  },
+  "problem": {
+    "zh": "单可用区难以持续获得大规模同构高端 GPU，而跨区域混用设备会引入慢节点、网络差异和巨大的并行配置空间。",
+    "en": "Large homogeneous allocations are hard to obtain in one zone, while mixing devices across regions introduces stragglers, network disparity, and a large parallel-configuration space."
+  },
+  "approach": {
+    "zh": "系统先模拟候选配置的时间与内存占用，再用高效搜索在吞吐和成本之间选择方案，并由异构训练运行时执行。",
+    "en": "The system simulates candidate runtime and memory footprints, searches efficiently for throughput-cost configurations, and executes the selected plan through a heterogeneity-aware training runtime."
+  },
+  "system_design": {
+    "zh": "资源画像描述 GPU、链路和可用性，仿真器预测候选并行策略，搜索器排序方案，部署层把计划映射到跨区域设备并跟踪资源变化。",
+    "en": "Resource profiles describe GPUs, links, and availability; a simulator predicts candidate strategies, a search engine ranks them, and the deployment layer maps the plan onto cross-region devices while tracking changes."
+  },
+  "key_results": {
+    "zh": "论文显示自动选择能在异构、跨地域资源上取得更好的吞吐—成本权衡，避免同构框架造成的明显资源浪费。",
+    "en": "The paper shows that automated planning improves the throughput-cost trade-off on heterogeneous, geo-distributed resources and avoids substantial underutilization from homogeneous-cluster assumptions."
+  },
+  "limitations": {
+    "zh": "效果依赖仿真精度和资源可预测性；剧烈 WAN 波动、频繁抢占及重配置迁移成本可能削弱离线搜索得到的方案。",
+    "en": "Benefits depend on simulator accuracy and resource predictability; sharp WAN variation, frequent preemption, and migration costs can invalidate an offline-selected plan."
+  },
+  "evaluation": {
+    "models": [
+      "machine-learning training workloads"
+    ],
+    "workloads": [
+      "heterogeneous GPU training",
+      "geo-distributed training",
+      "dynamic-resource training"
+    ],
+    "hardware": [
+      "heterogeneous GPUs across availability zones"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "training systems designed for homogeneous resources"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.17096",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Sailor",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2504.17096",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2504.17096"
+  }
+}

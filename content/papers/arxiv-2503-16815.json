@@ -1,0 +1,132 @@
+{
+  "work_id": "arxiv-2503-16815",
+  "slug": "deft-mitigating-data-dependencies-for-flexible-communication-scheduling-2503-16815",
+  "title": {
+    "original": "DeFT: Mitigating Data Dependencies for Flexible Communication Scheduling in Distributed Training",
+    "zh": "DeFT：减轻分布式训练中灵活通信调度的数据依赖性",
+    "en": "DeFT: Mitigating Data Dependencies for Flexible Communication Scheduling in Distributed Training"
+  },
+  "authors": [
+    {
+      "name": "Lin Meng",
+      "affiliations": []
+    },
+    {
+      "name": "Yuzhong Sun",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2503.16815",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-03-21",
+      "latest_revision_date": "2025-03-21",
+      "url": "https://arxiv.org/abs/2503.16815"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-03-21",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-03-21"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-2",
+  "tags": [
+    "distributed-training",
+    "parallelism",
+    "fault-tolerance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "DeFT 将依赖分析、背包调度和收敛约束实现为通用通信调度器，可直接嵌入数据并行训练运行时。",
+    "en": "DeFT implements dependency analysis, knapsack scheduling, and convergence constraints as a general communication scheduler that can plug into data-parallel runtimes."
+  },
+  "abstract": {
+    "zh": "DeFT 是面向数据并行训练的通信调度器，通过放宽部分数据依赖并把可重叠通信选择转化为多重背包问题，扩大计算—通信重叠窗口。",
+    "en": "DeFT is a communication scheduler for data-parallel training that relaxes selected data dependencies and casts overlap selection as multiple knapsack problems to expose more compute-communication concurrency."
+  },
+  "problem": {
+    "zh": "现有调度器受到硬依赖、高覆盖率和张量切分后计算—通信时长失衡的限制，流水线中仍会留下难以填充的气泡。",
+    "en": "Existing schedulers are constrained by hard dependencies, saturated overlap coverage, and imbalanced tensor compute and communication times, leaving bubbles that simple partitioning or fusion cannot fill."
+  },
+  "approach": {
+    "zh": "DeFT 使用延迟更新消除部分硬依赖，通过更新频率和异构链路降低覆盖压力，并以正反向计算时间作为背包容量选择通信任务。",
+    "en": "DeFT uses delayed updates to remove selected hard dependencies, adjusts update frequency and heterogeneous links to reduce coverage pressure, and packs communication into forward and backward compute windows."
+  },
+  "system_design": {
+    "zh": "调度器分析张量依赖和时长，构造多重背包实例，生成延迟与链路分配计划；收敛损失量化模块约束可采用的调度变化。",
+    "en": "The scheduler profiles tensor dependencies and durations, builds knapsack instances, emits delay and link assignments, and uses quantified convergence loss to constrain permissible schedule changes."
+  },
+  "key_results": {
+    "zh": "在所测数据并行工作负载上，DeFT 相比既有通信调度器获得更高训练吞吐，同时未观察到精度损失。",
+    "en": "Across the evaluated data-parallel workloads, DeFT improves training throughput over prior communication schedulers without observed accuracy loss."
+  },
+  "limitations": {
+    "zh": "证据来自有限规模的 A100 集群；延迟更新对其他优化器和非平稳负载的收敛影响、以及在线时长估计误差仍需验证。",
+    "en": "Evidence comes from a limited A100 cluster; convergence under other optimizers and nonstationary workloads, along with errors in online duration estimates, remains to be tested."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "data-parallel training on three representative benchmarks"
+    ],
+    "hardware": [
+      "16 NVIDIA A100 GPUs"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "US-Byte",
+      "ByteScheduler"
+    ],
+    "metrics": [
+      {
+        "name": "Training speedup",
+        "value": "29-115",
+        "unit": "%",
+        "baseline": "US-Byte and ByteScheduler",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.16815",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "DeFT",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2503.16815",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2503.16815"
+  }
+}

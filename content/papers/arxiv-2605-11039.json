@@ -1,0 +1,164 @@
+{
+  "work_id": "arxiv-2605-11039",
+  "slug": "the-granularity-mismatch-in-agent-security-argument-level-provenance-sol-2605-11039",
+  "title": {
+    "original": "The Granularity Mismatch in Agent Security: Argument-Level Provenance Solves Enforcement and Isolates the LLM Reasoning Bottleneck",
+    "zh": "智能体安全中的粒度失配：参数级来源追踪实现策略执行并隔离 LLM 推理瓶颈",
+    "en": "The Granularity Mismatch in Agent Security: Argument-Level Provenance Solves Enforcement and Isolates the LLM Reasoning Bottleneck"
+  },
+  "authors": [
+    {
+      "name": "Linfeng Fan",
+      "affiliations": []
+    },
+    {
+      "name": "Ziwei Li",
+      "affiliations": []
+    },
+    {
+      "name": "Yuan Tian",
+      "affiliations": []
+    },
+    {
+      "name": "Yichen Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Rongsheng Li",
+      "affiliations": []
+    },
+    {
+      "name": "Xiong Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2605.11039",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-05-11",
+      "latest_revision_date": "2026-05-11",
+      "url": "https://arxiv.org/abs/2605.11039"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-05-11",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-11"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "PACT 的参数角色、跨步 provenance 图和 Capability Contract 检查器是可部署的混合可信工具调用参考监视器。",
+    "en": "PACT's argument roles, cross-step provenance graph, and capability-contract checks form a deployable reference monitor for mixed-trust tool calls."
+  },
+  "abstract": {
+    "zh": "PACT（Provenance-Aware Capability Contracts）在工具参数级追踪来源并按语义角色授权，避免把混合可信调用整体放行或隔离。",
+    "en": "PACT (Provenance-Aware Capability Contracts) tracks provenance at tool-argument granularity and authorizes by semantic role, avoiding all-or-nothing treatment of mixed-trust calls."
+  },
+  "problem": {
+    "zh": "调用级信任无法区分“外部内容用于检索对象”和“外部内容决定高权限目标/命令”，因而在安全与正常工作流之间被迫二选一。",
+    "en": "Invocation-level trust cannot distinguish external data used as benign content from external data controlling an authority-bearing destination or command."
+  },
+  "approach": {
+    "zh": "运行时给每个参数标注语义角色，跨重新规划追踪值来源，并检查该来源是否满足角色特定 Capability Contract。",
+    "en": "The runtime labels each argument's semantic role, tracks value provenance across replanning, and checks origins against role-specific capability contracts."
+  },
+  "system_design": {
+    "zh": "监视器位于 Agent 与工具之间，由参数角色分析、跨步 provenance 图、契约检查器和调用门组成，逐参数形成允许/拒绝决定。",
+    "en": "A monitor between agent and tools combines argument-role analysis, a cross-step provenance graph, contract checks, and a call gate to decide per argument."
+  },
+  "key_results": {
+    "zh": "Oracle provenance 下该粒度同时保持安全与效用；真实 AgentDojo 部署中也在强模型上保持安全并比调用级方案恢复更多正常任务。",
+    "en": "With oracle provenance, argument-level control preserves both security and utility; in AgentDojo it maintains security on stronger models while recovering more benign work than invocation-level controls."
+  },
+  "limitations": {
+    "zh": "部署效果取决于 provenance 推断和契约合成准确性；摘要显示安全可达但效用恢复仍有限，隐式数据流也可能逃逸追踪。",
+    "en": "Deployment depends on accurate provenance inference and contract synthesis; utility recovery remains limited even at strong security, and implicit flows may evade tracking."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Mixed-trust diagnostic suites",
+      "AgentDojo"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Flat invocation-level monitors",
+      "CaMeL"
+    ],
+    "metrics": [
+      {
+        "name": "Security under oracle provenance",
+        "value": 100,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Utility under oracle provenance",
+        "value": 100,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Security on the three strongest AgentDojo models",
+        "value": 100,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Utility recovered in AgentDojo deployments",
+        "value": "38.1–46.4",
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2605.11039",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2605.11039",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2605.11039"
+  }
+}

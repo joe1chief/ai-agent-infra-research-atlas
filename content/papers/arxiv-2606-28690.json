@@ -1,0 +1,149 @@
+{
+  "work_id": "arxiv-2606-28690",
+  "slug": "formal-security-analysis-of-agent-protocol-composition-2606-28690",
+  "title": {
+    "original": "Formal Security Analysis of Agent Protocol Composition",
+    "zh": "智能体协议组合的形式化安全分析",
+    "en": "Formal Security Analysis of Agent Protocol Composition"
+  },
+  "authors": [
+    {
+      "name": "Shenghan Zheng",
+      "affiliations": []
+    },
+    {
+      "name": "Qifan Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Zheng Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Haonan Li",
+      "affiliations": []
+    },
+    {
+      "name": "Christophe Hauser",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2606.28690",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-06-27",
+      "latest_revision_date": "2026-06-27",
+      "url": "https://arxiv.org/abs/2606.28690"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-06-27",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-06-27"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-7",
+  "tags": [
+    "agent-protocol",
+    "identity",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AgentThread 将规范到 TLA+ 再到真实 SDK 反例重放串成自动保证流水线，可复用于协议及其组合的安全审计。",
+    "en": "AgentThread links specifications to TLA+ and executable SDK counterexample replay in an automated assurance pipeline reusable for protocols and compositions."
+  },
+  "abstract": {
+    "zh": "AgentThread 将 Agent 协议规范文本编译为 TLA+ 不变量和模型，再把模型检查器反例通过适配器重放到真实 SDK。",
+    "en": "AgentThread compiles agent-protocol specification text into TLA+ invariants and models, then replays model-checker counterexamples against real SDKs through adapters."
+  },
+  "problem": {
+    "zh": "Agent 工具调用和委托协议的安全要求分散且执行不一致，单独审计规范或代码都难发现跨协议组合后的责任空白。",
+    "en": "Security requirements for agent tooling and delegation are scattered and inconsistently enforced, while specification- or code-only audits miss responsibility gaps under composition."
+  },
+  "approach": {
+    "zh": "框架从来源文本提取分层安全范围和检查项，形式化为不变量，先模型检查，再把可执行反例映射到生产 SDK/参考 Server。",
+    "en": "The framework links checks to source text, formalizes layered security requirements as invariants, model-checks them, and maps executable counterexamples to production SDKs and reference servers."
+  },
+  "system_design": {
+    "zh": "两阶段检查器包含规范解析与来源链接、TLA+ 模型生成、反例缩减、协议适配重放和按“要求/建议/责任缺失”分类的报告。",
+    "en": "The two-phase checker combines source-linked specification parsing, TLA+ generation, counterexample reduction, adapter-based replay, and reports separating requirements, recommendations, and ownership gaps."
+  },
+  "key_results": {
+    "zh": "在五种新兴协议上，AgentThread 同时发现规范级问题、SDK 实现失败和仅在协议组合时出现的额外缺陷，且跨协议执行责任普遍未分配。",
+    "en": "Across five emerging protocols, AgentThread finds specification issues, SDK failures, and additional composition-only defects, with cross-protocol enforcement responsibility largely unassigned."
+  },
+  "limitations": {
+    "zh": "保证受规范文本完整性、抽象模型和适配器保真度限制，状态空间爆炸也会约束更复杂工作流与开放实现的覆盖。",
+    "en": "Assurance is bounded by specification completeness, model abstraction, and adapter fidelity, while state-space explosion limits coverage of more complex workflows and implementations."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Five emerging agent protocols",
+      "Production SDK and reference-server conformance",
+      "Cross-protocol composition"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Specification-level findings",
+        "value": 35,
+        "unit": "findings"
+      },
+      {
+        "name": "Implementation tests",
+        "value": 80,
+        "unit": "tests"
+      },
+      {
+        "name": "Additional composition-only failures",
+        "value": 30,
+        "unit": "failures"
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2606.28690",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2606.28690",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2606.28690"
+  }
+}

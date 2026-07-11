@@ -1,0 +1,129 @@
+{
+  "work_id": "arxiv-2510-08601",
+  "slug": "mnemosyne-an-unsupervised-human-inspired-long-term-memory-architecture-f-2510-08601",
+  "title": {
+    "original": "Mnemosyne: An Unsupervised, Human-Inspired Long-Term Memory Architecture for Edge-Based LLMs",
+    "zh": "Mnemosyne：面向边缘 LLM 的无监督类人长期记忆架构",
+    "en": "Mnemosyne: An Unsupervised, Human-Inspired Long-Term Memory Architecture for Edge-Based LLMs"
+  },
+  "authors": [
+    {
+      "name": "Aneesh Jonelagadda",
+      "affiliations": []
+    },
+    {
+      "name": "Christina Hahn",
+      "affiliations": []
+    },
+    {
+      "name": "Haoze Zheng",
+      "affiliations": []
+    },
+    {
+      "name": "Salvatore Penachio",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2510.08601",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-10-07",
+      "latest_revision_date": "2025-10-07",
+      "url": "https://arxiv.org/abs/2510.08601"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-10-07",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-10-07"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Mnemosyne 将图存储、提交/剪枝、概率召回和核心摘要组合为可移植的边缘长期记忆架构。",
+    "en": "Mnemosyne combines graph storage, commit/prune operations, probabilistic recall, and a core summary into a portable edge-memory architecture."
+  },
+  "abstract": {
+    "zh": "Mnemosyne 是为边缘 LLM 设计的无监督长期记忆架构，使用图存储、内容/冗余过滤、提交与剪枝，以及带时间衰减和刷新机制的概率召回。它还从固定长度记忆子图生成核心摘要，用于保留用户人格和长期领域信息。",
+    "en": "Mnemosyne is an unsupervised long-term memory architecture for edge LLMs, combining graph storage, substance and redundancy filters, commit/prune operations, and probabilistic recall with temporal decay and refresh. A fixed-size memory subgraph also yields a concentrated core summary of persistent user traits."
+  },
+  "problem": {
+    "zh": "扩大上下文成本过高，静态 RAG 在边缘设备上又难区分语义相似但时间不同的重复对话，长期交互容易丢失时间关系与人格连续性。",
+    "en": "Brute-force context is too costly on edge devices, while static RAG struggles with repetitive, semantically similar but temporally distinct dialogue, losing chronology and user continuity."
+  },
+  "approach": {
+    "zh": "系统无监督过滤并提交新记忆到图中，按冗余和时间规律剪枝，召回时结合相关性、衰减与刷新概率，同时从局部图浓缩稳定核心信息。",
+    "en": "The system filters and commits new memories to a graph without supervision, prunes by redundancy and temporal rules, recalls with relevance/decay/refresh probabilities, and distills stable core information from a bounded subgraph."
+  },
+  "system_design": {
+    "zh": "Mnemosyne 的写路径包含内容过滤、冗余判断、图提交和剪枝，读路径执行概率召回并更新访问状态；核心摘要作为有限边缘预算下的长期人物/领域缓存。",
+    "en": "Mnemosyne's write path filters content, detects redundancy, commits graph state, and prunes; its read path performs probabilistic recall and refreshes access state, with a core summary serving as a bounded persistent cache."
+  },
+  "key_results": {
+    "zh": "纵向医疗对话盲评与 LoCoMo 结果显示，Mnemosyne 在真实感、长期记忆、时间推理和单跳召回上优于多种同骨干方法，并可在边缘约束下运行。",
+    "en": "Blind longitudinal-healthcare evaluation and LoCoMo results report stronger realism, long-term memory, temporal reasoning, and single-hop recall than several same-backbone methods under edge-compatible constraints."
+  },
+  "limitations": {
+    "zh": "医疗对话和人格连续性是主要场景，概率衰减可能误删低频但关键事实；核心摘要的偏差、隐私删除与跨设备同步未在摘要中展开。",
+    "en": "Evidence centers on healthcare dialogue and personal continuity; probabilistic decay may remove rare but important facts, while core-summary bias, privacy deletion, and device synchronization are not detailed."
+  },
+  "evaluation": {
+    "models": ["edge-based LLMs with matched backbones"],
+    "workloads": ["longitudinal healthcare dialogues", "LoCoMo"],
+    "hardware": ["edge-constrained devices"],
+    "cluster_scale": "single edge device",
+    "baselines": ["RAG", "Mem0", "OpenAI memory baseline", "same-backbone memory techniques"],
+    "metrics": [
+      {"name": "blind human-evaluation win rate", "value": 65.8, "unit": "%", "higher_is_better": true},
+      {"name": "RAG win rate", "value": 31.1, "unit": "%", "baseline": "RAG", "higher_is_better": true},
+      {"name": "LoCoMo average overall score", "value": 54.6, "unit": "%", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "医疗对话、LoCoMo、边缘目标、具名基线和三项结果来自官方摘要；模型/设备名称、样本量及分项得分待全文审计。",
+      "en": "Healthcare dialogue, LoCoMo, edge scope, named baselines, and three results come from the official abstract; model/device names, sample size, and component scores await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.08601",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Mnemosyne",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2510.08601",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2510.08601"
+  }
+}

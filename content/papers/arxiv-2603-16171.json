@@ -1,0 +1,120 @@
+{
+  "work_id": "arxiv-2603-16171",
+  "slug": "memx-a-local-first-long-term-memory-system-for-ai-assistants-2603-16171",
+  "title": {
+    "original": "MemX: A Local-First Long-Term Memory System for AI Assistants",
+    "zh": "MemX：面向人工智能助理的本地首个长期记忆系统",
+    "en": "MemX: A Local-First Long-Term Memory System for AI Assistants"
+  },
+  "authors": [
+    {
+      "name": "Lizheng Sun",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2603.16171",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-03-17",
+      "latest_revision_date": "2026-03-17",
+      "url": "https://arxiv.org/abs/2603.16171"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-03-17",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-17"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "MemX 将本地数据库、双路召回、融合重排和低置信拒绝封装为可解释的助理记忆服务。",
+    "en": "MemX packages a local database, dual recall, fusion reranking, and low-confidence rejection into an explainable assistant-memory service."
+  },
+  "abstract": {
+    "zh": "MemX 是以 Rust 和 libSQL 实现的本地优先长期记忆系统，强调可解释、稳定的召回。检索流水线结合向量与关键词召回、RRF、四因素重排和低置信拒绝，避免记忆库没有答案时强行返回相似记录。",
+    "en": "MemX is a local-first long-term memory system built in Rust on libSQL with an emphasis on explainable, stable retrieval. Its pipeline combines vector and keyword recall, RRF, four-factor reranking, and low-confidence rejection to suppress spurious memories."
+  },
+  "problem": {
+    "zh": "个人助理需要可本地部署、可审计的持久记忆，但纯向量检索容易在无答案查询上产生误召回，规模增长后关键词和重排成本也会失控。",
+    "en": "Personal assistants need auditable local memory, but vector-only retrieval can hallucinate relevance on miss queries, while keyword search and reranking can become expensive as the store grows."
+  },
+  "approach": {
+    "zh": "系统融合向量和 FTS5 关键词候选，以 RRF 合并排名，再用四类信号重排并在最高分不足阈值时拒绝返回；嵌入通过 OpenAI 兼容接口替换。",
+    "en": "The system fuses vector and FTS5 keyword candidates with RRF, reranks using four signals, and returns nothing when confidence is below threshold; embeddings are provided through a replaceable OpenAI-compatible API."
+  },
+  "system_design": {
+    "zh": "libSQL 同时保存结构化记忆、向量和全文索引；Rust 检索服务并行执行双路召回、融合、重排与拒绝，并返回命中依据以支持本地解释。",
+    "en": "libSQL stores structured memories, vectors, and full-text indexes, while a Rust retrieval service performs dual recall, fusion, reranking, and rejection and returns evidence for local inspection."
+  },
+  "key_results": {
+    "zh": "中文小型基准与 LongMemEval 展示了稳定召回和保守拒绝；事实粒度优于会话粒度，FTS5 在十万级记录下显著加速关键词检索，但跨会话与时间推理仍困难。",
+    "en": "Chinese suites and LongMemEval show stable recall and conservative rejection; fact-level storage beats session-level storage, and FTS5 scales keyword search, while temporal and cross-session reasoning remain difficult."
+  },
+  "limitations": {
+    "zh": "自建中文测试集规模较小，LongMemEval 也显示时间和多会话能力有限；系统聚焦检索基线，尚未覆盖语义修订、遗忘治理或复杂 Agent 写入策略。",
+    "en": "The custom Chinese suites are small, and LongMemEval exposes weak temporal and multi-session reasoning; the system is a retrieval baseline rather than a solution for semantic revision, governed forgetting, or complex write policy."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["two Chinese-language suites with 43 queries and up to 1,014 records", "LongMemEval with 500 queries and up to 220,349 records"],
+    "hardware": ["local libSQL and FTS5 deployment"],
+    "cluster_scale": "up to 220,349 memory records",
+    "baselines": ["session-level storage granularity"],
+    "metrics": [
+      {"name": "default-suite Hit@1", "value": 91.3, "unit": "%", "higher_is_better": true},
+      {"name": "high-confusion-suite Hit@1", "value": 100, "unit": "%", "higher_is_better": true},
+      {"name": "LongMemEval fact-level Hit@5", "value": 51.6, "unit": "%", "higher_is_better": true},
+      {"name": "LongMemEval fact-level MRR", "value": 0.38, "higher_is_better": true},
+      {"name": "FTS5 keyword-search speedup at 100k records", "value": "1,100x", "higher_is_better": true},
+      {"name": "end-to-end search latency", "value": "below 90 ms", "higher_is_better": false}
+    ],
+    "notes": {
+      "zh": "两套中文测试、LongMemEval 规模、libSQL/FTS5 和六项结果来自官方摘要；模型、设备、各能力分项和置信区间待全文审计。",
+      "en": "Two Chinese suites, LongMemEval scale, libSQL/FTS5, and six results come from the official abstract; models, devices, ability breakdowns, and confidence intervals await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.16171",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "MemX",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2603.16171",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2603.16171"
+  }
+}

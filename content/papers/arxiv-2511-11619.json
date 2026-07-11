@@ -1,0 +1,133 @@
+{
+  "work_id": "arxiv-2511-11619",
+  "slug": "diap-a-decentralized-agent-identity-protocol-with-zero-knowledge-proofs-2511-11619",
+  "title": {
+    "original": "DIAP: A Decentralized Agent Identity Protocol with Zero-Knowledge Proofs and a Hybrid P2P Stack",
+    "zh": "DIAP：具有零知识证明和混合P2P堆栈的去中心化代理身份协议",
+    "en": "DIAP: A Decentralized Agent Identity Protocol with Zero-Knowledge Proofs and a Hybrid P2P Stack"
+  },
+  "authors": [
+    {
+      "name": "Yuanjie Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Wenpeng Xing",
+      "affiliations": []
+    },
+    {
+      "name": "Ye Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Gaowei Chang",
+      "affiliations": []
+    },
+    {
+      "name": "Changting Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Meng Han",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2511.11619",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-11-06",
+      "latest_revision_date": "2025-11-06",
+      "url": "https://arxiv.org/abs/2511.11619"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-11-06",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-11-06"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-7",
+  "tags": [
+    "agent-protocol",
+    "identity",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "DIAP 将内容寻址身份、零知识所有权证明、发现和 QUIC 传输整合为可运行的去中心化 Agent 通信协议栈。",
+    "en": "DIAP integrates content-addressed identity, zero-knowledge ownership proofs, discovery, and QUIC transport into a runnable decentralized agent communication stack."
+  },
+  "abstract": {
+    "zh": "DIAP 将 Agent 身份绑定到 IPFS/IPNS 内容标识，以零知识证明动态证明所有权，并用混合 P2P 栈完成发现和高性能通信。",
+    "en": "DIAP binds agent identity to IPFS/IPNS content identifiers, proves ownership dynamically with zero knowledge, and combines P2P discovery with high-performance communication."
+  },
+  "problem": {
+    "zh": "中心化身份中介形成信任瓶颈，缺少去中心化解析又会破坏 Agent 跨网络迁移后的持久身份和隐私保护。",
+    "en": "Central identity intermediaries create trust bottlenecks, while absent decentralized resolution breaks persistent identity and privacy across network migration."
+  },
+  "approach": {
+    "zh": "协议以不可变内容 ID 锚定身份，用 Noir ZKP 无状态证明所有权，并组合 DID-Key、GossipSub 发现与 QUIC 数据交换。",
+    "en": "The protocol anchors identity in immutable content IDs, uses Noir zero-knowledge proofs for stateless ownership, and combines DID-Key, GossipSub discovery, and QUIC exchange."
+  },
+  "system_design": {
+    "zh": "Rust SDK 内置预编译证明电路和通用证明管理器，身份资料驻留 IPFS/IPNS，Libp2p 负责发现，Iroh 负责点对点传输。",
+    "en": "A Rust SDK embeds a precompiled proof circuit and universal proof manager; profiles live on IPFS/IPNS, Libp2p handles discovery, and Iroh carries peer traffic."
+  },
+  "key_results": {
+    "zh": "实现展示了无需外部 ZKP 工具链即可即时生成可验证、隐私保护的身份所有权证明，并形成完整去中心化通信栈。",
+    "en": "The implementation demonstrates immediate privacy-preserving identity proofs without an external ZKP toolchain and integrates them into a decentralized communication stack."
+  },
+  "limitations": {
+    "zh": "摘要未给出大规模或对抗部署评测；内容可用性、密钥恢复、身份撤销、垃圾发现和 P2P 元数据泄露仍是关键风险。",
+    "en": "No large-scale adversarial deployment is reported; content availability, key recovery, revocation, discovery spam, and P2P metadata leakage remain key risks."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "实验矩阵与数值将在全文人工复核后补充；当前留空以避免从摘要推断。",
+      "en": "The experiment matrix and numbers await full-text manual review; fields remain empty to avoid inferring them from an abstract."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.11619",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "DIAP",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2511.11619",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2511.11619"
+  }
+}

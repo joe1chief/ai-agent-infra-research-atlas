@@ -1,0 +1,162 @@
+{
+  "work_id": "arxiv-2506-14205",
+  "slug": "agentsynth-scalable-task-generation-for-generalist-computer-use-agents-2506-14205",
+  "title": {
+    "original": "AgentSynth: Scalable Task Generation for Generalist Computer-Use Agents",
+    "zh": "AgentSynth：通用计算机使用代理的可扩展任务生成",
+    "en": "AgentSynth: Scalable Task Generation for Generalist Computer-Use Agents"
+  },
+  "authors": [
+    {
+      "name": "Jingxu Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Dylan Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Xuandong Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Dawn Song",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2506.14205",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-06-17",
+      "latest_revision_date": "2026-03-02",
+      "url": "https://arxiv.org/abs/2506.14205"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-06-17",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-02"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "sandbox",
+    "execution-environment"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AgentSynth 提供自动任务组合、难度控制、执行验证和轨迹采集流水线，可规模化服务通用计算机 Agent 数据生产。",
+    "en": "AgentSynth provides automated task composition, difficulty control, execution verification, and trajectory collection for scalable computer-agent data production."
+  },
+  "abstract": {
+    "zh": "AgentSynth 利用信息不对称自动合成长时程计算机任务和轨迹，把生成时简单的子任务组合成对 Agent 更具挑战且难度可控的任务。",
+    "en": "AgentSynth exploits information asymmetry to synthesize long-horizon computer tasks and trajectories, composing generation-simple subtasks into agent-challenging tasks with controllable difficulty."
+  },
+  "problem": {
+    "zh": "通用计算机 Agent 的人工任务和轨迹昂贵，现有自动合成又难同时保证现实性、长时程难度和可调复杂度。",
+    "en": "Human-authored tasks and trajectories for general computer agents are expensive, while prior synthesis struggles to combine realism, long horizons, and controllable complexity."
+  },
+  "approach": {
+    "zh": "系统先生成可验证子任务，再按依赖关系组合为长任务，并通过改变子任务数量精确调节难度与采集对应执行轨迹。",
+    "en": "The system creates verifiable subtasks, composes them through dependencies into longer tasks, and controls difficulty by varying composition length while collecting execution trajectories."
+  },
+  "system_design": {
+    "zh": "流水线由子任务生成器、组合规划器、环境执行器、验证器和成本跟踪模块构成，输出带难度层级的任务—轨迹对。",
+    "en": "The pipeline combines subtask generation, composition planning, environment execution, verification, and cost tracking to emit difficulty-graded task-trajectory pairs."
+  },
+  "key_results": {
+    "zh": "合成集能明显拉开先进 Agent 在不同组合深度上的表现，且轨迹成本远低于人工标注，证明其具有训练和评测扩展价值。",
+    "en": "The generated suite sharply separates advanced agents across composition depths and produces trajectories far more cheaply than human annotation, supporting scalable training and evaluation."
+  },
+  "limitations": {
+    "zh": "任务真实性仍由生成器和基础环境决定；增加子任务数不等同于覆盖所有现实复杂性，轨迹质量也依赖执行与验证正确性。",
+    "en": "Realism remains bounded by the generator and base environment; subtask count is not a complete proxy for real complexity, and trajectory quality depends on execution and verification."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Synthesized long-horizon computer-use tasks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Agent success at difficulty level 1",
+        "value": 18,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Agent success at difficulty level 6",
+        "value": 4,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Average trajectory generation cost",
+        "value": 0.6,
+        "unit": "USD/trajectory",
+        "higher_is_better": false
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning",
+      "seed_report_path": "2026/snowflake/2026-02_arctic-awm.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 12,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.14205",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "AgentSynth code and data repository",
+      "url": "https://github.com/sunblaze-ucb/AgentSynth",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "AgentSynth",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2506.14205",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2506.14205"
+  }
+}

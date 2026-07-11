@@ -1,0 +1,143 @@
+{
+  "work_id": "arxiv-2507-11507",
+  "slug": "oneiros-kv-cache-optimization-through-parameter-remapping-for-multi-tena-2507-11507",
+  "title": {
+    "original": "Oneiros: KV Cache Optimization through Parameter Remapping for Multi-tenant LLM Serving",
+    "zh": "Oneiros：通过多租户LLM服务的参数重新映射进行KV缓存优化",
+    "en": "Oneiros: KV Cache Optimization through Parameter Remapping for Multi-tenant LLM Serving"
+  },
+  "authors": [
+    {
+      "name": "Ruihao Li",
+      "affiliations": []
+    },
+    {
+      "name": "Shagnik Pal",
+      "affiliations": []
+    },
+    {
+      "name": "Vineeth Narayan Pullu",
+      "affiliations": []
+    },
+    {
+      "name": "Prasoon Sinha",
+      "affiliations": []
+    },
+    {
+      "name": "Jeeho Ryoo",
+      "affiliations": []
+    },
+    {
+      "name": "Lizy K. John",
+      "affiliations": []
+    },
+    {
+      "name": "Neeraja J. Yadwadkar",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2507.11507",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-07-15",
+      "latest_revision_date": "2025-10-29",
+      "url": "https://arxiv.org/abs/2507.11507"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-07-15",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-10-29"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Oneiros 把多租户模型参数重映射为 KV 容量，形成可复用的 GPU 内存虚拟化与缓存管理运行时。",
+    "en": "Oneiros turns inactive tenant weights into KV capacity through reusable GPU-memory remapping and cache-management runtime mechanisms."
+  },
+  "abstract": {
+    "zh": "Oneiros 观察到模型参数在运行期保持不变，而 KV 缓存持续更新，因此不再频繁换出 KV，而是重映射参数占用的显存给缓存使用。多租户场景中，暂时不活跃模型的参数空间可被更积极地回收。",
+    "en": "Oneiros exploits the fact that model parameters are static while KV state changes continuously: instead of swapping KV data, it remaps parameter memory for cache use. In multi-tenant serving, parameter space belonging to inactive models becomes reclaimable capacity."
+  },
+  "problem": {
+    "zh": "传统 CPU 换出会反复搬运不断变化的 KV 缓存，产生大量主存流量，尤其难以支撑多个模型共享 GPU。",
+    "en": "Conventional CPU offload repeatedly moves dynamically updated KV state, creating heavy memory traffic when several models share a GPU."
+  },
+  "approach": {
+    "zh": "Oneiros 将较少访问或不活跃模型的参数迁往 CPU，并把释放的 GPU 地址空间重映射为 KV 缓存，从而避免高频 KV 双向交换。",
+    "en": "Oneiros moves less-active model parameters toward CPU memory and remaps the freed GPU address space to KV blocks, avoiding repeated bidirectional KV transfers."
+  },
+  "system_design": {
+    "zh": "运行时跟踪租户模型活跃度并管理参数映射，在需要切换模型时利用高带宽 CPU–GPU 链路恢复参数；缓存则保留在 GPU 可直接访问的位置。",
+    "en": "The runtime tracks tenant activity and parameter mappings, restoring model weights over a high-bandwidth CPU–GPU link when a model becomes active while keeping KV data in GPU-addressable memory."
+  },
+  "key_results": {
+    "zh": "在 Grace Hopper 类高带宽平台上，Oneiros 相比 vLLM 被报告可降低 TTFT 与 token 间隔的尾延迟，并提高吞吐。",
+    "en": "On a high-bandwidth Grace Hopper platform, Oneiros is reported to reduce tail TTFT and inter-token latency while increasing throughput over vLLM."
+  },
+  "limitations": {
+    "zh": "方案依赖高 CPU–GPU 带宽和可回收的不活跃参数空间；当租户频繁切换或所有模型同时活跃时，参数恢复可能重新成为瓶颈。",
+    "en": "The design relies on strong CPU–GPU bandwidth and reclaimable inactive weights; rapid tenant switching or simultaneous model activity can turn parameter restoration back into the bottleneck."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["multi-tenant LLM serving"],
+    "hardware": ["NVIDIA Grace Hopper Superchip"],
+    "cluster_scale": "multi-tenant GPU serving",
+    "baselines": ["vLLM"],
+    "metrics": [
+      {"name": "tail time-between-token reduction", "value": "44.8%-82.5%", "baseline": "vLLM", "higher_is_better": true},
+      {"name": "tail TTFT reduction", "value": "20.7%-99.3%", "baseline": "vLLM", "higher_is_better": true},
+      {"name": "throughput increase", "value": "6.6%-86.7%", "baseline": "vLLM", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "硬件、vLLM 基线和三个区间结果来自官方摘要；具体模型、请求分布与各区间对应条件待全文审计。",
+      "en": "Hardware, the vLLM baseline, and three result ranges come from the official abstract; models, request distributions, and conditions behind each range await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.11507",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {"type": "code", "url": "https://github.com/UT-SysML/Oneiros/", "title": "Oneiros source code"}
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Oneiros",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2507.11507",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2507.11507"
+  }
+}

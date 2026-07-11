@@ -1,0 +1,167 @@
+{
+  "work_id": "arxiv-2504-07164",
+  "slug": "r2e-gym-procedural-environments-and-hybrid-verifiers-for-scaling-open-we-2504-07164",
+  "title": {
+    "original": "R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents",
+    "zh": "R2E-Gym：用于扩展开源权重软件工程智能体的程序化环境与混合验证器",
+    "en": "R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents"
+  },
+  "authors": [
+    {
+      "name": "Naman Jain",
+      "affiliations": []
+    },
+    {
+      "name": "Jaskirat Singh",
+      "affiliations": []
+    },
+    {
+      "name": "Manish Shetty",
+      "affiliations": []
+    },
+    {
+      "name": "Liang Zheng",
+      "affiliations": []
+    },
+    {
+      "name": "Koushik Sen",
+      "affiliations": []
+    },
+    {
+      "name": "Ion Stoica",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2504.07164",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-04-09",
+      "latest_revision_date": "2025-04-09",
+      "url": "https://arxiv.org/abs/2504.07164"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-04-09",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-04-09"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "sandbox",
+    "execution-environment"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "其贡献是可复用的 GitHub SWE 可执行环境生成与混合验证基础设施，可直接支撑开放权重 Agent 的训练和测试时扩展。",
+    "en": "It contributes reusable executable-environment generation and hybrid verification for GitHub SWE, directly supporting training and test-time scaling of open-weight agents."
+  },
+  "abstract": {
+    "zh": "R2E-Gym 面向真实 GitHub 软件工程任务，联合构建可规模化的可执行训练环境与测试时验证机制，服务开放权重 SWE Agent 的训练和推理扩展。",
+    "en": "R2E-Gym couples scalable executable environments for real GitHub software-engineering tasks with test-time verification, targeting both training and inference scaling for open-weight SWE agents."
+  },
+  "problem": {
+    "zh": "开放权重 SWE Agent 缺少大量可靠、可执行的训练环境，而单一测试型或无执行验证器在扩大测试时计算时分别受区分度和偏差限制。",
+    "en": "Open-weight SWE agents lack abundant reliable executable environments, while test-only and execution-free verifiers respectively suffer from weak distinguishability and bias when scaling test-time compute."
+  },
+  "approach": {
+    "zh": "该工作以 SYNGEN 从代码提交出发，通过测试生成与反向任务构造程序化地产生任务，并在推理时组合执行型和无执行验证器。",
+    "en": "SYNGEN derives tasks procedurally from commits through test generation and backward task construction, while inference combines execution-based and execution-free verifiers."
+  },
+  "system_design": {
+    "zh": "系统由提交驱动的环境构建流水线、可运行的 AgentGym 任务容器、轨迹采样器以及互补的混合验证与候选选择层组成。",
+    "en": "The system comprises a commit-driven environment builder, runnable AgentGym task containers, trajectory sampling, and a hybrid verification and candidate-selection layer."
+  },
+  "key_results": {
+    "zh": "程序化环境支持更大规模训练，混合验证利用两类验证器的互补性，最终明显优于任一验证器单独扩展。",
+    "en": "Procedural environments support larger-scale training, and hybrid verification substantially outperforms scaling either verifier family alone by exploiting their complementary strengths."
+  },
+  "limitations": {
+    "zh": "证据集中于 GitHub issue/SWE-bench 型工作流；合成任务的现实分布覆盖、测试可区分度以及无执行判断偏差仍需持续审计。",
+    "en": "Evidence centers on GitHub-issue and SWE-bench-style workflows; real-distribution coverage, test distinguishability, and bias in execution-free judgments still require auditing."
+  },
+  "evaluation": {
+    "models": [
+      "32B open-weight model",
+      "OpenAI o1",
+      "OpenAI o1-preview",
+      "Claude 3.5 Sonnet v2"
+    ],
+    "workloads": [
+      "SWE-Bench Verified",
+      "Real-world GitHub issue resolution"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Execution-based verifier",
+      "Execution-free verifier"
+    ],
+    "metrics": [
+      {
+        "name": "SWE-Bench Verified score with hybrid test-time scaling",
+        "value": 51,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "NVIDIA Nemotron 3 Super Technical Report",
+      "seed_report_path": "2026/nvidia/2026-03_nemotron-3-super.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 43,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.07164",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {
+      "type": "documentation",
+      "title": "R2E-Gym project page",
+      "url": "https://r2e-gym.github.io/",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "R2E-Gym",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2504.07164",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2504.07164"
+  }
+}

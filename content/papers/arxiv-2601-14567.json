@@ -1,0 +1,141 @@
+{
+  "work_id": "arxiv-2601-14567",
+  "slug": "agent-identity-uri-scheme-topology-independent-naming-and-capability-bas-2601-14567",
+  "title": {
+    "original": "Agent Identity URI Scheme: Topology-Independent Naming and Capability-Based Discovery for Multi-Agent Systems",
+    "zh": "智能体身份 URI 方案：多智能体系统的拓扑无关命名与基于能力的发现",
+    "en": "Agent Identity URI Scheme: Topology-Independent Naming and Capability-Based Discovery for Multi-Agent Systems"
+  },
+  "authors": [
+    {
+      "name": "Roland R. Rodriguez",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.14567",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-01-21",
+      "latest_revision_date": "2026-01-21",
+      "url": "https://arxiv.org/abs/2601.14567"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-21",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-21"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-7",
+  "tags": [
+    "agent-protocol",
+    "identity",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "agent:// 的稳定命名、能力 DHT 和 PASETO 证明可复用于迁移、扩缩容和联邦环境中的 Agent 发现。",
+    "en": "The agent:// stable naming scheme, capability DHT, and PASETO attestation are reusable for agent discovery under migration, scaling, and federation."
+  },
+  "abstract": {
+    "zh": "agent:// URI 以信任根、能力层级路径和可排序唯一 ID 解耦 Agent 身份与网络位置，并支持 DHT 能力发现和 PASETO 证明。",
+    "en": "The agent:// URI decouples agent identity from network location through a trust root, hierarchical capability path, and sortable unique ID, with DHT discovery and PASETO attestation."
+  },
+  "problem": {
+    "zh": "把 Agent 身份绑定 URL/主机会在迁移、扩缩容和跨组织联邦时打断引用、审计链和发现，迫使系统依赖中心协调。",
+    "en": "Binding identity to host URLs breaks references, audit trails, and discovery under migration, scaling, and federation, forcing centralized coordination."
+  },
+  "approach": {
+    "zh": "方案把组织权威、语义能力和稳定实例标识分离，按能力路径派生 DHT 查询，并用签名 token 将能力声明绑定身份。",
+    "en": "The scheme separates organizational authority, semantic capability, and stable instance identity, derives DHT queries from capability paths, and signs capability claims."
+  },
+  "system_design": {
+    "zh": "解析器处理 agent:// 三段式名称，DHT 索引按信任域发布能力，验证器检查 PASETO 证明后返回可联系端点。",
+    "en": "A resolver parses three-part agent:// names, a trust-scoped DHT indexes capabilities, and a verifier checks PASETO attestations before returning contact endpoints."
+  },
+  "key_results": {
+    "zh": "在生产工具能力映射和大规模合成 Agent 上，方案实现无冲突表达、精确发现、迁移不变性和微秒级本地操作。",
+    "en": "Across production-tool mappings and a large synthetic population, the scheme shows collision-free expressiveness, precise discovery, migration invariance, and microsecond local operations."
+  },
+  "limitations": {
+    "zh": "评测主要是合成发现与本地性能，尚未覆盖恶意 DHT、能力撤销、信任根治理、隐私泄露和跨域名称冲突。",
+    "en": "Evaluation is mostly synthetic discovery and local performance, leaving malicious DHT behavior, revocation, trust-root governance, privacy leakage, and federation conflicts open."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Capability mapping over production tools",
+      "Capability discovery over 10,000 agents",
+      "Identity migration invariance"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Capability coverage",
+        "value": 100,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Discovery F1",
+        "value": 1,
+        "unit": "F1",
+        "higher_is_better": true
+      },
+      {
+        "name": "Maximum operation latency",
+        "value": "<5",
+        "unit": "microseconds",
+        "higher_is_better": false
+      },
+      {
+        "name": "Production tools mapped",
+        "value": 369,
+        "unit": "tools"
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.14567",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Agent Identity URI Scheme",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.14567",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.14567"
+  }
+}

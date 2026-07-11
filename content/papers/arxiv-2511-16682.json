@@ -1,0 +1,123 @@
+{
+  "work_id": "arxiv-2511-16682",
+  "slug": "bench360-benchmarking-local-llm-inference-from-360-degrees-2511-16682",
+  "title": {
+    "original": "Bench360: Benchmarking Local LLM Inference from 360 Degrees",
+    "zh": "Bench360：从360度对本地LLM推理进行基准测试",
+    "en": "Bench360: Benchmarking Local LLM Inference from 360 Degrees"
+  },
+  "authors": [
+    {
+      "name": "Linus Stuhlmann",
+      "affiliations": []
+    },
+    {
+      "name": "Mauricio Fadel Argerich",
+      "affiliations": []
+    },
+    {
+      "name": "Jonathan Fürst",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2511.16682",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-11-12",
+      "latest_revision_date": "2026-01-14",
+      "url": "https://arxiv.org/abs/2511.16682"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-11-12",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-01-14"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Bench360 将任务质量、时延、吞吐、能耗和启动时间纳入同一可扩展 harness，为本地推理配置提供系统级比较。",
+    "en": "Bench360 brings task quality, latency, throughput, energy, and startup time into one extensible harness for system-level comparison of local inference configurations."
+  },
+  "abstract": {
+    "zh": "Bench360 在同一框架中比较本地 LLM 的任务质量、使用模式和系统行为，覆盖不同推理引擎、量化格式与自定义任务。它同时记录时延、吞吐、能耗和启动时间，以揭示部署配置间的多维权衡。",
+    "en": "Bench360 evaluates local LLMs across task quality, usage patterns, and systems behavior within one framework, spanning multiple inference engines, quantization formats, and custom tasks. It reports latency, throughput, energy, and startup time together to expose deployment trade-offs."
+  },
+  "problem": {
+    "zh": "本地部署横跨模型、量化、引擎与使用情境，现有碎片化基准通常只优化单一目标，无法回答具体设备和任务上的配置选择。",
+    "en": "Local deployment spans models, quantization, engines, and scenarios, while fragmented benchmarks optimize isolated goals and provide little guidance for a concrete device and workload."
+  },
+  "approach": {
+    "zh": "框架把任务、推理引擎、量化和硬件参数化，在统一实验协议下同时测量输出质量、在线性能、能耗和冷启动开销。",
+    "en": "The framework parameterizes task, engine, quantization, and hardware and measures output quality, serving performance, energy, and cold-start overhead under a common protocol."
+  },
+  "system_design": {
+    "zh": "Bench360 通过引擎适配层运行可插拔任务与量化模型，采集任务评分和系统遥测，再按场景汇总多目标配置档案，而非生成单一总分。",
+    "en": "Engine adapters run pluggable tasks and quantized models, collecting task scores and systems telemetry into scenario-specific configuration profiles rather than a single aggregate score."
+  },
+  "key_results": {
+    "zh": "四项 NLP 任务、三类 GPU 和四个引擎的结果显示，效率与输出质量权衡随工作负载改变，不存在跨场景通用的最佳配置。",
+    "en": "Experiments over four NLP tasks, three GPUs, and four engines show that efficiency–quality trade-offs shift with workload and that no configuration dominates universally."
+  },
+  "limitations": {
+    "zh": "初始演示的 GPU、引擎和任务覆盖仍有限，结果会随驱动、编译选项和模型版本漂移；统一协议也不能替代应用自身的质量与隐私验收。",
+    "en": "Initial coverage of GPUs, engines, and tasks is limited, and results can drift with drivers, build options, and model versions; the common protocol cannot replace application-specific quality or privacy acceptance."
+  },
+  "evaluation": {
+    "models": ["local LLMs across multiple quantization formats"],
+    "workloads": ["four NLP tasks", "multiple local-serving usage patterns"],
+    "hardware": ["three GPUs"],
+    "cluster_scale": "single local GPU per configuration",
+    "baselines": ["four inference engines"],
+    "metrics": [
+      {"name": "metrics reported", "value": "task quality, latency, throughput, energy, and startup time", "higher_is_better": null}
+    ],
+    "notes": {
+      "zh": "四项任务、三款 GPU、四个引擎与指标集合来自官方摘要；模型/量化/设备/引擎名称和逐配置结果待全文审计。",
+      "en": "Four tasks, three GPUs, four engines, and the metric set come from the official abstract; model, quantization, device, engine names, and per-configuration results await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.16682",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Bench360",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2511.16682",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2511.16682"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "work_id": "arxiv-2512-04752",
+  "slug": "rlhfspec-breaking-the-efficiency-bottleneck-in-rlhf-training-via-adaptiv-2512-04752",
+  "title": {
+    "original": "RLHFSpec: Breaking the Efficiency Bottleneck in RLHF Training via Adaptive Drafting",
+    "zh": "RLHFSpec：通过自适应草稿生成突破 RLHF 训练效率瓶颈",
+    "en": "RLHFSpec: Breaking the Efficiency Bottleneck in RLHF Training via Adaptive Drafting"
+  },
+  "authors": [
+    {
+      "name": "Siqi Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Hailong Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Junjie Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Xuezhu Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Yufan Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Depei Qian",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2512.04752",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-12-04",
+      "latest_revision_date": "2025-12-12",
+      "url": "https://arxiv.org/abs/2512.04752"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-12-04",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-12-12"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-3",
+  "tags": [
+    "post-training",
+    "reinforcement-learning",
+    "rollout"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "RLHFSpec 把推测解码策略选择、GPU 样本重分配和迁移实现为可接入现有 RLHF 的生成服务优化层。",
+    "en": "RLHFSpec implements drafting selection, GPU sample reallocation, and migration as a generation-service optimization layer that can attach to existing RLHF pipelines."
+  },
+  "abstract": {
+    "zh": "RLHFSpec 首次把推测解码用于 RLHF 样本生成，并结合工作负载感知的草稿策略选择与样本重分配来缓解生成阶段瓶颈。",
+    "en": "RLHFSpec applies speculative decoding to RLHF sample generation and combines workload-aware draft-strategy selection with sample reallocation to relieve the generation bottleneck."
+  },
+  "problem": {
+    "zh": "RLHF 的生成、经验推断和训练三阶段中，生成通常占据最长时间；固定草稿模型和静态样本分配又难以适应长度与接受率变化。",
+    "en": "Among RLHF generation, experience inference, and training, generation is often dominant; fixed draft models and static sample placement cannot adapt to changing lengths and acceptance rates."
+  },
+  "approach": {
+    "zh": "控制器联合估计验证成本与可接受 token 数选择近优草稿策略，并把样本在 GPU 间重新分配，通过低开销迁移减少尾部空闲。",
+    "en": "A controller selects a near-optimal drafting strategy from verification cost and expected accepted tokens, then reallocates samples across GPUs with low-overhead migration to reduce tail idle time."
+  },
+  "system_design": {
+    "zh": "生成服务包含草稿与验证模型、在线策略选择器和样本迁移器；完成的响应进入既有经验计算与训练阶段，无需改变 RLHF 目标。",
+    "en": "The generation service contains draft and verification models, an online strategy selector, and a sample migrator; completed responses feed existing experience computation and training without changing the RLHF objective."
+  },
+  "key_results": {
+    "zh": "与所比较系统相比，RLHFSpec 提高生成吞吐，并因缓解首要瓶颈而缩短整个 RLHF 执行时间。",
+    "en": "RLHFSpec raises generation throughput over the compared systems and shortens end-to-end RLHF execution by relieving its dominant bottleneck."
+  },
+  "limitations": {
+    "zh": "收益取决于草稿接受率、模型组合和迁移网络；低接受率或显存紧张时额外验证与双模型驻留可能抵消优势。",
+    "en": "Benefits depend on draft acceptance, model pairing, and migration bandwidth; low acceptance or tight memory can make extra verification and dual-model residency outweigh gains."
+  },
+  "evaluation": {
+    "models": [
+      "large language models"
+    ],
+    "workloads": [
+      "RLHF sample generation",
+      "RLHF inference",
+      "RLHF training"
+    ],
+    "hardware": [
+      "GPU resources"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "state-of-the-art RLHF systems"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.04752",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "RLHFSpec",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2512.04752",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2512.04752"
+  }
+}

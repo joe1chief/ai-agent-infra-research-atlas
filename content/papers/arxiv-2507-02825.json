@@ -1,0 +1,228 @@
+{
+  "work_id": "arxiv-2507-02825",
+  "slug": "establishing-best-practices-for-building-rigorous-agentic-benchmarks-2507-02825",
+  "title": {
+    "original": "Establishing Best Practices for Building Rigorous Agentic Benchmarks",
+    "zh": "构建严格智能体基准的最佳实践",
+    "en": "Establishing Best Practices for Building Rigorous Agentic Benchmarks"
+  },
+  "authors": [
+    {
+      "name": "Yuxuan Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Tengjun Jin",
+      "affiliations": []
+    },
+    {
+      "name": "Yada Pruksachatkun",
+      "affiliations": []
+    },
+    {
+      "name": "Andy Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Shu Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Sasha Cui",
+      "affiliations": []
+    },
+    {
+      "name": "Sayash Kapoor",
+      "affiliations": []
+    },
+    {
+      "name": "Shayne Longpre",
+      "affiliations": []
+    },
+    {
+      "name": "Kevin Meng",
+      "affiliations": []
+    },
+    {
+      "name": "Rebecca Weiss",
+      "affiliations": []
+    },
+    {
+      "name": "Fazl Barez",
+      "affiliations": []
+    },
+    {
+      "name": "Rahul Gupta",
+      "affiliations": []
+    },
+    {
+      "name": "Jwala Dhamala",
+      "affiliations": []
+    },
+    {
+      "name": "Jacob Merizian",
+      "affiliations": []
+    },
+    {
+      "name": "Mario Giulianelli",
+      "affiliations": []
+    },
+    {
+      "name": "Harry Coppock",
+      "affiliations": []
+    },
+    {
+      "name": "Cozmin Ududec",
+      "affiliations": []
+    },
+    {
+      "name": "Jasjeet Sekhon",
+      "affiliations": []
+    },
+    {
+      "name": "Jacob Steinhardt",
+      "affiliations": []
+    },
+    {
+      "name": "Antony Kellermann",
+      "affiliations": []
+    },
+    {
+      "name": "Sarah Schwettmann",
+      "affiliations": []
+    },
+    {
+      "name": "Matei Zaharia",
+      "affiliations": []
+    },
+    {
+      "name": "Ion Stoica",
+      "affiliations": []
+    },
+    {
+      "name": "Percy Liang",
+      "affiliations": []
+    },
+    {
+      "name": "Daniel Kang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2507.02825",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v5",
+      "first_public_date": "2025-07-03",
+      "latest_revision_date": "2025-08-07",
+      "url": "https://arxiv.org/abs/2507.02825"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-07-03",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-08-07"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-5",
+  "tags": [
+    "agent-evaluation",
+    "observability",
+    "reliability"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "ABC 把任务有效性、奖励充分性和防投机要求沉淀为可复用的基准发布审查与回归流程。",
+    "en": "ABC operationalizes task validity, reward sufficiency, and anti-gaming requirements as a reusable pre-release review and regression process for benchmarks."
+  },
+  "abstract": {
+    "zh": "该工作提出 Agentic Benchmark Checklist（ABC），把任务配置、奖励设计和结果核验中的常见缺陷转化为可执行的 Agent 基准建设规范。",
+    "en": "The Agentic Benchmark Checklist (ABC) turns recurring flaws in task setup, reward design, and outcome verification into practical guidance for building agent benchmarks."
+  },
+  "problem": {
+    "zh": "Agent 基准的测试不足、奖励漏洞和异常成功条件会系统性高估或低估能力，却常被排行榜单一分数掩盖。",
+    "en": "Insufficient tests, reward loopholes, and anomalous success conditions can systematically over- or underestimate agents while remaining hidden behind one leaderboard score."
+  },
+  "approach": {
+    "zh": "作者结合基准实践、既有缺陷报告和评测方法综述整理检查项，并在多个已知问题及 CVE-Bench 上进行修正验证。",
+    "en": "The authors synthesize checklist items from benchmark practice, reported failures, and evaluation literature, then apply them to known issues and CVE-Bench."
+  },
+  "system_design": {
+    "zh": "ABC 覆盖任务有效性、环境确定性、奖励充分性、防投机、重复运行和报告透明度，可作为发布前审查与回归测试流程。",
+    "en": "ABC covers task validity, environment determinism, reward sufficiency, anti-gaming, repeated runs, and reporting transparency for pre-release review and regression testing."
+  },
+  "key_results": {
+    "zh": "审计发现多个流行基准可产生很大的相对估计偏差；按 ABC 修复 CVE-Bench 后，原先的性能高估明显收缩。",
+    "en": "Audits reveal large relative estimation errors in popular benchmarks, and applying ABC to CVE-Bench materially reduces prior performance overestimation."
+  },
+  "limitations": {
+    "zh": "清单依赖维护者真实执行且无法自动证明任务语义完整；不同领域仍需专门威胁模型、人工标准和长期漂移监控。",
+    "en": "A checklist depends on faithful implementation and cannot prove semantic completeness; each domain still needs tailored threat models, human criteria, and drift monitoring."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "SWE-bench Verified",
+      "TAU-bench",
+      "CVE-Bench"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "Original CVE-Bench evaluation design"
+    ],
+    "metrics": [
+      {
+        "name": "Maximum relative benchmark estimation error observed",
+        "value": 100,
+        "unit": "%",
+        "higher_is_better": false
+      },
+      {
+        "name": "CVE-Bench performance-overestimation reduction after ABC",
+        "value": 33,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.02825",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2507.02825",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2507.02825"
+  }
+}

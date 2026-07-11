@@ -1,0 +1,203 @@
+{
+  "work_id": "arxiv-2505-17694",
+  "slug": "codec-prefix-shared-decoding-kernel-for-llms-2505-17694",
+  "title": {
+    "original": "CoDec: Prefix-Shared Decoding Kernel for LLMs",
+    "zh": "CoDec：LLM的前缀共享解码内核",
+    "en": "CoDec: Prefix-Shared Decoding Kernel for LLMs"
+  },
+  "authors": [
+    {
+      "name": "Zhibin Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Rui Ning",
+      "affiliations": []
+    },
+    {
+      "name": "Chao Fang",
+      "affiliations": []
+    },
+    {
+      "name": "Zhonghui Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Xi Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Shaobo Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Mo Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Xue Li",
+      "affiliations": []
+    },
+    {
+      "name": "Zhongfeng Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Chengying Huan",
+      "affiliations": []
+    },
+    {
+      "name": "Rong Gu",
+      "affiliations": []
+    },
+    {
+      "name": "Kun Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Guihai Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Sheng Zhong",
+      "affiliations": []
+    },
+    {
+      "name": "Chen Tian",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2505.17694",
+    "doi": "10.1145/3802028",
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-05-23",
+      "latest_revision_date": "2026-03-28",
+      "url": "https://arxiv.org/abs/2505.17694"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-05-23",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-28"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "published",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "CoDec 把共享前缀分析、KV 合并访问、专用 kernel 和不规则负载调度组合为可部署的解码执行组件。",
+    "en": "CoDec combines shared-prefix analysis, merged KV access, a specialized kernel, and irregular-work scheduling into a deployable decode-execution component."
+  },
+  "abstract": {
+    "zh": "CoDec 是面向多请求共享前缀场景的解码注意力内核，把共同前缀的 KV 读取合并，并为树形依赖设计跨线程块并行与负载均衡。",
+    "en": "CoDec is a decode-attention kernel for requests with shared prefixes, combining common KV reads and adding inter-block parallelism plus load balancing for tree-structured dependencies."
+  },
+  "problem": {
+    "zh": "长上下文解码受 KV 缓存带宽限制；即使多个请求共享前缀，常规内核仍重复读取，而树形前缀又带来不规则任务和依赖。",
+    "en": "Long-context decoding is KV-bandwidth bound; conventional kernels reload identical shared prefixes, while the prefix tree creates irregular work and dependencies."
+  },
+  "approach": {
+    "zh": "内核重排共享前缀的内存层次和访问顺序，同时利用块内与块间并行；成本估计器对不规则树任务切分和调度。",
+    "en": "The kernel reorganizes memory hierarchy and access order for shared prefixes, exploits intra- and inter-block parallelism, and uses a cost estimator to partition and schedule irregular tree work."
+  },
+  "system_design": {
+    "zh": "前缀树首先生成共享 KV 分组，任务划分器估算各节点开销，专用注意力 kernel 合并读取并行计算，归并阶段组合每个请求的结果。",
+    "en": "A prefix tree yields shared-KV groups, a partitioner estimates node costs, the specialized attention kernel computes with merged reads, and a merge stage produces per-request outputs."
+  },
+  "key_results": {
+    "zh": "与通用解码注意力实现相比，CoDec 显著减少共享前缀的内存访问并降低注意力与单 token 端到端时延。",
+    "en": "Compared with general decode-attention implementations, CoDec substantially reduces shared-prefix memory traffic and lowers both attention and end-to-end per-token latency."
+  },
+  "limitations": {
+    "zh": "收益依赖请求间存在足够长的共享前缀；前缀树维护、动态批处理和短上下文可能抵消内核优势，结果也主要针对特定 GPU。",
+    "en": "Benefits require sufficiently long shared prefixes; tree maintenance, dynamic batching, and short contexts can offset gains, and evidence is tied mainly to specific GPUs."
+  },
+  "evaluation": {
+    "models": [
+      "large language models"
+    ],
+    "workloads": [
+      "shared-prefix decode attention"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "FlashDecoding",
+      "vLLM"
+    ],
+    "metrics": [
+      {
+        "name": "Average attention-computation speedup",
+        "value": 1.9,
+        "unit": "x",
+        "baseline": "FlashDecoding",
+        "higher_is_better": true
+      },
+      {
+        "name": "KV-cache memory-access reduction",
+        "value": 120.9,
+        "unit": "x",
+        "baseline": "FlashDecoding",
+        "higher_is_better": true
+      },
+      {
+        "name": "End-to-end time-per-output-token speedup",
+        "value": 3.8,
+        "unit": "x",
+        "baseline": "vLLM",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.17694",
+      "title": "Official arXiv record"
+    },
+    {
+      "type": "publisher",
+      "url": "https://doi.org/10.1145/3802028",
+      "title": "Publisher record via DOI"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "CoDec",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2505.17694",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2505.17694"
+  }
+}

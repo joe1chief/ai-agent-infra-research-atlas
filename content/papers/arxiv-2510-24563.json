@@ -1,0 +1,171 @@
+{
+  "work_id": "arxiv-2510-24563",
+  "slug": "osworld-mcp-benchmarking-mcp-tool-invocation-in-computer-use-agents-2510-24563",
+  "title": {
+    "original": "OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents",
+    "zh": "OSWorld-MCP：计算机使用代理中的基准MCP工具调用",
+    "en": "OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents"
+  },
+  "authors": [
+    {
+      "name": "Hongrui Jia",
+      "affiliations": []
+    },
+    {
+      "name": "Jitong Liao",
+      "affiliations": []
+    },
+    {
+      "name": "Xi Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Haiyang Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Tianbao Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Chaoya Jiang",
+      "affiliations": []
+    },
+    {
+      "name": "Ming Yan",
+      "affiliations": []
+    },
+    {
+      "name": "Si Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Wei Ye",
+      "affiliations": []
+    },
+    {
+      "name": "Fei Huang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2510.24563",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-10-28",
+      "latest_revision_date": "2025-11-11",
+      "url": "https://arxiv.org/abs/2510.24563"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-10-28",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-11-11"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "sandbox",
+    "execution-environment"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "OSWorld-MCP 交付了可复现的桌面、MCP 工具与终态核验 Harness，使 GUI 与工具调用能力能够统一测量。",
+    "en": "OSWorld-MCP delivers a reproducible desktop, MCP tool suite, and outcome harness that jointly measures GUI and tool-invocation capability."
+  },
+  "abstract": {
+    "zh": "OSWorld-MCP 在真实桌面环境中同时测量 MCP 工具调用、GUI 操作与决策，让具备工具的计算机 Agent 和纯 GUI Agent 获得可比评测。",
+    "en": "OSWorld-MCP jointly measures MCP tool invocation, GUI operation, and decision making in a real desktop environment, enabling fair comparison of tool-enabled and GUI-only computer agents."
+  },
+  "problem": {
+    "zh": "既有桌面基准几乎只考察 GUI，直接比较接入 MCP 工具的 Agent 会混淆工具能力、界面操作能力与决策质量。",
+    "en": "Existing desktop benchmarks largely test GUI interaction, so comparing MCP-enabled agents with GUI-only agents confounds tool competence, interface control, and decision quality."
+  },
+  "approach": {
+    "zh": "作者用自动代码生成和人工筛选构建跨常用应用的工具集合，并把工具与 OSWorld 任务结合，对调用、操作和最终完成分别观测。",
+    "en": "Automated code generation plus manual validation produces tools across common applications, which are paired with OSWorld tasks to observe invocation, GUI behavior, and completion separately."
+  },
+  "system_design": {
+    "zh": "基准由可复现实机环境、MCP 工具服务器、GUI 动作通道、任务编排器和按终态核验的评测器组成。",
+    "en": "The benchmark integrates a reproducible desktop environment, MCP tool servers, a GUI action channel, task orchestration, and end-state evaluators."
+  },
+  "key_results": {
+    "zh": "接入 MCP 通常提高任务成功率，但最强模型也很少主动调用工具，表明工具发现与选择而非工具可用性仍是主要瓶颈。",
+    "en": "MCP access generally improves task success, yet even strong models invoke tools infrequently, indicating that discovery and selection—not mere availability—remain major bottlenecks."
+  },
+  "limitations": {
+    "zh": "工具集合只覆盖少量桌面应用，且人工验证后的工具质量高于开放生态；结果未必代表噪声更大、权限更复杂的真实 MCP 市场。",
+    "en": "The tool suite covers a limited set of desktop applications and is cleaner than the open ecosystem, so results may not transfer to noisier marketplaces with more complex permissions."
+  },
+  "evaluation": {
+    "models": [
+      "OpenAI o3",
+      "Claude 4 Sonnet"
+    ],
+    "workloads": [
+      "OSWorld-MCP",
+      "Computer-use tasks with MCP and GUI actions"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "GUI-only computer-use agents"
+    ],
+    "metrics": [
+      {
+        "name": "Highest reported tool invocation rate",
+        "value": 36.3,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.24563",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "documentation",
+      "title": "OSWorld-MCP project page",
+      "url": "https://osworld-mcp.github.io",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "OSWorld-MCP",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2510.24563",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2510.24563"
+  }
+}

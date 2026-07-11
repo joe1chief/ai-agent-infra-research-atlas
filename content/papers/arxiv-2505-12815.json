@@ -1,0 +1,163 @@
+{
+  "work_id": "arxiv-2505-12815",
+  "slug": "learning-in-chaos-efficient-autoscaling-and-self-healing-for-multi-party-2505-12815",
+  "title": {
+    "original": "Learning In Chaos: Efficient Autoscaling and Self-Healing for Multi-Party Distributed Training",
+    "zh": "乱序环境中的学习：面向多方分布式训练的高效自动扩缩容与自愈",
+    "en": "Learning In Chaos: Efficient Autoscaling and Self-Healing for Multi-Party Distributed Training"
+  },
+  "authors": [
+    {
+      "name": "Wenjiao Feng",
+      "affiliations": []
+    },
+    {
+      "name": "Rongxing Xiao",
+      "affiliations": []
+    },
+    {
+      "name": "Zonghang Li",
+      "affiliations": []
+    },
+    {
+      "name": "Hongfang Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Gang Sun",
+      "affiliations": []
+    },
+    {
+      "name": "Long Luo",
+      "affiliations": []
+    },
+    {
+      "name": "Mohsen Guizani",
+      "affiliations": []
+    },
+    {
+      "name": "Qirong Ho",
+      "affiliations": []
+    },
+    {
+      "name": "Steve Liu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2505.12815",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-05-19",
+      "latest_revision_date": "2025-09-13",
+      "url": "https://arxiv.org/abs/2505.12815"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-05-19",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-09-13"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-2",
+  "tags": [
+    "distributed-training",
+    "parallelism",
+    "fault-tolerance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Chaos 提供去中心化状态复制、模型分片、拓扑监控和协商扩缩容，可复用于多机构 WAN 训练的自愈控制。",
+    "en": "Chaos provides decentralized state replication, model sharding, topology monitoring, and negotiated autoscaling for reusable self-healing control in multi-party WAN training."
+  },
+  "abstract": {
+    "zh": "Chaos 为跨机构、跨区域训练提供去中心化的自愈与自动扩缩容，通过邻居状态复制、模型分片和点对点协商应对节点与链路频繁变化。",
+    "en": "Chaos provides decentralized self-healing and autoscaling for cross-institution training, using neighbor state replication, model sharding, and peer negotiation to handle node and link churn."
+  },
+  "problem": {
+    "zh": "多方 WAN 集群允许机构自主加入或退出，传统中心化扩缩容和检查点恢复反应慢，也不符合各方自主管理的控制边界。",
+    "en": "Multi-party WAN clusters allow institutions to join or leave autonomously, making centralized autoscaling and checkpoint recovery both slow and misaligned with governance boundaries."
+  },
+  "approach": {
+    "zh": "作者将异构 WAN 上的分片与分配形式化为优化问题，利用可除链的单调性化简并导出多项式贪心解，同时设计邻居复制和协商协议。",
+    "en": "The authors formulate sharding and assignment over heterogeneous WANs, exploit divisibility-chain monotonicity to derive a polynomial greedy solution, and pair it with neighbor replication and negotiation protocols."
+  },
+  "system_design": {
+    "zh": "集群监控器跟踪资源与拓扑，状态在多个邻居间复制；扩缩容事件触发各机构协商分片归属，并在无中央控制器的情况下恢复训练。",
+    "en": "A cluster monitor tracks resources and topology, state is replicated across neighbors, and scaling events trigger peer negotiation over shard ownership so training recovers without a central controller."
+  },
+  "key_results": {
+    "zh": "在所测扩容、缩容和链路事件中，Chaos 比对照系统更快恢复并减少设备空闲，且集群扩大时仍保持较好的资源利用率。",
+    "en": "Across the evaluated scale and link events, Chaos recovers faster than comparison systems, reduces idle time, and maintains stronger resource utilization as the cluster grows."
+  },
+  "limitations": {
+    "zh": "设计主要处理非恶意 churn，未说明拜占庭参与方和隐私攻击；多副本开销、极窄 WAN 链路及超大优化器状态可能限制扩展性。",
+    "en": "The design primarily addresses benign churn rather than Byzantine parties or privacy attacks; replica overhead, narrow WAN links, and very large optimizer state may constrain scale."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "multi-party cross-region distributed training",
+      "scale-out events",
+      "scale-in events",
+      "link connection and disconnection events"
+    ],
+    "hardware": [
+      "wide-area multi-institution clusters"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "Pollux",
+      "Elan",
+      "Autoscaling"
+    ],
+    "metrics": [
+      {
+        "name": "Scale-in and link-event handling time",
+        "value": "<20",
+        "unit": "ms",
+        "higher_is_better": false
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.12815",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Learning In Chaos",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2505.12815",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2505.12815"
+  }
+}

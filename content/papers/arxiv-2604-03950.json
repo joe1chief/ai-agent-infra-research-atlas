@@ -1,0 +1,135 @@
+{
+  "work_id": "arxiv-2604-03950",
+  "slug": "diagonal-tiled-mixed-precision-attention-for-efficient-low-bit-mxfp-infe-2604-03950",
+  "title": {
+    "original": "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
+    "zh": "高效低位MXFP推理的对角平铺混合精度注意",
+    "en": "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference"
+  },
+  "authors": [
+    {
+      "name": "Yifu Ding",
+      "affiliations": []
+    },
+    {
+      "name": "Xinhao Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Jinyang Guo",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2604.03950",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-04-05",
+      "latest_revision_date": "2026-04-05",
+      "url": "https://arxiv.org/abs/2604.03950"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-04-05",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-04-05"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "DMA 是可复用的 Triton 低比特注意力 kernel，将 MXFP tile 调度、精度选择和融合归约落实到执行运行时。",
+    "en": "DMA is a reusable low-bit Triton attention kernel that implements MXFP tile scheduling, precision selection, and fused reduction in the execution runtime."
+  },
+  "abstract": {
+    "zh": "DMA 是面向 MXFP 低比特格式的混合精度注意力 kernel，在 tile 粒度组合两种低比特计算并以 Triton 融合实现新一代 GPU 推理。",
+    "en": "DMA is a mixed-precision attention kernel for low-bit MXFP formats, combining two low-bit computation modes at tile granularity in a fused Triton implementation for new GPUs."
+  },
+  "problem": {
+    "zh": "注意力的二次计算和高精度内存带宽使推理昂贵，但统一低精度容易损害生成质量，也难充分利用新硬件的 microscaling 单元。",
+    "en": "Quadratic attention and high-precision bandwidth make inference expensive, yet uniform low precision can hurt generation quality and underuse new microscaling hardware."
+  },
+  "approach": {
+    "zh": "内核按对角 tile 划分注意力，为不同区域选择两类低比特精度，并融合数据转换、矩阵计算和归约以减少中间访存。",
+    "en": "The kernel tiles attention diagonally, assigns two low-bit precisions to different regions, and fuses conversion, matrix computation, and reduction to minimize intermediate memory traffic."
+  },
+  "system_design": {
+    "zh": "Triton kernel 读取 MXFP 表示，在 tile 调度器控制下执行混合精度矩阵运算，片上完成缩放与归并后直接写回注意力输出。",
+    "en": "A Triton kernel reads MXFP representations, executes mixed-precision matrix operations under a tile scheduler, and performs scaling and reduction on chip before writing attention output."
+  },
+  "key_results": {
+    "zh": "B200 实验中，融合 DMA kernel 在生成质量近乎不变的前提下显著加速注意力计算。",
+    "en": "On B200 evaluations, the fused DMA kernel materially accelerates attention while keeping generation quality nearly unchanged."
+  },
+  "limitations": {
+    "zh": "实现依赖支持 MXFP 的新硬件且只在有限 GPU 上验证；低比特误差对更长上下文、不同模型和训练场景的影响尚不明确。",
+    "en": "The implementation depends on new MXFP-capable hardware and is validated on limited GPUs; low-bit error over longer contexts, other models, or training remains unclear."
+  },
+  "evaluation": {
+    "models": [
+      "transformer-based large language models"
+    ],
+    "workloads": [
+      "low-bit MXFP attention inference",
+      "generation-quality evaluation"
+    ],
+    "hardware": [
+      "NVIDIA B200 GPUs"
+    ],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2604.03950",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "Diagonal-Tiled Mixed-Precision Attention source code",
+      "url": "https://github.com/yifu-ding/MP-Sparse-Attn",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2604.03950",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2604.03950"
+  }
+}

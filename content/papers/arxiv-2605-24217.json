@@ -1,0 +1,120 @@
+{
+  "work_id": "arxiv-2605-24217",
+  "slug": "identifying-and-mitigating-systemic-measurement-bias-in-production-llm-i-2605-24217",
+  "title": {
+    "original": "Identifying and Mitigating Systemic Measurement Bias in Production LLM Inference Benchmarks",
+    "zh": "识别和减轻生产LLM推理基准中的系统测量偏差",
+    "en": "Identifying and Mitigating Systemic Measurement Bias in Production LLM Inference Benchmarks"
+  },
+  "authors": [
+    {
+      "name": "Ashok Chandrasekar",
+      "affiliations": []
+    },
+    {
+      "name": "Jason Kramberger",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2605.24217",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-05-22",
+      "latest_revision_date": "2026-05-26",
+      "url": "https://arxiv.org/abs/2605.24217"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-05-22",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-05-26"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "该多进程压测框架、客户端排队模型和 NTPOT 指标共同修正生产 LLM 基准的系统性测量偏差。",
+    "en": "The multi-process load harness, client queue model, and NTPOT metric jointly correct systemic measurement bias in production LLM benchmarks."
+  },
+  "abstract": {
+    "zh": "该工作指出常见单进程 asyncio 压测客户端在高并发下形成客户端排队，系统性夸大服务端 TTFT 与 TPOT。作者用 M/G/1 模型解释 GIL 瓶颈，并提出多进程无偏评测框架与归一化 TPOT 指标。",
+    "en": "This work shows that common single-process asyncio benchmark clients queue locally at high concurrency and systematically inflate server TTFT and TPOT. It models the GIL bottleneck as an M/G/1 queue, then proposes a multi-process harness and Normalized TPOT metric."
+  },
+  "problem": {
+    "zh": "生产吞吐测试常把客户端 CPU/GIL 排队计入服务器响应时间，负载越高偏差越严重，导致 SLO 容量判断和引擎比较失真。",
+    "en": "Production load tests often include client CPU/GIL queueing in server latency, with bias worsening at higher request rates and distorting SLO capacity and engine comparisons."
+  },
+  "approach": {
+    "zh": "作者先用排队论推导单进程客户端偏差，再把请求发生器拆为多进程分摊负载；NTPOT 则跨序列长度摊销预填充、调度和端到端时延。",
+    "en": "The authors derive single-process bias with queueing theory, distribute request generation across processes, and use NTPOT to amortize prefill, scheduling, and end-to-end latency across sequence lengths."
+  },
+  "system_design": {
+    "zh": "评测控制器在多个独立进程中产生并计时请求，监测并约束客户端排队开销，再汇总 TTFT、TPOT 与 NTPOT，使报告更接近纯服务引擎行为。",
+    "en": "A controller generates and timestamps traffic in independent processes, monitors client-side queue overhead, and aggregates TTFT, TPOT, and NTPOT to isolate serving-engine behavior."
+  },
+  "key_results": {
+    "zh": "实证结果表明多进程方法能把客户端排队降到可忽略水平，并在每秒数千请求的生产规模下得到更准确、可复现的引擎画像。",
+    "en": "Empirical results report negligible client queueing with the multi-process method and more accurate, reproducible engine profiles at production loads of thousands of queries per second."
+  },
+  "limitations": {
+    "zh": "方法主要修正 Python 客户端侧偏差，不能消除网络抖动、服务器计时误差或负载模型不真实；多进程发生器本身也需要足够独立 CPU 与时钟校准。",
+    "en": "The method corrects a Python client-side bias but not network jitter, server instrumentation error, or unrealistic traffic models; the multi-process generator also needs sufficient isolated CPU and clock calibration."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["production LLM inference load tests exceeding thousands of queries per second"],
+    "hardware": ["multi-process benchmark client", "production LLM serving engine"],
+    "cluster_scale": ">1,000 queries/s",
+    "baselines": ["single-process asyncio benchmark client"],
+    "metrics": [
+      {"name": "client-side queueing overhead", "value": "negligible with multi-process generation", "higher_is_better": true},
+      {"name": "metrics reported", "value": "TTFT, TPOT, and NTPOT", "higher_is_better": null}
+    ],
+    "notes": {
+      "zh": "千级 QPS、单进程基线、多进程框架和指标集合来自官方摘要；服务模型、客户端 CPU、进程数和逐点偏差待全文审计。",
+      "en": "Thousand-plus QPS, the single-process baseline, multi-process harness, and metric set come from the official abstract; served models, client CPU, process counts, and pointwise bias await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2605.24217",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2605.24217",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2605.24217"
+  }
+}

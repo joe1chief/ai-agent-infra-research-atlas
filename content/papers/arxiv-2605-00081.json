@@ -1,0 +1,123 @@
+{
+  "work_id": "arxiv-2605-00081",
+  "slug": "alignment-contracts-for-agentic-security-systems-2605-00081",
+  "title": {
+    "original": "Alignment Contracts for Agentic Security Systems",
+    "zh": "智能体安全系统的对齐契约",
+    "en": "Alignment Contracts for Agentic Security Systems"
+  },
+  "authors": [
+    {
+      "name": "Isaac David",
+      "affiliations": []
+    },
+    {
+      "name": "Marco Guarnieri",
+      "affiliations": []
+    },
+    {
+      "name": "Arthur Gervais",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2605.00081",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-04-30",
+      "latest_revision_date": "2026-04-30",
+      "url": "https://arxiv.org/abs/2605.00081"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-04-30",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-04-30"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Alignment Contracts 提供可组合的效果契约语言、可判定监视器和形式证明，可复用于高权限 Agent 的系统边界。",
+    "en": "Alignment Contracts provide a composable effect language, decidable monitors, and formal guarantees reusable at the boundary of high-privilege agents."
+  },
+  "abstract": {
+    "zh": "Alignment Contracts 用有限轨迹上的形式契约约束 Agent 安全工具的可观测副作用，明确作用域、资源预算、禁止效果和披露策略。",
+    "en": "Alignment Contracts formally constrain observable effect traces of security agents, specifying scope, resource budgets, forbidden effects, and disclosure policy."
+  },
+  "problem": {
+    "zh": "漏洞发现 Agent 需要在授权范围内保留强攻击能力，但现有 Guardrail 未把“哪些可观测效果在何范围允许”变成可证明契约。",
+    "en": "Security agents need strong offensive capability inside an engagement while denying it outside scope, yet guardrails do not make allowed observable effects a provable contract."
+  },
+  "approach": {
+    "zh": "论文给出有限轨迹语义、满足与违约见证、契约细化和单向组合规则，并研究监视器可判定性与保证边界。",
+    "en": "The paper defines finite-trace semantics, satisfaction and finite violation witnesses, refinement and one-way composition, and decidability and guarantee boundaries for monitors."
+  },
+  "system_design": {
+    "zh": "契约语言编译为效果监视器，所有中介化工具效果进入 trace；监视器检查作用域、预算和披露约束，并保留可审计违约见证。",
+    "en": "Contracts compile to effect monitors; all mediated tool effects enter a trace checked for scope, budget, and disclosure constraints with auditable violation witnesses."
+  },
+  "key_results": {
+    "zh": "形式核心证明在效果完全中介的假设下可获得执行健全性，并由 Lean 工件检查关键定理，同时明确不可判定和可观测性边界。",
+    "en": "The formal core proves enforcement soundness under complete effect mediation, checks key theorems in Lean, and explicitly characterizes undecidability and observability limits."
+  },
+  "limitations": {
+    "zh": "保证依赖 Effect Observability Assumption；未中介的网络、物理或隐式效果不受约束，实例化也主要针对 Web 安全工作流。",
+    "en": "Guarantees depend on the Effect Observability Assumption; unmediated network, physical, or implicit effects remain outside scope, and instantiation centers on web security."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "Web-focused agentic security workflows"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2605.00081",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2605.00081",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2605.00081"
+  }
+}

@@ -1,0 +1,262 @@
+import type { BilingualText, Domain, Locale, PaperTitle } from "../types";
+
+const copy = {
+  zh: {
+    skip: "跳到主要内容",
+    brandEyebrow: "AI × AGENT SYSTEMS",
+    brand: "Infra Atlas",
+    navExplore: "研究图谱",
+    navMethod: "策展方法",
+    search: "搜索论文、系统、机构或标签",
+    language: "切换语言",
+    theme: "切换明暗主题",
+    favorites: "收藏",
+    heroKicker: "2025 → NOW · EVIDENCE-FIRST",
+    heroTitle: "看见智能系统背后的基础设施。",
+    heroBody:
+      "从训练与推理集群，到 Agent 运行时、记忆、沙箱与评测：一张可追溯、可筛选、持续更新的双语研究地图。",
+    explore: "开始探索",
+    methodology: "了解收录方法",
+    indexed: "收录研究",
+    core: "核心论文",
+    categories: "基础设施层",
+    reports: "技术报告线索",
+    updated: "数据更新",
+    stackMap: "研究栈地图",
+    stackMapBody: "按首次公开月份观察 13 个基础设施层的研究密度。点击任意方格筛选。",
+    trend: "研究脉冲",
+    trendBody: "AI Infra 与 Agent Infra 的公开节奏。",
+    lineage: "局部关系网络",
+    lineageBody: "只展示当前研究及其直接关联，避免全局图谱噪声。",
+    noLineage: "选择一篇论文查看其 lineage。",
+    results: "研究目录",
+    filtered: "项结果",
+    clear: "清除筛选",
+    all: "全部",
+    domain: "领域",
+    category: "主分类",
+    window: "时间窗口",
+    tier: "策展级别",
+    venue: "会议 / 期刊",
+    tag: "标签",
+    artifact: "Artifact",
+    pdf: "PDF",
+    source: "来源类型",
+    dateRange: "首次公开时间",
+    from: "开始日期",
+    to: "结束日期",
+    favoritesOnly: "只看收藏",
+    cards: "卡片",
+    table: "表格",
+    columnsTitle: "论文",
+    columnsLayer: "基础设施层",
+    columnsStatus: "状态",
+    columnsDate: "首次公开",
+    inspect: "查看详情",
+    inspectLineage: "查看关系",
+    save: "收藏",
+    saved: "已收藏",
+    noResults: "没有匹配的研究",
+    noResultsBody: "尝试缩短关键词，或清除一个筛选条件。",
+    loading: "正在装配研究图谱…",
+    loadError: "研究数据暂时无法加载",
+    retry: "重新加载",
+    provenance: "证据链",
+    back: "返回研究图谱",
+    overview: "研究卡",
+    problem: "问题",
+    approach: "方法",
+    systemDesign: "系统设计",
+    keyResults: "关键结果",
+    limitations: "局限",
+    evaluation: "实验与测量",
+    artifacts: "开放 Artifact",
+    sources: "第一方来源",
+    seedReports: "技术报告引用",
+    versions: "版本历史",
+    citation: "引用",
+    copy: "复制",
+    copied: "已复制",
+    localNotes: "本地笔记",
+    localNotesBody: "只保存在这台设备的浏览器中。",
+    notesPlaceholder: "记录复现线索、关联工作或阅读问题…",
+    pdfReader: "论文全文",
+    openPdf: "在新窗口打开 PDF",
+    pdfUnavailable: "该条目暂未提供可用的官方 PDF。",
+    page: "页",
+    of: "/",
+    zoomIn: "放大",
+    zoomOut: "缩小",
+    previousPage: "上一页",
+    nextPage: "下一页",
+    mobileGraph: "关系列表",
+    methodologyTitle: "为什么把它叫作 Atlas？",
+    methodologyBody:
+      "每条记录都从技术报告引用或第一方来源出发，区分首次公开、正式发表与最新修订日期。核心库只收录可复用的系统、运行时、协议、环境、工具链和评测基础设施。",
+    inclusion: "收录理由",
+    verified: "最近核验",
+    statusNew: "窗口内新作",
+    statusCarry: "正式发表补录",
+    statusContext: "上下文节点",
+    aiInfra: "AI Infra",
+    agentInfra: "Agent Infra",
+    filteredByMap: "已由栈地图筛选",
+    dataAsOf: "数据截止",
+  },
+  en: {
+    skip: "Skip to main content",
+    brandEyebrow: "AI × AGENT SYSTEMS",
+    brand: "Infra Atlas",
+    navExplore: "Research atlas",
+    navMethod: "Methodology",
+    search: "Search papers, systems, institutions, or tags",
+    language: "Switch language",
+    theme: "Toggle color theme",
+    favorites: "Favorites",
+    heroKicker: "2025 → NOW · EVIDENCE-FIRST",
+    heroTitle: "See the infrastructure behind intelligent systems.",
+    heroBody:
+      "From training and inference clusters to agent runtimes, memory, sandboxes, and evaluation—a traceable, filterable, continuously updated bilingual research map.",
+    explore: "Explore the atlas",
+    methodology: "How we curate",
+    indexed: "Research works",
+    core: "Core papers",
+    categories: "Infra layers",
+    reports: "Report trails",
+    updated: "Data updated",
+    stackMap: "Research stack map",
+    stackMapBody: "Research density across 13 infrastructure layers by first-public month. Select any cell to filter.",
+    trend: "Research pulse",
+    trendBody: "Publication cadence across AI Infra and Agent Infra.",
+    lineage: "Local lineage network",
+    lineageBody: "The selected work and its direct relations—without global graph noise.",
+    noLineage: "Select a paper to inspect its lineage.",
+    results: "Research catalog",
+    filtered: "results",
+    clear: "Clear filters",
+    all: "All",
+    domain: "Domain",
+    category: "Primary category",
+    window: "Window status",
+    tier: "Curation tier",
+    venue: "Venue",
+    tag: "Tag",
+    artifact: "Artifact",
+    pdf: "PDF",
+    source: "Source type",
+    dateRange: "First-public date",
+    from: "From",
+    to: "To",
+    favoritesOnly: "Favorites only",
+    cards: "Cards",
+    table: "Table",
+    columnsTitle: "Paper",
+    columnsLayer: "Infra layer",
+    columnsStatus: "Status",
+    columnsDate: "First public",
+    inspect: "View details",
+    inspectLineage: "Inspect lineage",
+    save: "Save",
+    saved: "Saved",
+    noResults: "No matching research",
+    noResultsBody: "Try a shorter query or remove one filter.",
+    loading: "Assembling the research atlas…",
+    loadError: "Research data could not be loaded",
+    retry: "Try again",
+    provenance: "Evidence trail",
+    back: "Back to research atlas",
+    overview: "Research card",
+    problem: "Problem",
+    approach: "Approach",
+    systemDesign: "System design",
+    keyResults: "Key results",
+    limitations: "Limitations",
+    evaluation: "Evaluation & measurement",
+    artifacts: "Open artifacts",
+    sources: "First-party sources",
+    seedReports: "Technical-report citations",
+    versions: "Version history",
+    citation: "Citation",
+    copy: "Copy",
+    copied: "Copied",
+    localNotes: "Local notes",
+    localNotesBody: "Stored only in this browser on this device.",
+    notesPlaceholder: "Capture reproduction clues, related work, or reading questions…",
+    pdfReader: "Full paper",
+    openPdf: "Open PDF in a new window",
+    pdfUnavailable: "No verified official PDF is available for this record.",
+    page: "Page",
+    of: "of",
+    zoomIn: "Zoom in",
+    zoomOut: "Zoom out",
+    previousPage: "Previous page",
+    nextPage: "Next page",
+    mobileGraph: "Relation list",
+    methodologyTitle: "Why call it an Atlas?",
+    methodologyBody:
+      "Every record begins with a technical-report citation or first-party source and separates first-public, venue-publication, and latest-revision dates. The core catalog only includes reusable systems, runtimes, protocols, environments, toolchains, and evaluation infrastructure.",
+    inclusion: "Why it belongs",
+    verified: "Last verified",
+    statusNew: "New in window",
+    statusCarry: "Venue carry-in",
+    statusContext: "Context node",
+    aiInfra: "AI Infra",
+    agentInfra: "Agent Infra",
+    filteredByMap: "Filtered from stack map",
+    dataAsOf: "Data through",
+  },
+} as const;
+
+export type CopyKey = keyof (typeof copy)["en"];
+
+export function t(locale: Locale, key: CopyKey): string {
+  return copy[locale][key];
+}
+export function localized(text: BilingualText | undefined, locale: Locale): string {
+  if (!text) return "";
+  return text[locale] || text.en || text.zh;
+}
+
+export function localizedTitle(title: PaperTitle | string | undefined, locale: Locale): string {
+  if (!title) return "Untitled";
+  if (typeof title === "string") return title;
+  if (locale === "zh") return title.zh || title.original || title.en;
+  return title.en || title.original || title.zh;
+}
+
+export function originalTitle(title: PaperTitle | string | undefined): string {
+  if (!title) return "Untitled";
+  return typeof title === "string" ? title : title.original || title.en || title.zh;
+}
+
+export function domainLabel(domain: Domain, locale: Locale): string {
+  return domain === "ai_infra" ? t(locale, "aiInfra") : t(locale, "agentInfra");
+}
+
+export const categoryLabels: Record<string, BilingualText> = {
+  "AI-1": { zh: "数据基础设施与治理", en: "Data infrastructure & governance" },
+  "AI-2": { zh: "分布式训练系统", en: "Distributed training systems" },
+  "AI-3": { zh: "后训练与大规模 RL 系统", en: "Post-training & large-scale RL systems" },
+  "AI-4": { zh: "编译器、内核与执行运行时", en: "Compilers, kernels & execution runtimes" },
+  "AI-5": { zh: "推理服务与集群编排", en: "Inference serving & cluster orchestration" },
+  "AI-6": { zh: "生命周期、可靠性与系统测量", en: "Lifecycle, reliability & systems measurement" },
+  "AG-1": { zh: "Agent Runtime 与工作流控制", en: "Agent runtime & workflow control" },
+  "AG-2": { zh: "上下文、记忆与持久状态", en: "Context, memory & persistent state" },
+  "AG-3": { zh: "工具协议、沙箱与可执行环境", en: "Tool protocols, sandboxes & execution" },
+  "AG-4": { zh: "多 Agent 协调与通信", en: "Multi-agent coordination & communication" },
+  "AG-5": { zh: "Agent 评测、可观测性与可靠性", en: "Agent evaluation, observability & reliability" },
+  "AG-6": { zh: "Agent 安全、权限与策略执行", en: "Agent safety, permissions & policy enforcement" },
+  "AG-7": { zh: "生态协议、身份、信任与治理", en: "Ecosystem protocols, identity, trust & governance" },
+};
+
+export function categoryLabel(id: string, locale: Locale): string {
+  const label = categoryLabels[id];
+  return label ? localized(label, locale) : id;
+}
+
+export function statusLabel(status: string, locale: Locale): string {
+  if (status === "new_in_window") return t(locale, "statusNew");
+  if (status === "venue_carry_in") return t(locale, "statusCarry");
+  if (status === "context") return t(locale, "statusContext");
+  return status.replaceAll("_", " ");
+}

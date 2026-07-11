@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.vite/
+coverage/
+.DS_Store
+*.log
+__pycache__/
+*.py[cod]
+.env
+.env.local
+.cache/
+tmp/
+public/data/
+public/papers/
+public/pdfs/
+/public/sitemap.xml

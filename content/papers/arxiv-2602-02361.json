@@ -1,0 +1,206 @@
+{
+  "work_id": "arxiv-2602-02361",
+  "slug": "swe-universe-scale-real-world-verifiable-environments-to-millions-2602-02361",
+  "title": {
+    "original": "SWE-Universe: Scale Real-World Verifiable Environments to Millions",
+    "zh": "SWE-Universe：将真实世界的可验证环境扩展到数百万",
+    "en": "SWE-Universe: Scale Real-World Verifiable Environments to Millions"
+  },
+  "authors": [
+    {
+      "name": "Mouxiang Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Lei Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Yunlong Feng",
+      "affiliations": []
+    },
+    {
+      "name": "Xuwu Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Wenting Zhao",
+      "affiliations": []
+    },
+    {
+      "name": "Ruisheng Cao",
+      "affiliations": []
+    },
+    {
+      "name": "Jiaxi Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Jiawei Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Mingze Li",
+      "affiliations": []
+    },
+    {
+      "name": "Zeyao Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Hao Ge",
+      "affiliations": []
+    },
+    {
+      "name": "Zongmeng Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Zeyu Cui",
+      "affiliations": []
+    },
+    {
+      "name": "Dayiheng Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Jingren Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Jianling Sun",
+      "affiliations": []
+    },
+    {
+      "name": "Junyang Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Binyuan Hui",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2602.02361",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-02-02",
+      "latest_revision_date": "2026-02-02",
+      "url": "https://arxiv.org/abs/2602.02361"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-02-02",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-02-02"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-3",
+  "tags": [
+    "tool-use",
+    "sandbox",
+    "execution-environment"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "SWE-Universe 的构建 Agent、自验证和反作弊门控能够批量生产真实 PR 可验证环境，属于训练资源工厂而非单题 Agent。",
+    "en": "SWE-Universe's builder agent, self-verification, and anti-hacking gates mass-produce verifiable real-PR environments, making it a training-resource factory rather than a single-task agent."
+  },
+  "abstract": {
+    "zh": "SWE-Universe 从 GitHub Pull Request 自动构建可验证的软件工程环境，以定制构建 Agent 和自校验机制把真实任务扩展到百万量级。",
+    "en": "SWE-Universe automatically turns GitHub pull requests into verifiable software-engineering environments, using a custom builder agent and self-checking to approach million-scale real tasks."
+  },
+  "problem": {
+    "zh": "从真实仓库自动产出训练环境常因构建失败、验证器薄弱和单任务成本过高而难以规模化。",
+    "en": "Automatic construction from real repositories is difficult to scale because builds fail often, verifiers are weak, and per-task cost is prohibitive."
+  },
+  "approach": {
+    "zh": "定制模型驱动的构建 Agent 迭代配置仓库、生成验证条件并自检，同时在循环内检测针对验证器的投机或绕过行为。",
+    "en": "A custom-model builder agent iteratively configures repositories, creates verification conditions, self-checks them, and detects verifier hacking inside the construction loop."
+  },
+  "system_design": {
+    "zh": "流水线摄取 PR 与仓库快照，调度构建 Agent 进入隔离环境，经过迭代构建、自验证和反作弊门控后发布可训练任务。",
+    "en": "The pipeline ingests pull requests and repository snapshots, runs the builder in isolation, and publishes tasks only after iterative build, self-verification, and anti-hacking gates."
+  },
+  "key_results": {
+    "zh": "框架产出大规模多语言真实 SWE 环境，并在中期训练、强化学习和高端代码 Agent 上显示明显价值。",
+    "en": "The framework produces a very large multilingual collection of real SWE environments and shows value for agentic mid-training, reinforcement learning, and strong coding agents."
+  },
+  "limitations": {
+    "zh": "规模不等于验证质量；自动构建模型和反作弊器可能共享盲点，GitHub PR 分布也不能代表全部软件维护活动。",
+    "en": "Scale does not guarantee verifier quality; the builder and anti-hacking checks may share blind spots, and GitHub pull requests do not represent all software-maintenance work."
+  },
+  "evaluation": {
+    "models": [
+      "Qwen3-Max-Thinking"
+    ],
+    "workloads": [
+      "SWE-Bench Verified",
+      "Real-world multilingual GitHub pull-request environments"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "SWE-Bench Verified score",
+        "value": 75.3,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Constructed verifiable SWE environments",
+        "value": 807693
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Qwen3-Coder-Next Technical Report",
+      "seed_report_path": "2026/alibaba_qwen/2026-02_qwen3-coder-next.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 15,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2602.02361",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "SWE-Universe",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2602.02361",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2602.02361"
+  }
+}

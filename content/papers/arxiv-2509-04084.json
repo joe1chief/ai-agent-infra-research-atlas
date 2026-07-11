@@ -1,0 +1,157 @@
+{
+  "work_id": "arxiv-2509-04084",
+  "slug": "optimizing-frequent-checkpointing-via-low-cost-differential-for-distribu-2509-04084",
+  "title": {
+    "original": "Optimizing Frequent Checkpointing via Low-Cost Differential for Distributed Training Systems",
+    "zh": "通过分布式训练系统的低成本差分优化频繁检查点",
+    "en": "Optimizing Frequent Checkpointing via Low-Cost Differential for Distributed Training Systems"
+  },
+  "authors": [
+    {
+      "name": "Chenxuan Yao",
+      "affiliations": []
+    },
+    {
+      "name": "Yuchong Hu",
+      "affiliations": []
+    },
+    {
+      "name": "Feifan Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Zhengyu Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Lin Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Mingqi Li",
+      "affiliations": []
+    },
+    {
+      "name": "Dan Feng",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2509.04084",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v3",
+      "first_public_date": "2025-09-04",
+      "latest_revision_date": "2025-12-24",
+      "url": "https://arxiv.org/abs/2509.04084"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-09-04",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-12-24"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-2",
+  "tags": [
+    "distributed-training",
+    "parallelism",
+    "fault-tolerance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "该系统实现梯度差分、批量持久化、频率控制与状态重建，提供通用高频检查点和恢复基础设施。",
+    "en": "The system implements gradient differentials, batched persistence, frequency control, and reconstruction as general frequent-checkpoint and recovery infrastructure."
+  },
+  "abstract": {
+    "zh": "该频繁检查点框架复用压缩梯度作为差分检查点，并通过批量写入、动态频率调节和增量合并降低通用分布式训练的恢复开销。",
+    "en": "This frequent-checkpointing framework reuses compressed gradients as differential checkpoints and reduces general distributed-training overhead through batched writes, dynamic frequency control, and incremental merging."
+  },
+  "problem": {
+    "zh": "更频繁保存能缩短故障恢复窗口，却会生成大量完整检查点并拖慢训练；既有差分方案又主要局限于推荐模型。",
+    "en": "Saving more often shortens recovery windows but creates many expensive full checkpoints, while prior differential schemes are largely limited to recommendation workloads."
+  },
+  "approach": {
+    "zh": "压缩场景把已有梯度直接作为状态差分并批量落盘，控制器联合调整保存频率和批大小；无压缩场景则复用分层快照并增量合并。",
+    "en": "With compression, existing gradients become state differentials and are persisted in batches under a joint frequency/batch controller; without compression, layer snapshots are reused and merged incrementally."
+  },
+  "system_design": {
+    "zh": "训练器把梯度或分层状态交给差分缓冲区，持久化器批量写储存，在线控制器按开销调整策略，恢复端从基础快照与差分重建状态。",
+    "en": "The trainer sends gradients or layer state to a differential buffer, a persistence engine batches storage writes, an online controller tunes policy, and recovery reconstructs state from a base snapshot plus differentials."
+  },
+  "key_results": {
+    "zh": "多种工作负载上，该方案在保持高频恢复点的同时显著降低检查点导致的额外训练时间。",
+    "en": "Across the reported workloads, the design materially reduces checkpoint-induced training time while retaining frequent recovery points."
+  },
+  "limitations": {
+    "zh": "正确恢复依赖差分链和基础快照完整，梯度复用并不天然覆盖全部优化器与随机状态；长链合并和存储故障仍可能扩大恢复风险。",
+    "en": "Correct recovery depends on an intact base and differential chain, gradient reuse does not automatically cover every optimizer or random state, and long merge chains or storage faults can increase recovery risk."
+  },
+  "evaluation": {
+    "models": [
+      "large deep-learning models"
+    ],
+    "workloads": [
+      "frequent checkpointing with compressed gradients",
+      "frequent checkpointing without compression"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "conventional frequent checkpointing"
+    ],
+    "metrics": [
+      {
+        "name": "Training-time reduction with compressed-gradient differential checkpoints",
+        "value": 89.2,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Training-time reduction without gradient compression",
+        "value": 81.2,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2509.04084",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2509.04084",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2509.04084"
+  }
+}

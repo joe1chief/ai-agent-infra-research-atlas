@@ -1,0 +1,142 @@
+{
+  "work_id": "arxiv-2601-10729",
+  "slug": "orbitflow-slo-aware-long-context-llm-serving-with-fine-grained-kv-cache-2601-10729",
+  "title": {
+    "original": "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+    "zh": "OrbitFlow：通过细粒度 KV 缓存重配置实现 SLO 感知的长上下文 LLM 服务",
+    "en": "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration"
+  },
+  "authors": [
+    {
+      "name": "Xinyue Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Heelim Hong",
+      "affiliations": []
+    },
+    {
+      "name": "Taegeon Um",
+      "affiliations": []
+    },
+    {
+      "name": "Jongseop Lee",
+      "affiliations": []
+    },
+    {
+      "name": "Seoyeong Choy",
+      "affiliations": []
+    },
+    {
+      "name": "Woo-Yeon Lee",
+      "affiliations": []
+    },
+    {
+      "name": "Myeongjae Jeon",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.10729",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-01-05",
+      "latest_revision_date": "2026-03-02",
+      "url": "https://arxiv.org/abs/2601.10729"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-05",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-02"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "OrbitFlow 的层级 KV 驻留求解、反馈重配置和准入回退构成长上下文推理的通用内存控制器。",
+    "en": "OrbitFlow's layer-level residency solver, feedback reconfiguration, and admission fallback form a reusable memory controller for long-context serving."
+  },
+  "abstract": {
+    "zh": "OrbitFlow 为长上下文服务动态决定每个请求哪些层的 KV 缓存留在 GPU，并在生成过程中根据反馈细粒度调整。高负载时，它可暂缓占用大量内存的在途请求，以保护整体时延 SLO。",
+    "en": "OrbitFlow decides, per request and per layer, which long-context KV state remains on GPU and revises placement as generation evolves. Under heavy load it can defer memory-heavy in-flight requests to preserve aggregate latency SLOs."
+  },
+  "problem": {
+    "zh": "长请求的序列长度和批次组成在生成时持续变化，静态 KV 换出方案会产生多余 CPU–GPU 传输、延迟尖峰和频繁 SLO 违约。",
+    "en": "Long-context memory demand changes throughout generation, so static offload plans cause unnecessary CPU–GPU transfers, latency spikes, and repeated SLO misses."
+  },
+  "approach": {
+    "zh": "轻量 ILP 在显存约束下选择请求级、层级缓存驻留；运行时检测当前计划失效后重新配置，并用请求暂缓作为极端压力下的回退。",
+    "en": "A lightweight ILP selects request- and layer-level GPU residency under memory constraints, with feedback-triggered reconfiguration and request deferral as a pressure fallback."
+  },
+  "system_design": {
+    "zh": "控制器采集活跃请求的层级 KV 占用与时延反馈，求解驻留方案并驱动主机/GPU 间重配置；压力超过可行范围时，准入模块选择性暂停大请求。",
+    "en": "A controller collects layer-level KV demand and latency feedback, solves a residency plan, and drives host/GPU reconfiguration. When no feasible plan remains, admission control selectively pauses large requests."
+  },
+  "key_results": {
+    "zh": "评测报告 OrbitFlow 提高 TPOT/TBT 的 SLO 达成率，降低尾延迟，并比既有换出方法获得更高吞吐。",
+    "en": "The evaluation reports better TPOT/TBT SLO attainment, lower tail latency, and higher throughput than existing KV-offload methods."
+  },
+  "limitations": {
+    "zh": "ILP 依赖可用的运行时预测，暂缓策略也可能损害大请求公平性；摘要未说明慢速互连、突发到达或多租户优先级下的稳定性。",
+    "en": "The ILP depends on useful runtime forecasts, and deferral can penalize large requests; stability with slow interconnects, burst arrivals, or tenant priorities is not described."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["long-context LLM serving under heavy load"],
+    "hardware": ["GPU memory", "CPU host memory"],
+    "cluster_scale": null,
+    "baselines": ["existing KV-cache offloading methods"],
+    "metrics": [
+      {"name": "TPOT SLO attainment improvement", "value": "up to 66%", "higher_is_better": true},
+      {"name": "TBT SLO attainment improvement", "value": "up to 48%", "higher_is_better": true},
+      {"name": "P95 latency reduction", "value": 38, "unit": "%", "higher_is_better": true},
+      {"name": "throughput improvement", "value": "up to 3.3x", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "长上下文/高负载场景、主机换出与四项结果来自官方摘要；模型、GPU、请求长度分布和具名基线待全文审计。",
+      "en": "The long-context/heavy-load setting, host offload, and four results come from the official abstract; models, GPUs, length distributions, and named baselines await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.10729",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "OrbitFlow",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.10729",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.10729"
+  }
+}

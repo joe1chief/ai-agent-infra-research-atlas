@@ -1,0 +1,170 @@
+{
+  "work_id": "arxiv-2508-18224",
+  "slug": "fsa-an-alternative-efficient-implementation-of-native-sparse-attention-k-2508-18224",
+  "title": {
+    "original": "FSA: An Alternative Efficient Implementation of Native Sparse Attention Kernel",
+    "zh": "FSA：原生稀疏注意力内核的一种高效替代实现",
+    "en": "FSA: An Alternative Efficient Implementation of Native Sparse Attention Kernel"
+  },
+  "authors": [
+    {
+      "name": "Ran Yan",
+      "affiliations": []
+    },
+    {
+      "name": "Youhe Jiang",
+      "affiliations": []
+    },
+    {
+      "name": "Zhuoming Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Haohui Mai",
+      "affiliations": []
+    },
+    {
+      "name": "Beidi Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Binhang Yuan",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2508.18224",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v3",
+      "first_public_date": "2025-08-25",
+      "latest_revision_date": "2026-07-01",
+      "url": "https://arxiv.org/abs/2508.18224"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-08-25",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-07-01"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "FSA 提供适配主流小 GQA 分组的开源 NSA kernel，可直接复用于训练和推理后端。",
+    "en": "FSA provides an open NSA kernel adapted to mainstream small GQA groups for direct reuse in training and inference backends."
+  },
+  "abstract": {
+    "zh": "FSA 重写 Native Sparse Attention 的 GPU kernel 循环顺序，使其在每个 GQA 组只有少量查询头的主流模型上仍能高效执行。",
+    "en": "FSA rewrites the GPU-kernel loop order for Native Sparse Attention so it remains efficient on mainstream models with few query heads per GQA group."
+  },
+  "problem": {
+    "zh": "原生 NSA kernel 只有在每个 GQA 组包含较多查询头时利用率高，而现有 LLM 普遍采用更小分组，限制了算法落地。",
+    "en": "The original NSA kernel is efficient only with many query heads per GQA group, whereas deployed LLMs commonly use smaller groups, blocking practical adoption."
+  },
+  "approach": {
+    "zh": "作者设计替代的 Flash Sparse Attention kernel，重新映射查询头、稀疏块和 GPU 工作单元，以覆盖不同 GQA 组大小。",
+    "en": "The authors design an alternative Flash Sparse Attention kernel that remaps query heads, sparse blocks, and GPU work units across a wider range of GQA group sizes."
+  },
+  "system_design": {
+    "zh": "稀疏索引与 KV 块进入新的任务布局，调度层按头数配置线程块，kernel 完成稀疏加载、注意力计算与输出归并，并接入训练和 prefill 路径。",
+    "en": "Sparse indices and KV blocks enter a new task layout, scheduling configures blocks from head count, and the kernel performs sparse loads, attention, and output reduction for training and prefill paths."
+  },
+  "key_results": {
+    "zh": "FSA 在多种主流模型上降低 NSA kernel 时延，并把内核级收益传递为训练与 prefill 的端到端加速。",
+    "en": "FSA lowers NSA kernel latency across mainstream models and carries those kernel gains into end-to-end training and prefill speedups."
+  },
+  "limitations": {
+    "zh": "方法只优化 NSA 这一稀疏模式并继承其精度假设；不同稀疏率、GPU 架构和解码工作负载仍需单独调优。",
+    "en": "The method targets NSA and inherits its accuracy assumptions; different sparsity ratios, GPU generations, and decode workloads still need separate tuning."
+  },
+  "evaluation": {
+    "models": [
+      "state-of-the-art large language models"
+    ],
+    "workloads": [
+      "Native Sparse Attention kernel execution",
+      "LLM training",
+      "LLM prefill"
+    ],
+    "hardware": [
+      "modern GPUs"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "vanilla Native Sparse Attention kernel"
+    ],
+    "metrics": [
+      {
+        "name": "Kernel-latency reduction",
+        "value": "up to 3.5",
+        "unit": "x",
+        "baseline": "vanilla NSA kernel",
+        "higher_is_better": true
+      },
+      {
+        "name": "End-to-end training speedup",
+        "value": "up to 1.25",
+        "unit": "x",
+        "higher_is_better": true
+      },
+      {
+        "name": "Prefill speedup",
+        "value": "up to 1.36",
+        "unit": "x",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.18224",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "Flash Sparse Attention source code",
+      "url": "https://github.com/Relaxed-System-Lab/Flash-Sparse-Attention",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "FSA",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2508.18224",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2508.18224"
+  }
+}

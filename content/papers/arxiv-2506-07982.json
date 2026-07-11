@@ -1,0 +1,142 @@
+{
+  "work_id": "arxiv-2506-07982",
+  "slug": "2-bench-evaluating-conversational-agents-in-a-dual-control-environment-2506-07982",
+  "title": {
+    "original": "$τ^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+    "zh": "$τ^2$ -Bench：在双重控制环境中评估会话代理",
+    "en": "$τ^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment"
+  },
+  "authors": [
+    {
+      "name": "Victor Barres",
+      "affiliations": []
+    },
+    {
+      "name": "Honghua Dong",
+      "affiliations": []
+    },
+    {
+      "name": "Soham Ray",
+      "affiliations": []
+    },
+    {
+      "name": "Xujie Si",
+      "affiliations": []
+    },
+    {
+      "name": "Karthik Narasimhan",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2506.07982",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-06-09",
+      "latest_revision_date": "2025-06-09",
+      "url": "https://arxiv.org/abs/2506.07982"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-06-09",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-06-09"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-5",
+  "tags": [
+    "agent-evaluation",
+    "observability",
+    "reliability"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "τ²-Bench 提供共享状态、双侧工具、组合任务生成和终态核验，形成可复用的人机协作 Agent 测试床。",
+    "en": "τ²-Bench provides shared state, dual-sided tools, compositional task generation, and outcome verification as a reusable human-agent testbed."
+  },
+  "abstract": {
+    "zh": "τ²-Bench 将用户和 AI Agent 都建模为可调用工具、共同改变世界状态的控制者，用双控制环境评测对话协调与任务执行。",
+    "en": "τ²-Bench models both the user and AI agent as tool-using controllers of shared state, evaluating conversational coordination and execution in a dual-control environment."
+  },
+  "problem": {
+    "zh": "单控制基准把用户降为被动信息源，无法复现技术支持等场景中 Agent 必须指导用户操作并适应其动作的协作难点。",
+    "en": "Single-control benchmarks reduce users to passive informants and miss settings such as technical support where agents must guide user actions and adapt to them."
+  },
+  "approach": {
+    "zh": "作者把电信任务形式化为 Dec-POMDP，用原子组件生成可验证任务，并以受工具和可观测状态约束的用户模拟器参与执行。",
+    "en": "The telecom domain is formalized as a Dec-POMDP, tasks are composed from verifiable atoms, and a user simulator acts through tools under observable-state constraints."
+  },
+  "system_design": {
+    "zh": "环境维护共享动态状态，向 Agent 与用户模拟器暴露不同工具和观测；任务生成器、终态验证器和错误消融共同形成评测闭环。",
+    "en": "A shared dynamic state exposes different tools and observations to agent and simulator, coupled with compositional generation, end-state verification, and error ablation."
+  },
+  "key_results": {
+    "zh": "从无用户切换到双控制后性能显著下降，分析将损失分解为推理和沟通/协调错误，证明引导用户是独立难点。",
+    "en": "Performance drops markedly from no-user to dual control, and ablations separate reasoning from communication/coordination failures, identifying user guidance as a distinct challenge."
+  },
+  "limitations": {
+    "zh": "主要证据来自合成电信域，用户模拟器即使受状态约束也难覆盖犹豫、误解、越权或策略性人类行为。",
+    "en": "Evidence centers on a synthetic telecom domain, and even state-constrained simulators cannot capture hesitation, misunderstanding, unauthorized action, or strategic human behavior."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "τ²-Bench Telecom dual-control tasks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "No-user single-control setting"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "Kimi K2: Open Agentic Intelligence",
+      "seed_report_path": "2025/moonshot/2025-07_kimi-k2-open-agentic-intelligence.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 21,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.07982",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "$τ^2$-Bench",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2506.07982",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2506.07982"
+  }
+}

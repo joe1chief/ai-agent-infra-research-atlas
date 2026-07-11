@@ -1,0 +1,125 @@
+{
+  "work_id": "arxiv-2510-24142",
+  "slug": "monitoring-and-observability-of-machine-learning-systems-current-practic-2510-24142",
+  "title": {
+    "original": "Monitoring and Observability of Machine Learning Systems: Current Practices and Gaps",
+    "zh": "机器学习系统的监控和可观察性：当前实践和差距",
+    "en": "Monitoring and Observability of Machine Learning Systems: Current Practices and Gaps"
+  },
+  "authors": [
+    {
+      "name": "Joran Leest",
+      "affiliations": []
+    },
+    {
+      "name": "Ilias Gerostathopoulos",
+      "affiliations": []
+    },
+    {
+      "name": "Patricia Lago",
+      "affiliations": []
+    },
+    {
+      "name": "Claudia Raibulet",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2510.24142",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-10-28",
+      "latest_revision_date": "2025-10-28",
+      "url": "https://arxiv.org/abs/2510.24142"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-10-28",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-10-28"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "该研究产出生产 ML 可观测信息与故障活动的实证目录，可直接指导监控 schema、遥测采集和诊断工具设计。",
+    "en": "The study produces an empirical catalog linking ML observability information to fault activities, directly informing telemetry schemas, collection, and diagnostic tooling."
+  },
+  "abstract": {
+    "zh": "该研究通过七场跨领域焦点小组，实证梳理生产 ML 团队实际记录哪些系统与环境信息，以及这些信息如何用于模型验证、故障检测诊断和退化解释。结果同时暴露当前可观测性实践与工具支持之间的缺口。",
+    "en": "Through seven cross-domain focus groups, this study catalogs what production ML teams actually capture about models, systems, and environments and how they use it for validation, fault diagnosis, and degradation explanation. It then identifies gaps between practice and available observability tooling."
+  },
+  "problem": {
+    "zh": "ML 系统常以错误决策而非进程崩溃的方式静默失效，但行业缺少关于团队究竟采集、关联和使用哪些可观测信号的经验事实。",
+    "en": "ML systems often fail silently through wrong decisions rather than crashes, yet there is little empirical evidence about which observability signals teams capture, connect, and use."
+  },
+  "approach": {
+    "zh": "研究者组织七场焦点小组，编码参与者描述的模型、数据、运行环境和服务信号，并把每类信息映射到验证、检测、诊断和解释活动。",
+    "en": "The researchers code evidence from seven focus groups into model, data, environment, and service signals, then map each information type to validation, detection, diagnosis, and explanation activities."
+  },
+  "system_design": {
+    "zh": "论文产出的是面向工具设计的观测信息目录与用途映射：它连接采集对象、故障调查动作和缺失能力，可作为建设 ML 可观测 schema 与界面的需求基础。",
+    "en": "The resulting artifact is a tooling-oriented catalog that links captured information to investigation actions and missing capabilities, offering requirements for ML observability schemas and interfaces."
+  },
+  "key_results": {
+    "zh": "研究形成了实践中系统采集信息及其使用方式的目录，并指出当前做法在模型解释、退化关联与工具支持上的空白。",
+    "en": "The study produces a catalog of systematically captured information and its operational uses, highlighting gaps in explanation, degradation correlation, and tooling support."
+  },
+  "limitations": {
+    "zh": "焦点小组样本适合发现实践模式但不能量化行业普及率，也可能受参与者回忆与组织背景影响；论文没有验证某种监控方案的因果效果。",
+    "en": "Focus groups reveal practice patterns but cannot estimate industry prevalence and may reflect recall or organizational bias; the study does not test the causal effectiveness of a particular monitoring design."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["seven cross-domain practitioner focus-group sessions on ML observability"],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "七场跨领域焦点小组是官方摘要明示的实证范围；参与者规模、行业构成、编码协议和主题频次待全文审计。",
+      "en": "Seven cross-domain focus groups are the empirical scope stated in the official abstract; participant count, sectors, coding protocol, and theme frequencies await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.24142",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2510.24142",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2510.24142"
+  }
+}

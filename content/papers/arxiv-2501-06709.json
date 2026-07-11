@@ -1,0 +1,132 @@
+{
+  "work_id": "arxiv-2501-06709",
+  "slug": "mell-memory-efficient-large-language-model-serving-via-multi-gpu-kv-cach-2501-06709",
+  "title": {
+    "original": "Mell: Memory-Efficient Large Language Model Serving via Multi-GPU KV Cache Management",
+    "zh": "Mell：通过多 GPU KV 缓存管理实现内存高效的大型语言模型服务",
+    "en": "Mell: Memory-Efficient Large Language Model Serving via Multi-GPU KV Cache Management"
+  },
+  "authors": [
+    {
+      "name": "Liu Qianli",
+      "affiliations": []
+    },
+    {
+      "name": "Hong Zicong",
+      "affiliations": []
+    },
+    {
+      "name": "Chen Fahao",
+      "affiliations": []
+    },
+    {
+      "name": "Li Peng",
+      "affiliations": []
+    },
+    {
+      "name": "Guo Song",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2501.06709",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-01-12",
+      "latest_revision_date": "2025-01-12",
+      "url": "https://arxiv.org/abs/2501.06709"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-01-12",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-01-12"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Mell 提供可复用的多 GPU KV 负载监控、请求迁移与在线调度机制，属于推理集群运行时而非模型能力改进。",
+    "en": "Mell contributes a reusable multi-GPU KV load monitor, request-migration mechanism, and online scheduler, making it serving runtime infrastructure rather than a model improvement."
+  },
+  "abstract": {
+    "zh": "Mell 面向多模型、多 GPU 推理中的瞬态 KV 缓存失衡问题，在请求迁移成本可控的前提下动态重分配缓存负载。系统将自适应迁移机制与在线调度算法结合，目标是在满足服务需求时减少所需 GPU 数量。",
+    "en": "Mell manages transient KV-cache imbalance across multiple GPUs and concurrently served models while explicitly accounting for migration cost. It combines adaptive request migration with online scheduling to reduce the GPU capacity needed for a workload."
+  },
+  "problem": {
+    "zh": "KV 缓存随请求长度和生成过程动态增长，导致 GPU 间内存负载不均；直接迁移请求又会引入昂贵且难以预测的通信开销。",
+    "en": "Dynamically growing KV caches leave GPU memory unevenly loaded, but moving an active request can itself impose substantial and unpredictable communication overhead."
+  },
+  "approach": {
+    "zh": "作者设计自适应请求迁移策略，在计算收益与通信代价之间动态取舍，并为允许迁移的多 LLM、多 GPU 调度问题构造在线算法。",
+    "en": "The system adapts migration decisions to current compute and communication conditions, then applies an online algorithm for joint multi-LLM request placement and migration."
+  },
+  "system_design": {
+    "zh": "Mell 运行时持续观察各 GPU 的 KV 占用和资源条件，仅在迁移能缓解瓶颈时搬移在途请求；调度器同时控制放置与迁移次数，以较少 GPU 承载整体请求流。",
+    "en": "At runtime, Mell observes per-GPU KV pressure and resource conditions, migrating in-flight requests only when rebalancing justifies the transfer. Its scheduler jointly chooses placement and limits migration frequency while minimizing active GPU demand."
+  },
+  "key_results": {
+    "zh": "原型评测表明，Mell 相比既有服务系统可减少所需 GPU，并提高 GPU 利用率。",
+    "en": "The prototype evaluation reports that Mell needs fewer GPUs and raises GPU utilization relative to existing serving systems."
+  },
+  "limitations": {
+    "zh": "摘要级证据未说明不同模型切换频率、互连带宽和极端长请求下的迁移尾延迟，因此节省 GPU 的幅度仍依赖具体工作负载与集群拓扑。",
+    "en": "The abstract does not break down migration tail latency across model-switch rates, interconnects, or extreme context lengths, so capacity savings remain workload- and topology-dependent."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["multi-LLM request streams with dynamic KV-cache load"],
+    "hardware": ["multi-GPU serving cluster"],
+    "cluster_scale": "multiple GPUs",
+    "baselines": ["existing LLM serving systems"],
+    "metrics": [
+      {"name": "GPU count reduction", "value": 31, "unit": "% (up to)", "higher_is_better": true},
+      {"name": "GPU utilization increase", "value": 43, "unit": "% (up to)", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "工作负载、集群形态与两项上限结果来自官方 arXiv 摘要；具体 GPU 型号、基线名称和逐表条件待全文审计。",
+      "en": "The workload, cluster shape, and two upper-bound results come from the official arXiv abstract; GPU models, named baselines, and table-level conditions await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.06709",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Mell",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2501.06709",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2501.06709"
+  }
+}

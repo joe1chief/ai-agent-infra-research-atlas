@@ -1,0 +1,178 @@
+{
+  "work_id": "arxiv-2511-20766",
+  "slug": "openapps-simulating-environment-variations-to-measure-ui-agent-reliabili-2511-20766",
+  "title": {
+    "original": "OpenApps: Simulating Environment Variations to Measure UI-Agent Reliability",
+    "zh": "OpenApps：模拟环境变化来衡量UI-智能体的可靠性",
+    "en": "OpenApps: Simulating Environment Variations to Measure UI-Agent Reliability"
+  },
+  "authors": [
+    {
+      "name": "Karen Ullrich",
+      "affiliations": []
+    },
+    {
+      "name": "Jingtong Su",
+      "affiliations": []
+    },
+    {
+      "name": "Claudia Shi",
+      "affiliations": []
+    },
+    {
+      "name": "Arjun Subramonian",
+      "affiliations": []
+    },
+    {
+      "name": "Amir Bar",
+      "affiliations": []
+    },
+    {
+      "name": "Ivan Evtimov",
+      "affiliations": []
+    },
+    {
+      "name": "Nikolaos Tsilivis",
+      "affiliations": []
+    },
+    {
+      "name": "Randall Balestriero",
+      "affiliations": []
+    },
+    {
+      "name": "Julia Kempe",
+      "affiliations": []
+    },
+    {
+      "name": "Mark Ibrahim",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2511.20766",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-11-25",
+      "latest_revision_date": "2025-11-25",
+      "url": "https://arxiv.org/abs/2511.20766"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-11-25",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-11-25"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "agent_infra",
+  "primary_category": "AG-5",
+  "tags": [
+    "agent-evaluation",
+    "observability",
+    "reliability"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "OpenApps 的参数化应用模板和批量版本部署器可复用地测量 UI Agent 在环境分布而非单一界面上的可靠性。",
+    "en": "OpenApps' parameterized app templates and bulk version deployment enable reusable reliability measurement over an environment distribution rather than one UI."
+  },
+  "abstract": {
+    "zh": "OpenApps 提供可配置外观和内容的轻量应用生态，可低成本生成大量 UI 变体，从而把 Agent 可靠性测量从固定界面扩展到环境分布。",
+    "en": "OpenApps provides lightweight applications with configurable appearance and content, cheaply generating UI variants so reliability is measured across an environment distribution rather than one fixed app."
+  },
+  "problem": {
+    "zh": "固定克隆应用只能回答 Agent 在某个版本是否成功，无法估计布局、文案和内容变化引起的跨版本可靠性波动。",
+    "en": "A fixed app clone only shows whether an agent succeeds on one version and cannot estimate reliability shifts caused by layout, wording, or content changes."
+  },
+  "approach": {
+    "zh": "作者构建六个单 CPU 可运行的开放应用，参数化视觉和数据配置，并在大量独立版本上重复同一任务评测。",
+    "en": "Six open applications run on one CPU, expose visual and content parameters, and repeat identical tasks over many independently generated versions."
+  },
+  "system_design": {
+    "zh": "生态包含应用模板、配置/数据生成器、版本部署器、任务重放与终态验证器，并按 Agent—任务—版本聚合可靠性。",
+    "en": "The ecosystem combines app templates, configuration/data generation, version deployment, task replay, end-state verification, and agent-task-version aggregation."
+  },
+  "key_results": {
+    "zh": "固定应用内表现看似稳定，但跨 UI 变体的成功率可剧烈波动，循环和幻觉动作也随环境配置显著改变。",
+    "en": "Performance can look stable within one app yet vary dramatically across UI versions, with looping and hallucinated actions also changing by configuration."
+  },
+  "limitations": {
+    "zh": "六个轻量仿真应用不能覆盖商业应用的动态更新、广告、权限和无障碍栈；变体生成分布也决定可靠性估计。",
+    "en": "Six lightweight simulated apps do not cover commercial updates, ads, permissions, or accessibility stacks, and the variant generator defines the estimated reliability distribution."
+  },
+  "evaluation": {
+    "models": [
+      "Kimi-VL-3B"
+    ],
+    "workloads": [
+      "OpenApps messenger, calendar, maps, and configurable UI tasks"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Independent evaluations",
+        "value": ">10000",
+        "unit": "evaluations"
+      },
+      {
+        "name": "Kimi-VL-3B success on highest-performing app version",
+        "value": 63,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "Kimi-VL-3B success on lowest-performing app version",
+        "value": 4,
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.20766",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "documentation",
+      "title": "OpenApps project page",
+      "url": "https://facebookresearch.github.io/OpenApps/",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "OpenApps",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2511.20766",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2511.20766"
+  }
+}

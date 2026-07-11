@@ -1,0 +1,133 @@
+{
+  "work_id": "arxiv-2512-18194",
+  "slug": "tract-disaggregated-llm-serving-with-cxl-shared-memory-kv-cache-at-rack-2512-18194",
+  "title": {
+    "original": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+    "zh": "TraCT：利用 CXL 共享内存 KV 缓存实现机架级解耦式 LLM 服务",
+    "en": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale"
+  },
+  "authors": [
+    {
+      "name": "Dongha Yoon",
+      "affiliations": []
+    },
+    {
+      "name": "Younghoon Min",
+      "affiliations": []
+    },
+    {
+      "name": "Hoshik Kim",
+      "affiliations": []
+    },
+    {
+      "name": "Sam H. Noh",
+      "affiliations": []
+    },
+    {
+      "name": "Jongryool Kim",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2512.18194",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-12-20",
+      "latest_revision_date": "2025-12-20",
+      "url": "https://arxiv.org/abs/2512.18194"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-12-20",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-12-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-5",
+  "tags": [
+    "inference-serving",
+    "scheduling",
+    "kv-cache"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "TraCT 把 CXL 共享内存、同步协议和 KV 生命周期管理组合为机架级解耦推理数据平面。",
+    "en": "TraCT combines CXL shared memory, synchronization, and KV lifecycle management into a reusable rack-scale data plane for disaggregated serving."
+  },
+  "abstract": {
+    "zh": "TraCT 用机架级 CXL 共享内存替代 RDMA 网络路径，在解耦式 LLM 服务中同时承载预填充到解码的 KV 传输和共享前缀缓存。GPU 通过 load/store 与 DMA 直接访问 KV 块，减少 NIC 跳转和网络争用。",
+    "en": "TraCT uses rack-scale CXL shared memory as both the prefill-to-decode KV-transfer path and a shared prefix cache for disaggregated LLM serving. GPUs access KV blocks through load/store and DMA, removing the NIC hop and reducing network contention."
+  },
+  "problem": {
+    "zh": "预填充与解码分离后必须搬运大体积 KV 张量；随模型与上下文增长，RDMA 路径主导 TTFT 和吞吐，并对网络拥塞高度敏感。",
+    "en": "Disaggregated serving must move large KV tensors from prefill to decode workers; with larger models and contexts, RDMA transfer dominates TTFT and throughput and becomes contention-sensitive."
+  },
+  "approach": {
+    "zh": "TraCT 把 KV 块写入非一致性 CXL 共享内存，并设计两级跨节点同步、数据一致性和块管理机制，使预填充与解码 GPU 可直接交换状态。",
+    "en": "TraCT places KV blocks in non-coherent CXL memory and adds two-tier inter-node synchronization, consistency, and block-management mechanisms for direct GPU exchange."
+  },
+  "system_design": {
+    "zh": "在 Dynamo 服务框架中，CXL 内存池既接收预填充 GPU 写入，又向解码 GPU 暴露共享前缀；软件层维护块生命周期与跨节点可见性，而不依赖 NIC 中转。",
+    "en": "Integrated with Dynamo, a CXL pool accepts writes from prefill GPUs and exposes shared prefixes to decode GPUs. Software tracks block lifetime and cross-node visibility without routing data through a NIC."
+  },
+  "key_results": {
+    "zh": "静态与合成工作负载中，TraCT 相比 RDMA 和 DRAM 缓存基线被报告可降低平均与尾部 TTFT，并提高峰值吞吐。",
+    "en": "On static and synthetic workloads, TraCT is reported to lower average and tail TTFT and increase peak throughput over RDMA- and DRAM-cache baselines."
+  },
+  "limitations": {
+    "zh": "设计依赖机架内 CXL 共享内存与直接 GPU 访问；跨机架扩展、CXL 故障隔离、容量争用和非一致内存恢复未在摘要中评估。",
+    "en": "The design requires rack-local CXL shared memory and direct GPU access; cross-rack scaling, failure isolation, capacity contention, and recovery of non-coherent state are not evaluated in the abstract."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": ["static LLM serving workloads", "synthetic LLM serving workloads"],
+    "hardware": ["GPUs", "CXL shared memory", "RDMA network", "DRAM cache"],
+    "cluster_scale": "rack-scale disaggregated serving",
+    "baselines": ["RDMA-based KV transfer", "DRAM-based caching"],
+    "metrics": [
+      {"name": "average TTFT reduction", "value": "up to 9.8x", "higher_is_better": true},
+      {"name": "P99 latency reduction", "value": "up to 6.2x", "higher_is_better": true},
+      {"name": "peak throughput improvement", "value": "up to 1.6x", "higher_is_better": true}
+    ],
+    "notes": {
+      "zh": "工作负载类别、机架级硬件、两类基线和三个上限来自官方摘要；模型、节点数和逐表配置待全文审计。",
+      "en": "Workload classes, rack-scale hardware, two baseline types, and three upper bounds come from the official abstract; models, node counts, and table-level settings await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.18194",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "TraCT",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2512.18194",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2512.18194"
+  }
+}

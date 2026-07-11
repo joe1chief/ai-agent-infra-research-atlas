@@ -1,0 +1,147 @@
+{
+  "work_id": "arxiv-2508-14741",
+  "slug": "cate-data-curation-for-trustworthy-ai-2508-14741",
+  "title": {
+    "original": "CaTE Data Curation for Trustworthy AI",
+    "zh": "可信赖的人工智能CaTE数据管理",
+    "en": "CaTE Data Curation for Trustworthy AI"
+  },
+  "authors": [
+    {
+      "name": "Mary Versa Clemens-Sewall",
+      "affiliations": []
+    },
+    {
+      "name": "Christopher Cervantes",
+      "affiliations": []
+    },
+    {
+      "name": "Emma Rafkin",
+      "affiliations": []
+    },
+    {
+      "name": "J. Neil Otte",
+      "affiliations": []
+    },
+    {
+      "name": "Tom Magelinski",
+      "affiliations": []
+    },
+    {
+      "name": "Libby Lewis",
+      "affiliations": []
+    },
+    {
+      "name": "Michelle Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Dana Udwin",
+      "affiliations": []
+    },
+    {
+      "name": "Monique Kirkman-Bey",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2508.14741",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-08-20",
+      "latest_revision_date": "2025-08-20",
+      "url": "https://arxiv.org/abs/2508.14741"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-08-20",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-08-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-1",
+  "tags": [
+    "data-curation",
+    "data-provenance",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "CaTE 将可信数据筛选的步骤、分支、前提和工具实现组织为可裁剪工作流，为团队提供治理流程基础设施。",
+    "en": "CaTE organizes trustworthy curation steps, branches, prerequisites, and tool implementations into a tailorable workflow, providing governance-process infrastructure."
+  },
+  "abstract": {
+    "zh": "CaTE 把可信 AI 的数据筛选阶段整理为一套可执行指南，按步骤说明不同方法的前提、优缺点、产物和可用开源工具。",
+    "en": "CaTE turns trustworthy-AI data curation into an operational guide whose steps document prerequisites, trade-offs, outputs, alternative branches, and relevant open-source tools."
+  },
+  "problem": {
+    "zh": "开发团队面对分散的数据治理与可信性方法时，缺少贯穿数据筛选生命周期的共同语言和决策顺序。",
+    "en": "Development teams face fragmented governance and trustworthiness practices without a shared vocabulary or decision sequence spanning the curation lifecycle."
+  },
+  "approach": {
+    "zh": "报告综合学术文献与工具实践，定义数据、筛选阶段和可信性，再枚举核心步骤及存在不同选择时的并行路径。",
+    "en": "The report synthesizes academic and tooling literature, defines data, curation, and trustworthiness, then enumerates core steps and parallel paths where multiple choices are viable."
+  },
+  "system_design": {
+    "zh": "指南以决策工作流组织：每个节点记录输入条件、实施动作、预期结果、风险与工具实现，使团队可按项目约束裁剪流程。",
+    "en": "The guide is structured as a decision workflow: each node records preconditions, actions, outcomes, risks, and tool implementations so teams can tailor the path to project constraints."
+  },
+  "key_results": {
+    "zh": "主要产出是覆盖多种可信性目标的连贯实践地图，而非一个通过统一实验比较得出的性能结论。",
+    "en": "Its principal result is a coherent practice map across multiple trustworthiness goals rather than a performance claim established through a common experiment."
+  },
+  "limitations": {
+    "zh": "指南属于文献综合，缺少跨行业的统一实证验证；法律要求、组织能力和工具生态变化都可能使具体步骤需要重新解释。",
+    "en": "As a literature synthesis, it lacks uniform cross-industry validation; legal duties, organizational capacity, and changing tools can all require reinterpretation of individual steps."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "trustworthy-AI data-curation workflow synthesis"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件与基线均来自官方 arXiv 摘要或 comment；摘要未给出可安全转录的结果数字，表格明细与部署配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, and baselines come from the official arXiv abstract or comment; the abstract provides no result number safe to transcribe, and table details plus deployment configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.14741",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": null,
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2508.14741",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2508.14741"
+  }
+}

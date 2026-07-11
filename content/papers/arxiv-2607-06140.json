@@ -1,0 +1,154 @@
+{
+  "work_id": "arxiv-2607-06140",
+  "slug": "curateevo-data-curation-evolving-for-agentic-post-training-2607-06140",
+  "title": {
+    "original": "CurateEvo: Data-Curation Evolving for Agentic Post-Training",
+    "zh": "CurateEvo：面向智能体后训练的演进式数据筛选",
+    "en": "CurateEvo: Data-Curation Evolving for Agentic Post-Training"
+  },
+  "authors": [
+    {
+      "name": "Dingzirui Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Xuanliang Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Keyan Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Qingfu Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Wanxiang Che",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2607.06140",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-07-07",
+      "latest_revision_date": "2026-07-07",
+      "url": "https://arxiv.org/abs/2607.06140"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-07-07",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-07-07"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-1",
+  "tags": [
+    "data-curation",
+    "data-provenance",
+    "governance"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "CurateEvo 提供由失败反馈驱动、可自动重写并输出 SFT/RL/记忆数据的筛选闭环，属于可复用后训练数据系统。",
+    "en": "CurateEvo provides a failure-driven curation loop that rewrites itself and emits SFT, RL, and memory data, making it a reusable post-training data system."
+  },
+  "abstract": {
+    "zh": "CurateEvo 把智能体后训练的数据筛选策略表示为可执行代码，并利用开发集失败轨迹持续重写策略，使同一原始语料动态产出 SFT、RL 与推理记忆数据。",
+    "en": "CurateEvo represents agent post-training curation as executable code and repeatedly rewrites it from development-set failures, turning one raw corpus into evolving SFT, RL, and inference-memory data."
+  },
+  "problem": {
+    "zh": "固定的一次性数据筛选无法响应长时程智能体在环境中的新失败，既可能遗漏有效轨迹，也会保留大量冗余训练轮次。",
+    "en": "One-shot curation cannot react to new long-horizon agent failures, causing useful trajectories to be missed and redundant training turns to accumulate."
+  },
+  "approach": {
+    "zh": "每轮先诊断保留开发集中的失败模式，再让策略代码执行增补、过滤和改写；效果稳定后，以成本目标剪除低效训练轮次。",
+    "en": "Each round diagnoses held-out failure patterns and rewrites curation code to augment, filter, or refine data; after improving effectiveness, a cost objective prunes low-utility training turns."
+  },
+  "system_design": {
+    "zh": "闭环由固定原始语料、失败轨迹分析器、策略代码演化器、三类数据产物以及后训练评估反馈组成，下一轮依据反馈更新筛选程序。",
+    "en": "The loop connects a fixed raw corpus, failure-trajectory analyzer, curation-code evolver, three output stores, and post-training evaluation feedback that drives the next policy revision."
+  },
+  "key_results": {
+    "zh": "在工具使用与对话智能体基准的有标签和野生数据设置中，动态筛选稳定优于既有方法，并减少数据处理开销。",
+    "en": "Across labeled and wild-data settings on tool-use and conversational-agent benchmarks, dynamic curation consistently beats prior methods while reducing curation overhead."
+  },
+  "limitations": {
+    "zh": "方法依赖有代表性的开发失败和可靠评估信号；自动改写的代码可能不稳定或过拟合基准，迁移到真实生产流量仍需持续人工审计。",
+    "en": "The method depends on representative held-out failures and reliable evaluators; generated curation code may be unstable or overfit benchmarks, and production transfer still requires human audit."
+  },
+  "evaluation": {
+    "models": [
+      "LLM agents"
+    ],
+    "workloads": [
+      "ACEBench-Agent",
+      "BFCL-V4",
+      "tau-squared Bench",
+      "labeled-data curation",
+      "wild-data curation"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "prior data-curation methods"
+    ],
+    "metrics": [
+      {
+        "name": "Average score improvement in labeled-data setting",
+        "value": 3.2,
+        "unit": "points",
+        "baseline": "prior data-curation methods",
+        "higher_is_better": true
+      },
+      {
+        "name": "Average score improvement in wild-data setting",
+        "value": 2.7,
+        "unit": "points",
+        "baseline": "prior data-curation methods",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2607.06140",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "CurateEvo",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2607.06140",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2607.06140"
+  }
+}

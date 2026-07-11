@@ -1,0 +1,123 @@
+{
+  "work_id": "arxiv-2511-08575",
+  "slug": "co2-meter-a-comprehensive-carbon-footprint-estimator-for-llms-on-edge-de-2511-08575",
+  "title": {
+    "original": "CO2-Meter: A Comprehensive Carbon Footprint Estimator for LLMs on Edge Devices",
+    "zh": "CO2-Meter：边缘设备上 LLM 的综合碳足迹估算器",
+    "en": "CO2-Meter: A Comprehensive Carbon Footprint Estimator for LLMs on Edge Devices"
+  },
+  "authors": [
+    {
+      "name": "Zhenxiao Fu",
+      "affiliations": []
+    },
+    {
+      "name": "Chen Fan",
+      "affiliations": []
+    },
+    {
+      "name": "Lei Jiang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2511.08575",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-11-11",
+      "latest_revision_date": "2025-11-11",
+      "url": "https://arxiv.org/abs/2511.08575"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-11-11",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-11-11"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "CO2-Meter 统一运行能耗、外设和 SoC 隐含碳模型，提供可复用的边缘 LLM 全生命周期碳核算工具。",
+    "en": "CO2-Meter unifies operating energy, peripherals, and SoC embodied-carbon models into reusable lifecycle accounting infrastructure for edge LLMs."
+  },
+  "abstract": {
+    "zh": "CO2-Meter 统一估算边缘设备 LLM 推理的运行碳与 SoC 隐含碳，补入外设能耗、预填充/解码差异和芯片单元级制造影响。框架结合公式模型、阶段化能耗数据和 GNN 预测器，用于定位碳热点。",
+    "en": "CO2-Meter estimates both operational and embodied carbon for edge LLM inference, including peripheral energy, distinct prefill/decode behavior, and unit-level SoC manufacturing impact. It combines analytical models, phase-specific measurements, and a GNN predictor to locate carbon hotspots."
+  },
+  "problem": {
+    "zh": "既有边缘推理碳估算常忽略外设、推理阶段差异和 SoC 制造构成，因而无法准确归因总碳足迹或指导硬件设计取舍。",
+    "en": "Existing edge-inference estimators omit peripherals, phase-specific behavior, and SoC manufacturing composition, preventing complete attribution and informed hardware design trade-offs."
+  },
+  "approach": {
+    "zh": "系统为外设建立方程式能耗模型和数据集，用预填充/解码分相数据训练 GNN 能耗预测器，并把芯片单元映射到隐含碳和设计瓶颈。",
+    "en": "It builds equation-based peripheral models and datasets, trains a GNN on separated prefill/decode energy observations, and maps SoC units to embodied-carbon contributions and design bottlenecks."
+  },
+  "system_design": {
+    "zh": "CO2-Meter 的估算流水线接收模型、运行阶段、边缘平台和 SoC 配置，分别计算主芯片与外设运行能耗，再叠加单元级制造碳，输出热点与设计建议。",
+    "en": "The pipeline accepts model, inference phase, edge platform, and SoC configuration, estimates device and peripheral operating energy, adds unit-level embodied carbon, and emits hotspot and design analyses."
+  },
+  "key_results": {
+    "zh": "官方摘要报告 CO2-Meter 比既有方法估算更准确，案例能够识别运行与芯片设计中的碳热点并指导可持续优化。",
+    "en": "The abstract reports better estimation accuracy than prior methods and case studies that identify operational and SoC carbon hotspots for sustainable design choices."
+  },
+  "limitations": {
+    "zh": "GNN 与隐含碳模型依赖训练平台、制造数据库和电网假设；摘要未说明跨新 SoC、不同地区电力结构或设备寿命的校准误差。",
+    "en": "The GNN and embodied-carbon model depend on observed platforms, manufacturing inventories, and grid assumptions; calibration across new SoCs, regions, and device lifetimes is not described."
+  },
+  "evaluation": {
+    "models": ["large language models on edge devices"],
+    "workloads": ["prefill-phase edge inference", "decode-phase edge inference", "SoC carbon hotspot case studies"],
+    "hardware": ["edge-device SoCs", "peripheral components"],
+    "cluster_scale": "single edge device",
+    "baselines": ["prior edge-LLM carbon estimators"],
+    "metrics": [],
+    "notes": {
+      "zh": "边缘 LLM、分阶段推理、SoC/外设和既有估算器比较来自官方摘要；具名模型/设备、误差指标和碳数值待全文审计。",
+      "en": "Edge LLMs, phase-specific inference, SoC/peripherals, and comparison with prior estimators come from the official abstract; named models/devices, error metrics, and carbon values await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.08575",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {"type": "code", "url": "https://github.com/fuzhenxiao/CO2-Meter", "title": "CO2-Meter source code"}
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "CO2-Meter",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2511.08575",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2511.08575"
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "work_id": "arxiv-2503-14476",
+  "slug": "dapo-an-open-source-llm-reinforcement-learning-system-at-scale-2503-14476",
+  "title": {
+    "original": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+    "zh": "DAPO：大规模的开源LLM强化学习系统",
+    "en": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale"
+  },
+  "authors": [
+    {
+      "name": "Qiying Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Zheng Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Ruofei Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Yufeng Yuan",
+      "affiliations": []
+    },
+    {
+      "name": "Xiaochen Zuo",
+      "affiliations": []
+    },
+    {
+      "name": "Yu Yue",
+      "affiliations": []
+    },
+    {
+      "name": "Weinan Dai",
+      "affiliations": []
+    },
+    {
+      "name": "Tiantian Fan",
+      "affiliations": []
+    },
+    {
+      "name": "Gaohong Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Lingjun Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Xin Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Haibin Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Zhiqi Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Bole Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Guangming Sheng",
+      "affiliations": []
+    },
+    {
+      "name": "Yuxuan Tong",
+      "affiliations": []
+    },
+    {
+      "name": "Chi Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Mofan Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Wang Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Hang Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Jinhua Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Jiaze Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Jiangjie Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Chengyi Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Hongli Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Yuxuan Song",
+      "affiliations": []
+    },
+    {
+      "name": "Xiangpeng Wei",
+      "affiliations": []
+    },
+    {
+      "name": "Hao Zhou",
+      "affiliations": []
+    },
+    {
+      "name": "Jingjing Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Wei-Ying Ma",
+      "affiliations": []
+    },
+    {
+      "name": "Ya-Qin Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Lin Yan",
+      "affiliations": []
+    },
+    {
+      "name": "Mu Qiao",
+      "affiliations": []
+    },
+    {
+      "name": "Yonghui Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Mingxuan Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2503.14476",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2025-03-18",
+      "latest_revision_date": "2025-05-20",
+      "url": "https://arxiv.org/abs/2503.14476"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-03-18",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-05-20"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-3",
+  "tags": [
+    "post-training",
+    "reinforcement-learning",
+    "rollout"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "DAPO 不仅提出优化方法，还开放基于 verl 的大规模 rollout、奖励和训练系统及数据配方，具备可复用后训练基础设施。",
+    "en": "DAPO goes beyond an optimization method by releasing a verl-based large-scale rollout, reward, and training system plus data recipe, providing reusable post-training infrastructure."
+  },
+  "abstract": {
+    "zh": "DAPO 同时给出面向推理模型的大规模强化学习算法、基于 verl 的完整训练代码和处理后的数据，目标是让社区能够复现此前闭源的 RL 配方。",
+    "en": "DAPO releases a large-scale reinforcement-learning algorithm for reasoning models together with a verl-based training stack and curated data, targeting reproducibility of previously opaque RL recipes."
+  },
+  "problem": {
+    "zh": "推理模型的核心 RL 细节通常未公开，研究者即使拥有基础模型，也难以稳定复现长链推理训练和相应基准表现。",
+    "en": "Core RL details for reasoning models are often withheld, so researchers struggle to reproduce stable long-chain reasoning training even when a base model is available."
+  },
+  "approach": {
+    "zh": "作者提出解耦裁剪与动态采样的策略优化方法，并总结四项支撑大规模训练稳定性的技术，将算法、代码和数据作为一个开放系统发布。",
+    "en": "The authors introduce policy optimization with decoupled clipping and dynamic sampling, identify four techniques needed for stable large-scale runs, and release algorithm, code, and data as one open system."
+  },
+  "system_design": {
+    "zh": "系统以 verl 编排策略模型、轨迹生成、奖励计算和参数更新，数据处理管线提供训练样本，DAPO 的采样与裁剪规则控制每轮优化。",
+    "en": "The system uses verl to orchestrate policy execution, trajectory generation, reward computation, and updates; a data pipeline supplies examples while DAPO's sampling and clipping rules govern optimization."
+  },
+  "key_results": {
+    "zh": "开放实现从指定基础模型出发获得很强的数学推理表现，说明公开配方能够复现具有竞争力的大规模 RL 结果。",
+    "en": "Starting from the reported base model, the open implementation reaches strong mathematical-reasoning performance, showing that a public recipe can reproduce competitive large-scale RL outcomes."
+  },
+  "limitations": {
+    "zh": "证据集中于特定基础模型和数学推理任务；四项工程技术对其他奖励、智能体交互和更大集群的适用性仍需独立复现。",
+    "en": "Evidence centers on one base model and mathematical reasoning; transfer of the four engineering techniques to other rewards, interactive agents, and larger clusters needs independent replication."
+  },
+  "evaluation": {
+    "models": [
+      "Qwen2.5-32B"
+    ],
+    "workloads": [
+      "large-scale LLM reinforcement learning",
+      "AIME 2024"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "AIME 2024 score",
+        "value": 50,
+        "unit": "points",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [
+    {
+      "report_title": "OLMo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf",
+      "repository_url": "https://github.com/joe1chief/awesome-llm-tech-reports",
+      "reference_number": "author-year bibliography entry",
+      "page": 81,
+      "context": "The bibliography of this seed technical report directly cites the work; the page and identifier/title were verified against the archived PDF."
+    }
+  ],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.14476",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "seed_report_reference",
+  "artifacts": [
+    {
+      "type": "other",
+      "title": "DAPO project page",
+      "url": "https://dapo-sia.github.io/",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "DAPO",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2503.14476",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2503.14476"
+  }
+}

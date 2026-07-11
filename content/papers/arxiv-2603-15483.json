@@ -1,0 +1,154 @@
+{
+  "work_id": "arxiv-2603-15483",
+  "slug": "talk-evaluate-diagnose-user-aware-agent-evaluation-with-automated-error-2603-15483",
+  "title": {
+    "original": "Talk, Evaluate, Diagnose: User-aware Agent Evaluation with Automated Error Analysis",
+    "zh": "谈话、评估、诊断：通过自动错误分析进行用户感知代理评估",
+    "en": "Talk, Evaluate, Diagnose: User-aware Agent Evaluation with Automated Error Analysis"
+  },
+  "authors": [
+    {
+      "name": "Penny Chong",
+      "affiliations": []
+    },
+    {
+      "name": "Harshavardhan Abichandani",
+      "affiliations": []
+    },
+    {
+      "name": "Jiyuan Shen",
+      "affiliations": []
+    },
+    {
+      "name": "Atin Ghosh",
+      "affiliations": []
+    },
+    {
+      "name": "Min Pyae Moe",
+      "affiliations": []
+    },
+    {
+      "name": "Yifan Mai",
+      "affiliations": []
+    },
+    {
+      "name": "Daniel Dahlmeier",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2603.15483",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2026-03-16",
+      "latest_revision_date": "2026-03-16",
+      "url": "https://arxiv.org/abs/2603.15483"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-03-16",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-03-16"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-5",
+  "tags": [
+    "agent-evaluation",
+    "observability",
+    "reliability"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "TED 串联用户模拟、自然语言子目标评分、多指标聚合和错误诊断，是可跨域适配的 Agent 评测流水线。",
+    "en": "TED connects user simulation, natural-language subgoal grading, multi-metric aggregation, and error diagnosis in an evaluation pipeline adaptable across domains."
+  },
+  "abstract": {
+    "zh": "TED（Talk, Evaluate, Diagnose）以专家/非专家用户画像驱动交互，将子目标转为自然语言评分说明，并自动诊断 Agent 与 Judge 的错误。",
+    "en": "TED (Talk, Evaluate, Diagnose) drives interactions with expert and novice personas, turns subgoals into natural-language grading notes, and automatically diagnoses agent and judge errors."
+  },
+  "problem": {
+    "zh": "跨领域 Agent 各自使用数据库查询或正则等成功判定，难统一扩展；忽略用户专业度也会掩盖沟通效率与中间进展。",
+    "en": "Domain-specific success checks such as database queries and regex do not scale uniformly, and ignoring user expertise hides communication efficiency and intermediate progress."
+  },
+  "approach": {
+    "zh": "框架复用通用用户画像模板，以 LLM Judge 对自然语言子目标说明评分，引入轮次效率和进展指标，再分析 Judge/Agent 不一致。",
+    "en": "Reusable persona templates interact with agents, an LLM judge scores natural-language subgoal notes, efficiency and progress metrics are added, and inconsistencies are diagnosed."
+  },
+  "system_design": {
+    "zh": "TED 串联用户模拟器、Agent Harness、评分说明适配器、Judge、多指标聚合器和错误分析器，输出可行动的修复建议。",
+    "en": "TED chains a user simulator, agent harness, grading-note adapter, judge, multi-metric aggregator, and error analyzer to produce actionable remedies."
+  },
+  "key_results": {
+    "zh": "框架揭示模型表现随用户专业度变化，并在把诊断修复纳入设计后提升所提效率与进展指标。",
+    "en": "The framework reveals performance differences by user expertise and improves its efficiency and progress metrics after incorporating diagnosed remedies."
+  },
+  "limitations": {
+    "zh": "用户画像和 LLM Judge 都可能复制模型偏差，自然语言评分缺少确定性保证；少数领域的修复收益未必能跨域保持。",
+    "en": "Personas and LLM judges may reproduce model biases, natural-language grading lacks deterministic guarantees, and remedy gains from a few domains may not transfer."
+  },
+  "evaluation": {
+    "models": [],
+    "workloads": [
+      "User-aware agent interaction with expert personas",
+      "User-aware agent interaction with non-expert personas"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "Peak improvement after applying diagnosed remedies",
+        "value": "8–10",
+        "unit": "%",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "上述非空 evaluation 字段和数值仅转录自官方 arXiv 摘要；摘要未披露的表格级条件、硬件与集群配置及更多对照项仍待全文审计。",
+      "en": "The non-empty evaluation fields and numbers above are transcribed only from the official arXiv abstract; table-level conditions, hardware and cluster configurations, and additional comparisons not stated there await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.15483",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "TED code and dataset repository",
+      "url": "https://github.com/SAP-samples/agent-quality-inspect",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Talk, Evaluate, Diagnose",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2603.15483",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2603.15483"
+  }
+}

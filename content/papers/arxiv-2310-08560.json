@@ -1,0 +1,160 @@
+{
+  "work_id": "arxiv-2310-08560",
+  "slug": "memgpt-towards-llms-as-operating-systems-2310-08560",
+  "title": {
+    "original": "MemGPT: Towards LLMs as Operating Systems",
+    "zh": "MemGPT：迈向操作系统式大语言模型",
+    "en": "MemGPT: Towards LLMs as Operating Systems"
+  },
+  "authors": [
+    {
+      "name": "Charles Packer",
+      "affiliations": []
+    },
+    {
+      "name": "Sarah Wooders",
+      "affiliations": []
+    },
+    {
+      "name": "Kevin Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Vivian Fang",
+      "affiliations": []
+    },
+    {
+      "name": "Shishir G. Patil",
+      "affiliations": []
+    },
+    {
+      "name": "Ion Stoica",
+      "affiliations": []
+    },
+    {
+      "name": "Joseph E. Gonzalez",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2310.08560",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2023-10-12",
+      "latest_revision_date": "2024-02-12",
+      "url": "https://arxiv.org/abs/2310.08560"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2023-10-12",
+    "venue_publication_date": null,
+    "latest_revision_date": "2024-02-12"
+  },
+  "window_status": "context",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "context",
+  "domain": "agent_infra",
+  "primary_category": "AG-2",
+  "tags": [
+    "agent-memory",
+    "context-management",
+    "persistent-state"
+  ],
+  "category_confidence": 0.99,
+  "inclusion_reason": {
+    "zh": "MemGPT 将分层记忆、虚拟上下文和中断控制实现为可复用智能体运行时，奠定长期状态管理研究的基础。",
+    "en": "MemGPT implements hierarchical memory, virtual context, and interrupt-driven control as a reusable agent runtime, grounding later research on long-lived state management."
+  },
+  "abstract": {
+    "zh": "MemGPT 借鉴操作系统虚拟内存，在有限上下文窗口内管理快慢记忆层，并通过数据移动提供超出窗口的持久上下文。",
+    "en": "MemGPT borrows virtual-memory ideas to manage fast and slow memory tiers within a limited context window, moving data to provide persistent context beyond that window."
+  },
+  "problem": {
+    "zh": "固定上下文窗口使大文档分析和多会话对话丢失历史；简单截断或一次性检索无法持续决定哪些状态应留在活动上下文。",
+    "en": "Fixed context windows lose history in large-document analysis and multi-session chat; truncation or one-shot retrieval cannot continually decide what belongs in active context."
+  },
+  "approach": {
+    "zh": "系统把上下文视为快速内存，把外部存储视为慢速内存，由模型触发读写和换页，并利用中断协调自身与用户的控制流。",
+    "en": "The system treats the context window as fast memory and external storage as slow memory, lets the model trigger reads, writes, and paging, and uses interrupts to coordinate control flow."
+  },
+  "system_design": {
+    "zh": "记忆管理器维护不同层级及其元数据，LLM 通过函数接口执行换入换出，控制器在 token 压力或事件发生时触发中断与上下文重组。",
+    "en": "A memory manager maintains tiers and metadata, the LLM invokes functions to page state in or out, and a controller triggers interrupts and context reconstruction under token pressure or events."
+  },
+  "key_results": {
+    "zh": "摘要显示 MemGPT 能处理远超底层窗口的大文档，并构建跨多会话记忆、反思和演化的对话智能体。",
+    "en": "The abstract shows MemGPT analyzing documents beyond the underlying context window and supporting conversational agents that remember, reflect, and evolve across sessions."
+  },
+  "limitations": {
+    "zh": "由模型自主换页可能遗漏关键事实或污染长期记忆，外部存储还引入隐私、延迟与一致性问题；评测领域较少。",
+    "en": "Model-directed paging can omit critical facts or contaminate long-term memory, while external storage adds privacy, latency, and consistency risks; evaluated domains are limited."
+  },
+  "evaluation": {
+    "models": [
+      "large language models"
+    ],
+    "workloads": [
+      "large-document analysis",
+      "multi-session chat"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "underlying LLM with a limited context window"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "模型、任务、硬件、基线与指标仅转录自官方 arXiv 摘要；摘要未披露的表格和部署细节仍待全文审计。",
+      "en": "Models, workloads, hardware, baselines, and metrics are transcribed only from the official arXiv abstract; undisclosed tables and deployment details still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2310.08560",
+      "title": "Official arXiv record",
+      "accessed_at": "2026-07-11"
+    },
+    {
+      "type": "author_project",
+      "url": "https://memgpt.ai",
+      "title": "MemGPT code and data",
+      "accessed_at": "2026-07-11"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "manual_curation",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "MemGPT code and data",
+      "url": "https://memgpt.ai",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "MemGPT",
+    "extends": [],
+    "supersedes": [],
+    "related": [
+      "arxiv-2603-19935"
+    ]
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2310.08560",
+    "mirror_status": "external_only",
+    "license": null,
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2310.08560"
+  }
+}

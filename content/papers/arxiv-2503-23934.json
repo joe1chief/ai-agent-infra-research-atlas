@@ -1,0 +1,134 @@
+{
+  "work_id": "arxiv-2503-23934",
+  "slug": "green-mlops-to-green-genops-an-empirical-study-of-energy-consumption-in-2503-23934",
+  "title": {
+    "original": "Green MLOps to Green GenOps: An Empirical Study of Energy Consumption in Discriminative and Generative AI Operations",
+    "zh": "从绿色 MLOps 到绿色 GenOps：判别式与生成式 AI 运行能耗的实证研究",
+    "en": "Green MLOps to Green GenOps: An Empirical Study of Energy Consumption in Discriminative and Generative AI Operations"
+  },
+  "authors": [
+    {
+      "name": "Adrián Sánchez-Mompó",
+      "affiliations": []
+    },
+    {
+      "name": "Ioannis Mavromatis",
+      "affiliations": []
+    },
+    {
+      "name": "Peizheng Li",
+      "affiliations": []
+    },
+    {
+      "name": "Konstantinos Katsaros",
+      "affiliations": []
+    },
+    {
+      "name": "Aftab Khan",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2503.23934",
+    "doi": "10.3390/info16040281",
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-03-31",
+      "latest_revision_date": "2025-03-31",
+      "url": "https://arxiv.org/abs/2503.23934"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-03-31",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-03-31"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "published",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-6",
+  "tags": [
+    "observability",
+    "reliability",
+    "systems-measurement"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "该研究提供跨训练/推理、判别/生成工作负载的可复现能耗测量流程和配置级绿色运维基线。",
+    "en": "The study provides a reproducible energy-measurement workflow and configuration-level green-operations baseline spanning training/inference and discriminative/generative workloads."
+  },
+  "abstract": {
+    "zh": "该研究以可复现的软件功耗测量比较判别式模型和生成式模型在真实 MLOps/GenOps 流水线中的训练与推理能耗。它跨模型、硬件、超参数和请求形态分析能耗相关因素，并给出兼顾性能的绿色运维建议。",
+    "en": "This empirical study uses software-based power measurement to compare training and inference energy across discriminative and generative AI pipelines. It relates consumption to model, hardware, hyperparameters, and request characteristics, then derives operational guidance that preserves performance."
+  },
+  "problem": {
+    "zh": "AI 运维缺少跨判别式与生成式工作负载、易于复现的总能耗基线，因而难以判断架构、硬件和服务负载中的主要能源驱动因素。",
+    "en": "AI operations lack a reproducible energy baseline spanning discriminative and generative workloads, making it difficult to isolate the effects of architecture, hardware, and service demand."
+  },
+  "approach": {
+    "zh": "作者在多种模型与硬件上采集软件侧功耗，分别扫描判别任务的架构/超参数以及 LLM 的模型规模、推理复杂度与服务请求，并关联能耗和性能指标。",
+    "en": "The study records software-visible power across several models and hardware setups, varying discriminative architectures and hyperparameters as well as LLM size, reasoning complexity, and request load."
+  },
+  "system_design": {
+    "zh": "测量流程把训练和推理阶段、模型配置、设备以及服务请求作为独立实验维度，统一汇总功耗、性能和碳影响，以支持流水线级比较。",
+    "en": "The measurement workflow treats lifecycle phase, model configuration, device, and service request as explicit experiment dimensions and aggregates power, performance, and carbon implications at pipeline level."
+  },
+  "key_results": {
+    "zh": "研究发现判别模型可通过架构、超参数和硬件选择节能；LLM 能效则取决于规模、推理复杂度与利用率的平衡，大模型在低利用率时未必消耗更多总能量。",
+    "en": "The study finds meaningful savings from architecture, hyperparameter, and hardware choices for discriminative models; for LLMs, energy depends on the interaction of model size, reasoning complexity, and utilization rather than size alone."
+  },
+  "limitations": {
+    "zh": "软件功耗估计的精度受平台计数器约束，实验覆盖的设备和服务负载也不能代表所有数据中心；摘要未纳入硬件制造等隐含碳。",
+    "en": "Software power estimates inherit platform-counter limitations, and the tested devices and request patterns cannot represent every deployment; embodied hardware carbon is not included in the abstracted methodology."
+  },
+  "evaluation": {
+    "models": ["multiple discriminative model architectures", "large language models of varying size"],
+    "workloads": ["discriminative-model training and inference", "LLM inference under varying service requests"],
+    "hardware": ["multiple hardware configurations"],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [],
+    "notes": {
+      "zh": "模型类别、生命周期阶段、服务变量和多硬件设置来自官方摘要；具名模型/设备、功耗数值和相关系数待全文审计。",
+      "en": "Model classes, lifecycle phases, service variables, and multi-hardware scope come from the official abstract; named models/devices, power values, and correlations await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.23934",
+      "title": "Official arXiv record"
+    },
+    {
+      "type": "publisher",
+      "url": "https://doi.org/10.3390/info16040281",
+      "title": "Publisher record via DOI"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Green MLOps to Green GenOps",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2503.23934",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2503.23934"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "work_id": "arxiv-2601-18491",
+  "slug": "agentdog-a-diagnostic-guardrail-framework-for-ai-agent-safety-and-securi-2601-18491",
+  "title": {
+    "original": "AgentDoG: A Diagnostic Guardrail Framework for AI Agent Safety and Security",
+    "zh": "AgentDoG：AI 智能体安全保障的诊断护栏框架",
+    "en": "AgentDoG: A Diagnostic Guardrail Framework for AI Agent Safety and Security"
+  },
+  "authors": [
+    {
+      "name": "Dongrui Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Qihan Ren",
+      "affiliations": []
+    },
+    {
+      "name": "Chen Qian",
+      "affiliations": []
+    },
+    {
+      "name": "Shuai Shao",
+      "affiliations": []
+    },
+    {
+      "name": "Yuejin Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Yu Li",
+      "affiliations": []
+    },
+    {
+      "name": "Zhonghao Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Haoyu Luo",
+      "affiliations": []
+    },
+    {
+      "name": "Peng Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Qingyu Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Binxin Hu",
+      "affiliations": []
+    },
+    {
+      "name": "Ling Tang",
+      "affiliations": []
+    },
+    {
+      "name": "Jilin Mei",
+      "affiliations": []
+    },
+    {
+      "name": "Dadi Guo",
+      "affiliations": []
+    },
+    {
+      "name": "Leitao Yuan",
+      "affiliations": []
+    },
+    {
+      "name": "Junyao Yang",
+      "affiliations": []
+    },
+    {
+      "name": "Guanxu Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Qihao Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Yi Yu",
+      "affiliations": []
+    },
+    {
+      "name": "Bo Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Jiaxuan Guo",
+      "affiliations": []
+    },
+    {
+      "name": "Jie Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Wenqi Shao",
+      "affiliations": []
+    },
+    {
+      "name": "Huiqi Deng",
+      "affiliations": []
+    },
+    {
+      "name": "Zhiheng Xi",
+      "affiliations": []
+    },
+    {
+      "name": "Wenjie Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Wenxuan Wang",
+      "affiliations": []
+    },
+    {
+      "name": "Wen Shen",
+      "affiliations": []
+    },
+    {
+      "name": "Zhikai Chen",
+      "affiliations": []
+    },
+    {
+      "name": "Haoyu Xie",
+      "affiliations": []
+    },
+    {
+      "name": "Jialing Tao",
+      "affiliations": []
+    },
+    {
+      "name": "Juntao Dai",
+      "affiliations": []
+    },
+    {
+      "name": "Jiaming Ji",
+      "affiliations": []
+    },
+    {
+      "name": "Zhongjie Ba",
+      "affiliations": []
+    },
+    {
+      "name": "Linfeng Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Yong Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Quanshi Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Lei Zhu",
+      "affiliations": []
+    },
+    {
+      "name": "Zhihua Wei",
+      "affiliations": []
+    },
+    {
+      "name": "Hui Xue",
+      "affiliations": []
+    },
+    {
+      "name": "Chaochao Lu",
+      "affiliations": []
+    },
+    {
+      "name": "Jing Shao",
+      "affiliations": []
+    },
+    {
+      "name": "Xia Hu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2601.18491",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-01-26",
+      "latest_revision_date": "2026-04-23",
+      "url": "https://arxiv.org/abs/2601.18491"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-01-26",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-04-23"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "agent_infra",
+  "primary_category": "AG-6",
+  "tags": [
+    "agent-security",
+    "permissions",
+    "policy-enforcement"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "AgentDoG 统一风险分类、轨迹监控和根因诊断输出，可作为不同 Agent 执行循环中的细粒度 Guardrail 服务。",
+    "en": "AgentDoG unifies risk taxonomy, trajectory monitoring, and causal diagnosis as a fine-grained guardrail service for different agent loops."
+  },
+  "abstract": {
+    "zh": "AgentDoG 以“风险来源—失效方式—后果”三维分类指导轨迹级 Guardrail，不仅拦截风险，还诊断不安全或不合理动作的根因。",
+    "en": "AgentDoG uses a source-mode-consequence risk taxonomy to guide trajectory-level guardrails that both moderate behavior and diagnose causes of unsafe or unreasonable actions."
+  },
+  "problem": {
+    "zh": "通用 Guardrail 缺少 Agent 工具与环境风险意识，二元安全标签也无法解释错误来自何处、如何发生及会造成什么后果。",
+    "en": "General guardrails lack awareness of tool and environment risks, and binary labels do not explain where a failure originated, how it occurred, or what it caused."
+  },
+  "approach": {
+    "zh": "作者构建正交层次风险分类与 ATBench，并训练多尺寸 AgentDoG 模型对完整交互轨迹做细粒度上下文监控和根因诊断。",
+    "en": "The work builds an orthogonal hierarchical taxonomy and ATBench, then trains several AgentDoG models for fine-grained contextual monitoring and root-cause diagnosis over trajectories."
+  },
+  "system_design": {
+    "zh": "Guardrail 接收动作、工具反馈和历史上下文，输出三维风险标签、根因解释与处置判断；模型和基准共享同一分类契约。",
+    "en": "The guardrail consumes actions, tool feedback, and history and emits three-dimensional risk labels, causal diagnosis, and moderation decisions under a shared taxonomy."
+  },
+  "key_results": {
+    "zh": "不同尺寸的 AgentDoG 在复杂交互安全审核中优于既有方法，并提供普通安全分类器缺少的来源与失效透明度。",
+    "en": "AgentDoG variants outperform prior moderation methods in complex interactive scenarios while adding source and failure transparency absent from ordinary safety classifiers."
+  },
+  "limitations": {
+    "zh": "诊断仍由学习模型生成，可能被分布外轨迹或对抗表述规避；ATBench 的分类边界也会限制未见风险的识别。",
+    "en": "Diagnosis is still model-generated and may fail on out-of-distribution or adversarial traces, while ATBench's taxonomy bounds recognition of unseen risks."
+  },
+  "evaluation": {
+    "models": [
+      "AgentDoG 4B",
+      "AgentDoG 7B",
+      "AgentDoG 8B",
+      "Qwen model family",
+      "Llama model family"
+    ],
+    "workloads": [
+      "ATBench agentic safety moderation"
+    ],
+    "hardware": [],
+    "cluster_scale": null,
+    "baselines": [
+      "State-of-the-art agentic safety moderation methods"
+    ],
+    "metrics": [],
+    "notes": {
+      "zh": "上述非空 evaluation 标签仅来自官方 arXiv 摘要；摘要未给出可安全转录的表格级数值、硬件与集群配置，相关细节仍待全文审计。",
+      "en": "The non-empty evaluation labels above come only from the official arXiv abstract; it provides no table-level numbers, hardware, or cluster configuration safe to transcribe, so those details await full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.18491",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "AgentDoG",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2601.18491",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2601.18491"
+  }
+}

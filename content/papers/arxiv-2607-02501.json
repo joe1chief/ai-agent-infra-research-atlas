@@ -1,0 +1,183 @@
+{
+  "work_id": "arxiv-2607-02501",
+  "slug": "embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heter-2607-02501",
+  "title": {
+    "original": "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots",
+    "zh": "Embodied.cpp：面向异构机器人的具身 AI 模型便携式推理运行时",
+    "en": "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots"
+  },
+  "authors": [
+    {
+      "name": "Ling Xu",
+      "affiliations": []
+    },
+    {
+      "name": "Chuyu Han",
+      "affiliations": []
+    },
+    {
+      "name": "Borui Li",
+      "affiliations": []
+    },
+    {
+      "name": "Hao Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Shiqi Jiang",
+      "affiliations": []
+    },
+    {
+      "name": "Ting Cao",
+      "affiliations": []
+    },
+    {
+      "name": "Chuanyou Li",
+      "affiliations": []
+    },
+    {
+      "name": "Sheng Zhong",
+      "affiliations": []
+    },
+    {
+      "name": "Shuai Wang",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2607.02501",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v2",
+      "first_public_date": "2026-07-02",
+      "latest_revision_date": "2026-07-03",
+      "url": "https://arxiv.org/abs/2607.02501"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2026-07-02",
+    "venue_publication_date": null,
+    "latest_revision_date": "2026-07-03"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "core",
+  "domain": "ai_infra",
+  "primary_category": "AI-4",
+  "tags": [
+    "compiler",
+    "kernel",
+    "runtime"
+  ],
+  "category_confidence": 0.94,
+  "inclusion_reason": {
+    "zh": "Embodied.cpp 的五层接口、多速率闭环、融合推理与统一后端可跨 VLA/WAM、机器人和模拟器复用。",
+    "en": "Embodied.cpp's five-layer interfaces, multi-rate control loop, fused inference, and unified backend are reusable across VLA/WAM models, robots, and simulators."
+  },
+  "abstract": {
+    "zh": "Embodied.cpp 将 VLA 与世界动作模型的共同执行路径抽象为五层 C++ 运行时，支持多速率闭环、batch-1 融合推理和异构机器人后端。",
+    "en": "Embodied.cpp abstracts the shared execution path of VLA and world-action models into a five-layer C++ runtime supporting multi-rate control loops, fused batch-one inference, and heterogeneous robot backends."
+  },
+  "problem": {
+    "zh": "具身模型分散在模型专用 Python 栈、后端假设和机器人胶水代码中，通用请求—响应推理服务又不满足闭环控制的多速率和低时延契约。",
+    "en": "Embodied models are fragmented across model-specific Python stacks, backend assumptions, and robot glue, while request-response servers do not meet multi-rate, latency-first closed-loop contracts."
+  },
+  "approach": {
+    "zh": "作者分析代表性 VLA/WAM 后提取共享路径，将输入适配、序列构建、骨干执行、动作头和部署适配解耦，并融合关键推理算子。",
+    "en": "After analyzing representative VLA and WAM designs, the authors separate input adaptation, sequence construction, backbone execution, head plugins, and deployment adaptation while fusing critical inference operations."
+  },
+  "system_design": {
+    "zh": "五层架构通过统一后端连接设备：适配器读取传感器，序列层按频率组装输入，骨干共享计算，插件头生成动作或世界状态，部署层接机器人和模拟器。",
+    "en": "Five layers connect through one backend: adapters ingest sensors, sequence builders assemble rate-specific inputs, the backbone shares computation, plugin heads emit actions or world state, and deployment adapters target robots or simulators."
+  },
+  "key_results": {
+    "zh": "在两种 VLA 和初步 WAM 测试中，运行时支持成功闭环执行并降低模型块内存，显示统一抽象可兼顾效率和多架构支持。",
+    "en": "Across two VLA deployments and a preliminary WAM test, the runtime supports successful closed-loop execution and lowers block memory, suggesting one abstraction can span architectures efficiently."
+  },
+  "limitations": {
+    "zh": "WAM 证据仍属初步，五层接口尚未覆盖所有传感器、动作空间和控制频率；真实安全认证与更广后端可移植性仍待完成。",
+    "en": "WAM evidence is preliminary, the five-layer API does not yet cover every sensor, action space, or control rate, and real safety certification plus broader backend portability remain open."
+  },
+  "evaluation": {
+    "models": [
+      "HY-VLA",
+      "pi0.5",
+      "LingBot-VA Transformer block"
+    ],
+    "workloads": [
+      "closed-loop VLA execution",
+      "preliminary world-action-model benchmark"
+    ],
+    "hardware": [
+      "heterogeneous edge devices",
+      "robots",
+      "simulators"
+    ],
+    "cluster_scale": null,
+    "baselines": [],
+    "metrics": [
+      {
+        "name": "HY-VLA task success rate",
+        "value": 100,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "pi0.5 task success rate",
+        "value": 91,
+        "unit": "%",
+        "higher_is_better": true
+      },
+      {
+        "name": "WAM block memory after optimization",
+        "value": 88.1,
+        "unit": "MiB",
+        "baseline": "312.2 MiB before optimization",
+        "higher_is_better": false
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2607.02501",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [
+    {
+      "type": "code",
+      "title": "Embodied.cpp project repository",
+      "url": "https://github.com/SEU-PAISys/Embodied.cpp",
+      "license": null
+    }
+  ],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Embodied.cpp",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2607.02501",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2607.02501"
+  }
+}

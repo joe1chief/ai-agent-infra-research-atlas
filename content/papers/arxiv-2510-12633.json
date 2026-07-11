@@ -1,0 +1,177 @@
+{
+  "work_id": "arxiv-2510-12633",
+  "slug": "laminar-a-scalable-asynchronous-rl-post-training-framework-2510-12633",
+  "title": {
+    "original": "Laminar: A Scalable Asynchronous RL Post-Training Framework",
+    "zh": "Laminar：可扩展的异步强化学习后训练框架",
+    "en": "Laminar: A Scalable Asynchronous RL Post-Training Framework"
+  },
+  "authors": [
+    {
+      "name": "Guangming Sheng",
+      "affiliations": []
+    },
+    {
+      "name": "Yuxuan Tong",
+      "affiliations": []
+    },
+    {
+      "name": "Borui Wan",
+      "affiliations": []
+    },
+    {
+      "name": "Wang Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Chaobo Jia",
+      "affiliations": []
+    },
+    {
+      "name": "Xibin Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Yuqi Wu",
+      "affiliations": []
+    },
+    {
+      "name": "Xiang Li",
+      "affiliations": []
+    },
+    {
+      "name": "Chi Zhang",
+      "affiliations": []
+    },
+    {
+      "name": "Yanghua Peng",
+      "affiliations": []
+    },
+    {
+      "name": "Haibin Lin",
+      "affiliations": []
+    },
+    {
+      "name": "Xin Liu",
+      "affiliations": []
+    },
+    {
+      "name": "Chuan Wu",
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "identifiers": {
+    "arxiv": "2510.12633",
+    "doi": null,
+    "openreview": null
+  },
+  "versions": [
+    {
+      "source": "arxiv",
+      "version": "v1",
+      "first_public_date": "2025-10-14",
+      "latest_revision_date": "2025-10-14",
+      "url": "https://arxiv.org/abs/2510.12633"
+    }
+  ],
+  "dates": {
+    "first_public_date": "2025-10-14",
+    "venue_publication_date": null,
+    "latest_revision_date": "2025-10-14"
+  },
+  "window_status": "new_in_window",
+  "venue": "arXiv",
+  "publication_status": "preprint",
+  "curation_tier": "watchlist",
+  "domain": "ai_infra",
+  "primary_category": "AI-3",
+  "tags": [
+    "post-training",
+    "reinforcement-learning",
+    "rollout"
+  ],
+  "category_confidence": 0.82,
+  "inclusion_reason": {
+    "zh": "Laminar 的分布式参数中继、逐轨迹异步、长尾重打包和故障隔离构成千卡级 RL 后训练运行时。",
+    "en": "Laminar's distributed parameter relays, per-trajectory asynchrony, tail repacking, and failure isolation form a thousand-GPU-scale RL post-training runtime."
+  },
+  "abstract": {
+    "zh": "Laminar 以轨迹级异步取代全局权重同步，使用中继 worker 组成分布式参数服务，并把长尾轨迹动态重打包到专用 rollout 实例。",
+    "en": "Laminar replaces global synchronization with trajectory-level asynchrony, uses relay workers as a distributed parameter service, and dynamically repacks long-tail trajectories onto dedicated rollout instances."
+  },
+  "problem": {
+    "zh": "轨迹生成时延呈强长尾，现有异步系统仍要求 actor 与全部 rollout 全局同步权重，导致快 worker 被慢轨迹和刚性更新节奏阻塞。",
+    "en": "Trajectory latency is strongly heavy-tailed, yet existing asynchronous systems still globally synchronize actor and rollout weights, blocking fast workers behind slow trajectories and rigid update epochs."
+  },
+  "approach": {
+    "zh": "中继层允许 rollout 随时拉取较新权重，训练循环无需停顿；动态重打包把异常长轨迹集中处理，同时解耦模块隔离单点失败。",
+    "en": "Relay workers let rollouts pull fresh weights without pausing training; dynamic repacking consolidates unusually long trajectories, and decoupled components isolate failures."
+  },
+  "system_design": {
+    "zh": "actor 持续更新策略，中继参数层分发细粒度版本，rollout 池逐轨迹拉取与提交，重打包控制器监测时延并迁移长尾任务。",
+    "en": "The actor continuously updates policy, a relay parameter tier distributes fine-grained versions, the rollout pool pulls and submits per trajectory, and a repacking controller monitors latency and moves tail work."
+  },
+  "key_results": {
+    "zh": "千卡级评测中，Laminar 相比先进系统显著提升训练吞吐并缩短收敛时间，长尾越强时收益越明显。",
+    "en": "At thousand-GPU scale, Laminar materially improves training throughput and convergence time over advanced systems, with larger benefits under stronger latency tails."
+  },
+  "limitations": {
+    "zh": "轨迹级异步仍需控制策略陈旧性；中继层和任务迁移增加一致性与网络复杂度，故障隔离效果也依赖外部存储可靠性。",
+    "en": "Trajectory-level asynchrony still requires staleness control; relay and migration layers add consistency and network complexity, while fault isolation depends on durable external state."
+  },
+  "evaluation": {
+    "models": [
+      "large language models"
+    ],
+    "workloads": [
+      "asynchronous RL post-training with long-tail trajectories"
+    ],
+    "hardware": [
+      "1,024-GPU cluster"
+    ],
+    "cluster_scale": null,
+    "baselines": [
+      "state-of-the-art asynchronous RL systems"
+    ],
+    "metrics": [
+      {
+        "name": "Training throughput speedup",
+        "value": "up to 5.48",
+        "unit": "x",
+        "baseline": "state-of-the-art asynchronous RL systems",
+        "higher_is_better": true
+      }
+    ],
+    "notes": {
+      "zh": "已填模型、工作负载、硬件、基线和指标均来自官方 arXiv 摘要或 comment；摘要未披露的表格明细、硬件拓扑与集群配置仍待全文审计。",
+      "en": "Populated models, workloads, hardware, baselines, and metrics come from the official arXiv abstract or comment; undisclosed table details, hardware topology, and cluster configuration still require full-text audit."
+    }
+  },
+  "seed_reports": [],
+  "first_party_sources": [
+    {
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.12633",
+      "title": "Official arXiv record"
+    }
+  ],
+  "verified_at": "2026-07-11",
+  "discovery_method": "official-expansion",
+  "artifacts": [],
+  "reproducibility_badges": [],
+  "relations": {
+    "system_family": "Laminar",
+    "extends": [],
+    "supersedes": [],
+    "related": []
+  },
+  "pdf": {
+    "official_url": "https://arxiv.org/pdf/2510.12633",
+    "mirror_status": "external_only",
+    "license": "unknown",
+    "sha256": null,
+    "size_bytes": null,
+    "fallback_url": "https://arxiv.org/abs/2510.12633"
+  }
+}
