@@ -156,49 +156,163 @@ export default function HomePage() {
     <main id="main-content">
       <section className="hero-section">
         <div className="hero-grid" aria-hidden="true" />
-        <div className="hero-orbit orbit-ai" aria-hidden="true"><span>AI</span></div>
-        <div className="hero-orbit orbit-agent" aria-hidden="true"><span>AG</span></div>
+        <div className="hero-ambient-glow glow-cyan" aria-hidden="true" />
+        <div className="hero-ambient-glow glow-purple" aria-hidden="true" />
+
         <div className="hero-copy">
-          <p className="eyebrow"><Sparkles size={14} /> {copy("heroKicker")}</p>
+          <div className="hero-badge-pill">
+            <span className="badge-pulse-dot" />
+            <Sparkles size={13} className="badge-icon" />
+            <span>{copy("heroKicker")}</span>
+          </div>
           <h1>{copy("heroTitle")}</h1>
           <p>{copy("heroBody")}</p>
           <div className="hero-actions">
-            <a className="button primary-button" href="#catalog">{copy("explore")}<ArrowDown size={17} /></a>
-            <a className="button ghost-button" href="#methodology">{copy("methodology")}<ArrowRight size={17} /></a>
+            <a className="button primary-button" href="#catalog">
+              <span>{copy("explore")}</span>
+              <ArrowDown size={16} />
+            </a>
+            <a className="button ghost-button" href="#methodology">
+              <span>{copy("methodology")}</span>
+              <ArrowRight size={16} />
+            </a>
           </div>
         </div>
-        <div className="hero-signal" aria-hidden="true">
-          <div className="signal-core"><span>INFRA</span><strong>ATLAS</strong></div>
-          {Array.from({ length: 13 }, (_, index) => <i key={index} style={{ "--i": index } as React.CSSProperties} />)}
-          <div className="signal-label signal-label-ai">TRAIN · SERVE · MEASURE</div>
-          <div className="signal-label signal-label-ag">RUN · REMEMBER · VERIFY</div>
+
+        <div className="hero-radar-container" aria-hidden="true">
+          <div className="hero-signal">
+            <div className="radar-ring radar-ring-1" />
+            <div className="radar-ring radar-ring-2" />
+            <div className="radar-ring radar-ring-3" />
+            <div className="radar-sweep" />
+            
+            <div className="signal-core">
+              <span className="core-eyebrow">RESEARCH MATRIX</span>
+              <strong>INFRA ATLAS</strong>
+              <span className="core-sub">AI × AGENT</span>
+            </div>
+
+            {/* Orbiting Satellite Badges */}
+            <div className="satellite-node satellite-ai">
+              <span className="sat-dot" />
+              <span>AI INFRA</span>
+            </div>
+            <div className="satellite-node satellite-agent">
+              <span className="sat-dot" />
+              <span>AGENT INFRA</span>
+            </div>
+            <div className="satellite-node satellite-eval">
+              <span className="sat-dot" />
+              <span>BENCHMARK</span>
+            </div>
+
+            {Array.from({ length: 13 }, (_, index) => (
+              <i key={index} style={{ "--i": index } as React.CSSProperties} />
+            ))}
+          </div>
         </div>
+
         <div className="hero-stats">
-          <div><Database size={17} /><strong>{primaryCount || "—"}</strong><span>{copy("indexed")}</span></div>
-          <div><ShieldCheck size={17} /><strong>{coreCount || "—"}</strong><span>{copy("core")}</span></div>
-          <div><Grid2X2 size={17} /><strong>13</strong><span>{copy("categories")}</span></div>
-          <div><BookOpenCheck size={17} /><strong>{reportCount || "—"}</strong><span>{copy("reports")}</span></div>
-          <div><CalendarDays size={17} /><strong>{generated}</strong><span>{copy("updated")}</span></div>
+          <div className="stat-card">
+            <div className="stat-icon-wrapper ai-accent"><Database size={17} /></div>
+            <div className="stat-content">
+              <strong>{primaryCount || "—"}</strong>
+              <span>{copy("indexed")}</span>
+            </div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon-wrapper core-accent"><ShieldCheck size={17} /></div>
+            <div className="stat-content">
+              <strong>{coreCount || "—"}</strong>
+              <span>{copy("core")}</span>
+            </div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon-wrapper layer-accent"><Grid2X2 size={17} /></div>
+            <div className="stat-content">
+              <strong>13</strong>
+              <span>{copy("categories")}</span>
+            </div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon-wrapper report-accent"><BookOpenCheck size={17} /></div>
+            <div className="stat-content">
+              <strong>{reportCount || "—"}</strong>
+              <span>{copy("reports")}</span>
+            </div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon-wrapper date-accent"><CalendarDays size={17} /></div>
+            <div className="stat-content">
+              <strong>{generated}</strong>
+              <span>{copy("updated")}</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <section ref={visualizationSection} className="atlas-overview section-shell" aria-labelledby="stack-heading">
         <div className="section-heading">
-          <div><p className="section-number">01 · MAP</p><h2 id="stack-heading">{copy("stackMap")}</h2><p>{copy("stackMapBody")}</p></div>
-          <span className="data-window">{copy("dataAsOf")} · {catalog?.manifest.window?.start || "2025-01-01"} → {catalog?.manifest.window?.end || generated}</span>
+          <div>
+            <p className="section-number">// 01 ARCHITECTURE MAP</p>
+            <h2 id="stack-heading">{copy("stackMap")}</h2>
+            <p>{copy("stackMapBody")}</p>
+          </div>
+          <span className="data-window">
+            <span className="live-dot" />
+            {copy("dataAsOf")} · {catalog?.manifest.window?.start || "2025-01-01"} → {catalog?.manifest.window?.end || generated}
+          </span>
         </div>
         {!visualizationsReady ? (
-          <div className="chart-loading" aria-label={copy("loading")}><div className="loading-bars">{Array.from({ length: 13 }, (_, index) => <i key={index} />)}</div><p>{copy("loading")}</p></div>
+          <div className="chart-loading" aria-label={copy("loading")}>
+            <div className="loading-bars">{Array.from({ length: 13 }, (_, index) => <i key={index} />)}</div>
+            <p>{copy("loading")}</p>
+          </div>
         ) : error ? (
-          <div className="data-error" role="alert"><Network size={28} /><h3>{copy("loadError")}</h3><p>{error}</p><button type="button" onClick={() => setAttempt((value) => value + 1)}><RefreshCw size={15} />{copy("retry")}</button></div>
+          <div className="data-error" role="alert">
+            <Network size={28} />
+            <h3>{copy("loadError")}</h3>
+            <p>{error}</p>
+            <button type="button" onClick={() => setAttempt((value) => value + 1)}>
+              <RefreshCw size={15} />
+              {copy("retry")}
+            </button>
+          </div>
         ) : !catalog ? (
-          <div className="chart-loading"><div className="loading-bars">{Array.from({ length: 13 }, (_, index) => <i key={index} />)}</div><p>{copy("loading")}</p></div>
+          <div className="chart-loading">
+            <div className="loading-bars">{Array.from({ length: 13 }, (_, index) => <i key={index} />)}</div>
+            <p>{copy("loading")}</p>
+          </div>
         ) : (
           <Suspense fallback={<div className="chart-loading"><div className="loading-bars">{Array.from({ length: 13 }, (_, index) => <i key={index} />)}</div><p>{copy("loading")}</p></div>}>
             <div className="visualization-grid">
-              <article className="viz-card stack-map-card"><div className="viz-card-label"><span>13 LAYERS</span><i /></div><StackMap papers={papers.filter((paper) => paper.window_status === "new_in_window")} onSelect={selectStackCell} /></article>
-              <article className="viz-card trend-card"><header><div><span>PUBLICATION CADENCE</span><h3>{copy("trend")}</h3></div><p>{copy("trendBody")}</p></header><TrendChart papers={papers.filter((paper) => paper.window_status === "new_in_window")} /></article>
-              <article className="viz-card lineage-card" id="lineage-panel"><header><div><span>DIRECT RELATIONS</span><h3>{copy("lineage")}</h3></div><p>{copy("lineageBody")}</p></header><LineageGraph graph={catalog.graph} papers={papers} selectedId={selectedId} onSelect={setSelectedId} /></article>
+              <article className="viz-card stack-map-card">
+                <div className="viz-card-label">
+                  <span>13 INFRA LAYERS DENSITY</span>
+                  <i />
+                </div>
+                <StackMap papers={papers.filter((paper) => paper.window_status === "new_in_window")} onSelect={selectStackCell} />
+              </article>
+              <article className="viz-card trend-card">
+                <header>
+                  <div>
+                    <span>PUBLICATION CADENCE</span>
+                    <h3>{copy("trend")}</h3>
+                  </div>
+                  <p>{copy("trendBody")}</p>
+                </header>
+                <TrendChart papers={papers.filter((paper) => paper.window_status === "new_in_window")} />
+              </article>
+              <article className="viz-card lineage-card" id="lineage-panel">
+                <header>
+                  <div>
+                    <span>DIRECT RELATION LINEAGE</span>
+                    <h3>{copy("lineage")}</h3>
+                  </div>
+                  <p>{copy("lineageBody")}</p>
+                </header>
+                <LineageGraph graph={catalog.graph} papers={papers} selectedId={selectedId} onSelect={setSelectedId} />
+              </article>
             </div>
           </Suspense>
         )}
@@ -206,30 +320,72 @@ export default function HomePage() {
 
       <section className="catalog-section section-shell" id="catalog" aria-labelledby="catalog-heading">
         <div className="section-heading catalog-heading">
-          <div><p className="section-number">02 · EXPLORE</p><h2 id="catalog-heading">{copy("results")}</h2><p><strong>{filtered.length}</strong> {copy("filtered")}</p></div>
+          <div>
+            <p className="section-number">// 02 RESEARCH DIRECTORY</p>
+            <h2 id="catalog-heading">{copy("results")}</h2>
+            <p>
+              <strong>{filtered.length}</strong> {copy("filtered")}
+            </p>
+          </div>
           <div className="view-toggle" role="group" aria-label="Catalog view">
-            <button className={filters.view === "cards" ? "active" : ""} type="button" onClick={() => setFilters({ view: "cards" })}><Grid2X2 size={16} />{copy("cards")}</button>
-            <button className={filters.view === "table" ? "active" : ""} type="button" onClick={() => setFilters({ view: "table" })}><List size={16} />{copy("table")}</button>
+            <button className={filters.view === "cards" ? "active" : ""} type="button" onClick={() => setFilters({ view: "cards" })}>
+              <Grid2X2 size={15} />
+              <span>{copy("cards")}</span>
+            </button>
+            <button className={filters.view === "table" ? "active" : ""} type="button" onClick={() => setFilters({ view: "table" })}>
+              <List size={15} />
+              <span>{copy("table")}</span>
+            </button>
           </div>
         </div>
         <FilterPanel filters={filters} papers={papers} onChange={setFilters} onReset={reset} />
-        {!catalog && !error ? <CatalogSkeleton /> : filtered.length === 0 ? <EmptyCatalog /> : filters.view === "cards" ? (
-          <PaperCards papers={filtered.slice(0, visibleCount)} favorites={favorites} onFavorite={toggle} onLineage={chooseLineage} selectedId={selectedId} />
+        {!catalog && !error ? (
+          <CatalogSkeleton />
+        ) : filtered.length === 0 ? (
+          <EmptyCatalog onReset={reset} />
+        ) : filters.view === "cards" ? (
+          <PaperCards papers={filtered.slice(0, visibleCount)} favorites={favorites} onFavorite={toggle} onLineage={chooseLineage} selectedId={selectedId} onResetFilters={reset} />
         ) : (
-          <PaperTable papers={filtered.slice(0, visibleCount)} favorites={favorites} onFavorite={toggle} onLineage={chooseLineage} selectedId={selectedId} />
+          <PaperTable papers={filtered.slice(0, visibleCount)} favorites={favorites} onFavorite={toggle} onLineage={chooseLineage} selectedId={selectedId} onResetFilters={reset} />
         )}
-        {filtered.length > visibleCount && <button className="load-more" type="button" onClick={() => setVisibleCount((count) => count + 24)}>{locale === "zh" ? `继续加载（剩余 ${filtered.length - visibleCount}）` : `Load more (${filtered.length - visibleCount} remaining)`}<ArrowDown size={16} /></button>}
+        {filtered.length > visibleCount && (
+          <button className="load-more" type="button" onClick={() => setVisibleCount((count) => count + 24)}>
+            <span>{locale === "zh" ? `继续加载（剩余 ${filtered.length - visibleCount} 篇）` : `Load more (${filtered.length - visibleCount} remaining)`}</span>
+            <ArrowDown size={15} />
+          </button>
+        )}
       </section>
 
       <section className="methodology-section" id="methodology" aria-labelledby="methodology-heading">
         <div className="section-shell methodology-inner">
-          <div className="methodology-code" aria-hidden="true"><span>TRACE</span><strong>→</strong><span>VERIFY</span><strong>→</strong><span>CURATE</span></div>
-          <div><p className="section-number">03 · METHOD</p><h2 id="methodology-heading">{copy("methodologyTitle")}</h2><p>{copy("methodologyBody")}</p></div>
-          <ol>
-            <li><span>01</span><div><strong>{locale === "zh" ? "技术报告为种子" : "Reports as seeds"}</strong><p>{locale === "zh" ? "保留引用编号、页码与上下文。" : "Citation number, page, and context stay attached."}</p></div></li>
-            <li><span>02</span><div><strong>{locale === "zh" ? "第一方证据核验" : "First-party verification"}</strong><p>{locale === "zh" ? "arXiv、OpenReview、会议与作者项目页。" : "arXiv, OpenReview, proceedings, and author project pages."}</p></div></li>
-            <li><span>03</span><div><strong>{locale === "zh" ? "版本合并，状态分流" : "Version merging, explicit status"}</strong><p>{locale === "zh" ? "预印本、正式发表、撤稿与上下文节点不混计。" : "Preprints, venue publications, withdrawals, and context nodes stay distinct."}</p></div></li>
-          </ol>
+          <div className="methodology-header">
+            <p className="section-number">// 03 CURATION METHODOLOGY</p>
+            <h2 id="methodology-heading">{copy("methodologyTitle")}</h2>
+            <p>{copy("methodologyBody")}</p>
+          </div>
+          <div className="methodology-pipeline">
+            <div className="method-step-card">
+              <span className="step-num">01</span>
+              <div className="step-content">
+                <strong>{locale === "zh" ? "技术报告为种子" : "Reports as seeds"}</strong>
+                <p>{locale === "zh" ? "保留引用编号、论文具体页码与系统上下文。" : "Citation number, page, and context stay attached."}</p>
+              </div>
+            </div>
+            <div className="method-step-card">
+              <span className="step-num">02</span>
+              <div className="step-content">
+                <strong>{locale === "zh" ? "第一方证据严格核验" : "First-party verification"}</strong>
+                <p>{locale === "zh" ? "逐一核对 arXiv、OpenReview、顶会论文集与开源代码仓库。" : "arXiv, OpenReview, proceedings, and author project pages."}</p>
+              </div>
+            </div>
+            <div className="method-step-card">
+              <span className="step-num">03</span>
+              <div className="step-content">
+                <strong>{locale === "zh" ? "版本合并与状态分流" : "Version merging, explicit status"}</strong>
+                <p>{locale === "zh" ? "区分预印本、正式发表顶会、撤稿修正与历史基准节点。" : "Preprints, venue publications, withdrawals, and context nodes stay distinct."}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

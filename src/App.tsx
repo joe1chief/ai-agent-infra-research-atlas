@@ -2,7 +2,7 @@ import { createContext, lazy, Suspense, useCallback, useContext, useEffect, useM
 import { AtlasHeader } from "./components/AtlasHeader";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import { t, type CopyKey } from "./lib/i18n";
-import { routePath } from "./lib/catalog";
+import { homePath, routePath } from "./lib/catalog";
 import type { Locale, Theme } from "./types";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -50,7 +50,7 @@ export default function App() {
     document.documentElement.dataset.theme = theme;
     document.documentElement.style.colorScheme = theme;
     const themeMeta = document.querySelector('meta[name="theme-color"]');
-    themeMeta?.setAttribute("content", theme === "dark" ? "#071a1d" : "#f4f7f3");
+    themeMeta?.setAttribute("content", theme === "dark" ? "#090a0f" : "#f8fafc");
   }, [locale, theme]);
 
   useEffect(() => {
@@ -98,13 +98,53 @@ export default function App() {
           {paperMatch ? <PaperPage slug={decodeURIComponent(paperMatch[1])} /> : <HomePage />}
         </Suspense>
         <footer className="site-footer">
-          <div className="footer-mark" aria-hidden="true">
-            <span>AI</span>
-            <i />
-            <span>AG</span>
+          <div className="section-shell footer-inner">
+            <div className="footer-brand-col">
+              <div className="footer-mark" aria-hidden="true">
+                <span className="mark-ai">AI</span>
+                <i className="mark-divider" />
+                <span className="mark-ag">AG</span>
+              </div>
+              <p className="footer-tagline">
+                {locale === "zh"
+                  ? "AI Infra 与 Agent Infra 双语证据优先研究图谱。"
+                  : "Bilingual, evidence-first research atlas for AI & Agent Infrastructure."}
+              </p>
+              <p className="footer-license">MIT / CC BY 4.0 · 2025–2026</p>
+            </div>
+
+            <div className="footer-links-col">
+              <a href={`${homePath()}#catalog`} data-atlas-link>
+                {t(locale, "navExplore")}
+              </a>
+              <a href={`${homePath()}#stack-heading`} data-atlas-link>
+                {t(locale, "stackMap")}
+              </a>
+              <a href={`${homePath()}#methodology`} data-atlas-link>
+                {t(locale, "navMethod")}
+              </a>
+              <a href="https://github.com/joe1chief/ai-agent-infra-research-atlas" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
+
+            <div className="footer-action-col">
+              <button
+                type="button"
+                className="back-to-top-btn"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                aria-label={locale === "zh" ? "回到顶部" : "Back to top"}
+              >
+                <span>{locale === "zh" ? "返回顶部" : "Back to Top"}</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="m18 15-6-6-6 6"/>
+                </svg>
+              </button>
+              <p className="footer-motto">
+                {locale === "zh" ? "证据优先 · 人工策展 · 持续更新" : "Evidence first · Human curated · Continuously updated"}
+              </p>
+            </div>
           </div>
-          <p>Infra Atlas · MIT / CC BY 4.0</p>
-          <p>{locale === "zh" ? "证据优先，人工策展，持续更新。" : "Evidence first. Human curated. Continuously updated."}</p>
         </footer>
       </div>
     </AppContext.Provider>

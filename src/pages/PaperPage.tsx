@@ -123,26 +123,60 @@ export default function PaperPage({ slug }: { slug: string }) {
       <section className="paper-detail-hero">
         <div className="detail-hero-grid" aria-hidden="true" />
         <div className="section-shell">
-          <a className="back-link" href={homePath(window.location.search)} data-atlas-link><ArrowLeft size={16} />{copy("back")}</a>
+          <a className="back-link" href={homePath(window.location.search)} data-atlas-link>
+            <ArrowLeft size={16} />
+            <span>{copy("back")}</span>
+          </a>
+
           <div className="detail-kickers">
-            <span>{paper.primary_category}</span><i />
-            <span>{domainLabel(paper.domain, locale)}</span><i />
-            <span>{paper.curation_tier.toUpperCase()}</span>
+            <span className="kicker-badge category-badge">{paper.primary_category}</span>
+            <span className="kicker-sep">/</span>
+            <span className="kicker-badge domain-badge">{domainLabel(paper.domain, locale)}</span>
+            <span className="kicker-sep">/</span>
+            <span className={`kicker-badge tier-badge tier-${paper.curation_tier}`}>
+              {paper.curation_tier.toUpperCase()} TIER
+            </span>
           </div>
+
           <div className="detail-title-row">
             <div>
               <h1>{title}</h1>
               {title !== original && <p className="detail-original-title">{original}</p>}
             </div>
-            <button className={`detail-save ${isFavorite ? "active" : ""}`} type="button" onClick={() => toggle(paper.work_id)}><Star size={18} fill={isFavorite ? "currentColor" : "none"} />{isFavorite ? copy("saved") : copy("save")}</button>
+            <button
+              className={`detail-save ${isFavorite ? "active" : ""}`}
+              type="button"
+              onClick={() => toggle(paper.work_id)}
+            >
+              <Star size={16} fill={isFavorite ? "currentColor" : "none"} />
+              <span>{isFavorite ? copy("saved") : copy("save")}</span>
+            </button>
           </div>
+
           <p className="detail-abstract">{localized(paper.abstract, locale)}</p>
+
           <div className="detail-byline">
-            <span><Users size={15} />{authorsText(paper)}</span>
-            <span><Calendar size={15} />{paper.dates.first_public_date || "—"}</span>
-            <span><BookOpen size={15} />{paper.venue || paper.publication_status}</span>
+            <span className="byline-item">
+              <Users size={15} />
+              <span>{authorsText(paper)}</span>
+            </span>
+            <span className="byline-item">
+              <Calendar size={15} />
+              <span>{paper.dates.first_public_date || "—"}</span>
+            </span>
+            <span className="byline-item">
+              <BookOpen size={15} />
+              <span>{paper.venue || paper.publication_status.replaceAll("_", " ")}</span>
+            </span>
           </div>
-          <div className="detail-tags">{paper.tags.map((tag) => <a key={tag} href={`${homePath(`?tag=${encodeURIComponent(tag)}`)}#catalog`} data-atlas-link>{tag}</a>)}</div>
+
+          <div className="detail-tags">
+            {paper.tags.map((tag) => (
+              <a key={tag} href={`${homePath(`?tag=${encodeURIComponent(tag)}`)}#catalog`} data-atlas-link className="detail-tag-pill">
+                #{tag}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -155,13 +189,31 @@ export default function PaperPage({ slug }: { slug: string }) {
             <a href="#evidence"><span>04</span>{copy("provenance")}</a>
             <a href="#reader"><span>05</span>{copy("pdfReader")}</a>
           </nav>
-          <div className="record-status"><span>{statusLabel(paper.window_status, locale)}</span><strong>{paper.publication_status.replaceAll("_", " ")}</strong>{paper.verified_at && <small>{copy("verified")} · {paper.verified_at}</small>}</div>
+          <div className="record-status">
+            <span className="record-status-badge">{statusLabel(paper.window_status, locale)}</span>
+            <strong>{paper.publication_status.replaceAll("_", " ")}</strong>
+            {paper.verified_at && <small className="record-verified-date">{copy("verified")} · {paper.verified_at}</small>}
+          </div>
         </aside>
 
         <div className="detail-content">
           <section className="detail-block research-card" id="overview">
-            <header><div><span>01 · RESEARCH CARD</span><h2>{copy("overview")}</h2></div><span className="layer-badge">{paper.primary_category} · {categoryLabel(paper.primary_category, locale)}</span></header>
-            {paper.inclusion_reason && <div className="inclusion-callout"><BadgeCheck size={20} /><div><strong>{copy("inclusion")}</strong><p>{localized(paper.inclusion_reason, locale)}</p></div></div>}
+            <header>
+              <div>
+                <span>01 · RESEARCH CARD</span>
+                <h2>{copy("overview")}</h2>
+              </div>
+              <span className="layer-badge">{paper.primary_category} · {categoryLabel(paper.primary_category, locale)}</span>
+            </header>
+            {paper.inclusion_reason && (
+              <div className="inclusion-callout">
+                <BadgeCheck size={20} className="callout-icon" />
+                <div>
+                  <strong>{copy("inclusion")}</strong>
+                  <p>{localized(paper.inclusion_reason, locale)}</p>
+                </div>
+              </div>
+            )}
             <BilingualSection id="problem" index="01.1" title={copy("problem")} body={localized(paper.problem, locale)} />
             <BilingualSection id="approach" index="01.2" title={copy("approach")} body={localized(paper.approach, locale)} />
             <BilingualSection id="system-design" index="01.3" title={copy("systemDesign")} body={localized(paper.system_design, locale)} />
@@ -170,41 +222,238 @@ export default function PaperPage({ slug }: { slug: string }) {
           </section>
 
           <section className="detail-block evaluation-block" id="evaluation">
-            <header><div><span>02 · MEASUREMENT</span><h2>{copy("evaluation")}</h2></div><Database size={21} /></header>
+            <header>
+              <div>
+                <span>02 · MEASUREMENT</span>
+                <h2>{copy("evaluation")}</h2>
+              </div>
+              <Database size={20} className="header-icon" />
+            </header>
             <div className="evaluation-context">
-              <div><span>{locale === "zh" ? "模型" : "Models"}</span><p>{paper.evaluation?.models?.join(" · ") || "—"}</p></div>
+              <div><span>{locale === "zh" ? "评估模型" : "Models"}</span><p>{paper.evaluation?.models?.join(" · ") || "—"}</p></div>
               <div><span>{locale === "zh" ? "工作负载" : "Workloads"}</span><p>{paper.evaluation?.workloads?.join(" · ") || "—"}</p></div>
               <div><span>{locale === "zh" ? "硬件 / 集群" : "Hardware / cluster"}</span><p>{[...(paper.evaluation?.hardware || []), paper.evaluation?.cluster_scale].filter(Boolean).join(" · ") || "—"}</p></div>
-              <div><span>{locale === "zh" ? "基线" : "Baselines"}</span><p>{paper.evaluation?.baselines?.join(" · ") || "—"}</p></div>
+              <div><span>{locale === "zh" ? "对比基线" : "Baselines"}</span><p>{paper.evaluation?.baselines?.join(" · ") || "—"}</p></div>
             </div>
-            {paper.evaluation?.metrics?.length ? <div className="metric-table-shell"><table className="metric-table"><thead><tr><th>{locale === "zh" ? "指标" : "Metric"}</th><th>{locale === "zh" ? "结果" : "Result"}</th><th>{locale === "zh" ? "基线" : "Baseline"}</th><th>Δ</th><th>{locale === "zh" ? "条件" : "Context"}</th></tr></thead><tbody>{paper.evaluation.metrics.map((metric, index) => <tr key={`${metric.name}-${index}`}><td>{metric.name}</td><td><strong>{metric.value ?? "—"}{metric.unit ? ` ${metric.unit}` : ""}</strong></td><td>{metric.baseline || "—"}</td><td>{metric.delta || "—"}</td><td>{metric.context || "—"}</td></tr>)}</tbody></table></div> : <p className="detail-empty">{locale === "zh" ? "暂无结构化实验指标。" : "No structured metrics are available yet."}</p>}
+            {paper.evaluation?.metrics?.length ? (
+              <div className="metric-table-shell">
+                <table className="metric-table">
+                  <thead>
+                    <tr>
+                      <th>{locale === "zh" ? "指标" : "Metric"}</th>
+                      <th>{locale === "zh" ? "测量结果" : "Result"}</th>
+                      <th>{locale === "zh" ? "基线" : "Baseline"}</th>
+                      <th>Δ 增益</th>
+                      <th>{locale === "zh" ? "测试条件" : "Context"}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {paper.evaluation.metrics.map((metric, index) => (
+                      <tr key={`${metric.name}-${index}`}>
+                        <td>{metric.name}</td>
+                        <td><strong>{metric.value ?? "—"}{metric.unit ? ` ${metric.unit}` : ""}</strong></td>
+                        <td>{metric.baseline || "—"}</td>
+                        <td><span className="metric-delta">{metric.delta || "—"}</span></td>
+                        <td>{metric.context || "—"}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <p className="detail-empty">{locale === "zh" ? "暂无结构化实验指标。" : "No structured metrics are available yet."}</p>
+            )}
           </section>
 
           <section className="detail-block lineage-detail" id="lineage">
-            <header><div><span>03 · LINEAGE</span><h2>{copy("lineage")}</h2></div><GitBranch size={21} /></header>
-            {paper.relations?.system_family && <p className="system-family">SYSTEM FAMILY <strong>{paper.relations.system_family}</strong></p>}
+            <header>
+              <div>
+                <span>03 · LINEAGE NETWORK</span>
+                <h2>{copy("lineage")}</h2>
+              </div>
+              <GitBranch size={20} className="header-icon" />
+            </header>
+            {paper.relations?.system_family && (
+              <p className="system-family">
+                SYSTEM FAMILY: <strong>{paper.relations.system_family}</strong>
+              </p>
+            )}
             <LineageGraph graph={catalog.graph} papers={catalog.papers} selectedId={paper.work_id} />
-            {relatedPapers.length > 0 && <div className="related-links">{relatedPapers.map((entry) => entry && <a href={paperPath(entry.slug)} data-atlas-link key={entry.work_id}><span>{entry.primary_category}</span><strong>{localizedTitle(entry.title, locale)}</strong><ArrowUpRight size={15} /></a>)}</div>}
+            {relatedPapers.length > 0 && (
+              <div className="related-links">
+                {relatedPapers.map((entry) => entry && (
+                  <a href={paperPath(entry.slug)} data-atlas-link key={entry.work_id} className="related-paper-card">
+                    <span className="related-cat">{entry.primary_category}</span>
+                    <strong className="related-title">{localizedTitle(entry.title, locale)}</strong>
+                    <ArrowUpRight size={14} className="related-arrow" />
+                  </a>
+                ))}
+              </div>
+            )}
           </section>
 
           <section className="detail-block evidence-block" id="evidence">
-            <header><div><span>04 · PROVENANCE</span><h2>{copy("provenance")}</h2></div><Link2 size={21} /></header>
+            <header>
+              <div>
+                <span>04 · PROVENANCE</span>
+                <h2>{copy("provenance")}</h2>
+              </div>
+              <Link2 size={20} className="header-icon" />
+            </header>
             <div className="evidence-columns">
-              <div><h3><ShieldCheckIcon />{copy("sources")}</h3>{paper.first_party_sources?.length ? <ul className="source-list">{paper.first_party_sources.map((source, index) => <li key={`${source.url}-${index}`}><a href={source.url} target="_blank" rel="noreferrer"><span>{source.type || source.kind || source.label || "SOURCE"}</span><strong>{source.title || source.label || new URL(source.url).hostname}</strong><ExternalLink size={14} /></a></li>)}</ul> : <p className="detail-empty">—</p>}</div>
-              <div><h3><FileText size={16} />{copy("seedReports")}</h3>{paper.seed_reports?.length ? <ul className="report-list">{paper.seed_reports.map((report, index) => <li key={`${report.seed_report_path}-${index}`}><span>REF {report.reference_number || index + 1}{report.page ? ` · P.${report.page}` : ""}</span><strong>{report.report_title || report.seed_report_path}</strong>{report.context && <p>{report.context}</p>}</li>)}</ul> : <p className="detail-empty">—</p>}</div>
+              <div>
+                <h3><ShieldCheckIcon />{copy("sources")}</h3>
+                {paper.first_party_sources?.length ? (
+                  <ul className="source-list">
+                    {paper.first_party_sources.map((source, index) => (
+                      <li key={`${source.url}-${index}`}>
+                        <a href={source.url} target="_blank" rel="noreferrer" className="source-link-card">
+                          <span className="source-tag">{source.type || source.kind || source.label || "SOURCE"}</span>
+                          <strong>{source.title || source.label || new URL(source.url).hostname}</strong>
+                          <ExternalLink size={14} />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="detail-empty">—</p>
+                )}
+              </div>
+              <div>
+                <h3><FileText size={16} />{copy("seedReports")}</h3>
+                {paper.seed_reports?.length ? (
+                  <ul className="report-list">
+                    {paper.seed_reports.map((report, index) => (
+                      <li key={`${report.seed_report_path}-${index}`}>
+                        <span className="report-badge">REF {report.reference_number || index + 1}{report.page ? ` · P.${report.page}` : ""}</span>
+                        <strong>{report.report_title || report.seed_report_path}</strong>
+                        {report.context && <p>{report.context}</p>}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="detail-empty">—</p>
+                )}
+              </div>
             </div>
 
-            {(paper.artifacts?.length || paper.reproducibility_badges?.length) && <div className="artifact-row"><div><h3><Box size={16} />{copy("artifacts")}</h3><div className="artifact-links">{paper.artifacts?.map((artifact, index) => { const kind = artifact.type || artifact.kind; return <a href={artifact.url} target="_blank" rel="noreferrer" key={`${artifact.url}-${index}`}>{kind === "code" ? <Code2 size={15} /> : kind === "data" ? <Database size={15} /> : <Box size={15} />}<span><strong>{artifact.title || artifact.label || kind || "Artifact"}</strong>{artifact.license && <small>{artifact.license}</small>}</span><ArrowUpRight size={14} /></a>; })}</div></div><div className="repro-badges">{paper.reproducibility_badges?.map((badge) => <span key={badge}><BadgeCheck size={14} />{badge}</span>)}</div></div>}
+            {(paper.artifacts?.length || paper.reproducibility_badges?.length) && (
+              <div className="artifact-row">
+                <div>
+                  <h3><Box size={16} />{copy("artifacts")}</h3>
+                  <div className="artifact-links">
+                    {paper.artifacts?.map((artifact, index) => {
+                      const kind = artifact.type || artifact.kind;
+                      return (
+                        <a href={artifact.url} target="_blank" rel="noreferrer" key={`${artifact.url}-${index}`} className="artifact-link-card">
+                          {kind === "code" ? <Code2 size={15} /> : kind === "data" ? <Database size={15} /> : <Box size={15} />}
+                          <span>
+                            <strong>{artifact.title || artifact.label || kind || "Artifact"}</strong>
+                            {artifact.license && <small>{artifact.license}</small>}
+                          </span>
+                          <ArrowUpRight size={14} />
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div className="repro-badges">
+                  {paper.reproducibility_badges?.map((badge) => (
+                    <span key={badge} className="repro-badge-pill">
+                      <BadgeCheck size={14} />
+                      <span>{badge}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
 
-            {paper.versions?.length ? <div className="version-history"><h3><History size={16} />{copy("versions")}</h3><ol>{paper.versions.map((version, index) => <li key={`${version.label || version.version || version.source}-${index}`}><i /><time>{version.date || version.latest_revision_date || version.first_public_date || "—"}</time><div><strong>{version.label || version.version || version.status || `v${index + 1}`}</strong><span>{version.venue || version.source}</span></div>{version.url && <a href={version.url} target="_blank" rel="noreferrer"><ExternalLink size={14} /></a>}</li>)}</ol></div> : null}
+            {paper.versions?.length ? (
+              <div className="version-history">
+                <h3><History size={16} />{copy("versions")}</h3>
+                <ol>
+                  {paper.versions.map((version, index) => (
+                    <li key={`${version.label || version.version || version.source}-${index}`}>
+                      <i />
+                      <time>{version.date || version.latest_revision_date || version.first_public_date || "—"}</time>
+                      <div>
+                        <strong>{version.label || version.version || version.status || `v${index + 1}`}</strong>
+                        <span>{version.venue || version.source}</span>
+                      </div>
+                      {version.url && (
+                        <a href={version.url} target="_blank" rel="noreferrer">
+                          <ExternalLink size={14} />
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ) : null}
           </section>
 
           <section className="detail-block citation-notes-block">
-            <div className="citation-panel"><header><div><span>CITE THIS WORK</span><h2>{copy("citation")}</h2></div><Clipboard size={20} /></header><div className="citation-tabs">{(["BibTeX", "APA", "MLA"] as const).map((type) => <button className={citationType === type ? "active" : ""} type="button" onClick={() => setCitationType(type)} key={type}>{type}</button>)}</div><pre>{citations?.[citationType]}</pre><button className="copy-citation" type="button" onClick={copyCitation}>{copied ? <Check size={15} /> : <Clipboard size={15} />}{copied ? copy("copied") : copy("copy")}</button></div>
-            <div className="notes-panel"><header><div><span>DEVICE LOCAL</span><h2>{copy("localNotes")}</h2></div><NotebookPen size={20} /></header><p>{copy("localNotesBody")}</p><textarea value={notes[paper.work_id] || ""} onChange={(event) => setNotes((current) => ({ ...current, [paper.work_id]: event.target.value }))} placeholder={copy("notesPlaceholder")} /><small>{(notes[paper.work_id] || "").length} {locale === "zh" ? "字符 · 自动保存" : "characters · autosaved"}</small></div>
+            <div className="citation-panel">
+              <header>
+                <div>
+                  <span>CITE THIS WORK</span>
+                  <h2>{copy("citation")}</h2>
+                </div>
+                <Clipboard size={18} className="header-icon" />
+              </header>
+              <div className="citation-tabs">
+                {(["BibTeX", "APA", "MLA"] as const).map((type) => (
+                  <button className={citationType === type ? "active" : ""} type="button" onClick={() => setCitationType(type)} key={type}>
+                    {type}
+                  </button>
+                ))}
+              </div>
+              <pre>{citations?.[citationType]}</pre>
+              <button className="copy-citation" type="button" onClick={copyCitation}>
+                {copied ? <Check size={15} /> : <Clipboard size={15} />}
+                <span>{copied ? copy("copied") : copy("copy")}</span>
+              </button>
+            </div>
+
+            <div className="notes-panel">
+              <header>
+                <div>
+                  <span>DEVICE LOCAL</span>
+                  <h2>{copy("localNotes")}</h2>
+                </div>
+                <NotebookPen size={18} className="header-icon" />
+              </header>
+              <p>{copy("localNotesBody")}</p>
+              <textarea
+                value={notes[paper.work_id] || ""}
+                onChange={(event) => setNotes((current) => ({ ...current, [paper.work_id]: event.target.value }))}
+                placeholder={copy("notesPlaceholder")}
+              />
+              <small>{(notes[paper.work_id] || "").length} {locale === "zh" ? "字符 · 浏览器本地即时保存" : "characters · autosaved locally"}</small>
+            </div>
           </section>
 
-          <section className="detail-block reader-block" id="reader"><header><div><span>05 · FULL TEXT</span><h2>{copy("pdfReader")}</h2></div>{pdfUrl && <a href={pdfUrl} target="_blank" rel="noreferrer">{copy("openPdf")}<ExternalLink size={15} /></a>}</header>{paper.pdf?.license && <p className="pdf-license">{locale === "zh" ? "文档许可" : "Document license"} · {paper.pdf.license}{paper.pdf.size_bytes ? ` · ${(paper.pdf.size_bytes / 1024 / 1024).toFixed(1)} MB` : ""}</p>}<PdfReader url={pdfUrl} /></section>
+          <section className="detail-block reader-block" id="reader">
+            <header>
+              <div>
+                <span>05 · FULL TEXT</span>
+                <h2>{copy("pdfReader")}</h2>
+              </div>
+              {pdfUrl && (
+                <a href={pdfUrl} target="_blank" rel="noreferrer" className="open-pdf-external">
+                  <span>{copy("openPdf")}</span>
+                  <ExternalLink size={14} />
+                </a>
+              )}
+            </header>
+            {paper.pdf?.license && (
+              <p className="pdf-license">
+                {locale === "zh" ? "官方文档许可" : "Document license"} · {paper.pdf.license}
+                {paper.pdf.size_bytes ? ` · ${(paper.pdf.size_bytes / 1024 / 1024).toFixed(1)} MB` : ""}
+              </p>
+            )}
+            <PdfReader url={pdfUrl} />
+          </section>
         </div>
       </div>
     </main>

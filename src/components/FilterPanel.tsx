@@ -1,4 +1,4 @@
-import { CalendarRange, Filter, RotateCcw, Search, SlidersHorizontal, Star } from "lucide-react";
+import { CalendarRange, ChevronDown, Cpu, FileText, Filter, Flame, Layers, RotateCcw, Search, SlidersHorizontal, Sparkles, Star, X } from "lucide-react";
 import { useApp } from "../App";
 import { categoryLabel } from "../lib/i18n";
 import type { FilterState, PaperIndexEntry } from "../types";
@@ -23,14 +23,17 @@ function SelectField({
 }) {
   return (
     <label className="filter-field">
-      <span>{label}</span>
-      <select value={value} onChange={(event) => onChange(event.target.value)}>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
+      <span className="filter-field-label">{label}</span>
+      <div className="select-wrapper">
+        <select value={value} onChange={(event) => onChange(event.target.value)}>
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <ChevronDown size={14} className="select-chevron" aria-hidden="true" />
+      </div>
     </label>
   );
 }
@@ -45,24 +48,86 @@ export function FilterPanel({ filters, papers, onChange, onReset }: FilterPanelP
   const publicationStatuses = unique(papers.map((paper) => paper.publication_status));
   const all = { value: "all", label: copy("all") };
 
+  const aiCount = papers.filter((paper) => paper.domain === "ai_infra").length;
+  const agentCount = papers.filter((paper) => paper.domain === "agent_infra").length;
+
+  const activeFilterCount = [
+    filters.query,
+    filters.domain !== "all" ? filters.domain : "",
+    filters.category !== "all" ? filters.category : "",
+    filters.windowStatus !== "all" ? filters.windowStatus : "",
+    filters.tier !== "all" ? filters.tier : "",
+    filters.venue !== "all" ? filters.venue : "",
+    filters.tag !== "all" ? filters.tag : "",
+    filters.artifact !== "all" ? filters.artifact : "",
+    filters.pdf !== "all" ? filters.pdf : "",
+    filters.source !== "all" ? filters.source : "",
+    filters.publicationStatus !== "recommended" ? filters.publicationStatus : "",
+    filters.from,
+    filters.to,
+    filters.favoritesOnly ? "fav" : "",
+  ].filter(Boolean).length;
+
   return (
     <div className="filter-panel">
-      <div className="catalog-search">
-        <Search size={19} aria-hidden="true" />
-        <input
-          type="search"
-          value={filters.query}
-          onChange={(event) => onChange({ query: event.target.value })}
-          placeholder={copy("search")}
-          aria-label={copy("search")}
-        />
-        {filters.query && (
-          <button type="button" onClick={() => onChange({ query: "" })} aria-label={copy("clear")}>
-            ×
+      {/* Top row: Domain Segmented Selector & Search Command */}
+      <div className="filter-header-row">
+        <div className="domain-segments" role="tablist" aria-label="Domain Filter">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={filters.domain === "all"}
+            className={`domain-tab ${filters.domain === "all" ? "active" : ""}`}
+            onClick={() => onChange({ domain: "all", category: "all" })}
+          >
+            <Layers size={14} />
+            <span>{copy("all")}</span>
+            <span className="domain-count">{papers.length}</span>
           </button>
-        )}
+          <button
+            type="button"
+            role="tab"
+            aria-selected={filters.domain === "ai_infra"}
+            className={`domain-tab domain-tab-ai ${filters.domain === "ai_infra" ? "active" : ""}`}
+            onClick={() => onChange({ domain: "ai_infra", category: "all" })}
+          >
+            <Cpu size={14} />
+            <span>AI Infra</span>
+            <span className="domain-count">{aiCount}</span>
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={filters.domain === "agent_infra"}
+            className={`domain-tab domain-tab-agent ${filters.domain === "agent_infra" ? "active" : ""}`}
+            onClick={() => onChange({ domain: "agent_infra", category: "all" })}
+          >
+            <Sparkles size={14} />
+            <span>Agent Infra</span>
+            <span className="domain-count">{agentCount}</span>
+          </button>
+        </div>
+
+        <div className="catalog-search">
+          <Search size={17} className="search-icon" aria-hidden="true" />
+          <input
+            type="search"
+            value={filters.query}
+            onChange={(event) => onChange({ query: event.target.value })}
+            placeholder={copy("search")}
+            aria-label={copy("search")}
+          />
+          {filters.query ? (
+            <button type="button" className="clear-search-btn" onClick={() => onChange({ query: "" })} aria-label={copy("clear")}>
+              <X size={14} />
+            </button>
+          ) : (
+            <kbd className="search-kbd">/</kbd>
+          )}
+        </div>
       </div>
 
+      {/* Primary 4 selects */}
       <div className="primary-filters">
         <SelectField
           label={copy("domain")}
@@ -99,20 +164,25 @@ export function FilterPanel({ filters, papers, onChange, onReset }: FilterPanelP
         />
       </div>
 
+      {/* Advanced expandable drawer */}
       <details className="advanced-filters">
         <summary>
-          <SlidersHorizontal size={16} />
-          {locale === "zh" ? "更多筛选" : "More filters"}
-          <span>{[
-            filters.venue,
-            filters.tag,
-            filters.artifact,
-            filters.pdf,
-            filters.source,
-            filters.publicationStatus === "recommended" ? "all" : filters.publicationStatus,
-            filters.from,
-            filters.to,
-          ].filter((value) => value && value !== "all").length || ""}</span>
+          <div className="summary-left">
+            <SlidersHorizontal size={15} />
+            <span>{locale === "zh" ? "高级筛选" : "Advanced Filters"}</span>
+          </div>
+          <span className="advanced-badge">
+            {[
+              filters.venue,
+              filters.tag,
+              filters.artifact,
+              filters.pdf,
+              filters.source,
+              filters.publicationStatus === "recommended" ? "all" : filters.publicationStatus,
+              filters.from,
+              filters.to,
+            ].filter((value) => value && value !== "all").length || 0}
+          </span>
         </summary>
         <div className="advanced-grid">
           <SelectField label={copy("venue")} value={filters.venue} options={[all, ...venues.map((value) => ({ value, label: value }))]} onChange={(venue) => onChange({ venue })} />
@@ -142,26 +212,57 @@ export function FilterPanel({ filters, papers, onChange, onReset }: FilterPanelP
             onChange={(publicationStatus) => onChange({ publicationStatus })}
           />
           <label className="filter-field date-field">
-            <span><CalendarRange size={13} /> {copy("from")}</span>
+            <span className="filter-field-label"><CalendarRange size={12} /> {copy("from")}</span>
             <input type="date" value={filters.from} onChange={(event) => onChange({ from: event.target.value })} />
           </label>
           <label className="filter-field date-field">
-            <span><CalendarRange size={13} /> {copy("to")}</span>
+            <span className="filter-field-label"><CalendarRange size={12} /> {copy("to")}</span>
             <input type="date" value={filters.to} onChange={(event) => onChange({ to: event.target.value })} />
           </label>
         </div>
       </details>
 
+      {/* Quick filter action chips & status bar */}
       <div className="filter-quick-actions">
-        <button className={filters.favoritesOnly ? "active" : ""} type="button" onClick={() => onChange({ favoritesOnly: !filters.favoritesOnly })}>
-          <Star size={15} fill={filters.favoritesOnly ? "currentColor" : "none"} />
-          {copy("favoritesOnly")}
-        </button>
-        <button type="button" onClick={onReset}>
-          <RotateCcw size={15} />
-          {copy("clear")}
-        </button>
-        <span className="filter-indicator"><Filter size={14} /> {locale === "zh" ? "筛选同步到 URL" : "Filters sync to URL"}</span>
+        <div className="quick-tags">
+          <button
+            className={`quick-pill ${filters.favoritesOnly ? "active" : ""}`}
+            type="button"
+            onClick={() => onChange({ favoritesOnly: !filters.favoritesOnly })}
+          >
+            <Star size={13} fill={filters.favoritesOnly ? "currentColor" : "none"} />
+            <span>{copy("favoritesOnly")}</span>
+          </button>
+          <button
+            className={`quick-pill ${filters.tier === "core" ? "active" : ""}`}
+            type="button"
+            onClick={() => onChange({ tier: filters.tier === "core" ? "all" : "core" })}
+          >
+            <Flame size={13} />
+            <span>Core Tier</span>
+          </button>
+          <button
+            className={`quick-pill ${filters.pdf === "yes" ? "active" : ""}`}
+            type="button"
+            onClick={() => onChange({ pdf: filters.pdf === "yes" ? "all" : "yes" })}
+          >
+            <FileText size={13} />
+            <span>PDF Available</span>
+          </button>
+        </div>
+
+        <div className="filter-meta-actions">
+          {activeFilterCount > 0 && (
+            <button className="reset-button" type="button" onClick={onReset}>
+              <RotateCcw size={13} />
+              <span>{copy("clear")} ({activeFilterCount})</span>
+            </button>
+          )}
+          <span className="filter-indicator">
+            <Filter size={12} />
+            <span>{locale === "zh" ? "URL 即时同步" : "Live URL sync"}</span>
+          </span>
+        </div>
       </div>
     </div>
   );
