@@ -1,0 +1,66 @@
+{
+  "abstract": "We introduce Open-Reasoner-Zero, the first open source implementation of large-scale reasoning-oriented RL training on the base model focusing on scalability, simplicity and accessibility. Through extensive experiments, we demonstrate that a minimalist approach, vanilla PPO with GAE ($λ=1$, $γ=1$) and straightforward rule-based rewards, without any KL regularization, is sufficient to scale up both benchmark performance and response length, replicating the scaling phenomenon observed in DeepSeek-R1-Zero. Using the same base model, Qwen2.5-32B base, as DeepSeek-R1-Zero-Qwen-32B, our implementation achieves superior performance across AIME2024, MATH500, and GPQA Diamond, while demonstrating remarkable efficiency, requiring only 1/10 of the training steps compared to the DeepSeek-R1-Zero pipeline. Moreover, our analysis not only covers training dynamics and ablation for critical design choices, but also quantitatively shows how the learned critic in Reasoner-Zero training effectively identifies and devalues repetitive response patterns, yielding more robust advantage estimations and enhancing training stability. Embracing the principles of open-source, we release our source code, training data, and various model weights, fostering reproducibility and encouraging further exploration of the properties of related models.",
+  "authors": [
+    "Jingcheng Hu",
+    "Yinmin Zhang",
+    "Qi Han",
+    "Daxin Jiang",
+    "Xiangyu Zhang",
+    "Heung-Yeung Shum"
+  ],
+  "candidate_id": "arxiv:2503.24290",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-31",
+    "latest_revision_date": "2025-07-05"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.24290"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.24290",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2503.24290v2",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "J.Hu,Y.Zhang,Q.Han,D.Jiang,X.Zhang,andH.-Y.Shum.Open-reasoner-zero:Anopensourceapproachto scalingupreinforcementlearningonthebasemodel.arXivpreprintarXiv:2503.24290,2025.",
+      "page": 72,
+      "reference_number": 90,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model",
+  "versions": [
+    {
+      "date": "2025-07-05",
+      "identifier": "2503.24290v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.24290v2"
+    }
+  ]
+}

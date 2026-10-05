@@ -1,0 +1,81 @@
+{
+  "abstract": "Deep research agents perform multi-step research to produce long-form, well-attributed answers. However, most open deep research agents are trained on easily verifiable short-form QA tasks via reinforcement learning with verifiable rewards, which does not extend to realistic long-form tasks. We address this with Reinforcement Learning with Evolving Rubrics (RLER), where rubrics are constructed and maintained to co-evolve with the policy model during training. This allows the rubrics to incorporate newly explored information from search and contrasting model responses, enabling better fact checking and more discriminative on-policy feedback. Using RLER, we develop Deep Research Tulu (DR Tulu-8B), the first fully open model that is directly trained for open-ended, long-form deep research. Across four long-form deep research benchmarks in science, healthcare, and general domains, DR Tulu substantially outperforms existing open deep research agents (by 15.6% over Tongyi DR on average) and matches or exceeds proprietary deep research agents (by 0.7% over OpenAI DR on average), while being significantly smaller and cheaper per query (1000x cheaper than OpenAI DR per query).",
+  "authors": [
+    "Rulin Shao",
+    "Akari Asai",
+    "Shannon Zejiang Shen",
+    "Hamish Ivison",
+    "Varsha Kishore",
+    "Jingming Zhuo",
+    "Xinran Zhao",
+    "Molly Park",
+    "Samuel G. Finlayson",
+    "David Sontag",
+    "Tyler Murray",
+    "Sewon Min",
+    "Pradeep Dasigi",
+    "Luca Soldaini",
+    "Faeze Brahman",
+    "Wen-tau Yih",
+    "Tongshuang Wu",
+    "Luke Zettlemoyer",
+    "Yoon Kim",
+    "Hannaneh Hajishirzi",
+    "Pang Wei Koh"
+  ],
+  "candidate_id": "arxiv:2511.19399",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-11-24",
+    "latest_revision_date": "2026-05-15"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.19399"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2511.19399",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "ICML 2026",
+    "pdf_url": "https://arxiv.org/pdf/2511.19399v3",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "R.Shao, A.Asai, S.Z.Shen, H.Ivison, V.Kishore, J.Zhuo, X.Zhao, M.Park, S.G.Finlayson, D.Sontag, T.Murray,S.Min,P.Dasigi,L.Soldaini,F.Brahman,W.tauYih,T.Wu,L.Zettlemoyer,Y.Kim,H.Hajishirzi, andP.W.Koh. DRTulu: Reinforcementlearningwithevolvingrubricsfordeepresearch,2025a. URL https: //arxiv.org/abs/2511.19399.",
+      "page": 78,
+      "reference_number": 191,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research",
+  "versions": [
+    {
+      "date": "2026-05-15",
+      "identifier": "2511.19399v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2511.19399v3"
+    }
+  ]
+}

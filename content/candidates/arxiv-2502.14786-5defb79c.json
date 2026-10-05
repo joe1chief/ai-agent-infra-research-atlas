@@ -1,0 +1,98 @@
+{
+  "abstract": "We introduce SigLIP 2, a family of new multilingual vision-language encoders that build on the success of the original SigLIP. In this second iteration, we extend the original image-text training objective with several prior, independently developed techniques into a unified recipe -- this includes captioning-based pretraining, self-supervised losses (self-distillation, masked prediction) and online data curation. With these changes, SigLIP 2 models outperform their SigLIP counterparts at all model scales in core capabilities, including zero-shot classification, image-text retrieval, and transfer performance when extracting visual representations for Vision-Language Models (VLMs). Furthermore, the new training recipe leads to significant improvements on localization and dense prediction tasks. We also train variants which support multiple resolutions and preserve the input's native aspect ratio. Finally, we train on a more diverse data-mixture that includes de-biasing techniques, leading to much better multilingual understanding and improved fairness. To allow users to trade off inference cost with performance, we release model checkpoints at four sizes: ViT-B (86M), L (303M), So400m (400M), and g (1B).",
+  "authors": [
+    "Michael Tschannen",
+    "Alexey Gritsenko",
+    "Xiao Wang",
+    "Muhammad Ferjad Naeem",
+    "Ibrahim Alabdulmohsin",
+    "Nikhil Parthasarathy",
+    "Talfan Evans",
+    "Lucas Beyer",
+    "Ye Xia",
+    "Basil Mustafa",
+    "Olivier Hénaff",
+    "Jeremiah Harmsen",
+    "Andreas Steiner",
+    "Xiaohua Zhai"
+  ],
+  "candidate_id": "arxiv:2502.14786",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-20",
+    "latest_revision_date": "2025-02-20"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.14786"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.14786",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Model checkpoints are available at https://github.com/google-research/big_vision/tree/main/big_vision/configs/proj/image_text/README_siglip2.md",
+    "pdf_url": "https://arxiv.org/pdf/2502.14786v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "MichaelTschannen,AlexeyGritsenko,XiaoWang,MuhammadFerjadNaeem,IbrahimAlabdulmohsin, Nikhil Parthasarathy, Talfan Evans, Lucas Beyer, Ye Xia, Basil Mustafa, et al. Siglip 2: Multilingual vision-language encoders with improved semantic understanding, localization, and dense features. arXiv preprint arXiv:2502.14786, 2025.",
+      "page": 44,
+      "reference_number": 70,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    },
+    {
+      "context": "MichaelTschannen,AlexeyGritsenko,XiaoWang,MuhammadFerjadNaeem,IbrahimAlabdulmohsin, Nikhil Parthasarathy, Talfan Evans, Lucas Beyer, Ye Xia, Basil Mustafa, Olivier Hénaff, Jeremiah Harmsen,Andreas Steiner,andXiaohua Zhai. Siglip2: Multilingualvision-languageencoders with improved semantic understanding, localization, and dense features.https://arxiv.org/abs/2502.14786, 2025.",
+      "page": 24,
+      "reference_number": 50,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    },
+    {
+      "context": "MichaelTschannen,AlexeyGritsenko,XiaoWang,MuhammadFerjadNaeem,IbrahimAlabdulmohsin, Nikhil Parthasarathy, Talfan Evans, Lucas Beyer, Ye Xia, Basil Mustafa, et al. Siglip 2: Multilingual vision-language encoders with improved semantic understanding, localization, and dense features. arXivpreprintarXiv:2502.14786, 2025.",
+      "page": 30,
+      "reference_number": 2026,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    },
+    {
+      "context": "MichaelTschannen,AlexeyGritsenko,XiaoWang,MuhammadFerjadNaeem,IbrahimAlabdulmohsin,Nikhil Parthasarathy,TalfanEvans,LucasBeyer,YeXia,BasilMustafa,etal.Siglip2:Multilingualvision-languageen- coderswithimprovedsemanticunderstanding,localization,anddensefeatures. arXiv preprint arXiv:2502.14786, 2025.",
+      "page": 40,
+      "reference_number": 135,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features",
+  "versions": [
+    {
+      "date": "2025-02-20",
+      "identifier": "2502.14786v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.14786v1"
+    }
+  ]
+}

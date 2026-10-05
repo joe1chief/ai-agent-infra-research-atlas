@@ -1,0 +1,58 @@
+{
+  "abstract": "Speculative decoding (SD) speeds up LLM inference by verifying draft tokens in parallel. SD applies to every request, but its effectiveness, how many draft tokens are accepted, varies across requests and over time. Requests in a batch share each step, so chasing mean throughput can slow requests that accept little: in one step at batch 112, SGLang's default SD (SGL-SD) raises throughput 13\\% while 26\\% of requests run slower than autoregressive (AR) decoding. Cadence, our per-step controller, caps each request's delay, its time lost relative to AR steps. Every step commits at least one token per request, so the caps reduce to one allowed step latency, known before drafting. Within this latency, an all-or-none floor gives every request a draft token whenever the latency allows, and Cadence picks the verification budget that an operator's utility scores highest. On Qwen3-32B under high load, Cadence improves goodput by 1.29$\\times$ over AR decoding and by 1.80$\\times$ over SGL-SD, while 99.5\\% of its requests run no slower than AR decoding, against 69\\% under SGL-SD.",
+  "authors": [],
+  "candidate_id": "openreview:e9RG7RBDSX",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-08-19",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Cadence: Regulating the Speculation Externality in LLM Serving",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=e9RG7RBDSX"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "e9RG7RBDSX"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2027/Conference/-/Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+      "ICLR.cc/2027/Conference/Submission239/-/Full_Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+      "ICLR.cc/2027/Conference/-/Edit"
+    ],
+    "venue": "ICLR 2027 Conference Submission",
+    "venue_id": "ICLR.cc/2027/Conference/Submission"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Cadence: Regulating the Speculation Externality in LLM Serving",
+  "versions": [
+    {
+      "date": "2026-10-03",
+      "identifier": "e9RG7RBDSX",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=e9RG7RBDSX"
+    }
+  ]
+}

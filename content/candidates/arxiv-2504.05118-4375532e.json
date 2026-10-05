@@ -1,0 +1,89 @@
+{
+  "abstract": "We present VAPO, Value-based Augmented Proximal Policy Optimization framework for reasoning models., a novel framework tailored for reasoning models within the value-based paradigm. Benchmarked the AIME 2024 dataset, VAPO, built on the Qwen 32B pre-trained model, attains a state-of-the-art score of $\\mathbf{60.4}$. In direct comparison under identical experimental settings, VAPO outperforms the previously reported results of DeepSeek-R1-Zero-Qwen-32B and DAPO by more than 10 points. The training process of VAPO stands out for its stability and efficiency. It reaches state-of-the-art performance within a mere 5,000 steps. Moreover, across multiple independent runs, no training crashes occur, underscoring its reliability. This research delves into long chain-of-thought (long-CoT) reasoning using a value-based reinforcement learning framework. We pinpoint three key challenges that plague value-based methods: value model bias, the presence of heterogeneous sequence lengths, and the sparsity of reward signals. Through systematic design, VAPO offers an integrated solution that effectively alleviates these challenges, enabling enhanced performance in long-CoT reasoning tasks.",
+  "authors": [
+    "Yu Yue",
+    "Yufeng Yuan",
+    "Qiying Yu",
+    "Xiaochen Zuo",
+    "Ruofei Zhu",
+    "Wenyuan Xu",
+    "Jiaze Chen",
+    "Chengyi Wang",
+    "TianTian Fan",
+    "Zhengyin Du",
+    "Xiangpeng Wei",
+    "Xiangyu Yu",
+    "Gaohong Liu",
+    "Juncai Liu",
+    "Lingjun Liu",
+    "Haibin Lin",
+    "Zhiqi Lin",
+    "Bole Ma",
+    "Chi Zhang",
+    "Mofan Zhang",
+    "Wang Zhang",
+    "Hang Zhu",
+    "Ru Zhang",
+    "Xin Liu",
+    "Mingxuan Wang",
+    "Yonghui Wu",
+    "Lin Yan"
+  ],
+  "candidate_id": "arxiv:2504.05118",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-07",
+    "latest_revision_date": "2025-04-11"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "VAPO: Efficient and Reliable Reinforcement Learning for Advanced Reasoning Tasks",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.05118"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.05118",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2504.05118v3",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "YuYue,YufengYuan,QiyingYu,XiaochenZuo,RuofeiZhu,WenyuanXu,JiazeChen,ChengyiWang,TianTian Fan,ZhengyinDu,XiangpengWei,XiangyuYu,GaohongLiu,JuncaiLiu,LingjunLiu,HaibinLin,ZhiqiLin, BoleMa,ChiZhang,MofanZhang,WangZhang,HangZhu,RuZhang,XinLiu,MingxuanWang,Yonghui Wu,andLinYan.Vapo:Efficientandreliablereinforcementlearningforadvancedreasoningtasks,2025.URL https://arxiv.org/abs/2504.05118.",
+      "page": 42,
+      "reference_number": 170,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "reliability"
+    ],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "VAPO: Efficient and Reliable Reinforcement Learning for Advanced Reasoning Tasks",
+  "versions": [
+    {
+      "date": "2025-04-11",
+      "identifier": "2504.05118v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.05118v3"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "abstract": "We introduce MiniMax-Speech, an autoregressive Transformer-based Text-to-Speech (TTS) model that generates high-quality speech. A key innovation is our learnable speaker encoder, which extracts timbre features from a reference audio without requiring its transcription. This enables MiniMax-Speech to produce highly expressive speech with timbre consistent with the reference in a zero-shot manner, while also supporting one-shot voice cloning with exceptionally high similarity to the reference voice. In addition, the overall quality of the synthesized audio is enhanced through the proposed Flow-VAE. Our model supports 32 languages and demonstrates excellent performance across multiple objective and subjective evaluations metrics. Notably, it achieves state-of-the-art (SOTA) results on objective voice cloning metrics (Word Error Rate and Speaker Similarity) and has secured the top position on the public TTS Arena leaderboard. Another key strength of MiniMax-Speech, granted by the robust and disentangled representations from the speaker encoder, is its extensibility without modifying the base model, enabling various applications such as: arbitrary voice emotion control via LoRA; text to voice (T2V) by synthesizing timbre features directly from text description; and professional voice cloning (PVC) by fine-tuning timbre features with additional data. We encourage readers to visit https://minimax-ai.github.io/tts_tech_report for more examples.",
+  "authors": [
+    "Bowen Zhang",
+    "Congchao Guo",
+    "Geng Yang",
+    "Hang Yu",
+    "Haozhe Zhang",
+    "Heidi Lei",
+    "Jialong Mai",
+    "Junjie Yan",
+    "Kaiyue Yang",
+    "Mingqi Yang",
+    "Peikai Huang",
+    "Ruiyang Jin",
+    "Sitan Jiang",
+    "Weihua Cheng",
+    "Yawei Li",
+    "Yichen Xiao",
+    "Yiying Zhou",
+    "Yongmao Zhang",
+    "Yuan Lu",
+    "Yucen He"
+  ],
+  "candidate_id": "arxiv:2505.07916",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-12",
+    "latest_revision_date": "2025-05-12"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "MiniMax-Speech: Intrinsic Zero-Shot Text-to-Speech with a Learnable Speaker Encoder",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.07916"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.07916",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2505.07916v1",
+    "primary_category": "eess.AS"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "BowenZhang,CongchaoGuo,GengYang,HangYu,HaozheZhang,HeidiLei,JialongMai,JunjieYan, Kaiyue Yang, Mingqi Yang, Peikai Huang, Ruiyang Jin, Sitan Jiang, Weihua Cheng, Yawei Li, Yichen Xiao, Yiying Zhou, Yongmao Zhang, Yuan Lu, and Yucen He. Minimax-speech: Intrinsic zero-shot text-to-speech with a learnable speaker encoder.CoRR, abs/2505.07916, 2025.",
+      "page": 25,
+      "reference_number": 69,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "MiniMax-Speech: Intrinsic Zero-Shot Text-to-Speech with a Learnable Speaker Encoder",
+  "versions": [
+    {
+      "date": "2025-05-12",
+      "identifier": "2505.07916v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.07916v1"
+    }
+  ]
+}

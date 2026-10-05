@@ -1,0 +1,127 @@
+{
+  "abstract": "We present MiMo-7B, a large language model born for reasoning tasks, with optimization across both pre-training and post-training stages. During pre-training, we enhance the data preprocessing pipeline and employ a three-stage data mixing strategy to strengthen the base model's reasoning potential. MiMo-7B-Base is pre-trained on 25 trillion tokens, with additional Multi-Token Prediction objective for enhanced performance and accelerated inference speed. During post-training, we curate a dataset of 130K verifiable mathematics and programming problems for reinforcement learning, integrating a test-difficulty-driven code-reward scheme to alleviate sparse-reward issues and employing strategic data resampling to stabilize training. Extensive evaluations show that MiMo-7B-Base possesses exceptional reasoning potential, outperforming even much larger 32B models. The final RL-tuned model, MiMo-7B-RL, achieves superior performance on mathematics, code and general reasoning tasks, surpassing the performance of OpenAI o1-mini. The model checkpoints are available at https://github.com/xiaomimimo/MiMo.",
+  "authors": [
+    "LLM-Core Xiaomi",
+    ":",
+    "Bingquan Xia",
+    "Bowen Shen",
+    "Cici",
+    "Dawei Zhu",
+    "Di Zhang",
+    "Gang Wang",
+    "Hailin Zhang",
+    "Huaqiu Liu",
+    "Jiebao Xiao",
+    "Jinhao Dong",
+    "Liang Zhao",
+    "Peidian Li",
+    "Peng Wang",
+    "Shihua Yu",
+    "Shimao Chen",
+    "Weikun Wang",
+    "Wenhan Ma",
+    "Xiangwei Deng",
+    "Yi Huang",
+    "Yifan Song",
+    "Zihan Jiang",
+    "Bowen Ye",
+    "Can Cai",
+    "Chenhong He",
+    "Dong Zhang",
+    "Duo Zhang",
+    "Guoan Wang",
+    "Hao Tian",
+    "Haochen Zhao",
+    "Heng Qu",
+    "Hongshen Xu",
+    "Jun Shi",
+    "Kainan Bao",
+    "Kai Fang",
+    "Kang Zhou",
+    "Kangyang Zhou",
+    "Lei Li",
+    "Menghang Zhu",
+    "Nuo Chen",
+    "Qiantong Wang",
+    "Shaohui Liu",
+    "Shicheng Li",
+    "Shuhao Gu",
+    "Shuhuai Ren",
+    "Shuo Liu",
+    "Sirui Deng",
+    "Weiji Zhuang",
+    "Weiwei Lv",
+    "Wenyu Yang",
+    "Xin Zhang",
+    "Xing Yong",
+    "Xing Zhang",
+    "Xingchen Song",
+    "Xinzhe Xu",
+    "Xu Wang",
+    "Yihan Yan",
+    "Yu Tu",
+    "Yuanyuan Tian",
+    "Yudong Wang",
+    "Yue Yu",
+    "Zhenru Lin",
+    "Zhichao Song",
+    "Zihao Yue"
+  ],
+  "candidate_id": "arxiv:2505.07608",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-12",
+    "latest_revision_date": "2025-06-05"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "MiMo: Unlocking the Reasoning Potential of Language Model -- From Pretraining to Posttraining",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.07608"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.07608",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2505.07608v2",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "L.-C.Xiaomi,:,B.Xia,B.Shen,Cici,D.Zhu,D.Zhang,G.Wang,H.Zhang,H.Liu,J.Xiao,J.Dong,L.Zhao, P.Li,P.Wang,S.Yu,S.Chen,W.Wang,W.Ma,X.Deng,Y.Huang,Y.Song,Z.Jiang,B.Ye,C.Cai,C.He, D.Zhang,D.Zhang,G.Wang,H.Tian,H.Zhao,H.Qu,H.Xu,J.Shi,K.Bao,K.Fang,K.Zhou,K.Zhou,L.Li, M.Zhu,N.Chen,Q.Wang,S.Liu,S.Li,S.Gu,S.Ren,S.Liu,S.Deng,W.Zhuang,W.Lv,W.Yang,X.Zhang, X.Yong,X.Zhang,X.Song,X.Xu,X.Wang,Y.Yan,Y.Tu,Y.Tian,Y.Wang,Y.Yu,Z.Lin,Z.Song,and Z.Yue.MiMo:Unlockingthereasoningpotentialoflanguagemodel–frompretrainingtoposttraining,2025.URL https://arxiv.org/abs/2505.07608.",
+      "page": 81,
+      "reference_number": 235,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "post-training"
+    ],
+    "primary_category": "AI-3",
+    "requires_human_confirmation": true
+  },
+  "title": "MiMo: Unlocking the Reasoning Potential of Language Model -- From Pretraining to Posttraining",
+  "versions": [
+    {
+      "date": "2025-06-05",
+      "identifier": "2505.07608v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.07608v2"
+    }
+  ]
+}

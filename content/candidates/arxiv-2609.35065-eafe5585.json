@@ -1,0 +1,56 @@
+{
+  "abstract": "Reusable prefix key-value (KV) caches can outgrow GPU memory in large language model (LLM) serving. A memory-semantic flash hierarchy offers SSD-backed capacity with a limited fast tier, but a logical KV hit is not necessarily ready for GPU retrieval. Demand staging exposes SSD latency, whereas immediate staging can reserve fast-tier capacity long before retrieval begins. We present TempoKV, a timing-aware resource-commitment layer that separates early knowledge of reuse from the acquisition of staging resources. It records reusable-KV hits as metadata-only claims and requests commitment when the runtime-estimated time until retrieval falls to the storage-estimated time needed to make KV resident and protected against eviction. These estimates adapt to runtime progress and staging state, while commitment remains subject to available protected capacity. We implement TempoKV in vLLM and LMCache on an SSD-backed CXL memory device without changing request scheduling. Across two models and three prefix cache ratios, TempoKV reduces protected fast-tier byte-time per request by 63-91% versus immediate staging while retaining much of the serving benefit of advance staging. In a fast-tier capacity sweep, output throughput and p95 time to first token (TTFT) remain nearly unchanged as capacity decreases from 100 to 25 GiB. Compared with unmodified LMCache's Device-DAX L1 configuration, TempoKV reduces p95 TTFT by up to 48.0% and increases output throughput by up to 27.8%.",
+  "authors": [
+    "Jay H. Park",
+    "Hyungjun Kim",
+    "Dong Kim"
+  ],
+  "candidate_id": "arxiv:2609.35065",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35065"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.35065",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.35065v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "kv cache"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.35065v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35065v1"
+    }
+  ]
+}

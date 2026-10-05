@@ -1,0 +1,56 @@
+{
+  "abstract": "Large language model (LLM) serving has environmental impacts across energy consumption, carbon emission, water consumption, and biodiversity loss. Yet these dimensions are largely evaluated in isolation, leaving it unclear when and how they lead to different optimization decisions. We present PRISM, a unified framework for characterizing and optimizing LLM serving across energy, carbon, water, and biodiversity impacts. Our analysis reveals a fundamental distinction: computing configurations determine energy consumption, whereas where and when LLM serving is deployed determine its carbon, water, and biodiversity impacts. Under a fixed deployment choice and operational-only accounting, all dimensions preserve the same energy-based configuration ranking. Deployment rankings can diverge across dimensions, while embodied impacts can break configuration invariance when they exceed a lifecycle crossover boundary. PRISM identifies these conditions, quantifies cross-dimensional regrets, and balances the four dimensions. In regional-routing experiments, PRISM reduces median worst-case regret by 50.2% relative to the strongest baseline.",
+  "authors": [
+    "Tianyao Shi",
+    "Xipeng Shen",
+    "Yi Ding"
+  ],
+  "candidate_id": "arxiv:2609.35569",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Beyond Energy: When Sustainability Dimensions Reshape LLM Serving Decisions",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35569"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.35569",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "41 pages, 30 figures, 13 tables",
+    "pdf_url": "https://arxiv.org/pdf/2609.35569v1",
+    "primary_category": "cs.CY"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Beyond Energy: When Sustainability Dimensions Reshape LLM Serving Decisions",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.35569v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35569v1"
+    }
+  ]
+}

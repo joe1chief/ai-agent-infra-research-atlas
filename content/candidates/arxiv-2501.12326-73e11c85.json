@@ -1,0 +1,97 @@
+{
+  "abstract": "This paper introduces UI-TARS, a native GUI agent model that solely perceives the screenshots as input and performs human-like interactions (e.g., keyboard and mouse operations). Unlike prevailing agent frameworks that depend on heavily wrapped commercial models (e.g., GPT-4o) with expert-crafted prompts and workflows, UI-TARS is an end-to-end model that outperforms these sophisticated frameworks. Experiments demonstrate its superior performance: UI-TARS achieves SOTA performance in 10+ GUI agent benchmarks evaluating perception, grounding, and GUI task execution. Notably, in the OSWorld benchmark, UI-TARS achieves scores of 24.6 with 50 steps and 22.7 with 15 steps, outperforming Claude (22.0 and 14.9 respectively). In AndroidWorld, UI-TARS achieves 46.6, surpassing GPT-4o (34.5). UI-TARS incorporates several key innovations: (1) Enhanced Perception: leveraging a large-scale dataset of GUI screenshots for context-aware understanding of UI elements and precise captioning; (2) Unified Action Modeling, which standardizes actions into a unified space across platforms and achieves precise grounding and interaction through large-scale action traces; (3) System-2 Reasoning, which incorporates deliberate reasoning into multi-step decision making, involving multiple reasoning patterns such as task decomposition, reflection thinking, milestone recognition, etc. (4) Iterative Training with Reflective Online Traces, which addresses the data bottleneck by automatically collecting, filtering, and reflectively refining new interaction traces on hundreds of virtual machines. Through iterative training and reflection tuning, UI-TARS continuously learns from its mistakes and adapts to unforeseen situations with minimal human intervention. We also analyze the evolution path of GUI agents to guide the further development of this domain.",
+  "authors": [
+    "Yujia Qin",
+    "Yining Ye",
+    "Junjie Fang",
+    "Haoming Wang",
+    "Shihao Liang",
+    "Shizuo Tian",
+    "Junda Zhang",
+    "Jiahao Li",
+    "Yunxin Li",
+    "Shijue Huang",
+    "Wanjun Zhong",
+    "Kuanye Li",
+    "Jiale Yang",
+    "Yu Miao",
+    "Woyu Lin",
+    "Longxiang Liu",
+    "Xu Jiang",
+    "Qianli Ma",
+    "Jingyu Li",
+    "Xiaojun Xiao",
+    "Kai Cai",
+    "Chuang Li",
+    "Yaowei Zheng",
+    "Chaolin Jin",
+    "Chen Li",
+    "Xiao Zhou",
+    "Minchao Wang",
+    "Haoli Chen",
+    "Zhaojian Li",
+    "Haihua Yang",
+    "Haifeng Liu",
+    "Feng Lin",
+    "Tao Peng",
+    "Xin Liu",
+    "Guang Shi"
+  ],
+  "candidate_id": "arxiv:2501.12326",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-21",
+    "latest_revision_date": "2025-01-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "UI-TARS: Pioneering Automated GUI Interaction with Native Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.12326"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2501.12326",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2501.12326v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "YujiaQin,YiningYe,JunjieFang,HaomingWang,ShihaoLiang,ShizuoTian,JundaZhang,JiahaoLi,Yunxin Li,ShijueHuang,etal. Ui-tars: Pioneeringautomatedguiinteractionwithnativeagents. arXiv preprint arXiv:2501.12326,2025. 38",
+      "page": 38,
+      "reference_number": 105,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "UI-TARS: Pioneering Automated GUI Interaction with Native Agents",
+  "versions": [
+    {
+      "date": "2025-01-21",
+      "identifier": "2501.12326v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.12326v1"
+    }
+  ]
+}

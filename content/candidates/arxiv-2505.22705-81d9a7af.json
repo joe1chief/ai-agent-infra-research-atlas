@@ -1,0 +1,82 @@
+{
+  "abstract": "Recent advancements in image generative foundation models have prioritized quality improvements but often at the cost of increased computational complexity and inference latency. To address this critical trade-off, we introduce HiDream-I1, a new open-source image generative foundation model with 17B parameters that achieves state-of-the-art image generation quality within seconds. HiDream-I1 is constructed with a new sparse Diffusion Transformer (DiT) structure. Specifically, it starts with a dual-stream decoupled design of sparse DiT with dynamic Mixture-of-Experts (MoE) architecture, in which two separate encoders are first involved to independently process image and text tokens. Then, a single-stream sparse DiT structure with dynamic MoE architecture is adopted to trigger multi-model interaction for image generation in a cost-efficient manner. To support flexiable accessibility with varied model capabilities, we provide HiDream-I1 in three variants: HiDream-I1-Full, HiDream-I1-Dev, and HiDream-I1-Fast. Furthermore, we go beyond the typical text-to-image generation and remould HiDream-I1 with additional image conditions to perform precise, instruction-based editing on given images, yielding a new instruction-based image editing model namely HiDream-E1. Ultimately, by integrating text-to-image generation and instruction-based image editing, HiDream-I1 evolves to form a comprehensive image agent (HiDream-A1) capable of fully interactive image creation and refinement. To accelerate multi-modal AIGC research, we have open-sourced all the codes and model weights of HiDream-I1-Full, HiDream-I1-Dev, HiDream-I1-Fast, HiDream-E1 through our project websites: https://github.com/HiDream-ai/HiDream-I1 and https://github.com/HiDream-ai/HiDream-E1. All features can be directly experienced via https://vivago.ai/studio.",
+  "authors": [
+    "Qi Cai",
+    "Jingwen Chen",
+    "Yang Chen",
+    "Yehao Li",
+    "Fuchen Long",
+    "Yingwei Pan",
+    "Zhaofan Qiu",
+    "Yiheng Zhang",
+    "Fengbin Gao",
+    "Peihan Xu",
+    "Yimeng Wang",
+    "Kai Yu",
+    "Wenxuan Chen",
+    "Ziwei Feng",
+    "Zijian Gong",
+    "Jianzhuang Pan",
+    "Yi Peng",
+    "Rui Tian",
+    "Siyu Wang",
+    "Bo Zhao",
+    "Ting Yao",
+    "Tao Mei"
+  ],
+  "candidate_id": "arxiv:2505.22705",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-28",
+    "latest_revision_date": "2025-05-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "HiDream-I1: A High-Efficient Image Generative Foundation Model with Sparse Diffusion Transformer",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.22705"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.22705",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Source codes and models are available at https://github.com/HiDream-ai/HiDream-I1 and https://github.com/HiDream-ai/HiDream-E1",
+    "pdf_url": "https://arxiv.org/pdf/2505.22705v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Qi Cai, Jingwen Chen, Yang Chen, Yehao Li, Fuchen Long, Yingwei Pan, Zhaofan Qiu, Yiheng Zhang, Fengbin Gao, Peihan Xu, et al. Hidream-i1: A high-efficient image generative foundation model with sparse diffusion transformer. arXiv preprint arXiv:2505.22705, 2025.",
+      "page": 41,
+      "reference_number": 6,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "HiDream-I1: A High-Efficient Image Generative Foundation Model with Sparse Diffusion Transformer",
+  "versions": [
+    {
+      "date": "2025-05-28",
+      "identifier": "2505.22705v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.22705v1"
+    }
+  ]
+}

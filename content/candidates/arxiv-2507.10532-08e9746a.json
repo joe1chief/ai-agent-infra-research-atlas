@@ -1,0 +1,76 @@
+{
+  "abstract": "Reasoning in large language models has long been a central research focus, and recent studies employing reinforcement learning (RL) have introduced diverse methods that yield substantial performance gains with minimal or even no external supervision. Surprisingly, some studies even suggest that random or incorrect reward signals can enhance performance. However, these breakthroughs are predominantly observed for the mathematically strong Qwen2.5 series on benchmarks such as MATH-500, AMC, and AIME, and seldom transfer to models like Llama, which warrants a more in-depth investigation. In this work, our empirical analysis reveals that pre-training on massive web-scale corpora leaves Qwen2.5 susceptible to data contamination in widely used benchmarks. Consequently, conclusions derived from contaminated benchmarks on Qwen2.5 series may be unreliable. To obtain trustworthy evaluation results, we introduce a generator that creates fully clean arithmetic problems of arbitrary length and difficulty, dubbed RandomCalculation. Using this leakage-free dataset, we show that only accurate reward signals yield steady improvements that surpass the base model's performance boundary in mathematical reasoning, whereas random or incorrect rewards do not. Moreover, we conduct more fine-grained analyses to elucidate the factors underlying the different performance observed on the MATH-500 and RandomCalculation benchmarks. Consequently, we recommend that future studies evaluate models on uncontaminated benchmarks and, when feasible, test various model series to ensure trustworthy conclusions about RL and related methods.",
+  "authors": [
+    "Mingqi Wu",
+    "Zhihao Zhang",
+    "Qiaole Dong",
+    "Zhiheng Xi",
+    "Jun Zhao",
+    "Senjie Jin",
+    "Xiaoran Fan",
+    "Yuhao Zhou",
+    "Huijie Lv",
+    "Ming Zhang",
+    "Yanwei Fu",
+    "Qin Liu",
+    "Songyang Zhang",
+    "Qi Zhang"
+  ],
+  "candidate_id": "arxiv:2507.10532",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-07-14",
+    "latest_revision_date": "2025-12-17"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Reasoning or Memorization? Unreliable Results of Reinforcement Learning Due to Data Contamination",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.10532"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2507.10532",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "28 pages, AAAI 2026",
+    "pdf_url": "https://arxiv.org/pdf/2507.10532v3",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "M.Wu,Z.Zhang,Q.Dong,Z.Xi,J.Zhao,S.Jin,X.Fan,Y.Zhou,H.Lv,M.Zhang,etal.Reasoningormemorization? unreliableresultsofreinforcementlearningduetodatacontamination.arXivpreprintarXiv:2507.10532,2025c.",
+      "page": 81,
+      "reference_number": 234,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trust"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "Reasoning or Memorization? Unreliable Results of Reinforcement Learning Due to Data Contamination",
+  "versions": [
+    {
+      "date": "2025-12-17",
+      "identifier": "2507.10532v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.10532v3"
+    }
+  ]
+}

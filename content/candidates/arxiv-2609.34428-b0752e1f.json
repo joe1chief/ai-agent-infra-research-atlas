@@ -1,0 +1,58 @@
+{
+  "abstract": "Agentic tasks require a large language model to interact with the world, navigating information and gathering evidence across multiple steps with restricted resources. Due to this complexity, agentic task failures arise from various sources, and pinpointing these failure causes is essential to diagnose and improve agentic systems. Existing benchmarks, however, tend to focus on a single leaderboard score, leaving the underlying failure modes opaque. To fill this gap, we introduce AgentHop, a diagnostic benchmark of 1,011 multiple-choice questions paired with a controlled seven-tool sandbox under fixed token, turn, and tool-call constraints. AgentHop reveals model vulnerabilities by dissecting a single accuracy score along four axes of agent operation: retrieval, synthesis, tool-call, and resource management. Across 19 models, we find that behavior clusters by model family, with tool-call signatures revealing distinct family fingerprints: GPT models commit early, Anthropic and GLM checkpoints verify before committing, DeepSeek and Kimi over-search, and Gemini-3 Pro stays balanced. Decomposed axes further expose within-family structure: Claude Opus 4.6 and Sonnet 4.6 land within one accuracy point yet diverge on retrieval-versus-synthesis emphasis, with Opus retrieving more and Sonnet synthesizing better. We release the full benchmark set and the harness to support diagnostic agent benchmarking.",
+  "authors": [
+    "Chanhee Park",
+    "Jeongho Yoon",
+    "Sungbin Han",
+    "Hyeonseok Moon",
+    "Heuiseok Lim"
+  ],
+  "candidate_id": "arxiv:2609.34428",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "AgentHop: A Diagnostic Benchmark for Agentic Multi-Hop Scientific Question Answering",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34428"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34428",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted to NeurIPS 2026 Evaluation and Datasets Track",
+    "pdf_url": "https://arxiv.org/pdf/2609.34428v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "sandbox"
+    ],
+    "primary_category": "AG-3",
+    "requires_human_confirmation": true
+  },
+  "title": "AgentHop: A Diagnostic Benchmark for Agentic Multi-Hop Scientific Question Answering",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.34428v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34428v1"
+    }
+  ]
+}

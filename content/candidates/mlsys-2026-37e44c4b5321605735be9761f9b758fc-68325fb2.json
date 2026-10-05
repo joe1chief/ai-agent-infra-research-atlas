@@ -1,0 +1,65 @@
+{
+  "abstract": "",
+  "authors": [
+    "Shanli Xing",
+    "Yiyan Zhai",
+    "Alexander Jiang",
+    "Yixin Dong",
+    "Yong Wu",
+    "Zihao Ye",
+    "Charlie F. Ruan",
+    "Yingyi Huang",
+    "Yineng Zhang",
+    "Liangsheng Yin",
+    "Aksara Bayyapu",
+    "Luis Ceze",
+    "Tianqi Chen"
+  ],
+  "candidate_id": "mlsys:2026:37e44c4b5321605735be9761f9b758fc",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-01-01",
+    "latest_revision_date": "2026-01-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2026/hash/37e44c4b5321605735be9761f9b758fc-Abstract-Conference.html"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "track": "conference",
+    "venue": "MLSys 2026"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_index_provides_year_only:2026"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems",
+  "versions": [
+    {
+      "date": "2026-01-01",
+      "identifier": "37e44c4b5321605735be9761f9b758fc",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2026/hash/37e44c4b5321605735be9761f9b758fc-Abstract-Conference.html"
+    }
+  ]
+}

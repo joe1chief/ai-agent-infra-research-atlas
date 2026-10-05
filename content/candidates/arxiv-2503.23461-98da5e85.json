@@ -1,0 +1,68 @@
+{
+  "abstract": "In this paper, we present TextCrafter, a Complex Visual Text Generation (CVTG) framework inspired by selective visual attention in cognitive science, and introduce the \"Text Insulation-and-Attention\" mechanisms. To implement the selective-attention principle that selection operates on discrete objects, we propose a novel Bottleneck-aware Constrained Reinforcement Learning for Multi-text Insulation, which substantially improves text-rendering performance on the strong Qwen-Image pretrained model without introducing additional parameters. To align with the selective concentration principle in human vision, we introduce a text-oriented attention module with a novel Quotation-guided Attention Gate that further improves generation quality for each text instance. Our Reinforcement Learning based text insulation approach attains state-of-the-art results, and incorporating text-oriented attention yields additional gains on top of an already strong baseline. More importantly, we introduce CVTG-2K, a benchmark comprising 2,000 complex visual-text prompts. These prompts vary in positions, quantities, lengths, and attributes, and span diverse real-world scenarios. Extensive evaluations on CVTG-2K, CVTG-Hard, LongText-Bench, and Geneval datasets confirm the effectiveness of TextCrafter. Despite using substantially fewer resources (i.e., 4 GPUs) than industrial-scale models (e.g., Qwen-Image, GPT Image, and Seedream), TextCrafter achieves superior performance in mitigating text misgeneration, omissions, and hallucinations.",
+  "authors": [
+    "Ying Tai",
+    "Nikai Du",
+    "Rui Xie",
+    "Zhennan Chen",
+    "Qian Wang",
+    "Zhengkai Jiang",
+    "Kai Zhang",
+    "Jian Yang"
+  ],
+  "candidate_id": "arxiv:2503.23461",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-30",
+    "latest_revision_date": "2026-02-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Investigating Text Insulation and Attention Mechanisms for Complex Visual Text Generation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.23461"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.23461",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2503.23461v7",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Nikai Du, Zhennan Chen, Zhizhou Chen, Shan Gao, Xi Chen, Zhengkai Jiang, Jian Yang, and Ying Tai. Textcrafter: Accurately rendering multiple texts in complex visual scenes. arXiv preprint arXiv:2503.23461, 2025.",
+      "page": 42,
+      "reference_number": 19,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Investigating Text Insulation and Attention Mechanisms for Complex Visual Text Generation",
+  "versions": [
+    {
+      "date": "2026-02-27",
+      "identifier": "2503.23461v7",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.23461v7"
+    }
+  ]
+}

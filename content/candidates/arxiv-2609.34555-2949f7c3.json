@@ -1,0 +1,63 @@
+{
+  "abstract": "Long-context LLM serving is increasingly bottlenecked by decode, where large KV caches limit batch size and underutilize GPUs. Sparse KV cache offloading expands effective capacity by storing most historical KV blocks in CPU DRAM and recalling only selected blocks on demand. However, we find that existing offloading systems shift the bottleneck to CPU-GPU recall I/O: recall volume varies widely across layers, decode steps and requests, while headwise sparse selection fragments recalls into many small PCIe transfers. This paper presents PulseInfer, an I/O-centric sparse KV cache offloading system. PulseInfer hides variable recall latency with interruptible layer-wise scheduling, adapts offloading decisions with IO-Adaptive Offloading Admission, and coalesces fragmented transfers using SoloHead sparse selection and a gather-scatter I/O engine. Implemented on SGLang, PulseInfer improves decode throughput by up to 4.7x over SGLang and 2.6x over the best existing offloading baseline, while reducing TPOT by up to 76% and preserving near-lossless accuracy.",
+  "authors": [
+    "Qiuyang Zhang",
+    "Kai Zhou",
+    "Kai Lu",
+    "Haocheng Lu",
+    "Jian Zhou",
+    "Yuanpeng Su",
+    "Kun Bao",
+    "Jiguang Wan",
+    "Fei Wu"
+  ],
+  "candidate_id": "arxiv:2609.34555",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34555"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34555",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.34555v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving",
+      "kv cache"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.34555v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34555v1"
+    }
+  ]
+}

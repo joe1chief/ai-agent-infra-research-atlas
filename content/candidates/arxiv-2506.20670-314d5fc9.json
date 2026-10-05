@@ -1,0 +1,68 @@
+{
+  "abstract": "Robust deployment of large multimodal models (LMMs) in real-world scenarios requires access to external knowledge sources, given the complexity and dynamic nature of real-world information. Existing approaches such as retrieval-augmented generation (RAG) and prompt engineered search agents rely on rigid pipelines, often leading to inefficient or excessive search behaviors. We present MMSearch-R1, the first end-to-end reinforcement learning framework that enables LMMs to perform on-demand, multi-turn search in real-world Internet environments. Our framework integrates both image and text search tools, allowing the model to reason about when and how to invoke them guided by an outcome-based reward with a search penalty. To support training, We collect a multimodal search VQA dataset through a semi-automated pipeline that covers diverse visual and textual knowledge needs and curate a search-balanced subset with both search-required and search-free samples, which proves essential for shaping efficient and on-demand search behavior. Extensive experiments on knowledge-intensive and info-seeking VQA tasks show that our model not only outperforms RAG-based baselines of the same model size, but also matches the performance of a larger RAG-based model while reducing search calls by over 30%. We further analyze key empirical findings to offer actionable insights for advancing research in multimodal search.",
+  "authors": [
+    "Jinming Wu",
+    "Zihao Deng",
+    "Wei Li",
+    "Yiding Liu",
+    "Bo You",
+    "Bo Li",
+    "Zejun Ma",
+    "Ziwei Liu"
+  ],
+  "candidate_id": "arxiv:2506.20670",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-25",
+    "latest_revision_date": "2025-06-25"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "MMSearch-R1: Incentivizing LMMs to Search",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.20670"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.20670",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Code: https://github.com/EvolvingLMMs-Lab/multimodal-search-r1",
+    "pdf_url": "https://arxiv.org/pdf/2506.20670v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Jinming Wu, Zihao Deng, Wei Li, Yiding Liu, Bo You, Bo Li, Zejun Ma, and Ziwei Liu. Mmsearch-r1: Incentivizing lmms to search.arXivpreprintarXiv:2506.20670, 2025a.",
+      "page": 31,
+      "reference_number": 2039,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "MMSearch-R1: Incentivizing LMMs to Search",
+  "versions": [
+    {
+      "date": "2025-06-25",
+      "identifier": "2506.20670v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.20670v1"
+    }
+  ]
+}

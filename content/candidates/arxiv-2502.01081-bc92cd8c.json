@@ -1,0 +1,64 @@
+{
+  "abstract": "The releases of OpenAI's o-[n] series, such as o1, o3, and o4-mini, mark a significant paradigm shift in Large Language Models towards advanced reasoning capabilities. Notably, models like o3 have demonstrated strong performance on benchmarks like the Abstraction and Reasoning Corpus for Artificial General Intelligence (ARC-AGI). However, this benchmark is limited to symbolic patterns, whereas humans often perceive and reason about multimodal scenarios involving both vision and language data. Thus, there is an urgent need to investigate advanced reasoning capabilities in multimodal tasks. To this end, we track the evolution of the GPT-[n] and o-[n] series models (including o1, o3, and o4-mini) on challenging multimodal puzzles from PuzzleVQA and AlgoPuzzleVQA, which demand fine-grained visual perception. Our results reveal that o-[n] series, particularly later iterations like o3 and o4-mini, significantly outperform the GPT-[n] series and show strong scalability in multimodal reasoning. Nonetheless, despite these substantial advancements and the superior capabilities demonstrated by the o-[n] series, our findings highlight that even these leading models face persistent challenges. Difficulties are particularly evident in tasks requiring precise visual perception, robust compositional reasoning across multiple visual attributes, and solving complex algorithmic or highly combinatorial puzzles, indicating critical areas for future AGI development. We plan to continuously track new models in the series and update our results in this paper accordingly. All resources used in this evaluation are openly available at https://github.com/declare-lab/LLM-PuzzleTest.",
+  "authors": [
+    "Vernon Y. H. Toh",
+    "Yew Ken Chia",
+    "Deepanway Ghosal",
+    "Soujanya Poria"
+  ],
+  "candidate_id": "arxiv:2502.01081",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-03",
+    "latest_revision_date": "2025-05-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "The Jumping Reasoning Curve? Tracking the Evolution of Reasoning Performance in GPT-[n] and o-[n] Models on Multimodal Puzzles",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.01081"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.01081",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2502.01081v2",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "VernonY.H.Toh,YewKenChia,DeepanwayGhosal,andSoujanyaPoria. Thejumpingreasoningcurve? trackingtheevolutionofreasoningperformanceingpt-[n]ando-[n]modelsonmultimodalpuzzles,2025.URL https://arxiv.org/abs/2502.01081.",
+      "page": 40,
+      "reference_number": 132,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "The Jumping Reasoning Curve? Tracking the Evolution of Reasoning Performance in GPT-[n] and o-[n] Models on Multimodal Puzzles",
+  "versions": [
+    {
+      "date": "2025-05-21",
+      "identifier": "2502.01081v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.01081v2"
+    }
+  ]
+}

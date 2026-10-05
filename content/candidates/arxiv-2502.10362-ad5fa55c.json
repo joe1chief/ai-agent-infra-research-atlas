@@ -1,0 +1,70 @@
+{
+  "abstract": "CLaMP 3 is a unified framework developed to address challenges of cross-modal and cross-lingual generalization in music information retrieval. Using contrastive learning, it aligns all major music modalities--including sheet music, performance signals, and audio recordings--with multilingual text in a shared representation space, enabling retrieval across unaligned modalities with text as a bridge. It features a multilingual text encoder adaptable to unseen languages, exhibiting strong cross-lingual generalization. Leveraging retrieval-augmented generation, we curated M4-RAG, a web-scale dataset consisting of 2.31 million music-text pairs. This dataset is enriched with detailed metadata that represents a wide array of global musical traditions. To advance future research, we release WikiMT-X, a benchmark comprising 1,000 triplets of sheet music, audio, and richly varied text descriptions. Experiments show that CLaMP 3 achieves state-of-the-art performance on multiple MIR tasks, significantly surpassing previous strong baselines and demonstrating excellent generalization in multimodal and multilingual music contexts.",
+  "authors": [
+    "Shangda Wu",
+    "Zhancheng Guo",
+    "Ruibin Yuan",
+    "Junyan Jiang",
+    "Seungheon Doh",
+    "Gus Xia",
+    "Juhan Nam",
+    "Xiaobing Li",
+    "Feng Yu",
+    "Maosong Sun"
+  ],
+  "candidate_id": "arxiv:2502.10362",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-14",
+    "latest_revision_date": "2025-05-18"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "CLaMP 3: Universal Music Information Retrieval Across Unaligned Modalities and Unseen Languages",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.10362"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.10362",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "20 pages, 8 figures, 12 tables, accepted by ACL 2025",
+    "pdf_url": "https://arxiv.org/pdf/2502.10362v3",
+    "primary_category": "cs.SD"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "ShangdaWu,ZhanchengGuo,RuibinYuan,JunyanJiang,SeungheonDoh,GusXia,JuhanNam,Xiaobing Li, Feng Yu, and Maosong Sun. Clamp 3: Universal music information retrieval across unaligned modalities and unseen languages.arXivpreprintarXiv:2502.10362, 2025a.",
+      "page": 24,
+      "reference_number": 58,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "CLaMP 3: Universal Music Information Retrieval Across Unaligned Modalities and Unseen Languages",
+  "versions": [
+    {
+      "date": "2025-05-18",
+      "identifier": "2502.10362v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.10362v3"
+    }
+  ]
+}

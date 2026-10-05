@@ -1,0 +1,68 @@
+{
+  "abstract": "Mathematical reasoning is a cornerstone of human intelligence and a key benchmark for advanced capabilities in large language models (LLMs). However, the research community still lacks an open, large-scale, high-quality corpus tailored to the demands of math-centric LLM pre-training. We present MegaMath, an open dataset curated from diverse, math-focused sources through following practices: (1) Revisiting web data: We re-extracted mathematical documents from Common Crawl with math-oriented HTML optimizations, fasttext-based filtering and deduplication, all for acquiring higher-quality data on the Internet. (2) Recalling Math-related code data: We identified high quality math-related code from large code training corpus, Stack-V2, further enhancing data diversity. (3) Exploring Synthetic data: We synthesized QA-style text, math-related code, and interleaved text-code blocks from web data or code data. By integrating these strategies and validating their effectiveness through extensive ablations, MegaMath delivers 371B tokens with the largest quantity and top quality among existing open math pre-training datasets.",
+  "authors": [
+    "Fan Zhou",
+    "Zengzhi Wang",
+    "Nikhil Ranjan",
+    "Zhoujun Cheng",
+    "Liping Tang",
+    "Guowei He",
+    "Zhengzhong Liu",
+    "Eric P. Xing"
+  ],
+  "candidate_id": "arxiv:2504.02807",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-03",
+    "latest_revision_date": "2025-04-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "MegaMath: Pushing the Limits of Open Math Corpora",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.02807"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.02807",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "26 pages, 15 figures, 22 tables",
+    "pdf_url": "https://arxiv.org/pdf/2504.02807v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "F.Zhou,Z.Wang,N.Ranjan,Z.Cheng,L.Tang,G.He,Z.Liu,andE.P.Xing.Megamath:Pushingthelimitsof openmathcorpora.arXivpreprintarXiv:2504.02807,2025.",
+      "page": 82,
+      "reference_number": 255,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "MegaMath: Pushing the Limits of Open Math Corpora",
+  "versions": [
+    {
+      "date": "2025-04-03",
+      "identifier": "2504.02807v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.02807v1"
+    }
+  ]
+}

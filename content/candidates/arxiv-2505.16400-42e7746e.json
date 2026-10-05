@@ -1,0 +1,68 @@
+{
+  "abstract": "Despite recent progress in large-scale reinforcement learning (RL) for reasoning, the training recipe for building high-performing reasoning models remains elusive. Key implementation details of frontier models, such as DeepSeek-R1, including data curation strategies and RL training recipe, are often omitted. Moreover, recent research indicates distillation remains more effective than RL for smaller models. In this work, we demonstrate that large-scale RL can significantly enhance the reasoning capabilities of strong, small- and mid-sized models, achieving results that surpass those of state-of-the-art distillation-based models. We systematically study the RL training process through extensive ablations and propose a simple yet effective approach: first training on math-only prompts, then on code-only prompts. Notably, we find that math-only RL not only significantly enhances the performance of strong distilled models on math benchmarks (e.g., +14.6% / +17.2% on AIME 2025 for the 7B / 14B models), but also code reasoning tasks (e.g., +6.8% / +5.8% on LiveCodeBench for the 7B / 14B models). In addition, extended code-only RL iterations further improve performance on code benchmarks with minimal or no degradation in math results. We develop a robust data curation pipeline to collect challenging prompts with high-quality, verifiable answers and test cases to enable verification-based RL across both domains. Finally, we identify key experimental insights, including curriculum learning with progressively increasing response lengths and the stabilizing effect of on-policy parameter updates. We find that RL not only elicits the foundational reasoning capabilities acquired during pretraining and supervised fine-tuning (e.g., distillation), but also pushes the limits of the model's reasoning ability, enabling it to solve problems that were previously unsolvable.",
+  "authors": [
+    "Yang Chen",
+    "Zhuolin Yang",
+    "Zihan Liu",
+    "Chankyu Lee",
+    "Peng Xu",
+    "Mohammad Shoeybi",
+    "Bryan Catanzaro",
+    "Wei Ping"
+  ],
+  "candidate_id": "arxiv:2505.16400",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-22",
+    "latest_revision_date": "2025-06-05"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "AceReason-Nemotron: Advancing Math and Code Reasoning through Reinforcement Learning",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.16400"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.16400",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Add pass@1024 evaluation results for LiveCodeBench v6. We release the models at: https://huggingface.co/collections/nvidia/acereason-682f4e1261dc22f697fd1485",
+    "pdf_url": "https://arxiv.org/pdf/2505.16400v3",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Y.Chen,Z.Yang,Z.Liu,C.Lee,P.Xu,M.Shoeybi,B.Catanzaro,andW.Ping.Acereason-nemotron:Advancing mathandcodereasoningthroughreinforcementlearning.arXivpreprintarXiv:2505.16400,2025.",
+      "page": 68,
+      "reference_number": 38,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "AceReason-Nemotron: Advancing Math and Code Reasoning through Reinforcement Learning",
+  "versions": [
+    {
+      "date": "2025-06-05",
+      "identifier": "2505.16400v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.16400v3"
+    }
+  ]
+}

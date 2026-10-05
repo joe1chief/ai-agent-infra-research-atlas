@@ -1,0 +1,73 @@
+{
+  "abstract": "Search-augmented language models combine web search with Large Language Models (LLMs) to improve response groundedness and freshness. However, analyzing these systems remains challenging: existing datasets are limited in scale and narrow in scope, often constrained to static, single-turn, fact-checking questions. In this work, we introduce Search Arena, a crowd-sourced, large-scale, human-preference dataset of over 24,000 paired multi-turn user interactions with search-augmented LLMs. The dataset spans diverse intents and languages, and contains full system traces with around 12,000 human preference votes. Our analysis reveals that user preferences are influenced by the number of citations, even when the cited content does not directly support the attributed claims, uncovering a gap between perceived and actual credibility. Furthermore, user preferences vary across cited sources, revealing that community-driven platforms are generally preferred and static encyclopedic sources are not always appropriate and reliable. To assess performance across different settings, we conduct cross-arena analyses by testing search-augmented LLMs in a general-purpose chat environment and conventional LLMs in search-intensive settings. We find that web search does not degrade and may even improve performance in non-search settings; however, the quality in search settings is significantly affected if solely relying on the model's parametric knowledge. We open-sourced the dataset to support future research. Our dataset and code are available at: https://github.com/lmarena/search-arena.",
+  "authors": [
+    "Mihran Miroyan",
+    "Tsung-Han Wu",
+    "Logan King",
+    "Tianle Li",
+    "Jiayi Pan",
+    "Xinyan Hu",
+    "Wei-Lin Chiang",
+    "Anastasios N. Angelopoulos",
+    "Trevor Darrell",
+    "Narges Norouzi",
+    "Joseph E. Gonzalez"
+  ],
+  "candidate_id": "arxiv:2506.05334",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-05",
+    "latest_revision_date": "2026-03-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Search Arena: Analyzing Search-Augmented LLMs",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.05334"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.05334",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted to ICLR 2026. Code: https://github.com/lmarena/search-arena. Dataset: https://huggingface.co/datasets/lmarena-ai/search-arena-24k",
+    "pdf_url": "https://arxiv.org/pdf/2506.05334v2",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "M.Miroyan,T.-H.Wu,L.King,T.Li,J.Pan,X.Hu,W.-L.Chiang,A.N.Angelopoulos,T.Darrell,N.Norouzi, andJ.Gonzalez. Searcharena: Analyzingsearch-augmentedllms.ArXiv,abs/2506.05334,2025. URL https: //api.semanticscholar.org/CorpusID:279243096.",
+      "page": 75,
+      "reference_number": 146,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Search Arena: Analyzing Search-Augmented LLMs",
+  "versions": [
+    {
+      "date": "2026-03-02",
+      "identifier": "2506.05334v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.05334v2"
+    }
+  ]
+}

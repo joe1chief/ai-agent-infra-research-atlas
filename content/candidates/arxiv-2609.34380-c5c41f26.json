@@ -1,0 +1,59 @@
+{
+  "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+  "authors": [
+    "Xuan Truong Nguyen",
+    "Tien Son Pham",
+    "Tuan Duc Chu",
+    "Wookeun Jung",
+    "Thanh Tuan Dao"
+  ],
+  "candidate_id": "arxiv:2609.34380",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34380"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34380",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "14 pages, 7 figures",
+    "pdf_url": "https://arxiv.org/pdf/2609.34380v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving",
+      "kv cache"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.34380v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34380v1"
+    }
+  ]
+}

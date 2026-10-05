@@ -1,0 +1,75 @@
+{
+  "abstract": "Training computer-use agents requires massive amounts of GUI interaction data, but manually annotating action trajectories at scale is prohibitively expensive. We present VideoAgentTrek, a scalable pipeline that automatically mines training data from publicly available screen-recorded videos at web scale, eliminating the need for manual annotation. Our approach addresses a key challenge: raw videos contain implicit demonstrations but lack explicit action labels. To solve this, we develop Video2Action, an inverse dynamics module (IDM) with two components: (1) a video grounding model that detects and localizes GUI actions with precise temporal boundaries and context, and (2) an action-content recognizer that extracts structured parameters like click coordinates and typed text with high fidelity. Applied to 39,000 YouTube tutorial videos, our pipeline generates 1.52 million interaction steps automatically. We leverage this data through continued pretraining followed by supervised fine-tuning. On OSWorld-Verified, our approach improves task success rates from 9.3% (SFT-only baseline) to 15.8%, a 70% relative improvement. On AgentNetBench, step accuracy increases from 64.1% to 69.3%. Our results demonstrate that passive internet videos can be transformed into high-quality supervision for computer-use agents, providing a scalable alternative to expensive manual annotation.",
+  "authors": [
+    "Dunjie Lu",
+    "Yiheng Xu",
+    "Junli Wang",
+    "Haoyuan Wu",
+    "Xinyuan Wang",
+    "Zekun Wang",
+    "Junlin Yang",
+    "Hongjin Su",
+    "Jixuan Chen",
+    "Junda Chen",
+    "Yuchen Mao",
+    "Jingren Zhou",
+    "Junyang Lin",
+    "Binyuan Hui",
+    "Tao Yu"
+  ],
+  "candidate_id": "arxiv:2510.19488",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-10-22",
+    "latest_revision_date": "2025-10-22"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "VideoAgentTrek: Computer Use Pretraining from Unlabeled Videos",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.19488"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2510.19488",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "8 pages, 6 figures",
+    "pdf_url": "https://arxiv.org/pdf/2510.19488v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Dunjie Lu, Yiheng Xu, Junli Wang, Haoyuan Wu, Xinyuan Wang, Zekun Wang, Junlin Yang, Hongjin Su, Jixuan Chen, Junda Chen, Yuchen Mao, Jingren Zhou, Junyang Lin, Binyuan Hui, and Tao Yu. Videoagenttrek: Computer use pretraining from unlabeled videos, 2025. URLhttps://arxiv.org/ abs/2510.19488.",
+      "page": 29,
+      "reference_number": 49,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "VideoAgentTrek: Computer Use Pretraining from Unlabeled Videos",
+  "versions": [
+    {
+      "date": "2025-10-22",
+      "identifier": "2510.19488v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.19488v1"
+    }
+  ]
+}

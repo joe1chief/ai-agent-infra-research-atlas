@@ -1,0 +1,91 @@
+{
+  "abstract": "We investigate the logical reasoning capabilities of large language models (LLMs) and their scalability in complex non-monotonic reasoning. To this end, we introduce ZebraLogic, a comprehensive evaluation framework for assessing LLM reasoning performance on logic grid puzzles derived from constraint satisfaction problems (CSPs). ZebraLogic enables the generation of puzzles with controllable and quantifiable complexity, facilitating a systematic study of the scaling limits of models such as Llama, o1 models, and DeepSeek-R1. By encompassing a broad range of search space complexities and diverse logical constraints, ZebraLogic provides a structured environment to evaluate reasoning under increasing difficulty. Our results reveal a significant decline in accuracy as problem complexity grows -- a phenomenon we term the curse of complexity. This limitation persists even with larger models and increased inference-time computation, suggesting inherent constraints in current LLM reasoning capabilities. Additionally, we explore strategies to enhance logical reasoning, including Best-of-N sampling, backtracking mechanisms, and self-verification prompts. Our findings offer critical insights into the scalability of LLM reasoning, highlight fundamental limitations, and outline potential directions for improvement.",
+  "authors": [
+    "Bill Yuchen Lin",
+    "Ronan Le Bras",
+    "Kyle Richardson",
+    "Ashish Sabharwal",
+    "Radha Poovendran",
+    "Peter Clark",
+    "Yejin Choi"
+  ],
+  "candidate_id": "arxiv:2502.01100",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-03",
+    "latest_revision_date": "2025-07-15"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "ZebraLogic: On the Scaling Limits of LLMs for Logical Reasoning",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.01100"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.01100",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted to ICML 2025",
+    "pdf_url": "https://arxiv.org/pdf/2502.01100v2",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Bill Yuchen Lin, Ronan Le Bras, Kyle Richardson, Ashish Sabharwal, Radha Poovendran, Peter Clark, andYejinChoi. ZebraLogic: OnthescalinglimitsofLLMsforlogicalreasoning. CoRR,abs/2502.01100, 2025.",
+      "page": 33,
+      "reference_number": 35,
+      "report_blob_sha": "d2f9cdf3011a83861ec3a77304a5eb93bdc9491b",
+      "report_title": "2025-04_qwen3",
+      "seed_report_path": "2025/alibaba_qwen/2025-04_qwen3.pdf"
+    },
+    {
+      "context": "Bill Yuchen Lin, Ronan Le Bras, Kyle Richardson, Ashish Sabharwal, Radha Poovendran, Peter Clark, andYejinChoi. ZebraLogic: OnthescalinglimitsofLLMsforlogicalreasoning.CoRR,abs/2502.01100, 2025.",
+      "page": 23,
+      "reference_number": 35,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    },
+    {
+      "context": "B.Y.Lin,R.L.Bras,K.Richardson,A.Sabharwal,R.Poovendran,P.Clark,andY.Choi.Zebralogic:Onthescaling limitsofllmsforlogicalreasoning.arXivpreprintarXiv:2502.01100,2025.",
+      "page": 74,
+      "reference_number": 122,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    },
+    {
+      "context": "Bill Yuchen Lin, Ronan Le Bras, Kyle Richardson, Ashish Sabharwal, Radha Poovendran, Peter Clark, andYejinChoi. Zebralogic: Onthescalinglimitsofllmsforlogicalreasoning. volumeabs/2502.01100,",
+      "page": 64,
+      "reference_number": 2084,
+      "report_blob_sha": "638a3d4dceac9312d10bbe304219080740f77fd5",
+      "report_title": "2025-06_ernie-4.5",
+      "seed_report_path": "2025/baidu/2025-06_ernie-4.5.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "ZebraLogic: On the Scaling Limits of LLMs for Logical Reasoning",
+  "versions": [
+    {
+      "date": "2025-07-15",
+      "identifier": "2502.01100v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.01100v2"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "abstract": "LLM agents extend language models from text generation to interactive task solving, but their deployment can fail through fragile runtime behaviors arising from reasoning or action errors. Existing mitigation methods improve empirical robustness, but they do not provide formal risk guarantees over the entire Agent Runtime. In this paper, we propose \\emph{CertAgent}, a framework for Agent Runtime Fragility Certification. We first formulate \\emph{Agent Runtime Fragility} as system level risk over the full agent runtime trajectory, while using stage specific failure modes to guide runtime control. CertAgent instantiates a Verifier Subagent to detect unreliable runtime proposals, a Gate Module to control runtime conservativeness through a configuration parameter , and a reflection mechanism to revise rejected proposals. To provide deployment time guarantees, we apply Conformal Risk Control to certify Agent Runtime Fragility, enabling users to either obtain a certified runtime risk bound for a fixed configuration or identify certified runtime configurations under a target risk level. We further introduce policy optimization to reduce system level runtime risk and improve the resulting certification. Experiments on representative agent benchmarks show that CertAgent improves runtime reliability, supports practical risk utility tradeoffs, and yields more effective certification. Our code is available at \\url{https://anonymous.4open.science/r/CertAgent}.",
+  "authors": [],
+  "candidate_id": "openreview:yypZeTRbBW",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-14",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "CertAgent: Conformal Risk Control for Agent Runtime Fragility Certification",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=yypZeTRbBW"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "yypZeTRbBW"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2027/Conference/-/Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+      "ICLR.cc/2027/Conference/Submission19060/-/Full_Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+      "ICLR.cc/2027/Conference/-/Edit"
+    ],
+    "venue": "ICLR 2027 Conference Submission",
+    "venue_id": "ICLR.cc/2027/Conference/Submission"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent runtime"
+    ],
+    "primary_category": "AG-1",
+    "requires_human_confirmation": true
+  },
+  "title": "CertAgent: Conformal Risk Control for Agent Runtime Fragility Certification",
+  "versions": [
+    {
+      "date": "2026-10-03",
+      "identifier": "yypZeTRbBW",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=yypZeTRbBW"
+    }
+  ]
+}

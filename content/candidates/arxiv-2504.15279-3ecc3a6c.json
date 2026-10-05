@@ -1,0 +1,81 @@
+{
+  "abstract": "Visual reasoning is a core component of human intelligence and a critical capability for advanced multimodal models. Yet current reasoning evaluations of multimodal large language models (MLLMs) often rely on text descriptions and allow language-based reasoning shortcuts, failing to measure genuine vision-centric reasoning. To address this, we introduce VisuLogic: a benchmark of 1,000 human-verified problems across six categories (e.g., quantitative shifts, spatial relations, attribute comparisons). These various types of questions can be evaluated to assess the visual reasoning capabilities of MLLMs from multiple perspectives. We evaluate leading MLLMs on this benchmark and analyze their results to identify common failure modes. Most models score below 30% accuracy-only slightly above the 25% random baseline and far below the 51.4% achieved by humans-revealing significant gaps in visual reasoning. Furthermore, we provide a supplementary training dataset and a reinforcement-learning baseline to support further progress.",
+  "authors": [
+    "Weiye Xu",
+    "Jiahao Wang",
+    "Weiyun Wang",
+    "Zhe Chen",
+    "Wengang Zhou",
+    "Aijun Yang",
+    "Lewei Lu",
+    "Houqiang Li",
+    "Xiaohua Wang",
+    "Xizhou Zhu",
+    "Wenhai Wang",
+    "Jifeng Dai",
+    "Jinguo Zhu"
+  ],
+  "candidate_id": "arxiv:2504.15279",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-21",
+    "latest_revision_date": "2025-04-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "VisuLogic: A Benchmark for Evaluating Visual Reasoning in Multi-modal Large Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.15279"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.15279",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Code, data, and baselines are available at https://visulogic-benchmark.github.io/VisuLogic",
+    "pdf_url": "https://arxiv.org/pdf/2504.15279v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Weiye Xu, Jiahao Wang, Weiyun Wang, Zhe Chen, Wengang Zhou, Aijun Yang, Lewei Lu, Houqiang Li, Xiaohua Wang, Xizhou Zhu, et al. Visulogic: A benchmark for evaluating visual reasoning in multi-modal large language models, 2025. URLhttps://arxiv.org/abs/2504.15279.",
+      "page": 32,
+      "reference_number": 2047,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    },
+    {
+      "context": "WeiyeXu,JiahaoWang,WeiyunWang,ZheChen,WengangZhou,AijunYang,LeweiLu,HouqiangLi,Xiaohua Wang,XizhouZhu,WenhaiWang,JifengDai,andJinguoZhu.Visulogic:Abenchmarkforevaluatingvisual reasoninginmulti-modallargelanguagemodels,2025.URL https://arxiv.org/abs/2504.15279.",
+      "page": 41,
+      "reference_number": 154,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "VisuLogic: A Benchmark for Evaluating Visual Reasoning in Multi-modal Large Language Models",
+  "versions": [
+    {
+      "date": "2025-04-21",
+      "identifier": "2504.15279v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.15279v1"
+    }
+  ]
+}

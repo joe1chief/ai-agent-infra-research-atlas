@@ -1,0 +1,63 @@
+{
+  "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+  "authors": [
+    "Chuan Liu",
+    "Shuoming Zhang",
+    "Zhicheng Li",
+    "Qianqi Sun",
+    "Ruiyuan Xu",
+    "Qiuchu Yu",
+    "Xiyu Shi",
+    "Huimin Cui",
+    "Jiacheng Zhao"
+  ],
+  "candidate_id": "arxiv:2609.37626",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-29",
+    "latest_revision_date": "2026-09-29"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.37626"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.37626",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "28 pages, 11 figures, 8 tables. Code: https://github.com/ict-agent/SPLASH-sglang",
+    "pdf_url": "https://arxiv.org/pdf/2609.37626v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving",
+      "kv cache"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+  "versions": [
+    {
+      "date": "2026-09-29",
+      "identifier": "2609.37626v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.37626v1"
+    }
+  ]
+}

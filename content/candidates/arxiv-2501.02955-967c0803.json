@@ -1,0 +1,69 @@
+{
+  "abstract": "In recent years, vision language models (VLMs) have made significant advancements in video understanding. However, a crucial capability - fine-grained motion comprehension - remains under-explored in current benchmarks. To address this gap, we propose MotionBench, a comprehensive evaluation benchmark designed to assess the fine-grained motion comprehension of video understanding models. MotionBench evaluates models' motion-level perception through six primary categories of motion-oriented question types and includes data collected from diverse sources, ensuring a broad representation of real-world video content. Experimental results reveal that existing VLMs perform poorly in understanding fine-grained motions. To enhance VLM's ability to perceive fine-grained motion within a limited sequence length of LLM, we conduct extensive experiments reviewing VLM architectures optimized for video feature compression and propose a novel and efficient Through-Encoder (TE) Fusion method. Experiments show that higher frame rate inputs and TE Fusion yield improvements in motion understanding, yet there is still substantial room for enhancement. Our benchmark aims to guide and motivate the development of more capable video understanding models, emphasizing the importance of fine-grained motion comprehension. Project page: https://motion-bench.github.io .",
+  "authors": [
+    "Wenyi Hong",
+    "Yean Cheng",
+    "Zhuoyi Yang",
+    "Weihan Wang",
+    "Lefan Wang",
+    "Xiaotao Gu",
+    "Shiyu Huang",
+    "Yuxiao Dong",
+    "Jie Tang"
+  ],
+  "candidate_id": "arxiv:2501.02955",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-06",
+    "latest_revision_date": "2026-05-12"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "MotionBench: Benchmarking and Improving Fine-grained Video Motion Understanding for Vision Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.02955"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2501.02955",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "20 pages",
+    "pdf_url": "https://arxiv.org/pdf/2501.02955v2",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "WenyiHong,YeanCheng,ZhuoyiYang,WeihanWang,LefanWang,XiaotaoGu,ShiyuHuang,YuxiaoDong, andJieTang.Motionbench:Benchmarkingandimprovingfine-grainedvideomotionunderstandingforvision languagemodels. arXiv preprint arXiv:2501.02955,2025.",
+      "page": 35,
+      "reference_number": 48,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "MotionBench: Benchmarking and Improving Fine-grained Video Motion Understanding for Vision Language Models",
+  "versions": [
+    {
+      "date": "2026-05-12",
+      "identifier": "2501.02955v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.02955v2"
+    }
+  ]
+}

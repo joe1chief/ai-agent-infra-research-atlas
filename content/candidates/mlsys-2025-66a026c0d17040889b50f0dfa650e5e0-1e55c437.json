@@ -1,0 +1,57 @@
+{
+  "abstract": "",
+  "authors": [
+    "Xuanlin Jiang",
+    "Yang Zhou",
+    "Shiyi Cao",
+    "Ion Stoica",
+    "Minlan Yu"
+  ],
+  "candidate_id": "mlsys:2025:66a026c0d17040889b50f0dfa650e5e0",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-01",
+    "latest_revision_date": "2025-01-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2025/hash/66a026c0d17040889b50f0dfa650e5e0-Abstract-Conference.html"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "track": "conference",
+    "venue": "MLSys 2025"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_index_provides_year_only:2025"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference",
+  "versions": [
+    {
+      "date": "2025-01-01",
+      "identifier": "66a026c0d17040889b50f0dfa650e5e0",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2025/hash/66a026c0d17040889b50f0dfa650e5e0-Abstract-Conference.html"
+    }
+  ]
+}

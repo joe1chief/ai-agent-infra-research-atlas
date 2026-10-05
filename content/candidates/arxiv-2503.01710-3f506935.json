@@ -1,0 +1,85 @@
+{
+  "abstract": "Recent advancements in large language models (LLMs) have driven significant progress in zero-shot text-to-speech (TTS) synthesis. However, existing foundation models rely on multi-stage processing or complex architectures for predicting multiple codebooks, limiting efficiency and integration flexibility. To overcome these challenges, we introduce Spark-TTS, a novel system powered by BiCodec, a single-stream speech codec that decomposes speech into two complementary token types: low-bitrate semantic tokens for linguistic content and fixed-length global tokens for speaker attributes. This disentangled representation, combined with the Qwen2.5 LLM and a chain-of-thought (CoT) generation approach, enables both coarse-grained control (e.g., gender, speaking style) and fine-grained adjustments (e.g., precise pitch values, speaking rate). To facilitate research in controllable TTS, we introduce VoxBox, a meticulously curated 100,000-hour dataset with comprehensive attribute annotations. Extensive experiments demonstrate that Spark-TTS not only achieves state-of-the-art zero-shot voice cloning but also generates highly customizable voices that surpass the limitations of reference-based synthesis. Source code, pre-trained models, and audio samples are available at https://github.com/SparkAudio/Spark-TTS.",
+  "authors": [
+    "Xinsheng Wang",
+    "Mingqi Jiang",
+    "Ziyang Ma",
+    "Ziyu Zhang",
+    "Songxiang Liu",
+    "Linqin Li",
+    "Zheng Liang",
+    "Qixi Zheng",
+    "Rui Wang",
+    "Xiaoqin Feng",
+    "Weizhen Bian",
+    "Zhen Ye",
+    "Sitong Cheng",
+    "Ruibin Yuan",
+    "Zhixian Zhao",
+    "Xinfa Zhu",
+    "Jiahao Pan",
+    "Liumeng Xue",
+    "Pengcheng Zhu",
+    "Yunlin Chen",
+    "Zhifei Li",
+    "Xie Chen",
+    "Lei Xie",
+    "Yike Guo",
+    "Wei Xue"
+  ],
+  "candidate_id": "arxiv:2503.01710",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-03",
+    "latest_revision_date": "2025-03-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Spark-TTS: An Efficient LLM-Based Text-to-Speech Model with Single-Stream Decoupled Speech Tokens",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.01710"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.01710",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Submitted to ACL 2025",
+    "pdf_url": "https://arxiv.org/pdf/2503.01710v1",
+    "primary_category": "cs.SD"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Xinsheng Wang, Mingqi Jiang, Ziyang Ma, Ziyu Zhang, Songxiang Liu, Linqin Li, Zheng Liang, Qixi Zheng,Rui Wang, XiaoqinFeng, Weizhen Bian,Zhen Ye, SitongCheng,Ruibin Yuan, ZhixianZhao, Xinfa Zhu, Jiahao Pan, Liumeng Xue, Pengcheng Zhu, Yunlin Chen, Zhifei Li, Xie Chen, Lei Xie, Yike Guo,andWeiXue. Spark-tts: Anefficientllm-basedtext-to-speechmodelwithsingle-streamdecoupled speech tokens.CoRR, abs/2503.01710, 2025b.",
+      "page": 24,
+      "reference_number": 55,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Spark-TTS: An Efficient LLM-Based Text-to-Speech Model with Single-Stream Decoupled Speech Tokens",
+  "versions": [
+    {
+      "date": "2025-03-03",
+      "identifier": "2503.01710v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.01710v1"
+    }
+  ]
+}

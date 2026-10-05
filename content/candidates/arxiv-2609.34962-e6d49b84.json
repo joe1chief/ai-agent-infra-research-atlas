@@ -1,0 +1,56 @@
+{
+  "abstract": "Estimating mutual information (MI) from samples is a central objective in a variety of scientific fields. Modern neural estimators are accurate in the large-data regime, but they fall short when data is scarce, and each must be fit anew for every distribution under study. Current estimators are moreover tied to specific data types. These constraints limit their adoption in many applications where per-distribution training is impractical and sample sizes are small. We present ALICE, a foundation model that removes per-distribution training, while achieving competitive estimation accuracy. Trained exclusively on a broad family of synthetic distributions, ALICE acts as an in-context estimator of rectified-flow velocity fields: conditioned on samples of an unseen distribution, it estimates that distribution's velocity field without any explicit training. MI is then obtained through a fixed identity that integrates the squared difference between the joint and conditional fields. We validate ALICE on a standard, challenging benchmark and apply it in three domains, biology, genetics, and neuroscience, whose data the model has never seen. For the first time, we show that a single model closes the gap with neural estimators trained separately for each distribution, while natively supporting different data dimensionality and sample cardinality, enabling zero-shot MI analysis across scientific domains.",
+  "authors": [
+    "Giulio Franzese",
+    "Simone Rossi",
+    "Pietro Michiardi"
+  ],
+  "candidate_id": "arxiv:2609.34962",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-29"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "ALICE: In-context, Zero-shot, Mutual Information Estimation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34962"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34962",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.34962v2",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "identity"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "ALICE: In-context, Zero-shot, Mutual Information Estimation",
+  "versions": [
+    {
+      "date": "2026-09-29",
+      "identifier": "2609.34962v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34962v2"
+    }
+  ]
+}

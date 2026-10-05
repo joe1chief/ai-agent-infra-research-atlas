@@ -1,0 +1,74 @@
+{
+  "abstract": "Current multimodal benchmarks often conflate reasoning with domain-specific knowledge, making it difficult to isolate and evaluate general reasoning abilities in non-expert settings. To address this, we introduce VisualPuzzles, a benchmark that targets visual reasoning while deliberately minimizing reliance on specialized knowledge. VisualPuzzles consists of diverse questions spanning five categories: algorithmic, analogical, deductive, inductive, and spatial reasoning. One major source of our questions is manually translated logical reasoning questions from the Chinese Civil Service Examination. Experiments show that VisualPuzzles requires significantly less intensive domain-specific knowledge and more complex reasoning compared to benchmarks like MMMU, enabling us to better evaluate genuine multimodal reasoning. Evaluations show that state-of-the-art multimodal large language models consistently lag behind human performance on VisualPuzzles, and that strong performance on knowledge-intensive benchmarks does not necessarily translate to success on reasoning-focused, knowledge-light tasks. Additionally, reasoning enhancements such as scaling up inference compute (with \"thinking\" modes) yield inconsistent gains across models and task types, and we observe no clear correlation between model size and performance. We also found that models exhibit different reasoning and answering patterns on VisualPuzzles compared to benchmarks with heavier emphasis on knowledge. VisualPuzzles offers a clearer lens through which to evaluate reasoning capabilities beyond factual recall and domain knowledge.",
+  "authors": [
+    "Yueqi Song",
+    "Tianyue Ou",
+    "Yibo Kong",
+    "Zecheng Li",
+    "Graham Neubig",
+    "Xiang Yue"
+  ],
+  "candidate_id": "arxiv:2504.10342",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-14",
+    "latest_revision_date": "2025-04-30"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "VisualPuzzles: Decoupling Multimodal Reasoning Evaluation from Domain Knowledge",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.10342"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.10342",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "56 pages, 43 figures",
+    "pdf_url": "https://arxiv.org/pdf/2504.10342v3",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Yueqi Song, Tianyue Ou, Yibo Kong, Zecheng Li, Graham Neubig, and Xiang Yue. Visualpuzzles: Decouplingmultimodalreasoningevaluationfromdomainknowledge.arXivpreprintarXiv:2504.10342, 2025b. URLhttps://arxiv.org/abs/2504.10342.",
+      "page": 30,
+      "reference_number": 74,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    },
+    {
+      "context": "Yueqi Song, Tianyue Ou, Yibo Kong, Zecheng Li, Graham Neubig, and Xiang Yue. Visualpuzzles: Decouplingmultimodal reasoningevaluation fromdomain knowledge. CoRR,abs/2504.10342, 2025. doi: 10.48550/ARXIV.2504.10342. URLhttps://doi.org/10.48550/arXiv.2504.10342 .",
+      "page": 68,
+      "reference_number": 8236,
+      "report_blob_sha": "638a3d4dceac9312d10bbe304219080740f77fd5",
+      "report_title": "2025-06_ernie-4.5",
+      "seed_report_path": "2025/baidu/2025-06_ernie-4.5.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "VisualPuzzles: Decoupling Multimodal Reasoning Evaluation from Domain Knowledge",
+  "versions": [
+    {
+      "date": "2025-04-30",
+      "identifier": "2504.10342v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.10342v3"
+    }
+  ]
+}

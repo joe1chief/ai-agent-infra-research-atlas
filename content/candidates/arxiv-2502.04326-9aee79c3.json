@@ -1,0 +1,66 @@
+{
+  "abstract": "We introduce WorldSense, the first benchmark to assess the multi-modal video understanding, that simultaneously encompasses visual, audio, and text inputs. In contrast to existing benchmarks, our WorldSense has several features: (i)collaboration of omni-modality, we design the evaluation tasks to feature a strong coupling of audio and video, requiring models to effectively utilize the synergistic perception of omni-modality; (ii)diversity of videos and tasks, WorldSense encompasses a diverse collection of 1,662 audio-visual synchronised videos, systematically categorized into 8 primary domains and 67 fine-grained subcategories to cover the broad scenarios, and 3,172 multi-choice QA pairs across 26 distinct tasks to enable the comprehensive evaluation; (iii)high-quality annotations, all the QA pairs are manually labeled by 80 expert annotators with multiple rounds of correction to ensure quality. Based on our WorldSense, we extensively evaluate various state-of-the-art models. The experimental results indicate that existing models face significant challenges in understanding real-world scenarios (65.1% best accuracy). By analyzing the limitations of current models, we aim to provide valuable insight to guide development of real-world understanding. We hope our WorldSense can provide a platform for evaluating the ability in constructing and understanding coherent contexts from omni-modality.",
+  "authors": [
+    "Jack Hong",
+    "Shilin Yan",
+    "Jiayin Cai",
+    "Xiaolong Jiang",
+    "Yao Hu",
+    "Weidi Xie"
+  ],
+  "candidate_id": "arxiv:2502.04326",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-06",
+    "latest_revision_date": "2026-03-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "WorldSense: Evaluating Real-world Omnimodal Understanding for Multimodal LLMs",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.04326"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.04326",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted by ICLR2026",
+    "pdf_url": "https://arxiv.org/pdf/2502.04326v3",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Jack Hong, Shilin Yan, Jiayin Cai, Xiaolong Jiang, Yao Hu, and Weidi Xie. Worldsense: Evaluating real-world omnimodal understanding for multimodal llms.CoRR, abs/2502.04326, 2025.",
+      "page": 23,
+      "reference_number": 30,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "WorldSense: Evaluating Real-world Omnimodal Understanding for Multimodal LLMs",
+  "versions": [
+    {
+      "date": "2026-03-01",
+      "identifier": "2502.04326v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.04326v3"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "abstract": "Recent advances in text-to-image generation have primarily relied on extensive datasets and parameter-heavy architectures. These requirements severely limit accessibility for researchers and practitioners who lack substantial computational resources. In this paper, we introduce \\model, an efficient training paradigm for image generation models that uses knowledge distillation (KD) and Direct Preference Optimization (DPO). Drawing inspiration from the success of data KD techniques widely adopted in Multi-Modal Large Language Models (MLLMs), LightGen distills knowledge from state-of-the-art (SOTA) text-to-image models into a compact Masked Autoregressive (MAR) architecture with only $0.7B$ parameters. Using a compact synthetic dataset of just $2M$ high-quality images generated from varied captions, we demonstrate that data diversity significantly outweighs data volume in determining model performance. This strategy dramatically reduces computational demands and reduces pre-training time from potentially thousands of GPU-days to merely 88 GPU-days. Furthermore, to address the inherent shortcomings of synthetic data, particularly poor high-frequency details and spatial inaccuracies, we integrate the DPO technique that refines image fidelity and positional accuracy. Comprehensive experiments confirm that LightGen achieves image generation quality comparable to SOTA models while significantly reducing computational resources and expanding accessibility for resource-constrained environments. Code is available at https://github.com/XianfengWu01/LightGen",
+  "authors": [
+    "Xianfeng Wu",
+    "Yajing Bai",
+    "Haoze Zheng",
+    "Harold Haodong Chen",
+    "Yexin Liu",
+    "Zihao Wang",
+    "Xuran Ma",
+    "Wen-Jie Shu",
+    "Xianzu Wu",
+    "Harry Yang",
+    "Ser-Nam Lim"
+  ],
+  "candidate_id": "arxiv:2503.08619",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-11",
+    "latest_revision_date": "2025-03-11"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "LightGen: Efficient Image Generation through Knowledge Distillation and Direct Preference Optimization",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.08619"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.08619",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Code: https://github.com/XianfengWu01/LightGen",
+    "pdf_url": "https://arxiv.org/pdf/2503.08619v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Xianfeng Wu, Yajing Bai, Haoze Zheng, Harold Haodong Chen, Yexin Liu, Zihao Wang, Xuran Ma, Wen-Jie Shu, Xianzu Wu, Harry Yang, et al. Lightgen: Efficient image generation through knowledge distillation and direct preference optimization. arXiv preprint arXiv:2503.08619, 2025c.",
+      "page": 45,
+      "reference_number": 83,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "LightGen: Efficient Image Generation through Knowledge Distillation and Direct Preference Optimization",
+  "versions": [
+    {
+      "date": "2025-03-11",
+      "identifier": "2503.08619v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.08619v1"
+    }
+  ]
+}

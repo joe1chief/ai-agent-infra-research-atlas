@@ -1,0 +1,65 @@
+{
+  "abstract": "Reinforcement learning (RL) has demonstrated strong potential in training large language models (LLMs) capable of complex reasoning for real-world problem solving. More recently, RL has been leveraged to create sophisticated LLM-based search agents that adeptly combine reasoning with search engine use. While the use of RL for training search agents is promising, the optimal design of such agents remains not fully understood. In particular, key factors -- such as (1) reward formulation, (2) the choice and characteristics of the underlying LLM, and (3) the role of the search engine in the RL process -- require further investigation. In this work, we conduct comprehensive empirical studies to systematically investigate these and offer actionable insights. We highlight several key findings: format rewards are effective in improving final performance, whereas intermediate retrieval rewards have limited impact; the scale and initialization of the LLM (general-purpose vs. reasoning-specialized) significantly influence RL outcomes; and the choice of search engine plays a critical role in shaping RL training dynamics and the robustness of the trained agent during inference. These establish important guidelines for successfully building and deploying LLM-based search agents in real-world applications. Code is available at https://github.com/PeterGriffinJin/Search-R1.",
+  "authors": [
+    "Bowen Jin",
+    "Jinsung Yoon",
+    "Priyanka Kargupta",
+    "Sercan O. Arik",
+    "Jiawei Han"
+  ],
+  "candidate_id": "arxiv:2505.15117",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-21",
+    "latest_revision_date": "2025-05-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "An Empirical Study on Reinforcement Learning for Reasoning-Search Interleaved LLM Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.15117"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.15117",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "22 pages",
+    "pdf_url": "https://arxiv.org/pdf/2505.15117v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "BowenJin,JinsungYoon,PriyankaKargupta,SercanO.Arik,andJiaweiHan. Anempirical study on reinforcement learning for reasoning-search interleaved llm agents, 2025. URL https://arxiv.org/abs/2505.15117.",
+      "page": 17,
+      "reference_number": 34,
+      "report_blob_sha": "9af34430c8e6febcd6e9485c80d3d4f27d9f824e",
+      "report_title": "BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent",
+      "seed_report_path": "2025/anthropic/2025-06_claude-opus-4.5.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "An Empirical Study on Reinforcement Learning for Reasoning-Search Interleaved LLM Agents",
+  "versions": [
+    {
+      "date": "2025-05-21",
+      "identifier": "2505.15117v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.15117v1"
+    }
+  ]
+}

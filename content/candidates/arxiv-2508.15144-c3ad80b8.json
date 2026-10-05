@@ -1,0 +1,77 @@
+{
+  "abstract": "This paper introduces GUI-Owl, a foundational GUI agent model that achieves state-of-the-art performance among open-source end-to-end models on ten GUI benchmarks across desktop and mobile environments, covering grounding, question answering, planning, decision-making, and procedural knowledge. GUI-Owl-7B achieves 66.4 on AndroidWorld and 29.4 on OSWorld. Building on this, we propose Mobile-Agent-v3, a general-purpose GUI agent framework that further improves performance to 73.3 on AndroidWorld and 37.7 on OSWorld, setting a new state-of-the-art for open-source GUI agent frameworks. GUI-Owl incorporates three key innovations: (1) Large-scale Environment Infrastructure: a cloud-based virtual environment spanning Android, Ubuntu, macOS, and Windows, enabling our Self-Evolving GUI Trajectory Production framework. This generates high-quality interaction data via automated query generation and correctness validation, leveraging GUI-Owl to refine trajectories iteratively, forming a self-improving loop. It supports diverse data pipelines and reduces manual annotation. (2) Diverse Foundational Agent Capabilities: by integrating UI grounding, planning, action semantics, and reasoning patterns, GUI-Owl supports end-to-end decision-making and can act as a modular component in multi-agent systems. (3) Scalable Environment RL: we develop a scalable reinforcement learning framework with fully asynchronous training for real-world alignment. We also introduce Trajectory-aware Relative Policy Optimization (TRPO) for online RL, achieving 34.9 on OSWorld. GUI-Owl and Mobile-Agent-v3 are open-sourced at https://github.com/X-PLUG/MobileAgent.",
+  "authors": [
+    "Jiabo Ye",
+    "Xi Zhang",
+    "Haiyang Xu",
+    "Haowei Liu",
+    "Junyang Wang",
+    "Zhaoqing Zhu",
+    "Ziwei Zheng",
+    "Feiyu Gao",
+    "Junjie Cao",
+    "Zhengxi Lu",
+    "Jitong Liao",
+    "Qi Zheng",
+    "Fei Huang",
+    "Jingren Zhou",
+    "Ming Yan"
+  ],
+  "candidate_id": "arxiv:2508.15144",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-08-21",
+    "latest_revision_date": "2025-09-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Mobile-Agent-v3: Fundamental Agents for GUI Automation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.15144"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2508.15144",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2508.15144v2",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "JiaboYe, XiZhang,Haiyang Xu,HaoweiLiu, JunyangWang,Zhaoqing Zhu,ZiweiZheng, etal. Mobile- agent-v3: Fundamental agents for gui automation.arXivpreprintarXiv:2508.15144, 2025.",
+      "page": 32,
+      "reference_number": 2052,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Mobile-Agent-v3: Fundamental Agents for GUI Automation",
+  "versions": [
+    {
+      "date": "2025-09-01",
+      "identifier": "2508.15144v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.15144v2"
+    }
+  ]
+}

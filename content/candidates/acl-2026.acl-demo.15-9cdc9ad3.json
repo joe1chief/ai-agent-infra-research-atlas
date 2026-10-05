@@ -1,0 +1,55 @@
+{
+  "abstract": "",
+  "authors": [
+    "Ahmad Chamma",
+    "Omar El Herraoui",
+    "Guokan Shang"
+  ],
+  "candidate_id": "acl:2026.acl-demo.15",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-07-01",
+    "latest_revision_date": "2026-07-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "MixtureKit: A General Framework for Composing, Training, and Visualizing Mixture-of-Experts Models",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2026.acl-demo.15/"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.acl-demo.15",
+    "openreview": null
+  },
+  "raw": {
+    "anthology_id": "2026.acl-demo.15",
+    "venue": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_metadata_provides_month_only:2026-07"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "MixtureKit: A General Framework for Composing, Training, and Visualizing Mixture-of-Experts Models",
+  "versions": [
+    {
+      "date": "2026-07-01",
+      "identifier": "2026.acl-demo.15",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2026.acl-demo.15/"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "abstract": "The strong performance of AI Agents across an impressive variety of tasks is driving an unprecedented investment in agentic infrastructures, however the cost of processing tokens is fast increasing. Web agents automate the execution of web-application tasks described in natural language, by analyzing the web-application's user interface (UI) and interacting with it. This work introduces OdoBot, a novel web-agent architecture that completes tasks at a fraction of the cost when compared to conventional web agents. This is achieved by leveraging a behavioral model of the underlying application constructed by analyzing successful task-execution demonstrations. Our experiments with 45 tasks on the Canvas Learning Management System (LMS) demonstrate that OdoBot uses 44% and 80% fewer tokens than two state-of-the-art competitor agents (Agent-E and WebVoyager), while also surpassing WebVoyager in terms of task success rate.",
+  "authors": [
+    "Alexandru Ianta",
+    "Eleni Stroulia"
+  ],
+  "candidate_id": "arxiv:2609.13491",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-11",
+    "latest_revision_date": "2026-09-11"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Token Efficient Task Execution via Application Behavior Modeling for Web Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.13491"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.13491",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.13491v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Token Efficient Task Execution via Application Behavior Modeling for Web Agents",
+  "versions": [
+    {
+      "date": "2026-09-11",
+      "identifier": "2609.13491v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.13491v1"
+    }
+  ]
+}

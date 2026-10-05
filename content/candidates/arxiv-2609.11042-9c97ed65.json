@@ -1,0 +1,60 @@
+{
+  "abstract": "Agent usage is shifting toward long-horizon tasks such as coding and scientific discovery, among which terminal tasks are especially important. We introduce T1, a Mixture-of-Experts model of 122B total trained with reinforcement learning, operating a real shell in a cloud sandbox for up to 300+ tool-call turns per task, rewarded by executing each task's own verifier. We provide a comprehensive recipe: First, an aggressively warm-started to stabilize actor-critic training, with a dense process reward scoring trajectories by the absolute number of passing verifiers. Second, stable optimization through TITO construction, training on the exact sampled token identifiers with drift repair at turn boundaries, and rollout routing replay, recording the sampler's per-token expert choices at every MoE layer and replaying them during training. Third, fully out-of-distribution training corpus: isolated seeds and synthesized tasks disjoint from Terminal-Bench 2.1 ensures gains reflect genuine capability transfer over benchmark overfitting. Together, TITO and R3 cut the training-to-inference log-probability difference from 0.021 to 0.013, with exactly aligned zero token drift in the loss region. On Terminal-Bench 2.1, our post-train pipeline raises initial base model from 43.8% to T1 with 64.0% resolved. On Long-Horizon Terminal Bench, T1 reaches 27.9% and surpasses GPT-5.4 and GLM-5.1.",
+  "authors": [
+    "Junyao Yang",
+    "Yucheng Shi",
+    "Zhongzhi Li",
+    "Ruhan Wang",
+    "Zongxia Li",
+    "Haitao Mi",
+    "Leowei Liang"
+  ],
+  "candidate_id": "arxiv:2609.11042",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-10",
+    "latest_revision_date": "2026-09-10"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.11042"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.11042",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "37 pages, 18 figures",
+    "pdf_url": "https://arxiv.org/pdf/2609.11042v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "sandbox"
+    ],
+    "primary_category": "AG-3",
+    "requires_human_confirmation": true
+  },
+  "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+  "versions": [
+    {
+      "date": "2026-09-10",
+      "identifier": "2609.11042v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.11042v1"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "abstract": "When an LLM serving pool changes, an operator must decide whether to retain an incumbent, replace it with a candidate, or combine them in a cascade. Evaluating all models on common queries can itself be costly. We formulate this pre-deployment decision as fixed-confidence identification with costly evaluation actions, separating the serving configuration to be selected from the observations used to select it. The characteristic certification cost $C^\\star(\\theta)$ quantifies the minimum cost of distinguishing the true environment from alternatives that change the optimal serving decision. It yields an instance-dependent lower bound, which our TRACK-AND-CERTIFY procedure asymptotically attains as $\\delta\\to0$ under finite-class, stationary, identifiable observation models with known costs and a unique true optimum. For LLM serving, replacement depends on marginal performance, whereas a cascade triggered by verified incumbent failure also depends on same-query rescue behavior. Controlled replay across 11 model pools shows that richer multi-candidate feedback reduces certification cost only on selected pools, and that the characteristic-cost ratio strongly predicts this realized benefit. Decision-aware singleton allocation reduces median certification cost by $8.53\\times$ relative to uniform singleton evaluation. These results motivate designing model evaluations around the serving decision they must resolve.",
+  "authors": [],
+  "candidate_id": "openreview:FjD0jabmcu",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-09",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Certifying LLM Serving Updates with Cost-Optimal Evaluation",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=FjD0jabmcu"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "FjD0jabmcu"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2027/Conference/-/Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+      "ICLR.cc/2027/Conference/Submission11927/-/Full_Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+      "ICLR.cc/2027/Conference/-/Edit"
+    ],
+    "venue": "ICLR 2027 Conference Submission",
+    "venue_id": "ICLR.cc/2027/Conference/Submission"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Certifying LLM Serving Updates with Cost-Optimal Evaluation",
+  "versions": [
+    {
+      "date": "2026-10-03",
+      "identifier": "FjD0jabmcu",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=FjD0jabmcu"
+    }
+  ]
+}

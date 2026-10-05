@@ -1,0 +1,55 @@
+{
+  "abstract": "AI coding systems are moving from autocomplete and chat toward agents that can inspect repositories, edit multiple files, run tools, write tests, open pull requests, and work for long periods with limited supervision. This capability changes the bottleneck in software delivery. Recent field studies show meaningful gains in coding activity, but newer evidence also shows that those gains attenuate sharply between writing code and shipping reliable software. Review, integration, testing, security, deployment, and production operations remain constraining stages, while the economics are shifting from predictable per-seat licensing toward variable token, tool, sandbox, CI, and rework costs. This paper synthesizes peer-reviewed software-engineering research, university studies, benchmark audits, production reports from major technology companies, developer telemetry, and cost-management evidence released primarily from 2024 through September 2026. No new model experiment is claimed; numerical findings remain attributed to their original studies. The synthesis proposes four engineering concepts: the Agentic SDLC Throughput Paradox, Production-Qualified Change (PQC), the Verification Tax, and an Agentic SDLC Control Plane that allocates autonomy subject to cost, reliability, and human-attention budgets. An evidence-based horizon then maps today's supervised agents to future policy-bounded software factories. The central research question shifts from how much code an agent can generate to how much production-qualified value an engineering system can deliver per dollar, per reviewer-hour, and per unit of operational risk.",
+  "authors": [
+    "Happy Bhati"
+  ],
+  "candidate_id": "arxiv:2609.04681",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-04",
+    "latest_revision_date": "2026-09-04"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Beyond Code Generation: Reliability, Verification, and Cost Economics in the Agentic Software Development Lifecycle",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.04681"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.04681",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "18 pages, 6 figures, 3 tables. Systems synthesis and research agenda on agentic software engineering, code review, testing, reliability, and AI cost. No new experimental measurements are claimed; empirical and company-reported results are attributed to the cited sources",
+    "pdf_url": "https://arxiv.org/pdf/2609.04681v1",
+    "primary_category": "cs.SE"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "reliability",
+      "lifecycle"
+    ],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Beyond Code Generation: Reliability, Verification, and Cost Economics in the Agentic Software Development Lifecycle",
+  "versions": [
+    {
+      "date": "2026-09-04",
+      "identifier": "2609.04681v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.04681v1"
+    }
+  ]
+}

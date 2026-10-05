@@ -1,0 +1,59 @@
+{
+  "abstract": "Latency-sensitive inference on shared A100 clusters often suffers noisy-neighbor interference on the PCIe fabric, inflating tail latency and SLO violations. We present a fabric-agnostic, VM-deployable host-level controller that combines dynamic Multi-Instance GPU (MIG) reconfiguration, PCIe-aware placement, and lightweight guardrails (MPS quotas, cgroup I/O). It samples per-tenant tails and system signals, uses topology hints to avoid PCIe hot spots, and gates actions with dwell/cool-down to avoid thrash. On a single host and a 2-node (16-GPU) cluster, SLO miss-rate is reduced by \\(\\approx\\)32\\% (\\(\\approx\\)1.5) and p99 latency improves \\(\\approx\\)15\\% with \\(\\leq\\)5\\% throughput cost versus static MIG and naive placement; ablations show MIG and placement contribute comparably. We also evaluate LLM serving with vLLM on OLMo 2 7B Instruct: TTFT p99 improves \\(\\approx\\)10--15\\% at \\(\\leq\\)5\\% cost without changing the controller.",
+  "authors": [
+    "Erfan Darzi",
+    "Shreeanant Bharadwaj",
+    "Sree Bhargavi Balija"
+  ],
+  "candidate_id": "openreview:uv1GhDjXrd",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-01",
+    "latest_revision_date": "2025-11-14"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Predictable LLM Serving on GPU Clusters",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=uv1GhDjXrd"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "uv1GhDjXrd"
+  },
+  "raw": {
+    "invitations": [
+      "DBLP.org/-/Record",
+      "DBLP.org/-/Edit"
+    ],
+    "venue": "CoRR 2025",
+    "venue_id": "dblp.org/journals/CORR/2025"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Predictable LLM Serving on GPU Clusters",
+  "versions": [
+    {
+      "date": "2025-11-14",
+      "identifier": "uv1GhDjXrd",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=uv1GhDjXrd"
+    }
+  ]
+}

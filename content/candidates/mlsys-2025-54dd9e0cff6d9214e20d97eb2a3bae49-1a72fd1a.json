@@ -1,0 +1,54 @@
+{
+  "abstract": "",
+  "authors": [
+    "Mingkai Zheng",
+    "Zhao Zhang"
+  ],
+  "candidate_id": "mlsys:2025:54dd9e0cff6d9214e20d97eb2a3bae49",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-01",
+    "latest_revision_date": "2025-01-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "Radius: Range-based Gradient Sparsity for Large Foundation Model Pre-training",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2025/hash/54dd9e0cff6d9214e20d97eb2a3bae49-Abstract-Conference.html"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "track": "conference",
+    "venue": "MLSys 2025"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_index_provides_year_only:2025"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Radius: Range-based Gradient Sparsity for Large Foundation Model Pre-training",
+  "versions": [
+    {
+      "date": "2025-01-01",
+      "identifier": "54dd9e0cff6d9214e20d97eb2a3bae49",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2025/hash/54dd9e0cff6d9214e20d97eb2a3bae49-Abstract-Conference.html"
+    }
+  ]
+}

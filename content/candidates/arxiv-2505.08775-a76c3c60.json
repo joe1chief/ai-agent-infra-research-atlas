@@ -1,0 +1,80 @@
+{
+  "abstract": "We present HealthBench, an open-source benchmark measuring the performance and safety of large language models in healthcare. HealthBench consists of 5,000 multi-turn conversations between a model and an individual user or healthcare professional. Responses are evaluated using conversation-specific rubrics created by 262 physicians. Unlike previous multiple-choice or short-answer benchmarks, HealthBench enables realistic, open-ended evaluation through 48,562 unique rubric criteria spanning several health contexts (e.g., emergencies, transforming clinical data, global health) and behavioral dimensions (e.g., accuracy, instruction following, communication). HealthBench performance over the last two years reflects steady initial progress (compare GPT-3.5 Turbo's 16% to GPT-4o's 32%) and more rapid recent improvements (o3 scores 60%). Smaller models have especially improved: GPT-4.1 nano outperforms GPT-4o and is 25 times cheaper. We additionally release two HealthBench variations: HealthBench Consensus, which includes 34 particularly important dimensions of model behavior validated via physician consensus, and HealthBench Hard, where the current top score is 32%. We hope that HealthBench grounds progress towards model development and applications that benefit human health.",
+  "authors": [
+    "Rahul K. Arora",
+    "Jason Wei",
+    "Rebecca Soskin Hicks",
+    "Preston Bowman",
+    "Joaquin Quiñonero-Candela",
+    "Foivos Tsimpourlas",
+    "Michael Sharman",
+    "Meghan Shah",
+    "Andrea Vallone",
+    "Alex Beutel",
+    "Johannes Heidecke",
+    "Karan Singhal"
+  ],
+  "candidate_id": "arxiv:2505.08775",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-13",
+    "latest_revision_date": "2025-05-13"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "HealthBench: Evaluating Large Language Models Towards Improved Human Health",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.08775"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.08775",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Blog: https://openai.com/index/healthbench/ Code: https://github.com/openai/simple-evals",
+    "pdf_url": "https://arxiv.org/pdf/2505.08775v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "R.K.Arora,J.Wei,R.S.Hicks,P.Bowman,J.Quiñonero-Candela,F.Tsimpourlas, M.Sharman,M.Shah,A.Vallone,A.Beutel,etal.,“Healthbench:Evaluatinglargelanguage modelstowardsimprovedhumanhealth,”arXivpreprintarXiv:2505.08775,2025.",
+      "page": 59,
+      "reference_number": 8,
+      "report_blob_sha": "b00b61d8ff19e2829c9fd38820087efecadcd6eb",
+      "report_title": "2025-10_claude-haiku-4.5",
+      "seed_report_path": "2025/anthropic/2025-10_claude-haiku-4.5.pdf"
+    },
+    {
+      "context": "Rahul K. Arora, Jason Wei, Rebecca Soskin Hicks, Preston Bowman, Joaquin Quiñonero Candela, FoivosTsimpourlas, MichaelSharman, MeghanShah, AndreaVallone, AlexBeutel, JohannesHeidecke,andKaranSinghal. Healthbench: Evaluatinglargelanguagemodelstowards improved human health. CoRR, abs/2505.08775, 2025. doi: 10.48550/ARXIV.2505.08775. URLhttps://doi.org/10.48550/arXiv.2505.08775.",
+      "page": 20,
+      "reference_number": 15,
+      "report_blob_sha": "1440b7598461aab612c9a34dcd9af383a2682b01",
+      "report_title": "Baichuan-M2: Scaling Medical Capability with Large Verifier System",
+      "seed_report_path": "2025/baichuan/2025-09_baichuan-m2.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "HealthBench: Evaluating Large Language Models Towards Improved Human Health",
+  "versions": [
+    {
+      "date": "2025-05-13",
+      "identifier": "2505.08775v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.08775v1"
+    }
+  ]
+}

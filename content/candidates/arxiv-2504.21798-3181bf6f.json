@@ -1,0 +1,72 @@
+{
+  "abstract": "Despite recent progress in Language Models (LMs) for software engineering, collecting training data remains a significant pain point. Existing datasets are small, with at most 1,000s of training instances from 11 or fewer GitHub repositories. The procedures to curate such datasets are often complex, necessitating hundreds of hours of human labor; companion execution environments also take up several terabytes of storage, severely limiting their scalability and usability. To address this pain point, we introduce SWE-smith, a novel pipeline for generating software engineering training data at scale. Given any Python codebase, SWE-smith constructs a corresponding execution environment, then automatically synthesizes 100s to 1,000s of task instances that break existing test(s) in the codebase. Using SWE-smith, we create a dataset of 50k instances sourced from 128 GitHub repositories, an order of magnitude larger than all previous works. We train SWE-agent-LM-32B, achieving 40.2% Pass@1 resolve rate on the SWE-bench Verified benchmark, state of the art among open source models. We open source SWE-smith (collection procedure, task instances, trajectories, models) to lower the barrier of entry for research in LM systems for automated software engineering. All assets available at https://swesmith.com.",
+  "authors": [
+    "John Yang",
+    "Kilian Lieret",
+    "Carlos E. Jimenez",
+    "Alexander Wettig",
+    "Kabir Khandpur",
+    "Yanzhe Zhang",
+    "Binyuan Hui",
+    "Ofir Press",
+    "Ludwig Schmidt",
+    "Diyi Yang"
+  ],
+  "candidate_id": "arxiv:2504.21798",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-30",
+    "latest_revision_date": "2025-05-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "SWE-smith: Scaling Data for Software Engineering Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.21798"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.21798",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "All assets available at https://swesmith.com",
+    "pdf_url": "https://arxiv.org/pdf/2504.21798v2",
+    "primary_category": "cs.SE"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "J.Yang,K.Lieret, C.E.Jimenez, A.Wettig, K.Khandpur, Y.Zhang, B.Hui,O. Press, L.Schmidt, and D. Yang. Swe-smith: Scaling data for software engineering agents, 2025. URLhttps: //arxiv.org/abs/2504.21798. 19",
+      "page": 19,
+      "reference_number": 2023,
+      "report_blob_sha": "7b826f2c6de06230d8e3860b97d16add28f1ae24",
+      "report_title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models",
+      "seed_report_path": "2025/deepseek/2025-12_deepseek-v3.2.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "execution environment"
+    ],
+    "primary_category": "AG-3",
+    "requires_human_confirmation": true
+  },
+  "title": "SWE-smith: Scaling Data for Software Engineering Agents",
+  "versions": [
+    {
+      "date": "2025-05-21",
+      "identifier": "2504.21798v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.21798v2"
+    }
+  ]
+}

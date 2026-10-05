@@ -1,0 +1,77 @@
+{
+  "abstract": "Large Reasoning Models like DeepSeek-R1 mark a fundamental shift in how LLMs approach complex problems. Instead of directly producing an answer for a given input, DeepSeek-R1 creates detailed multi-step reasoning chains, seemingly \"thinking\" about a problem before providing an answer. This reasoning process is publicly available to the user, creating endless opportunities for studying the reasoning behaviour of the model and opening up the field of Thoughtology. Starting from a taxonomy of DeepSeek-R1's basic building blocks of reasoning, our analyses on DeepSeek-R1 investigate the impact and controllability of thought length, management of long or confusing contexts, cultural and safety concerns, and the status of DeepSeek-R1 vis-à-vis cognitive phenomena, such as human-like language processing and world modelling. Our findings paint a nuanced picture. Notably, we show DeepSeek-R1 has a 'sweet spot' of reasoning, where extra inference time can impair model performance. Furthermore, we find a tendency for DeepSeek-R1 to persistently ruminate on previously explored problem formulations, obstructing further exploration. We also note strong safety vulnerabilities of DeepSeek-R1 compared to its non-reasoning counterpart, which can also compromise safety-aligned LLMs.",
+  "authors": [
+    "Sara Vera Marjanović",
+    "Arkil Patel",
+    "Vaibhav Adlakha",
+    "Milad Aghajohari",
+    "Parishad BehnamGhader",
+    "Mehar Bhatia",
+    "Aditi Khandelwal",
+    "Austin Kraft",
+    "Benno Krojer",
+    "Xing Han Lù",
+    "Nicholas Meade",
+    "Dongchan Shin",
+    "Amirhossein Kazemnejad",
+    "Gaurav Kamath",
+    "Marius Mosbach",
+    "Karolina Stańczak",
+    "Siva Reddy"
+  ],
+  "candidate_id": "arxiv:2504.07128",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-02",
+    "latest_revision_date": "2026-01-15"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "DeepSeek-R1 Thoughtology: Let's think about LLM Reasoning",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.07128"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.07128",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "135 pages, Published to TMLR",
+    "pdf_url": "https://arxiv.org/pdf/2504.07128v3",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "S.V.Marjanović,A.Patel,V.Adlakha,M.Aghajohari,P.BehnamGhader,M.Bhatia,A.Khandelwal,A.Kraft, B.Krojer,X.H.Lù,N.Meade,D.Shin,A.Kazemnejad,G.Kamath,M.Mosbach,K.Stańczak,andS.Reddy. Deepseek-r1thoughtology:Let’sthinkaboutllmreasoning,2025.URLhttps://arxiv.org/abs/2504.07128.",
+      "page": 75,
+      "reference_number": 140,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "DeepSeek-R1 Thoughtology: Let's think about LLM Reasoning",
+  "versions": [
+    {
+      "date": "2026-01-15",
+      "identifier": "2504.07128v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.07128v3"
+    }
+  ]
+}

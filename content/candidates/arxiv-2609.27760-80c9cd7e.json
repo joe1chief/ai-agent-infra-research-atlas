@@ -1,0 +1,56 @@
+{
+  "abstract": "Federated learning enables distributed training without requiring clients to share their raw data. However, its reliance on the integrity of the client-submitted updates exposes the global model to stealthy backdoor poisoning. Existing defenses often rely on individual evidence sources, but stealth-constrained attacks can adapt to these signals. Such attacks can suppress anomaly signals they are optimized to evade, yet their poisoned updates still leave residual structural traces. We propose FedMAST, a Federated Multi-Axis Structural Tracing defense for backdoor detection in federated learning. FedMAST scores client updates using complementary structural, spectral, and historical evidence and then applies tiered filtering and round-level containment to limit adversarial influence. To capture traces that isolated signals may miss, FedMAST uses squeeze-pair coherence scoring to expose coupled feature distortions and signed spectral-drift tracking to reveal persistent directional changes over time. Across six backdoor attacks, FedMAST achieves lower attack success rate (ASR) than baseline defenses in all nine evaluated comparisons, averaging 1.51% ASR and 94.84% main-task accuracy (MTA) across the complete 200-round runs. Over the full 200-round method-aware CovertLayers run, FedMAST achieves 1.53% ASR and 92.26% MTA, compared with ASRs of 100.00%, 99.67%, 99.53%, and 32.84% for FedAvg, MultiKrum, AlignIns, and FLAME, respectively.",
+  "authors": [
+    "Srinivasan Subramanian",
+    "Md. Abdullah Al Hafiz Khan",
+    "Kazi Aminul Islam"
+  ],
+  "candidate_id": "arxiv:2609.27760",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-04",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Backdoors Leave Structural Traces: FedMAST for Backdoor Detection and Containment in Federated Learning",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.27760"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.27760",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "10 pages, 5 figures. Accepted at IEEE ICTAI 2026",
+    "pdf_url": "https://arxiv.org/pdf/2609.27760v2",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Backdoors Leave Structural Traces: FedMAST for Backdoor Detection and Containment in Federated Learning",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.27760v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.27760v2"
+    }
+  ]
+}

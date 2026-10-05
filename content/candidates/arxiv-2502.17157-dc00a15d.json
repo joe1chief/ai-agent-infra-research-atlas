@@ -1,0 +1,69 @@
+{
+  "abstract": "This paper's primary objective is to develop a robust generalist perception model capable of addressing multiple tasks under constraints of computational resources and limited training data. We leverage text-to-image diffusion models pre-trained on billions of images and successfully introduce our DICEPTION, a visual generalist model. Exhaustive evaluations demonstrate that DICEPTION effectively tackles diverse perception tasks, even achieving performance comparable to SOTA single-task specialist models. Specifically, we achieve results on par with SAM-vit-h using only 0.06% of their data (e.g., 600K vs.\\ 1B pixel-level annotated images). We designed comprehensive experiments on architectures and input paradigms, demonstrating that the key to successfully re-purposing a single diffusion model for multiple perception tasks lies in maximizing the preservation of the pre-trained model's prior knowledge. Consequently, DICEPTION can be trained with substantially lower computational costs than conventional models requiring training from scratch. Furthermore, adapting DICEPTION to novel tasks is highly efficient, necessitating fine-tuning on as few as 50 images and approximately 1% of its parameters. Finally, we demonstrate that a subtle application of classifier-free guidance can improve the model's performance on depth and normal estimation. We also show that pixel-aligned training, as is characteristic of perception tasks, significantly enhances the model's ability to preserve fine details. DICEPTION offers valuable insights and presents a promising direction for the development of advanced diffusion-based visual generalist models. Code and Model: https://github.com/aim-uofa/Diception",
+  "authors": [
+    "Canyu Zhao",
+    "Yanlong Sun",
+    "Mingyu Liu",
+    "Huanyi Zheng",
+    "Muzhi Zhu",
+    "Zhiyue Zhao",
+    "Hao Chen",
+    "Tong He",
+    "Chunhua Shen"
+  ],
+  "candidate_id": "arxiv:2502.17157",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-24",
+    "latest_revision_date": "2025-10-09"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "DICEPTION: A Generalist Diffusion Model for Visual Perceptual Tasks",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.17157"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.17157",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Homepage: https://aim-uofa.github.io/Diception, Code and Model: https://github.com/aim-uofa/Diception",
+    "pdf_url": "https://arxiv.org/pdf/2502.17157v3",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Canyu Zhao, Mingyu Liu, Huanyi Zheng, Muzhi Zhu, Zhiyue Zhao, Hao Chen, Tong He, and Chun- hua Shen. Diception: A generalist diffusion model for visual perceptual tasks. arXiv preprint arXiv:2502.17157, 2025.",
+      "page": 46,
+      "reference_number": 98,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "DICEPTION: A Generalist Diffusion Model for Visual Perceptual Tasks",
+  "versions": [
+    {
+      "date": "2025-10-09",
+      "identifier": "2502.17157v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.17157v3"
+    }
+  ]
+}

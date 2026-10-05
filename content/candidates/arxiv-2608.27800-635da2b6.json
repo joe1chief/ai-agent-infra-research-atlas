@@ -1,0 +1,57 @@
+{
+  "abstract": "Exfiltrating an LLM agent's runtime context -- such as the user prompt, execution trajectory, and tool list -- poses severe security and privacy risks to users. Such attacks can be carried out via malicious tools and typically require three conditions: (1) the agent selects the malicious tool for task execution, (2) the agent passes its runtime context as input arguments to the tool, and (3) the tool's implementation transmits these inputs to an attacker-controlled endpoint. Existing work primarily focuses on conditions (1) and (3), leaving condition (2) largely unexplored, despite its critical role in enabling successful context exfiltration. In this work, we bridge this gap by developing ContextLeak, a malicious tool attack that induces the agent to both select the tool and disclose its context as input arguments. We realize this attack by carefully crafting the tool's name and description using reinforcement learning. Specifically, ContextLeak employs an LLM, referred to as the attack LLM, to automatically generate the malicious tool's name and description. To improve attack effectiveness, we fine-tune the attack LLM via reinforcement learning on a set of shadow users with diverse, simulated agent contexts. Our key technical contribution is the design of novel reward functions tailored to the context exfiltration objective, enabling effective reinforcement-learning-based fine-tuning of the attack LLM. Extensive evaluation demonstrates that our attack remains highly effective even when the shadow users' contexts differ substantially from those of the victim users. Moreover, ContextLeak significantly outperforms existing malicious tool attacks when adapted to this setting.",
+  "authors": [
+    "Yuqi Jia",
+    "Ruiqi Wang",
+    "Patrick Li",
+    "Yuepeng Hu",
+    "Peinian Li",
+    "Neil Gong"
+  ],
+  "candidate_id": "arxiv:2608.27800",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-08-28",
+    "latest_revision_date": "2026-08-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "ContextLeak: Exfiltrating LLM Agent Context via Malicious Tools",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2608.27800"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2608.27800",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2608.27800v1",
+    "primary_category": "cs.CR"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "ContextLeak: Exfiltrating LLM Agent Context via Malicious Tools",
+  "versions": [
+    {
+      "date": "2026-08-28",
+      "identifier": "2608.27800v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2608.27800v1"
+    }
+  ]
+}

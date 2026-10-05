@@ -1,0 +1,55 @@
+{
+  "abstract": "Large Language Models (LLMs) are now routinely trained using synthetic data, since high-quality human data has been exhausted by the ever increasing needs of larger and larger models. However, recursive training on synthetic data frequently induces model collapse, a degenerative feedback loop where models progressively forget the true underlying data distribution. Training on a mixture of synthetic and fresh human data is a logical countermeasure and can prevent model collapse. However, it is an open question as to what is the exact minimum required ratio of human-to-synthetic data to maintain training stability. In this paper, we establish rigorous theoretical guarantees on the minimum rate of human data required to prevent model collapse. Although previous work established a formal lower bound for this ratio, such bound can be vacuous for very high dimensions, as the analysis relies on the usual Euclidean metric in R^n and is not adapted to the space of categorical probability distributions. Instead, in this paper we explicitly leverage the information-geometric structure of the probability simplex by analyzing the dynamics of the process under the Fisher-Rao metric. We derive quantitative contraction and invariance bounds that are stable and do not become trivial as the dimensions increase. Thus, we show that the effective required data ratio to prevent model collapse is different than previously implied.",
+  "authors": [
+    "Matteo Marchi",
+    "João Pedro Silvestre",
+    "Bahman Gharesifard",
+    "Paulo Tabuada"
+  ],
+  "candidate_id": "arxiv:2609.18878",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-16",
+    "latest_revision_date": "2026-09-16"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Preventing Model Collapse: A Fisher-Rao Perspective on the Dynamics of Training with Synthetic Data",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.18878"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.18878",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "8 pages. Extended version of the paper accepted for presentation at the 2026 65th IEEE Conference on Decision and Control (CDC). This version contains the full proofs of the auxiliary lemmas, omitted from the conference version for space",
+    "pdf_url": "https://arxiv.org/pdf/2609.18878v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Preventing Model Collapse: A Fisher-Rao Perspective on the Dynamics of Training with Synthetic Data",
+  "versions": [
+    {
+      "date": "2026-09-16",
+      "identifier": "2609.18878v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.18878v1"
+    }
+  ]
+}

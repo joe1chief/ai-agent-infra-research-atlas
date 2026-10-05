@@ -1,0 +1,68 @@
+{
+  "abstract": "Multimodal Reward Models (MM-RMs) are crucial for aligning Large Language Models (LLMs) with human preferences, particularly as LLMs increasingly interact with multimodal data. However, we find that MM-RMs trained on existing datasets often struggle to generalize to out-of-distribution data due to their reliance on unimodal spurious correlations, primarily text-only shortcuts within the training distribution, which prevents them from leveraging true multimodal reward functions. To address this, we introduce a Shortcut-aware MM-RM learning algorithm that mitigates this issue by dynamically reweighting training samples, shifting the distribution toward better multimodal understanding, and reducing dependence on unimodal spurious correlations. Our experiments demonstrate significant improvements in generalization, downstream task performance, and scalability, establishing a more robust framework for multimodal reward modeling.",
+  "authors": [
+    "Zichao Li",
+    "Xueru Wen",
+    "Jie Lou",
+    "Yuqiu Ji",
+    "Yaojie Lu",
+    "Xianpei Han",
+    "Debing Zhang",
+    "Le Sun"
+  ],
+  "candidate_id": "arxiv:2503.03122",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-05",
+    "latest_revision_date": "2025-05-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "The Devil Is in the Details: Tackling Unimodal Spurious Correlations for Generalizable Multimodal Reward Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.03122"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.03122",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "ICML 2025",
+    "pdf_url": "https://arxiv.org/pdf/2503.03122v4",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "ZichaoLi,XueruWen,JieLou,YuqiuJi,YaojieLu,XianpeiHan,DebingZhang,andLeSun.Thedevilisin thedetails:Tacklingunimodalspuriouscorrelationsforgeneralizablemultimodalrewardmodels. arXiv preprint arXiv:2503.03122,2025.",
+      "page": 37,
+      "reference_number": 75,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "The Devil Is in the Details: Tackling Unimodal Spurious Correlations for Generalizable Multimodal Reward Models",
+  "versions": [
+    {
+      "date": "2025-05-21",
+      "identifier": "2503.03122v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.03122v4"
+    }
+  ]
+}

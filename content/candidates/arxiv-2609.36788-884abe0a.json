@@ -1,0 +1,57 @@
+{
+  "abstract": "Incorporating rich task-relevant context, such as domain knowledge and external observations, is a key capability yet remains challenging for Bayesian optimisation (BO). Recently, practitioners have started to use large language models (LLMs) to generate and execute BO programs through coding harnesses. In such emerging practices, the posterior belief is shaped not only by Bayesian inference but also by LLM-generated model and data artefacts, offering a flexible route for task context to enter BO as executable code. To study whether and how LLMs can be harnessed to compile diverse contextual signals for BO, we formulate LLM-compiled BO as generalised-context decision making. We propose HarBO, a BO-specialised harness that compiles generalised context into the core artefacts of standard BO through a validated multi-stage workflow. Our theory analyses the regret under imperfect compilation and the effect of adding new context. Across synthetic functions and real-world benchmarks, we find that LLM harnesses can effectively compile context into standard BO, achieving competitive performance with specialised LLM-embedding-based and direct LLM-in-the-loop BO methods. General coding harnesses can be effective in familiar domains such as hyperparameter optimisation, but fall short in unfamiliar, context-rich domains. Together, these results establish LLM harnesses as a promising, but not automatically reliable, route for making rich task context usable in BO.",
+  "authors": [
+    "Zhongwei Yu",
+    "Sourabh Roy",
+    "Bin Cao",
+    "Xue Yan",
+    "Anjie Liu",
+    "Jun Wang"
+  ],
+  "candidate_id": "arxiv:2609.36788",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-29",
+    "latest_revision_date": "2026-09-29"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Harnessing Large Language Models to Compile Task-Relevant Context into Bayesian Optimisation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.36788"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.36788",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "42 pages, 6 figures",
+    "pdf_url": "https://arxiv.org/pdf/2609.36788v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Harnessing Large Language Models to Compile Task-Relevant Context into Bayesian Optimisation",
+  "versions": [
+    {
+      "date": "2026-09-29",
+      "identifier": "2609.36788v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.36788v1"
+    }
+  ]
+}

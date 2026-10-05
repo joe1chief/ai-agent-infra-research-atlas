@@ -1,0 +1,73 @@
+{
+  "abstract": "Reinforcement learning (RL) is pivotal for enabling large language models (LLMs) to generate long chains of thought (CoT) for complex tasks like math and reasoning. However, Proximal Policy Optimization (PPO), effective in many RL scenarios, fails in long CoT tasks. This paper identifies that value initialization bias and reward signal decay are the root causes of PPO's failure. We propose Value-Calibrated PPO (VC-PPO) to address these issues. In VC-PPO, the value model is pretrained to tackle initialization bias, and the Generalized Advantage Estimation (GAE) computation is decoupled between the actor and critic to mitigate reward signal decay. Experiments on the American Invitational Mathematics Examination (AIME) show that VC-PPO significantly boosts PPO performance. Ablation studies show that techniques in VC-PPO are essential in enhancing PPO for long CoT tasks.",
+  "authors": [
+    "Yufeng Yuan",
+    "Yu Yue",
+    "Ruofei Zhu",
+    "Tiantian Fan",
+    "Lin Yan"
+  ],
+  "candidate_id": "arxiv:2503.01491",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-03",
+    "latest_revision_date": "2025-03-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "What's Behind PPO's Collapse in Long-CoT? Value Optimization Holds the Secret",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.01491"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.01491",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2503.01491v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "YufengYuan,YuYue,RuofeiZhu,TiantianFan,andLinYan.What’sbehindppo’scollapseinlong-cot?value optimizationholdsthesecret. arXiv preprint arXiv:2503.01491,2025.",
+      "page": 13,
+      "reference_number": 10,
+      "report_blob_sha": "122bce91f27ead8d5c93fa6666ffee16e223b378",
+      "report_title": "2025-04_seed1.5-thinking",
+      "seed_report_path": "2025/bytedance/2025-04_seed1.5-thinking.pdf"
+    },
+    {
+      "context": "YufengYuan,YuYue,RuofeiZhu,TiantianFan,andLinYan.What’sbehindppo’scollapseinlong-cot?value optimizationholdsthesecret,2025.URL https://arxiv.org/abs/2503.01491.",
+      "page": 42,
+      "reference_number": 167,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "What's Behind PPO's Collapse in Long-CoT? Value Optimization Holds the Secret",
+  "versions": [
+    {
+      "date": "2025-03-03",
+      "identifier": "2503.01491v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.01491v1"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "abstract": "In our prior works, we introduced a scalable streaming speech synthesis model, CosyVoice 2, which integrates a large language model (LLM) and a chunk-aware flow matching (FM) model, and achieves low-latency bi-streaming speech synthesis and human-parity quality. Despite these advancements, CosyVoice 2 exhibits limitations in language coverage, domain diversity, data volume, text formats, and post-training techniques. In this paper, we present CosyVoice 3, an improved model designed for zero-shot multilingual speech synthesis in the wild, surpassing its predecessor in content consistency, speaker similarity, and prosody naturalness. Key features of CosyVoice 3 include: 1) A novel speech tokenizer to improve prosody naturalness, developed via supervised multi-task training, including automatic speech recognition, speech emotion recognition, language identification, audio event detection, and speaker analysis. 2) A new differentiable reward model for post-training applicable not only to CosyVoice 3 but also to other LLM-based speech synthesis models. 3) Dataset Size Scaling: Training data is expanded from ten thousand hours to one million hours, encompassing 9 languages and 18 Chinese dialects across various domains and text formats. 4) Model Size Scaling: Model parameters are increased from 0.5 billion to 1.5 billion, resulting in enhanced performance on our multilingual benchmark due to the larger model capacity. These advancements contribute significantly to the progress of speech synthesis in the wild. We encourage readers to listen to the demo at https://funaudiollm.github.io/cosyvoice3.",
+  "authors": [
+    "Zhihao Du",
+    "Changfeng Gao",
+    "Yuxuan Wang",
+    "Fan Yu",
+    "Tianyu Zhao",
+    "Hao Wang",
+    "Xiang Lv",
+    "Hui Wang",
+    "Chongjia Ni",
+    "Xian Shi",
+    "Keyu An",
+    "Guanrou Yang",
+    "Yabin Li",
+    "Yanni Chen",
+    "Zhifu Gao",
+    "Qian Chen",
+    "Yue Gu",
+    "Mengzhe Chen",
+    "Yafeng Chen",
+    "Shiliang Zhang",
+    "Wen Wang",
+    "Jieping Ye"
+  ],
+  "candidate_id": "arxiv:2505.17589",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-23",
+    "latest_revision_date": "2025-05-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "CosyVoice 3: Towards In-the-wild Speech Generation via Scaling-up and Post-training",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.17589"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.17589",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Preprint, work in progress",
+    "pdf_url": "https://arxiv.org/pdf/2505.17589v2",
+    "primary_category": "cs.SD"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Zhihao Du, Changfeng Gao, Yuxuan Wang, Fan Yu, Tianyu Zhao, Hao Wang, Xiang Lv, Hui Wang, Chongjia Ni, Xian Shi, Keyu An, Guanrou Yang, Yabin Li, Yanni Chen, Zhifu Gao, Qian Chen, Yue Gu,MengzheChen,YafengChen,ShiliangZhang,WenWang,andJiepingYe. Cosyvoice3: Towards in-the-wild speech generation via scaling-up and post-training.CoRR, abs/2505.17589, 2025.",
+      "page": 22,
+      "reference_number": 21,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "post-training"
+    ],
+    "primary_category": "AI-3",
+    "requires_human_confirmation": true
+  },
+  "title": "CosyVoice 3: Towards In-the-wild Speech Generation via Scaling-up and Post-training",
+  "versions": [
+    {
+      "date": "2025-05-27",
+      "identifier": "2505.17589v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.17589v2"
+    }
+  ]
+}

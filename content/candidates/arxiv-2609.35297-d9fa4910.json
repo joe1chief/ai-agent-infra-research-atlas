@@ -1,0 +1,61 @@
+{
+  "abstract": "Pretraining a language model takes enormous compute, and the right optimizer can save a good part of it. Muon's spectral step gives a stronger direction than a sign step, but it is expensive. Every step runs Newton-Schulz iterations on the full matrix and, in distributed training, an extra all-reduce. Sign steps, as in Lion and Signum, are cheap and stay local to each device. We propose LionMuon, which takes one Muon step every $P$ iterations and Lion steps in between, with a single dual-EMA momentum buffer shared by both. Muon's compute and communication are paid once per $P$ steps, and the optimizer state is half of AdamW's. A single-EMA variant, SignMuon, already improves on Muon. We prove complexity bounds under heavy-tailed noise in which the period sets an interpolation between Muon's and Lion's smoothness and noise constants, and which say when LionMuon is faster than both. On 124M and 355M models trained on FineWeb, LionMuon with $P=2$ and $P=5$ reaches a lower loss than Muon, AdamW, Lion and Signum at the same number of tokens. Under 4-GPU data-parallel training it reaches Muon's final loss with a third less wall-clock on PCIe, and it beats the communication-efficient Muon variants Dion and MuonBP on loss at no more exposed communication, while keeping the exact gradient. Code: https://github.com/brain-lab-research/lion-muon",
+  "authors": [
+    "Arman Bolatov",
+    "Artem Riabinin",
+    "Nikita Kornilov",
+    "Andrey Veprikov",
+    "Samuel Horváth",
+    "Martin Takáč",
+    "Aleksandr Beznosikov"
+  ],
+  "candidate_id": "arxiv:2609.35297",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35297"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.35297",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "37 pages, 4 figures, 11 tables",
+    "pdf_url": "https://arxiv.org/pdf/2609.35297v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training",
+      "parallel training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.35297v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35297v1"
+    }
+  ]
+}

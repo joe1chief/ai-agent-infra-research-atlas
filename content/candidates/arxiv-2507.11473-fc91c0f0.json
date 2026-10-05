@@ -1,0 +1,101 @@
+{
+  "abstract": "AI systems that \"think\" in human language offer a unique opportunity for AI safety: we can monitor their chains of thought (CoT) for the intent to misbehave. Like all other known AI oversight methods, CoT monitoring is imperfect and allows some misbehavior to go unnoticed. Nevertheless, it shows promise and we recommend further research into CoT monitorability and investment in CoT monitoring alongside existing safety methods. Because CoT monitorability may be fragile, we recommend that frontier model developers consider the impact of development decisions on CoT monitorability.",
+  "authors": [
+    "Tomek Korbak",
+    "Mikita Balesni",
+    "Elizabeth Barnes",
+    "Yoshua Bengio",
+    "Joe Benton",
+    "Joseph Bloom",
+    "Mark Chen",
+    "Alan Cooney",
+    "Allan Dafoe",
+    "Anca Dragan",
+    "Scott Emmons",
+    "Owain Evans",
+    "David Farhi",
+    "Ryan Greenblatt",
+    "Dan Hendrycks",
+    "Marius Hobbhahn",
+    "Evan Hubinger",
+    "Geoffrey Irving",
+    "Erik Jenner",
+    "Daniel Kokotajlo",
+    "Victoria Krakovna",
+    "Shane Legg",
+    "David Lindner",
+    "David Luan",
+    "Aleksander Mądry",
+    "Julian Michael",
+    "Neel Nanda",
+    "Dave Orr",
+    "Jakub Pachocki",
+    "Ethan Perez",
+    "Mary Phuong",
+    "Fabien Roger",
+    "Joshua Saxe",
+    "Buck Shlegeris",
+    "Martín Soto",
+    "Eric Steinberger",
+    "Jasmine Wang",
+    "Wojciech Zaremba",
+    "Bowen Baker",
+    "Rohin Shah",
+    "Vlad Mikulik"
+  ],
+  "candidate_id": "arxiv:2507.11473",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-07-15",
+    "latest_revision_date": "2025-12-07"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.11473"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2507.11473",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2507.11473v2",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "T.Korbak,M.Balesni,E.Barnes,Y.Bengio,J.Benton,J.Bloom,M.Chen,A.Cooney, A.Dafoe, A.Dragan, S.Emmons, O.Evans, D.Farhi, R.Greenblatt, D.Hendrycks, M.Hobbhahn,E.Hubinger,G.Irving,E.Jenner,D.Kokotajlo,V.Krakovna,S.Legg, D.Lindner,D.Luan,A.Mądry,J.Michael,N.Nanda,D.Orr,J.Pachocki,E.Perez, M.Phuong,F.Roger,J.Saxe,B.Shlegeris,M.Soto,E.Steinberger,J.Wang,W.Zaremba, B.Baker,R.Shah,andV.Mikulik,“Chainofthoughtmonitorability:Anewandfragile opportunityforaisafety.”arXivpreprintarXiv:2507.11473,2025. Submittedon15July 2025.",
+      "page": 59,
+      "reference_number": 7,
+      "report_blob_sha": "b00b61d8ff19e2829c9fd38820087efecadcd6eb",
+      "report_title": "2025-10_claude-haiku-4.5",
+      "seed_report_path": "2025/anthropic/2025-10_claude-haiku-4.5.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety",
+  "versions": [
+    {
+      "date": "2025-12-07",
+      "identifier": "2507.11473v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.11473v2"
+    }
+  ]
+}

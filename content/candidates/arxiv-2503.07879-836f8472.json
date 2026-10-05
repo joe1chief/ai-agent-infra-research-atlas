@@ -1,0 +1,67 @@
+{
+  "abstract": "Data filtering has become a powerful tool for improving model performance while reducing computational cost. However, as large language model compute budgets continue to grow, the limited data volume provided by heavily filtered and deduplicated datasets will become a practical constraint. In efforts to better understand how to proceed, we study model performance at various compute budgets and across multiple pre-training datasets created through data filtering and deduplication. We find that, given appropriate modifications to the training recipe, repeating existing aggressively filtered datasets for up to ten epochs can outperform training on the ten times larger superset for a single epoch across multiple compute budget orders of magnitude. While this finding relies on repeating the dataset for many epochs, we also investigate repeats within these datasets at the document level. We find that not all documents within a dataset are equal, and we can create better datasets relative to a token budget by explicitly manipulating the counts of individual documents. We conclude by arguing that even as large language models scale, data filtering remains an important direction of research.",
+  "authors": [
+    "Alex Fang",
+    "Hadi Pouransari",
+    "Matt Jordan",
+    "Alexander Toshev",
+    "Vaishaal Shankar",
+    "Ludwig Schmidt",
+    "Tom Gunter"
+  ],
+  "candidate_id": "arxiv:2503.07879",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-10",
+    "latest_revision_date": "2025-11-06"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Datasets, Documents, and Repetitions: The Practicalities of Unequal Data Quality",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.07879"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.07879",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2503.07879v2",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "A.Fang,H.Pouransari,M.Jordan,A.Toshev,V.Shankar,L.Schmidt,andT.Gunter.Datasets,documents,and repetitions:Thepracticalitiesofunequaldataquality,2025a.URLhttps://arxiv.org/abs/2503.07879.",
+      "page": 69,
+      "reference_number": 57,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Datasets, Documents, and Repetitions: The Practicalities of Unequal Data Quality",
+  "versions": [
+    {
+      "date": "2025-11-06",
+      "identifier": "2503.07879v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.07879v2"
+    }
+  ]
+}

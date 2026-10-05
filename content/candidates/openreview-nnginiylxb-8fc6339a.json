@@ -1,0 +1,85 @@
+{
+  "abstract": "With the rapid evolution of Large Language Models (LLMs), multi-round workflows, such as autonomous agents and iterative retrieval, have become increasingly prevalent. However, this raises hurdles for serving LLMs under prefill-decode (PD) disaggregation, a widely adopted paradigm that separates the compute-bound prefill phase and memory-bound decode phase onto individual resources. Specifically, existing systems overlook the interleaved prefill-decode workload pattern in multi-round inference, leading to sub-optimal handling of the incremental prefill workloads and model deployment for the two phases. In this work, we present AMPD, a brand new disaggregated serving framework for multi-round LLM inference. The core of AMPD is to coordinate the prefill workloads based on real-time workloads by adaptively determining where to carry out these workloads and how they are scheduled, in order to maximize service level objective (SLO) attainment. In addition, we tailor a planning algorithm for our scenario, facilitating the deduction of optimal resource allocation and parallel strategies for the two phases. Empirical results demonstrate that AMPD substantially improves SLO attainment compared to state-of-the-art baselines.",
+  "authors": [
+    "Wenhao He",
+    "Youhe Jiang",
+    "Penghao Zhao",
+    "Quanqing Xu",
+    "Eiko Yoneki",
+    "Bin CUI",
+    "Fangcheng Fu",
+    "{'fullname': 'Wenhao He', 'username': ''}",
+    "{'fullname': 'Youhe Jiang', 'username': '~Youhe_Jiang3'}",
+    "{'fullname': 'Penghao Zhao', 'username': ''}",
+    "{'fullname': 'Quanqing Xu', 'username': ''}",
+    "{'fullname': 'Eiko Yoneki', 'username': ''}",
+    "{'fullname': 'Bin Cui', 'username': ''}",
+    "{'fullname': 'Fangcheng Fu', 'username': ''}"
+  ],
+  "candidate_id": "openreview:NNGIniylxB",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-04-30",
+    "latest_revision_date": "2026-09-22"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Efficient Multi-round LLM Inference over Disaggregated Serving",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=NNGIniylxB"
+    },
+    {
+      "title": "Efficient Multi-round LLM Inference over Disaggregated Serving",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=CySSziRJgN"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "NNGIniylxB"
+  },
+  "raw": {
+    "invitations": [
+      "ICML.cc/2026/Conference/-/Submission",
+      "ICML.cc/2026/Conference/-/Post_Submission",
+      "ICML.cc/2026/Conference/Submission242/-/Full_Submission",
+      "ICML.cc/2026/Conference/-/Edit",
+      "ICML.cc/2026/Conference/Submission242/-/Camera_Ready_Revision"
+    ],
+    "venue": "ICML 2026 regular",
+    "venue_id": "ICML.cc/2026/Conference"
+  },
+  "review_reasons": [
+    "conflicting_first_public_dates:2026-04-30,2026-12-31",
+    "conflicting_openreview_identifiers:NNGIniylxB,CySSziRJgN"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Efficient Multi-round LLM Inference over Disaggregated Serving",
+  "versions": [
+    {
+      "date": "2026-09-22",
+      "identifier": "NNGIniylxB",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=NNGIniylxB"
+    },
+    {
+      "date": "2026-07-19",
+      "identifier": "CySSziRJgN",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=CySSziRJgN"
+    }
+  ]
+}

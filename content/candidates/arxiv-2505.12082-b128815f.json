@@ -1,0 +1,94 @@
+{
+  "abstract": "Model merging has emerged as a promising technique for enhancing large language models, though its application in large-scale pre-training remains relatively unexplored. In this paper, we present a comprehensive investigation of model merging techniques during the pre-training process. Through extensive experiments with both dense and Mixture-of-Experts (MoE) architectures ranging from millions to over 100 billion parameters, we demonstrate that merging checkpoints trained with constant learning rates not only achieves significant performance improvements but also enables accurate prediction of annealing behavior. These improvements lead to both more efficient model development and significantly lower training costs. Our detailed ablation studies on merging strategies and hyperparameters provide new insights into the underlying mechanisms while uncovering novel applications. Through comprehensive experimental analysis, we offer the open-source community practical pre-training guidelines for effective model merging.",
+  "authors": [
+    "Yunshui Li",
+    "Yiyuan Ma",
+    "Shen Yan",
+    "Chaoyi Zhang",
+    "Jing Liu",
+    "Jianqiao Lu",
+    "Ziwen Xu",
+    "Mengzhao Chen",
+    "Minrui Wang",
+    "Shiyi Zhan",
+    "Jin Ma",
+    "Xunhao Lai",
+    "Deyi Liu",
+    "Yao Luo",
+    "Xingyan Bin",
+    "Hongbin Ren",
+    "Mingji Han",
+    "Wenhao Hao",
+    "Bairen Yi",
+    "LingJun Liu",
+    "Bole Ma",
+    "Xiaoying Jia",
+    "Xun Zhou",
+    "Siyuan Qiao",
+    "Liang Xiang",
+    "Yonghui Wu"
+  ],
+  "candidate_id": "arxiv:2505.12082",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-17",
+    "latest_revision_date": "2025-05-22"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Model Merging in Pre-training of Large Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.12082"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.12082",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2505.12082v3",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Y.Li, Y.Ma, S.Yan, C.Zhang, J.Liu, J.Lu, Z.Xu, M.Chen, M.Wang, S.Zhan, J.Ma, X.Lai, D.Liu, Y.Luo,X.Bin,H.Ren,M.Han,W.Hao,B.Yi,L.Liu,B.Ma,X.Jia,X.Zhou,S.Qiao,L.Xiang,and Y.Wu. Modelmerginginpre-trainingoflargelanguagemodels.ArXiv,abs/2505.12082,2025. URL https: //api.semanticscholar.org/CorpusID:278739754.",
+      "page": 74,
+      "reference_number": 120,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    },
+    {
+      "context": "Yunshui Li, Yiyuan Ma, Shen Yan, Chaoyi Zhang, Jing Liu, Jianqiao Lu, Ziwen Xu, Mengzhao Chen, Minrui Wang,Shiyi Zhan,Jin Ma, XunhaoLai, DeyiLiu, Yao Luo,Xingyan Bin,Hongbin Ren, Mingji Han,WenhaoHao,BairenYi,LingJunLiu,BoleMa,XiaoyingJia,XunZhou,SiyuanQiao,LiangXiang, and Yonghui Wu. Model merging in pre-training of large language models. CoRR, abs/2505.12082,",
+      "page": 64,
+      "reference_number": 2082,
+      "report_blob_sha": "638a3d4dceac9312d10bbe304219080740f77fd5",
+      "report_title": "2025-06_ernie-4.5",
+      "seed_report_path": "2025/baidu/2025-06_ernie-4.5.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Model Merging in Pre-training of Large Language Models",
+  "versions": [
+    {
+      "date": "2025-05-22",
+      "identifier": "2505.12082v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.12082v3"
+    }
+  ]
+}

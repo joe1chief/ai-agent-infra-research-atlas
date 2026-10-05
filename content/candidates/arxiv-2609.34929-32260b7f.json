@@ -1,0 +1,54 @@
+{
+  "abstract": "Language models are increasingly used to sample from a specified distribution, for instance, to simulate survey respondents or generate synthetic data. Instruction-tuned models can state such a distribution correctly and still fail to sample from it. Prompting and changes to decoding reduce this mismatch only partly, which motivates training with policy optimization. Group relative policy optimization (GRPO) is a natural fit for this problem because it already samples a group of rollouts per prompt, and the group's empirical distribution can be compared with the target. However, scoring the group as a whole gives every rollout the same reward. Group-relative centering then sets all advantages to zero, and the model receives no learning signal. To give each rollout its own signal, we introduce the witness advantage, a per-rollout advantage derived from maximum mean discrepancy (MMD). It trains a model to match a target distribution over a finite set of outcomes. The MMD between the model's distribution and the target has a witness function that measures how over- or under-produced each outcome is. Each rollout's advantage estimates the negative witness at its outcome, so a rollout is rewarded for an outcome the group under-produces and penalized for one it over-produces. The witness advantage is computed in closed form from the group's outcome counts, and we use it as the reward in GRPO. On unseen target distributions, training with the witness advantage substantially reduces the total variation distance to the target while largely preserving the model's general capabilities.",
+  "authors": [
+    "Kasra Arabi",
+    "Virginia Smith",
+    "Chhavi Yadav"
+  ],
+  "candidate_id": "arxiv:2609.34929",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Sample What You Say: Aligning Language Models to Sample the Distributions They State",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34929"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34929",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.34929v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Sample What You Say: Aligning Language Models to Sample the Distributions They State",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.34929v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34929v1"
+    }
+  ]
+}

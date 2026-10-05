@@ -1,0 +1,70 @@
+{
+  "abstract": "We introduce AegisLLM, a cooperative multi-agent defense against adversarial attacks and information leakage. In AegisLLM, a structured workflow of autonomous agents - orchestrator, deflector, responder, and evaluator - collaborate to ensure safe and compliant LLM outputs, while self-improving over time through prompt optimization. We show that scaling agentic reasoning system at test-time - both by incorporating additional agent roles and by leveraging automated prompt optimization (such as DSPy)- substantially enhances robustness without compromising model utility. This test-time defense enables real-time adaptability to evolving attacks, without requiring model retraining. Comprehensive evaluations across key threat scenarios, including unlearning and jailbreaking, demonstrate the effectiveness of AegisLLM. On the WMDP unlearning benchmark, AegisLLM achieves near-perfect unlearning with only 20 training examples and fewer than 300 LM calls. For jailbreaking benchmarks, we achieve 51% improvement compared to the base model on StrongReject, with false refusal rates of only 7.9% on PHTest compared to 18-55% for comparable methods. Our results highlight the advantages of adaptive, agentic reasoning over static defenses, establishing AegisLLM as a strong runtime alternative to traditional approaches based on model modifications. Code is available at https://github.com/zikuicai/aegisllm",
+  "authors": [
+    "Zikui Cai",
+    "Shayan Shabihi",
+    "Bang An",
+    "Zora Che",
+    "Brian R. Bartoldson",
+    "Bhavya Kailkhura",
+    "Tom Goldstein",
+    "Furong Huang"
+  ],
+  "candidate_id": "arxiv:2504.20965",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-29",
+    "latest_revision_date": "2025-06-13"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "AegisLLM: Scaling Agentic Systems for Self-Reflective Defense in LLM Security",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.20965"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.20965",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "ICLR 2025 Workshop BuildingTrust",
+    "pdf_url": "https://arxiv.org/pdf/2504.20965v2",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Z.Cai,S.Shabihi,B.An,Z.Che,B.R.Bartoldson,B.Kailkhura,T.Goldstein,andF.Huang.Aegisllm:Scaling agenticsystemsforself-reflectivedefenseinllmsecurity.arXivpreprintarXiv:2504.20965,2025.Preprint. 67",
+      "page": 67,
+      "reference_number": 31,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "AegisLLM: Scaling Agentic Systems for Self-Reflective Defense in LLM Security",
+  "versions": [
+    {
+      "date": "2025-06-13",
+      "identifier": "2504.20965v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.20965v2"
+    }
+  ]
+}

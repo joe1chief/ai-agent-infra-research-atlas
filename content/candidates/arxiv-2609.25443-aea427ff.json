@@ -1,0 +1,54 @@
+{
+  "abstract": "Moving authorization earlier can shorten an agent's dispatch boundary without removing authorization work. It can also admit an action whose payload, authority, or relevant state has changed. ZeroGate separates exact-action approval from durable local admission: an issuer signs a short-lived ActionPass, and a trusted runtime adapter reconstructs the final action before a local gate checks its binding and consumes its nonce. A SQLite transaction couples nonce consumption, applicable quota updates, and an admission receipt. We state a conditional decision-preservation proposition: successful local admission implies that a specified synchronous policy would authorize the same action at the admission point, provided approval is sound, all policy dependencies are represented and current, observations are faithful, and consumption is atomic. The implementation alone establishes neither current-world freshness nor exactly-once remote effects. Evaluation separates authored semantic fixtures, controlled concurrency and crash experiments, and an Azure Blob study comparing synchronous and prepared execution through the same issuer and gate. Both modes mint an exact-action pass; lifecycle latency includes preparation and prepared-batch dwell. Across 4800 cloud attempts, prepared worker-admission-to-dispatch p95 ranges from 9.802 to 11.374 ms, versus 25.018 to 334.000 ms synchronously, across the tested concurrency levels. Prepared mean complete lifecycle is longer at every level: the boundary improvement is not a net speedup. The contribution is an explicit revalidation contract, a durable reference boundary, and an auditable comparison of where authorization cost is paid, not a new cryptographic primitive or a universal performance frontier.",
+  "authors": [
+    "Zexun Wang"
+  ],
+  "candidate_id": "arxiv:2609.25443",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-21",
+    "latest_revision_date": "2026-09-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "ZeroGate: Trust-Preserving Fast Paths for Governed AI Agent Runtimes",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.25443"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.25443",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "47 pages, 11 figures, 13 tables. Full research report with an ancillary archive containing reference code, raw experimental records, and offline verification tools",
+    "pdf_url": "https://arxiv.org/pdf/2609.25443v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trust"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "ZeroGate: Trust-Preserving Fast Paths for Governed AI Agent Runtimes",
+  "versions": [
+    {
+      "date": "2026-09-21",
+      "identifier": "2609.25443v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.25443v1"
+    }
+  ]
+}

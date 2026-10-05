@@ -1,0 +1,67 @@
+{
+  "abstract": "The rapid advancements of Text-to-Image (T2I) models have ushered in a new phase of AI-generated content, marked by their growing ability to interpret and follow user instructions. However, existing T2I model evaluation benchmarks fall short in limited prompt diversity and complexity, as well as coarse evaluation metrics, making it difficult to evaluate the fine-grained alignment performance between textual instructions and generated images. In this paper, we present TIIF-Bench Text-to-Image Instruction Following Benchmark), aiming to systematically assess T2I models' ability in interpreting and following intricate textual instructions. TIIF-Bench comprises 5,000 prompts organized along multiple dimensions and categorized into three levels of difficulty and complexity. To rigorously evaluate robustness to prompt length, each prompt is provided in both short and long versions with identical core semantics. We further propose a novel Global Normalized Edit Distance (GNED) metric for text rendering and provide aspect-ratio-diverse reference images for each prompt to assess style control. In addition, we collect 100 high-quality designer-level prompts covering diverse scenarios for comprehensive evaluation. To enable scalable and fine-grained evaluation, we explore the best paradigm for leveraging the world knowledge encoded in large Vision-Language Models (VLMs) as automated binary evaluators. Through extensive ablations, we develop a fully reproducible evaluator that provides interpretable reasoning and reliable verification, enabling our benchmark to discern subtle variations in T2I model outputs. Through comprehensive benchmarking of mainstream T2I models on TIIF-Bench, we analyze the strengths and weaknesses of current T2I systems and reveal the limitations of existing evaluation benchmarks. Project Page: https://a113n-w3i.github.io/TIIF_Bench/.",
+  "authors": [
+    "Xinyu Wei",
+    "Jinrui Zhang",
+    "Zeqing Wang",
+    "Hongyang Wei",
+    "Zhen Guo",
+    "Bairui Li",
+    "Lei Zhang"
+  ],
+  "candidate_id": "arxiv:2506.02161",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-02",
+    "latest_revision_date": "2026-07-12"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "TIIF-Bench: How Does Your T2I Model Follow Your Instructions?",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.02161"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.02161",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "35 pages, 14 figures, 9 tables",
+    "pdf_url": "https://arxiv.org/pdf/2506.02161v3",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "XinyuWei,JinruiZhang,ZeqingWang,HongyangWei,ZhenGuo,andLeiZhang. Tiif-bench: Howdoes your t2i model follow your instructions? arXiv preprint arXiv:2506.02161, 2025.",
+      "page": 45,
+      "reference_number": 79,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "TIIF-Bench: How Does Your T2I Model Follow Your Instructions?",
+  "versions": [
+    {
+      "date": "2026-07-12",
+      "identifier": "2506.02161v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.02161v3"
+    }
+  ]
+}

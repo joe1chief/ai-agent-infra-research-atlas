@@ -1,0 +1,83 @@
+{
+  "abstract": "We introduce Lumina-Image 2.0, an advanced text-to-image generation framework that achieves significant progress compared to previous work, Lumina-Next. Lumina-Image 2.0 is built upon two key principles: (1) Unification - it adopts a unified architecture (Unified Next-DiT) that treats text and image tokens as a joint sequence, enabling natural cross-modal interactions and allowing seamless task expansion. Besides, since high-quality captioners can provide semantically well-aligned text-image training pairs, we introduce a unified captioning system, Unified Captioner (UniCap), specifically designed for T2I generation tasks. UniCap excels at generating comprehensive and accurate captions, accelerating convergence and enhancing prompt adherence. (2) Efficiency - to improve the efficiency of our proposed model, we develop multi-stage progressive training strategies and introduce inference acceleration techniques without compromising image quality. Extensive evaluations on academic benchmarks and public text-to-image arenas show that Lumina-Image 2.0 delivers strong performances even with only 2.6B parameters, highlighting its scalability and design efficiency. We have released our training details, code, and models at https://github.com/Alpha-VLLM/Lumina-Image-2.0.",
+  "authors": [
+    "Qi Qin",
+    "Le Zhuo",
+    "Yi Xin",
+    "Ruoyi Du",
+    "Zhen Li",
+    "Bin Fu",
+    "Yiting Lu",
+    "Jiakang Yuan",
+    "Xinyue Li",
+    "Dongyang Liu",
+    "Xiangyang Zhu",
+    "Manyuan Zhang",
+    "Will Beddow",
+    "Erwann Millon",
+    "Victor Perez",
+    "Wenhai Wang",
+    "Conghui He",
+    "Bo Zhang",
+    "Xiaohong Liu",
+    "Hongsheng Li",
+    "Yu Qiao",
+    "Chang Xu",
+    "Peng Gao"
+  ],
+  "candidate_id": "arxiv:2503.21758",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-27",
+    "latest_revision_date": "2025-03-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Lumina-Image 2.0: A Unified and Efficient Image Generative Framework",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.21758"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.21758",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Tech Report, 21 pages, 12 figures",
+    "pdf_url": "https://arxiv.org/pdf/2503.21758v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Qi Qin, Le Zhuo, Yi Xin, Ruoyi Du, Zhen Li, Bin Fu, Yiting Lu, Jiakang Yuan, Xinyue Li, Dongyang Liu, et al. Lumina-image 2.0: A unified and efficient image generative framework. arXiv preprint arXiv:2503.21758, 2025.",
+      "page": 44,
+      "reference_number": 59,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Lumina-Image 2.0: A Unified and Efficient Image Generative Framework",
+  "versions": [
+    {
+      "date": "2025-03-27",
+      "identifier": "2503.21758v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.21758v1"
+    }
+  ]
+}

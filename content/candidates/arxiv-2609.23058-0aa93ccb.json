@@ -1,0 +1,54 @@
+{
+  "abstract": "Current agent runtimes that plan before acting generally execute a step once it becomes ready. We present LazyAgent, a unified execution framework for agent-authored programs organized around a live, goal-derived demanded set. LazyAgent refreshes a backward closure from requested outputs as execution state changes and materializes a ready node only when the active goal requires it. This replaces repeated local judgments with one linear-time graph analysis followed by constant-time membership tests, allowing programs to remain broad while execution stays request-specific. On programs that describe more than the current request needs, LazyAgent consistently outperforms the strongest goal-stopping eager baseline by refusing unrelated work before it starts. Adding one unrelated product raises the eager bill by 22.5% and LazyAgent's by 0.0%. LazyAgent saves 42.0% of measured CPU on production scientific workflows and 51.7% of container time on a live release gate spanning four repositories. We also prove and verify exact equivalence when the request reaches the whole graph, leaving no unrelated work to avoid. Beyond permission, goal-relative output projection saves up to approximately 90% of a shared step on two third-party test suites while the identical eager control saves 0.0%; the advantage disappears when the omitted output has no other consumer or the request needs it. Ordering, reuse, and pruning can also save cost, but do not replace permission. Finally, we show that current public benchmarks are eager-shaped and contain almost no unrequested work. A pre-registered planning intervention did not broaden them. These findings motivate benchmarks built from standing programs and sequences.",
+  "authors": [
+    "Xin Heng"
+  ],
+  "candidate_id": "arxiv:2609.23058",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-19",
+    "latest_revision_date": "2026-09-19"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "LazyAgent: Demand-Driven Materialization and Physical Optimization of Agentic Programs",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.23058"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.23058",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.23058v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "permission"
+    ],
+    "primary_category": "AG-6",
+    "requires_human_confirmation": true
+  },
+  "title": "LazyAgent: Demand-Driven Materialization and Physical Optimization of Agentic Programs",
+  "versions": [
+    {
+      "date": "2026-09-19",
+      "identifier": "2609.23058v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.23058v1"
+    }
+  ]
+}

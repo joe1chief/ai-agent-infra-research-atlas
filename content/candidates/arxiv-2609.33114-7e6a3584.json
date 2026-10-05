@@ -1,0 +1,58 @@
+{
+  "abstract": "For decades, statistical inference has largely been developed one problem at a time. Given a scientific target, such as a treatment effect or a regression function, statisticians design a problem-specific estimator together with a procedure for quantifying its uncertainty. This paper proposes a different paradigm. We focus on a classical problem in statistical inference, confidence interval construction, and develop TabCon, an amortized inference system built on a tabular foundation model that produces confidence intervals for new datasets through a simple forward pass. The key methodological ingredients of TabCon are a sparse mixture-of-experts architecture and reinforcement-learning-based post-training that calibrate the resulting confidence intervals to a desired coverage level. Across a wide range of benchmark datasets, TabCon attains near-nominal coverage while producing short confidence intervals. At inference time, it also offers considerably greater computational efficiency, running 50 times faster than the classical bootstrap procedure, even when the latter uses only 50 bootstrap samples.",
+  "authors": [
+    "Kai Ye",
+    "Shijin Gong",
+    "Hongyi Zhou",
+    "Valentina Zangirolami",
+    "Chengchun Shi"
+  ],
+  "candidate_id": "arxiv:2609.33114",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-27",
+    "latest_revision_date": "2026-09-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Can Tabular Foundation Models Amortize Statistical Inference?",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.33114"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.33114",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.33114v1",
+    "primary_category": "stat.ML"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "post-training"
+    ],
+    "primary_category": "AI-3",
+    "requires_human_confirmation": true
+  },
+  "title": "Can Tabular Foundation Models Amortize Statistical Inference?",
+  "versions": [
+    {
+      "date": "2026-09-27",
+      "identifier": "2609.33114v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.33114v1"
+    }
+  ]
+}

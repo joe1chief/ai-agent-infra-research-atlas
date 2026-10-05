@@ -1,0 +1,85 @@
+{
+  "abstract": "",
+  "authors": [
+    "Valentin Mamedov",
+    "Evgenii Kosarev",
+    "Gregory Leleytner",
+    "Ilya Shchuckin",
+    "Valeriy Berezovskiy",
+    "Daniil Smirnov",
+    "Dmitry Kozlov",
+    "Sergei Averkiev",
+    "Lukyanenko Ivan",
+    "Aleksandr Proshunin",
+    "Ainur Israfilova",
+    "Ivan Baskov",
+    "Artem Chervyakov",
+    "Emil Shakirov",
+    "Mikhail Kolesov",
+    "Daria Khomich",
+    "Daria Latortseva",
+    "Sergei Porkhun",
+    "Yury Fedorov",
+    "Oleg Kutuzov",
+    "Polina Kudriavtseva",
+    "Sofiia Soldatova",
+    "Kolodin Egor",
+    "Stanislav Pyatkin",
+    "Dzmitry Menshykh",
+    "Grafov IUrevich",
+    "Eldar Damirov",
+    "Vladimir Karlov",
+    "Ruslan Gaitukiev",
+    "Arkadiy Shatenov",
+    "Alena Fenogenova",
+    "Nikita Savushkin",
+    "Fedor Minkin"
+  ],
+  "candidate_id": "acl:2025.acl-demo.10",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-07-01",
+    "latest_revision_date": "2025-07-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "GigaChat Family: Efficient Russian Language Modeling Through Mixture of Experts Architecture",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2025.acl-demo.10/"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-demo.10",
+    "openreview": null
+  },
+  "raw": {
+    "anthology_id": "2025.acl-demo.10",
+    "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_metadata_provides_month_only:2025-07"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "GigaChat Family: Efficient Russian Language Modeling Through Mixture of Experts Architecture",
+  "versions": [
+    {
+      "date": "2025-07-01",
+      "identifier": "2025.acl-demo.10",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2025.acl-demo.10/"
+    }
+  ]
+}

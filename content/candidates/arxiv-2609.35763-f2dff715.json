@@ -1,0 +1,65 @@
+{
+  "abstract": "Distributional training provides collective supervision for one-step visual generation by matching real and generated features in frozen representation spaces. We introduce a unified theoretical framework that separates distribution modeling from matching discrepancy and connects global objectives to pointwise feature updates through Wasserstein gradient flow. Under this framework, FD-Loss and Gaussian-kernel Drifting are recovered through Gaussian optimal transport and kernel-density-based KL matching, respectively. The framework motivates MGFlow, which models feature distributions with Gaussian mixtures at an adjustable granularity between global moments and sample-based representations. MGFlow supports both optimal transport and score-based matching, and couples mass-constrained sample assignment with paired component updates to address mode collapse that mixture expressivity alone does not resolve. On ImageNet $256\\times256$, MGFlow substantially surpasses the FD-Loss baseline, achieving state-of-the-art results with 1.45 $\\mathrm{FDr}^6$ on pMF-H and 1.64 on JiT-H. For text-to-image generation, MGFlow post-trains FLUX.2 [klein] 4B into a one-step generator that outperforms the original four-step model on both GenEval and PickScore.",
+  "authors": [
+    "Chi Zhang",
+    "Shi Haoyang",
+    "Yueyi Liu",
+    "Ruichuan An",
+    "Junkang Zhou",
+    "Chang Li",
+    "Xiuyuan Lu",
+    "Yichi Zhang",
+    "Bo Wang",
+    "Yuhang Wu",
+    "Sen Cui",
+    "Miao Liu"
+  ],
+  "candidate_id": "arxiv:2609.35763",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-10-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Unifying Distributional Training for One-Step Visual Generation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35763"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.35763",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Project page: https://shihaoyang0423.github.io/MGFlow-website/",
+    "pdf_url": "https://arxiv.org/pdf/2609.35763v4",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "kernel"
+    ],
+    "primary_category": "AI-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Unifying Distributional Training for One-Step Visual Generation",
+  "versions": [
+    {
+      "date": "2026-10-02",
+      "identifier": "2609.35763v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35763v4"
+    }
+  ]
+}

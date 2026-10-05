@@ -1,0 +1,59 @@
+{
+  "abstract": "Asynchronous monitoring, incident investigations, and compliance audits primarily rely on agent traces to reconstruct what happened. These analyses assume that LLM agents cannot tamper with their own execution traces. We show that local LLM agents such as Claude Code, Codex, Antigravity, Open Code and Grok Build fail to enforce this boundary. All tested harnesses, except Muse Code, allowed agents to delete their traces when asked, without triggering monitor guardrails. We also validate that external attackers can exploit this gap to induce trace deletion. Finally, we show that trace tampering behavior emerges naturally in frontier models, when agents try to improve their rewards. We advise practitioners to ensure trace logging happens through an independent interception mechanism outside of the agent's control, preserving trace integrity even in cases of full host compromise. Overall, our findings identify a concrete failure of trace integrity in agent infrastructure which can be used to conceal misaligned behaviors like scheming or sabotage.",
+  "authors": [
+    "Jeremy Qin",
+    "David Schmotz",
+    "Derck Prinzhorn",
+    "Luca Beurer-Kellner",
+    "Ameya Prabhu",
+    "Maksym Andriushchenko"
+  ],
+  "candidate_id": "arxiv:2609.30266",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-24",
+    "latest_revision_date": "2026-09-24"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.30266"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.30266",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.30266v1",
+    "primary_category": "cs.CR"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "LLM Agents Can Easily Tamper With Their Own Traces",
+  "versions": [
+    {
+      "date": "2026-09-24",
+      "identifier": "2609.30266v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.30266v1"
+    }
+  ]
+}

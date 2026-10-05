@@ -1,0 +1,82 @@
+{
+  "abstract": "In this work, we introduce OmniGen2, a versatile and open-source generative model designed to provide a unified solution for diverse generation tasks, including text-to-image, image editing, and in-context generation. Unlike OmniGen v1, OmniGen2 features two distinct decoding pathways for text and image modalities, utilizing unshared parameters and a decoupled image tokenizer. This design enables OmniGen2 to build upon existing multimodal understanding models without the need to re-adapt VAE inputs, thereby preserving the original text generation capabilities. To facilitate the training of OmniGen2, we developed comprehensive data construction pipelines, encompassing image editing and in-context generation data. Additionally, we introduce a reflection mechanism tailored for image generation tasks and curate a dedicated reflection dataset based on OmniGen2. Despite its relatively modest parameter size, OmniGen2 achieves competitive results on multiple task benchmarks, including text-to-image and image editing. To further evaluate in-context generation, also referred to as subject-driven tasks, we introduce a new benchmark named OmniContext. OmniGen2 achieves state-of-the-art performance among open-source models in terms of consistency. We will release our models, training code, datasets, and data construction pipeline to support future research in this field. Project Page: https://vectorspacelab.github.io/OmniGen2; GitHub Link: https://github.com/VectorSpaceLab/OmniGen2",
+  "authors": [
+    "Chenyuan Wu",
+    "Pengfei Zheng",
+    "Ruiran Yan",
+    "Shitao Xiao",
+    "Xin Luo",
+    "Yueze Wang",
+    "Wanli Li",
+    "Xiyan Jiang",
+    "Yexin Liu",
+    "Junjie Zhou",
+    "Ze Liu",
+    "Ziyi Xia",
+    "Chaofan Li",
+    "Haoge Deng",
+    "Jiahao Wang",
+    "Kun Luo",
+    "Bo Zhang",
+    "Defu Lian",
+    "Xinlong Wang",
+    "Zhongyuan Wang",
+    "Tiejun Huang",
+    "Zheng Liu"
+  ],
+  "candidate_id": "arxiv:2506.18871",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-23",
+    "latest_revision_date": "2026-04-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "OmniGen2: Towards Instruction-Aligned Multimodal Generation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.18871"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.18871",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2506.18871v4",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Chenyuan Wu, Pengfei Zheng, Ruiran Yan, Shitao Xiao, Xin Luo, Yueze Wang, Wanli Li, Xiyan Jiang, Yexin Liu, Junjie Zhou, et al. Omnigen2: Exploration to advanced multimodal generation. arXiv preprint arXiv:2506.18871, 2025b.",
+      "page": 45,
+      "reference_number": 82,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "OmniGen2: Towards Instruction-Aligned Multimodal Generation",
+  "versions": [
+    {
+      "date": "2026-04-21",
+      "identifier": "2506.18871v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.18871v4"
+    }
+  ]
+}

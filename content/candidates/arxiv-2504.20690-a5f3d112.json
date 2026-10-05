@@ -1,0 +1,65 @@
+{
+  "abstract": "Instruction-based image editing enables precise modifications via natural language prompts, but existing methods face a precision-efficiency tradeoff: fine-tuning demands massive datasets (>10M) and computational resources, while training-free approaches suffer from weak instruction comprehension. We address this by proposing ICEdit, which leverages the inherent comprehension and generation abilities of large-scale Diffusion Transformers (DiTs) through three key innovations: (1) An in-context editing paradigm without architectural modifications; (2) Minimal parameter-efficient fine-tuning for quality improvement; (3) Early Filter Inference-Time Scaling, which uses VLMs to select high-quality noise samples for efficiency. Experiments show that ICEdit achieves state-of-the-art editing performance with only 0.1\\% of the training data and 1\\% trainable parameters compared to previous methods. Our approach establishes a new paradigm for balancing precision and efficiency in instructional image editing. Codes and demos can be found in https://river-zhang.github.io/ICEdit-gh-pages/.",
+  "authors": [
+    "Zechuan Zhang",
+    "Ji Xie",
+    "Yu Lu",
+    "Zongxin Yang",
+    "Yi Yang"
+  ],
+  "candidate_id": "arxiv:2504.20690",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-29",
+    "latest_revision_date": "2025-09-23"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "In-Context Edit: Enabling Instructional Image Editing with In-Context Generation in Large Scale Diffusion Transformer",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.20690"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.20690",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted by NeurIPS 2025, there will be future updates for camera ready version. Code: https://github.com/River-Zhang/ICEdit",
+    "pdf_url": "https://arxiv.org/pdf/2504.20690v3",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "ZechuanZhang, JiXie,YuLu, Zongxin Yang, andYiYang. In-contextedit: Enablinginstructional image editing with in-context generation in large scale diffusion transformer. arXiv preprint arXiv:2504.20690, 2025.",
+      "page": 46,
+      "reference_number": 97,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "In-Context Edit: Enabling Instructional Image Editing with In-Context Generation in Large Scale Diffusion Transformer",
+  "versions": [
+    {
+      "date": "2025-09-23",
+      "identifier": "2504.20690v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.20690v3"
+    }
+  ]
+}

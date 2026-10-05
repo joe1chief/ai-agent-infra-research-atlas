@@ -1,0 +1,69 @@
+{
+  "abstract": "Large language models (LLMs) are increasingly envisioned as decision-support tools in clinical practice, yet safe clinical reasoning demands integrating heterogeneous knowledge bases -- trials, primary studies, regulatory documents, and cost data -- under strict accuracy constraints. Existing evaluations often rely on synthetic prompts, reduce the task to single-hop factoid queries, or conflate reasoning with open-ended generation, leaving their real-world utility unclear. To close this gap, we present MedBrowseComp, the first benchmark that systematically tests an agent's ability to reliably retrieve and synthesize multi-hop medical facts from live, domain-specific knowledge bases. MedBrowseComp contains more than 1,000 human-curated questions that mirror clinical scenarios where practitioners must reconcile fragmented or conflicting information to reach an up-to-date conclusion. Applying MedBrowseComp to frontier agentic systems reveals performance shortfalls as low as ten percent, exposing a critical gap between current LLM capabilities and the rigor demanded in clinical settings. MedBrowseComp therefore offers a clear testbed for reliable medical information seeking and sets concrete goals for future model and toolchain upgrades. You can visit our project page at: https://moreirap12.github.io/mbc-browse-app/",
+  "authors": [
+    "Shan Chen",
+    "Pedro Moreira",
+    "Yuxin Xiao",
+    "Sam Schmidgall",
+    "Jeremy Warner",
+    "Hugo Aerts",
+    "Thomas Hartvigsen",
+    "Jack Gallifant",
+    "Danielle S. Bitterman"
+  ],
+  "candidate_id": "arxiv:2505.14963",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-20",
+    "latest_revision_date": "2025-05-20"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "MedBrowseComp: Benchmarking Medical Deep Research and Computer Use",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.14963"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.14963",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "You can visit our project page at: https://moreirap12.github.io/mbc-browse-app/",
+    "pdf_url": "https://arxiv.org/pdf/2505.14963v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Shan Chen, Pedro Moreira, Yuxin Xiao, Sam Schmidgall, Jeremy Warner, Hugo Aerts, Thomas Hartvigsen,JackGallifant,andDanielleS.Bitterman. Medbrowsecomp: Benchmarkingmedical deep researchand computer use. arXiv:2505.14963, 2025. URLhttps://arxiv.org/abs/ 2505.14963.",
+      "page": 14,
+      "reference_number": 5,
+      "report_blob_sha": "9af34430c8e6febcd6e9485c80d3d4f27d9f824e",
+      "report_title": "BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent",
+      "seed_report_path": "2025/anthropic/2025-06_claude-opus-4.5.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "MedBrowseComp: Benchmarking Medical Deep Research and Computer Use",
+  "versions": [
+    {
+      "date": "2025-05-20",
+      "identifier": "2505.14963v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.14963v1"
+    }
+  ]
+}

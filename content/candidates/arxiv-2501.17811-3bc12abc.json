@@ -1,0 +1,68 @@
+{
+  "abstract": "In this work, we introduce Janus-Pro, an advanced version of the previous work Janus. Specifically, Janus-Pro incorporates (1) an optimized training strategy, (2) expanded training data, and (3) scaling to larger model size. With these improvements, Janus-Pro achieves significant advancements in both multimodal understanding and text-to-image instruction-following capabilities, while also enhancing the stability of text-to-image generation. We hope this work will inspire further exploration in the field. Code and models are publicly available.",
+  "authors": [
+    "Xiaokang Chen",
+    "Zhiyu Wu",
+    "Xingchao Liu",
+    "Zizheng Pan",
+    "Wen Liu",
+    "Zhenda Xie",
+    "Xingkai Yu",
+    "Chong Ruan"
+  ],
+  "candidate_id": "arxiv:2501.17811",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-29",
+    "latest_revision_date": "2025-01-29"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.17811"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2501.17811",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Research paper. arXiv admin note: text overlap with arXiv:2410.13848",
+    "pdf_url": "https://arxiv.org/pdf/2501.17811v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Xiaokang Chen, ZhiyuWu, Xingchao Liu,Zizheng Pan, Wen Liu, Zhenda Xie,Xingkai Yu, and Chong Ruan. Janus-pro: Unified multimodal understanding and generation with data and model scaling. arXiv preprint arXiv:2501.17811, 2025b.",
+      "page": 41,
+      "reference_number": 12,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling",
+  "versions": [
+    {
+      "date": "2025-01-29",
+      "identifier": "2501.17811v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.17811v1"
+    }
+  ]
+}

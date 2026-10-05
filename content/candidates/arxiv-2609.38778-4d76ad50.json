@@ -1,0 +1,59 @@
+{
+  "abstract": "An agent that remembers what it did on a web page must decide when two pages count as the same. Memories built on observation similarity merge pages that look alike but behave differently, and GUIs are full of such pages: two tabs of one widget or two rows of one menu answer the same click differently. We define the merge rule as an action-conditioned bisimulation over the empirical predictive state graph a frozen agent fills as it acts. Two states merge only when their shared actions lead to agreeing outcomes and successor blocks under an affordance label. Observation similarity never enters the rule, and nothing is trained. It replaces the merge rule of an existing outcome-value memory, so a closed-loop comparison isolates it. On MiniWoB++ it raises success rate over a memoryless agent, while a control taking identical exploratory detours, the prior successor-representation merge, and the same criterion without action conditioning change nothing.",
+  "authors": [
+    "Hongbo Zhang",
+    "Liuyang Song",
+    "Quanquan Li",
+    "Daqian Yang",
+    "Yan Wen",
+    "Zhengtao Yao"
+  ],
+  "candidate_id": "arxiv:2609.38778",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-30",
+    "latest_revision_date": "2026-09-30"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Action Conditioned Bisimulation For GUI Agent Memory",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.38778"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.38778",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.38778v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Action Conditioned Bisimulation For GUI Agent Memory",
+  "versions": [
+    {
+      "date": "2026-09-30",
+      "identifier": "2609.38778v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.38778v1"
+    }
+  ]
+}

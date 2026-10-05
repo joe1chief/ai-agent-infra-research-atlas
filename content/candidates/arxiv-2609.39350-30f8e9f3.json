@@ -1,0 +1,63 @@
+{
+  "abstract": "As model sizes continue to scale, distributed training has become inevitable. Automatic parallelization techniques can derive efficient training parallelism strategies at low cost while achieving superior performance. The difficulty of this problem is jointly determined by the complexity of the model and the underlying compute cluster. Meanwhile, mixture-of-experts (MoE) models are increasingly emerging as the dominant architecture and the rapid evolution of accelerator hardware has made cluster heterogeneity commonplace, posing substantial challenges to automatic parallelization. However, existing approaches typically target either MoE architectures or heterogeneous clusters, failing to generalize to scenarios where both challenges coexist. To this end, we present HAPMoE, a heterogeneity-aware automatic parallelism planner for MoE training. HAPMoE builds a lightweight MoE-aware cost model and efficiently searches a six-dimensional parallel space, producing parallel plans directly deployable on Megatron-LM. Experiments show that HAPMoE improves end-to-end training throughput by up to 3.2$\\times$ over baselines across heterogeneous clusters. Its non-uniform pipeline partitioning yields an additional up to 78% gains, and its pruning-enhanced dynamic programming algorithm completes the search within 1 minute, demonstrating high efficiency and practical value in complex hardware environments.",
+  "authors": [
+    "Mengyuan Fan",
+    "Peizhuang Cong",
+    "Zixiao Huang",
+    "Si Xu",
+    "Tong Qiao",
+    "Yanghao Li",
+    "Jing Yang",
+    "Tong Yang",
+    "Quanlu Zhang",
+    "Yu Wang"
+  ],
+  "candidate_id": "arxiv:2609.39350",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-30",
+    "latest_revision_date": "2026-09-30"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "HAPMoE: Heterogeneity-Aware Automatic Parallelism Planning for Mixture-of-Experts Models Training",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.39350"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.39350",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted to Findings of EMNLP 2026. 15 pages, 6 figures",
+    "pdf_url": "https://arxiv.org/pdf/2609.39350v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "HAPMoE: Heterogeneity-Aware Automatic Parallelism Planning for Mixture-of-Experts Models Training",
+  "versions": [
+    {
+      "date": "2026-09-30",
+      "identifier": "2609.39350v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.39350v1"
+    }
+  ]
+}

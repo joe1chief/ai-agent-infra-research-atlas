@@ -1,0 +1,69 @@
+{
+  "abstract": "Mitigating reward hacking--where AI systems misbehave due to flaws or misspecifications in their learning objectives--remains a key challenge in constructing capable and aligned models. We show that we can monitor a frontier reasoning model, such as OpenAI o3-mini, for reward hacking in agentic coding environments by using another LLM that observes the model's chain-of-thought (CoT) reasoning. CoT monitoring can be far more effective than monitoring agent actions and outputs alone, and we further found that a LLM weaker than o3-mini, namely GPT-4o, can effectively monitor a stronger model. Because CoT monitors can be effective at detecting exploits, it is natural to ask whether those exploits can be suppressed by incorporating a CoT monitor directly into the agent's training objective. While we show that integrating CoT monitors into the reinforcement learning reward can indeed produce more capable and more aligned agents in the low optimization regime, we find that with too much optimization, agents learn obfuscated reward hacking, hiding their intent within the CoT while still exhibiting a significant rate of reward hacking. Because it is difficult to tell when CoTs have become obfuscated, it may be necessary to pay a monitorability tax by not applying strong optimization pressures directly to the chain-of-thought, ensuring that CoTs remain monitorable and useful for detecting misaligned behavior.",
+  "authors": [
+    "Bowen Baker",
+    "Joost Huizinga",
+    "Leo Gao",
+    "Zehao Dou",
+    "Melody Y. Guan",
+    "Aleksander Madry",
+    "Wojciech Zaremba",
+    "Jakub Pachocki",
+    "David Farhi"
+  ],
+  "candidate_id": "arxiv:2503.11926",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-14",
+    "latest_revision_date": "2025-03-14"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.11926"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.11926",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2503.11926v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "B.Baker,J.Huizinga,L.Gao,Z.Dou,M.Y.Guan,A.Madry,W.Zaremba,J.Pachocki, andD.Farhi,“Monitoringreasoningmodelsformisbehaviorandtherisksofpromoting obfuscation.”arXivpreprintarXiv:2503.11926,2025.Submittedon14March2025.",
+      "page": 59,
+      "reference_number": 6,
+      "report_blob_sha": "b00b61d8ff19e2829c9fd38820087efecadcd6eb",
+      "report_title": "2025-10_claude-haiku-4.5",
+      "seed_report_path": "2025/anthropic/2025-10_claude-haiku-4.5.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation",
+  "versions": [
+    {
+      "date": "2025-03-14",
+      "identifier": "2503.11926v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.11926v1"
+    }
+  ]
+}

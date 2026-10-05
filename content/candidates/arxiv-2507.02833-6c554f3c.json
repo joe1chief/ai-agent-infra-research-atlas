@@ -1,0 +1,68 @@
+{
+  "abstract": "A crucial factor for successful human and AI interaction is the ability of language models or chatbots to follow human instructions precisely. A common feature of instructions are output constraints like ``only answer with yes or no\" or ``mention the word `abrakadabra' at least 3 times\" that the user adds to craft a more useful answer. Even today's strongest models struggle with fulfilling such constraints. We find that most models strongly overfit on a small set of verifiable constraints from the benchmarks that test these abilities, a skill called precise instruction following, and are not able to generalize well to unseen output constraints. We introduce a new benchmark, IFBench, to evaluate precise instruction following generalization on 58 new, diverse, and challenging verifiable out-of-domain constraints. In addition, we perform an extensive analysis of how and on what data models can be trained to improve precise instruction following generalization. Specifically, we carefully design constraint verification modules and show that reinforcement learning with verifiable rewards (RLVR) significantly improves instruction following. In addition to IFBench, we release 29 additional new hand-annotated training constraints and verification functions, RLVR training prompts, and code.",
+  "authors": [
+    "Valentina Pyatkin",
+    "Saumya Malik",
+    "Victoria Graf",
+    "Hamish Ivison",
+    "Shengyi Huang",
+    "Pradeep Dasigi",
+    "Nathan Lambert",
+    "Hannaneh Hajishirzi"
+  ],
+  "candidate_id": "arxiv:2507.02833",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-07-03",
+    "latest_revision_date": "2025-11-11"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Generalizing Verifiable Instruction Following",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.02833"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2507.02833",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "11 pages, accepted to NeurIPS 2025, Datasets & Benchmarks",
+    "pdf_url": "https://arxiv.org/pdf/2507.02833v3",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "V.Pyatkin,S.Malik,V.Graf,H.Ivison,S.Huang,P.Dasigi,N.Lambert,andH.Hajishirzi.Generalizingverifiable instructionfollowing.arXivpreprintarXiv:2507.02833,2025.",
+      "page": 77,
+      "reference_number": 177,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Generalizing Verifiable Instruction Following",
+  "versions": [
+    {
+      "date": "2025-11-11",
+      "identifier": "2507.02833v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.02833v3"
+    }
+  ]
+}

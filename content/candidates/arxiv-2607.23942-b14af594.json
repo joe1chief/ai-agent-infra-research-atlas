@@ -1,0 +1,55 @@
+{
+  "abstract": "Memory, planning, reflection, and tool use are often compared as feature labels, obscuring the control semantics that determine how an agent actually runs. This review connects ten historical cognitive architectures, eight language-agent runtime families, and forty-two mechanism-focused modern systems. We reconstruct each mechanism through state, control, transition, persistence, failure, learning, and resource governance, then code evidence relation (E1-E4) separately from migration depth (D0-D4). The resulting landscape is uneven. Modern agents have operationalized substantial parts of adaptive memory, failure recovery, dynamic team selection, workflow search, skill induction, resource scheduling, and uncertainty-conditioned action, although often through independent convergence rather than documented inheritance. The strongest remaining opportunities lie in couplings among mechanisms. Closest-baseline screening closes one proposed gap: GraSP already combines calibrated multi-skill selection, typed compilation, verification, bounded repair, and replanning or ReAct fallback. Five residual bundles remain: activation with latency and action utility; typed impasse with isolated substates and resolution compilation; bounded content competition with broadcast and admission learning; persistent intention with reconsideration and live method authority; and uncertainty with resource allocation, interruption, and stopping. We contribute a distinctive-mechanism catalog, an auditable evidence-depth framework, and a falsifiable agenda for testing these bundles as composable runtime invariants.",
+  "authors": [
+    "Haodi Fan",
+    "Zucong Lan"
+  ],
+  "candidate_id": "arxiv:2607.23942",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-07-27",
+    "latest_revision_date": "2026-07-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "From Cognitive Architectures to Language Agents: A Mechanism-Level Review of Lineage, Convergence, and Migration Gaps",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2607.23942"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2607.23942",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "28 pages, 9 figures, 14 tables. Review article",
+    "pdf_url": "https://arxiv.org/pdf/2607.23942v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "governance"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "From Cognitive Architectures to Language Agents: A Mechanism-Level Review of Lineage, Convergence, and Migration Gaps",
+  "versions": [
+    {
+      "date": "2026-07-27",
+      "identifier": "2607.23942v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2607.23942v1"
+    }
+  ]
+}

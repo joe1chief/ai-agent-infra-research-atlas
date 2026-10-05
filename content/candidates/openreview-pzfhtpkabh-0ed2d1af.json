@@ -1,0 +1,65 @@
+{
+  "abstract": "While Multi-Agent Systems (MAS) excel at complex tasks, their growing autonomy with operational complexity often leads to critical inefficiencies, such as excessive token consumption and failures arising from misinformation. Existing methods primarily focus on post-hoc failure attribution, lacking proactive, real-time interventions to enhance robustness and efficiency. To this end, we introduce SupervisorAgent, a lightweight and modular framework for runtime, adaptive supervision that operates without altering the base agent's architecture. Triggered by an LLM-free context filter, SupervisorAgent intervenes at critical junctures to proactively correct errors, guide inefficient behaviors, and purify observations. On the challenging GAIA benchmark, SupervisorAgent reduces the token consumption of the Smolagent framework by an average of 29.68% without compromising its success rate. Extensive experiments across five additional benchmarks (math reasoning, code generation, and question answering) and various SoTA foundation models validate the broad applicability and robustness of our approach.",
+  "authors": [
+    "Fulin Lin",
+    "Shaowen Chen",
+    "Ruishan Fang",
+    "Hongwei Wang",
+    "Tao Lin"
+  ],
+  "candidate_id": "openreview:pzFhtpkabh",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-01-26",
+    "latest_revision_date": "2026-04-11"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Stop Wasting Your Tokens: Towards Efficient Runtime Multi-Agent Systems",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=pzFhtpkabh"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "pzFhtpkabh"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2026/Conference/-/Submission",
+      "ICLR.cc/2026/Conference/-/Post_Submission",
+      "ICLR.cc/2026/Conference/Submission19019/-/Full_Submission",
+      "ICLR.cc/2026/Conference/Submission19019/-/Rebuttal_Revision",
+      "ICLR.cc/2026/Conference/-/Edit",
+      "ICLR.cc/2026/Conference/Submission19019/-/Camera_Ready_Revision"
+    ],
+    "venue": "ICLR 2026 Poster",
+    "venue_id": "ICLR.cc/2026/Conference"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Stop Wasting Your Tokens: Towards Efficient Runtime Multi-Agent Systems",
+  "versions": [
+    {
+      "date": "2026-04-11",
+      "identifier": "pzFhtpkabh",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=pzFhtpkabh"
+    }
+  ]
+}

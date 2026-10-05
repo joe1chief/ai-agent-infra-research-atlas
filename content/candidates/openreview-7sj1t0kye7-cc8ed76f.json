@@ -1,0 +1,63 @@
+{
+  "abstract": "Healthcare research increasingly uses large language models for tasks such as document structuring, chart review, and summarization. Once these workflows move beyond prototypes, infrastructure matters as much as model choice, because pipelines and agents can issue large numbers of calls that must be served reliably. Commercial cloud APIs offer immediate access to frontier models and elastic scale, but introduce recurring per-token costs and may require sensitive text to leave institution-controlled infrastructure. Local serving instead keeps model inference on premises, while shifting cost and operational responsibility to the institution. We describe an on-premises endpoint for healthcare research built around GPT-OSS-120B, a sparse MXFP4 mixture-of-experts model, served with vLLM behind a single OpenAI-compatible proxy that handles access, routing, and token accounting. The service primarily supports high-volume batch workloads such as JSON structuring, information extraction, and summarization. On four GPUs, it served between one and four billion tokens per day over three months of continuous use. We also report operational issues encountered in practice, including proxy-layer instability, load balancing across replicas, GPU memory pressure from log-probability requests, and rising latency under high load, and describe how these observations shaped the final design.",
+  "authors": [
+    "Xiufeng Yang",
+    "Jannik Lübberstedt",
+    "Cosmin I. Bercea",
+    "Lisa C. Adams",
+    "Keno Bressem"
+  ],
+  "candidate_id": "openreview:7SJ1t0KyE7",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-02",
+    "latest_revision_date": "2026-09-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Local LLM Serving as Healthcare Research Infrastructure",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=7SJ1t0KyE7"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "7SJ1t0KyE7"
+  },
+  "raw": {
+    "invitations": [
+      "colmweb.org/COLM/2026/Workshop/DAIH/-/Submission",
+      "colmweb.org/COLM/2026/Workshop/DAIH/-/Submission_Change_Before_Reviewing",
+      "colmweb.org/COLM/2026/Workshop/DAIH/Submission8/-/Camera_Ready_Revision",
+      "colmweb.org/COLM/2026/Workshop/DAIH/-/Edit"
+    ],
+    "venue": "DAIH Poster",
+    "venue_id": "colmweb.org/COLM/2026/Workshop/DAIH"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Local LLM Serving as Healthcare Research Infrastructure",
+  "versions": [
+    {
+      "date": "2026-09-02",
+      "identifier": "7SJ1t0KyE7",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=7SJ1t0KyE7"
+    }
+  ]
+}

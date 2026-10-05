@@ -1,0 +1,69 @@
+{
+  "abstract": "We propose Flow-GRPO, the first method to integrate online policy gradient reinforcement learning (RL) into flow matching models. Our approach uses two key strategies: (1) an ODE-to-SDE conversion that transforms a deterministic Ordinary Differential Equation (ODE) into an equivalent Stochastic Differential Equation (SDE) that matches the original model's marginal distribution at all timesteps, enabling statistical sampling for RL exploration; and (2) a Denoising Reduction strategy that reduces training denoising steps while retaining the original number of inference steps, significantly improving sampling efficiency without sacrificing performance. Empirically, Flow-GRPO is effective across multiple text-to-image tasks. For compositional generation, RL-tuned SD3.5-M generates nearly perfect object counts, spatial relations, and fine-grained attributes, increasing GenEval accuracy from $63\\%$ to $95\\%$. In visual text rendering, accuracy improves from $59\\%$ to $92\\%$, greatly enhancing text generation. Flow-GRPO also achieves substantial gains in human preference alignment. Notably, very little reward hacking occurred, meaning rewards did not increase at the cost of appreciable image quality or diversity degradation.",
+  "authors": [
+    "Jie Liu",
+    "Gongye Liu",
+    "Jiajun Liang",
+    "Yangguang Li",
+    "Jiaheng Liu",
+    "Xintao Wang",
+    "Pengfei Wan",
+    "Di Zhang",
+    "Wanli Ouyang"
+  ],
+  "candidate_id": "arxiv:2505.05470",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-08",
+    "latest_revision_date": "2025-10-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Flow-GRPO: Training Flow Matching Models via Online RL",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.05470"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.05470",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Code: https://github.com/yifan123/flow_grpo",
+    "pdf_url": "https://arxiv.org/pdf/2505.05470v5",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "JieLiu,GongyeLiu,JiajunLiang,YangguangLi,JiahengLiu,XintaoWang,PengfeiWan,DiZhang,and WanliOuyang. Flow-grpo: Trainingflowmatchingmodelsviaonlinerl. arXivpreprintarXiv:2505.05470, 2025a.",
+      "page": 43,
+      "reference_number": 47,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Flow-GRPO: Training Flow Matching Models via Online RL",
+  "versions": [
+    {
+      "date": "2025-10-27",
+      "identifier": "2505.05470v5",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.05470v5"
+    }
+  ]
+}

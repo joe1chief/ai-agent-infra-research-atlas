@@ -1,0 +1,73 @@
+{
+  "abstract": "We present Klear-Reasoner, a model with long reasoning capabilities that demonstrates careful deliberation during problem solving, achieving outstanding performance across multiple benchmarks. Although there are already many excellent works related to inference models in the current community, there are still many problems with reproducing high-performance inference models due to incomplete disclosure of training details. This report provides an in-depth analysis of the reasoning model, covering the entire post-training workflow from data preparation and long Chain-of-Thought supervised fine-tuning (long CoT SFT) to reinforcement learning (RL), along with detailed ablation studies for each experimental component. For SFT data, our experiments show that a small number of high-quality data sources are more effective than a large number of diverse data sources, and that difficult samples can achieve better results without accuracy filtering. In addition, we investigate two key issues with current clipping mechanisms in RL: Clipping suppresses critical exploration signals and ignores suboptimal trajectories. To address these challenges, we propose Gradient-Preserving clipping Policy Optimization (GPPO) that gently backpropagates gradients from clipped tokens. GPPO not only enhances the model's exploration capacity but also improves its efficiency in learning from negative samples. Klear-Reasoner exhibits exceptional reasoning abilities in mathematics and programming, scoring 90.5% on AIME 2024, 83.2% on AIME 2025, 66.0% on LiveCodeBench V5 and 58.1% on LiveCodeBench V6.",
+  "authors": [
+    "Zhenpeng Su",
+    "Leiyu Pan",
+    "Xue Bai",
+    "Dening Liu",
+    "Guanting Dong",
+    "Jiaming Huang",
+    "Minxuan Lv",
+    "Wenping Hu",
+    "Fuzheng Zhang",
+    "Kun Gai",
+    "Guorui Zhou"
+  ],
+  "candidate_id": "arxiv:2508.07629",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-08-11",
+    "latest_revision_date": "2026-04-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Klear-Reasoner: Advancing Reasoning Capability via Gradient-Preserving Clipping Policy Optimization",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.07629"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2508.07629",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2508.07629v4",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Z.Su,L.Pan,X.Bai,D.Liu,G.Dong,J.Huang,W.Hu,F.Zhang,K.Gai,andG.Zhou.Klear-reasoner:Advancing reasoningcapabilityviagradient-preservingclippingpolicyoptimization.arXivpreprintarXiv:2508.07629,2025c.",
+      "page": 79,
+      "reference_number": 207,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "post-training"
+    ],
+    "primary_category": "AI-3",
+    "requires_human_confirmation": true
+  },
+  "title": "Klear-Reasoner: Advancing Reasoning Capability via Gradient-Preserving Clipping Policy Optimization",
+  "versions": [
+    {
+      "date": "2026-04-01",
+      "identifier": "2508.07629v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.07629v4"
+    }
+  ]
+}

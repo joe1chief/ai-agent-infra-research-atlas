@@ -1,0 +1,57 @@
+{
+  "abstract": "Reusing eight transformer layers across different requests requires a valid autoregressive handoff, not merely a nearby hidden state. The handoff must jointly replace the post-block residual and every key/value write produced inside the bypassed block, and its validity depends on the ordered source--target pair. Provenance-Gated Continuation Routing (PGCR) learns this directional relation: it searches only completed requests at the same observable workflow position, retrieves with a contrastive subroutine key, reconstructs a full residual/KV continuation from a 512-dimensional prototype, and authorizes substitution with a target-conditioned utility governor. On CodeContests-Edit, SWE-bench-Lite, and ToolBench-Recurring with Llama-3.1-8B-Instruct, PGCR delivers a $1.23\\times$ median end-to-end speedup while keeping signed quality changes within $-0.7$ points. Against a common-interface LLMCache-style similarity route, it lowers the accepted-request 1-to-0 regression incidence from 18.7% to 10.7% on CodeContests-Edit while increasing speed from $1.19\\times$ to $1.23\\times$; the all-request regression incidence falls from 6.4% to 2.8%. The lower accepted-request incidence appears in every template- and family-separated comparison, including 11.8% versus 19.6% on unseen Code templates. ToolBench-Recurring reaches $1.27\\times$ versus $1.17\\times$ for exact speculative decoding, and its high-recurrence stratum reaches 1.31$\\times$. Replication on Qwen2-7B and H100 preserves the method ordering, establishing complete continuation substitution as a practical compute-sharing primitive for provenance-rich recurrent services.",
+  "authors": [],
+  "candidate_id": "openreview:0lFyoACR32",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-14",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "PGCR: Directional Continuation Substitution for Recurrent LLM Serving",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=0lFyoACR32"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "0lFyoACR32"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2027/Conference/-/Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+      "ICLR.cc/2027/Conference/-/Edit"
+    ],
+    "venue": "ICLR 2027 Conference Submission",
+    "venue_id": "ICLR.cc/2027/Conference/Submission"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "PGCR: Directional Continuation Substitution for Recurrent LLM Serving",
+  "versions": [
+    {
+      "date": "2026-10-03",
+      "identifier": "0lFyoACR32",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=0lFyoACR32"
+    }
+  ]
+}

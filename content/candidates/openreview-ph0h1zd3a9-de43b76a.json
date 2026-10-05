@@ -1,0 +1,82 @@
+{
+  "abstract": "Modern LLM serving workloads are increasingly heterogeneous, involving a growing portfolio of models with vastly different compute and memory requirements. Existing approaches to model serving-ranging from static GPU partitioning to dynamic reconfiguration and GPU multiplexing—fail to effectively support heterogeneity.In this paper, we introduce ParaFlex, a new system for serving heterogeneous LLMs that breaks from the conventional assumption of a single shared pipeline structure across models. Rather than aligning the layout of model pipelines, ParaFlex aligns the execution times of their stages, allowing models of different sizes and parallelism configurations to coexist efficiently on shared GPUs. Our design achieves high GPU utilization, high throughput, and low tail latency under bursty, mixed-model workloads.",
+  "authors": [
+    "{'fullname': 'Tao Luo', 'username': ''}",
+    "{'fullname': 'Kelvin K. W. Ng', 'username': ''}",
+    "{'fullname': 'Zhen Ping Khor', 'username': ''}",
+    "{'fullname': 'Sidharth Sankhe', 'username': '~Sidharth_Sankhe1'}",
+    "{'fullname': 'Boon Thau Loo', 'username': ''}",
+    "{'fullname': 'Vincent Liu', 'username': ''}",
+    "{'fullname': 'Tao Luo', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Tao%20Luo'}",
+    "{'fullname': 'Kelvin K.W. Ng', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Kelvin%20K.W.%20Ng'}",
+    "{'fullname': 'Zhen Ping Khor', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Zhen%20Ping%20Khor'}",
+    "{'fullname': 'Sidharth Sankhe', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Sidharth%20Sankhe'}",
+    "{'fullname': 'Boon Thau Loo', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Boon%20Thau%20Loo'}",
+    "{'fullname': 'Vincent Liu', 'username': '~Vincent_Liu1'}"
+  ],
+  "candidate_id": "openreview:pH0h1ZD3a9",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-11-19",
+    "latest_revision_date": "2026-05-07"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=pH0h1ZD3a9"
+    },
+    {
+      "title": "Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=QBASx8EWeQ"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "pH0h1ZD3a9"
+  },
+  "raw": {
+    "invitations": [
+      "OpenReview.net/Public_Article/DBLP.org/-/Record",
+      "OpenReview.net/Public_Article/-/Edit"
+    ],
+    "venue": "SoCC 2025",
+    "venue_id": "OpenReview.net/Public_Article"
+  },
+  "review_reasons": [
+    "conflicting_first_public_dates:2025-11-19,2025-12-31",
+    "conflicting_openreview_identifiers:pH0h1ZD3a9,QBASx8EWeQ"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism",
+  "versions": [
+    {
+      "date": "2026-05-07",
+      "identifier": "pH0h1ZD3a9",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=pH0h1ZD3a9"
+    },
+    {
+      "date": "2026-05-07",
+      "identifier": "QBASx8EWeQ",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=QBASx8EWeQ"
+    }
+  ]
+}

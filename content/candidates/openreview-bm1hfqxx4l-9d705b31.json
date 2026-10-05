@@ -1,0 +1,58 @@
+{
+  "abstract": "Multi-agent systems face a recurring decision: after each intermediate result, is another model call worth its cost? The right amount of collaboration varies dramatically: $1+1$ hardly needs an agent, while an attempt at a Navier--Stokes proof may call for many specialists. Making this decision requires choosing how agents collaborate, which models to assign, what context each call receives, and when to stop under a budget. Code-based workflow optimizers such as AFlow can express conditional execution, but searching through repeated real rollouts is costly, especially on multi-turn tasks. We introduce EchoRouter, which uses experience from past execution trajectories as an ``echo'' to understand where the current policy stands and guide subsequent search. During optimization, it proposes diverse candidate policies, each decomposed into three decisions: how to collaborate during task execution, which models to assign, and what each call receives and returns. Guided by the echo, EchoRouter treats LLM as value model to forecast candidate quality and cost, executes promising policies, reflects on their trajectories, and updates the echo. It also compares models and prompts on saved task states while hiding model names to improve credit assignment. During execution, a lightweight controller uses the selected policy and current task state to construct subgraphs, assign models, and specify each call's prompt and output format. Across various model-pool scales and mathematical, coding, and general reasoning benchmarks, \\textsc{EchoRouter} achieves quality--cost trade-offs. Results on multi-turn tasks and open-ended artifact generation further show competitive quality under an LLM as Judge evaluation. Its decoupled, model-anonymous design allows new LLMs to be assessed without rebuilding the collaboration policy. Together, these results demonstrate the effectiveness and potential of EchoRouter.",
+  "authors": [],
+  "candidate_id": "openreview:Bm1HfQXx4L",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-05",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "ECHOROUTER: Forecast-Guided Evolution of Runtime-Adaptive Multi-Agent Systems",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=Bm1HfQXx4L"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "Bm1HfQXx4L"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2027/Conference/-/Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+      "ICLR.cc/2027/Conference/Submission9413/-/Full_Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+      "ICLR.cc/2027/Conference/-/Edit"
+    ],
+    "venue": "ICLR 2027 Conference Submission",
+    "venue_id": "ICLR.cc/2027/Conference/Submission"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "ECHOROUTER: Forecast-Guided Evolution of Runtime-Adaptive Multi-Agent Systems",
+  "versions": [
+    {
+      "date": "2026-10-03",
+      "identifier": "Bm1HfQXx4L",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=Bm1HfQXx4L"
+    }
+  ]
+}

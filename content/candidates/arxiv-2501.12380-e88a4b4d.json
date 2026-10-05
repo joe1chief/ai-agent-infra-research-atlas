@@ -1,0 +1,87 @@
+{
+  "abstract": "We introduce MMVU, a comprehensive expert-level, multi-discipline benchmark for evaluating foundation models in video understanding. MMVU includes 3,000 expert-annotated questions spanning 27 subjects across four core disciplines: Science, Healthcare, Humanities & Social Sciences, and Engineering. Compared to prior benchmarks, MMVU features three key advancements. First, it challenges models to apply domain-specific knowledge and perform expert-level reasoning to analyze specialized-domain videos, moving beyond the basic visual perception typically assessed in current video benchmarks. Second, each example is annotated by human experts from scratch. We implement strict data quality controls to ensure the high quality of the dataset. Finally, each example is enriched with expert-annotated reasoning rationals and relevant domain knowledge, facilitating in-depth analysis. We conduct an extensive evaluation of 32 frontier multimodal foundation models on MMVU. The latest System-2-capable models, o1 and Gemini 2.0 Flash Thinking, achieve the highest performance among the tested models. However, they still fall short of matching human expertise. Through in-depth error analyses and case studies, we offer actionable insights for future advancements in expert-level, knowledge-intensive video understanding for specialized domains.",
+  "authors": [
+    "Yilun Zhao",
+    "Lujing Xie",
+    "Haowei Zhang",
+    "Guo Gan",
+    "Yitao Long",
+    "Zhiyuan Hu",
+    "Tongyan Hu",
+    "Weiyuan Chen",
+    "Chuhan Li",
+    "Junyang Song",
+    "Zhijian Xu",
+    "Chengye Wang",
+    "Weifeng Pan",
+    "Ziyao Shangguan",
+    "Xiangru Tang",
+    "Zhenwen Liang",
+    "Yixin Liu",
+    "Chen Zhao",
+    "Arman Cohan"
+  ],
+  "candidate_id": "arxiv:2501.12380",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-21",
+    "latest_revision_date": "2025-01-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "MMVU: Measuring Expert-Level Multi-Discipline Video Understanding",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.12380"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2501.12380",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2501.12380v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Yilun Zhao, Lujing Xie, Haowei Zhang, Guo Gan, Yitao Long, Zhiyuan Hu, Tongyan Hu, Weiyuan Chen, Chuhan Li, Junyang Song, Zhijian Xu, Chengye Wang, et al. Mmvu: Measuring expert-level multi-discipline video understanding, 2025. URLhttps://arxiv.org/abs/2501.12380.",
+      "page": 32,
+      "reference_number": 2056,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    },
+    {
+      "context": "YilunZhao,LujingXie,HaoweiZhang,GuoGan,YitaoLong,ZhiyuanHu,TongyanHu,WeiyuanChen,Chuhan Li,JunyangSong,etal.Mmvu:Measuringexpert-levelmulti-disciplinevideounderstanding. arXiv preprint arXiv:2501.12380,2025.",
+      "page": 43,
+      "reference_number": 175,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "MMVU: Measuring Expert-Level Multi-Discipline Video Understanding",
+  "versions": [
+    {
+      "date": "2025-01-21",
+      "identifier": "2501.12380v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.12380v1"
+    }
+  ]
+}

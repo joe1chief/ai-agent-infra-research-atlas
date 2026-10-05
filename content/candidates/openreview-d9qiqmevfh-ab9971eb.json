@@ -1,0 +1,57 @@
+{
+  "abstract": "Intra-GPU multiplexing lets Preffll and Decode share one LLM replica while using different GPU resources. The useful split changes with the request mix. Existing controllers can select a new split quickly. But work already submitted under the old split can delay the ffrst useful work under the new split by milliseconds. We call this delay reconffguration debt. We present Logical Stream Virtualization (LSV), an execution layer with stable logical lanes for Preffll and Decode. LSV tracks issued and completed work with resource epochs. It limits future old-epoch commitments and changes both lanes at one safe boundary. We implement LSV in SGLang and evaluate it on an eight-H100 NVLink server across three model scales and two model families. A controlled test shows that host handoff stays near 9.5 µs, while physical activation reaches 16.3 ms after sixteen old-epoch replays. Across the three models, LSV preserves more latency headroom, compliant goodput, and joint SLO attainment as load rises. The results show that adaptive multiplexing needs a runtime contract for when a resource decision becomes physical, not only a policy for which split to choose.",
+  "authors": [],
+  "candidate_id": "openreview:D9QiqmeVfH",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-08-23",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "LSV: EFFICIENT REVERSIBLE GPU MULTIPLEXING FOR LLM SERVING",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=D9QiqmeVfH"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "D9QiqmeVfH"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2027/Conference/-/Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+      "ICLR.cc/2027/Conference/-/Edit"
+    ],
+    "venue": "ICLR 2027 Conference Submission",
+    "venue_id": "ICLR.cc/2027/Conference/Submission"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "LSV: EFFICIENT REVERSIBLE GPU MULTIPLEXING FOR LLM SERVING",
+  "versions": [
+    {
+      "date": "2026-10-03",
+      "identifier": "D9QiqmeVfH",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=D9QiqmeVfH"
+    }
+  ]
+}

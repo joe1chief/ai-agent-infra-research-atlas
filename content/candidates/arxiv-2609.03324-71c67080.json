@@ -1,0 +1,67 @@
+{
+  "abstract": "Reinforcement learning with verifiable rewards (RLVR) improves large language model reasoning, but its practical scaling is constrained by expensive on-policy rollouts and the cost of obtaining reliable targets at scale. Existing methods address sample selection, incomplete supervision, or noisy labels separately, often entangling supervision logic with distributed training and hindering controlled comparison and reuse. We present DE-Venus, a unified framework for data-efficient RLVR that treats supervision as evolving state across data preparation and policy optimization. It organizes this lifecycle into three modules: Active Data Selection allocates training and annotation budgets; Weak Supervision Construction derives learning signals from unlabeled examples; and Training-Time Supervision Refinement filters or corrects unreliable supervision. DE-Venus supports seven representative methods and a data-selection pipeline by expressing method-specific decisions as offline dataset transitions or online transformations of targets, rewards, batches, and advantages while preserving verl's distributed execution contracts. Across public benchmarks and three business scenarios, separate configurations preserve or improve model quality with only 10% of labels or as little as 13% of relevant data; selected business configurations also reduce observed convergence steps by 63%--75%. DE-Venus thus reduces annotation and training costs without sacrificing scalable RL execution.",
+  "authors": [
+    "Shenzhi Yang",
+    "Guangcheng Zhu",
+    "Kai Tang",
+    "Zhengqing Zang",
+    "Xing Zheng",
+    "Haobo Wang",
+    "Yingfan Ma",
+    "Bowen Song",
+    "Bo Han",
+    "Bo An",
+    "Lei Feng",
+    "Weiqiang Wang",
+    "Junbo Zhao",
+    "Gang Chen"
+  ],
+  "candidate_id": "arxiv:2609.03324",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-03",
+    "latest_revision_date": "2026-09-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "DE-Venus: A Data-Efficient RLVR Framework for Large Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.03324"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.03324",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.03324v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "DE-Venus: A Data-Efficient RLVR Framework for Large Language Models",
+  "versions": [
+    {
+      "date": "2026-09-03",
+      "identifier": "2609.03324v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.03324v1"
+    }
+  ]
+}

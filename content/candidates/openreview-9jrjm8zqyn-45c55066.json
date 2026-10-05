@@ -1,0 +1,63 @@
+{
+  "abstract": "Realistic evaluation of LLM serving systems requires online workloads, dynamic arrivals, queueing, and the serving engine’s local scheduling for execution batching, but running such experiments on GPUs is expensive. Existing simulators reduce this cost, but often operate offline or in time-warped mode, re-implement serving-engine schedulers, or require accurate operator/kernel-level latency models. We present LLM-Emu, a serving-native emulator for vLLM that preserves the production HTTP, scheduling, KV-cache, and output-processing paths while replacing only GPU forward execution with profile-sampled latency and synthetic output tokens. Tested on two different GPUs, four model variants, two model families, two attention backends, and both Poisson and bursty ShareGPT workloads, LLM-Emu closely tracks real vLLM serving behavior: TPOT and ITL stay within 4.8% absolute error, E2E latency within 5.3%, and output throughput within 1.9%; TTFT is less stable, with maximum error 10.4%, reflecting its sensitivity to admission and queue state. These results suggest that lightweight, serving-native emulation can support practical online experimentation for LLM-serving systems.LLM-Emu is open sourced at https://github.com/AKafakA/llm-emu.",
+  "authors": [
+    "Wei Da",
+    "Evangelia Kalyvianaki"
+  ],
+  "candidate_id": "openreview:9jrjM8ZQyn",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-06-26",
+    "latest_revision_date": "2026-06-26"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "LLM-Emu:Profile-Driven Native Online Emulation of LLM Serving Systems",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=9jrjM8ZQyn"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "9jrjM8ZQyn"
+  },
+  "raw": {
+    "invitations": [
+      "iscaconf.org/ISCA/2026/Workshop/MLArchSys/-/Submission",
+      "iscaconf.org/ISCA/2026/Workshop/MLArchSys/Submission7/-/Full_Submission",
+      "iscaconf.org/ISCA/2026/Workshop/MLArchSys/-/Submission_Change_Before_Bidding",
+      "iscaconf.org/ISCA/2026/Workshop/MLArchSys/-/Edit",
+      "iscaconf.org/ISCA/2026/Workshop/MLArchSys/-/Submission_Change_Before_Reviewing",
+      "iscaconf.org/ISCA/2026/Workshop/MLArchSys/Submission7/-/Camera_Ready_Revision",
+      "iscaconf.org/ISCA/2026/Workshop/MLArchSys/-/Submission_Release"
+    ],
+    "venue": "MLArchSys 2026 Poster",
+    "venue_id": "iscaconf.org/ISCA/2026/Workshop/MLArchSys"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "kernel"
+    ],
+    "primary_category": "AI-4",
+    "requires_human_confirmation": true
+  },
+  "title": "LLM-Emu:Profile-Driven Native Online Emulation of LLM Serving Systems",
+  "versions": [
+    {
+      "date": "2026-06-26",
+      "identifier": "9jrjM8ZQyn",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=9jrjM8ZQyn"
+    }
+  ]
+}

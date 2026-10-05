@@ -1,0 +1,77 @@
+{
+  "abstract": "The performance of large language models (LLMs) in program synthesis and mathematical reasoning is fundamentally limited by the quality of their pre-training corpora. We introduce two openly licensed pre-training datasets, released under the Llama 3.3 Community License, that significantly enhance LLM performance by systematically rewriting public data. SwallowCode ($\\approx$16.1 billion tokens) refines Python snippets from The-Stack-v2 through a novel four-stage pipeline: syntax validation, pylint-based style filtering, and a two-stage LLM rewriting process that enforces style conformity and transforms snippets into self-contained, algorithmically efficient examples. Unlike prior methods that rely on exclusionary filtering or limited transformations, our transform-and-retain approach refines low-quality code, maximizing data utility. SwallowMath ($\\approx$2.3 billion tokens) enhances Finemath-4+ by removing boilerplate, restoring context, and reformatting solutions into concise, step-by-step explanations. Within a fixed 50 billion token training budget, continual pre-training of Llama-3.1-8B with SwallowCode boosts pass@1 by +17.0 on HumanEval and +16.1 on HumanEval+ compared to Stack-Edu, surpassing the baseline model's code generation capabilities. Similarly, substituting SwallowMath yields +12.4 accuracy on GSM8K and +7.6 on MATH. Ablation studies confirm that each pipeline stage contributes incrementally, with rewriting yielding the largest gains. By releasing datasets, prompts, checkpoints, and pipeline code, we ensure reproducibility and provide a transferable transform-and-retain methodology that can be adapted to other base models and LLM rewriting setups.",
+  "authors": [
+    "Kazuki Fujii",
+    "Yukito Tajima",
+    "Sakae Mizuki",
+    "Masaki Kawamura",
+    "Hinari Shimada",
+    "Taihei Shiotani",
+    "Koshiro Saito",
+    "Masanari Oi",
+    "Taishi Nakamura",
+    "Takumi Okamoto",
+    "Shigeki Ishida",
+    "Kakeru Hattori",
+    "Youmi Ma",
+    "Hiroya Takamura",
+    "Rio Yokota",
+    "Jun Sakuma",
+    "Naoaki Okazaki"
+  ],
+  "candidate_id": "arxiv:2505.02881",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-05",
+    "latest_revision_date": "2026-03-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Rewriting Pre-Training Data Boosts LLM Performance in Math and Code",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.02881"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.02881",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2505.02881v4",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "K.Fujii,Y.Tajima,S.Mizuki,H.Shimada,T.Shiotani,K.Saito,M.Ohi,M.Kawamura,T.Nakamura,T.Okamoto, etal.Rewritingpre-trainingdataboostsllmperformanceinmathandcode.arXivpreprintarXiv:2505.02881,2025.",
+      "page": 69,
+      "reference_number": 60,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Rewriting Pre-Training Data Boosts LLM Performance in Math and Code",
+  "versions": [
+    {
+      "date": "2026-03-01",
+      "identifier": "2505.02881v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.02881v4"
+    }
+  ]
+}

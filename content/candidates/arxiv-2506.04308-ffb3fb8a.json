@@ -1,0 +1,71 @@
+{
+  "abstract": "Spatial referring is a fundamental capability of embodied robots to interact with the 3D physical world. However, even with the powerful pretrained vision language models (VLMs), recent approaches are still not qualified to accurately understand the complex 3D scenes and dynamically reason about the instruction-indicated locations for interaction. To this end, we propose RoboRefer, a 3D-aware VLM that can first achieve precise spatial understanding by integrating a disentangled but dedicated depth encoder via supervised fine-tuning (SFT). Moreover, RoboRefer advances generalized multi-step spatial reasoning via reinforcement fine-tuning (RFT), with metric-sensitive process reward functions tailored for spatial referring tasks. To support SFT and RFT training, we introduce RefSpatial, a large-scale dataset of 20M QA pairs (2x prior), covering 31 spatial relations (vs. 15 prior) and supporting complex reasoning processes (up to 5 steps). In addition, we introduce RefSpatial-Bench, a challenging benchmark filling the gap in evaluating spatial referring with multi-step reasoning. Experiments show that SFT-trained RoboRefer achieves state-of-the-art spatial understanding, with an average success rate of 89.6%. RFT-trained RoboRefer further outperforms all other baselines by a large margin, even surpassing Gemini-2.5-Pro by 17.4% in average accuracy on RefSpatial-Bench. Notably, RoboRefer can be integrated with various control policies to execute long-horizon, dynamic tasks across diverse robots (e,g., UR5, G1 humanoid) in cluttered real-world scenes.",
+  "authors": [
+    "Enshen Zhou",
+    "Jingkun An",
+    "Cheng Chi",
+    "Yi Han",
+    "Shanyu Rong",
+    "Chi Zhang",
+    "Pengwei Wang",
+    "Zhongyuan Wang",
+    "Tiejun Huang",
+    "Lu Sheng",
+    "Shanghang Zhang"
+  ],
+  "candidate_id": "arxiv:2506.04308",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-04",
+    "latest_revision_date": "2026-01-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.04308"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.04308",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted by NeurIPS 2025. Project page: https://zhoues.github.io/RoboRefer/",
+    "pdf_url": "https://arxiv.org/pdf/2506.04308v4",
+    "primary_category": "cs.RO"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "EnshenZhou,JingkunAn,ChengChi,YiHan,ShanyuRong,ChiZhang,PengweiWang,Zhongyuan Wang,TiejunHuang,LuSheng,etal. Roborefer: Towardsspatialreferringwithreasoninginvision- language models for robotics.arXivpreprintarXiv:2506.04308, 2025.",
+      "page": 32,
+      "reference_number": 2058,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics",
+  "versions": [
+    {
+      "date": "2026-01-03",
+      "identifier": "2506.04308v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.04308v4"
+    }
+  ]
+}

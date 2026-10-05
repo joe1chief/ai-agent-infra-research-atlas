@@ -1,0 +1,68 @@
+{
+  "abstract": "Recent advancements in Multi-modal Large Language Models (MLLMs) have led to significant progress in developing GUI agents for general tasks such as web browsing and mobile phone use. However, their application in professional domains remains under-explored. These specialized workflows introduce unique challenges for GUI perception models, including high-resolution displays, smaller target sizes, and complex environments. In this paper, we introduce ScreenSpot-Pro, a new benchmark designed to rigorously evaluate the grounding capabilities of MLLMs in high-resolution professional settings. The benchmark comprises authentic high-resolution images from a variety of professional domains with expert annotations. It spans 23 applications across five industries and three operating systems. Existing GUI grounding models perform poorly on this dataset, with the best model achieving only 18.9%. Our experiments reveal that strategically reducing the search area enhances accuracy. Based on this insight, we propose ScreenSeekeR, a visual search method that utilizes the GUI knowledge of a strong planner to guide a cascaded search, achieving state-of-the-art performance with 48.1% without any additional training. We hope that our benchmark and findings will advance the development of GUI agents for professional applications. Code, data and leaderboard can be found at https://gui-agent.github.io/grounding-leaderboard.",
+  "authors": [
+    "Kaixin Li",
+    "Ziyang Meng",
+    "Hongzhan Lin",
+    "Ziyang Luo",
+    "Yuchen Tian",
+    "Jing Ma",
+    "Zhiyong Huang",
+    "Tat-Seng Chua"
+  ],
+  "candidate_id": "arxiv:2504.07981",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-04",
+    "latest_revision_date": "2025-04-04"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "ScreenSpot-Pro: GUI Grounding for Professional High-Resolution Computer Use",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.07981"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.07981",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "13pages",
+    "pdf_url": "https://arxiv.org/pdf/2504.07981v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "KaixinLi,ZiyangMeng,HongzhanLin,ZiyangLuo,YuchenTian,JingMa,ZhiyongHuang,andTat-SengChua. Screenspot-pro:Guigroundingforprofessionalhigh-resolutioncomputeruse. arXiv preprint arXiv:2504.07981, 2025.",
+      "page": 37,
+      "reference_number": 72,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "ScreenSpot-Pro: GUI Grounding for Professional High-Resolution Computer Use",
+  "versions": [
+    {
+      "date": "2025-04-04",
+      "identifier": "2504.07981v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.07981v1"
+    }
+  ]
+}

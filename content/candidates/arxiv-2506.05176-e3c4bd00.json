@@ -1,0 +1,72 @@
+{
+  "abstract": "In this work, we introduce the Qwen3 Embedding series, a significant advancement over its predecessor, the GTE-Qwen series, in text embedding and reranking capabilities, built upon the Qwen3 foundation models. Leveraging the Qwen3 LLMs' robust capabilities in multilingual text understanding and generation, our innovative multi-stage training pipeline combines large-scale unsupervised pre-training with supervised fine-tuning on high-quality datasets. Effective model merging strategies further ensure the robustness and adaptability of the Qwen3 Embedding series. During the training process, the Qwen3 LLMs serve not only as backbone models but also play a crucial role in synthesizing high-quality, rich, and diverse training data across multiple domains and languages, thus enhancing the training pipeline. The Qwen3 Embedding series offers a spectrum of model sizes (0.6B, 4B, 8B) for both embedding and reranking tasks, addressing diverse deployment scenarios where users can optimize for either efficiency or effectiveness. Empirical evaluations demonstrate that the Qwen3 Embedding series achieves state-of-the-art results across diverse benchmarks. Notably, it excels on the multilingual evaluation benchmark MTEB for text embedding, as well as in various retrieval tasks, including code retrieval, cross-lingual retrieval and multilingual retrieval. To facilitate reproducibility and promote community-driven research and development, the Qwen3 Embedding models are publicly available under the Apache 2.0 license.",
+  "authors": [
+    "Yanzhao Zhang",
+    "Mingxin Li",
+    "Dingkun Long",
+    "Xin Zhang",
+    "Huan Lin",
+    "Baosong Yang",
+    "Pengjun Xie",
+    "An Yang",
+    "Dayiheng Liu",
+    "Junyang Lin",
+    "Fei Huang",
+    "Jingren Zhou"
+  ],
+  "candidate_id": "arxiv:2506.05176",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-05",
+    "latest_revision_date": "2025-06-11"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Qwen3 Embedding: Advancing Text Embedding and Reranking Through Foundation Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.05176"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.05176",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2506.05176v3",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "YanzhaoZhang,MingxinLi,DingkunLong,XinZhang,HuanLin,BaosongYang,Pengjun Xie,An Yang, DayihengLiu,JunyangLin,Fei Huang,andJingren Zhou. Qwen3embedding: Advancing text embedding and reranking through foundation models. arXiv:2506.05176, 2025. URLhttps://arxiv.org/abs/2506.05176.",
+      "page": 16,
+      "reference_number": 26,
+      "report_blob_sha": "9af34430c8e6febcd6e9485c80d3d4f27d9f824e",
+      "report_title": "BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent",
+      "seed_report_path": "2025/anthropic/2025-06_claude-opus-4.5.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Qwen3 Embedding: Advancing Text Embedding and Reranking Through Foundation Models",
+  "versions": [
+    {
+      "date": "2025-06-11",
+      "identifier": "2506.05176v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.05176v3"
+    }
+  ]
+}

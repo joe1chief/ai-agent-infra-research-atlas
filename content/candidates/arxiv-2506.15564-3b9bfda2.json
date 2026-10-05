@@ -1,0 +1,63 @@
+{
+  "abstract": "This paper presents improved native unified multimodal models, \\emph{i.e.,} Show-o2, that leverage autoregressive modeling and flow matching. Built upon a 3D causal variational autoencoder space, unified visual representations are constructed through a dual-path of spatial (-temporal) fusion, enabling scalability across image and video modalities while ensuring effective multimodal understanding and generation. Based on a language model, autoregressive modeling and flow matching are natively applied to the language head and flow head, respectively, to facilitate text token prediction and image/video generation. A two-stage training recipe is designed to effectively learn and scale to larger models. The resulting Show-o2 models demonstrate versatility in handling a wide range of multimodal understanding and generation tasks across diverse modalities, including text, images, and videos. Code and models are released at https://github.com/showlab/Show-o.",
+  "authors": [
+    "Jinheng Xie",
+    "Zhenheng Yang",
+    "Mike Zheng Shou"
+  ],
+  "candidate_id": "arxiv:2506.15564",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-18",
+    "latest_revision_date": "2025-09-22"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Show-o2: Improved Native Unified Multimodal Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.15564"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.15564",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "NeurIPS 2025. (v3: update to include video understanding, OneIG, and more ablation study results)",
+    "pdf_url": "https://arxiv.org/pdf/2506.15564v3",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Jinheng Xie, Zhenheng Yang, and Mike Zheng Shou. Show-o2: Improved native unified multimodal models. arXiv preprint arXiv:2506.15564, 2025b.",
+      "page": 45,
+      "reference_number": 87,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Show-o2: Improved Native Unified Multimodal Models",
+  "versions": [
+    {
+      "date": "2025-09-22",
+      "identifier": "2506.15564v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.15564v3"
+    }
+  ]
+}

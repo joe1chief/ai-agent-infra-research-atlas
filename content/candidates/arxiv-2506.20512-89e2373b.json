@@ -1,0 +1,66 @@
+{
+  "abstract": "Different base language model families, such as Llama and Qwen, exhibit divergent behaviors during post-training with reinforcement learning (RL), especially on reasoning-intensive tasks. What makes a base language model suitable for reinforcement learning? Gaining deeper insight into this question is essential for developing RL-scalable foundation models of the next generation. In this work, we investigate how mid-training strategies shape RL dynamics, focusing on two representative model families: Qwen and Llama. Our study reveals that (1) high-quality mathematical corpora, such as MegaMath-Web-Pro, significantly improve both base model and RL performance, while existing alternatives (e.g., FineMath-4plus) fail to do so; (2) further adding QA-style data, particularly long chain-of-thought (CoT) reasoning examples, enhances RL outcomes, and instruction data further unlocks this effect; (3) while long-CoT improves reasoning depth, it can also induce verbosity of model responses and unstability of RL training, underscoring the importance of data formatting; (4) scaling mid-training consistently leads to stronger downstream RL performance. Building on these insights, we introduce a two-stage mid-training strategy, Stable-then-Decay, in which base models are first trained on 200B tokens with a constant learning rate, followed by 20B tokens across three CoT-focused branches with learning rate decay. This yields OctoThinker, a family of models demonstrating strong RL compatibility and closing the performance gap with more RL-friendly model families, i.e., Qwen. We hope our work will help shape pre-training strategies for foundation models in the RL era. To support further research, we release our open-source models along with a curated math reasoning-intensive corpus of over 70 billion tokens (i.e., MegaMath-Web-Pro-Max).",
+  "authors": [
+    "Zengzhi Wang",
+    "Fan Zhou",
+    "Xuefeng Li",
+    "Pengfei Liu"
+  ],
+  "candidate_id": "arxiv:2506.20512",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-25",
+    "latest_revision_date": "2025-06-25"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "OctoThinker: Mid-training Incentivizes Reinforcement Learning Scaling",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.20512"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.20512",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "26 pages; The first three authors contribute to this work equally",
+    "pdf_url": "https://arxiv.org/pdf/2506.20512v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Z.Wang,F.Zhou,X.Li,andP.Liu.Octothinker:Mid-trainingincentivizesreinforcementlearningscaling.arXiv preprintarXiv:2506.20512,2025.",
+      "page": 80,
+      "reference_number": 224,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "post-training"
+    ],
+    "primary_category": "AI-3",
+    "requires_human_confirmation": true
+  },
+  "title": "OctoThinker: Mid-training Incentivizes Reinforcement Learning Scaling",
+  "versions": [
+    {
+      "date": "2025-06-25",
+      "identifier": "2506.20512v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.20512v1"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "abstract": "Recent advances in Large Language Models (LLMs) and Vision Language Models (VLMs) have shown significant progress in mathematical reasoning, yet they still face a critical bottleneck with problems requiring visual assistance, such as drawing auxiliary lines or plotting functions to solve the problems. Most LLMs and VLMs are constrained to text-only reasoning chains, while multimodal unified models that can generate interleaved text and images lack the necessary precision and controllability for such tasks. To address this, we propose CodePlot-CoT, a code-driven Chain-of-Thought paradigm for \"thinking with images\" in mathematics. Our approach leverages the VLM to generate text reasoning as well as executable plotting code, which is then rendered into images as \"visual thought\", to solve mathematical problems. To achieve this, we first construct Math-VR, the first large-scale, bilingual dataset and benchmark for Mathematics problems with Visual Reasoning, comprising 178K samples. Second, to create high-quality training data, we develop a state-of-the-art image-to-code converter specialized for parsing complex mathematical figures into codes. Finally, using these training data, we train the CodePlot-CoT model for solving mathematical problems. Experimental results show that our model achieves up to 21% increase over base model on our new benchmark, fully validating the efficacy of our proposed code-driven reasoning paradigm. Our work opens a new direction for multimodal mathematical reasoning and provides the community with the first large-scale dataset, comprehensive benchmark, and strong approach for such problems. To facilitate future research, we make our datasets, code, and pretrained models publicly available at https://github.com/HKU-MMLab/Math-VR-CodePlot-CoT.",
+  "authors": [
+    "Chengqi Duan",
+    "Kaiyue Sun",
+    "Rongyao Fang",
+    "Manyuan Zhang",
+    "Yan Feng",
+    "Ying Luo",
+    "Yufang Liu",
+    "Ke Wang",
+    "Peng Pei",
+    "Xunliang Cai",
+    "Hongsheng Li",
+    "Yi Ma",
+    "Xihui Liu"
+  ],
+  "candidate_id": "arxiv:2510.11718",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-10-13",
+    "latest_revision_date": "2025-10-13"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "CodePlot-CoT: Mathematical Visual Reasoning by Thinking with Code-Driven Images",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.11718"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2510.11718",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2510.11718v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "ChengqiDuan,KaiyueSun,RongyaoFang,ManyuanZhang,YanFeng,YingLuo,YufangLiu,KeWang, Peng Pei, Xunliang Cai, et al. Codeplot-cot: Mathematical visual reasoning by thinking with code- driven images.arXivpreprintarXiv:2510.11718, 2025.",
+      "page": 27,
+      "reference_number": 17,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "CodePlot-CoT: Mathematical Visual Reasoning by Thinking with Code-Driven Images",
+  "versions": [
+    {
+      "date": "2025-10-13",
+      "identifier": "2510.11718v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.11718v1"
+    }
+  ]
+}

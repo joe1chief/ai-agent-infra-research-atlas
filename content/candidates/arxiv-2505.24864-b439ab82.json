@@ -1,0 +1,68 @@
+{
+  "abstract": "Recent advances in reasoning-centric language models have highlighted reinforcement learning (RL) as a promising method for aligning models with verifiable rewards. However, it remains contentious whether RL truly expands a model's reasoning capabilities or merely amplifies high-reward outputs already latent in the base model's distribution, and whether continually scaling up RL compute reliably leads to improved reasoning performance. In this work, we challenge prevailing assumptions by demonstrating that prolonged RL (ProRL) training can uncover novel reasoning strategies that are inaccessible to base models, even under extensive sampling. We introduce ProRL, a novel training methodology that incorporates KL divergence control, reference policy resetting, and a diverse suite of tasks. Our empirical analysis reveals that RL-trained models consistently outperform base models across a wide range of pass@k evaluations, including scenarios where base models fail entirely regardless of the number of attempts. We further show that reasoning boundary improvements correlates strongly with task competence of base model and training duration, suggesting that RL can explore and populate new regions of solution space over time. These findings offer new insights into the conditions under which RL meaningfully expands reasoning boundaries in language models and establish a foundation for future work on long-horizon RL for reasoning. We release model weights to support further research: https://huggingface.co/nvidia/Nemotron-Research-Reasoning-Qwen-1.5B",
+  "authors": [
+    "Mingjie Liu",
+    "Shizhe Diao",
+    "Ximing Lu",
+    "Jian Hu",
+    "Xin Dong",
+    "Yejin Choi",
+    "Jan Kautz",
+    "Yi Dong"
+  ],
+  "candidate_id": "arxiv:2505.24864",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-30",
+    "latest_revision_date": "2025-05-30"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.24864"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.24864",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "26 pages, 17 figures",
+    "pdf_url": "https://arxiv.org/pdf/2505.24864v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "M.Liu,S.Diao,X.Lu,J.Hu,X.Dong,Y.Choi,J.Kautz,andY.Dong.Prorl:Prolongedreinforcementlearningexpands reasoningboundariesinlargelanguagemodels.arXivpreprint,2025a.URL https://arxiv.org/abs/2505.24864.",
+      "page": 74,
+      "reference_number": 125,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models",
+  "versions": [
+    {
+      "date": "2025-05-30",
+      "identifier": "2505.24864v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.24864v1"
+    }
+  ]
+}

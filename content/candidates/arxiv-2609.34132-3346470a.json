@@ -1,0 +1,60 @@
+{
+  "abstract": "As LLM agents increasingly rely on persistent memory for long-horizon and personalized behavior, they can retain and reuse information across interactions, but this also creates a lasting channel through which malicious memory writes can influence future behavior. Persistent-memory attacks are typically evaluated by whether they succeed, yet successful attacks can leave persistent states with substantially different downstream consequences. We study this severity as a distinct attack-design objective and formalize it with counterfactual memory regret (CMR), the paired increase in expected downstream loss relative to clean memory. We introduce MemHarm, which predeclares a finite class of sparse, grounded semantic edits, evaluates candidates through the normal agent memory interface using offline paired-loss feedback, and certifies resolved selections within that class. Compared with attack-success optimization, CMR-guided selection produces substantially larger downstream loss while retaining most of the success-rate gain. Across two agent benchmarks and diverse memory designs, MemHarm attains the highest CMR point estimates among the evaluated general attacks on identical support. Factor-removal interventions link this harm to the selected semantic factor, and native-agent deployments verify the write-to-fresh-process attack path.",
+  "authors": [
+    "Mingxi Zou",
+    "Langzhang Liang",
+    "Zhuo Wang",
+    "Yiyang Zhao",
+    "Lizhen Qu",
+    "Zenglin Xu"
+  ],
+  "candidate_id": "arxiv:2609.34132",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "From Attack Success to Attack Severity: Counterfactual Memory Attacks on LLM Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34132"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34132",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.34132v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory",
+      "persistent state"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "From Attack Success to Attack Severity: Counterfactual Memory Attacks on LLM Agents",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.34132v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34132v1"
+    }
+  ]
+}

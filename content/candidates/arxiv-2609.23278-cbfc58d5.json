@@ -1,0 +1,58 @@
+{
+  "abstract": "Trace-driven simulation is widely used to evaluate distributed training (DT) jobs in GPU clusters, but existing simulators either ignore network contention or approximate it with a fixed penalty. This misses how scheduling decisions determine which jobs share server network interfaces and inter-server links, thereby changing networking time during training. As a result, our motivating experiments demonstrate that they incur large errors, reaching up to 73.64% mean absolute percentage error (MAPE) in average job completion time (JCT). This paper introduces MoSim, a GPU-cluster simulator that models DT job execution under dynamic network contention. MoSim combines GPU-free characterization with network contention model: it obtains each job's compute time, networking time, and networking volume without GPUs, then uses the current worker assignment to estimate how shared network interfaces affect each job's iteration time. Our evaluation shows that, compared with existing simulators, MoSim reduces simulation error for average JCT by up to 3.28$\\times$, tail (99th-percentile) JCT by up to 7.79$\\times$, and makespan by up to 8.48$\\times$, while modeling NIC contention factors with only 8.63% error on average. By avoiding real-GPU profiling, MoSim also reduces input construction overhead by 44.6$\\times$.",
+  "authors": [
+    "Yeonho Yoo",
+    "Hyunho Lee",
+    "Hyunmok Choi",
+    "Chuck Yoo",
+    "Gyeongsik Yang"
+  ],
+  "candidate_id": "arxiv:2609.23278",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-20",
+    "latest_revision_date": "2026-09-20"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Accurate Simulation of Distributed Training Jobs with Network Contention Modeling",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.23278"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.23278",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "8 pages, 4 figures, 5 tables. Accepted for publication in IEEE MASCOTS 2026. Code: https://github.com/OSSS-KU/MoSim",
+    "pdf_url": "https://arxiv.org/pdf/2609.23278v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Accurate Simulation of Distributed Training Jobs with Network Contention Modeling",
+  "versions": [
+    {
+      "date": "2026-09-20",
+      "identifier": "2609.23278v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.23278v1"
+    }
+  ]
+}

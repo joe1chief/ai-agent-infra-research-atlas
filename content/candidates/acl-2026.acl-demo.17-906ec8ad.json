@@ -1,0 +1,64 @@
+{
+  "abstract": "",
+  "authors": [
+    "Yu Jiang",
+    "Wenjie Wang",
+    "Yue Huang",
+    "Yanbo Wang",
+    "Zhenhong Zhou",
+    "Xiuying Chen",
+    "Yang Liu",
+    "Pin-Yu Chen",
+    "Wei Wang",
+    "Xiangliang Zhang"
+  ],
+  "candidate_id": "acl:2026.acl-demo.17",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-07-01",
+    "latest_revision_date": "2026-07-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "RiskLab: A Controlled Toolkit for Probing Emergent Risks in LLM-Based Multi-Agent Systems",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2026.acl-demo.17/"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.acl-demo.17",
+    "openreview": null
+  },
+  "raw": {
+    "anthology_id": "2026.acl-demo.17",
+    "venue": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_metadata_provides_month_only:2026-07"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "RiskLab: A Controlled Toolkit for Probing Emergent Risks in LLM-Based Multi-Agent Systems",
+  "versions": [
+    {
+      "date": "2026-07-01",
+      "identifier": "2026.acl-demo.17",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2026.acl-demo.17/"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "abstract": "We present BrowseComp, a simple yet challenging benchmark for measuring the ability for agents to browse the web. BrowseComp comprises 1,266 questions that require persistently navigating the internet in search of hard-to-find, entangled information. Despite the difficulty of the questions, BrowseComp is simple and easy-to-use, as predicted answers are short and easily verifiable against reference answers. BrowseComp for browsing agents can be seen as analogous to how programming competitions are an incomplete but useful benchmark for coding agents. While BrowseComp sidesteps challenges of a true user query distribution, like generating long answers or resolving ambiguity, it measures the important core capability of exercising persistence and creativity in finding information. BrowseComp can be found at https://github.com/openai/simple-evals.",
+  "authors": [
+    "Jason Wei",
+    "Zhiqing Sun",
+    "Spencer Papay",
+    "Scott McKinney",
+    "Jeffrey Han",
+    "Isa Fulford",
+    "Hyung Won Chung",
+    "Alex Tachard Passos",
+    "William Fedus",
+    "Amelia Glaese"
+  ],
+  "candidate_id": "arxiv:2504.12516",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-16",
+    "latest_revision_date": "2025-04-16"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.12516"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.12516",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2504.12516v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung, Alex Tachard Passos, William Fedus, and Amelia Glaese. Browsecomp: A simple yet challenging benchmark for browsing agents. arXiv:2504.12516, 2025. URL https: //arxiv.org/abs/2504.12516.",
+      "page": 14,
+      "reference_number": 1,
+      "report_blob_sha": "9af34430c8e6febcd6e9485c80d3d4f27d9f824e",
+      "report_title": "BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent",
+      "seed_report_path": "2025/anthropic/2025-06_claude-opus-4.5.pdf"
+    },
+    {
+      "context": "J. Wei, Z. Sun, S. Papay, S. McKinney, J. Han, I. Fulford, H. W. Chung, A. T. Passos, W. Fedus, andA.Glaese. Browsecomp: Asimpleyetchallengingbenchmarkforbrowsingagents. arXiv preprint arXiv:2504.12516, 2025.",
+      "page": 19,
+      "reference_number": 2022,
+      "report_blob_sha": "7b826f2c6de06230d8e3860b97d16add28f1ae24",
+      "report_title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models",
+      "seed_report_path": "2025/deepseek/2025-12_deepseek-v3.2.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents",
+  "versions": [
+    {
+      "date": "2025-04-16",
+      "identifier": "2504.12516v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.12516v1"
+    }
+  ]
+}

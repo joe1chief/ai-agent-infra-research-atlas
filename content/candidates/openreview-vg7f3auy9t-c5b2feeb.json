@@ -1,0 +1,64 @@
+{
+  "abstract": "The rapid evolution of Large Language Model (LLM) inference systems has yielded significant efficiency improvements. However, our systematic analysis reveals that current evaluation methodologies frequently exhibit fundamental flaws, often manifesting as common evaluation anti-patterns that obscure true performance characteristics and impede scientific progress. Through a comprehensive examination of recent systems, we identify recurring anti-patterns across three key dimensions: Baseline Fairness, Evaluation Setup, and Metric Design. These anti-patterns are uniquely problematic for LLM inference due to its dual-phase nature combining distinct prefill and decode operations, its handling of highly heterogeneous workloads, and its strict temporal requirements for interactive use. We demonstrate how common anti-patterns -- such as inadequate baseline comparisons that conflate engineering effort with algorithmic novelty, workload selections that fail to represent production scenarios, and metric normalizations that hide substantial performance variability like generation stalls-lead to misleading conclusions. To address these challenges, we provide a comprehensive checklist derived from our analysis, establishing a framework for recognizing and avoiding these anti-patterns in favor of robust LLM inference evaluation. To demonstrate the practical application of our framework, we present a case study analyzing speculative decoding, a technique whose bursty, non-uniform token generation is easily misinterpreted when evaluated using approaches characteristic of these anti-patterns. Our work establishes a rigorous foundation for evaluation methodology, enabling meaningful comparisons, ensuring reproducible results, and ultimately accelerating genuine progress in LLM inference systems by moving beyond common anti-patterns to align evaluation with real-world requirements.",
+  "authors": [
+    "{'fullname': 'Amey Agrawal', 'username': ''}",
+    "{'fullname': 'Nitin Kedia', 'username': ''}",
+    "{'fullname': 'Anmol Agarwal', 'username': ''}",
+    "{'fullname': 'Jayashree Mohan', 'username': ''}",
+    "{'fullname': 'Nipun Kwatra', 'username': ''}",
+    "{'fullname': 'Souvik Kundu', 'username': ''}",
+    "{'fullname': 'Ramachandran Ramjee', 'username': ''}",
+    "{'fullname': 'Alexey Tumanov', 'username': '~Alexey_Tumanov1'}"
+  ],
+  "candidate_id": "openreview:VG7F3Auy9T",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-12-31",
+    "latest_revision_date": "2026-05-26"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "On Evaluating Performance of LLM Inference Serving Systems",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=VG7F3Auy9T"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "VG7F3Auy9T"
+  },
+  "raw": {
+    "invitations": [
+      "OpenReview.net/Public_Article/DBLP.org/-/Record",
+      "OpenReview.net/Public_Article/-/Edit"
+    ],
+    "venue": "CoRR 2025",
+    "venue_id": "OpenReview.net/Public_Article"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "inference serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "On Evaluating Performance of LLM Inference Serving Systems",
+  "versions": [
+    {
+      "date": "2026-05-26",
+      "identifier": "VG7F3Auy9T",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=VG7F3Auy9T"
+    }
+  ]
+}

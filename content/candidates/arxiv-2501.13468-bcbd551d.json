@@ -1,0 +1,67 @@
+{
+  "abstract": "Recent advances in Large Language Models (LLMs) have enabled the development of Video-LLMs, advancing multimodal learning by bridging video data with language tasks. However, current video understanding models struggle with processing long video sequences, supporting multi-turn dialogues, and adapting to real-world dynamic scenarios. To address these issues, we propose StreamChat, a training-free framework for streaming video reasoning and conversational interaction. $\\StreamChat$ leverages a novel hierarchical memory system to efficiently process and compress video features over extended sequences, enabling real-time, multi-turn dialogue. Our framework incorporates a parallel system scheduling strategy that enhances processing speed and reduces latency, ensuring robust performance in real-world applications. Furthermore, we introduce StreamBench, a versatile benchmark that evaluates streaming video understanding across diverse media types and interactive scenarios, including multi-turn interactions and complex reasoning tasks. Extensive evaluations on StreamBench and other public benchmarks demonstrate that StreamChat significantly outperforms existing state-of-the-art models in terms of accuracy and response times, confirming its effectiveness for streaming video understanding. Code is available at StreamChat: https://github.com/hmxiong/StreamChat.",
+  "authors": [
+    "Haomiao Xiong",
+    "Zongxin Yang",
+    "Jiazuo Yu",
+    "Yunzhi Zhuge",
+    "Lu Zhang",
+    "Jiawen Zhu",
+    "Huchuan Lu"
+  ],
+  "candidate_id": "arxiv:2501.13468",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-23",
+    "latest_revision_date": "2025-01-23"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Streaming Video Understanding and Multi-round Interaction with Memory-enhanced Knowledge",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.13468"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2501.13468",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted to ICLR 2025. Code is available at https://github.com/hmxiong/StreamChat",
+    "pdf_url": "https://arxiv.org/pdf/2501.13468v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "HaomiaoXiong,ZongxinYang,JiazuoYu,YunzhiZhuge,LuZhang,JiawenZhu,andHuchuanLu.Stream- ing video understanding and multi-round interaction with memory-enhanced knowledge. arXiv preprint arXiv:2501.13468,2025.",
+      "page": 41,
+      "reference_number": 153,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Streaming Video Understanding and Multi-round Interaction with Memory-enhanced Knowledge",
+  "versions": [
+    {
+      "date": "2025-01-23",
+      "identifier": "2501.13468v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.13468v1"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "abstract": "Recently, large language models have shown great potential to transform online medical consultation. Despite this, most research targets improving diagnostic accuracy with ample information, often overlooking the inquiry phase. Some studies try to evaluate or refine doctor models by using prompt-engineered patient agents. However, prompt engineering alone falls short in accurately simulating real patients. We need to explore new paradigms for patient simulation. Furthermore, the relationship between inquiry and diagnosis remains unexplored. This paper extracts dialogue strategies from real doctor-patient conversations to guide the training of a patient simulator. Our simulator shows higher anthropomorphism and lower hallucination rates, using dynamic dialogue strategies. This innovation offers a more accurate evaluation of diagnostic models and generates realistic synthetic data. We conduct extensive experiments on the relationship between inquiry and diagnosis, showing they adhere to Liebig's law: poor inquiry limits diagnosis effectiveness, regardless of diagnostic skill, and vice versa. The experiments also reveal substantial differences in inquiry performance among models. To delve into this phenomenon, the inquiry process is categorized into four distinct types. Analyzing the distribution of inquiries across these types helps explain the performance differences. The weights of our patient simulator are available https://github.com/PatientSimulator/PatientSimulator.",
+  "authors": [
+    "Zhaocheng Liu",
+    "Quan Tu",
+    "Wen Ye",
+    "Yu Xiao",
+    "Zhishou Zhang",
+    "Hengfu Cui",
+    "Yalun Zhu",
+    "Qiang Ju",
+    "Shizheng Li",
+    "Jian Xie"
+  ],
+  "candidate_id": "arxiv:2501.09484",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-16",
+    "latest_revision_date": "2025-03-11"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Exploring the Inquiry-Diagnosis Relationship with Advanced Patient Simulators",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.09484"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2501.09484",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2501.09484v2",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "ZhaochengLiu,QuanTu,WenYe,YuXiao,ZhishouZhang,HengfuCui,YalunZhu,Qiang Ju, Shizheng Li, and Jian Xie. Exploring the inquiry-diagnosis relationship with advanced patient simulators. CoRR, abs/2501.09484, 2025. doi: 10.48550/ARXIV.2501.09484. URL https://doi.org/10.48550/arXiv.2501.09484.",
+      "page": 20,
+      "reference_number": 16,
+      "report_blob_sha": "1440b7598461aab612c9a34dcd9af383a2682b01",
+      "report_title": "Baichuan-M2: Scaling Medical Capability with Large Verifier System",
+      "seed_report_path": "2025/baichuan/2025-09_baichuan-m2.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Exploring the Inquiry-Diagnosis Relationship with Advanced Patient Simulators",
+  "versions": [
+    {
+      "date": "2025-03-11",
+      "identifier": "2501.09484v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.09484v2"
+    }
+  ]
+}

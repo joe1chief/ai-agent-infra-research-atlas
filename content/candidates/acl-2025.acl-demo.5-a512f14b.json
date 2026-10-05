@@ -1,0 +1,81 @@
+{
+  "abstract": "",
+  "authors": [
+    "Shihan Dou",
+    "Jiazheng Zhang",
+    "Jianxiang Zang",
+    "Yunbo Tao",
+    "Weikang Zhou",
+    "Haoxiang Jia",
+    "Shichun Liu",
+    "Yuming Yang",
+    "Shenxi Wu",
+    "Zhiheng Xi",
+    "Muling Wu",
+    "Rui Zheng",
+    "Changze Lv",
+    "Limao Xiong",
+    "Shaoqing Zhang",
+    "Lin Zhang",
+    "Wenyu Zhan",
+    "Rongxiang Weng",
+    "Jingang Wang",
+    "Xunliang Cai",
+    "Yueming Wu",
+    "Ming Wen",
+    "Yixin Cao",
+    "Tao Gui",
+    "Xipeng Qiu",
+    "Qi Zhang",
+    "Xuanjing Huang"
+  ],
+  "candidate_id": "acl:2025.acl-demo.5",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-07-01",
+    "latest_revision_date": "2025-07-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "Multi-Programming Language Sandbox for LLMs",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2025.acl-demo.5/"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-demo.5",
+    "openreview": null
+  },
+  "raw": {
+    "anthology_id": "2025.acl-demo.5",
+    "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_metadata_provides_month_only:2025-07"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "sandbox"
+    ],
+    "primary_category": "AG-3",
+    "requires_human_confirmation": true
+  },
+  "title": "Multi-Programming Language Sandbox for LLMs",
+  "versions": [
+    {
+      "date": "2025-07-01",
+      "identifier": "2025.acl-demo.5",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2025.acl-demo.5/"
+    }
+  ]
+}

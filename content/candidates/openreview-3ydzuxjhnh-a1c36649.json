@@ -1,0 +1,63 @@
+{
+  "abstract": "Large Language Models (LLMs) are revolutionizing numerous industries, but their substantial computational demands create challenges for efficient deployment, particularly in cloud environments. Traditional approaches to inference serving often struggle with resource inefficiencies, leading to high operational costs, latency issues, and limited scalability. This article explores how Cloud Native technologies, such as containerization, microservices, and dynamic scheduling, can fundamentally improve LLM inference serving. By leveraging these technologies, we demonstrate how a Cloud Native system enables more efficient resource allocation, reduces latency, and enhances throughput in high-demand scenarios. Through real-world evaluations using Kubernetes-based autoscaling, we show that Cloud Native architectures can dynamically adapt to workload fluctuations, mitigating performance bottlenecks while optimizing LLM inference serving performance. This discussion provides a broader perspective on how Cloud Native frameworks could reshape the future of scalable LLM inference serving, offering key insights for researchers, practitioners, and industry leaders in cloud computing and artificial intelligence.",
+  "authors": [
+    "Minxian Xu",
+    "Junhan Liao",
+    "Jingfeng Wu",
+    "Yiyuan He",
+    "Kejiang Ye",
+    "ChengZhong Xu"
+  ],
+  "candidate_id": "openreview:3YDzuxjhnh",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-12-31",
+    "latest_revision_date": "2026-01-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Cloud Native System for LLM Inference Serving",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=3YDzuxjhnh"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "3YDzuxjhnh"
+  },
+  "raw": {
+    "invitations": [
+      "DBLP.org/-/Record",
+      "DBLP.org/-/Edit",
+      "DBLP.org/-/Author_Coreference"
+    ],
+    "venue": "CoRR 2025",
+    "venue_id": "dblp.org/journals/CORR/2025"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "inference serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Cloud Native System for LLM Inference Serving",
+  "versions": [
+    {
+      "date": "2026-01-27",
+      "identifier": "3YDzuxjhnh",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=3YDzuxjhnh"
+    }
+  ]
+}

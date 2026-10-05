@@ -1,0 +1,58 @@
+{
+  "abstract": "LLM inference systems may vary batch composition, prompt chunking, prefill/decode execution, and KV-cache reuse, eviction, or recomputation. These optimizations should not affect system outputs. Production systems, including vLLM's batch-invariant mode and SGLang's deterministic mode, target this goal but lack a formal system-level specification. We formalize deterministic LLM inference: under a fixed model and deployment configuration, requests with the same prompt and initial sampler state produce bitwise-identical logits at corresponding output positions across executions. Our tests find that these production modes produce different logits under some execution variations. To address this limitation, we present Vosti, an inference engine designed and verified against this specification. Vosti chooses kernels independently of runtime engine state and ties cached KV values to their logical token prefixes. Its proof decomposes at the engine/GPU kernel boundary: a Verus inductive proof establishes that scheduling and the paged, prefix-sharing KV-cache preserve output logits, while a Triton analyzer proves bitwise-equal selected kernel outputs across batches, query lengths, and paged KV-cache layouts. Vosti produces bitwise-identical logits across every tested execution variation and achieves performance comparable to vLLM's batch-invariant mode on decode-heavy workloads, while providing a stronger, formally verified determinism guarantee.",
+  "authors": [
+    "Jianxing Qin",
+    "Alexander Du",
+    "Danfeng Zhang",
+    "Matthew Lentz",
+    "Danyang Zhuo"
+  ],
+  "candidate_id": "arxiv:2609.38981",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-30",
+    "latest_revision_date": "2026-09-30"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Vosti: Specifying, Implementing, and Verifying Deterministic LLM Inference",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.38981"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.38981",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.38981v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "kernel"
+    ],
+    "primary_category": "AI-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Vosti: Specifying, Implementing, and Verifying Deterministic LLM Inference",
+  "versions": [
+    {
+      "date": "2026-09-30",
+      "identifier": "2609.38981v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.38981v1"
+    }
+  ]
+}

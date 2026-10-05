@@ -1,0 +1,72 @@
+{
+  "abstract": "Recent advancements in large language models (LLMs) have demonstrated significant progress in math and code reasoning capabilities. However, existing code benchmark are limited in their ability to evaluate the full spectrum of these capabilities, particularly at the competitive level. To bridge this gap, we introduce OJBench, a novel and challenging benchmark designed to assess the competitive-level code reasoning abilities of LLMs. OJBench comprises 232 programming competition problems from NOI and ICPC, providing a more rigorous test of models' reasoning skills. We conducted a comprehensive evaluation using OJBench on 37 models, including both closed-source and open-source models, reasoning-oriented and non-reasoning-oriented models. Our results indicate that even state-of-the-art reasoning-oriented models, such as o4-mini and Gemini-2.5-pro-exp, struggle with highly challenging competition-level problems. This highlights the significant challenges that models face in competitive-level code reasoning.",
+  "authors": [
+    "Zhexu Wang",
+    "Yiping Liu",
+    "Yejie Wang",
+    "Wenyang He",
+    "Bofei Gao",
+    "Muxi Diao",
+    "Yanxu Chen",
+    "Kelin Fu",
+    "Flood Sung",
+    "Zhilin Yang",
+    "Tianyu Liu",
+    "Weiran Xu"
+  ],
+  "candidate_id": "arxiv:2506.16395",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-19",
+    "latest_revision_date": "2026-03-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "OJBench: A Competition Level Code Benchmark For Large Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.16395"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.16395",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "9 pages, 5 figures",
+    "pdf_url": "https://arxiv.org/pdf/2506.16395v2",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Zhexu Wang, Yiping Liu, Yejie Wang, Wenyang He, Bofei Gao, Muxi Diao, Yanxu Chen, Kelin Fu, FloodSung,ZhilinYang,TianyuLiu,andWeiranXu. Ojbench: Acompetitionlevelcodebenchmark for large language models.CoRR, abs/2506.16395, 2025c. doi: 10.48550/ARXIV.2506.16395. URL https://doi.org/10.48550/arXiv.2506.16395.",
+      "page": 31,
+      "reference_number": 2035,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "OJBench: A Competition Level Code Benchmark For Large Language Models",
+  "versions": [
+    {
+      "date": "2026-03-02",
+      "identifier": "2506.16395v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.16395v2"
+    }
+  ]
+}

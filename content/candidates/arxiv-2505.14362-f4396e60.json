@@ -1,0 +1,68 @@
+{
+  "abstract": "Large Vision-Language Models excel at multimodal understanding but struggle to deeply integrate visual information into their predominantly text-based reasoning processes, a key challenge in mirroring human cognition. To address this, we introduce DeepEyes, a model that learns to \"think with images\", trained end-to-end with reinforcement learning without requiring pre-collected reasoning data for cold-start supervised fine-tuning (SFT). Notably, this ability emerges natively, leveraging the model's own grounding capability as an intrinsic function rather than relying on external specialized models or APIs. We enable this capability through active perception, where the model learns to strategically ground its reasoning in visual information, guided by a tailored data selection and reward strategy. DeepEyes achieves significant performance gains on general perception and reasoning benchmarks and also demonstrates improvement in grounding, hallucination, and mathematical reasoning tasks. Interestingly, we observe the distinct evolution of active perception from initial exploration to efficient and accurate exploitation, and diverse thinking patterns that closely mirror human visual reasoning processes. Code is available at https://github.com/Visual-Agent/DeepEyes.",
+  "authors": [
+    "Ziwei Zheng",
+    "Michael Yang",
+    "Jack Hong",
+    "Chenxiao Zhao",
+    "Guohai Xu",
+    "Le Yang",
+    "Chao Shen",
+    "Xing Yu"
+  ],
+  "candidate_id": "arxiv:2505.14362",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-20",
+    "latest_revision_date": "2026-03-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "DeepEyes: Incentivizing \"Thinking with Images\" via Reinforcement Learning",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.14362"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.14362",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted by ICLR2026. Ziwei, Michael, Jack, and Chenxiao are equal-contribution. The list order is random",
+    "pdf_url": "https://arxiv.org/pdf/2505.14362v3",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Ziwei Zheng, Michael Yang, Jack Hong, Chenxiao Zhao, Guohai Xu, Le Yang, Chao Shen, and Xing Yu. Deepeyes: Incentivizing\" thinking with images\" via reinforcement learning.arXiv preprint arXiv:2505.14362, 2025.",
+      "page": 32,
+      "reference_number": 2057,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "DeepEyes: Incentivizing \"Thinking with Images\" via Reinforcement Learning",
+  "versions": [
+    {
+      "date": "2026-03-01",
+      "identifier": "2505.14362v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.14362v3"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "abstract": "Large Audio Language Models (LALMs), where pretrained text LLMs are finetuned with audio input, have made remarkable progress in music understanding. However, current evaluation methodologies exhibit critical limitations: on the leading Music Question Answering benchmark, MuchoMusic, text-only LLMs without audio perception capabilities achieve surprisingly high accuracy of up to 56.4%, on par or above most LALMs. Furthermore, when presented with random Gaussian noise instead of actual audio, LALMs still perform significantly above chance. These findings suggest existing benchmarks predominantly assess reasoning abilities rather than audio perception. To overcome this challenge, we present RUListening: Robust Understanding through Listening, a framework that enhances perceptual evaluation in Music-QA benchmarks. We introduce the Perceptual Index (PI), a quantitative metric that measures a question's reliance on audio perception by analyzing log probability distributions from text-only language models. Using this metric, we generate synthetic, challenging distractors to create QA pairs that necessitate genuine audio perception. When applied to MuchoMusic, our filtered dataset successfully forces models to rely on perceptual information-text-only LLMs perform at chance levels, while LALMs similarly deteriorate when audio inputs are replaced with noise. These results validate our framework's effectiveness in creating benchmarks that more accurately evaluate audio perception capabilities.",
+  "authors": [
+    "Yongyi Zang",
+    "Sean O'Brien",
+    "Taylor Berg-Kirkpatrick",
+    "Julian McAuley",
+    "Zachary Novack"
+  ],
+  "candidate_id": "arxiv:2504.00369",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-01",
+    "latest_revision_date": "2025-06-10"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Are you really listening? Boosting Perceptual Awareness in Music-QA Benchmarks",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.00369"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.00369",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "ISMIR 2025",
+    "pdf_url": "https://arxiv.org/pdf/2504.00369v2",
+    "primary_category": "cs.SD"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "YongyiZang,SeanO’Brien,TaylorBerg-Kirkpatrick,JulianMcAuley,andZacharyNovack. Areyoureally listening? boosting perceptual awareness in music-qa benchmarks.arXiv preprint arXiv:2504.00369, 2025.",
+      "page": 25,
+      "reference_number": 68,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Are you really listening? Boosting Perceptual Awareness in Music-QA Benchmarks",
+  "versions": [
+    {
+      "date": "2025-06-10",
+      "identifier": "2504.00369v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.00369v2"
+    }
+  ]
+}

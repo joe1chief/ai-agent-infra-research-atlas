@@ -1,0 +1,101 @@
+{
+  "abstract": "We introduce K2-V2, a 360-open LLM built from scratch as a superior base for reasoning adaptation, in addition to functions such as conversation and knowledge retrieval from general LLMs. It stands as the strongest fully open model, rivals open-weight leaders in its size class, outperforms Qwen2.5-72B and approaches the performance of Qwen3-235B. We actively infuse domain knowledge, reasoning, long-context, and tool use throughout the training process. This explicitly prepares the model for complex reasoning tasks. We demonstrate this potential using simple supervised fine-tuning, establishing a strong baseline that indicates significant headroom for advanced alignment. By releasing the full training history and data composition, we maximize the effectiveness of continuous training, a key open source production scenario. We release the model weights and signature LLM360 artifacts, such as complete training data, to empower the community with a capable, reasoning-centric foundation.",
+  "authors": [
+    "K2 Team",
+    "Zhengzhong Liu",
+    "Liping Tang",
+    "Linghao Jin",
+    "Haonan Li",
+    "Nikhil Ranjan",
+    "Desai Fan",
+    "Shaurya Rohatgi",
+    "Richard Fan",
+    "Omkar Pangarkar",
+    "Huijuan Wang",
+    "Zhoujun Cheng",
+    "Suqi Sun",
+    "Seungwook Han",
+    "Bowen Tan",
+    "Gurpreet Gosal",
+    "Xudong Han",
+    "Varad Pimpalkhute",
+    "Shibo Hao",
+    "Ming Shan Hee",
+    "Joel Hestness",
+    "Haolong Jia",
+    "Liqun Ma",
+    "Aaryamonvikram Singh",
+    "Daria Soboleva",
+    "Natalia Vassilieva",
+    "Renxi Wang",
+    "Yingquan Wu",
+    "Yuekai Sun",
+    "Taylor Killian",
+    "Alexander Moreno",
+    "John Maggs",
+    "Hector Ren",
+    "Guowei He",
+    "Hongyi Wang",
+    "Xuezhe Ma",
+    "Yuqi Wang",
+    "Mikhail Yurochkin",
+    "Eric P. Xing"
+  ],
+  "candidate_id": "arxiv:2512.06201",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-12-05",
+    "latest_revision_date": "2026-09-17"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "K2-V2: A 360-Open, Reasoning-Enhanced LLM",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.06201"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2512.06201",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2512.06201v3",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "K.Team,Z.Liu,L.Tang,L.Jin,H.Li,N.Ranjan,D.Fan,S.Rohatgi,R.Fan,O.Pangarkar,H.Wang,Z.Cheng, S.Sun,S.Han,B.Tan,G.Gosal,X.Han,V.Pimpalkhute,S.Hao,M.S.Hee,J.Hestness,H.Jia,L.Ma, A.Singh,D.Soboleva,N.Vassilieva,R.Wang,Y.Wu,Y.Sun,T.Killian,A.Moreno,J.Maggs,H.Ren,G.He, H.Wang,X.Ma,Y.Wang,M.Yurochkin,andE.P.Xing.K2-v2:A360-open,reasoning-enhancedllm,2025.URL https://arxiv.org/abs/2512.06201.",
+      "page": 79,
+      "reference_number": 211,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "tool use"
+    ],
+    "primary_category": "AG-3",
+    "requires_human_confirmation": true
+  },
+  "title": "K2-V2: A 360-Open, Reasoning-Enhanced LLM",
+  "versions": [
+    {
+      "date": "2026-09-17",
+      "identifier": "2512.06201v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2512.06201v3"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "abstract": "A long-running assistant cannot keep everything it has seen, so it summarises. Summarising is not neutral: what is kept is chosen against some notion of what the record is for, and that choice is made once, before anyone knows which of the user's standing goals will ask. Goals rarely disagree about what happened. They disagree about which parts of it were worth the space. Once the history is too long to re-read, the summary replaces the stream, and whatever it left out is gone. We ask what a memory should summarise for when it serves several standing goals at once. Three policies answer differently: summarise with no goal in view, write one summary covering every goal, or write one summary per goal and read them together. We compare them across several models and event streams, holding the read step fixed so that only the write differs. The goals do pull apart: summaries written for different goals overlap each other less than a summary overlaps a rewrite of itself. Per-goal summaries win on relevance, completeness and accuracy, and the all-goal summary loses even to the neutral one written at a fraction of its budget. Interpreting at write pays off, but only for the goal that later asks.",
+  "authors": [
+    "Albert Sadowski",
+    "Jarosław A. Chudziak"
+  ],
+  "candidate_id": "arxiv:2610.02897",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-02",
+    "latest_revision_date": "2026-10-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Interpreting at Write Time: A Policy Ablation for Multi-Goal Agent Memory",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02897"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.02897",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted to PALM workshop at NeurIPS 2026",
+    "pdf_url": "https://arxiv.org/pdf/2610.02897v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Interpreting at Write Time: A Policy Ablation for Multi-Goal Agent Memory",
+  "versions": [
+    {
+      "date": "2026-10-02",
+      "identifier": "2610.02897v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02897v1"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "abstract": "Agent harnesses govern consequential runtime decisions around language models, including tool invocation, persistent-state modification, and error recovery. Optimizing these decisions jointly is challenging: intervention placement determines what can be observed and executed, signals and policies must be designed together, and local modifications interact through downstream trajectories. We introduce \\anchoropt, a structured runtime optimization framework that decomposes this coupled harness-design problem into tractable local decision problems. First, backward localization identifies consequential decisions from residual failures, while runtime boundaries constrain observable signals and feasible interventions. Second, the optimizer searches for local policies under available signals and expands the signal representation when search stalls. Third, accepted controllers are installed sequentially, with residuals re-mined and candidates evaluated against the evolving incumbent by their downstream task value. The resulting controllers have explicit runtime activation and execution semantics. Experiments on BFCL Agent Memory and AppWorld demonstrate improved task performance and complementarity with global prompt optimization. Additional studies examine repeated-execution reliability and the trade-off between constraint mitigation and intervention cost.",
+  "authors": [],
+  "candidate_id": "openreview:SRe6x2HBqk",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-18",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "AnchorOpt: Structured Runtime Optimization OF LLM Agent Harness",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=SRe6x2HBqk"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "SRe6x2HBqk"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2027/Conference/-/Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+      "ICLR.cc/2027/Conference/Submission46683/-/Full_Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+      "ICLR.cc/2027/Conference/-/Edit"
+    ],
+    "venue": "ICLR 2027 Conference Submission",
+    "venue_id": "ICLR.cc/2027/Conference/Submission"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "AnchorOpt: Structured Runtime Optimization OF LLM Agent Harness",
+  "versions": [
+    {
+      "date": "2026-10-03",
+      "identifier": "SRe6x2HBqk",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=SRe6x2HBqk"
+    }
+  ]
+}

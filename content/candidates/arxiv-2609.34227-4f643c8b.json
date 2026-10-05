@@ -1,0 +1,55 @@
+{
+  "abstract": "Does conversational memory need LLM-extracted facts, or is selecting the right raw turns enough? Published results disagree. Extraction-based systems report gains from distilled facts. Recent studies find raw history with good ranking does as well, but disagree about whether ranking matters. We ran a pre-registered study on held-out LoCoMo conversations and LongMemEval. At a tight budget on LoCoMo, raw turns selected by a single call to Jev, a typed decision model, are non-inferior to an LLM-extraction memory (one-sided 95% bound -3.0 points against a -5-point margin). Blind human grading narrows the margin but does not change the result. Raw turns cost 3,061 times less to write, and the result holds with a second answer model. Within this study, reranking's gain shrinks as the budget grows. It adds 17.4 points on LoCoMo and 9.1 on LongMemEval when three of 30 candidates are kept. At generous budgets it adds 1.5 and 1.1, and extraction systems are more accurate. This suggests why published results disagree. At matched context, Jev selects as accurately as an LLM reranker (non-inferiority bound -2.0) at a third of the latency, and more accurately than a multi-call graph traversal. Reranking lowers correct abstention. Plans, code and graded answers are released.",
+  "authors": [
+    "Rishabh Sharma",
+    "Rishika Lall"
+  ],
+  "candidate_id": "arxiv:2609.34227",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "When Does Selection Replace Extraction? A Pre-Registered Test of Agent Memory with a Typed Decision Model",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34227"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34227",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "21 pages, 9 figures. Pre-registered: plan doi:10.5281/zenodo.22970745, amendment doi:10.5281/zenodo.22977848. Preprint also at doi:10.5281/zenodo.22985242. Code and data: https://github.com/ris3abh/Engram",
+    "pdf_url": "https://arxiv.org/pdf/2609.34227v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "When Does Selection Replace Extraction? A Pre-Registered Test of Agent Memory with a Typed Decision Model",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.34227v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34227v1"
+    }
+  ]
+}

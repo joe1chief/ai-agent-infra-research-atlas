@@ -1,0 +1,71 @@
+{
+  "abstract": "We present Audio Flamingo 3 (AF3), a fully open state-of-the-art (SOTA) large audio-language model that advances reasoning and understanding across speech, sound, and music. AF3 introduces: (i) AF-Whisper, a unified audio encoder trained using a novel strategy for joint representation learning across all 3 modalities of speech, sound, and music; (ii) flexible, on-demand thinking, allowing the model to do chain-of-thought-type reasoning before answering; (iii) multi-turn, multi-audio chat; (iv) long audio understanding and reasoning (including speech) up to 10 minutes; and (v) voice-to-voice interaction. To enable these capabilities, we propose several large-scale training datasets curated using novel strategies, including AudioSkills-XL, LongAudio-XL, AF-Think, and AF-Chat, and train AF3 with a novel five-stage curriculum-based training strategy. Trained on only open-source audio data, AF3 achieves new SOTA results on over 20+ (long) audio understanding and reasoning benchmarks, surpassing both open-weight and closed-source models trained on much larger datasets.",
+  "authors": [
+    "Arushi Goel",
+    "Sreyan Ghosh",
+    "Jaehyeon Kim",
+    "Sonal Kumar",
+    "Zhifeng Kong",
+    "Sang-gil Lee",
+    "Chao-Han Huck Yang",
+    "Ramani Duraiswami",
+    "Dinesh Manocha",
+    "Rafael Valle",
+    "Bryan Catanzaro"
+  ],
+  "candidate_id": "arxiv:2507.08128",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-07-10",
+    "latest_revision_date": "2025-07-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.08128"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2507.08128",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Code, Datasets, and Models: https://research.nvidia.com/labs/adlr/AF3/ ; Updates in v2: Updated results for new thinking mode ckpts, added qualitative figure, added note on fully open claim, add email ID for corresponding authors",
+    "pdf_url": "https://arxiv.org/pdf/2507.08128v2",
+    "primary_category": "cs.SD"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Arushi Goel, Sreyan Ghosh, Jaehyeon Kim, Sonal Kumar, Zhifeng Kong, Sang-gil Lee, Chao-Han Huck Yang,Ramani Duraiswami,DineshManocha, RafaelValle,et al. Audioflamingo3: Advancingaudio intelligence with fully open large audio language models.arXivpreprintarXiv:2507.08128, 2025.",
+      "page": 22,
+      "reference_number": 27,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models",
+  "versions": [
+    {
+      "date": "2025-07-28",
+      "identifier": "2507.08128v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.08128v2"
+    }
+  ]
+}

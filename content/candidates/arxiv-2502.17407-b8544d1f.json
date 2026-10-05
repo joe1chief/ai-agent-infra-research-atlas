@@ -1,0 +1,64 @@
+{
+  "abstract": "Scaling pre-training compute has proven effective for achieving mulitlinguality, but does the same hold for test-time scaling? In this work, we introduce MCLM, a multilingual math benchmark featuring competition-level problems in 55 languages. We test three test-time scaling methods-Outcome Reward Modeling (ORM), Process Reward Modeling (ORM), and Budget Forcing (BF)-on both Qwen2.5-1.5B Math and MR1-1.5B, a multilingual LLM we trained for extended reasoning. Our experiments show that using Qwen2.5-1.5B Math with ORM achieves a score of 35.8 on MCLM, while BF on MR1-1.5B attains 35.2. Although \"thinking LLMs\" have recently garnered significant attention, we find that their performance is comparable to traditional scaling methods like best-of-N once constrained to similar levels of inference FLOPs. Moreover, while BF yields a 20-point improvement on English AIME, it provides only a 1.94-point average gain across other languages-a pattern consistent across the other test-time scaling methods we studied-higlighting that test-time scaling may not generalize as effectively to multilingual tasks. To foster further research, we release MCLM, MR1-1.5B, and evaluation results.",
+  "authors": [
+    "Guijin Son",
+    "Jiwoo Hong",
+    "Hyunwoo Ko",
+    "James Thorne"
+  ],
+  "candidate_id": "arxiv:2502.17407",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-24",
+    "latest_revision_date": "2025-08-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Linguistic Generalizability of Test-Time Scaling in Mathematical Reasoning",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.17407"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.17407",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "ACL 2025 (ORAL)",
+    "pdf_url": "https://arxiv.org/pdf/2502.17407v2",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "GuijinSon,JiwooHong,Hyunwoo Ko,andJamesThorne. Linguisticgeneralizabilityoftest-timescaling in mathematical reasoning. CoRR, abs/2502.17407, 2025.",
+      "page": 34,
+      "reference_number": 56,
+      "report_blob_sha": "d2f9cdf3011a83861ec3a77304a5eb93bdc9491b",
+      "report_title": "2025-04_qwen3",
+      "seed_report_path": "2025/alibaba_qwen/2025-04_qwen3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Linguistic Generalizability of Test-Time Scaling in Mathematical Reasoning",
+  "versions": [
+    {
+      "date": "2025-08-01",
+      "identifier": "2502.17407v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.17407v2"
+    }
+  ]
+}

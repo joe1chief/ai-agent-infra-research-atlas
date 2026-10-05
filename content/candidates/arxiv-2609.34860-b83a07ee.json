@@ -1,0 +1,58 @@
+{
+  "abstract": "Learning-based multi-agent communication under limited bandwidth does not only require deciding what to communicate, but also structuring messages so that partial transmissions remain useful. We study this problem under prefix truncation, where only the first part of each message is received. To address it, we propose \\textbf{AH-VIB}, an attention-based autoregressive variational communication model that combines a variational information bottleneck (VIB) with sequential message generation and a hierarchical robustness loss. We evaluate AH-VIB on a custom cooperative object-inspection and occupancy-mapping task, where agents equipped with a limited field-of-view sensor coordinate to scan inspection objects in an occupancy-grid world, under variable and fixed bandwidth conditions, and compare it against MADDPG, CommNet, a flat VIB baseline, and an autoregressive MLP ablation. AH-VIB achieves competitive mean return while improving performance reliability under the most constrained bandwidth conditions. These results indicate that AH-VIB improves the reliability and graceful degradation of learned communication under bandwidth constraints.",
+  "authors": [
+    "Lukas Koch Vindbjerg",
+    "Qi Zhang",
+    "Yury Brodskiy",
+    "Lukas Esterle"
+  ],
+  "candidate_id": "arxiv:2609.34860",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Attention-based Hierarchical Variational Information Bottleneck for Robust Multi-Agent Communication under Variable Bandwidth",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34860"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34860",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "8 pages, 6 figures",
+    "pdf_url": "https://arxiv.org/pdf/2609.34860v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent",
+      "agent communication"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Attention-based Hierarchical Variational Information Bottleneck for Robust Multi-Agent Communication under Variable Bandwidth",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.34860v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34860v1"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "abstract": "",
+  "authors": [
+    "Jiacheng Liu",
+    "Taylor Blanton",
+    "Yanai Elazar",
+    "Sewon Min",
+    "Yen-Sung Chen",
+    "Arnavi Chheda-Kothary",
+    "Huy Tran",
+    "Byron Bischoff",
+    "Eric Marsh",
+    "Michael Schmitz",
+    "Cassidy Trier",
+    "Aaron Sarnat",
+    "Jenna James",
+    "Jon Borchardt",
+    "Bailey Kuehl",
+    "Evie Cheng",
+    "Karen Farley",
+    "Taira Anderson",
+    "David Albright",
+    "Carissa Schoenick",
+    "Luca Soldaini",
+    "Dirk Groeneveld",
+    "Rock Pang",
+    "Pang Koh",
+    "Noah Smith",
+    "Sophie Lebrecht",
+    "Yejin Choi",
+    "Hannaneh Hajishirzi",
+    "Ali Farhadi",
+    "Jesse Dodge"
+  ],
+  "candidate_id": "acl:2025.acl-demo.18",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-07-01",
+    "latest_revision_date": "2025-07-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "OLMoTrace: Tracing Language Model Outputs Back to Trillions of Training Tokens",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2025.acl-demo.18/"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-demo.18",
+    "openreview": null
+  },
+  "raw": {
+    "anthology_id": "2025.acl-demo.18",
+    "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_metadata_provides_month_only:2025-07"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "OLMoTrace: Tracing Language Model Outputs Back to Trillions of Training Tokens",
+  "versions": [
+    {
+      "date": "2025-07-01",
+      "identifier": "2025.acl-demo.18",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2025.acl-demo.18/"
+    }
+  ]
+}

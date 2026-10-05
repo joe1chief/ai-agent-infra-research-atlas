@@ -1,0 +1,118 @@
+{
+  "abstract": "Reasoning models have made rapid progress on many benchmarks involving math, code, and science. Yet, there are still many open questions about the best training recipes for reasoning since state-of-the-art models often rely on proprietary datasets with little to no public information available. To address this, the goal of the OpenThoughts project is to create open-source datasets for training reasoning models. After initial explorations, our OpenThoughts2-1M dataset led to OpenThinker2-32B, the first model trained on public reasoning data to match DeepSeek-R1-Distill-32B on standard reasoning benchmarks such as AIME and LiveCodeBench. We then improve our dataset further by systematically investigating each step of our data generation pipeline with 1,000+ controlled experiments, which led to OpenThoughts3. Scaling the pipeline to 1.2M examples and using QwQ-32B as teacher yields our OpenThoughts3-7B model, which achieves state-of-the-art results: 53% on AIME 2025, 51% on LiveCodeBench 06/24-01/25, and 54% on GPQA Diamond - improvements of 15.3, 17.2, and 20.5 percentage points compared to the DeepSeek-R1-Distill-Qwen-7B. All of our datasets and models are available on https://openthoughts.ai.",
+  "authors": [
+    "Etash Guha",
+    "Ryan Marten",
+    "Sedrick Keh",
+    "Negin Raoof",
+    "Georgios Smyrnis",
+    "Hritik Bansal",
+    "Marianna Nezhurina",
+    "Jean Mercat",
+    "Trung Vu",
+    "Zayne Sprague",
+    "Ashima Suvarna",
+    "Benjamin Feuer",
+    "Liangyu Chen",
+    "Zaid Khan",
+    "Eric Frankel",
+    "Sachin Grover",
+    "Caroline Choi",
+    "Niklas Muennighoff",
+    "Shiye Su",
+    "Wanjia Zhao",
+    "John Yang",
+    "Shreyas Pimpalgaonkar",
+    "Kartik Sharma",
+    "Charlie Cheng-Jie Ji",
+    "Yichuan Deng",
+    "Sarah Pratt",
+    "Vivek Ramanujan",
+    "Jon Saad-Falcon",
+    "Jeffrey Li",
+    "Achal Dave",
+    "Alon Albalak",
+    "Kushal Arora",
+    "Blake Wulfe",
+    "Chinmay Hegde",
+    "Greg Durrett",
+    "Sewoong Oh",
+    "Mohit Bansal",
+    "Saadia Gabriel",
+    "Aditya Grover",
+    "Kai-Wei Chang",
+    "Vaishaal Shankar",
+    "Aaron Gokaslan",
+    "Mike A. Merrill",
+    "Tatsunori Hashimoto",
+    "Yejin Choi",
+    "Jenia Jitsev",
+    "Reinhard Heckel",
+    "Maheswaran Sathiamoorthy",
+    "Alexandros G. Dimakis",
+    "Ludwig Schmidt"
+  ],
+  "candidate_id": "arxiv:2506.04178",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-04",
+    "latest_revision_date": "2025-06-05"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "OpenThoughts: Data Recipes for Reasoning Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.04178"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.04178",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "https://www.openthoughts.ai/blog/ot3. arXiv admin note: text overlap with arXiv:2505.23754 by other authors",
+    "pdf_url": "https://arxiv.org/pdf/2506.04178v2",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "E.Guha,R.Marten,S.Keh,N.Raoof,G.Smyrnis,H.Bansal,M.Nezhurina,J.Mercat,T.Vu,Z.Sprague, A.Suvarna,B.Feuer,L.Chen,Z.Khan,E.Frankel,S.Grover,C.Choi,N.Muennighoff,S.Su,W.Zhao,J.Yang, S.Pimpalgaonkar,K.Sharma,C.C.-J.Ji,Y.Deng,S.Pratt,V.Ramanujan,J.Saad-Falcon,J.Li,A.Dave, A.Albalak,K.Arora,B.Wulfe,C.Hegde,G.Durrett,S.Oh,M.Bansal,S.Gabriel,A.Grover,K.-W.Chang, V.Shankar,A.Gokaslan,M.A.Merrill,T.Hashimoto,Y.Choi,J.Jitsev,R.Heckel,M.Sathiamoorthy,A.G. Dimakis,andL.Schmidt. Openthoughts: Datarecipesforreasoningmodels.arXivpreprintarXiv:2506.04178, 2025a.URLhttps://arxiv.org/abs/2506.04178.",
+      "page": 71,
+      "reference_number": 75,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    },
+    {
+      "context": "E.Guha,R.Marten,S.Keh,N.Raoof,G.Smyrnis,H.Bansal,M.Nezhurina,J.Mercat,T.Vu,Z.Sprague, A.Suvarna,B.Feuer,L.Chen,Z.Khan,E.Frankel,S.Grover,C.Choi,N.Muennighoff,S.Su,W.Zhao,J.Yang, S.Pimpalgaonkar,K.Sharma,C.C.-J.Ji,Y.Deng,S.Pratt,V.Ramanujan,J.Saad-Falcon,J.Li,A.Dave,A.Albalak, K.Arora,B.Wulfe,C.Hegde,G.Durrett,S.Oh,M.Bansal,S.Gabriel,A.Grover,K.-W.Chang,V.Shankar, A.Gokaslan,M.A.Merrill,T.Hashimoto,Y.Choi,J.Jitsev,R.Heckel,M.Sathiamoorthy,A.G.Dimakis,and L.Schmidt.Openthoughts:Datarecipesforreasoningmodels,2025b.URL https://arxiv.org/abs/2506.04178.",
+      "page": 71,
+      "reference_number": 76,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "OpenThoughts: Data Recipes for Reasoning Models",
+  "versions": [
+    {
+      "date": "2025-06-05",
+      "identifier": "2506.04178v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.04178v2"
+    }
+  ]
+}

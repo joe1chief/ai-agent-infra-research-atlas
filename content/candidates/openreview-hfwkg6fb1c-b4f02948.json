@@ -1,0 +1,52 @@
+{
+  "abstract": "",
+  "authors": [],
+  "candidate_id": "openreview:HFWKg6Fb1c",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-11-23",
+    "latest_revision_date": "2025-11-23"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "RunTime-Complexity",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=HFWKg6Fb1c"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "HFWKg6Fb1c"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2026/Conference/Submission9466/-/Official_Comment"
+    ],
+    "venue": null,
+    "venue_id": null
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "RunTime-Complexity",
+  "versions": [
+    {
+      "date": "2025-11-23",
+      "identifier": "yrUVSuYVzC",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=HFWKg6Fb1c"
+    }
+  ]
+}

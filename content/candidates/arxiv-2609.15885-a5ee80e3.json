@@ -1,0 +1,56 @@
+{
+  "abstract": "This study proposes a privacy-enhanced federated learning framework to address secure collaborative training in distributed data environments. The framework integrates Dynamic Differential Privacy (DDP), lightweight Homomorphic Encryption (HE), and Local Differential Privacy (LDP) mechanisms to ensure data privacy protection during model training. Additionally, the framework employs an asynchronous aggregation strategy with version control to support distributed training in asynchronous environments. Experimental validation on the CIFAR-10 and Purchase-100 benchmark datasets demonstrates that the method maintains high classification accuracy (up to 82.6%) even under stringent privacy constraints (ε = 0.1), while reducing communication overhead by 21.3% compared to FedAvg. Experimental results demonstrate that this framework effectively balances privacy protection and model performance in distributed machine learning scenarios, providing a scalable technical foundation for large-scale distributed collaborative computing.",
+  "authors": [
+    "Zhen Zhong",
+    "Shini Yang",
+    "Liesheng Wei"
+  ],
+  "candidate_id": "arxiv:2609.15885",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-14",
+    "latest_revision_date": "2026-09-14"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Privacy-enhanced federated learning via asynchronous aggregation and local differential perturbation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.15885"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.15885",
+    "doi": "10.1117/12.3106592",
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Published in Proc. SPIE 14128, Third International Conference on Big Data, Computational Intelligence, and Applications (BDCIA 2025), 141283L. Event: BDCIA 2025, Huanggang, China. https://doi.org/10.1117/12.3106592",
+    "pdf_url": "https://arxiv.org/pdf/2609.15885v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Privacy-enhanced federated learning via asynchronous aggregation and local differential perturbation",
+  "versions": [
+    {
+      "date": "2026-09-14",
+      "identifier": "2609.15885v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.15885v1"
+    }
+  ]
+}

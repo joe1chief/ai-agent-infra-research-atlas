@@ -1,0 +1,57 @@
+{
+  "abstract": "Large language model (LLM) agents face critical privacy risks when acting as delegates in human-agent-human communication. To prevent such breaches, agents must understand users' social relationships and adhere to context-dependent social information disclosure boundaries. Current studies on agent memory privacy focus on instantaneous interactions, leaving the long-term relational disclosure problem unexplored. In this paper, we propose EP-Mem, an Elastic Privacy Memory architecture that reframes privacy as user-owned boundary control across social roles. EP-Mem introduces (1) token-level memory driven by user-configurable a privacy policy that stratifies persons and events, combining domain-level default circulation rules with fact-level whitelist/blacklist exceptions; and (2) a pluggable sidecar with a privacy engine that aligns disclosure controls with memory across summary, detail, and boundary granularities, enforced throughout generation, storage, and retrieval. We construct EP-Bench, to our knowledge the first long-term multi-party benchmark with cross-session correlated events for policy-conditioned relational disclosure. Experiments show that EP-Mem achieves 94.0% privacy classification accuracy, improves disclosure-permission judgment from 22% to 68%, and reduces privacy leakage by 75.6%, while maintaining retrieval performance and cross-benchmark generalization.",
+  "authors": [
+    "Fengzhou Sun",
+    "Yuan Zhang",
+    "Xintong Yu",
+    "Jinyao Yan"
+  ],
+  "candidate_id": "arxiv:2609.35233",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "EP-Mem: Elastic Privacy Memory for Social Relationship-Aware LLM Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35233"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.35233",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.35233v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "permission"
+    ],
+    "primary_category": "AG-6",
+    "requires_human_confirmation": true
+  },
+  "title": "EP-Mem: Elastic Privacy Memory for Social Relationship-Aware LLM Agents",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.35233v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.35233v1"
+    }
+  ]
+}

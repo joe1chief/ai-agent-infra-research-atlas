@@ -1,0 +1,58 @@
+{
+  "abstract": "Serving simulators can reduce the cost of exploring LLM-agent deployments, but inaccurate predictions can lead to poor deployment choices. Evaluating these simulators is difficult because each predicted call completion determines when sub- sequent work arrives, changing future contention. We introduce AgentSimArena, a benchmark that preserves this feedback while comparing simulator predictions with real executions under matched workload and deployment constraints. Across six simulators, eight deployments, and five arrival rates, we evaluate 240 predic- tions against 40 vLLM reference runs. LLMServingSim 2.0 achieves the lowest mean absolute relative error in mean program completion time, at 7.1%; DynoSim achieves 10.6%, with a median simulation runtime of 6.86 s versus 1,224.26 s for LLMServingSim. No simulator remains within 10% error across all settings. In one observed deployment comparison, following a simulator’s recommendation selects an alternative with 6.07× the measured mean program completion time of the other deployment. Arena documents integration extensions, modeling differences, and available preparation-cost evidence, providing a basis for workload-specific simulator selection.",
+  "authors": [],
+  "candidate_id": "openreview:Tu1QWkBOX4",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-19",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "AgentSimArena: Benchmarking LLM Serving Simulators for Agent Workloads",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=Tu1QWkBOX4"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "Tu1QWkBOX4"
+  },
+  "raw": {
+    "invitations": [
+      "ICLR.cc/2027/Conference/-/Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+      "ICLR.cc/2027/Conference/Submission51339/-/Full_Submission",
+      "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+      "ICLR.cc/2027/Conference/-/Edit"
+    ],
+    "venue": "ICLR 2027 Conference Submission",
+    "venue_id": "ICLR.cc/2027/Conference/Submission"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "AgentSimArena: Benchmarking LLM Serving Simulators for Agent Workloads",
+  "versions": [
+    {
+      "date": "2026-10-03",
+      "identifier": "Tu1QWkBOX4",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=Tu1QWkBOX4"
+    }
+  ]
+}

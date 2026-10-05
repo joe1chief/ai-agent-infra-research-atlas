@@ -1,0 +1,58 @@
+{
+  "abstract": "Sparse attention is widely used to accelerate long-context inference in modern large language models (LLMs), but its input-dependent execution behavior introduces previously unexplored privacy risks. We identify a new GPU micro-architectural side channel, termed Sparsity-Induced Memory Access (SIMA), which arises from secret-dependent key-value cache access patterns induced by sparse attention. Based on this observation, we present SparLeak, a phase-aware side-channel attack that extracts SIMA traces during LLM inference and enables two practical privacy extractions: query attribute inference from prefill-phase traces and autoregressive response reconstruction from decoding-phase traces. By reconstructing approximate token-level sparsity profiles from page-level observations and applying profiling-based learning, SparLeak accurately recovers sensitive information, including user-query attributes and private LLM response content. Extensive evaluation across three LLM architectures, three sparse attention mechanisms, and three privacy-sensitive datasets shows that SparLeak achieves average attack success rates of 90.9% for attribute inference and 87.3% for response reconstruction under real-world LLM serving settings, highlighting the significance to account for SIMA leakage when deploying sparse-attention-based LLM systems. We provide anonymized SIMA traces, trained attack models, evaluation scripts, and documentation as artifacts at https://anonymous.4open.science/r/Janus_artifacts/.",
+  "authors": [
+    "Fahao Chen",
+    "Linkang Du",
+    "Jinhao Zhou",
+    "Peng Li",
+    "Zhou Su"
+  ],
+  "candidate_id": "arxiv:2609.38830",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-30",
+    "latest_revision_date": "2026-09-30"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "SparLeak: Privacy Leakage from Sparse Attention in LLM Inference on Shared GPUs",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.38830"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.38830",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.38830v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "SparLeak: Privacy Leakage from Sparse Attention in LLM Inference on Shared GPUs",
+  "versions": [
+    {
+      "date": "2026-09-30",
+      "identifier": "2609.38830v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.38830v1"
+    }
+  ]
+}

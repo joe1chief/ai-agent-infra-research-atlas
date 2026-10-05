@@ -1,0 +1,72 @@
+{
+  "abstract": "Memory is critical for AI agents. Many existing agent-memory systems follow an Ahead-of-Time (AOT) design, constructing memory before a specific request arrives. While this reduces online serving cost, such request-agnostic memory construction can discard fine-grained information that later becomes important. To address this limitation, we propose Just-In-Time Agent Memory (JAM), a trainable framework for query-conditioned context construction at runtime. A Memorizer preserves complete raw histories in a hierarchical page-store with compact navigational summaries, while a Researcher iteratively retrieves, inspects, and integrates evidence for each request. To train these memory-use behaviors, we introduce Memory-Gym, an evidence-grounded data synthesis pipeline covering nine task types across six domains, and optimize the Researcher through verified-trajectory supervised fine-tuning followed by Hint-guided Group Relative Policy Optimization. We demonstrate the effectiveness of JAM across a variety of benchmarks on agent memory and long-context processing, where it achieves stronger task performance than AOT-style memory systems while remaining substantially more efficient than prior trained agentic memory approaches. To support reproducibility and future research, we release our anonymized source code at https://github.com/VectorSpaceLab/general-agentic-memory.",
+  "authors": [
+    "Bingyu Yan",
+    "Chaofan Li",
+    "Hongjin Qian",
+    "Shuqi Lu",
+    "Chaozhuo Li",
+    "Zheng Liu"
+  ],
+  "candidate_id": "arxiv:2609.34385",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-15",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Just-In-Time Agent Memory with Runtime Agentic Research",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34385"
+    },
+    {
+      "title": "Just-In-Time Agent Memory with Runtime Agentic Research",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=9WM5OmcrkZ"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34385",
+    "doi": null,
+    "openreview": "9WM5OmcrkZ"
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.34385v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [
+    "conflicting_first_public_dates:2026-09-15,2026-09-28"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Just-In-Time Agent Memory with Runtime Agentic Research",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.34385v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34385v1"
+    },
+    {
+      "date": "2026-10-03",
+      "identifier": "9WM5OmcrkZ",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=9WM5OmcrkZ"
+    }
+  ]
+}

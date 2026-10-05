@@ -1,0 +1,66 @@
+{
+  "abstract": "Language-model agents increasingly tackle long-horizon tasks whose interaction histories exceed the model's active context. Recent work has begun to use reinforcement learning to make memory control part of the policy, often relying on predefined memory tools within domain-specific training environments of relatively short horizons. This setup ties learned memory behavior to environment-specific interfaces that lie outside the base model's pre-training and must be learned from scratch, so even after post-training, agents struggle to use memory in long-horizon tasks. To address these limitations, we introduce Coding Agent Memory Gym (CAMG), a suite of long-horizon agentic-RL environments spanning Shop, Coding, DeepResearch, and AutoResearch. Alongside each environment's native task interface, CAMG provides executable shell access and an episode-persistent workspace, enabling agents to create, revise, search, and reuse files as memory throughout an episode. We also introduce CAMG-RL, which trains a single policy jointly across all four environments with fully asynchronous PPO, learning this file-based memory behavior directly from downstream task reward, and we train CAMG-RL-4B and CAMG-RL-9B from Qwen3.5 models of matching size. On SWE-bench Verified and MLE-bench Lite, CAMG-RL-4B and CAMG-RL-9B are competitive with Qwen3.5-35B-A3B and Qwen3.5-122B-A10B, respectively.",
+  "authors": [
+    "Lirui Luo",
+    "Kelong Mao",
+    "Heming Xia",
+    "Rongqing Li",
+    "Xinwei Yang",
+    "Luyu Chen",
+    "Kieran Wong",
+    "Yudong Guo",
+    "Xinrui Wang",
+    "Jiayin Zhu",
+    "Simiu Gu",
+    "Sulong Xu",
+    "Cong Fang"
+  ],
+  "candidate_id": "arxiv:2609.34422",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-30"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Coding Agent Memory Post-training: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via Reinforcement Learning",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34422"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34422",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Project page: https://liruiluo.github.io/agentmemorygym/",
+    "pdf_url": "https://arxiv.org/pdf/2609.34422v2",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Coding Agent Memory Post-training: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via Reinforcement Learning",
+  "versions": [
+    {
+      "date": "2026-09-30",
+      "identifier": "2609.34422v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34422v2"
+    }
+  ]
+}

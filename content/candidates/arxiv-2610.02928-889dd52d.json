@@ -1,0 +1,55 @@
+{
+  "abstract": "Invariant suites and runtime monitors increasingly gate agent deployment decisions, and the evidence offered for any particular suite is almost always a single observation: it passes an implementation believed correct and fails one believed broken. We measure what that observation is worth. Applying mutation analysis to an invariant suite for a multi-session agent state-projection layer, we first find that this standard validation certifies a suite in which a first-order mutant removing event-identity deduplication survives every check. We then freeze the repaired twelve-check suite, record its hash, and run it once against ten mutants specified by an adversarial reader who designed none of its fixtures: it kills five. Instrumenting the five survivors against the reference shows they fail in two distinct ways, not one. Three are never activated, because no fixture supplies an input on which the mutated code behaves differently at all. The other two corrupt internal state that no oracle in the suite can observe. The two modes need different repairs, and neither is visible from a pass/fail report. Treating the missing inputs as a coverage question, we enumerate seven discriminating dimensions of the input space, register in advance which are uncovered and which survivors they should explain, and add one fixture per uncovered dimension while reusing the existing oracles verbatim. All five survivors then die, each to the check written for its predicted dimension. We report this as a repair result on the same challenge set rather than a second held-out estimate, and give the artifact, including the frozen hash, the registered predictions, all mutants and the run logs, so the distinction is checkable.",
+  "authors": [
+    "Xin Xu",
+    "Siru Tao"
+  ],
+  "candidate_id": "arxiv:2610.02928",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-02",
+    "latest_revision_date": "2026-10-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Discriminating Fixture Coverage in Agent-Infrastructure Verification Suites",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02928"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.02928",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "10 pages, 1 figure, 2 tables. NeurIPS 2026 Workshop: Who Verifies the Agents? Toward Reliable Agent Development",
+    "pdf_url": "https://arxiv.org/pdf/2610.02928v1",
+    "primary_category": "cs.SE"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "identity"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "Discriminating Fixture Coverage in Agent-Infrastructure Verification Suites",
+  "versions": [
+    {
+      "date": "2026-10-02",
+      "identifier": "2610.02928v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02928v1"
+    }
+  ]
+}

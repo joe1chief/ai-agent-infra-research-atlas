@@ -1,0 +1,58 @@
+{
+  "abstract": "Large Language Models (LLMs) have achieved remarkable reasoning capabilities by utilizing chain-of-thought (CoT) as a scratchpad for intermediate stages of thinking. However, CoT techniques require explicit supervision on thinking tokens, which requires rich, task-specific data. In this work, we propose Abstract Token Curriculum (ATC), a novel curriculum learning framework that elicits effective continuous intermediate representations without direct supervision or manual scratchpad design. ATC gradually increases problem complexity through a sequence of distributions, training the model to develop internal abstract ``thoughts'' in the continuous representation space. This paper provides both theoretical and experimental evidence for the benefits of ATC and its advantages over previous methods for training continuous thoughts. Theoretically, we show that for learning parity functions with single-layer softmax attention using ATC, attention naturally focuses on the CoT tokens in the context that provide the ``easiest path'' to predicting the next token. Experimentally, we show ATC's effectiveness on graph reachability and arithmetic learning tasks.",
+  "authors": [
+    "Khashayar Gatmiry",
+    "Avrajit Ghosh",
+    "Parsa Mirtaheri",
+    "Jason D. Lee",
+    "Nika Haghtalab",
+    "Emmanuel Abbe",
+    "Peter Bartlett"
+  ],
+  "candidate_id": "arxiv:2609.19717",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-17",
+    "latest_revision_date": "2026-09-23"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Learn Your Own Thoughts: Abstract Token Curriculum",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.19717"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.19717",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.19717v2",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Learn Your Own Thoughts: Abstract Token Curriculum",
+  "versions": [
+    {
+      "date": "2026-09-23",
+      "identifier": "2609.19717v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.19717v2"
+    }
+  ]
+}

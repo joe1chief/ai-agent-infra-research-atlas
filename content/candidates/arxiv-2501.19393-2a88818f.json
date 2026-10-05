@@ -1,0 +1,72 @@
+{
+  "abstract": "Test-time scaling is a promising new approach to language modeling that uses extra test-time compute to improve performance. Recently, OpenAI's o1 model showed this capability but did not publicly share its methodology, leading to many replication efforts. We seek the simplest approach to achieve test-time scaling and strong reasoning performance. First, we curate a small dataset s1K of 1,000 questions paired with reasoning traces relying on three criteria we validate through ablations: difficulty, diversity, and quality. Second, we develop budget forcing to control test-time compute by forcefully terminating the model's thinking process or lengthening it by appending \"Wait\" multiple times to the model's generation when it tries to end. This can lead the model to double-check its answer, often fixing incorrect reasoning steps. After supervised finetuning the Qwen2.5-32B-Instruct language model on s1K and equipping it with budget forcing, our model s1-32B exceeds o1-preview on competition math questions by up to 27% (MATH and AIME24). Further, scaling s1-32B with budget forcing allows extrapolating beyond its performance without test-time intervention: from 50% to 57% on AIME24. Our model, data, and code are open-source at https://github.com/simplescaling/s1",
+  "authors": [
+    "Niklas Muennighoff",
+    "Zitong Yang",
+    "Weijia Shi",
+    "Xiang Lisa Li",
+    "Li Fei-Fei",
+    "Hannaneh Hajishirzi",
+    "Luke Zettlemoyer",
+    "Percy Liang",
+    "Emmanuel Candès",
+    "Tatsunori Hashimoto"
+  ],
+  "candidate_id": "arxiv:2501.19393",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-31",
+    "latest_revision_date": "2025-03-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "s1: Simple test-time scaling",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.19393"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2501.19393",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "46 pages (9 main), 10 figures, 15 tables",
+    "pdf_url": "https://arxiv.org/pdf/2501.19393v3",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "N.Muennighoff,Z.Yang,W.Shi,X.L.Li,L.Fei-Fei,H.Hajishirzi,L.Zettlemoyer,P.Liang,E.Candès,and T.Hashimoto.s1:Simpletest-timescaling,2025b.URLhttps://arxiv.org/abs/2501.19393.",
+      "page": 76,
+      "reference_number": 152,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "s1: Simple test-time scaling",
+  "versions": [
+    {
+      "date": "2025-03-01",
+      "identifier": "2501.19393v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.19393v3"
+    }
+  ]
+}

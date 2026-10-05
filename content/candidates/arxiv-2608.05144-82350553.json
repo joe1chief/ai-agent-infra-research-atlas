@@ -1,0 +1,80 @@
+{
+  "abstract": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Planner, Engineer, and Reviewer execute bounded missions over durable project state. Argus separates stable user intent from operational objectives, constraints, and verification criteria, and admits memories, skills, procedures, verifiers, routing decisions, and rejected routes only after role-owned review and, when available, task-native verification. Model weights remain fixed; self-evolution occurs through persistent runtime state and control policy, with autonomous execution between operator-owned escalation points. Across seven GPT-5.5 benchmark arenas, Argus achieves about 78% on SWE-Bench Pro versus 59% for Direct Copilot while using 1.41 times the aggregate tokens. After verification-gated self-evolution, mature SWE-Bench waves use 21% fewer solve-input tokens and 15% less active workflow time per task than startup waves, while recording 34 verifier recoveries and 22 strict review-loop rescues. Argus also reaches 76.8% on AARRI-Bench and a 28.0-point gap on mathematical data synthesis, with competitive GPU-kernel and language-model-training results. Beyond benchmarks, an optimized RWKV6 kernel was merged upstream; a multi-day mathematics campaign retained falsified routes and proof-backed frontier updates; and six paper pipelines completed 254 missions with 16 stage rollbacks. These results show that a fixed-weight, self-evolving harness can revise, recover, and accumulate verified approaches while producing structured trajectories for future supervised and reinforcement learning.",
+  "authors": [
+    "Boxiu Li",
+    "Zimo Wen",
+    "Yijia Fan",
+    "Chuan Wen",
+    "Fan Yang",
+    "Hangxi Guo",
+    "Jiaao Wu",
+    "Jiachen Zhang",
+    "Junxiang Lei",
+    "Mukai Li",
+    "Ruize Tang",
+    "Runjing Gu",
+    "Shibo Hu",
+    "Sihan Chen",
+    "Sufeng Guo",
+    "Wanbo Zhang",
+    "Xian Zhang",
+    "Xiaoyu Chen",
+    "Xuanhe Zhou",
+    "Xuyao Huang",
+    "Yifei Gao",
+    "Yifei Shen",
+    "Yilin Chen",
+    "Yuheng Wu",
+    "Yuzhe Zhang",
+    "Zelong Zhao",
+    "Zhijie Deng"
+  ],
+  "candidate_id": "arxiv:2608.05144",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-08-05",
+    "latest_revision_date": "2026-08-07"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Argus: A General-Purpose Agentic Reasoning Runtime for Long-Horizon Tasks",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2608.05144"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2608.05144",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2608.05144v2",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "kernel"
+    ],
+    "primary_category": "AI-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Argus: A General-Purpose Agentic Reasoning Runtime for Long-Horizon Tasks",
+  "versions": [
+    {
+      "date": "2026-08-07",
+      "identifier": "2608.05144v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2608.05144v2"
+    }
+  ]
+}

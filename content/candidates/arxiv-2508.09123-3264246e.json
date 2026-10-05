@@ -1,0 +1,102 @@
+{
+  "abstract": "Vision-language models have demonstrated impressive capabilities as computer-use agents (CUAs) capable of automating diverse computer tasks. As their commercial potential grows, critical details of the most capable CUA systems remain closed. As these agents will increasingly mediate digital interactions and execute consequential decisions on our behalf, the research community needs access to open CUA frameworks to study their capabilities, limitations, and risks. To bridge this gap, we propose OpenCUA, a comprehensive open-source framework for scaling CUA data and foundation models. Our framework consists of: (1) an annotation infrastructure that seamlessly captures human computer-use demonstrations; (2) AgentNet, the first large-scale computer-use task dataset spanning 3 operating systems and 200+ applications and websites; (3) a scalable pipeline that transforms demonstrations into state-action pairs with reflective long Chain-of-Thought reasoning that sustain robust performance gains as data scales. Our end-to-end agent models demonstrate strong performance across CUA benchmarks. In particular, OpenCUA-72B achieves an average success rate of 45.0% on OSWorld-Verified, establishing a new state-of-the-art (SOTA) among open-source models. Further analysis confirms that our approach generalizes well across domains and benefits significantly from increased test-time computation. We release our annotation tool, datasets, code, and models to build open foundations for further CUA research.",
+  "authors": [
+    "Xinyuan Wang",
+    "Bowen Wang",
+    "Dunjie Lu",
+    "Junlin Yang",
+    "Tianbao Xie",
+    "Junli Wang",
+    "Jiaqi Deng",
+    "Xiaole Guo",
+    "Yiheng Xu",
+    "Chen Henry Wu",
+    "Zhennan Shen",
+    "Zhuokai Li",
+    "Ryan Li",
+    "Xiaochuan Li",
+    "Junda Chen",
+    "Boyuan Zheng",
+    "Peihang Li",
+    "Fangyu Lei",
+    "Ruisheng Cao",
+    "Yeqiao Fu",
+    "Dongchan Shin",
+    "Martin Shin",
+    "Jiarui Hu",
+    "Yuyan Wang",
+    "Jixuan Chen",
+    "Yuxiao Ye",
+    "Danyang Zhang",
+    "Dikang Du",
+    "Hao Hu",
+    "Huarong Chen",
+    "Zaida Zhou",
+    "Haotian Yao",
+    "Ziwei Chen",
+    "Qizheng Gu",
+    "Yipu Wang",
+    "Heng Wang",
+    "Diyi Yang",
+    "Victor Zhong",
+    "Flood Sung",
+    "Y. Charles",
+    "Zhilin Yang",
+    "Tao Yu"
+  ],
+  "candidate_id": "arxiv:2508.09123",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-08-12",
+    "latest_revision_date": "2025-10-04"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "OpenCUA: Open Foundations for Computer-Use Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.09123"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2508.09123",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Updata author list, modify first page format, correct typos",
+    "pdf_url": "https://arxiv.org/pdf/2508.09123v3",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "XinyuanWang,BowenWang,DunjieLu,JunlinYang,TianbaoXie,JunliWang,JiaqiDeng,XiaoleGuo, YihengXu,ChenHenryWu,etal. Opencua: Openfoundationsforcomputer-useagents.arXivpreprint arXiv:2508.09123, 2025a.",
+      "page": 31,
+      "reference_number": 2032,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "OpenCUA: Open Foundations for Computer-Use Agents",
+  "versions": [
+    {
+      "date": "2025-10-04",
+      "identifier": "2508.09123v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.09123v3"
+    }
+  ]
+}

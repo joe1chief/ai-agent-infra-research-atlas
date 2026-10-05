@@ -1,0 +1,70 @@
+{
+  "abstract": "Developing large language models is expensive and involves making decisions with small experiments, typically by evaluating on large, multi-task evaluation suites. In this work, we analyze specific properties which make a benchmark more reliable for such decisions, and interventions to design higher-quality evaluation benchmarks. We introduce two key metrics that show differences in current benchmarks: signal, a benchmark's ability to separate better models from worse models, and noise, a benchmark's sensitivity to random variability between training steps. We demonstrate that benchmarks with a better signal-to-noise ratio are more reliable when making decisions at small scale, and those with less noise have lower scaling law prediction error. These results suggest that improving signal or noise will lead to more useful benchmarks, so we introduce three interventions designed to directly affect signal or noise. For example, we propose that switching to a metric that has better signal and noise (e.g., perplexity rather than accuracy) leads to better reliability and improved scaling law error. We also find that filtering noisy subtasks, to improve an aggregate signal-to-noise ratio, leads to more reliable multi-task evaluations. We also find that averaging the output of a model's intermediate checkpoints to reduce noise leads to consistent improvements. We conclude by recommending that those creating new benchmarks, or selecting which existing benchmarks to use, aim for high signal and low noise. We use 30 benchmarks for these experiments, and 375 open-weight language models from 60M to 32B parameters, resulting in a new, publicly available dataset of 900K evaluation benchmark results, totaling 200M instances.",
+  "authors": [
+    "David Heineman",
+    "Valentin Hofmann",
+    "Ian Magnusson",
+    "Yuling Gu",
+    "Noah A. Smith",
+    "Hannaneh Hajishirzi",
+    "Kyle Lo",
+    "Jesse Dodge"
+  ],
+  "candidate_id": "arxiv:2508.13144",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-08-18",
+    "latest_revision_date": "2025-08-18"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.13144"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2508.13144",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2508.13144v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "D.Heineman,V.Hofmann,I.Magnusson,Y.Gu,N.A.Smith,H.Hajishirzi,K.Lo,andJ.Dodge.Signalandnoise:A frameworkforreducinguncertaintyinlanguagemodelevaluation,2025.URL https://arxiv.org/abs/2508.13144.",
+      "page": 72,
+      "reference_number": 83,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "reliability"
+    ],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation",
+  "versions": [
+    {
+      "date": "2025-08-18",
+      "identifier": "2508.13144v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2508.13144v1"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "abstract": "The widespread adoption of Mixture-of-Experts (MoE) has created a growing need for deployment on heterogeneous platforms. However, it exposes a fundamental mismatch between the algorithmic demands of large-scale MoE and the disparate characteristics of hardware.Existing CPU-GPU hybrid inference systems fail to resolve this as they either encounter PCIe bandwidth bottlenecks when loading experts to GPUs, or rely heavily on CPU computation. Consequently, this leads to low resource utilization and inevitable violations of fixed latency budgets as parameters scale. In this paper, we identify and exploit Cross-Asymmetry--a structural alignment between the algorithmic workload skew of MoE routing and the physical disparity of heterogeneous hardware. To this end, we introduce RapidMoE, a residual offloading system for efficient large-scale MoE inference. We propose how RapidMoE leverages a residual-split framework to enable offloading paradigm shift from expert-level to bit-level, which unfolds across three key dimensions: (1) data representation, enabling compact and decoupled storage; (2) routing strategy, partitioning computation into dual paths aligned with hardware capabilities; (3) execution parallelism, scheduling a balanced storage-compute workload across devices. We further employ a novel Unified Multi-Level Importance Arbitration to adaptively adjust the critical expert set at runtime, ensuring the accuracy-latency Pareto frontier. These innovations exploit inherent cross-asymmetry, fundamentally breaking the algorithm-hardware misalignment. Experimental results show that RapidMoE achieves up to 3.5x speedup in decoding and 2.1x speedup in prefill compared to state-of-the-art (SOTA) offloading systems.",
+  "authors": [
+    "Wenxun Wang",
+    "Likai Ma",
+    "Zongle Huang",
+    "Chen Tang",
+    "Yongpan Liu"
+  ],
+  "candidate_id": "arxiv:2610.01265",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-01",
+    "latest_revision_date": "2026-10-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "RapidMoE: Exploiting Cross-Asymmetry via Adaptive Residual Offloading for Large-Scale MoE Inference",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.01265"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.01265",
+    "doi": "10.1145/3842654.3848583",
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted by EuroSys 2027. 17 pages",
+    "pdf_url": "https://arxiv.org/pdf/2610.01265v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "RapidMoE: Exploiting Cross-Asymmetry via Adaptive Residual Offloading for Large-Scale MoE Inference",
+  "versions": [
+    {
+      "date": "2026-10-01",
+      "identifier": "2610.01265v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.01265v1"
+    }
+  ]
+}

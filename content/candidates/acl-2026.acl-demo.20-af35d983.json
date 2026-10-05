@@ -1,0 +1,57 @@
+{
+  "abstract": "",
+  "authors": [
+    "Joseph Boyle",
+    "Anthony Dranfield",
+    "Mike O’Neil",
+    "Maria Liakata",
+    "Alison Smithard"
+  ],
+  "candidate_id": "acl:2026.acl-demo.20",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-07-01",
+    "latest_revision_date": "2026-07-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "ClinQueryAgent: A Conversational Agent for Population Health Management",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2026.acl-demo.20/"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.acl-demo.20",
+    "openreview": null
+  },
+  "raw": {
+    "anthology_id": "2026.acl-demo.20",
+    "venue": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_metadata_provides_month_only:2026-07"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "ClinQueryAgent: A Conversational Agent for Population Health Management",
+  "versions": [
+    {
+      "date": "2026-07-01",
+      "identifier": "2026.acl-demo.20",
+      "type": "acl_anthology",
+      "url": "https://aclanthology.org/2026.acl-demo.20/"
+    }
+  ]
+}

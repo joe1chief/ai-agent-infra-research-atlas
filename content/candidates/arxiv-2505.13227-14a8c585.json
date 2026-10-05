@@ -1,0 +1,75 @@
+{
+  "abstract": "Graphical user interface (GUI) grounding, the ability to map natural language instructions to specific actions on graphical user interfaces, remains a critical bottleneck in computer use agent development. Current benchmarks oversimplify grounding tasks as short referring expressions, failing to capture the complexity of real-world interactions that require software commonsense, layout understanding, and fine-grained manipulation capabilities. To address these limitations, we introduce OSWorld-G, a comprehensive benchmark comprising 564 finely annotated samples across diverse task types including text matching, element recognition, layout understanding, and precise manipulation. Additionally, we synthesize and release the largest computer use grounding dataset Jedi, which contains 4 million examples through multi-perspective decoupling of tasks. Our multi-scale models trained on Jedi demonstrate its effectiveness by outperforming existing approaches on ScreenSpot-v2, ScreenSpot-Pro, and our OSWorld-G. Furthermore, we demonstrate that improved grounding with Jedi directly enhances agentic capabilities of general foundation models on complex computer tasks, improving from 5% to 27% on OSWorld. Through detailed ablation studies, we identify key factors contributing to grounding performance and verify that combining specialized data for different interface elements enables compositional generalization to novel interfaces. All benchmark, data, checkpoints, and code are open-sourced and available at https://osworld-grounding.github.io.",
+  "authors": [
+    "Tianbao Xie",
+    "Jiaqi Deng",
+    "Xiaochuan Li",
+    "Junlin Yang",
+    "Haoyuan Wu",
+    "Jixuan Chen",
+    "Wenjing Hu",
+    "Xinyuan Wang",
+    "Yuhui Xu",
+    "Zekun Wang",
+    "Yiheng Xu",
+    "Junli Wang",
+    "Doyen Sahoo",
+    "Tao Yu",
+    "Caiming Xiong"
+  ],
+  "candidate_id": "arxiv:2505.13227",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-19",
+    "latest_revision_date": "2025-10-24"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Scaling Computer-Use Grounding via User Interface Decomposition and Synthesis",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.13227"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.13227",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "49 pages, 13 figures",
+    "pdf_url": "https://arxiv.org/pdf/2505.13227v3",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "TianbaoXie,JiaqiDeng,XiaochuanLi,JunlinYang,HaoyuanWu,JixuanChen,WenjingHu,Xinyuan Wang, Yuhui Xu, Zekun Wang, Yiheng Xu, Junli Wang, Doyen Sahoo, Tao Yu, and Caiming Xiong. Scaling computer-use groundingvia user interface decomposition and synthesis, 2025a. URLhttps: //arxiv.org/abs/2505.13227. 31",
+      "page": 31,
+      "reference_number": 2044,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Scaling Computer-Use Grounding via User Interface Decomposition and Synthesis",
+  "versions": [
+    {
+      "date": "2025-10-24",
+      "identifier": "2505.13227v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.13227v3"
+    }
+  ]
+}

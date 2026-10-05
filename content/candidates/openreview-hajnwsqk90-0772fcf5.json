@@ -1,0 +1,58 @@
+{
+  "abstract": "Recursive Language Models (RLMs) are often treated as requiring a post-trained recursive checkpoint. We ask whether the useful control surface of recursive inference can instead be exposed around ordinary LLM calls: a parent synthesis should not become committed runtime state unless its claims are supported by child evidence from the current run. Evidence-Gated Recursive Inference (EGRI) implements this boundary inside an existing agent runtime, without fine-tuning or a new checkpoint. The runtime schedules bounded child calls, executes them through typed request/response envelopes, records accepted child evidence in a current-run manifest ($M_t$), and applies TraceGuard (TG) plus Structured Claim Guard (SCG) before parent state mutation. Optional guarded operational memory (GOM) may supply schema and retry priors, but never contributes admissible factual evidence. Across three runtime families, EGRI passes all 24 adapter-level portability cells. Companion replays on the same eight primary fixtures separate benign from unsafe synthesis: the recursive substrate without TG commits benign parent syntheses, the same ungated substrate commits unsafe syntheses containing unsupported claims, and full EGRI blocks those unsafe syntheses before state mutation. In deterministic, fixture-defined context-budget tests under a fixed parent budget, recursive evidence caching plus TG raises supported-fact recall from 0.375 in single-shot and 0.625 in flat top-k retrieval to 1.000, while reducing unsupported commits from 1.000 to 0.000. EGRI is therefore a runtime admissibility contract for recursive synthesis, not a claim of broad answer-quality improvement. Anonymized code, fixtures, and reproduction commands are available at https://anonymous.4open.science/r/egri-anonymous-artifact-2D56/.",
+  "authors": [],
+  "candidate_id": "openreview:HajNwSQk90",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-05-26",
+    "latest_revision_date": "2026-09-29"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "EGRI: Evidence-Gated Recursive Inference as an Agent Runtime Contract",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=HajNwSQk90"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "HajNwSQk90"
+  },
+  "raw": {
+    "invitations": [
+      "aclweb.org/ACL/ARR/2026/May/-/Submission",
+      "aclweb.org/ACL/ARR/2026/May/-/Edit",
+      "aclweb.org/ACL/ARR/2026/May/-/Post_Submission",
+      "aclweb.org/ACL/ARR/2026/May/-/Preprint_Post_Submission",
+      "aclweb.org/ACL/ARR/2026/May/-/Desk_Reject_Verification_Flag"
+    ],
+    "venue": "ACL ARR 2026 May Submission",
+    "venue_id": "aclweb.org/ACL/ARR/2026/May/Submission"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "EGRI: Evidence-Gated Recursive Inference as an Agent Runtime Contract",
+  "versions": [
+    {
+      "date": "2026-09-29",
+      "identifier": "HajNwSQk90",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=HajNwSQk90"
+    }
+  ]
+}

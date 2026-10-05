@@ -1,0 +1,82 @@
+{
+  "abstract": "While large language models have facilitated breakthroughs in many applications of artificial intelligence, their inherent largeness makes them computationally expensive and challenging to deploy in resource-constrained settings. In this paper, we document the development of SmolLM2, a state-of-the-art \"small\" (1.7 billion parameter) language model (LM). To attain strong performance, we overtrain SmolLM2 on ~11 trillion tokens of data using a multi-stage training process that mixes web text with specialized math, code, and instruction-following data. We additionally introduce new specialized datasets (FineMath, Stack-Edu, and SmolTalk) at stages where we found existing datasets to be problematically small or low-quality. To inform our design decisions, we perform both small-scale ablations as well as a manual refinement process that updates the dataset mixing rates at each stage based on the performance at the previous stage. Ultimately, we demonstrate that SmolLM2 outperforms other recent small LMs including Qwen2.5-1.5B and Llama3.2-1B. To facilitate future research on LM development as well as applications of small LMs, we release both SmolLM2 as well as all of the datasets we prepared in the course of this project.",
+  "authors": [
+    "Loubna Ben Allal",
+    "Anton Lozhkov",
+    "Elie Bakouch",
+    "Gabriel Martín Blázquez",
+    "Guilherme Penedo",
+    "Lewis Tunstall",
+    "Andrés Marafioti",
+    "Hynek Kydlíček",
+    "Agustín Piqueres Lajarín",
+    "Vaibhav Srivastav",
+    "Joshua Lochner",
+    "Caleb Fahlgren",
+    "Xuan-Son Nguyen",
+    "Clémentine Fourrier",
+    "Ben Burtenshaw",
+    "Hugo Larcher",
+    "Haojun Zhao",
+    "Cyril Zakka",
+    "Mathieu Morlon",
+    "Colin Raffel",
+    "Leandro von Werra",
+    "Thomas Wolf"
+  ],
+  "candidate_id": "arxiv:2502.02737",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-04",
+    "latest_revision_date": "2025-02-04"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.02737"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.02737",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2502.02737v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "L.B.Allal,A.Lozhkov,E.Bakouch,G.M.Blázquez,G.Penedo,L.Tunstall,A.Marafioti,H.Kydlíček,A.P.Lajarín, V.Srivastav,J.Lochner,C.Fahlgren,X.-S.Nguyen,C.Fourrier,B.Burtenshaw,H.Larcher,H.Zhao,C.Zakka, M.Morlon,C.Raffel,L.vonWerra,andT.Wolf.Smollm2:Whensmolgoesbig–data-centrictrainingofasmall languagemodel,2025.URLhttps://arxiv.org/abs/2502.02737.",
+      "page": 66,
+      "reference_number": 9,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model",
+  "versions": [
+    {
+      "date": "2025-02-04",
+      "identifier": "2502.02737v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.02737v1"
+    }
+  ]
+}

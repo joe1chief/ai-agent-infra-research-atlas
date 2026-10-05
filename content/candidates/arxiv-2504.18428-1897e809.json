@@ -1,0 +1,84 @@
+{
+  "abstract": "In this paper, we introduce PolyMath, a multilingual mathematical reasoning benchmark covering 18 languages and 4 easy-to-hard difficulty levels. Our benchmark ensures difficulty comprehensiveness, language diversity, and high-quality translation, making it a highly discriminative multilingual mathematical benchmark in the era of reasoning LLMs. We conduct a comprehensive evaluation for advanced LLMs and find that even Qwen-3-235B-A22B-Thinking and Gemini-2.5-pro, achieve only 54.6 and 52.2 benchmark scores, with about 40% accuracy under the highest level From a language perspective, our benchmark reveals several key challenges of LLMs in multilingual reasoning: (1) Reasoning performance varies widely across languages for current LLMs; (2) Input-output language consistency is low in reasoning LLMs and may be correlated with performance; (3) The thinking length differs significantly by language for current LLMs. Additionally, we demonstrate that controlling the output language in the instructions has the potential to affect reasoning performance, especially for some low-resource languages, suggesting a promising direction for improving multilingual capabilities in LLMs.",
+  "authors": [
+    "Yiming Wang",
+    "Pei Zhang",
+    "Jialong Tang",
+    "Haoran Wei",
+    "Baosong Yang",
+    "Rui Wang",
+    "Chenshu Sun",
+    "Feitong Sun",
+    "Jiran Zhang",
+    "Junxuan Wu",
+    "Qiqian Cang",
+    "Yichang Zhang",
+    "Fei Huang",
+    "Junyang Lin",
+    "Fei Huang",
+    "Jingren Zhou"
+  ],
+  "candidate_id": "arxiv:2504.18428",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-25",
+    "latest_revision_date": "2025-11-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "PolyMath: Evaluating Mathematical Reasoning in Multilingual Contexts",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.18428"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.18428",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted by NeurIPS 2025",
+    "pdf_url": "https://arxiv.org/pdf/2504.18428v4",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Yiming Wang, Pei Zhang, Jialong Tang, Haoran Wei, Baosong Yang, Rui Wang, Chenshu Sun, Feitong Sun, Jiran Zhang, Junxuan Wu, Qiqian Cang, Yichang Zhang, Fei Huang, Junyang Lin, Fei Huang, and Jingren Zhou. Polymath: Evaluating mathematical reasoning in multilingual contexts.CoRR, abs/2504.18428,2025c. doi: 10.48550/ARXIV.2504.18428. URLhttps://doi.org/10.48550/arXiv.250 4.18428.",
+      "page": 24,
+      "reference_number": 56,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    },
+    {
+      "context": "Yiming Wang, Pei Zhang, Jialong Tang, Haoran Wei, Baosong Yang, Rui Wang, Chenshu Sun, Feitong Sun,JiranZhang,JunxuanWu,QiqianCang,YichangZhang,FeiHuang,JunyangLin,etal. Polymath: Evaluating mathematical reasoning in multilingual contexts.CoRR, abs/2504.18428, 2025b. doi: 10.48550/ARXIV.2504.18428. URLhttps://doi.org/10.48550/arXiv.2504.18428.",
+      "page": 31,
+      "reference_number": 2033,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "PolyMath: Evaluating Mathematical Reasoning in Multilingual Contexts",
+  "versions": [
+    {
+      "date": "2025-11-02",
+      "identifier": "2504.18428v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.18428v4"
+    }
+  ]
+}

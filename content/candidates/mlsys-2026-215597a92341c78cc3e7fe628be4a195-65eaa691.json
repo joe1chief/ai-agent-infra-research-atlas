@@ -1,0 +1,59 @@
+{
+  "abstract": "",
+  "authors": [
+    "Jaeyong Song",
+    "Seongyeon Park",
+    "Hongsun Jang",
+    "Jaewon Jung",
+    "Hunseong Lim",
+    "Junguk Hong",
+    "Jinho Lee"
+  ],
+  "candidate_id": "mlsys:2026:215597a92341c78cc3e7fe628be4a195",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-01-01",
+    "latest_revision_date": "2026-01-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "GriNNder: Breaking the Memory Capacity Wall in Full-Graph GNN Training with Storage Offloading",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2026/hash/215597a92341c78cc3e7fe628be4a195-Abstract-Conference.html"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "track": "conference",
+    "venue": "MLSys 2026"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_index_provides_year_only:2026"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "GriNNder: Breaking the Memory Capacity Wall in Full-Graph GNN Training with Storage Offloading",
+  "versions": [
+    {
+      "date": "2026-01-01",
+      "identifier": "215597a92341c78cc3e7fe628be4a195",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2026/hash/215597a92341c78cc3e7fe628be4a195-Abstract-Conference.html"
+    }
+  ]
+}

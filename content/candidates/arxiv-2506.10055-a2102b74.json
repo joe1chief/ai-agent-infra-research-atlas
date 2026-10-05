@@ -1,0 +1,79 @@
+{
+  "abstract": "Agentic tasks, which require multi-step problem solving with autonomy, tool use, and adaptive reasoning, are becoming increasingly central to the advancement of NLP and AI. However, existing instruction data lacks tool interaction, and current agentic benchmarks rely on costly human annotation, limiting their scalability. We introduce \\textsc{TaskCraft}, an automated workflow for generating difficulty-scalable, multi-tool, and verifiable agentic tasks with execution trajectories. TaskCraft expands atomic tasks using depth-based and width-based extensions to create structurally and hierarchically complex challenges. Empirical results show that these tasks improve prompt optimization in the generation workflow and enhance supervised fine-tuning of agentic foundation models. We present a large-scale synthetic dataset of approximately 36,000 tasks with varying difficulty to support future research on agent tuning and evaluation.",
+  "authors": [
+    "Dingfeng Shi",
+    "Jingyi Cao",
+    "Qianben Chen",
+    "Weichen Sun",
+    "Weizhen Li",
+    "Hongxuan Lu",
+    "Fangchen Dong",
+    "Tianrui Qin",
+    "King Zhu",
+    "Minghao Liu",
+    "Jian Yang",
+    "Ge Zhang",
+    "Jiaheng Liu",
+    "Changwang Zhang",
+    "Jun Wang",
+    "Yuchen Eleanor Jiang",
+    "Wangchunshu Zhou"
+  ],
+  "candidate_id": "arxiv:2506.10055",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-11",
+    "latest_revision_date": "2025-06-17"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "TaskCraft: Automated Generation of Agentic Tasks",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.10055"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.10055",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2506.10055v2",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "D.Shi,J.Cao,Q.Chen,W.Sun,W.Li,H.Lu,F.Dong,T.Qin,K.Zhu,M.Liu,J.Yang,G.Zhang,J.Liu,C.Zhang, J.Wang,Y.E.Jiang,andW.Zhou.Taskcraft:Automatedgenerationofagentictasks.ArXiv,abs/2506.10055, 2025.URLhttps://api.semanticscholar.org/CorpusID:279318561.",
+      "page": 78,
+      "reference_number": 195,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "tool use"
+    ],
+    "primary_category": "AG-3",
+    "requires_human_confirmation": true
+  },
+  "title": "TaskCraft: Automated Generation of Agentic Tasks",
+  "versions": [
+    {
+      "date": "2025-06-17",
+      "identifier": "2506.10055v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.10055v2"
+    }
+  ]
+}

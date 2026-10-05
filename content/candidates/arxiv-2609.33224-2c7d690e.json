@@ -1,0 +1,60 @@
+{
+  "abstract": "Request scheduling is a key challenge in large-scale clusters serving agentic large language model (LLM) workloads. An effective scheduler must preserve key-value cache (KVC) reuse across long, shared prefixes, meet token-level latency service-level objectives (SLOs), and minimize GPU resource footprint. Existing schedulers struggle to reconcile these requirements: request consolidation can sacrifice cache locality and increase prefill/decode interference, compromising both SLO attainment and resource efficiency. We present PackServe, a scheduler designed to reduce resource costs while meeting latency SLOs for agentic LLM serving. PackServe uses compact white-box models to predict latency under prefill/decode interference. Guided by these predictions, it packs requests onto fewer serving instances while preserving KVC reuse and SLO constraints, trading available latency headroom for improved per-instance throughput. Evaluation on 64 NVIDIA H20 GPUs shows that PackServe uses up to 16.8% and 24.6% fewer GPU-hours than state-of-the-art schedulers under 30-ms and 50-ms TPOT targets, respectively, while meeting the target TPOT objectives. PackServe has also been deployed in our production cluster comprising over 1000 GPUs, where it reduces the resource footprint by 34.7% compared with the original production scheduler.",
+  "authors": [
+    "Zhiyuan Tan",
+    "Dejiang Zhu",
+    "Jingzhe Jiang",
+    "Yihao Zheng",
+    "Yang Tian",
+    "Tao Wang",
+    "Minchen Yu"
+  ],
+  "candidate_id": "arxiv:2609.33224",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-27",
+    "latest_revision_date": "2026-09-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.33224"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.33224",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "13 pages, 13 figures",
+    "pdf_url": "https://arxiv.org/pdf/2609.33224v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale",
+  "versions": [
+    {
+      "date": "2026-09-27",
+      "identifier": "2609.33224v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.33224v1"
+    }
+  ]
+}

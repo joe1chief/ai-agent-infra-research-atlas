@@ -1,0 +1,76 @@
+{
+  "abstract": "Humans acquire knowledge through three cognitive stages: perceiving information, comprehending knowledge, and adapting knowledge to solve novel problems. Videos serve as an effective medium for this learning process, facilitating a progression through these cognitive stages. However, existing video benchmarks fail to systematically evaluate the knowledge acquisition capabilities in Large Multimodal Models (LMMs). To address this gap, we introduce Video-MMMU, a multi-modal, multi-disciplinary benchmark designed to assess LMMs' ability to acquire and utilize knowledge from videos. Video-MMMU features a curated collection of 300 expert-level videos and 900 human-annotated questions across six disciplines, evaluating knowledge acquisition through stage-aligned question-answer pairs: Perception, Comprehension, and Adaptation. A proposed knowledge gain metric, Δknowledge, quantifies improvement in performance after video viewing. Evaluation of LMMs reveals a steep decline in performance as cognitive demands increase and highlights a significant gap between human and model knowledge acquisition, underscoring the need for methods to enhance LMMs' capability to learn and adapt from videos.",
+  "authors": [
+    "Kairui Hu",
+    "Penghao Wu",
+    "Fanyi Pu",
+    "Wang Xiao",
+    "Yuanhan Zhang",
+    "Xiang Yue",
+    "Bo Li",
+    "Ziwei Liu"
+  ],
+  "candidate_id": "arxiv:2501.13826",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-23",
+    "latest_revision_date": "2025-01-23"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Video-MMMU: Evaluating Knowledge Acquisition from Multi-Discipline Professional Videos",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.13826"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2501.13826",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2501.13826v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Kairui Hu, Penghao Wu, Fanyi Pu, Wang Xiao, Yuanhan Zhang, Xiang Yue, Bo Li, and Ziwei Liu. Video- mmmu: Evaluatingknowledgeacquisitionfrommulti-disciplineprofessionalvideos.arXivpreprint arXiv:2501.13826, 2025. 27",
+      "page": 27,
+      "reference_number": 27,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    },
+    {
+      "context": "KairuiHu,PenghaoWu,FanyiPu,WangXiao,YuanhanZhang,XiangYue,BoLi,andZiweiLiu.Video-mmmu: Evaluatingknowledgeacquisitionfrommulti-disciplineprofessionalvideos. arXiv preprint arXiv:2501.13826, 2025.",
+      "page": 35,
+      "reference_number": 49,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Video-MMMU: Evaluating Knowledge Acquisition from Multi-Discipline Professional Videos",
+  "versions": [
+    {
+      "date": "2025-01-23",
+      "identifier": "2501.13826v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.13826v1"
+    }
+  ]
+}

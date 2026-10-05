@@ -1,0 +1,60 @@
+{
+  "abstract": "Evaluating distributed LLM serving designs on physical clusters is costly. Yet existing simulators provide only subsets of the capabilities needed for realistic design exploration: stateful closed-loop execution, timing prediction without profiling target hardware, and direct execution of unmodified serving benchmarks. We present ServeTwin, a closed-loop simulator that couples specification-driven analytical timing with a stateful serving loop. This coupling captures feedback among request completion, scheduling, queue state, and KV-cache evolution, including prefill-decode disaggregation and multi-turn agent workloads. ServeTwin avoids target-hardware operator profiling through iSTAGE, an analytical trace generator that derives per-iteration traces from model and engine specifications while representing ragged batches and discrete engine mechanisms such as CUDA-graph batch padding. It further decomposes execution time into component-owned throughput, scheduler, and runtime costs. This ownership lets unaffected parameters transfer across platforms and confines recalibration to changed hardware or software components. ServeTwin implements a vLLM-compatible interface and runs unmodified serving benchmarks. Against real deployments, it reproduces InferenceX's steady-state throughput-interactivity frontier with a 3.6% mean error and predicts LMBenchmark's multi-turn performance with a 9.9% error while tracking KV-cache evolution. Pre-silicon sweeps reveal that the preferred HBM bandwidth-capacity tradeoff reverses across workload states and that increasing concurrency shifts the bottleneck from memory bandwidth to scheduler and runtime overheads. Together, these capabilities enable practical exploration of distributed LLM serving systems before target hardware is available.",
+  "authors": [
+    "Sungjoon Park",
+    "Changue Jung",
+    "Kyungno Joo",
+    "Mincheol Kang",
+    "Jaehyung Ahn",
+    "Sehwan Lee",
+    "Sangjoon Kim"
+  ],
+  "candidate_id": "arxiv:2610.02732",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-02",
+    "latest_revision_date": "2026-10-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "ServeTwin: A Benchmark-Validated Simulator for Distributed LLM Architecture Exploration",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02732"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.02732",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.02732v1",
+    "primary_category": "cs.PF"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "ServeTwin: A Benchmark-Validated Simulator for Distributed LLM Architecture Exploration",
+  "versions": [
+    {
+      "date": "2026-10-02",
+      "identifier": "2610.02732v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02732v1"
+    }
+  ]
+}

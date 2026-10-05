@@ -1,0 +1,66 @@
+{
+  "abstract": "LLM-based multi-agent embodied planning remains impractical due to prohibitively high execution latency. We identify failed actions as the dominant bottleneck, stemming from two core challenges: inaccurate state tracking under partial observability and inefficient coordination that produces redundant or conflicting actions. We introduce Mosaic, a runtime-efficient multi-agent planning framework that addresses both challenges. Mosaic maintains accurate yet lightweight state tracking through agent-centric semantic memory that stores objects in relative coordinates, enabling geometric transformations and coordination. It ensures efficient coordination through Integer Linear Programming that allocates actions at every planning step, enforcing physical feasibility and inter-agent coordination constraints. Across AI2-THOR and search-and-rescue benchmarks, Mosaic achieves 27–32% faster execution, 30–33% fewer LLM calls, 25–31% fewer steps, and 4–10% points higher success rates. These results demonstrate that efficient memory and constraint-guided coordination are critical for scalable, low-latency multi-agent planning.",
+  "authors": [
+    "Kunjal Panchal",
+    "Saayan Mitra",
+    "Sunav Choudhary",
+    "Victor Bursztyn",
+    "Somdeb Sarkhel",
+    "Hui Guan"
+  ],
+  "candidate_id": "openreview:hw8bxMLzQx",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-04-30",
+    "latest_revision_date": "2026-09-22"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Mosaic: Runtime-Efficient Multi-Agent Embodied Planning",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=hw8bxMLzQx"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "hw8bxMLzQx"
+  },
+  "raw": {
+    "invitations": [
+      "ICML.cc/2026/Conference/-/Submission",
+      "ICML.cc/2026/Conference/-/Post_Submission",
+      "ICML.cc/2026/Conference/Submission1496/-/Full_Submission",
+      "ICML.cc/2026/Conference/-/Edit",
+      "ICML.cc/2026/Conference/Submission1496/-/Camera_Ready_Revision"
+    ],
+    "venue": "ICML 2026 regular",
+    "venue_id": "ICML.cc/2026/Conference"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent",
+      "coordination"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Mosaic: Runtime-Efficient Multi-Agent Embodied Planning",
+  "versions": [
+    {
+      "date": "2026-09-22",
+      "identifier": "hw8bxMLzQx",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=hw8bxMLzQx"
+    }
+  ]
+}

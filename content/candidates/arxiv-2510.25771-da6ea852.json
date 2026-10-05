@@ -1,0 +1,67 @@
+{
+  "abstract": "We release Gaperon, a fully open suite of French-English-coding language models designed to advance transparency and reproducibility in large-scale model training. The Gaperon family includes 1.5B, 8B, and 24B parameter models trained on 2-4 trillion tokens, released with all elements of the training pipeline: French and English datasets filtered with a neural quality classifier, an efficient data curation and training framework, and hundreds of intermediate checkpoints. Through this work, we study how data filtering and contamination interact to shape both benchmark and generative performance. We find that filtering for linguistic quality enhances text fluency and coherence but yields subpar benchmark results, and that late deliberate contamination -- continuing training on data mixes that include test sets -- recovers competitive scores while only reasonably harming generation quality. We discuss how usual neural filtering can unintentionally amplify benchmark leakage. To support further research, we also introduce harmless data poisoning during pretraining, providing a realistic testbed for safety studies. By openly releasing all models, datasets, code, and checkpoints, Gaperon establishes a reproducible foundation for exploring the trade-offs between data curation, evaluation, safety, and openness in multilingual language model development.",
+  "authors": [
+    "Nathan Godey",
+    "Wissam Antoun",
+    "Rian Touchent",
+    "Rachel Bawden",
+    "Éric de la Clergerie",
+    "Benoît Sagot",
+    "Djamé Seddah"
+  ],
+  "candidate_id": "arxiv:2510.25771",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-10-29",
+    "latest_revision_date": "2025-10-29"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Gaperon: A Peppered English-French Generative Language Model Suite",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.25771"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2510.25771",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2510.25771v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "N.Godey,W.Antoun,R.Touchent,R.Bawden,ÉricdelaClergerie,B.Sagot,andD.Seddah.Gaperon:Apeppered english-frenchgenerativelanguagemodelsuite,2025.URLhttps://arxiv.org/abs/2510.25771.",
+      "page": 70,
+      "reference_number": 70,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Gaperon: A Peppered English-French Generative Language Model Suite",
+  "versions": [
+    {
+      "date": "2025-10-29",
+      "identifier": "2510.25771v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.25771v1"
+    }
+  ]
+}

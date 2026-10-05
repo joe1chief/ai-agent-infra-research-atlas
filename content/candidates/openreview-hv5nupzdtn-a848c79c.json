@@ -1,0 +1,60 @@
+{
+  "abstract": "",
+  "authors": [
+    "{'fullname': 'Tianyao Shi', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Tianyao%20Shi'}",
+    "{'fullname': 'Yanran Wu', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Yanran%20Wu'}",
+    "{'fullname': 'Sihang Liu', 'username': '~Sihang_Liu1'}",
+    "{'fullname': 'Yi Ding', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Yi%20Ding'}"
+  ],
+  "candidate_id": "openreview:hv5NUPzdTN",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-07-01",
+    "latest_revision_date": "2026-07-23"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Disaggregated Speculative Decoding for Carbon-Efficient LLM Serving",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=hv5NUPzdTN"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "hv5NUPzdTN"
+  },
+  "raw": {
+    "invitations": [
+      "OpenReview.net/Public_Article/ORCID.org/-/Record",
+      "OpenReview.net/Public_Article/-/Edit"
+    ],
+    "venue": "IEEE Computer Architecture Letters",
+    "venue_id": "OpenReview.net/Public_Article"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Disaggregated Speculative Decoding for Carbon-Efficient LLM Serving",
+  "versions": [
+    {
+      "date": "2026-07-23",
+      "identifier": "hv5NUPzdTN",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=hv5NUPzdTN"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "abstract": "3D Gaussian Splatting (3DGS) enables photorealistic scene reconstruction, but training large-scale scenes requires substantial memory and computation. Distributing training across multiple GPUs increases available memory capacity, yet its performance is strictly constrained by data movement. We identify two dominant bottlenecks: repeated off-chip memory accesses during forward and backward rasterization, and inter-GPU communication of partial Gaussian gradients. To address these bottlenecks, we present ByteSplat, a distributed 3DGS training framework that jointly reduces intra- and inter-GPU data movement. First, ByteSplat fuses forward rasterization and backward rasterization into a single GPU kernel, retaining intermediate results on-chip to eliminate redundant off-chip transfers. Second, to alleviate the increased on-chip storage by fused rasterization, ByteSplat introduces hardware-aware pruning that considers both rendering quality and per-tile shared-memory constraints, increasing the overall performance of fused execution. Lastly, ByteSplat exploits gradient sparsity to eliminate zero partial gradients from inter-GPU communication. GPU-efficient encoder and decoder kernels compact the remaining records and directly aggregate the received gradients on their owner GPUs, reducing both communication volume and local aggregation overhead. We evaluate ByteSplat across six datasets. Compared with the baseline, ByteSplat reduces intra-GPU off-chip traffic and backward inter-GPU communication volume by 63.4% and 65.8%, respectively. On eight GPUs, ByteSplat achieves up to 6.1$\\times$ training speedup while preserving reconstruction quality.",
+  "authors": [
+    "Shuo Wu",
+    "He Zhu",
+    "Han Zhao",
+    "Xiaohui Zhang",
+    "Yaqian Zhao",
+    "Hui Wei",
+    "Ruyang Li",
+    "Hongzhi Shi",
+    "Lihua Lu",
+    "Jingwen Leng",
+    "Yu Feng",
+    "Minyi Guo"
+  ],
+  "candidate_id": "arxiv:2610.02851",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-02",
+    "latest_revision_date": "2026-10-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "ByteSplat: Efficient Distributed 3D Gaussian Splatting Training via Intra- and Inter-GPU communication reduction",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02851"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.02851",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.02851v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "kernel"
+    ],
+    "primary_category": "AI-4",
+    "requires_human_confirmation": true
+  },
+  "title": "ByteSplat: Efficient Distributed 3D Gaussian Splatting Training via Intra- and Inter-GPU communication reduction",
+  "versions": [
+    {
+      "date": "2026-10-02",
+      "identifier": "2610.02851v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02851v1"
+    }
+  ]
+}

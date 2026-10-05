@@ -1,0 +1,68 @@
+{
+  "abstract": "Reinforcement learning with verifiable rewards (RLVR) has demonstrated significant success in enhancing mathematical reasoning and coding performance of large language models (LLMs), especially when structured reference answers are accessible for verification. However, its extension to broader, less structured domains remains unexplored. In this work, we investigate the effectiveness and scalability of RLVR across diverse real-world domains including medicine, chemistry, psychology, economics, and education, where structured reference answers are typically unavailable. We reveal that binary verification judgments on broad-domain tasks exhibit high consistency across various LLMs provided expert-written reference answers exist. Motivated by this finding, we utilize a generative scoring technique that yields soft, model-based reward signals to overcome limitations posed by binary verifications, especially in free-form, unstructured answer scenarios. We further demonstrate the feasibility of training cross-domain generative reward models using relatively small (7B) LLMs without the need for extensive domain-specific annotation. Through comprehensive experiments, our RLVR framework establishes clear performance gains, significantly outperforming state-of-the-art open-source aligned models such as Qwen2.5-72B and DeepSeek-R1-Distill-Qwen-32B across domains in free-form settings. Our approach notably enhances the robustness, flexibility, and scalability of RLVR, representing a substantial step towards practical reinforcement learning applications in complex, noisy-label scenarios.",
+  "authors": [
+    "Yi Su",
+    "Dian Yu",
+    "Linfeng Song",
+    "Juntao Li",
+    "Haitao Mi",
+    "Zhaopeng Tu",
+    "Min Zhang",
+    "Dong Yu"
+  ],
+  "candidate_id": "arxiv:2503.23829",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-31",
+    "latest_revision_date": "2025-04-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Crossing the Reward Bridge: Expanding RL with Verifiable Rewards Across Diverse Domains",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.23829"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.23829",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2503.23829v2",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Y.Su,D.Yu,L.Song,J.Li,H.Mi,Z.Tu,M.Zhang,andD.Yu.Expandingrlwithverifiablerewardsacrossdiverse domains.arXivpreprintarXiv:2503.23829,2025b.",
+      "page": 79,
+      "reference_number": 206,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Crossing the Reward Bridge: Expanding RL with Verifiable Rewards Across Diverse Domains",
+  "versions": [
+    {
+      "date": "2025-04-01",
+      "identifier": "2503.23829v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.23829v2"
+    }
+  ]
+}

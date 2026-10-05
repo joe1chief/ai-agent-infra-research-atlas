@@ -1,0 +1,66 @@
+{
+  "abstract": "Most progress in recent coder models has been driven by supervised fine-tuning (SFT), while the potential of reinforcement learning (RL) remains largely unexplored, primarily due to the lack of reliable reward data/model in the code domain. In this paper, we address this challenge by leveraging automated large-scale test-case synthesis to enhance code model training. Specifically, we design a pipeline that generates extensive (question, test-cases) pairs from existing code data. Using these test cases, we construct preference pairs based on pass rates over sampled programs to train reward models with Bradley-Terry loss. It shows an average of 10-point improvement for Llama-3.1-8B-Ins and 5-point improvement for Qwen2.5-Coder-7B-Ins through best-of-32 sampling, making the 7B model on par with 236B DeepSeek-V2.5. Furthermore, we conduct reinforcement learning with both reward models and test-case pass rewards, leading to consistent improvements across HumanEval, MBPP, BigCodeBench, and LiveCodeBench (V4). Notably, we follow the R1-style training to start from Qwen2.5-Coder-base directly and show that our RL training can improve model on HumanEval-plus by over 25\\% and MBPP-plus by 6\\% for merely 80 optimization steps. We believe our results highlight the huge potential of reinforcement learning in coder models.",
+  "authors": [
+    "Huaye Zeng",
+    "Dongfu Jiang",
+    "Haozhe Wang",
+    "Ping Nie",
+    "Xiaotong Chen",
+    "Wenhu Chen"
+  ],
+  "candidate_id": "arxiv:2502.01718",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-03",
+    "latest_revision_date": "2025-05-24"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "ACECODER: Acing Coder RL via Automated Test-Case Synthesis",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.01718"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.01718",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "9 pages, 4 figure, 11 tables. Accepted to ACL 2025 main conference",
+    "pdf_url": "https://arxiv.org/pdf/2502.01718v4",
+    "primary_category": "cs.SE"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "H.Zeng,J.Yang,Y.Zhang,B.Yu,S.Wang,Z.Liu,M.Sun,andT.Liu.Acecoder:Acingcoderrlviaautomated test-casesynthesis.arXivpreprintarXiv:2502.01718,2025a.URLhttps://arxiv.org/abs/2502.01718.",
+      "page": 81,
+      "reference_number": 247,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "ACECODER: Acing Coder RL via Automated Test-Case Synthesis",
+  "versions": [
+    {
+      "date": "2025-05-24",
+      "identifier": "2502.01718v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.01718v4"
+    }
+  ]
+}

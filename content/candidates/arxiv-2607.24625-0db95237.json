@@ -1,0 +1,59 @@
+{
+  "abstract": "LLM agents deployed in practical workflows routinely mix private context, untrusted tool and web outputs, and external side effects. While information-flow control (IFC) provides structural defenses against prompt injection, data exfiltration, and confused-deputy attacks, conventional IFC relies on monotone taint tracking that either over-blocks benign operations or permanently strands downstream execution once an agent ingests unvetted data. We present APPA (Agentic Permissions Policy Algebra), which turns agent IFC from an abort-only barrier into a policy-governed recovery system. APPA enforces a dual-phase reference monitor at tool dispatch and protocol gateways (e.g., Model Context Protocol): before tool execution, it prospectively evaluates composite label restrictions and workflow history; upon completion, it validates realized outputs before context admission. For incremental rollout across unannotated tools, APPA incorporates gradual security typing with bounded cast resolution. To inspect untrusted data without poisoning primary agent context, APPA introduces on-demand trajectory confinement: disposable child branches absorb taint locally and exit through shape-bounded channels (attest-schema) with exact parent-label and transcript preservation, avoiding permanently partitioned multi-agent infrastructure. We prove core safety invariants: no-laundering gradual resolution, branch boundary isolation, and recovery containment against prompt-injected models. Across 6,600 controlled benchmark episodes spanning OWASP AgentThreatBench and enterprise workflows (Bench-Corp), APPA sustains 64.2-91% utility with zero observed attacks across 1,320 guarded episodes, establishing a practical defense for deployed tool-using agents.",
+  "authors": [
+    "Arseny Kravchenko",
+    "Vadim Liventsev",
+    "Innokentii Konstantinov",
+    "Ildar Iskhakov",
+    "Matvey Kukuy"
+  ],
+  "candidate_id": "arxiv:2607.24625",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-07-27",
+    "latest_revision_date": "2026-08-26"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "APPA: Recoverable Information-Flow Control for Real-World LLM Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2607.24625"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2607.24625",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "21 pages, 3 figures. v2: Major revision with updated title, MCP protocol gateway architecture, 3-model empirical benchmark (6,600 episodes), recovery ablations, gradual security typing, and complete formal safety proofs",
+    "pdf_url": "https://arxiv.org/pdf/2607.24625v2",
+    "primary_category": "cs.CR"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "permission",
+      "prompt injection"
+    ],
+    "primary_category": "AG-6",
+    "requires_human_confirmation": true
+  },
+  "title": "APPA: Recoverable Information-Flow Control for Real-World LLM Agents",
+  "versions": [
+    {
+      "date": "2026-08-26",
+      "identifier": "2607.24625v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2607.24625v2"
+    }
+  ]
+}

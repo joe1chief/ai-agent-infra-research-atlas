@@ -1,0 +1,57 @@
+{
+  "abstract": "Large language model (LLM) agents reuse external memory to guide new tasks, but effective retrieval requires learning which memory sets improve execution. Such learning relies on costly outcome feedback: ordinary retrieval observes only executed sets, while evaluating alternatives requires additional rollouts. We introduce \\textsc{UpliftMem}, which learns memory retrieval from set-level execution uplift relative to the same executor without memory. A theoretical analysis of how retrieval preferences restrict feedback coverage motivates targeted probing of alternative memory sets. Probe selection follows an expected value of sample information (EVSI) criterion, derived in closed form under a correlated Gaussian model, to allocate limited training rollouts according to their expected improvement in local retrieval decisions. The shared scorer is trained with a frozen executor and selects memory sets without test-time probes. Across ALFWorld, WebShop, and BigCodeBench, \\textsc{UpliftMem} achieves the best success rates among evaluated baselines on the main evaluation sets. Controlled fixed-store and matched probe budget evaluations further demonstrate improved memory-use decisions and more effective use of execution feedback.",
+  "authors": [
+    "Mengkun Liang",
+    "Haoran Qiang",
+    "Guannan Liu",
+    "Junjie Wu"
+  ],
+  "candidate_id": "arxiv:2609.36805",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-29",
+    "latest_revision_date": "2026-09-29"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "UpliftMem: Learning Set-Level Uplift for Agent Memory Retrieval",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.36805"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.36805",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.36805v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "UpliftMem: Learning Set-Level Uplift for Agent Memory Retrieval",
+  "versions": [
+    {
+      "date": "2026-09-29",
+      "identifier": "2609.36805v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.36805v1"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "abstract": "This paper introduces Group Sequence Policy Optimization (GSPO), our stable, efficient, and performant reinforcement learning algorithm for training large language models. Unlike previous algorithms that adopt token-level importance ratios, GSPO defines the importance ratio based on sequence likelihood and performs sequence-level clipping, rewarding, and optimization. We demonstrate that GSPO achieves superior training efficiency and performance compared to the GRPO algorithm, notably stabilizes Mixture-of-Experts (MoE) RL training, and has the potential for simplifying the design of RL infrastructure. These merits of GSPO have contributed to the remarkable improvements in the latest Qwen3 models.",
+  "authors": [
+    "Chujie Zheng",
+    "Shixuan Liu",
+    "Mingze Li",
+    "Xiong-Hui Chen",
+    "Bowen Yu",
+    "Chang Gao",
+    "Kai Dang",
+    "Yuqiong Liu",
+    "Rui Men",
+    "An Yang",
+    "Jingren Zhou",
+    "Junyang Lin"
+  ],
+  "candidate_id": "arxiv:2507.18071",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-07-24",
+    "latest_revision_date": "2025-07-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Group Sequence Policy Optimization",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.18071"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2507.18071",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2507.18071v2",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "ChujieZheng,ShixuanLiu,MingzeLi,Xiong-HuiChen,BowenYu,ChangGao,KaiDang,YuqiongLiu, Rui Men, An Yang, et al. Group sequence policy optimization.arXivpreprintarXiv:2507.18071, 2025.",
+      "page": 25,
+      "reference_number": 70,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Group Sequence Policy Optimization",
+  "versions": [
+    {
+      "date": "2025-07-28",
+      "identifier": "2507.18071v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2507.18071v2"
+    }
+  ]
+}

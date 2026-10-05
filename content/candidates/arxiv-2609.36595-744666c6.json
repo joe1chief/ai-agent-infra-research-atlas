@@ -1,0 +1,60 @@
+{
+  "abstract": "Visual-memory systems commonly retain or compress past observations. Robot control additionally requires interaction-derived state that no individual frame may explicitly represent, such as persistent identity relations, accumulated progress, or ordered procedures. We introduce Simple Agentic Robot Memory (SimpleARM), a training-free memory layer for frozen generalist robot policies. From the task instruction, SimpleARM specifies what to monitor; frozen perceptual tools maintain compact typed state online; structured access retrieves that state only when a proposed subgoal depends on history; and current-view grounding resolves recalled entities before execution. We evaluate SimpleARM on RoboMME, a benchmark of memory-dependent robot manipulation tasks that require history information no longer available in the current observation. Across all 16 tasks and three policy seeds, SimpleARM achieves 67.17% mean success, compared with 44.51% for the strongest non-oracle baseline. Matched ablations show mechanism specificity: removing relation, reference, progress, or route state produces large losses where the affected state is retrieved for control, while largely sparing other tasks. These results support a state-based view of robot memory: effective memory for control is not simply retained visual history, but compact task-relevant state derived from the interaction history.",
+  "authors": [
+    "Yuyou Zhang",
+    "Yunbei Zhang",
+    "Miao Li",
+    "Janet Wang",
+    "Zijian Jin",
+    "Shilong Liu",
+    "Ding Zhao"
+  ],
+  "candidate_id": "arxiv:2609.36595",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-29",
+    "latest_revision_date": "2026-09-29"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Simple Agentic Memory for Generalist Robot Policies",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.36595"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.36595",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "34 pages, 13 figures. Project page: https://simplearm.github.io/",
+    "pdf_url": "https://arxiv.org/pdf/2609.36595v1",
+    "primary_category": "cs.RO"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "identity"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "Simple Agentic Memory for Generalist Robot Policies",
+  "versions": [
+    {
+      "date": "2026-09-29",
+      "identifier": "2609.36595v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.36595v1"
+    }
+  ]
+}

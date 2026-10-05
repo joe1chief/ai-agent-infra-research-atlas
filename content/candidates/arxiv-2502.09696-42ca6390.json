@@ -1,0 +1,110 @@
+{
+  "abstract": "Large Multimodal Models (LMMs) exhibit shortfalls when interpreting images and, by some measures, have poorer spatial cognition than young children or animals. Despite this, they attain high scores on many popular visual benchmarks, with headroom rapidly eroded by model progress. This creates a need for difficult benchmarks that remain relevant for longer. We introduce ZeroBench - a lightweight visual reasoning benchmark curated using adversarial filtering to be \"impossible\" for frontier LMMs at its original release, with initial SotA scores of 0% pass@1 and pass^5. We track progress on ZeroBench over the subsequent year, observing SotA reaching 6% pass^5 and 19% pass@5, indicating the potential longevity of the benchmark. We evaluate 46 LMMs on ZeroBench, compare performance to a human baseline, analyse strengths and weaknesses, chart a year of progress in visual capabilities, and publicly release ZeroBench at https://zerobench.github.io.",
+  "authors": [
+    "Jonathan Roberts",
+    "Mohammad Reza Taesiri",
+    "Ansh Sharma",
+    "Akash Gupta",
+    "Samuel Roberts",
+    "Ioana Croitoru",
+    "Simion-Vlad Bogolin",
+    "Jialu Tang",
+    "Florian Langer",
+    "Vyas Raina",
+    "Vatsal Raina",
+    "Hanyi Xiong",
+    "Vishaal Udandarao",
+    "Jingyi Lu",
+    "Shiyang Chen",
+    "Sam Purkis",
+    "Tianshuo Yan",
+    "Wenye Lin",
+    "Gyungin Shin",
+    "Qiaochu Yang",
+    "Anh Totti Nguyen",
+    "David I. Atkinson",
+    "Aaditya Baranwal",
+    "Alexandru Coca",
+    "Mikah Dang",
+    "Sebastian Dziadzio",
+    "Jakob D. Kunz",
+    "Kaiqu Liang",
+    "Alexander Lo",
+    "Brian Pulfer",
+    "Steven Walton",
+    "Charig Yang",
+    "Kai Han",
+    "Samuel Albanie"
+  ],
+  "candidate_id": "arxiv:2502.09696",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-13",
+    "latest_revision_date": "2026-07-07"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "ZeroBench: An Impossible Visual Benchmark for Contemporary Large Multimodal Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.09696"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.09696",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted at ICML 2026",
+    "pdf_url": "https://arxiv.org/pdf/2502.09696v3",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "JonathanRoberts,MohammadRezaTaesiri,AnshSharma,AkashGupta,SamuelRoberts,IoanaCroitoru, Simion-VladBogolin,JialuTang,FlorianLanger,etal. Zerobench: Animpossiblevisualbenchmarkfor contemporary large multimodal models, 2025. URLhttps://arxiv.org/abs/2502.09696.",
+      "page": 30,
+      "reference_number": 67,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    },
+    {
+      "context": "JonathanRoberts,MohammadRezaTaesiri,AnshSharma,AkashGupta,SamuelRoberts,IoanaCroitoru, Simion-Vlad Bogolin, Jialu Tang, Florian Langer, Vyas Raina, Vatsal Raina, Hanyi Xiong, Vishaal Udandarao, Jingyi Lu, Shiyang Chen, Sam Purkis, Tianshuo Yan, Wenye Lin, Gyungin Shin, Qiaochu Yang, Anh Totti Nguyen, Kai Han, and Samuel Albanie. Zerobench: An impossible visual benchmark for contemporary large multimodal models. CoRR, abs/2502.09696, 2025. doi: 10.48550/ARXIV.2502. 09696. URLhttps://doi.org/10.48550/arXiv.2502.09696 .",
+      "page": 67,
+      "reference_number": 8226,
+      "report_blob_sha": "638a3d4dceac9312d10bbe304219080740f77fd5",
+      "report_title": "2025-06_ernie-4.5",
+      "seed_report_path": "2025/baidu/2025-06_ernie-4.5.pdf"
+    },
+    {
+      "context": "JonathanRoberts,MohammadRezaTaesiri,AnshSharma,AkashGupta,SamuelRoberts,IoanaCroitoru,Simion- VladBogolin,JialuTang,FlorianLanger,VyasRaina,VatsalRaina,HanyiXiong,VishaalUdandarao,JingyiLu, ShiyangChen,SamPurkis,TianshuoYan,WenyeLin,GyunginShin,QiaochuYang,AnhTottiNguyen,DavidI. Atkinson,AadityaBaranwal,AlexandruCoca,MikahDang,SebastianDziadzio,JakobD.Kunz,KaiquLiang, AlexanderLo,BrianPulfer,StevenWalton,CharigYang,KaiHan,andSamuelAlbanie.Zerobench:Animpossible visualbenchmarkforcontemporarylargemultimodalmodels,2025.URL https://arxiv.org/abs/2502.09696.",
+      "page": 39,
+      "reference_number": 113,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "ZeroBench: An Impossible Visual Benchmark for Contemporary Large Multimodal Models",
+  "versions": [
+    {
+      "date": "2026-07-07",
+      "identifier": "2502.09696v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.09696v3"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "abstract": "LLM agents are deployed into infrastructure that grants them broad host authority, yet existing agent-security benchmarks and defenses operate almost exclusively at the application telemetry layer: the served tool manifest, the user prompt, and the model's messages. Some threats, however, smuggle malicious instructions and actions past the application boundary, leaving them invisible to that layer. In this work, we bridge that gap by pairing application-level agent telemetry with kernel-level syscall traces to present the first paired-evidence characterization of kernel-level versus application-layer signal for agent security. To quantify the value of the enhanced telemetry, we introduce Agent Cross-Layer Evidence (ACE), a paired-session corpus of 4,047 sessions and 17 threat models spanning six delivery-vector families and 14 of the 25 OWASP LLM and agentic threat categories, organized into 12 attack mechanics with per-mechanic characterization of where the most discriminative evidence lies. Across four distinct detector families, we find that kernel evidence is discriminative on its own and that composing it with application-layer evidence generally outperforms either single-layer view, revealing complementary signals that single-layer analyses can miss. We further demonstrate generalization to unseen attack families and transfer to an alternate agent runtime. Together, these findings establish the value of cross-layer evidence for agent security.",
+  "authors": [
+    "Spencer King",
+    "Zhilu Zhang",
+    "Mikhail Kuznetsov",
+    "Kay Liu",
+    "Baris Coskun",
+    "Wei Ding"
+  ],
+  "candidate_id": "arxiv:2609.28915",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-24",
+    "latest_revision_date": "2026-09-24"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "On the Effectiveness of Kernel-Level Evidence for Agent Security",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.28915"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.28915",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "53 pages, 2 figures, 28 tables, including appendices",
+    "pdf_url": "https://arxiv.org/pdf/2609.28915v1",
+    "primary_category": "cs.CR"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent security"
+    ],
+    "primary_category": "AG-6",
+    "requires_human_confirmation": true
+  },
+  "title": "On the Effectiveness of Kernel-Level Evidence for Agent Security",
+  "versions": [
+    {
+      "date": "2026-09-24",
+      "identifier": "2609.28915v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.28915v1"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "abstract": "Process Reward Models (PRMs) have shown promise in enhancing the mathematical reasoning capabilities of Large Language Models (LLMs) through Test-Time Scaling (TTS). However, their integration into multimodal reasoning remains largely unexplored. In this work, we take the first step toward unlocking the potential of PRMs in multimodal mathematical reasoning. We identify three key challenges: (1) the scarcity of high-quality reasoning data constrains the capabilities of foundation Multimodal Large Language Models (MLLMs), which imposes further limitations on the upper bounds of TTS and reinforcement learning (RL); (2) a lack of automated methods for process labeling within multimodal contexts persists; (3) the employment of process rewards in unimodal RL faces issues like reward hacking, which may extend to multimodal scenarios. To address these issues, we introduce URSA, a three-stage Unfolding multimodal Process-Supervision Aided training framework. We first construct MMathCoT-1M, a high-quality large-scale multimodal Chain-of-Thought (CoT) reasoning dataset, to build a stronger math reasoning foundation MLLM, URSA-8B. Subsequently, we go through an automatic process to synthesize process supervision data, which emphasizes both logical correctness and perceptual consistency. We introduce DualMath-1.1M to facilitate the training of URSA-8B-RM. Finally, we propose Process-Supervised Group-Relative-Policy-Optimization (PS-GRPO), pioneering a multimodal PRM-aided online RL method that outperforms vanilla GRPO. With PS-GRPO application, URSA-8B-PS-GRPO outperforms Gemma3-12B and GPT-4o by 8.4% and 2.7% on average across 6 benchmarks. Code, data and checkpoint can be found at https://github.com/URSA-MATH.",
+  "authors": [
+    "Ruilin Luo",
+    "Zhuofan Zheng",
+    "Yifan Wang",
+    "Xinzhe Ni",
+    "Zicheng Lin",
+    "Songtao Jiang",
+    "Yiyao Yu",
+    "Chufan Shi",
+    "Lei Wang",
+    "Ruihang Chu",
+    "Jin Zeng",
+    "Yujiu Yang"
+  ],
+  "candidate_id": "arxiv:2501.04686",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-08",
+    "latest_revision_date": "2025-10-05"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Unlocking Multimodal Mathematical Reasoning via Process Reward Model",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.04686"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2501.04686",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "NeurIPS 2025 Main Track",
+    "pdf_url": "https://arxiv.org/pdf/2501.04686v6",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "RuilinLuo, ZhuofanZheng, YifanWang, YiyaoYu, XinzheNi, ZichengLin, JinZeng, andYujiuYang. Ursa: Understandingandverifyingchain-of-thoughtreasoninginmultimodalmathematics. arXiv preprint arXiv:2501.04686,2025.",
+      "page": 37,
+      "reference_number": 85,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Unlocking Multimodal Mathematical Reasoning via Process Reward Model",
+  "versions": [
+    {
+      "date": "2025-10-05",
+      "identifier": "2501.04686v6",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2501.04686v6"
+    }
+  ]
+}

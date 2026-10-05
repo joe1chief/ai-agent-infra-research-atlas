@@ -1,0 +1,59 @@
+{
+  "abstract": "Multi-Agent Path Finding (MAPF) aims to find collision-free paths for multiple agents in a shared environment. Classical MAPF assumes that all static obstacles are known in advance, but real-world environments can change unexpectedly due to fallen objects, spills, or other local disturbances. When such changes are spatially correlated, an observation can inform traversability estimates beyond the observed location. Prior approaches address uncertainty in traversability through contingent plans or replanning based on direct observations, but do not leverage this spatial dependence to infer the traversability of nearby unobserved locations. As a result, they cannot use one observation to anticipate nearby unobserved obstacles that may cause costly rerouting later. We focus on Belief-Aware MAPF, where map discrepancies are fixed during execution but initially unknown, and observations can be informative beyond the observed location. We propose Multi-Agent Gaussian belief Inference for Coordination (MAGIC), a framework that updates a shared belief about traversability online based on agents' observations. MAGIC uses a Gaussian Markov Random Field and Gaussian Belief Propagation to approximately infer traversability and construct detour-aware costs for standard MAPF planners. Our experiments on MAPF benchmarks show that MAGIC reduces the executed sum of costs compared to existing approaches on 96.3% of instances, across several planner families and teams of up to 800 agents, demonstrating its applicability to large-scale MAPF problems.",
+  "authors": [
+    "Viraj Parimi",
+    "Shao-Hung Chan",
+    "Han Zhang",
+    "Jingkai Chen",
+    "Brian Williams"
+  ],
+  "candidate_id": "arxiv:2609.40269",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-30",
+    "latest_revision_date": "2026-09-30"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Belief-Aware Multi-Agent Path Finding under Map Uncertainty",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.40269"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.40269",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Under review",
+    "pdf_url": "https://arxiv.org/pdf/2609.40269v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent",
+      "coordination"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Belief-Aware Multi-Agent Path Finding under Map Uncertainty",
+  "versions": [
+    {
+      "date": "2026-09-30",
+      "identifier": "2609.40269v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.40269v1"
+    }
+  ]
+}

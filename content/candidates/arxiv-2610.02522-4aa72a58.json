@@ -1,0 +1,59 @@
+{
+  "abstract": "Within the shared industry vision of AI-RAN, AI-and-RAN seeks to co-locate virtualized radio access network (vRAN) workloads and AI services on shared GPUs. This sharing is inherently asymmetric: vRAN workload is latency-critical, whereas the machine learning (ML) workload is a throughput-oriented, best-effort co-tenant. We present Beaver, a GPU sharing system that jointly manages compute and memory resources while protecting the vRAN's strict processing deadline. Beaver sizes the vRAN's streaming multiprocessor (SM) allocation from each slot's scheduled workload, repartitions SM allocations at slot granularity, and rewrites compiled ML kernels to yield HBM bandwidth during the vRAN's memory-critical phases. We implement Beaver and evaluate it using NVIDIA Aerial with heterogeneous multi-cell workloads, real-world cellular traces, production inference kernels, and full-stack LLM serving. On an H200 GPU, Beaver keeps the vRAN's p99.9 latency within its 1.5ms uplink deadline while retaining 74% of Llama-3.3-70B serving throughput. It also incurs no observed deadline misses under replayed cellular traces, protects a 375us downlink deadline, and generalizes to other GPUs including A100, GB10 and GH200.",
+  "authors": [
+    "Yuncheng Yao",
+    "Zhenzhou Qi",
+    "Junyao Zheng",
+    "Chung-Hsuan Tung",
+    "Danyang Zhuo",
+    "Tingjun Chen"
+  ],
+  "candidate_id": "arxiv:2610.02522",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-01",
+    "latest_revision_date": "2026-10-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Beaver: Elastic GPU Sharing between ML and Latency-Critical vRAN Workloads",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02522"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.02522",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "16 pages, 16 figures",
+    "pdf_url": "https://arxiv.org/pdf/2610.02522v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Beaver: Elastic GPU Sharing between ML and Latency-Critical vRAN Workloads",
+  "versions": [
+    {
+      "date": "2026-10-01",
+      "identifier": "2610.02522v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.02522v1"
+    }
+  ]
+}

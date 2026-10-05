@@ -1,0 +1,57 @@
+{
+  "abstract": "Large language model (LLM) serving is increasingly constrained by the GPU memory consumed by key-value (KV) caches. Existing compression, eviction, and offloading techniques alleviate this pressure, but serving runtimes typically treat only the configured target KV representation as execution-ready. Under memory pressure, this target-only contract can turn KV shortage into request stalls and preemptions. We present ElasticKV, a mixed-fidelity KV runtime built on the observation that target fidelity need not gate execution. ElasticKV introduces a compact intermediate KV state, making fidelity a runtime-managed execution property. To realize this state in a paged serving runtime, ElasticKV combines (i) a pair-structured layout that turns fidelity reduction into reusable GPU capacity, (ii) a dual-mode attention backend that directly consumes the compact state while preserving the native target-only path, and (iii) pressure-aware fidelity management that adapts KV fidelity to memory pressure. Our extensive evaluation across diverse workloads, model families and scales, and GPU platforms demonstrates the effectiveness and generality of ElasticKV. Under high concurrency, ElasticKV achieves 3.8-4.0$\\times$ lower time-to-first-token (TTFT) and 9.1$\\times$ lower P90 TTFT than vLLM while preserving generation quality.",
+  "authors": [
+    "Jiantong Jiang",
+    "Yue Yang",
+    "Peiyu Yang",
+    "Feng Liu"
+  ],
+  "candidate_id": "arxiv:2609.33536",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-27",
+    "latest_revision_date": "2026-09-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.33536"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.33536",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2609.33536v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving",
+  "versions": [
+    {
+      "date": "2026-09-27",
+      "identifier": "2609.33536v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.33536v1"
+    }
+  ]
+}

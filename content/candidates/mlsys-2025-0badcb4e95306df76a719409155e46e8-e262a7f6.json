@@ -1,0 +1,55 @@
+{
+  "abstract": "",
+  "authors": [
+    "Zichao Yue",
+    "Chenhui Deng",
+    "Zhiru Zhang"
+  ],
+  "candidate_id": "mlsys:2025:0badcb4e95306df76a719409155e46e8",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-01",
+    "latest_revision_date": "2025-01-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "first_party_proceedings",
+  "first_party_sources": [
+    {
+      "title": "Graph Learning at Scale: Characterizing and Optimizing Pre-Propagation GNNs",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2025/hash/0badcb4e95306df76a719409155e46e8-Abstract-Conference.html"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "track": "conference",
+    "venue": "MLSys 2025"
+  },
+  "review_reasons": [
+    "imprecise_first_public_date:official_index_provides_year_only:2025"
+  ],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Graph Learning at Scale: Characterizing and Optimizing Pre-Propagation GNNs",
+  "versions": [
+    {
+      "date": "2025-01-01",
+      "identifier": "0badcb4e95306df76a719409155e46e8",
+      "type": "mlsys",
+      "url": "https://proceedings.mlsys.org/paper_files/paper/2025/hash/0badcb4e95306df76a719409155e46e8-Abstract-Conference.html"
+    }
+  ]
+}

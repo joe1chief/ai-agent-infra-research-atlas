@@ -1,0 +1,68 @@
+{
+  "abstract": "We present video-SALMONN 2, a family of audio-visual large language models that set new state-of-the-art (SOTA) results in video description and question answering (QA). Our core contribution is multi-round direct preference optimisation (MrDPO), paired with a caption-quality objective that jointly rewards completeness and factual accuracy. Unlike standard DPO with a fixed reference policy, MrDPO periodically refreshes the reference by bootstrapping from a newly re-initialised lightweight adapter trained on the latest preferences, avoiding reference staleness and enabling continual improvement. This strategy produces captions that are consistently more detailed and accurate than those from proprietary systems such as GPT-4o and Gemini-1.5 Pro. We further distil these gains by using our model to generate a high-quality video-caption corpus for supervised fine-tuning of new models, transferring benefits beyond captioning to strong performance on complex video-QA tasks. Across widely used audio-visual and visual-only understanding benchmarks (including Video-MME, WorldSense, AVUT, Video-Holmes, DailyOmni, MLVU, and LVBench), our 3B and 7B models achieve SOTA results at comparable scales, while the 72B model surpasses all other open-source systems. Our source code, models, and data are released at \\href{https://github.com/bytedance/video-SALMONN-2}{https://github.com/bytedance/video-SALMONN-2}.",
+  "authors": [
+    "Changli Tang",
+    "Yixuan Li",
+    "Yudong Yang",
+    "Jimin Zhuang",
+    "Guangzhi Sun",
+    "Wei Li",
+    "Zejun Ma",
+    "Chao Zhang"
+  ],
+  "candidate_id": "arxiv:2506.15220",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-18",
+    "latest_revision_date": "2025-09-26"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "video-SALMONN 2: Caption-Enhanced Audio-Visual Large Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.15220"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.15220",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2506.15220v3",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "ChangliTang,YixuanLi,YudongYang,JiminZhuang,GuangzhiSun,WeiLi,ZejunMa,andChaoZhang. video-salmonn2: Captioning-enhancedaudio-visuallargelanguagemodels.CoRR,abs/2506.15220, 2025. 23",
+      "page": 23,
+      "reference_number": 48,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "video-SALMONN 2: Caption-Enhanced Audio-Visual Large Language Models",
+  "versions": [
+    {
+      "date": "2025-09-26",
+      "identifier": "2506.15220v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.15220v3"
+    }
+  ]
+}

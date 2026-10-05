@@ -1,0 +1,69 @@
+{
+  "abstract": "Large language model (LLM) inference workload dominates a wide variety of modern AI applications, ranging from multi-turn conversation to document analysis. Balancing fairness and efficiency is critical for managing diverse client workloads with varying prefix patterns. Unfortunately, existing fair scheduling algorithms for LLM serving, such as Virtual Token Counter (VTC), fail to take prefix locality into consideration and thus suffer from poor performance. On the other hand, locality-aware scheduling algorithms in existing LLM serving frameworks tend to maximize the prefix cache hit rate without considering fair sharing among clients. This paper introduces the first locality-aware fair scheduling algorithm, Deficit Longest Prefix Match (DLPM), which can maintain a high degree of prefix locality with a fairness guarantee. We also introduce a novel algorithm, Double Deficit LPM (D$^2$LPM), extending DLPM for the distributed setup that can find a balance point among fairness, locality, and load-balancing. Our extensive evaluation demonstrates the superior performance of DLPM and D$^2$LPM in ensuring fairness while maintaining high throughput (up to 2.87$\\times$ higher than VTC) and low per-client (up to 7.18$\\times$ lower than state-of-the-art distributed LLM serving system) latency.",
+  "authors": [
+    "Shiyi Cao",
+    "Yichuan Wang",
+    "Ziming Mao",
+    "Pin-Lun Hsu",
+    "Liangsheng Yin",
+    "Tian Xia",
+    "Dacheng Li",
+    "Shu Liu",
+    "Yineng Zhang",
+    "Yang Zhou",
+    "Ying Sheng",
+    "Joseph Gonzalez",
+    "Ion Stoica"
+  ],
+  "candidate_id": "openreview:gpiLIa9KA8",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-01-01",
+    "latest_revision_date": "2025-05-20"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Locality-aware Fair Scheduling in LLM Serving",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=gpiLIa9KA8"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "gpiLIa9KA8"
+  },
+  "raw": {
+    "invitations": [
+      "DBLP.org/-/Record",
+      "DBLP.org/-/Edit"
+    ],
+    "venue": "CoRR 2025",
+    "venue_id": "dblp.org/journals/CORR/2025"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Locality-aware Fair Scheduling in LLM Serving",
+  "versions": [
+    {
+      "date": "2025-05-20",
+      "identifier": "gpiLIa9KA8",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=gpiLIa9KA8"
+    }
+  ]
+}

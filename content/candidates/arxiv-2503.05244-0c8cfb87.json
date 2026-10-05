@@ -1,0 +1,95 @@
+{
+  "abstract": "Recent advancements in large language models (LLMs) have significantly enhanced text generation capabilities, yet evaluating their performance in generative writing remains a challenge. Existing benchmarks primarily focus on generic text generation or limited in writing tasks, failing to capture the diverse requirements of high-quality written contents across various domains. To bridge this gap, we present WritingBench, a comprehensive benchmark designed to evaluate LLMs across 6 core writing domains and 100 subdomains. We further propose a query-dependent evaluation framework that empowers LLMs to dynamically generate instance-specific assessment criteria. This framework is complemented by a fine-tuned critic model for criteria-aware scoring, enabling evaluations in style, format and length. The framework's validity is further demonstrated by its data curation capability, which enables a 7B-parameter model to outperform the performance of GPT-4o in writing. We open-source the benchmark, along with evaluation tools and modular framework components, to advance the development of LLMs in writing.",
+  "authors": [
+    "Yuning Wu",
+    "Jiahao Mei",
+    "Ming Yan",
+    "Chenliang Li",
+    "Shaopeng Lai",
+    "Yuran Ren",
+    "Zijia Wang",
+    "Ji Zhang",
+    "Mengyue Wu",
+    "Qin Jin",
+    "Fei Huang"
+  ],
+  "candidate_id": "arxiv:2503.05244",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-07",
+    "latest_revision_date": "2025-11-27"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "WritingBench: A Comprehensive Benchmark for Generative Writing",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.05244"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.05244",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2503.05244v4",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "YuningWu,JiahaoMei,MingYan,ChenliangLi,ShaopengLai,YuranRen,ZijiaWang,JiZhang,Mengyue Wu,QinJin,andFeiHuang. WritingBench: Acomprehensivebenchmarkforgenerativewriting. CoRR, abs/2503.05244, 2025.",
+      "page": 35,
+      "reference_number": 64,
+      "report_blob_sha": "d2f9cdf3011a83861ec3a77304a5eb93bdc9491b",
+      "report_title": "2025-04_qwen3",
+      "seed_report_path": "2025/alibaba_qwen/2025-04_qwen3.pdf"
+    },
+    {
+      "context": "YuningWu,JiahaoMei,MingYan,ChenliangLi,ShaopengLai,YuranRen,ZijiaWang,JiZhang,Mengyue Wu,QinJin,andFeiHuang. WritingBench: Acomprehensivebenchmarkforgenerativewriting.CoRR, abs/2503.05244, 2025b.",
+      "page": 24,
+      "reference_number": 59,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    },
+    {
+      "context": "Yuning Wu, Jiahao Mei, Ming Yan, Chenliang Li, Shaopeng Lai, Yuran Ren, Zijia Wang, Ji Zhang, Mengyue Wu, Qin Jin, and Fei Huang. Writingbench: A comprehensive benchmark for generative writing.CoRR, abs/2503.05244, 2025b. doi: 10.48550/ARXIV.2503.05244. URL https://doi.org/10. 48550/arXiv.2503.05244.",
+      "page": 31,
+      "reference_number": 2041,
+      "report_blob_sha": "50b676fb49bad64c6154269c58467ab3c73901ca",
+      "report_title": "Qwen3-VL Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-11_qwen3-vl.pdf"
+    },
+    {
+      "context": "Yuning Wu, Jiahao Mei, Ming Yan, Chenliang Li, Shaopeng Lai, Yuran Ren, Zijia Wang, JiZhang,MengyueWu,QinJin,andFeiHuang. Writingbench: Acomprehensivebenchmark for generative writing. CoRR, abs/2503.05244, 2025. doi: 10.48550/ARXIV.2503.05244. URL https://doi.org/10.48550/arXiv.2503.05244. 22",
+      "page": 22,
+      "reference_number": 45,
+      "report_blob_sha": "1440b7598461aab612c9a34dcd9af383a2682b01",
+      "report_title": "Baichuan-M2: Scaling Medical Capability with Large Verifier System",
+      "seed_report_path": "2025/baichuan/2025-09_baichuan-m2.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "WritingBench: A Comprehensive Benchmark for Generative Writing",
+  "versions": [
+    {
+      "date": "2025-11-27",
+      "identifier": "2503.05244v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.05244v4"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated impressive capabilities in understanding common visual elements, largely due to their large-scale datasets and advanced training strategies. However, their effectiveness in medical applications remains limited due to the inherent discrepancies between data and tasks in medical scenarios and those in the general domain. Concretely, existing medical MLLMs face the following critical limitations: (1) limited coverage of medical knowledge beyond imaging, (2) heightened susceptibility to hallucinations due to suboptimal data curation processes, (3) lack of reasoning capabilities tailored for complex medical scenarios. To address these challenges, we first propose a comprehensive data curation procedure that (1) efficiently acquires rich medical knowledge data not only from medical imaging but also from extensive medical texts and general-domain data; and (2) synthesizes accurate medical captions, visual question answering (VQA), and reasoning samples. As a result, we build a multimodal dataset enriched with extensive medical knowledge. Building on the curated data, we introduce our medical-specialized MLLM: Lingshu. Lingshu undergoes multi-stage training to embed medical expertise and enhance its task-solving capabilities progressively. Besides, we preliminarily explore the potential of applying reinforcement learning with verifiable rewards paradigm to enhance Lingshu's medical reasoning ability. Additionally, we develop MedEvalKit, a unified evaluation framework that consolidates leading multimodal and textual medical benchmarks for standardized, fair, and efficient model assessment. We evaluate the performance of Lingshu on three fundamental medical tasks, multimodal QA, text-based QA, and medical report generation. The results show that Lingshu consistently outperforms the existing open-source multimodal models on most tasks ...",
+  "authors": [
+    "Weiwen Xu",
+    "Hou Pong Chan",
+    "Long Li",
+    "Mahani Aljunied",
+    "Ruifeng Yuan",
+    "Jianyu Wang",
+    "Chenghao Xiao",
+    "Guizhen Chen",
+    "Chaoqun Liu",
+    "Zhaodonghui Li",
+    "Yu Sun",
+    "Junao Shen",
+    "Chaojun Wang",
+    "Jie Tan",
+    "Deli Zhao",
+    "Tingyang Xu",
+    "Hao Zhang",
+    "Yu Rong"
+  ],
+  "candidate_id": "arxiv:2506.07044",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-08",
+    "latest_revision_date": "2026-09-21"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Lingshu: A Generalist Foundation Model for Unified Multimodal Medical Understanding and Reasoning",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.07044"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.07044",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted by TPAMI. Our webpage is https://alibaba-damo-academy.github.io/lingshu. Models and training data are available at https://huggingface.co/lingshu-medical-mllm",
+    "pdf_url": "https://arxiv.org/pdf/2506.07044v5",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "LASATeam,WeiwenXu,HouPongChan,LongLi,MahaniAljunied,RuifengYuan,Jianyu Wang, Chenghao Xiao, Guizhen Chen, Chaoqun Liu, Zhaodonghui Li, Yu Sun, Junao Shen, Chaojun Wang, Jie Tan, Deli Zhao, Tingyang Xu, Hao Zhang, and Yu Rong. Lingshu: A generalist foundation model for unified multimodal medical understanding and reasoning. CoRR, abs/2506.07044, 2025. doi: 10.48550/ARXIV.2506.07044. URLhttps://doi.org/ 10.48550/arXiv.2506.07044.",
+      "page": 20,
+      "reference_number": 13,
+      "report_blob_sha": "1440b7598461aab612c9a34dcd9af383a2682b01",
+      "report_title": "Baichuan-M2: Scaling Medical Capability with Large Verifier System",
+      "seed_report_path": "2025/baichuan/2025-09_baichuan-m2.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Lingshu: A Generalist Foundation Model for Unified Multimodal Medical Understanding and Reasoning",
+  "versions": [
+    {
+      "date": "2026-09-21",
+      "identifier": "2506.07044v5",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.07044v5"
+    }
+  ]
+}

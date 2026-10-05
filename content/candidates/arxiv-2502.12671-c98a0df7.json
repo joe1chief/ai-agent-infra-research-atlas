@@ -1,0 +1,104 @@
+{
+  "abstract": "The current generation of large language models (LLMs) is typically designed for broad, general-purpose applications, while domain-specific LLMs, especially in vertical fields like medicine, remain relatively scarce. In particular, the development of highly efficient and practical LLMs for the medical domain is challenging due to the complexity of medical knowledge and the limited availability of high-quality data. To bridge this gap, we introduce Baichuan-M1, a series of large language models specifically optimized for medical applications. Unlike traditional approaches that simply continue pretraining on existing models or apply post-training to a general base model, Baichuan-M1 is trained from scratch with a dedicated focus on enhancing medical capabilities. Our model is trained on 20 trillion tokens and incorporates a range of effective training methods that strike a balance between general capabilities and medical expertise. As a result, Baichuan-M1 not only performs strongly across general domains such as mathematics and coding but also excels in specialized medical fields. We have open-sourced Baichuan-M1-14B, a mini version of our model, which can be accessed through the following links.",
+  "authors": [
+    "Bingning Wang",
+    "Haizhou Zhao",
+    "Huozhi Zhou",
+    "Liang Song",
+    "Mingyu Xu",
+    "Wei Cheng",
+    "Xiangrong Zeng",
+    "Yupeng Zhang",
+    "Yuqi Huo",
+    "Zecheng Wang",
+    "Zhengyun Zhao",
+    "Da Pan",
+    "Fei Kou",
+    "Fei Li",
+    "Fuzhong Chen",
+    "Guosheng Dong",
+    "Han Liu",
+    "Hongda Zhang",
+    "Jin He",
+    "Jinjie Yang",
+    "Kangxi Wu",
+    "Kegeng Wu",
+    "Lei Su",
+    "Linlin Niu",
+    "Linzhuang Sun",
+    "Mang Wang",
+    "Pengcheng Fan",
+    "Qianli Shen",
+    "Rihui Xin",
+    "Shunya Dang",
+    "Songchi Zhou",
+    "Weipeng Chen",
+    "Wenjing Luo",
+    "Xin Chen",
+    "Xin Men",
+    "Xionghai Lin",
+    "Xuezhen Dong",
+    "Yan Zhang",
+    "Yifei Duan",
+    "Yuyan Zhou",
+    "Zhi Ma",
+    "Zhiying Wu"
+  ],
+  "candidate_id": "arxiv:2502.12671",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-02-18",
+    "latest_revision_date": "2025-03-05"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Baichuan-M1: Pushing the Medical Capability of Large Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.12671"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2502.12671",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "33 pages, technical report",
+    "pdf_url": "https://arxiv.org/pdf/2502.12671v2",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Bingning Wang, Haizhou Zhao, Huozhi Zhou, Liang Song, Mingyu Xu, Wei Cheng, Xiangrong Zeng, Yupeng Zhang, Yuqi Huo, Zecheng Wang, Zhengyun Zhao, Da Pan, Fei Kou, Fei Li, Fuzhong Chen, Guosheng Dong, Han Liu, Hongda Zhang, Jin He, Jinjie Yang, Kangxi Wu, Kegeng Wu, Lei Su, Linlin Niu, Linzhuang Sun, Mang Wang, Pengcheng Fan, Qianli Shen, Rihui Xin, Shunya Dang, Songchi Zhou, Weipeng Chen, Wenjing Luo, Xin Chen, Xin Men, Xionghai Lin, Xuezhen Dong, Yan Zhang, Yifei Duan, Yuyan Zhou, Zhi Ma, and Zhiying Wu. Baichuan-m1: Pushing the medical capability of large language models, 2025. URL https://arxiv.org/abs/2502.12671.",
+      "page": 21,
+      "reference_number": 26,
+      "report_blob_sha": "1440b7598461aab612c9a34dcd9af383a2682b01",
+      "report_title": "Baichuan-M2: Scaling Medical Capability with Large Verifier System",
+      "seed_report_path": "2025/baichuan/2025-09_baichuan-m2.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "post-training"
+    ],
+    "primary_category": "AI-3",
+    "requires_human_confirmation": true
+  },
+  "title": "Baichuan-M1: Pushing the Medical Capability of Large Language Models",
+  "versions": [
+    {
+      "date": "2025-03-05",
+      "identifier": "2502.12671v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.12671v2"
+    }
+  ]
+}

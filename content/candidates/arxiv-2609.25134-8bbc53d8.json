@@ -1,0 +1,52 @@
+{
+  "abstract": "This paper presents a probabilistic perspective on large language models (LLMs), developed with the aim of bringing together, in a single self-contained account, tools that are usually treated separately across the literature. LLMs are described through probability measures on the set of sequences of tokens, specified via their autoregressive conditional distributions. Training is formulated as a maximum-likelihood estimation problem, addressed by stochastic gradient methods, while text generation is viewed as the sequential simulation of the resulting stochastic process. The role of the asymmetry of the Kullback--Leibler divergence in text generation is examined in relation with characteristic phenomena such as hallucination and the distinction between statistical plausibility and truth. As a complementary illustration of the same viewpoint, we also discuss diffusion models, built around the score function, which cast generation not as sequential token prediction but as the simulation of a reverse-time stochastic process transforming noise into data both in discrete and continuous time.",
+  "authors": [
+    "Adnan Aboulalaâ"
+  ],
+  "candidate_id": "arxiv:2609.25134",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-20",
+    "latest_revision_date": "2026-09-20"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "The Probabilistic Structure of Large Language Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.25134"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.25134",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Expository article on the probabilistic structure of large language models, 27 pages",
+    "pdf_url": "https://arxiv.org/pdf/2609.25134v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "The Probabilistic Structure of Large Language Models",
+  "versions": [
+    {
+      "date": "2026-09-20",
+      "identifier": "2609.25134v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.25134v1"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "abstract": "Reducing LLM serving energy does not by itself guarantee lower deployment cost when electricity procurement exposes operators to unfavorable deviations from preset commitments. We study hourly commitments with positive, potentially asymmetric costs for overuse and underuse, and formulate energy-Performance-Aware Commitment Tracking: minimize deviation costs subject to request-level service requirements. We implement ePACT, a two-level controller that adjusts serving capacity and GPU clocks as requests arrive. A global planner updates interval energy targets from measured consumption and the remaining hourly commitment. A local decision maker predicts candidate configurations' energy and completion times, checks predicted deadline misses, and selects among admitted configurations by asymmetric target-deviation cost, with a service-first fallback. Coarse-to-fine action search runs asynchronously with serving. We evaluate ePACT through single-hour comparisons, controller ablations, and full-day trace simulations for H20 and H200 GPU pools. In the 24-hour simulations, ePACT reduces the asymmetric deviation cost by $73.8\\%$ and $75.7\\%$ relative to vLLM while retaining near-vLLM SLO attainment. Mean absolute hourly deviations are $2.16\\%$ and $2.31\\%$, respectively.",
+  "authors": [
+    "You Peng",
+    "Youhe Jiang",
+    "Chen Wang",
+    "Binhang Yuan"
+  ],
+  "candidate_id": "arxiv:2610.01784",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-01",
+    "latest_revision_date": "2026-10-01"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.01784"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.01784",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.01784v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving",
+  "versions": [
+    {
+      "date": "2026-10-01",
+      "identifier": "2610.01784v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.01784v1"
+    }
+  ]
+}

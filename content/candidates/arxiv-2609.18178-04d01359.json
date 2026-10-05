@@ -1,0 +1,55 @@
+{
+  "abstract": "Distributed model training at scale is frequently interrupted by transient network failures, conventionally forcing cluster managers to abort all processes and roll back to the latest checkpoint. While periodic checkpointing provides durability, frequent snapshotting introduces severe storage backpressure: our measurements on a 1.216B-parameter decoder reveal that per-update asynchronous checkpointing incurs up to a +656.7% latency overhead, consumes 32.5 GiB of host memory, and generates 3.39 TB/hour of storage traffic. To eliminate this overhead, we present AccelPact, a parallel runtime enabling zero-I/O in-memory fault recovery for sharded distributed training. When communication fails at a committed optimizer step, device memory remains quiescent and uncorrupted, yet continuation fails because frameworks like PyTorch FSDP cache internal communication handles across module wrappers and parameter hierarchies. AccelPact resolves this dependency invalidation via a non-invasive reference-rebinding mechanism coordinated by an out-of-band Gloo consensus protocol. On 16 NVIDIA RTX 5880 GPUs training full-parameter Mistral-7B, AccelPact eliminates checkpoint replay, yielding a 1.197x whole-run goodput improvement over cold restart and 1.194x over NVRx checkpoint restoration at checkpoint age 5, rising to 1.698x at age 18. Across ten successive fault injections, all 16 ranks maintain bit-identical parameter state with zero numerical drift. Across 4-to-16 GPU cluster topologies, reference rebinding executes in constant time (0.493-0.518 ms). Operating directly on native communicator instances, AccelPact requires zero application-code modifications and avoids compiler graph breaks under torch.compile, providing an efficient foundation for resilient deep learning.",
+  "authors": [
+    "Genlang Chen",
+    "Junyi Zhu"
+  ],
+  "candidate_id": "arxiv:2609.18178",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-16",
+    "latest_revision_date": "2026-09-16"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Zero-I/O Fault Recovery for Sharded Deep Learning via Dynamic Framework Dependency Rebinding",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.18178"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.18178",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "8 pages, 4 figures, 10 tables",
+    "pdf_url": "https://arxiv.org/pdf/2609.18178v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Zero-I/O Fault Recovery for Sharded Deep Learning via Dynamic Framework Dependency Rebinding",
+  "versions": [
+    {
+      "date": "2026-09-16",
+      "identifier": "2609.18178v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.18178v1"
+    }
+  ]
+}

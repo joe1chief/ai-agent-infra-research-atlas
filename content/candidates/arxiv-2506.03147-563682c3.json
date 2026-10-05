@@ -1,0 +1,72 @@
+{
+  "abstract": "Although existing unified models achieve strong performance in vision-language understanding and text-to-image generation, they remain limited in addressing image perception and manipulation -- capabilities increasingly demanded in practical applications. Recently, OpenAI introduced the powerful GPT-4o-Image model, which showcases advanced capabilities in comprehensive image perception and manipulation, sparking widespread interest. Through carefully designed experiments, we observe that GPT-4o-Image likely relies on semantic encoders rather than VAEs for feature extraction, despite VAEs being commonly regarded as crucial for image manipulation tasks. Inspired by this insight, we propose UniWorld-V1, a unified generative framework built upon semantic features extracted from powerful multimodal large language models and contrastive semantic encoders. Using only 2.7M training data, UniWorld-V1 achieves impressive performance across diverse tasks, including image understanding, generation, manipulation, and perception. We fully open-source the UniWorld-V1 framework, including model weights, training and evaluation scripts, and datasets to promote reproducibility and further research.",
+  "authors": [
+    "Bin Lin",
+    "Zongjian Li",
+    "Xinhua Cheng",
+    "Yuwei Niu",
+    "Yang Ye",
+    "Xianyi He",
+    "Shenghai Yuan",
+    "Wangbo Yu",
+    "Shaodong Wang",
+    "Yunyang Ge",
+    "Yatian Pang",
+    "Li Yuan"
+  ],
+  "candidate_id": "arxiv:2506.03147",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-03",
+    "latest_revision_date": "2025-06-18"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "UniWorld-V1: High-Resolution Semantic Encoders for Unified Visual Understanding and Generation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.03147"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.03147",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2506.03147v4",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Bin Lin, Zongjian Li, Xinhua Cheng, Yuwei Niu, Yang Ye, Xianyi He, Shenghai Yuan, Wangbo Yu, Shaodong Wang, Yunyang Ge, et al. Uniworld-v1: High-resolution semantic encoders for unified visual understanding and generation. arXiv preprint arXiv:2506.03147, 2025.",
+      "page": 43,
+      "reference_number": 46,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "UniWorld-V1: High-Resolution Semantic Encoders for Unified Visual Understanding and Generation",
+  "versions": [
+    {
+      "date": "2025-06-18",
+      "identifier": "2506.03147v4",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.03147v4"
+    }
+  ]
+}

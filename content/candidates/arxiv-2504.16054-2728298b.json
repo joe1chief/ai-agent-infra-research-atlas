@@ -1,0 +1,96 @@
+{
+  "abstract": "In order for robots to be useful, they must perform practically relevant tasks in the real world, outside of the lab. While vision-language-action (VLA) models have demonstrated impressive results for end-to-end robot control, it remains an open question how far such models can generalize in the wild. We describe $π_{0.5}$, a new model based on $π_{0}$ that uses co-training on heterogeneous tasks to enable broad generalization. $π_{0.5}$\\ uses data from multiple robots, high-level semantic prediction, web data, and other sources to enable broadly generalizable real-world robotic manipulation. Our system uses a combination of co-training and hybrid multi-modal examples that combine image observations, language commands, object detections, semantic subtask prediction, and low-level actions. Our experiments show that this kind of knowledge transfer is essential for effective generalization, and we demonstrate for the first time that an end-to-end learning-enabled robotic system can perform long-horizon and dexterous manipulation skills, such as cleaning a kitchen or bedroom, in entirely new homes.",
+  "authors": [
+    "Physical Intelligence",
+    "Kevin Black",
+    "Noah Brown",
+    "James Darpinian",
+    "Karan Dhabalia",
+    "Danny Driess",
+    "Adnan Esmail",
+    "Michael Equi",
+    "Chelsea Finn",
+    "Niccolo Fusai",
+    "Manuel Y. Galliker",
+    "Dibya Ghosh",
+    "Lachy Groom",
+    "Karol Hausman",
+    "Brian Ichter",
+    "Szymon Jakubczak",
+    "Tim Jones",
+    "Liyiming Ke",
+    "Devin LeBlanc",
+    "Sergey Levine",
+    "Adrian Li-Bell",
+    "Mohith Mothukuri",
+    "Suraj Nair",
+    "Karl Pertsch",
+    "Allen Z. Ren",
+    "Lucy Xiaoyang Shi",
+    "Laura Smith",
+    "Jost Tobias Springenberg",
+    "Kyle Stachowicz",
+    "James Tanner",
+    "Quan Vuong",
+    "Homer Walke",
+    "Anna Walling",
+    "Haohuan Wang",
+    "Lili Yu",
+    "Ury Zhilinsky"
+  ],
+  "candidate_id": "arxiv:2504.16054",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-04-22",
+    "latest_revision_date": "2025-04-22"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "$π_{0.5}$: a Vision-Language-Action Model with Open-World Generalization",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.16054"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2504.16054",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2504.16054v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "PhysicalIntelligence,KevinBlack,NoahBrown,JamesDarpinian,KaranDhabalia,DannyDriess,Adnan Esmail,MichaelEqui,ChelseaFinn,NiccoloFusai,ManuelY.Galliker,DibyaGhosh,LachyGroom,Karol Hausman,BrianIchter,SzymonJakubczak,TimJones,LiyimingKe,DevinLeBlanc,SergeyLevine,Adrian Li-Bell,MohithMothukuri,SurajNair,KarlPertsch,AllenZ.Ren,LucyXiaoyangShi,LauraSmith,JostTobias Springenberg,KyleStachowicz,JamesTanner,QuanVuong,HomerWalke,AnnaWalling,HaohuanWang,Lili Yu,andUryZhilinsky. π 0 .5:Avision-language-actionmodelwithopen-worldgeneralization. arXiv preprint arXiv:2504.16054,2025.URL https://arxiv.org/abs/2504.16054.",
+      "page": 36,
+      "reference_number": 55,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "$π_{0.5}$: a Vision-Language-Action Model with Open-World Generalization",
+  "versions": [
+    {
+      "date": "2025-04-22",
+      "identifier": "2504.16054v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.16054v1"
+    }
+  ]
+}

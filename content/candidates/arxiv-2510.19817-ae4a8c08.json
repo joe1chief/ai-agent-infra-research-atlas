@@ -1,0 +1,63 @@
+{
+  "abstract": "We present olmOCR 2, the latest in our family of powerful OCR systems for converting digitized print documents, like PDFs, into clean, naturally ordered plain text. olmOCR 2 is powered by olmOCR-2-7B-1025, a specialized, 7B vision language model (VLM) trained using reinforcement learning with verifiable rewards (RLVR), where our rewards are a diverse set of binary unit tests. To scale unit test creation, we develop a pipeline for generating synthetic documents with diverse and challenging layouts, known ground-truth HTML source code, and extracted test cases. We show that RL training on these test cases results in state-of-the-art performance on olmOCR-Bench, our English-language OCR benchmark, with the largest improvements in math formula conversion, table parsing, and multi-column layouts compared to previous versions. We release our model, data and code under permissive open licenses.",
+  "authors": [
+    "Jake Poznanski",
+    "Luca Soldaini",
+    "Kyle Lo"
+  ],
+  "candidate_id": "arxiv:2510.19817",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-10-22",
+    "latest_revision_date": "2025-10-22"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "olmOCR 2: Unit Test Rewards for Document OCR",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.19817"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2510.19817",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "https://olmocr.allen.ai/",
+    "pdf_url": "https://arxiv.org/pdf/2510.19817v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "J.Poznanski,L.Soldaini,andK.Lo. olmOCR2: UnitTestRewardsforDocumentOCR,2025b. URL https: //arxiv.org/abs/2510.19817.",
+      "page": 77,
+      "reference_number": 175,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "olmOCR 2: Unit Test Rewards for Document OCR",
+  "versions": [
+    {
+      "date": "2025-10-22",
+      "identifier": "2510.19817v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2510.19817v1"
+    }
+  ]
+}

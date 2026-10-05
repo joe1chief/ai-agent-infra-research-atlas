@@ -1,0 +1,70 @@
+{
+  "abstract": "With the rapid evolution of multimodal large language models, the capacity to deeply understand and interpret human intentions has emerged as a critical capability, which demands detailed and thoughtful reasoning. In recent studies, Reinforcement Learning (RL) has demonstrated potential in enhancing the reasoning capabilities of Large Language Models (LLMs). Nonetheless, the challenges associated with adapting RL to multimodal data and formats remain largely unaddressed. In this paper, we identify two issues in existing multimodal reasoning models: insufficient global context understanding and shortcut problems. Insufficient context understanding can happen when a model misinterprets multimodal context, resulting in incorrect answers. The shortcut problem occurs when the model overlooks crucial clues in multimodal inputs, directly addressing the query without considering the multimodal information. To tackle these issues, we emphasize the necessity for the model to reason with a clear understanding of the global context within multimodal inputs. This global context understanding can effectively prevent the model from overlooking key multimodal cues and ensure a thorough reasoning process. To ensure the accurate interpretation of multimodal context information, we implement a context reward judged by a large language model, alongside format and accuracy rewards. Additionally, to improve complex reasoning capability, we employ the LLM to assess the logical reward, determining whether the reasoning process successfully integrates multimodal information with logical methods. We also introduce a reasoning omni-modal benchmark, IntentBench, aimed at evaluating models in understanding complex human intentions and emotions. Our proposed method demonstrates advanced performance across multiple omni-modal benchmarks compared to other open-source omni-modal models.",
+  "authors": [
+    "Qize Yang",
+    "Shimin Yao",
+    "Weixuan Chen",
+    "Shenghao Fu",
+    "Detao Bai",
+    "Jiaxing Zhao",
+    "Boyuan Sun",
+    "Bowen Yin",
+    "Xihan Wei",
+    "Jingren Zhou"
+  ],
+  "candidate_id": "arxiv:2506.21277",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-26",
+    "latest_revision_date": "2025-06-26"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "HumanOmniV2: From Understanding to Omni-Modal Reasoning with Context",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.21277"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.21277",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2506.21277v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "QizeYang, ShiminYao, Weixuan chen,Shenghao Fu,Detao Bai,Jiaxing Zhao,Boyuan Sun,Bowen Yin, Xihan Wei, and Jingren Zhou. Humanomniv2: From understanding to omni-modal reasoning with context.CoRR, abs/2506.21277, 2025b.",
+      "page": 24,
+      "reference_number": 64,
+      "report_blob_sha": "de77deeff37812be7f37c694eff5213e2fdb4e77",
+      "report_title": "Qwen3-Omni Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-09_qwen3-omni.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "HumanOmniV2: From Understanding to Omni-Modal Reasoning with Context",
+  "versions": [
+    {
+      "date": "2025-06-26",
+      "identifier": "2506.21277v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.21277v1"
+    }
+  ]
+}

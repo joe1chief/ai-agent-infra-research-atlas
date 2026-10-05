@@ -1,0 +1,55 @@
+{
+  "abstract": "Many machine learning (ML) applications rely on expert labels, and qualified experts may provide different but plausible interpretations of the same observation. Such variation across expert labels may reflect genuine disagreement or ambiguity rather than annotation error. When individual experts additionally report intervals rather than exact values, the supervision contains two distinct sources of label uncertainty: within-label imprecision and between-expert variation. Existing methods treat these forms separately: multi-expert approaches collapse labels to a consensus, interval-target methods often yield a single prediction, and predictive-uncertainty methods rarely validate their uncertainty estimates against observed expert disagreement. To address this problem, we propose an approach that preserves individual expert intervals, separates within-label imprecision from between-expert variation, and validates the corresponding predictive uncertainty components. First, heterogeneous label vocabularies are harmonized into a common probabilistic label space, separating encoding differences from expert judgement. Second, individual label intervals are retained and modeled with a mixture of Beta distributions trained using a proper Cramér-distance objective, preserving distinct expert-reported labels. Third, we decompose predictive uncertainty into within-component, between-component, and model uncertainty, and evaluate whether these components correspond to within-label uncertainty, between-label uncertainty, and model error, respectively. Because this correspondence is not guaranteed, we introduce decomposition matching, which aligns the predictive components to their intended label-side sources. On sea-ice concentration the model reduces MAE by 31\\% over hard labels and outperforms aggregation, interval-distribution, and interval-regression baselines.",
+  "authors": [
+    "Samira Alkaee Taleghan",
+    "Younghyun Koo",
+    "Andrew P. Barrett",
+    "Farnoush Banaei-Kashani"
+  ],
+  "candidate_id": "arxiv:2610.00102",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-08",
+    "latest_revision_date": "2026-09-08"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Uncertainty-Aware Learning from Multi-Expert Interval Targets",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.00102"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.00102",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.00102v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Uncertainty-Aware Learning from Multi-Expert Interval Targets",
+  "versions": [
+    {
+      "date": "2026-09-08",
+      "identifier": "2610.00102v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.00102v1"
+    }
+  ]
+}

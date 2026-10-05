@@ -1,0 +1,68 @@
+{
+  "abstract": "We introduce SeedEdit 3.0, in companion with our T2I model Seedream 3.0, which significantly improves over our previous SeedEdit versions in both aspects of edit instruction following and image content (e.g., ID/IP) preservation on real image inputs. Additional to model upgrading with T2I, in this report, we present several key improvements. First, we develop an enhanced data curation pipeline with a meta-info paradigm and meta-info embedding strategy that help mix images from multiple data sources. This allows us to scale editing data effectively, and meta information is helpfult to connect VLM with diffusion model more closely. Second, we introduce a joint learning pipeline for computing a diffusion loss and reward losses. Finally, we evaluate SeedEdit 3.0 on our testing benchmarks, for real/synthetic image editing, where it achieves a best trade-off between multiple aspects, yielding a high usability rate of 56.1%, compared to SeedEdit 1.6 (38.4%), GPT4o (37.1%) and Gemini 2.0 (30.3%).",
+  "authors": [
+    "Peng Wang",
+    "Yichun Shi",
+    "Xiaochen Lian",
+    "Zhonghua Zhai",
+    "Xin Xia",
+    "Xuefeng Xiao",
+    "Weilin Huang",
+    "Jianchao Yang"
+  ],
+  "candidate_id": "arxiv:2506.05083",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-05",
+    "latest_revision_date": "2025-06-06"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "SeedEdit 3.0: Fast and High-Quality Generative Image Editing",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.05083"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.05083",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Website: https://seed.bytedance.com/tech/seededit",
+    "pdf_url": "https://arxiv.org/pdf/2506.05083v2",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Peng Wang, Yichun Shi, Xiaochen Lian, Zhonghua Zhai, Xin Xia, Xuefeng Xiao, Weilin Huang, and Jian- chaoYang. Seededit3.0: Fastandhigh-qualitygenerativeimageediting. arXivpreprintarXiv:2506.05083, 2025.",
+      "page": 45,
+      "reference_number": 76,
+      "report_blob_sha": "1a75d0e018cd9825d559705ec3768fb355aea648",
+      "report_title": "Qwen-Image Technical Report",
+      "seed_report_path": "2025/alibaba_qwen/2025-08_qwen-image.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "SeedEdit 3.0: Fast and High-Quality Generative Image Editing",
+  "versions": [
+    {
+      "date": "2025-06-06",
+      "identifier": "2506.05083v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.05083v2"
+    }
+  ]
+}

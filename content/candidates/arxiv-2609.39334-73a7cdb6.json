@@ -1,0 +1,57 @@
+{
+  "abstract": "Test-time scaling has recently emerged as a powerful approach for improving LLM reasoning by allocating additional computation during inference, substantially enhancing accuracy on challenging tasks such as mathematics and coding. To accelerate the exploration of reasoning paths, recent studies proposed speculative execution. However, we show that supporting speculative execution poses two unique challenges for LLM serving systems: (1) an explosion in the search space of candidate paths and (2) frequent, fine-grained verification tasks for candidates. To address these challenges, this paper proposes SpecScale, a serving system for efficient speculative execution. We introduce three techniques to reconcile the trade-off between latency and computational overhead: (1) early pruning of low-quality candidate paths, (2) deduplicating computation across redundant candidate paths, and (3) deferring fine-grained verification tasks. We evaluate SpecScale on challenging reasoning benchmarks, including MATH and Olympiad. Our results show that SpecScale significantly outperforms both non-speculative and recent speculative approaches, delivering substantial improvements in throughput and latency while preserving answer quality.",
+  "authors": [
+    "Jinwoo Jeong",
+    "Woohyung Choi",
+    "Myeongjae Jeon",
+    "Jeongseob Ahn"
+  ],
+  "candidate_id": "arxiv:2609.39334",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-30",
+    "latest_revision_date": "2026-09-30"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.39334"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.39334",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "14 pages",
+    "pdf_url": "https://arxiv.org/pdf/2609.39334v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+  "versions": [
+    {
+      "date": "2026-09-30",
+      "identifier": "2609.39334v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.39334v1"
+    }
+  ]
+}

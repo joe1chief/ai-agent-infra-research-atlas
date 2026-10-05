@@ -1,0 +1,68 @@
+{
+  "abstract": "Reinforcement Learning from Human Feedback (RLHF) is crucial for aligning large language models with human preferences. While recent research has focused on algorithmic improvements, the importance of prompt-data construction has been overlooked. This paper addresses this gap by exploring data-driven bottlenecks in RLHF performance scaling, particularly reward hacking and decreasing response diversity. We introduce a hybrid reward system combining reasoning task verifiers (RTV) and a generative reward model (GenRM) to mitigate reward hacking. We also propose a novel prompt-selection method, Pre-PPO, to maintain response diversity and enhance learning effectiveness. Additionally, we find that prioritizing mathematical and coding tasks early in RLHF training significantly improves performance. Experiments across two model sizes validate our methods' effectiveness and scalability. Results show that RTV is most resistant to reward hacking, followed by GenRM with ground truth, and then GenRM with SFT Best-of-N responses. Our strategies enable rapid capture of subtle task-specific distinctions, leading to substantial improvements in overall RLHF performance. This work highlights the importance of careful data construction and provides practical methods to overcome performance barriers in RLHF.",
+  "authors": [
+    "Wei Shen",
+    "Guanlin Liu",
+    "Zheng Wu",
+    "Ruofei Zhu",
+    "Qingping Yang",
+    "Chao Xin",
+    "Yu Yue",
+    "Lin Yan"
+  ],
+  "candidate_id": "arxiv:2503.22230",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-03-28",
+    "latest_revision_date": "2025-04-02"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Exploring Data Scaling Trends and Effects in Reinforcement Learning from Human Feedback",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.22230"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2503.22230",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2503.22230v3",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "WeiShen,GuanlinLiu,ZhengWu,RuofeiZhu,QingpingYang,ChaoXin,YuYue,andLinYan.Exploring datascalingtrendsandeffectsinreinforcementlearningfromhumanfeedback,2025.URL https://arxiv.org/ abs/2503.22230.",
+      "page": 39,
+      "reference_number": 121,
+      "report_blob_sha": "51ef8cea2d6ef2fa7a35ac35865ad588e9156b03",
+      "report_title": "Seed1.5-VL Technical Report",
+      "seed_report_path": "2025/bytedance/2025-05_seed1.5-vl.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Exploring Data Scaling Trends and Effects in Reinforcement Learning from Human Feedback",
+  "versions": [
+    {
+      "date": "2025-04-02",
+      "identifier": "2503.22230v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2503.22230v3"
+    }
+  ]
+}

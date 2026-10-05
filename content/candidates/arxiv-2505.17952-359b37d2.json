@@ -1,0 +1,69 @@
+{
+  "abstract": "Improving performance on complex tasks and enabling interpretable decision making in large language models (LLMs), especially for clinical applications, requires effective reasoning. Yet this remains challenging without supervised fine-tuning (SFT) on costly chain-of-thought (CoT) data distilled from closed-source models (e.g., GPT-4o). In this work, we present AlphaMed, the first medical LLM to show that reasoning capability can emerge purely through reinforcement learning (RL), using minimalist rule-based rewards on public multiple-choice QA datasets, without relying on SFT or distilled CoT data. AlphaMed achieves state-of-the-art results on six medical QA benchmarks, outperforming models trained with conventional SFT+RL pipelines. On challenging benchmarks (e.g., MedXpert), AlphaMed even surpasses larger or closed-source models such as DeepSeek-V3-671B and Claude-3.5-Sonnet. To understand the factors behind this success, we conduct a comprehensive data-centric analysis guided by three questions: (i) Can minimalist rule-based RL incentivize reasoning without distilled CoT supervision? (ii) How do dataset quantity and diversity impact reasoning? (iii) How does question difficulty shape the emergence and generalization of reasoning? Our findings show that dataset informativeness is a key driver of reasoning performance, and that minimalist RL on informative, multiple-choice QA data is effective at inducing reasoning without CoT supervision. We also observe divergent trends across benchmarks, underscoring limitations in current evaluation and the need for more challenging, reasoning-oriented medical QA benchmarks.",
+  "authors": [
+    "Che Liu",
+    "Haozhe Wang",
+    "Jiazhen Pan",
+    "Zhongwei Wan",
+    "Yong Dai",
+    "Fangzhen Lin",
+    "Wenjia Bai",
+    "Daniel Rueckert",
+    "Rossella Arcucci"
+  ],
+  "candidate_id": "arxiv:2505.17952",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-05-23",
+    "latest_revision_date": "2025-05-23"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Beyond Distillation: Pushing the Limits of Medical LLM Reasoning with Minimalist Rule-Based RL",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.17952"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2505.17952",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Under Review",
+    "pdf_url": "https://arxiv.org/pdf/2505.17952v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "Che Liu, Haozhe Wang, Jiazhen Pan, Zhongwei Wan, Yong Dai, Fangzhen Lin, Wenjia Bai, DanielRueckert,andRossellaArcucci. Beyonddistillation: PushingthelimitsofmedicalLLM reasoningwithminimalistrule-basedRL. CoRR,abs/2505.17952,2025. doi: 10.48550/ARXIV. 2505.17952. URLhttps://doi.org/10.48550/arXiv.2505.17952.",
+      "page": 19,
+      "reference_number": 4,
+      "report_blob_sha": "1440b7598461aab612c9a34dcd9af383a2682b01",
+      "report_title": "Baichuan-M2: Scaling Medical Capability with Large Verifier System",
+      "seed_report_path": "2025/baichuan/2025-09_baichuan-m2.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Beyond Distillation: Pushing the Limits of Medical LLM Reasoning with Minimalist Rule-Based RL",
+  "versions": [
+    {
+      "date": "2025-05-23",
+      "identifier": "2505.17952v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2505.17952v1"
+    }
+  ]
+}

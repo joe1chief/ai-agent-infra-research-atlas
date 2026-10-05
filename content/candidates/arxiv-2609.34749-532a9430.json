@@ -1,0 +1,66 @@
+{
+  "abstract": "Real-world driving is inherently multi-agent, yet most existing driving world models generate observations from a single ego vehicle. Independently extending them to multiple vehicles does not ensure that different agents observe a consistent shared world. We present CoDrive, a cross-vehicle, multi-view driving video generation framework that jointly generates observations of vehicles sharing the same dynamic scene with precise camera-trajectory control. CoDrive interleaves local self-attention, which models spatiotemporal dependencies among the views of each vehicle, with global self-attention, which enables information exchange and consistency modeling across vehicles. To explicitly encode their spatial relationships, all camera trajectories are represented in a shared world coordinate system and injected into the attention layers through projective relative positional encoding. We further adopt a progressive mixed-task training strategy that combines large-scale real-world single-agent data with synthetic cross-agent interaction data, allowing the model to benefit from real-world appearance distributions while learning cross-agent consistency from simulation. For systematic evaluation, we introduce CoDrive-Bench, a benchmark covering real and synthetic multi-vehicle scenarios and evaluating trajectory controllability, scene geometry consistency, and instance-level consistency. Experiments show that CoDrive improves trajectory controllability and cross-agent geometric and instance consistency while maintaining competitive visual quality.",
+  "authors": [
+    "Yu Meng",
+    "Baining Zhao",
+    "Junta Wu",
+    "Tengfei Wang",
+    "Rongze Tang",
+    "Haiyu Zhang",
+    "Wenqiang Sun",
+    "Chen Gao",
+    "Zhibo Chen",
+    "Xinlei Chen",
+    "Yong Li",
+    "Xiao-Ping Zhang",
+    "Chunchao Guo"
+  ],
+  "candidate_id": "arxiv:2609.34749",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-28",
+    "latest_revision_date": "2026-09-28"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "CoDrive: Cross-Vehicle World-Consistent Video Generation with Precise Trajectory Control for Cooperative Driving",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34749"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.34749",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "28 pages, 6 figures",
+    "pdf_url": "https://arxiv.org/pdf/2609.34749v1",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "CoDrive: Cross-Vehicle World-Consistent Video Generation with Precise Trajectory Control for Cooperative Driving",
+  "versions": [
+    {
+      "date": "2026-09-28",
+      "identifier": "2609.34749v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.34749v1"
+    }
+  ]
+}

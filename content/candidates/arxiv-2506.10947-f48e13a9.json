@@ -1,0 +1,74 @@
+{
+  "abstract": "We show that reinforcement learning with verifiable rewards (RLVR) can elicit strong mathematical reasoning in certain language models even with spurious rewards that have little, no, or even negative correlation with the correct answer. For example, RLVR training with GRPO improves MATH-500 performance for Qwen2.5-Math-7B by 21.4 percentage points using randomly assigned rewards, nearly matching the 29.1-point gain from ground-truth rewards. To explain this counterintuitive observation, we show that GRPO exhibits a clipping bias from the clip term, which can amplify high-prior behaviors learned during pretraining even without informative rewards. As a case study, we identify one such behavior in Qwen2.5-Math models, which we call code reasoning -- reasoning in code without actual code execution; code-reasoning frequency increases from 65 percent to over 90 percent with spurious rewards. However, the presence of such amplifiable behaviors is highly model-dependent. In practice, spurious rewards that are effective for Qwen models often fail to produce gains for other model families, such as Llama3 or OLMo2. Our results highlight the importance of validating RL methods across diverse models rather than relying on a single de facto choice: large gains can arise on Qwen models even from random rewards that do not reflect genuine capability improvements.",
+  "authors": [
+    "Rulin Shao",
+    "Shuyue Stella Li",
+    "Rui Xin",
+    "Scott Geng",
+    "Yiping Wang",
+    "Sewoong Oh",
+    "Simon Shaolei Du",
+    "Nathan Lambert",
+    "Sewon Min",
+    "Ranjay Krishna",
+    "Yulia Tsvetkov",
+    "Hannaneh Hajishirzi",
+    "Pang Wei Koh",
+    "Luke Zettlemoyer"
+  ],
+  "candidate_id": "arxiv:2506.10947",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2025-06-12",
+    "latest_revision_date": "2026-02-25"
+  },
+  "discovered_at": "2026-10-05T09:17:21Z",
+  "discovery_method": "seed_and_api",
+  "first_party_sources": [
+    {
+      "title": "Spurious Rewards: Rethinking Training Signals in RLVR",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.10947"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2506.10947",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2506.10947v2",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [
+    {
+      "context": "R.Shao,S.S.Li,R.Xin,S.Geng,Y.Wang,S.Oh,S.S.Du,N.Lambert,S.Min,R.Krishna,Y.Tsvetkov, H.Hajishirzi,P.W.Koh,andL.Zettlemoyer.Spuriousrewards:Rethinkingtrainingsignalsinrlvr,2025b.URL https://arxiv.org/abs/2506.10947.",
+      "page": 78,
+      "reference_number": 192,
+      "report_blob_sha": "bb46f094acee161e46fb019a78fe1a0a07fe7cca",
+      "report_title": "Olmo 3",
+      "seed_report_path": "2025/allenai/2025-12_olmo-3.pdf"
+    }
+  ],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Spurious Rewards: Rethinking Training Signals in RLVR",
+  "versions": [
+    {
+      "date": "2026-02-25",
+      "identifier": "2506.10947v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2506.10947v2"
+    }
+  ]
+}
