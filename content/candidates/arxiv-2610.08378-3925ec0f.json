@@ -1,0 +1,59 @@
+{
+  "abstract": "Large language model (LLM) serving is increasingly dominated by agentic workloads, in which agents and their sub-agents accumulate context as KV cache across many requests, consuming substantial memory. High-bandwidth flash (HBF) is a promising solution, providing an order of magnitude greater capacity at HBM-class read bandwidth, but its finite write endurance is the key limiting factor. Our key insight is that KV cache should be placed across HBM and HBF by its lifetime. Placing shorter-lived data in HBM lets HBM absorb more of an agent run's writes and sends less of them to HBF. As the lifetime of KV cache in agentic serving is dictated by the harness, the program that orchestrates the agents, we analyze its behavior and identify three axes along which lifetime diverges, temporal, structural, and inter-worker. Guided by these observations, we present Lachesis, a lifetime-aware KV cache placement layer between the agent harness and the serving engine. At write time, it places each segment in HBM or HBF according to its lifetime, and frees its blocks once the segment is no longer read. In trace-driven simulation, Lachesis extends HBF lifetime by 1.19-3.13x over HBM-first placement, reaching 3.3-12.2 device-years. Even under continuous 24x7 operation at the full load a tight SLO admits, HBF outlasts its five-year warranty on the multi-agent trace.",
+  "authors": [
+    "Jaehoon Yang",
+    "Jeongmin Lee",
+    "Haneul Park",
+    "Seung Yul Lee",
+    "Nam Sung Kim",
+    "Jae W. Lee"
+  ],
+  "candidate_id": "arxiv:2610.08378",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-06",
+    "latest_revision_date": "2026-10-06"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.08378"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.08378",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.08378v1",
+    "primary_category": "cs.AR"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash",
+  "versions": [
+    {
+      "date": "2026-10-06",
+      "identifier": "2610.08378v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.08378v1"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "abstract": "Human communities are governed by normative systems: shared standards that produce \\textit{norms} dictating acceptable behavior, enforced through community sanctioning. Aligning increasingly autonomous AI systems with these norms is a central alignment challenge, complicated by the fact that norms are vast in number, change quickly, and are often arbitrary (e.g., dress or language conventions). Thus, alignment requires \\textit{normative competence}: the ability to discern from interaction alone what norms a community enforces without relying on static pretrained knowledge. We introduce a multi-agent community debate setting, where access to debate is governed by synthetic norms, to study normative competence in isolation from pretraining exposure. We show that baseline LLM agents fail to learn norms even when doing so would improve their accuracy. We then experiment with various \\textit{normative modules} -- architectural components for norm inference -- finding that norm-following is highly sensitive to both the style of norm and the model powering the normative module, suggesting a lack of generalizability. Furthermore, when idiosyncratic, non-normative behaviors accompany the true norm, LLM agents exhibit an unselective attribution failure: they indiscriminately copy idiosyncratic noise alongside enforced rules, a pattern that persists even when imitating unnecessary behaviors is explicitly penalized. To the best of our knowledge, our work is the first to operationalize and evaluate normative competence in LLMs, demonstrating that current AI systems excel at behavioral mimicry but lack the capacity to discern socially enforced order.",
+  "authors": [
+    "Andrea Wynn",
+    "Harsh Satija",
+    "Seokhyun",
+    "Baek",
+    "Anqi Liu",
+    "Eric Nalisnick",
+    "Gillian K. Hadfield"
+  ],
+  "candidate_id": "arxiv:2610.10906",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-07",
+    "latest_revision_date": "2026-10-07"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Reading the Room: Foundations, Design, and Challenges of Normative Competence in LLMs",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.10906"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.10906",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.10906v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Reading the Room: Foundations, Design, and Challenges of Normative Competence in LLMs",
+  "versions": [
+    {
+      "date": "2026-10-07",
+      "identifier": "2610.10906v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.10906v1"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "abstract": "As Mixture-of-Experts (MoE) models scale toward hundreds of experts and higher top-$k$ routing, memory efficiency in distributed training becomes a critical bottleneck. Peak memory is dominated by the MoE block, not attention: every intermediate buffer in the MoE dispatch pipeline is individually scaled by top-k routing. The standard all-to-all dispatcher sends all routed tokens in a single collective step, requiring the full top-$k$-expanded buffer to be constructed at once. In this work, we propose RelayMoE, a ring-based MoE execution model that computes locally as expert weights or tokens circulate, avoiding full top-$k$-expanded dispatch buffers. RelayMoE selects between expert and token routing according to communication volume and overlaps transfers with computation. The ring structure naturally supports memory-efficient MoE recomputation during backward: each hop reconstructs expert intermediates, uses them to compute gradients, and releases them before the next hop. The saved memory supports longer sequences and larger batches, or retains more attention activations to reduce attention recomputation and improve training throughput. We evaluate RelayMoE on 30B$-$57B production MoE models and varied expert configurations. In single-layer MoE experiments, RelayMoE achieves a $2\\times$ average speedup over Megatron-LM. In full-model training under the same GPU memory budget, it improves throughput by up to $2.02\\times$ and extends the largest tested trainable sequence length by up to $2.85\\times$.",
+  "authors": [
+    "Arnab Kanti Tarafder",
+    "Jaume Guasch-Martí",
+    "Gokcen Kestor",
+    "Jie Ren"
+  ],
+  "candidate_id": "arxiv:2610.07333",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-05",
+    "latest_revision_date": "2026-10-05"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Memory-Efficient Expert Routing for Distributed MoE Training",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07333"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.07333",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.07333v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Memory-Efficient Expert Routing for Distributed MoE Training",
+  "versions": [
+    {
+      "date": "2026-10-05",
+      "identifier": "2610.07333v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07333v1"
+    }
+  ]
+}

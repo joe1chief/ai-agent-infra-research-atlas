@@ -1,0 +1,57 @@
+{
+  "abstract": "Agentic memory allows LLM agents to reuse past experience, yet retrieved memories can also distort inference even when they are benign, correctly stored, and appropriately retrieved. We study this failure mode, which we call memory over-reliance. Across benchmarks and memory architectures, we find that memory is useful when past experience transfers to the current task, but can become misleading when only part of the evidence transfers. Failures are strongest under partial query-memory overlap, a pattern further confirmed by controlled experiments thatvary the amount of overlapping evidence. Motivated by this finding, we propose MEMTRIM, a plug-and-play framework that indexes memory evidence at write time and controls its reuse at read time. MEMTRIM removes repeated or conflicting evidence while preserving useful memory-specific information, requires no retraining, and applies to both embedding-based and structured memory systems.Experiments show that MEMTRIM reduces memory overreliance while preserving the benefits of useful memory across models and memory settings.",
+  "authors": [
+    "Luoxi Tang",
+    "Yuqiao Meng",
+    "Nilesh Auradkar",
+    "Muchao Ye",
+    "Dazheng Zhang",
+    "Zhaohan Xi"
+  ],
+  "candidate_id": "arxiv:2610.07311",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-05",
+    "latest_revision_date": "2026-10-05"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Understanding and Mitigating Inference-Time Overreliance Using Agentic Memory",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07311"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.07311",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.07311v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Understanding and Mitigating Inference-Time Overreliance Using Agentic Memory",
+  "versions": [
+    {
+      "date": "2026-10-05",
+      "identifier": "2610.07311v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07311v1"
+    }
+  ]
+}

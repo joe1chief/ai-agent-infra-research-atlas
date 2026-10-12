@@ -1,0 +1,59 @@
+{
+  "abstract": "Skill-augmented agents load reusable skills as persistent runtime context, improving task performance but also giving malicious skills a durable channel for steering future actions. Such skills may leak secrets, corrupt code, bypass approvals, or stage data for exfiltration only after a concrete user task and workspace state make the unsafe action appear useful. This makes pre-install vetting insufficient and calls for runtime, task-conditioned protection. We propose Defense-as-Skill, a defense paradigm that implements the runtime guard itself as an installable, inspectable, and editable skill. Our guard, SkillSonar, runs alongside untrusted task skills and checks sensitive actions against the user's task boundary, routing each action to an allow, replan, or confirmation decision without modifying the underlying agent runtime. To study this setting, we construct SCOPE-R, a task-conditioned dataset covering 6 risk families and 21 sub-categories, with 206 attack-confirmed malicious instances and 43 benign tasks. We then improve SkillSonar on the SCOPE-R training subset using runtime guard-skill evolution, a Monte-Carlo Tree Search procedure that evolves the on-disk guard skill from feedback on the rollouts. Across Claude Code and OpenClaw, the evolved guard substantially reduces attack success while maintaining a favorable safety-utility trade-off; on repeated GLM-5 runs, ID ASR drops from 0.482 to 0.104 and OOD ASR from 0.606 to 0.115, with gains transferring across victim models, held-out risk families, and external benchmarks. These results show that runtime guards can be skill-native, transparent, and evolvable policy artifacts for skill-augmented agents.",
+  "authors": [
+    "Xiaofang Yang",
+    "Ziqi Miao",
+    "Chen Qian",
+    "Dianbo Sui",
+    "Jing Shao",
+    "Lijun Li"
+  ],
+  "candidate_id": "arxiv:2609.01487",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-09-01",
+    "latest_revision_date": "2026-10-09"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Defense-as-Skill: Evolving Runtime Guard Skill for Skill-Augmented Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.01487"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2609.01487",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted by NeurIPS 2026. Code: https://github.com/yxf203/defense-as-skill",
+    "pdf_url": "https://arxiv.org/pdf/2609.01487v2",
+    "primary_category": "cs.CR"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trust"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "Defense-as-Skill: Evolving Runtime Guard Skill for Skill-Augmented Agents",
+  "versions": [
+    {
+      "date": "2026-10-09",
+      "identifier": "2609.01487v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2609.01487v2"
+    }
+  ]
+}

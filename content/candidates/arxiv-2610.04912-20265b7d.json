@@ -1,0 +1,53 @@
+{
+  "abstract": "Language models increasingly serve prompts that carry private data, and secure inference under homomorphic encryption lets a client outsource the computation without revealing the prompt. Existing secure inference systems run a forward pass without consuming a token under encryption, and generating text with them requires a client round trip at every generated token. Keeping the loop on the server instead requires selecting and consuming a token under encryption, and placing bootstraps for a loop body that grows with the context. We build AR-HE, which runs the whole loop on the server, selects each token under encryption, retrieves its embedding, and writes it back into the encrypted state. The client sends one prompt and remains offline until the output. One rule places every bootstrap in the run, without search, so the bootstrap cost of a token is a formula in the context length that is known before the run starts. The schedule skips work whose result cannot reach the output, packs bootstraps that share an operand, and keeps the keys and values of past positions in an encrypted cache. With every optimization applied, generating a GPT-2 small token costs 544 seconds on one NVIDIA H100, down from 4715 seconds without optimization. The prompt step before it costs 4630 seconds. The cache alone takes a generated step from 11751 bootstraps to 1072. The formula predicts every step we measured, including steps of a model it was not derived from.",
+  "authors": [
+    "Halil Ibrahim Kanpak",
+    "Didem Unat"
+  ],
+  "candidate_id": "arxiv:2610.04912",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-04",
+    "latest_revision_date": "2026-10-04"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Static Bootstrap Placement for Encrypted Language Model Decoding",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.04912"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.04912",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "20 pages, 10 figures, 8 tables",
+    "pdf_url": "https://arxiv.org/pdf/2610.04912v1",
+    "primary_category": "cs.CR"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Static Bootstrap Placement for Encrypted Language Model Decoding",
+  "versions": [
+    {
+      "date": "2026-10-04",
+      "identifier": "2610.04912v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.04912v1"
+    }
+  ]
+}

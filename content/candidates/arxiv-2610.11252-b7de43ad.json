@@ -1,0 +1,53 @@
+{
+  "abstract": "This study presents the Neuro-Memory Fuzzy Inference System (NeMeFIS), a hierarchical machine learning architecture that asymmetrically models acceleration and deceleration in car following behavior by integrating five human memory types procedural, working, episodic, semantic, and declarative. By linking external variables to memory functions via metaheuristics and validating them through factor and p-value analyses, NeMeFIS uncovers latent cognitive influences across Arterial, Collector, and Rural Highway corridors for different types of vehicles. Results from 54 different trained models emphasize cognitive thresholds shaped by driver perception limits and cognitive load. The trained NeMeFIS models outperform traditional statistical and conventional machine learning models in replicating realistic driving behavior, including comparisons with Linear Regression, ANFIS, and LSTM architectures. Fuzzy rule analysis reveals that declarative memory demands the highest rule, especially during deceleration, indicating complex braking decisions. Procedural memory drives acceleration, while semantic and declarative memory guide deceleration. Risk perception also emerges as a key factor, particularly on urban roads. Validated on both heterogeneous and homogeneous datasets, NeMeFIS offers a robust framework for modeling driver cognition. The findings support psychotherapeutic applications and the development of adaptive, human-like decision systems in Connected and Autonomous Vehicles (CAVs) to enhance traffic safety.",
+  "authors": [
+    "Nazmul Haque",
+    "Md Asif Raihan. Md. Hadiuzzaman"
+  ],
+  "candidate_id": "arxiv:2610.11252",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-08",
+    "latest_revision_date": "2026-10-08"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Neuro-Memory Fuzzy Inference System for Mimicking Human-like Car Following Behavior",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.11252"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.11252",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "20 Pages",
+    "pdf_url": "https://arxiv.org/pdf/2610.11252v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Neuro-Memory Fuzzy Inference System for Mimicking Human-like Car Following Behavior",
+  "versions": [
+    {
+      "date": "2026-10-08",
+      "identifier": "2610.11252v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.11252v1"
+    }
+  ]
+}

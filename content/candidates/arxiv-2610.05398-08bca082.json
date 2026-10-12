@@ -1,0 +1,65 @@
+{
+  "abstract": "Autonomous research seeks sustained model improvements through iterative experimentation and feedback. LLM agents show promise in automating machine learning and language-model post-training, but their ability to sustain multimodal improvement remains unclear. We introduce MMPostTrainBench, a benchmark spanning eight tasks in image, audio, video, and joint audio-video understanding and image-grounded software repair. Agents operate from a common base model within fixed budgets, using development feedback before independent evaluation of their submitted models. Evaluation covers target and non-target model outcomes, iterative model improvement and selection, and research integrity. Across all eight tasks, 52.1% of model--task means fall below the base, and evaluated submissions also exhibit non-target regressions. Model performance does not consistently improve across research iterations, and agents do not reliably select the best evaluated candidate for submission; final submissions trail that candidate by up to 5.38 percentage points. Extending autonomous research from text-only to multimodal tasks introduces additional sources of error in perception, cross-modal alignment, and temporal grounding. The observed regressions and selection gaps highlight the need to balance targeted improvements with non-target capability preservation and to retain gains across research iterations. These requirements motivate MMResearch, a multimodal research framework that connects media-grounded evidence to hypotheses and interventions, carries findings across rounds through hierarchical memory, and retains candidates using development evaluation. Added to existing code-agent runtimes, it improves submitted-model accuracy by up to 7.75 percentage points for Claude Opus 4.8 with Claude Code and 2.33 points for GPT-5.6-sol with Codex.",
+  "authors": [
+    "Yuxin Liu",
+    "Yuxuan Wang",
+    "Zhenxin Lei",
+    "Lingchen Meng",
+    "Yuchong Sun",
+    "Junming Lin",
+    "Hongcheng Liu",
+    "Yunfei Chu",
+    "Qize Yang",
+    "Jin Xu",
+    "Lei Zhang",
+    "Zhendong Mao"
+  ],
+  "candidate_id": "arxiv:2610.05398",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-04",
+    "latest_revision_date": "2026-10-04"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.05398"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.05398",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "17 pages. Code: https://github.com/sod1010/MMPostTrainBench",
+    "pdf_url": "https://arxiv.org/pdf/2610.05398v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent runtime"
+    ],
+    "primary_category": "AG-1",
+    "requires_human_confirmation": true
+  },
+  "title": "MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training",
+  "versions": [
+    {
+      "date": "2026-10-04",
+      "identifier": "2610.05398v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.05398v1"
+    }
+  ]
+}

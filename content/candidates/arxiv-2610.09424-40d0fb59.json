@@ -1,0 +1,60 @@
+{
+  "abstract": "Deploying Mixture-of-Experts (MoE) models relies heavily on Expert Parallelism, which generates intense inter-GPU communication. Consequently, state-of-the-art inference systems require high-bandwidth, P2P interconnects (e.g., NVLink) in datacenter GPUs to handle massive token routing, making deployment prohibitively expensive. Consumer GPUs offer comparable compute power at significantly lower cost, promising to democratize MoE inference for individuals and enable privacy-preserving local deployments. However, their bandwidth-limited (only weak PCIe bus bandwidth) and host-mediated interconnects (no P2P support) introduce severe communication bottlenecks. We present CoMoE, a communication-efficient MoE inference system that resolves this mismatch through novel host-centric routing. Our key insight is that the unique communication topology provides the opportunity to elevate the host to an active routing hub, which can fundamentally reduce communication volume and eliminate global synchronization-induced stalls. Specifically, for token dispatch, we introduce host-backed token multicast to write shared tokens to the host exactly once, eliminating outbound transmission redundancy. For token combine, we propose a fine-grained, token-level aggregation mechanism using host staging buffers, which replaces rigid global synchronization and mitigates straggler effects. Evaluation on RTX 5090 GPUs shows that CoMoE improves inference throughput by up to 1.46x, approaching the performance of NVLink-capable A800 GPUs at only 23.4% of the hardware cost.",
+  "authors": [
+    "Ruwen Fan",
+    "Yuezhi Zu",
+    "Minhui Xie",
+    "Junru Li",
+    "Qingda Hu",
+    "Xinjun",
+    "Yang",
+    "Jiwu Shu",
+    "Youyou Lu"
+  ],
+  "candidate_id": "arxiv:2610.09424",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-07",
+    "latest_revision_date": "2026-10-09"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Democratizing MoE inference on commodity GPUs with CoMoE",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.09424"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.09424",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.09424v2",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Democratizing MoE inference on commodity GPUs with CoMoE",
+  "versions": [
+    {
+      "date": "2026-10-09",
+      "identifier": "2610.09424v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.09424v2"
+    }
+  ]
+}

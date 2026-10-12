@@ -1,0 +1,56 @@
+{
+  "abstract": "Modern agents increasingly ground their reasoning in observations returned by tools, such as file contents read from a workspace. However, the data sources underlying these observations may later be modified by users, other agents, or external tools, while the model retains only the stale content in its context window. Existing agent runtimes provide little support for notifying the model that a previously observed fact has become stale, causing agents to reuse outdated observations and make incorrect claims about the current workspace state. We propose Concord, a context coherence framework that maintains the consistency between tool observation in agent context and the mutable sources from which they were derived. Concord links each observation to its source, detects source changes, and uses configurable handling policies to update, annotate, or suppress stale context before reuse. Concord is applicable across different agent runtimes and external resources, and can be easily extended to new runtime-resource settings. We implement Concord as a general framework, and instantiate a concrete use case to assess its effectiveness. We construct ConcordBench, where previously observed file contents become stale after subsequent edits. Across three evaluated frontier models, Concord produces answers consistent with the restored workspace state in all evaluated cases under these constructed conditions, matching the oracle on recover count for this benchmark, while using 46.4% fewer tokens than the strongest non-oracle baseline.",
+  "authors": [
+    "Yingying Liu",
+    "Junzhou Fang",
+    "Chenxiong Qian"
+  ],
+  "candidate_id": "arxiv:2610.05281",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-04",
+    "latest_revision_date": "2026-10-06"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "When Agent Context Goes Stale: Incoherence in Volatile Agent Context",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.05281"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.05281",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "8 pages, 3 figures, 1 table. Accepted to the AgenticOS Workshop at SOSP 2026",
+    "pdf_url": "https://arxiv.org/pdf/2610.05281v2",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent runtime"
+    ],
+    "primary_category": "AG-1",
+    "requires_human_confirmation": true
+  },
+  "title": "When Agent Context Goes Stale: Incoherence in Volatile Agent Context",
+  "versions": [
+    {
+      "date": "2026-10-06",
+      "identifier": "2610.05281v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.05281v2"
+    }
+  ]
+}

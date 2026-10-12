@@ -1,0 +1,64 @@
+{
+  "abstract": "Building interactive simulators from real-world observations is a promising way to scale embodied data, but current pipelines still rely heavily on manual environment construction and calibration. We study whether frontier foundation models and coding agents can automate this process end to end. We formulate \\emph{autonomous video-to-simulation} as a software engineering task in which an agent observes an embodied video, constructs the corresponding simulated environment and robot behavior, and iteratively refines the result through execution feedback. To evaluate this capability, we introduce \\textbf{Video2World}, a benchmark comprising 222 reconstruction instances derived from 189 robot and human demonstration videos. Video2World measures reconstructed worlds along geometric fidelity, dynamic fidelity, and functional correctness, capturing spatial perception, physical reasoning, and executable interaction. Evaluating 9 frontier coding-agent systems reveals a sharp improvement in Task success beginning with Claude Opus 5, rising from below 5\\% to over 15\\%, while substantial gaps to human-assisted reconstruction remain. We further find that worlds that look better could work worse: better visual fidelity does not always lead to higher task success. This echoes the broader gap between perceptual realism and factual correctness observed in generative models.",
+  "authors": [
+    "Jinzhou Tang",
+    "Zijun Zhang",
+    "Jing Yang",
+    "Yuchen Yan",
+    "Kun Zhou",
+    "Lingjun Mao",
+    "Ruobing Han",
+    "Jinglin Cao",
+    "Wenpeng Xu",
+    "Lukun He",
+    "Minghao Fu",
+    "Fan Feng",
+    "Biwei Huang"
+  ],
+  "candidate_id": "arxiv:2610.04432",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-03",
+    "latest_revision_date": "2026-10-09"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Video2World: Benchmarking Coding Agents for Interactive World Modeling from Embodied Videos",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.04432"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.04432",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Project page: https://aetherlabsai.github.io/Video2World",
+    "pdf_url": "https://arxiv.org/pdf/2610.04432v3",
+    "primary_category": "cs.CV"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Video2World: Benchmarking Coding Agents for Interactive World Modeling from Embodied Videos",
+  "versions": [
+    {
+      "date": "2026-10-09",
+      "identifier": "2610.04432v3",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.04432v3"
+    }
+  ]
+}

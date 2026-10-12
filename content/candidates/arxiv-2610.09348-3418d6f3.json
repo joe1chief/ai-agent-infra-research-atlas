@@ -1,0 +1,61 @@
+{
+  "abstract": "LLM agents that interact with a user across many sessions accumulate histories that exceed their context window, so they store past interactions in an external memory and answer each question from a small set of retrieved records. Existing memory systems rank records by lexical or embedding relevance, yet the top-ranked memories can each be relevant while jointly omitting a complementary fact that the answer requires, especially for multi-session and temporal questions. Drawing on the distinction between relevance and sufficiency in legal evidence scholarship, we recast memory retrieval as constructing a sufficient memory set. To operationalize this view, we introduce a blinded LLM judgment over the retrieved set, together with Gold Hit and Turn Hit as evidence-coverage proxies. We then propose Budgeted Flat Reconstruction (BFR), which builds sufficient sets over a fixed flat memory store in two stages. Specifically, we first apply Formal Concept Analysis for Memory Selection (FCA-MS) to decompose the question into information requirements and select a compact candidate subset that jointly covers them. Then, we repeatedly acquire unseen records through deeper text search or complementary entity and session views, stopping when the budget is exhausted. Experiments on LoCoMo and LongMemEval-S show that BFR outperforms same-store adaptations of recent agent-memory systems in both answer quality and evidence coverage. Specifically, on LongMemEval-S it raises judged accuracy from 72.4% to 82.2% and Turn Hit to 91.4%.",
+  "authors": [
+    "Yufeng Li",
+    "Shuxin Li",
+    "Zhenhua Xu",
+    "Junxian Li",
+    "Peng Zeng",
+    "Sheng Yao",
+    "Changting Lin",
+    "Gaolei Li",
+    "Ran Bi",
+    "Meng Han"
+  ],
+  "candidate_id": "arxiv:2610.09348",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-07",
+    "latest_revision_date": "2026-10-07"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Relevance Is Not Sufficiency: What Actually Closes the Evidence Gap in Long-Term Memory QA",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.09348"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.09348",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "25 pages. Code is available at https://github.com/LYF199903/BFR-An-Agent-Memory-Framework-for-Evidence-Reconstruction",
+    "pdf_url": "https://arxiv.org/pdf/2610.09348v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Relevance Is Not Sufficiency: What Actually Closes the Evidence Gap in Long-Term Memory QA",
+  "versions": [
+    {
+      "date": "2026-10-07",
+      "identifier": "2610.09348v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.09348v1"
+    }
+  ]
+}

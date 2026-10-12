@@ -1,0 +1,62 @@
+{
+  "abstract": "Memory has become integral to the LLM agent ecosystem, supporting information retention and reuse across interactions. However, most existing agent memory systems construct memory in a query-agnostic manner, which can incur unnecessary preprocessing cost and discard details that later prove essential. Recent studies have begun shifting memory processing toward runtime adaptation, but typically specialize in particular operations or fixed processing schemes, leaving flexible control over performance, cost, and latency largely underexplored. To address this challenge, we present \\textbf{MemPilot}, a flexible framework that orchestrates on-demand memory curation under different performance--cost--latency preferences. Specifically, we optimize a multi-step LLM policy via reinforcement learning to iteratively choose between retrieving from query-agnostic memory and delegating query-specific curation of raw multimodal history to heterogeneous LLMs and VLMs. The policy jointly controls evidence amount, curation instructions, model selection, and visual access, enabling fine-grained allocation of runtime computation. To optimize this policy under competing objectives, we adapt objective-wise advantage decoupling by separately estimating each objective's advantage before aggregation. Moreover, we introduce prefix-based marginal utility estimation for fine-grained credit assignment across multi-step rollouts. Experiments on five multimodal agent-memory benchmarks demonstrate favorable performance--cost--latency trade-offs across optimization preferences, with preference sweeps yielding broader frontiers than existing trade-off-aware baselines.",
+  "authors": [
+    "Haozhen Zhang",
+    "Haodong Yue",
+    "Quanyu Long",
+    "Jianzhu Bao",
+    "Qingyuan Liu",
+    "Tao Feng",
+    "Bohan Liu",
+    "Weida Liang",
+    "Wenya Wang"
+  ],
+  "candidate_id": "arxiv:2610.06830",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-05",
+    "latest_revision_date": "2026-10-05"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.06830"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.06830",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Code is available at https://github.com/ViktorAxelsen/MemPilot",
+    "pdf_url": "https://arxiv.org/pdf/2610.06830v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+  "versions": [
+    {
+      "date": "2026-10-05",
+      "identifier": "2610.06830v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.06830v1"
+    }
+  ]
+}

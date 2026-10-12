@@ -1,0 +1,64 @@
+{
+  "abstract": "Large language model (LLM)-based multi-agent systems increasingly rely on memory to transform execution trajectories into reusable procedural knowledge. Yet repeated retrieval also makes memory errors persistent: memory pollution arises when outdated, weakly supported, or spuriously successful procedures become recurring components of future reasoning. Multi-agent execution introduces an additional structural risk. Scope collapse occurs when procedural knowledge escapes the coordination scope in which it was shown effective and is repeatedly reused at incompatible decision levels, allowing local errors to influence cascades of downstream decisions. Meanwhile, task-level failures provide ambiguous supervision because they rarely reveal which recalled knowledge was responsible. We introduce AECG, a framework for asymmetric experience consolidation and governance for multi-agent systems. AECG turns memory from static experience storage into a dynamic reliability-governance loop, preserving coordination scope and using multi-scale, confidence-aware reliability to detect degradation. It then combines degradation with downstream impact to prioritize high-risk knowledge under a bounded review budget, applies targeted interventions, and reactivates revised skills only after paired replay. Across three multi-agent frameworks and four benchmarks, AECG achieves the best score in 11 of 12 framework--benchmark settings and improves over the strongest competing memory method by as much as 10.23 percentage points; removing scope preservation reduces accuracy by up to 16.89 points. AECG thereby reframes multi-agent memory from passive accumulation into auditable reliability governance. Code is available at https://github.com/fenhg297/AECG",
+  "authors": [
+    "Ao Tian",
+    "Jialong Liu",
+    "Daqi Zheng",
+    "Xin Sun",
+    "Mengting Li",
+    "Zhizhao Xiao",
+    "Zijian Huang",
+    "Honglei Wang",
+    "Zijian Hei",
+    "Yukun Yan"
+  ],
+  "candidate_id": "arxiv:2610.05176",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-04",
+    "latest_revision_date": "2026-10-04"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "AECG: Asymmetric Experience Consolidation and Governance In Multi-Agent Systems",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.05176"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.05176",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "22 pages,5 figures",
+    "pdf_url": "https://arxiv.org/pdf/2610.05176v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent",
+      "coordination"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "AECG: Asymmetric Experience Consolidation and Governance In Multi-Agent Systems",
+  "versions": [
+    {
+      "date": "2026-10-04",
+      "identifier": "2610.05176v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.05176v1"
+    }
+  ]
+}

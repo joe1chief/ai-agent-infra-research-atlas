@@ -1,0 +1,55 @@
+{
+  "abstract": "Researchers are exploring effective one-step generative model continuously, and, Drifting Models (Deng et al., 2026), demonstrate great potential in one-step generation recently. There are works that reveal the connection between Diffusion & Flow Style Generative Models (DFSGMs) (Ho et al., 2020; Song et al., 2020a;b; Lipman et al., 2022; Liu et al., 2022) and Drifting Models (Li & Zhu, 2026; Lai et al., 2026; Turan et al., 2026). But no one has yet established a precise correspondence between the Drifting Model and the widely used distillation method- Distribution Matching Distillation (DMD/DMD2) (Yin et al., 2024b;a) to the best of our knowledge, even though their optimization objective formulas are virtually identical. In this paper, we prove that by converting the velocity-field / noise-field from the pre-trained DFSGMs into the attraction force field in Drifting Models and estimating the repulsion force field from the generative distribution, training the Drifting Model is naturally equivalent to the Distribution Matching Distillation. With this equivalent concept, we propose an improved method based on DMD from the Drifting Model's perspective- Multi-Bandwidth Distribution Matching Distillation (MBDMD).",
+  "authors": [
+    "Jialin Zhu",
+    "Xing Liu",
+    "Feixiang He",
+    "He Wang"
+  ],
+  "candidate_id": "arxiv:2610.10989",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-07",
+    "latest_revision_date": "2026-10-07"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Multi-Bandwidth Distribution Matching Distillation: On the Equivalence of Distribution Matching Distillation and Drifting Models",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.10989"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.10989",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.10989v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Multi-Bandwidth Distribution Matching Distillation: On the Equivalence of Distribution Matching Distillation and Drifting Models",
+  "versions": [
+    {
+      "date": "2026-10-07",
+      "identifier": "2610.10989v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.10989v1"
+    }
+  ]
+}
