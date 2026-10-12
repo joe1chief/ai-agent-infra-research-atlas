@@ -1,0 +1,60 @@
+{
+  "abstract": "Long-term agents face growing storage demands as they accumulate experience. World models capture reusable regularities that can reduce the information stored for each experience. We formulate the problem of memory allocation conditioned on a world model and introduce MemoWM, a framework that uses shared predictions to compress retained information and reconstruct omitted content. Its task-aware allocation rule balances the expected impact of reconstruction errors against storage cost, retaining information with downstream value beyond the predictive prior. Across five long-term agent-memory benchmarks, MemoWM achieves 42.42\\% average answer accuracy, exceeding the strongest baseline by 2.62 percentage points, while reducing average experience-specific storage by 53.9\\% relative to MIRIX, the most storage-efficient baseline. Further analysis shows that stronger world models reduce per-experience storage at comparable task quality. Accounting for model parameters reveals a trade-off between shared model capacity and recurring storage costs, with the capacity that minimizes total storage increasing as more interactions are retained. Our code is available at https://github.com/Feld-maxiu/MemoWM.",
+  "authors": [
+    "Bingfan Zeng",
+    "Zhisheng Chen",
+    "Chenbo Sang",
+    "Zhengwei Xie",
+    "Jinpeng Wang",
+    "Xiangchen Guan",
+    "Rui Qian",
+    "Zheng Lu",
+    "Jingwei Song"
+  ],
+  "candidate_id": "arxiv:2610.10778",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-07",
+    "latest_revision_date": "2026-10-07"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "MemoWM: How World Models Change What Agents Need to Remember",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.10778"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.10778",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.10778v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "MemoWM: How World Models Change What Agents Need to Remember",
+  "versions": [
+    {
+      "date": "2026-10-07",
+      "identifier": "2610.10778v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.10778v1"
+    }
+  ]
+}

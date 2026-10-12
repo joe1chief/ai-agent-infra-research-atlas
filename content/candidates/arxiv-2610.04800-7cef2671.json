@@ -1,0 +1,55 @@
+{
+  "abstract": "Graphical consoles offer a practical interface for medical acquisition assistance, allowing agents to work through the controls and visual feedback used by human operators. Reliable assistance requires linking on-screen anatomy to acquisition decisions that determine what image evidence becomes available next. We introduce MedImageOSWorld, a benchmark for evaluating this capability in simulated CT, MR, and ultrasound consoles. Using screenshots and mouse-and-keyboard actions, agents configure protocols, plan acquisitions, inspect the resulting images, and make corrective adjustments across seven capability levels, from console operation to feedback-driven control. Evaluation combines task-specific workflow checks with hidden anatomical ground truth to assess procedural completion and acquisition outcomes separately. A common evaluation protocol specifies episode conditions and interaction budgets, while recorded trajectories support analysis of how agents observe, act, and respond to acquisition feedback. Across eleven open-weight agents, success rates range from 3.0 to 25.0 on a 0-100 scale while workflow-progress rates reach 21.5-74.5: agents complete much of the console workflow but rarely acquire the intended anatomy. Success collapses between perception and planning, from 79-90% at the lowest three levels for the best agent to at most 12% for millimetre-level planning and 0% for closed-loop control among open-weight agents. Two proprietary agents reach success rates of about 34 and exceed the best open-weight agent mainly in acquisition quality (61 versus 42). MedImageOSWorld provides a controlled setting for studying whether general-purpose GUI agents can translate visual observations into effective medical acquisition decisions.",
+  "authors": [
+    "Ziyang Long",
+    "Xinqi Li",
+    "Lujing Xing",
+    "Hsin-Jung Yang"
+  ],
+  "candidate_id": "arxiv:2610.04800",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-03",
+    "latest_revision_date": "2026-10-03"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "MedImageOSWorld: Benchmarking GUI Agents for Medical Image Consoles",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.04800"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.04800",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "11 pages, 3 figures. Supplementary material (8 pages) included as an ancillary file",
+    "pdf_url": "https://arxiv.org/pdf/2610.04800v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "MedImageOSWorld: Benchmarking GUI Agents for Medical Image Consoles",
+  "versions": [
+    {
+      "date": "2026-10-03",
+      "identifier": "2610.04800v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.04800v1"
+    }
+  ]
+}

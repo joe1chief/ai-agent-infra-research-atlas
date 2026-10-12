@@ -1,0 +1,65 @@
+{
+  "abstract": "TRANSIT is a transparent scale-in framework to enable multi-node model training on fewer GPUs while maintaining training efficiency by transparently leveraging CPU DRAM as an extension of GPU memory during distributed training. It achieves this through a user-space interposition layer, requiring no modifications to the application, training framework, cluster scheduler, device driver, or operating system. Furthermore, TRANSIT achieves higher efficiency by leveraging a zero-copy data path for CPU-GPU transfers. We evaluate TRANSIT on dense and MoE models across scales up to 64 NVIDIA H100 GPUs and multiple parallelism configurations over a RoCE network. Our evaluation shows that TRANSIT can: (a) outperform state-of-the-art framework-managed offloading techniques, achieving up to 68%, 59%, and 42% higher per-GPU throughput than TorchTitan, ZeRO-Offload, and ZeRO-Infinity, respectively, (b) enables training with 50% fewer GPUs while maintaining over 90% of baseline per-GPU throughput, (c) lower per-node network traffic by up to 33%, and (d) improve per-GPU throughput by up to 35% in communication-bound settings.",
+  "authors": [
+    "Hyungyo Kim",
+    "Nicholas Satchanov",
+    "Hrishi Shah",
+    "Gaohan Ye",
+    "Jiaqi Lou",
+    "Robert Walkup",
+    "Shweta Salaria",
+    "I-Hsin Chung",
+    "Hubertus Franke",
+    "Seetharami Seelam",
+    "Apoorve Mohan",
+    "Nam Sung Kim"
+  ],
+  "candidate_id": "arxiv:2610.07593",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-06",
+    "latest_revision_date": "2026-10-06"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "TRANSIT: Transparent Scale-in for Multi-Node LLM Training",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07593"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.07593",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "15 pages, 12 figures",
+    "pdf_url": "https://arxiv.org/pdf/2610.07593v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "TRANSIT: Transparent Scale-in for Multi-Node LLM Training",
+  "versions": [
+    {
+      "date": "2026-10-06",
+      "identifier": "2610.07593v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07593v1"
+    }
+  ]
+}

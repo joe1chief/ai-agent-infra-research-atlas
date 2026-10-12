@@ -1,0 +1,56 @@
+{
+  "abstract": "Social preferences can promote cooperation in multi-agent reinforcement learning, but existing approaches often require agents to observe the rewards of their peers. In many real-world interactions, however, an agent can, as humans do, observe others' behavior and outcomes without access to their private reward signals. We introduce self-referenced social preferences, in which each agent learns a model of its own reward, applies it to other agents' observed transitions to assess their outcomes from its own perspective, and feeds these self-referenced assessments into standard social preferences. We study two ways to incorporate these assessments: modifying the learning reward, or using them to weight policy updates. We evaluate the approach on three sequential social dilemmas, Escape Room, Clean Up, and Commons Harvest, which require volunteering, public-good contribution, and resource restraint, respectively. Across all three environments, agents learn cooperative behavior without observing others' rewards, including in settings where independent learners fail to cooperate, and frequently achieve more equitable divisions of jointly produced returns than agents with access to true rewards. The effective integration point depends on the social preference: inequity aversion works best in the reward together with a value look-ahead, whereas a purely benevolent preference benefits from policy-update weighting. Under partial observability, the policy-update approach continues to support cooperation. These results show that explicit access to other agents' reward signals is not necessary for learning cooperative behavior: social preferences can instead be grounded in self-referenced assessments of others' outcomes derived from their observed behavior.",
+  "authors": [
+    "Mohamed Ayman Mohamed",
+    "Harshil Kotamreddy",
+    "Marcos Menon Jose"
+  ],
+  "candidate_id": "arxiv:2610.07881",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-06",
+    "latest_revision_date": "2026-10-07"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Self-Referenced Social Preferences: Cooperation without Observing Others Rewards",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07881"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.07881",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Under Review",
+    "pdf_url": "https://arxiv.org/pdf/2610.07881v2",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Self-Referenced Social Preferences: Cooperation without Observing Others Rewards",
+  "versions": [
+    {
+      "date": "2026-10-07",
+      "identifier": "2610.07881v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07881v2"
+    }
+  ]
+}

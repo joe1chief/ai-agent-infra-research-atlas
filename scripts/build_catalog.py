@@ -362,9 +362,8 @@ def update_readme_stats(
     stats: dict[str, Any],
     mirrors: dict[str, dict[str, Any]],
     window_start: date,
-    window_end: date,
 ) -> None:
-    """Refresh the human-facing release snapshot between stable markers."""
+    """Refresh the snapshot using canonical verification dates, not the build clock."""
     if not path.is_file():
         raise FileNotFoundError(f"README stats target does not exist: {path}")
     rendered = path.read_text(encoding="utf-8")
@@ -372,10 +371,11 @@ def update_readme_stats(
         raise ValueError(f"{path} is missing catalog stats markers")
     seeded_works = sum(bool(paper["seed_reports"]) for paper in papers)
     by_domain = stats["by_domain"]
+    latest_verification = max((paper["verified_at"] for paper in papers), default="unavailable")
     block = "\n".join(
         (
             README_STATS_START,
-            f"- **{stats['totals']['main']}** main research works from `{window_start}` through `{window_end}`.",
+            f"- **{stats['totals']['main']}** main research works from `{window_start}` onward (latest canonical record verification: `{latest_verification}`).",
             f"- **{by_domain.get('ai_infra', 0)}** AI Infra and **{by_domain.get('agent_infra', 0)}** Agent Infra records across **{len(CATEGORIES)}** primary categories.",
             f"- **{seeded_works}** works traced to exact bibliography evidence across **{stats['totals']['seed_reports']}** priority technical reports.",
             f"- **{len(mirrors)}** redistribution-approved PDF mirror; all other full texts use official-source fallbacks.",
@@ -463,7 +463,6 @@ def build(args: argparse.Namespace) -> int:
             stats,
             mirrors,
             args.window_start,
-            args.window_end,
         )
     print(f"Built {len(papers)} paper records in {output}")
     return 0

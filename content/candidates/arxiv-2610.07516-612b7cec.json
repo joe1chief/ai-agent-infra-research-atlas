@@ -1,0 +1,62 @@
+{
+  "abstract": "Distributed training and rollout generation often use different tensor layouts, requiring model weights to be resharded across distinct process groups. This M-to-N redistribution is not directly expressed by standard collectives. Flat direct sends duplicate traffic across destination replicas, while gather-then-broadcast concentrates network injection at one root and transfers data that destinations do not need. For DeepSeek-V3 on 256 GPUs, legacy all-gather plus broadcast accounts for 29.4% of the reported reinforcement-learning step time. We present NCCL M2N, a layout- and topology-aware collective primitive for distributed tensor resharding. Given source and destination meshes and placements, it derives the required transfer regions and a global communication schedule. Its hierarchical route balances source contributions across eligible destination ranks, forwards one copy between destination NVLink domains, and completes local replication over NVLink. Network transfer and local replication overlap, avoiding replica-multiplied source egress. An aggregate data-movement model captures the limits of both stages. We evaluate NCCL M2N on up to 256 GB200 GPUs in an NVL72 cluster with NDR InfiniBand. A single FFN-MoE layer transfer achieves up to 7.9x speedup over flat direct sends (9.8 ms versus 77.3 ms). In a separate 256-GPU DeepSeek-V3 NeMo-RL experiment, NCCL M2N reduces reported weight-sync time from 5.78 s to 2.77 s, a 2.09x speedup over legacy all-gather plus broadcast, and reduces step time by 12.7%.",
+  "authors": [
+    "Kaushik Kandadi",
+    "Youngeun Kwon",
+    "Sreeram Potluri",
+    "Ching-Hsiang Chu",
+    "Ke Wen",
+    "Pouya Kousha",
+    "Sangkug Lym",
+    "Nitin Nitin",
+    "Manjunath Gorentla Venkata"
+  ],
+  "candidate_id": "arxiv:2610.07516",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-05",
+    "latest_revision_date": "2026-10-05"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "NCCL M2N: A Layout- and Topology-Aware Collective for Distributed Tensor Resharding",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07516"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.07516",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.07516v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "NCCL M2N: A Layout- and Topology-Aware Collective for Distributed Tensor Resharding",
+  "versions": [
+    {
+      "date": "2026-10-05",
+      "identifier": "2610.07516v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07516v1"
+    }
+  ]
+}

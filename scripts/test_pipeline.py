@@ -259,12 +259,53 @@ class BuildTests(unittest.TestCase):
                 stats,
                 {},
                 WINDOW_START,
-                WINDOW_END,
             )
             rendered = readme.read_text(encoding="utf-8")
         self.assertIn("**1** main research works", rendered)
         self.assertIn("**1** works traced to exact bibliography evidence", rendered)
         self.assertNotIn("stale", rendered)
+
+    def test_readme_snapshot_is_stable_across_build_days_and_tracks_curation(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            paper = copy.deepcopy(BASE)
+            papers = write_catalog(root, [paper])
+            readme = root / "README.md"
+            readme.write_text("# Atlas\n<!-- catalog-stats:start -->\nstale\n<!-- catalog-stats:end -->\n")
+            output = root / "public" / "data"
+            snapshots = []
+            for build_day in (date(2026, 10, 12), date(2026, 10, 12), date(2026, 11, 13)):
+                class BuildDate(date):
+                    @classmethod
+                    def today(cls):
+                        return build_day
+
+                with patch("scripts.build_catalog.date", BuildDate), patch("scripts.validate_catalog.date", BuildDate):
+                    self.assertEqual(0, build_catalog.main([
+                        "--papers-dir", str(papers), "--output-dir", str(output),
+                        "--readme", str(readme), "--update-readme",
+                    ]))
+                snapshots.append(readme.read_text())
+                stats = json.loads((output / "stats.json").read_text())
+                # The live data window still advances with the clock.
+                self.assertEqual(build_day.strftime("%Y-%m"), stats["by_month"][-1]["month"])
+            self.assertEqual(snapshots[0], snapshots[1])
+            self.assertEqual(snapshots[0], snapshots[2])
+            self.assertIn("latest canonical record verification: `2026-07-11`", snapshots[0])
+
+            # A newly curated record after the old snapshot date is accepted by
+            # the default live window and advances the snapshot's curation date.
+            paper["verified_at"] = "2026-10-12"
+            paper["dates"]["first_public_date"] = "2026-10-01"
+            paper["dates"]["latest_revision_date"] = "2026-10-01"
+            paper["versions"][0]["date"] = "2026-10-01"
+            (papers / "paper-0.json").write_text(json.dumps(paper), encoding="utf-8")
+            with patch("scripts.build_catalog.date", BuildDate), patch("scripts.validate_catalog.date", BuildDate):
+                self.assertEqual(0, build_catalog.main([
+                    "--papers-dir", str(papers), "--output-dir", str(output),
+                    "--readme", str(readme), "--update-readme",
+                ]))
+            self.assertIn("latest canonical record verification: `2026-10-12`", readme.read_text())
 
     def test_build_emits_contract_and_static_routes(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

@@ -12,7 +12,7 @@ Every published record is generated from one canonical file under `content/paper
 ## Release snapshot
 
 <!-- catalog-stats:start -->
-- **156** main research works from `2025-01-01` through `2026-07-11`.
+- **156** main research works from `2025-01-01` onward (latest canonical record verification: `2026-07-11`).
 - **72** AI Infra and **84** Agent Infra records across **13** primary categories.
 - **23** works traced to exact bibliography evidence across **7** priority technical reports.
 - **1** redistribution-approved PDF mirror; all other full texts use official-source fallbacks.
@@ -61,7 +61,10 @@ pnpm build
 
 `pnpm build` validates and regenerates the catalog before compiling the site,
 refreshes the release snapshot above, then materializes every `/paper/:slug/`
-page and the GitHub Pages fallback.
+page and the GitHub Pages fallback. The snapshot date is the latest `verified_at`
+among canonical records in `content/papers/`; candidate discovery and build time
+do not advance it. The validation window still ends on the build day by default
+(or an explicit `--window-end`), so newly curated works remain eligible.
 
 ## Curation contract
 

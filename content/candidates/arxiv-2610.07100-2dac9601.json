@@ -1,0 +1,56 @@
+{
+  "abstract": "Persistent agent memory is only as reliable as its retention decision: an assertion weakly supported by its source can be stored and later reused as established fact. We study whether the retention decision should be governed by a confidence bar conditioned on the semantic category of the assertion rather than by a single global threshold, retaining well-evidenced categories liberally while abstaining more aggressively where inference is unreliable. We evaluate this in a deployed cold-start memory pipeline on 100 synthetic personas. The empirical evaluation is motivated by a sharp reliability asymmetry: across 4{,}715 candidate assertions, only 77.9\\% of value and belief assertions are supported by their source, versus 96.2\\% for all other categories. A global confidence threshold cannot separate these: it either admits unsupported value claims or discards well-evidenced ones. Conditioning the threshold on category resolves the tradeoff. In repeated held-out evaluation, a stricter bar on values alone reduces unsupported retentions from 6.2\\% to 4.0\\% (an ${\\approx}36\\%$ relative reduction, modest but consistent across folds) and, as corroborating evidence, preserves an estimated 13 percentage points more coverage (95\\% CI 9.8--16.0) than a global threshold at comparable retention. Our results suggest that reliable retention depends on the type of assertion, not on confidence alone, and that a category-conditioned threshold can act as a simple, effective form of selective prediction at the write boundary.",
+  "authors": [
+    "Olukunle Owolabi",
+    "Pulkit Gupta",
+    "Fei Wang"
+  ],
+  "candidate_id": "arxiv:2610.07100",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-05",
+    "latest_revision_date": "2026-10-05"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "When to Remember, When to Abstain: Category-Conditioned Retention for Reliable Agent Memory",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07100"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.07100",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "4 pages, 1 Figure, Accepted to NeurIPS 2026 Social Agent Workshop (https://openreview.net/group?id=NeurIPS.cc%2F2026%2FWorkshop%2FSocialAgent#tab-your-consoles)",
+    "pdf_url": "https://arxiv.org/pdf/2610.07100v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "When to Remember, When to Abstain: Category-Conditioned Retention for Reliable Agent Memory",
+  "versions": [
+    {
+      "date": "2026-10-05",
+      "identifier": "2610.07100v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.07100v1"
+    }
+  ]
+}

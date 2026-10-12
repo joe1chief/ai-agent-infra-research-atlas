@@ -1,0 +1,59 @@
+{
+  "abstract": "Shared memory coordinates agents' actions, but correct records do not establish that those actions satisfy task requirements. Memory governance and failure diagnosis regulate or inspect recorded information; they do not by themselves establish whether it is sufficient to judge task duties. We define execution consistency through duties governing state use, information handoffs, and final-state agreement, with explicit evidence conditions for judging fulfillment. Our core claim is that identical retained records can correspond to compliant and violating executions under the same task rule. Controlled removal of evidence such as receipt, action dependence, or response validity leaves 82.4% of opposite-label pairs indistinguishable; restoration separates 97.9% of the merged pairs. Natural-log annotations identify the defined violations in actual executions. However, existing logs do not always explicitly represent the execution relationships needed for these judgments. To assess the definition's practical value, we use CAVERT, a framework for consistency diagnosis and recovery, to extract supported relationships from logs and apply these criteria. It consistently outperforms contract-prompted LLM and rule-based baselines in diagnosis across all 12 benchmark-executor settings. Under the same gate and executor limits, it also outperforms rule-guided recovery in all four evaluated environments. These findings identify execution evidence that agent-memory and execution interfaces should preserve for reliable judgment.",
+  "authors": [
+    "Zhe Yu",
+    "Zixuan Wang",
+    "Peidong Wang",
+    "Hehai Lin",
+    "Ruochen Zhao",
+    "Chengwei Qin"
+  ],
+  "candidate_id": "arxiv:2610.08101",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-06",
+    "latest_revision_date": "2026-10-06"
+  },
+  "discovered_at": "2026-10-12T09:29:09Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Beyond Corrected Memory: Execution Consistency in Multi-Agent Systems",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.08101"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.08101",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "39 pages, 7 figures, 30 tables (including appendix)",
+    "pdf_url": "https://arxiv.org/pdf/2610.08101v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "governance"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "Beyond Corrected Memory: Execution Consistency in Multi-Agent Systems",
+  "versions": [
+    {
+      "date": "2026-10-06",
+      "identifier": "2610.08101v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.08101v1"
+    }
+  ]
+}
