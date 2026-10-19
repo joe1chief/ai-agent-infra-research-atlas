@@ -1,0 +1,133 @@
+{
+  "abstract": "Multimodal models and agents have emerged to enable AI systems to learn from and interact with the real world more like humans by integrating information across multiple modalities. However, enabling multimodal agents to continually acquire useful information from complex, heterogeneous multimodal data remains a significant challenge as they move toward long-horizon tasks and lifelong settings. Addressing this challenge requires effective memory mechanisms that can maintain continuity across sessions, adapt to changing users and environments, and refine memory-management policies through accumulated experience. We introduce a two-axis analytical framework for multimodal agent memory structured around two key questions: how multimodal information is formed and represented (Axis I, Formation and Representation), and how its management adapts with accumulated experience (Axis II, Memory Management). Axis I, Formation and Representation, characterizes what information is retained and how it is encoded (e.g., modality-specific embeddings, textual and structured records, latent and parametric representations) to support subsequent reasoning and action. Axis II, Memory Management, distinguishes three tiers: T1 Static Memory reuses fixed memory; T2 Dynamic Memory updates memory through a stable policy; and T3 Self-Evolving Memory updates memory through an evolving policy. Based on this framework, we synthesize recurring design patterns and derive principles for balancing source fidelity with abstraction, maintaining temporal validity and provenance, grounding memory use in recoverable evidence, and evolving memory policies over time. Furthermore, we discuss the challenges and potential future directions for the memory mechanism of multimodal agents.",
+  "authors": [
+    "Minghao Guo",
+    "Qingyue Jiao",
+    "Xiujin Liu",
+    "Jianhong Pang",
+    "Ruimeng Yang",
+    "Naihao Xu",
+    "Liwei Che",
+    "Haochen Xue",
+    "Ziqi Wang",
+    "Xinying Cai",
+    "Jiaxuan Luo",
+    "Jiaxin Deng",
+    "Xuesong Ye",
+    "Jintao Qu",
+    "Wenyao Gao",
+    "Jingwen Gu",
+    "Chenyang Zhao",
+    "Shichun Liu",
+    "Guibin Zhang",
+    "Zefang Liu",
+    "Siyin Wang",
+    "Wujiang Xu",
+    "Danrui Li",
+    "Zeru Shi",
+    "Woongyeong Yeo",
+    "Shuang Liu",
+    "Wei-Chieh Huang",
+    "Weizhi Zhang",
+    "Tianyu Yang",
+    "Kangsan Kim",
+    "Yebowen Hu",
+    "Bowen Wen",
+    "Bowen Jiang",
+    "Haohao Su",
+    "Ming Yin",
+    "Sheldon Yu",
+    "Mian Zhang",
+    "Yuyan Chen",
+    "Hanrong Zhang",
+    "Kai Mei",
+    "Zihao Zhang",
+    "Mingyu Jin",
+    "Xi Zhu",
+    "Hengyi Wang",
+    "Tianxin Wei",
+    "Linyong Nan",
+    "Zhenwen Liang",
+    "Zhendong Chu",
+    "Ziqi Huang",
+    "Yongye Su",
+    "Sixun Dong",
+    "Shujian Liu",
+    "Kaiqu Liang",
+    "Jiaojiao Han",
+    "Zhaoye Fei",
+    "Kun Wang",
+    "Shihan Dou",
+    "Zhichun Guo",
+    "Xingjian Diao",
+    "Zeqi Gu",
+    "Heng Wang",
+    "Tao Feng",
+    "Cheng Qian",
+    "Hamid Palangi",
+    "Silei Xu",
+    "Xi Yun",
+    "Yi Zhu",
+    "Shilong Liu",
+    "Qingsong Wen",
+    "Sung Ju Hwang",
+    "Zuxuan Wu",
+    "Yu-Gang Jiang",
+    "Yiyu Shi",
+    "Dimitris N. Metaxas",
+    "Jiaxuan You",
+    "Julian McAuley",
+    "Mengdi Wang",
+    "Jiawei Han",
+    "Philip S. Yu",
+    "Ziyi Ye"
+  ],
+  "candidate_id": "arxiv:2610.19366",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-14",
+    "latest_revision_date": "2026-10-14"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.19366"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.19366",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.19366v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory",
+  "versions": [
+    {
+      "date": "2026-10-14",
+      "identifier": "2610.19366v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.19366v1"
+    }
+  ]
+}

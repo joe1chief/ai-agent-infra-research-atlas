@@ -1,0 +1,57 @@
+{
+  "abstract": "LLM-augmented data workflows often involve multiple heterogeneous models operating over substantial shared context, such as schemas, tool specifications, interaction history, and intermediate results. Although prefix caching can reduce prefilling overhead, existing approaches are largely limited to reuse within the same model because KV states are tightly coupled to model-specific architectures. We present MapFlow, a system for efficient heterogeneous LLM serving via cross-model attention map reuse. Instead of reusing KV states, MapFlow reuses attention maps, which capture token dependency patterns and are more transferable across models. To enable efficient and accurate reuse, we combine partial recomputation with lightweight linear translation across layers and heads. To make attention reuse practical for long contexts, we further introduce block-level sparse compression and a fused retrieval kernel. Experiments show that MapFlow reduces prefilling latency and improves end-to-end serving efficiency while preserving generation quality across heterogeneous model pairs and multi-turn routing workloads. These results suggest that attention maps provide an effective reusable state for heterogeneous LLM serving, especially in prefix-heavy data workflows. Our code is available: https://github.com/PKU-DAIR/MapFlow.",
+  "authors": [
+    "Zhan Jin",
+    "Yuze Luo",
+    "Bin Cui",
+    "Xupeng Miao"
+  ],
+  "candidate_id": "arxiv:2610.14688",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-10",
+    "latest_revision_date": "2026-10-10"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Accelerating Cross-Model LLM Inference via Attention Map Reuse",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.14688"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.14688",
+    "doi": "10.1145/3856312",
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.14688v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "kernel"
+    ],
+    "primary_category": "AI-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Accelerating Cross-Model LLM Inference via Attention Map Reuse",
+  "versions": [
+    {
+      "date": "2026-10-10",
+      "identifier": "2610.14688v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.14688v1"
+    }
+  ]
+}

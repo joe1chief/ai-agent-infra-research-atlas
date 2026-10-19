@@ -1,0 +1,61 @@
+{
+  "abstract": "Long-term memory supports agents across sessions. Repeated retrieval and write-back can let one historical claim occupy multiple retrieval positions and influence current answers without independent evidence. Existing work examines retrieval, updating, and question answering, leaving same-source record accumulation and post-correction persistence underexplored. Motivated by research in social cognition and memory psychology on repeated exposure, retrieval, and revision, we define \\emph{Memory Echo} as the excess retrieval exposure gained by historical information from the same source without additional independent evidence, and introduce MEchoBench to evaluate its emergence, correction resistance, persistence, and effect on answers. To address this phenomenon, we introduce the Family--Provenance--Authority framework (FPA). Specifically, FPA selects one representative per source family, conditions the eligibility of old records for the answer context on verified corrections, and constrains final answers with authoritative evidence. In paired replay on 190 fixed questions across four memory frameworks, FPA raises accuracy from 0.825 to 0.920 with DeepSeek V4 Flash and from 0.782 to 0.916 with Kimi K2.6; mean Decision Contamination Effect falls from 0.106 to 0.030 and from 0.109 to 0.038, respectively. These results show that agent memory can preserve traceable history without allowing repeated historical information to govern current decisions. The code is available at https://github.com/OrcasSam/memory-echo-benchmark.",
+  "authors": [
+    "Yufeng Li",
+    "Sheng Yao",
+    "Peng Zeng",
+    "Dezhang Kong",
+    "Shi Lin",
+    "Changting Lin",
+    "Xun Wang",
+    "Meng Han"
+  ],
+  "candidate_id": "arxiv:2610.17763",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-13",
+    "latest_revision_date": "2026-10-13"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Memory Echo in Single-Agent Long-Term Memory: Lifecycle Evaluation and Provenance-Guided Mitigation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.17763"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.17763",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.17763v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Memory Echo in Single-Agent Long-Term Memory: Lifecycle Evaluation and Provenance-Guided Mitigation",
+  "versions": [
+    {
+      "date": "2026-10-13",
+      "identifier": "2610.17763v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.17763v1"
+    }
+  ]
+}

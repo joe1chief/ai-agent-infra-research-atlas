@@ -1,0 +1,57 @@
+{
+  "abstract": "Existing reinforcement learning (RL) largely focuses on optimizing learning algorithms within a pre-defined task formulation, while applying RL to new tasks still relies heavily on human expertise to design the learning pipeline: what an agent observes, how it is rewarded, which algorithm it uses, and how training is configured. Automating these choices is challenging because they are tightly coupled. We introduce FARL (Fully Automated Reinforcement Learning), a framework that automates RL design by jointly searching observation and reward programs, learning algorithms, and training settings. FARL uses training statistics and observed behavior to diagnose failures, propose changes, and test whether they improve learning. Its search preserves diverse candidates and the controls needed for these tests, using a staged budget to screen designs before investing in longer training. Experimental memory records each finding together with its conditions, so an unsuccessful component can be reconsidered in a different combination. Across expert-withheld and expert-available settings, FARL outperforms the evaluated automated baselines on challenging navigation, locomotion, and manipulation tasks. On Adroit Hand Relocate, FARL achieves 97.1% success at 5M training steps per policy, compared with 0% for Eureka and LiMEN and 1.0% for native Proximal Policy Optimization (PPO) under the same policy training budget.",
+  "authors": [
+    "Tianyu Jin",
+    "Liuyu Xiang",
+    "Chaowen Yang",
+    "Xingyang Chang",
+    "Pei Pei Li",
+    "Zhaofeng He"
+  ],
+  "candidate_id": "arxiv:2610.15691",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-11",
+    "latest_revision_date": "2026-10-11"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "FARL: A Fully Automated Pipeline of RL Interface and Solver Design",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15691"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.15691",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "43 pages, including references and appendices. Code and recorded experimental results are included as ancillary files",
+    "pdf_url": "https://arxiv.org/pdf/2610.15691v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "FARL: A Fully Automated Pipeline of RL Interface and Solver Design",
+  "versions": [
+    {
+      "date": "2026-10-11",
+      "identifier": "2610.15691v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15691v1"
+    }
+  ]
+}

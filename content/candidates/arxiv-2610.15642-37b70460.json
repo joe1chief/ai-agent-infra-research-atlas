@@ -1,0 +1,55 @@
+{
+  "abstract": "Under a limited context budget, a long-term agent must recall not merely memories that are individually relevant, but evidence that is collectively sufficient for the current query. Conventional memory access retrieves, scores, and truncates memories, often spending multiple context slots on redundant facts while leaving complementary evidence behind. We cast the read phase of long-term memory as query-conditioned evidence composition: each memory is valued by what it adds beyond the evidence already selected. We instantiate this operation with MemPursuit, a training-free mechanism that uses the residual of a sparse convex query reconstruction as a representation-space proxy for what the current memory set is missing. By reusing the query and candidate embeddings already available from retrieval, MemPursuit progressively composes nested evidence contexts without invoking a language model or cross-encoder to score each query--memory pair. The effectiveness of our method is verified on 3 popular benchmarks in comparison to strong baselines. In fixed-budget LoCoMo experiments, MemPursuit improves end-to-end accuracy by 7.2 percentage points at Top-10 and 5.5 percentage points at Top-20, with consistent gains across multiple memory frameworks, while achieving a 32.9$\\times$ speedup in median reranking latency over fully batched BGE-v2-m3. Our implementation is available at https://github.com/FengQi-HITSZ/MemPursuit.",
+  "authors": [
+    "Qi Feng",
+    "Jicong Fan"
+  ],
+  "candidate_id": "arxiv:2610.15642",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-11",
+    "latest_revision_date": "2026-10-11"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Recall What Is Missing: Composing Evidence from Long-Term Agent Memory",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15642"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.15642",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.15642v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Recall What Is Missing: Composing Evidence from Long-Term Agent Memory",
+  "versions": [
+    {
+      "date": "2026-10-11",
+      "identifier": "2610.15642v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15642v1"
+    }
+  ]
+}

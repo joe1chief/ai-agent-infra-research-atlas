@@ -1,0 +1,56 @@
+{
+  "abstract": "We introduce HelpMeOut, an embodied AI benchmark for error-aware monitoring of household task execution. Existing embodied household benchmarks typically assume that humans execute tasks correctly, but this assumption does not hold for cognitively impaired persons or older adults whose everyday activities produce structured execution errors. To address this gap, HelpMeOut operationalizes research on everyday action errors into 20000 paired activity episodes, covering nine neuropsychologically motivated error categories. In each episode, agents observe a streaming human activity trajectory and must monitor whether the execution is unfolding correctly, diagnosing any structured errors as early as possible. We evaluate learned-monitor, symbolic, change-point, and frontier LLM prompting baselines. Results show that these methods perform poorly as error monitors, often missing when execution goes wrong. These results suggest a gap left by standard goal-inference and task-completion benchmarks, making HelpMeOut a testbed for error-aware assistive agents.",
+  "authors": [
+    "Haoran Wang",
+    "Jingwei Huang",
+    "Anqing Duan",
+    "Ho Seok Ahn",
+    "Bruce Macdonald"
+  ],
+  "candidate_id": "arxiv:2610.17694",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-13",
+    "latest_revision_date": "2026-10-13"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "HelpMeOut: A Neuropsychology-Grounded Benchmark for Error-Aware Monitoring of Household Task Execution",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.17694"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.17694",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Accepted to the 10th Conference on Robot Learning (CoRL 2026). 30 pages (9-page main text), 8 figures, 18 tables. Project page: https://whrcn.github.io/HelpMeOut-Official/",
+    "pdf_url": "https://arxiv.org/pdf/2610.17694v1",
+    "primary_category": "cs.RO"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "HelpMeOut: A Neuropsychology-Grounded Benchmark for Error-Aware Monitoring of Household Task Execution",
+  "versions": [
+    {
+      "date": "2026-10-13",
+      "identifier": "2610.17694v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.17694v1"
+    }
+  ]
+}

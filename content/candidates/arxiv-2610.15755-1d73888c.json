@@ -1,0 +1,54 @@
+{
+  "abstract": "Hybrid attention-SSM serving combines growing attention KV with fixed-size recurrent and convolution state whose allocation units, reuse boundaries, and lifetimes differ. We implement four memory organizations in a modified vLLM runtime: a coarse shared-page baseline (S0), checkpoint-internal recurrent paging (S1), paging with convolution-slot packing (S2), and native dual pools (D0). Nine evaluation questions cover storage costs and serving behavior. The cumulative S0-S1-S2 refinement improves completed-output throughput and tail completion time at the main operating point. D0-S2 performance varies with memory budget, offered load, and admission headroom. Shared-prefix workloads yield larger stepwise gains; gains also persist in a no-sharing control with equal recorded input-work totals. State traces identify recurrent-checkpoint availability as the limit on joint reuse in the tested S2 runs. Extending producer-side checkpoint lifetime increases reusable depth at a fixed page budget. A fresh-seed SHARE/ISOLATE comparison estimates a positive retention interaction, with a primary confidence interval that includes zero. Retained-state continuation correctness remains unresolved. These findings motivate evaluating physical state representation together with request admission and checkpoint lifetime when designing memory management for concurrent hybrid-model serving.",
+  "authors": [
+    "Dongwook Kang"
+  ],
+  "candidate_id": "arxiv:2610.15755",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-11",
+    "latest_revision_date": "2026-10-14"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Native Dual Pools or Shared Paging? Memory Organization for Concurrent Hybrid LLM Serving",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15755"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.15755",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "10 pages of main text, 31 pages of supplementary appendices. Submitted to IEEE Transactions on Parallel and Distributed Systems",
+    "pdf_url": "https://arxiv.org/pdf/2610.15755v2",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Native Dual Pools or Shared Paging? Memory Organization for Concurrent Hybrid LLM Serving",
+  "versions": [
+    {
+      "date": "2026-10-14",
+      "identifier": "2610.15755v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15755v2"
+    }
+  ]
+}

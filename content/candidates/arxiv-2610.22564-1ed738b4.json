@@ -1,0 +1,56 @@
+{
+  "abstract": "Data-driven approaches often face ambiguity in datasets due to sensor or target noise, insufficient information, and noise in the input data. While best-fit machine learning methods can accommodate such noise through uncertainty estimates, they are prone to overfitting and it is challenging to quantify ambiguity of the relation between inputs and targets. We introduce a geometric framework that quantifies this ambiguity through the average kernel size, computed with data-dependent, i.e. model-independent, feasible sets derived from worst-case input and target noise. The framework provides computable, deterministic, non-asymptotic bounds on the best achievable empirical error and accuracy for a finite, constructed dataset, independent of the predictive model class, and applies to regression and classification with pseudo-metric input spaces and metric target spaces. The ambiguity of the input-target relation implies three consequences: an empirical error floor, an accuracy-stability trade-off, and, under standard probabilistic assumptions, a strictly positive distribution-training error gap when training below the accuracy bounds. Under standard Borel assumptions for Euclidean norms, the distributional analogue of the average kernel size is related to Bayes risk as it reduces to the optimal distribution root-mean-squared error times the square root of two. Experiments spanning tabular regression, image regression and classification datasets yield nontrivial bounds on the best achievable empirical error and accuracy on a constructed dataset, alongside descriptive comparisons with model performance on the original datasets. The bounds provide a computable, model-independent reference scale on the constructed dataset and comparisons with model performance on the original dataset are descriptive.",
+  "authors": [
+    "Nina Maria Gottschling",
+    "Jakob Gawlikowski",
+    "Michele Caprio"
+  ],
+  "candidate_id": "arxiv:2610.22564",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-15",
+    "latest_revision_date": "2026-10-15"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Deterministic Bounds on Accuracy and Stability of Metric-Space Regression and Classification",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.22564"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.22564",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.22564v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "kernel"
+    ],
+    "primary_category": "AI-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Deterministic Bounds on Accuracy and Stability of Metric-Space Regression and Classification",
+  "versions": [
+    {
+      "date": "2026-10-15",
+      "identifier": "2610.22564v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.22564v1"
+    }
+  ]
+}

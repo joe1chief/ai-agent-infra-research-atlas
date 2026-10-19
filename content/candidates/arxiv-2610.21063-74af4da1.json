@@ -1,0 +1,56 @@
+{
+  "abstract": "AI agents now pause for approval before they send money, delete files or email outsiders, and that approval is usually treated as a second factor. We argue it is one only when compromising the agent cannot produce it and when it names exactly what it approves, and we test both conditions. We define twelve attacks on the approval path, including decoy recipients, amount cancellation, card padding, label spoofing, enrollment squatting and threshold splitting, and run them against the Agent Payments Protocol (AP2), the Microsoft action-bound approval design and Model Context Protocol (MCP) elicitation. An audit of ten agent runtimes finds no third-party verifiable approval record, no flood limits where measurable, and post-approval argument changes in four of eight runtimes with measurable binding. As a reference defense we build ASU (Agent Step-Up), a gateway that renders the approval card from a canonical effect descriptor, has a passkey on the phone of the user sign its digest, and executes only the stored call. Tamarin proves its binding, single-use and key-level non-repudiation properties under three stated hypotheses (53 lemmas). Across 27,108 scripted trials and 609 AgentDojo attack pairs, ASU stops substitution, replay and grant stretching, and the trusted card cuts forged-narration attack success from 0.54 to 0.03. With 15 current language models as automated approvers, the trusted card raises the attack catch rate from 0.30 to 0.98, at the cost of refusing 16 percent of harmless near misses, mostly due to a placeholder artifact in our stimuli. A second device adds nothing measurable over a trusted on-host confirmation in these experiments, flooding still succeeds 0.45 to 0.60 of the time against a modeled approver, and approval cannot stop effects that policy already allows. Code, data and proofs: https://github.com/Sports-Vision-Inc/agent-step-up",
+  "authors": [
+    "Sai Varun Kodathala",
+    "Prashanth Pollishetty",
+    "Jaylen Cargill"
+  ],
+  "candidate_id": "arxiv:2610.21063",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-15",
+    "latest_revision_date": "2026-10-15"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Approve What, Exactly? Effect Binding and Trusted Rendering for Agent Step-Up Authorization",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.21063"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.21063",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "36 pages, 13 figures, 13 tables. Code and data at https://github.com/Sports-Vision-Inc/agent-step-up",
+    "pdf_url": "https://arxiv.org/pdf/2610.21063v1",
+    "primary_category": "cs.CR"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trust"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "Approve What, Exactly? Effect Binding and Trusted Rendering for Agent Step-Up Authorization",
+  "versions": [
+    {
+      "date": "2026-10-15",
+      "identifier": "2610.21063v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.21063v1"
+    }
+  ]
+}

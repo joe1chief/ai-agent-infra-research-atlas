@@ -1,0 +1,56 @@
+{
+  "abstract": "Modern distributed training is costly to debug, tune, and analyze because faithful analysis often requires repeated target-scale executions. We observe that many analysis tasks depend on the original distributed execution path, but not on full all-rank execution. We present RankLens, a single-rank emulation system that runs one survivor rank on a single GPU while preserving the target job's distributed semantics. The survivor rank executes the original training program and performs real local computation. At communication boundaries, the system replaces real multi-rank communication with task-dependent semantics, selectively restoring recorded communication results and recorded or estimated completion timing while preserving the asynchronous dependencies required for analysis. This enables replay from real executions and supports analysis, debugging, and tuning with existing debuggers and performance analysis tools. We evaluate the system on DeepSpeed and Megatron-LM across 8-64-GPU target configurations. RankLens achieves 100% training-tensor communication-structure match, keeps emulation timing error below 5%, supports local anomaly reproduction and execution analysis, and reduces the resource requirement of these analyses from target-scale clusters to a single GPU.",
+  "authors": [
+    "Yufan Wang",
+    "Yihao Zhang",
+    "Yi Liu"
+  ],
+  "candidate_id": "arxiv:2610.18009",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-13",
+    "latest_revision_date": "2026-10-13"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "A Distributed View from a Single GPU: RankLens for Distributed Training",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.18009"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.18009",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "12pages, 9 figures",
+    "pdf_url": "https://arxiv.org/pdf/2610.18009v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "A Distributed View from a Single GPU: RankLens for Distributed Training",
+  "versions": [
+    {
+      "date": "2026-10-13",
+      "identifier": "2610.18009v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.18009v1"
+    }
+  ]
+}

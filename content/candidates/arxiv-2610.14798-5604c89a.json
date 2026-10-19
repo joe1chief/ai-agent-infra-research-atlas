@@ -1,0 +1,60 @@
+{
+  "abstract": "Distributed training of sparsely activated mixture-of-experts (MoE) models is often bottlenecked by workload imbalance and all-to-all (A2A) communication induced by dynamic token routing. Existing token deduplication, expert placement, and replication techniques alleviate these bottlenecks but do not jointly capture their distinct load semantics. Under hierarchical token deduplication, communication counts each token once per destination group at each hierarchy level, whereas expert computation processes every token-expert assignment. With replication, both costs depend jointly on physical layout and token-to-copy mapping, making separate optimization suboptimal. We present PlaceMoE to address this coupling. First, we formulate the joint optimization of expert layout and source-aware token-to-copy mapping for E experts distributed across P devices, accounting for both hierarchical communication traffic and expert-compute load. Second, we develop a solver that combines co-selection-aware expert grouping, bounded dynamic programming for replica allocation, and alternating refinement of layout and mapping. Third, PlaceMoE overlaps replica-gradient synchronization with attention backward. We evaluate PlaceMoE on a 32-GPU cluster and a 64-NPU cluster using Qwen3-VL and DeepSeek-V3. Experimental results show that PlaceMoE achieves up to a 6.94x speedup in A2A communication and 1.74-2.33x speedups in end-to-end training over the state-of-the-art training framework VeOmni.",
+  "authors": [
+    "Zhiqiang Tan",
+    "Maoxin Wang",
+    "Wenxiang Lin",
+    "Sijie Wang",
+    "Qiang Wang",
+    "Shaohuai Shi",
+    "Bo Li"
+  ],
+  "candidate_id": "arxiv:2610.14798",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-10",
+    "latest_revision_date": "2026-10-10"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Accelerating MoE Training through Expert Placement and Replica Coordination",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.14798"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.14798",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.14798v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "coordination"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Accelerating MoE Training through Expert Placement and Replica Coordination",
+  "versions": [
+    {
+      "date": "2026-10-10",
+      "identifier": "2610.14798v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.14798v1"
+    }
+  ]
+}

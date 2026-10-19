@@ -1,0 +1,63 @@
+{
+  "abstract": "Large language model (LLM)-based agents and multi-agent systems increasingly tackle complex tasks through long-horizon tool use and inter-agent collaboration. However, these systems are prone to deviating from the overall goal as execution unfolds, which wastes execution resources and leads to undesired outcomes, a failure termed goal drift. In this work, we propose a steering agent that supervises execution on the fly and steers the system back on track when drift occurs. The steering agent observes the execution context, deciding when to intervene with a low-cost fast path and how to intervene with a high-cost slow path. To unlock its steering intelligence, the ability to assess goal drift and generate effective interventions, we jointly train the two paths with reinforcement learning, combining a pairwise ranking objective with group-relative policy optimization (GRPO). Experiments on information-seeking search tasks show that the steering agent provides effective supervision for both single-agent and multi-agent systems, improving their performance and efficiency. The learned steering intelligence generalizes to out-of-domain tasks, transfers to unseen executors, and supports controllable intervention frequency without retraining.",
+  "authors": [
+    "Leyang Shen",
+    "Yaxin Gong",
+    "Yang Zhang",
+    "Chenxiao Fan",
+    "Jiakai Wang",
+    "Dong Wang",
+    "Yang Liu",
+    "Fuli Feng",
+    "Chun Kai Ling",
+    "Tat-Seng Chua"
+  ],
+  "candidate_id": "arxiv:2610.22316",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-15",
+    "latest_revision_date": "2026-10-15"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Learning to Steer LLM Agents and Multi-Agent Systems",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.22316"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.22316",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "21 pages, 6 figures",
+    "pdf_url": "https://arxiv.org/pdf/2610.22316v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "multi-agent"
+    ],
+    "primary_category": "AG-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Learning to Steer LLM Agents and Multi-Agent Systems",
+  "versions": [
+    {
+      "date": "2026-10-15",
+      "identifier": "2610.22316v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.22316v1"
+    }
+  ]
+}

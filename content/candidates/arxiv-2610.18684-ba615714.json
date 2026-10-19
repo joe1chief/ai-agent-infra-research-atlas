@@ -1,0 +1,57 @@
+{
+  "abstract": "Personal-agent memory has largely focused on learning what users know, prefer, and want. However, knowing the user does not necessarily mean knowing what the user and the agent have established together. An assistant's proposal should not become an authorized instruction merely because it is remembered. We introduce Grounding Awareness, the ability to distinguish accepted, unacknowledged, revised, and scoped arrangements when selecting actions. We develop a controlled benchmark to test whether agents can tell the difference between proposals users have accepted and those they have not, and whether they apply accepted arrangements only where appropriate. Across multiple agents and memory systems, we find that strong memory performance does not ensure Grounding Awareness. More surprisingly, providing more complete user information can increase execution of unacknowledged proposals, while persistent memory can cause agents to treat these proposals as if they were user instructions. We trace these failures through memory writing, retrieval, and action selection. Finally, we introduce Grounding Layer, a lightweight, training-free extension that explicitly tracks grounding status and checks consequential actions, substantially improving agent behavior without modifying models or memory systems.",
+  "authors": [
+    "Jiajun Chen",
+    "Xinyue Chen",
+    "Yicheng Jiang",
+    "Hua Shen"
+  ],
+  "candidate_id": "arxiv:2610.18684",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-13",
+    "latest_revision_date": "2026-10-13"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Knowing the User Is Not Knowing What We Established: Grounding Awareness in Personal Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.18684"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.18684",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "Under Review",
+    "pdf_url": "https://arxiv.org/pdf/2610.18684v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "Knowing the User Is Not Knowing What We Established: Grounding Awareness in Personal Agents",
+  "versions": [
+    {
+      "date": "2026-10-13",
+      "identifier": "2610.18684v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.18684v1"
+    }
+  ]
+}

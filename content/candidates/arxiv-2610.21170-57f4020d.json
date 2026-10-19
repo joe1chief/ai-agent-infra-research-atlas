@@ -1,0 +1,60 @@
+{
+  "abstract": "Agent memory architectures define how LLM agents store and reuse experience across tasks, but they are typically fixed after deployment, limiting their adaptability across task types. Recent self-evolving approaches instead adapt these memory architectures using execution feedback, typically represented as evaluation scores or compressed summaries. However, such coarse-grained feedback is insufficient for precise failure localization in current agent systems, where long-horizon task execution involves multiple interacting components. Without a precise failure location, existing approaches lack a clear code-level target for modification, leaving the update scope weakly constrained and often leading to large-scale rewrites of an otherwise capable memory architecture. We propose MemScope, a framework for evidence-grounded, localized evolution of an existing memory architecture. Its tool-using Patch Agent jointly inspects raw execution traces, runtime memory state, and current architecture code to identify repair targets and apply bounded, in-place edits under provider-identity and memory-compatibility constraints. On GAIA, the trace-and-memory inspection variant achieves 86.67% accuracy, compared with 70.00% for trace-only and 63.33% for summary-only feedback. Under xBench tasks, the evolved memory architecture improves over its original version from 49 to 55 correct answers with DeepSeek V3.2 and from 50 to 53 with Kimi K2.7 Code. On disjoint ALFWorld unseen tasks, success rises from 50.75% to 71.64%. Across archived architecture-snapshot transitions, the median code-change ratio is 4.4%. These results support fine-grained execution evidence as a basis for localized, in-place memory-architecture evolution.",
+  "authors": [
+    "Miao Su",
+    "Yucan Guo",
+    "Zixuan Li",
+    "Long Bai",
+    "Zhongni Hou",
+    "Xiaolong Jin",
+    "Jiafeng Guo"
+  ],
+  "candidate_id": "arxiv:2610.21170",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-15",
+    "latest_revision_date": "2026-10-15"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "MemScope: Evolving Agent Memory Architectures through Localized Code Repair",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.21170"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.21170",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.21170v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "identity"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "MemScope: Evolving Agent Memory Architectures through Localized Code Repair",
+  "versions": [
+    {
+      "date": "2026-10-15",
+      "identifier": "2610.21170v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.21170v1"
+    }
+  ]
+}

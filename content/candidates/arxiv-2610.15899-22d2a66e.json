@@ -1,0 +1,56 @@
+{
+  "abstract": "Large language model serving is increasingly limited not only by model size and GPU speed, but also by scheduling during autoregressive decoding, where continuous batching interleaves requests at token granularity as sequences arrive and finish. We study whether lightweight scheduling policies can improve latency-throughput tradeoffs without changing model architectures, kernels, or deploying learned schedulers. We implement a Python/PyTorch continuous-batching testbench with real Hugging Face execution and evaluate eight policies across 1,152 GPU-model-scheduler-workload runs using ShareGPT-derived traffic, six Qwen, Gemma, and Mistral models, and Modal L40S, A100, and H100 GPUs. Scheduler choice changes throughput, TTFT, completion latency, and tail behavior under fixed model, GPU, workload, batch size, and prefill budget. Aging shortest-prompt-first is the strongest practical baseline in many L40S and mixed-workload settings, while oracle remaining-length scheduling shows that job-size knowledge alone is insufficient because batching and hardware effects also shape performance. The custom dataset has been uploaded to Hugging Face.",
+  "authors": [
+    "Ashman Mehra",
+    "Akshan Agarwal",
+    "Aryeh Carmi"
+  ],
+  "candidate_id": "arxiv:2610.15899",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-11",
+    "latest_revision_date": "2026-10-11"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15899"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.15899",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.15899v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "kernel"
+    ],
+    "primary_category": "AI-4",
+    "requires_human_confirmation": true
+  },
+  "title": "Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures",
+  "versions": [
+    {
+      "date": "2026-10-11",
+      "identifier": "2610.15899v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15899v1"
+    }
+  ]
+}

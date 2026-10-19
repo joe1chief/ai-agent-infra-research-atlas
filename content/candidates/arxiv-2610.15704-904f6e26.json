@@ -1,0 +1,56 @@
+{
+  "abstract": "Large-scale distributed training increasingly makes collective communication bandwidth-bound. In modern GPU clusters, communication libraries such as NCCL implement collectives including AllReduce over heterogeneous interconnects such as NVLink, InfiniBand, and Ethernet, making efficient use of available network bandwidth a central systems challenge. ForestColl showed that collective communication on such fabrics can be formulated using fractional tree packing; its scalable polynomial-time construction is developed for AllGather, with AllReduce obtained by composing AllGather and ReduceScatter. We present DualColl, which targets bandwidth-bound AllReduce directly. Under the tree-based AllReduce model, DualColl applies a Garg--Könemann-style multiplicative-weights algorithm and, for any $0<ε<1$, computes a feasible schedule whose throughput is at least $(1-ε)^2$ of the optimal AllReduce throughput. Its key component is an exact minimum-cost collective-tree oracle that projects physical-link dual prices onto a logical graph of participating ranks, reducing each iteration to shortest-path computations followed by a minimum spanning tree. We further extend the framework to local equal-next-hop packet-sprayed routing and to networks without explicit per-tree bandwidth control. For the latter, we introduce a tree-coupled max-min bandwidth-sharing model and show that tree duplication approximates an explicit fractional allocation with a provable accuracy-complexity tradeoff. Finally, we extend the fractional-packing framework to additional collective operations and multiple concurrent collective groups.",
+  "authors": [
+    "Namir Ballan",
+    "Reuven Cohen"
+  ],
+  "candidate_id": "arxiv:2610.15704",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-11",
+    "latest_revision_date": "2026-10-11"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "DualColl: Throughput-Optimal Bandwidth-Bound Collective Communications via Fractional Tree Packing",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15704"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.15704",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "20 pages, 3 figures",
+    "pdf_url": "https://arxiv.org/pdf/2610.15704v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training",
+      "collective communication"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "DualColl: Throughput-Optimal Bandwidth-Bound Collective Communications via Fractional Tree Packing",
+  "versions": [
+    {
+      "date": "2026-10-11",
+      "identifier": "2610.15704v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15704v1"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "abstract": "Thought templates, skill libraries, agent memories and caches turn many reasoning steps into one. We call this reasoning contraction. A contracted memory saves reasoning steps and errors until its facts change, then quietly answers wrong. Most systems trust memories by counting successes and failures. We prove that such counters are badly tuned change detectors: a symmetric counter notices a partial change only after a power of its false-alarm horizon, and an unclipped one may never notice it. On five LLMs answering multi-hop questions over edited facts, ExpeL- and ACE-style counters serve 7.0-13.5x more stale answers than certified memories given the same information, and on code tasks with an exact verifier 35-73x more. Safety also has a price. When facts change and each memory is judged only by its own verified outcomes, one number, the certification load, sets how much reasoning any safe memory can skip, and under Zipf demand it yields a scaling law. Our recipe weighs each memory's failures by its own likelihood ratio, certifies its utility against live reasoning, and restarts the certificate when facts change, with the likelihood-ratio detector as the safety net for unannounced changes; for large edits it also invalidates the memory.",
+  "authors": [
+    "Jianghong Zhou",
+    "Hao Rong",
+    "Chen Lin",
+    "Daoan Zhang"
+  ],
+  "candidate_id": "arxiv:2610.17544",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-13",
+    "latest_revision_date": "2026-10-13"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Many Steps into One: Reasoning Contraction and the Limits of Safe Memory Reuse for LLM Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.17544"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.17544",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "57 pages",
+    "pdf_url": "https://arxiv.org/pdf/2610.17544v1",
+    "primary_category": "cs.CL"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trust"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "Many Steps into One: Reasoning Contraction and the Limits of Safe Memory Reuse for LLM Agents",
+  "versions": [
+    {
+      "date": "2026-10-13",
+      "identifier": "2610.17544v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.17544v1"
+    }
+  ]
+}

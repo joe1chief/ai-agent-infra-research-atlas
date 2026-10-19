@@ -1,0 +1,55 @@
+{
+  "abstract": "Large Language Model (LLM) serving systems must balance latency and throughput while efficiently utilizing distributed GPU resources. This challenge arises because inference consists of two fundamentally different phases: prefill, which determines time-to-first-token (TTFT), and decode, which determines inter-token latency (ITL). The use of tensor parallelism (TP), pipeline parallelism (PP), and hybrid configurations exposes different trade-offs between these latency dimensions, making the optimal parallelism configuration highly dependent on workload characteristics, latency requirements, and context length. Moreover, despite the widespread adoption of distributed inference, there is still limited understanding of how parallelism configurations should be selected under varying workload conditions and service-level objectives (SLO). In this paper, we develop a systematic framework for characterizing LLM inference parallelism via throughput-latency trade-offs, SLO-aware serving, and long-context scalability. We introduce the notion of parallelism operating regions by constructing TTFT-ITL feasible sets and Pareto frontiers across different workload compositions, thereby revealing a systematic transition from TP-dominant to PP-dominant configurations as workloads become increasingly prefill-heavy. We further formulate SLO-aware parallelism selection using goodput, showing that stringent TTFT requirements favor PP-dominated configurations, whereas relaxed latency constraints progressively shift the optimality toward TP-dominated configurations with higher serving capacity. Finally, we demonstrate that increasing context length fundamentally changes the relative advantages of parallelism configurations, with PP-dominant configurations exhibiting more favorable scalability and SLO attainment in the long-context regime.",
+  "authors": [
+    "Javad Mirzaei",
+    "Jeebak Mitra"
+  ],
+  "candidate_id": "arxiv:2610.19405",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-14",
+    "latest_revision_date": "2026-10-14"
+  },
+  "discovered_at": "2026-10-19T07:57:50Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Scaling LLM Inference via Parallelism: Throughput-Latency Trade-off",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.19405"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.19405",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "15 pages, 7 figures",
+    "pdf_url": "https://arxiv.org/pdf/2610.19405v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "pipeline parallelism"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Scaling LLM Inference via Parallelism: Throughput-Latency Trade-off",
+  "versions": [
+    {
+      "date": "2026-10-14",
+      "identifier": "2610.19405v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.19405v1"
+    }
+  ]
+}
