@@ -1,0 +1,61 @@
+{
+  "abstract": "Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple records of an evolving history. Existing memory benchmarks score only the final answer, with no reference for the intermediate states behind it. A wrong answer therefore cannot be traced to the state that was missed, and a state that silently became outdated goes undetected. We present MemDerive, a diagnostic benchmark for agent memory over evolving data. It specifies each scenario symbolically, derives exact gold answers with Datalog, records the gold derivation DAG and the supporting events of every query, and renders the history in natural language with fictional entities and distractors. Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition. On this ground truth, MemDerive evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation DAG, and tracks whether answers stay correct as events arrive. Our evaluation of four memory systems reveals failures that final-answer benchmarks hide. On derived state, every memory system falls behind simple BM25 retrieval, although the same answer model reaches 96.01% when given the supporting events. Most failures are ungathered, as a system holds the missing intermediate state but does not retrieve it for the question that needs it. Memory systems also rarely propagate implicit changes, which no new record states. These results suggest three principles for memory design. Gather inputs along the derivation, store rules with their versions, and maintain derived states through recorded dependencies.",
+  "authors": [
+    "Sen Gao",
+    "Yongan Li",
+    "Han Chen",
+    "Bingsheng He",
+    "Ming Wu",
+    "Jason Zeng",
+    "Michael Heinrich",
+    "Shixuan Sun"
+  ],
+  "candidate_id": "arxiv:2610.25373",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-18",
+    "latest_revision_date": "2026-10-18"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "MemDerive: A Diagnostic Benchmark for Agent Memory over Evolving Data",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.25373"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.25373",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.25373v1",
+    "primary_category": "cs.DB"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trace"
+    ],
+    "primary_category": "AG-5",
+    "requires_human_confirmation": true
+  },
+  "title": "MemDerive: A Diagnostic Benchmark for Agent Memory over Evolving Data",
+  "versions": [
+    {
+      "date": "2026-10-18",
+      "identifier": "2610.25373v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.25373v1"
+    }
+  ]
+}

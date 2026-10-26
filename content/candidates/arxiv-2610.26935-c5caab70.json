@@ -1,0 +1,55 @@
+{
+  "abstract": "AI control evaluations often reset agents' memory between tasks, although deployed agents may retain records of prior interventions. We ask whether learning that an earlier attack was caught changes an agent's ability to evade defer-to-trusted (DtT), a protocol that replaces suspicious work with a trusted model's solution. Herein, we study cross-episode adaptation: whether intervention history changes attack behavior on a subsequent task with different objectives and a fresh environment. We evaluate this using ControlArena's Infrastructure-as-Code (IaC) and SHADE-Arena as testbeds, where agents must complete a main task while covertly pursuing a harmful side objective. For each successor task, we pair a history-conditioned attempt with the model's no-history attempt. The retained history either states that the previous submission was replaced or additionally includes the trusted model's replacement. For Claude Opus 4.8 on IaC, intervention history reduces successful sabotage. Completion of both the main and side objectives falls from 77% to 12% when the agent is told about the replacement and to 38% when it is also shown the trusted model's replacement, while main task success remains essentially unchanged. Condensing the history weakens this effect, suggesting that the retained context matters and limiting attribution to intervention feedback alone. GPT-5.4 shows no significant change in successful sabotage on the same IaC benchmark. On SHADE-Arena, GPT-5's successful sabotage rate decreases, but the reduction is not significant. Across the tested models, history conditions, and deferral thresholds, intervention history never increases the rate of successful sabotage that survives DtT. These results show that intervention history can change subsequent attack behavior, but its effect depends on both the model and the retained context.",
+  "authors": [
+    "Daniel Saeedi",
+    "Amirali Aghazadeh"
+  ],
+  "candidate_id": "arxiv:2610.26935",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-17",
+    "latest_revision_date": "2026-10-17"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "How Intervention History Changes AI Agent Sabotage on Subsequent Tasks",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.26935"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.26935",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.26935v1",
+    "primary_category": "cs.CR"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "trust"
+    ],
+    "primary_category": "AG-7",
+    "requires_human_confirmation": true
+  },
+  "title": "How Intervention History Changes AI Agent Sabotage on Subsequent Tasks",
+  "versions": [
+    {
+      "date": "2026-10-17",
+      "identifier": "2610.26935v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.26935v1"
+    }
+  ]
+}

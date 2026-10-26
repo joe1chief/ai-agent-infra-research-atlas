@@ -16,7 +16,7 @@
     ],
     "include": []
   },
-  "generated_at": "2026-10-12T09:28:33Z",
+  "generated_at": "2026-10-26T07:57:39Z",
   "references": [
     {
       "context": "Joshua Ainslie, James Lee-Thorp, Michiel de Jong, Yury Zemlyanskiy, Federico Lebr´on, and Sumit Sanghai. GQA:Traininggeneralizedmulti-queryTransformermodelsfrommulti-headcheckpoints. In EMNLP, pp. 4895–4901. Association for Computational Linguistics, 2023.",

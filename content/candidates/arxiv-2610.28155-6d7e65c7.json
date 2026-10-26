@@ -1,0 +1,52 @@
+{
+  "abstract": "Learned priors are used to reconstruct regions that measurements barely reach, and to report uncertainty there. They can fail silently: the reported interval excludes the truth while every ground-truth-free diagnostic stays within its noise. We call such errors the blind set and ask whether they can be predicted before the target data are seen. For a correctly specified linear-Gaussian model averaged over the prior, the risk of a silent failure factorises exactly into non-detection and non-coverage, which does not hold for learned systems in general; we build a score that approximates this reference by linearising a VAE prior. In a prospective study on real X-ray CT objects (2DeteCT) under simulated restricted access, with predictions committed by hash before any trial, the score ranked the realised blindness of two learned inference systems (latent Laplace and ensemble Kalman inversion) with Spearman $ρ= 0.79$ and 0.84 over 240 pre-specified errors. Simple structural predictors would also have passed these tests. Sequential post-hoc analyses, each specified before its own computation, show that under bounded reach the learned score gave no detectable improvement over a physics-based baseline, in rankings or trial-level log scores. At the weakest attenuation studied, prior information improved rankings over the physics-based baseline, most clearly for ensemble Kalman inversion, but a Gaussian prior did as well and the gain was not detectable at the trial level. The score is not a calibrated probability. Silent failures can be anticipated here, but their structure follows mainly from measurement access and the decision quantity rather than from the learned prior.",
+  "authors": [
+    "Mario Gianni"
+  ],
+  "candidate_id": "arxiv:2610.28155",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-20",
+    "latest_revision_date": "2026-10-20"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Predicting silent failures of learned inference under restricted access: what measurement physics and prior information explain",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.28155"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.28155",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "22 pages, 5 figures. Code and data: https://doi.org/10.5281/zenodo.23392686",
+    "pdf_url": "https://arxiv.org/pdf/2610.28155v1",
+    "primary_category": "stat.ML"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Predicting silent failures of learned inference under restricted access: what measurement physics and prior information explain",
+  "versions": [
+    {
+      "date": "2026-10-20",
+      "identifier": "2610.28155v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.28155v1"
+    }
+  ]
+}

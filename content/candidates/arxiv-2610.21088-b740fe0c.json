@@ -1,0 +1,58 @@
+{
+  "abstract": "Test-time search can improve agent performance by exploring alternative actions and using a critic to select promising branches. We study this approach in terminal-based computer-use environments, which expose only a partial view of a large underlying state, and find that the Monte Carlo tree search (MCTS) configuration we evaluate does not significantly improve task success. We identify two sources of poor critic performance: the agent's observations omit environment state needed for evaluation, and intermediate states offer limited evidence of whether a trajectory will succeed. At intermediate states, critics rank continuations only modestly better than chance, and environment access improves this little. We study when to invoke a critic and what access to give it to evaluate a node. Our findings motivate a policy that invokes the critic only at nodes the agent believes are final, rather than during partial progress. Further, the policy gives the critic read, write, and execute access to a fork of the computer's current and initial state, allowing it to probe and perform potentially destructive actions to surface any hidden state the trajectory omits. We call the resulting design Probe-and-Resume: when the agent claims to be done, the critic probes a fork of its state, and a rejected agent resumes where it stopped. On Terminal-Bench 2.1, this raises success by 8.4 percentage points over MCTS with conventional critics, and approaches the success rate of the Codex CLI agent with the same underlying model at less than half its cost.",
+  "authors": [
+    "Jiakai Xu",
+    "Tiancheng Ge",
+    "Tujie Guan",
+    "Yusheng Li",
+    "Rohan Timmaraju",
+    "Eugene Wu",
+    "Kostis Kaffes"
+  ],
+  "candidate_id": "arxiv:2610.21088",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-15",
+    "latest_revision_date": "2026-10-15"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Probe-and-Resume: When and How to Evaluate Agent Execution",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.21088"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.21088",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.21088v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Probe-and-Resume: When and How to Evaluate Agent Execution",
+  "versions": [
+    {
+      "date": "2026-10-15",
+      "identifier": "2610.21088v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.21088v1"
+    }
+  ]
+}

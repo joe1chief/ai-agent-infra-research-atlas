@@ -1,0 +1,56 @@
+{
+  "abstract": "Choosing a mixed-precision configuration for large language model (LLM) serving trades speed against accuracy. Allocators that use average bit-width or a memory budget as a speed proxy can miss changes in the resource that limits execution. We argue that served speed can be limited by compute, weight loading, or key-value (KV) cache access, depending on the phase, batch size, and context length. A byte-based proxy does not capture all of these costs, so fewer bits do not always mean faster serving. To address this gap, we build a cost model that accounts for the binding resource and use it in two ways. First, as a predictor: given a configuration and operating point, it estimates serving latency using constants calibrated for the model, GPU, and serving stack. We evaluate its accuracy across three hardware classes. Second, as an allocator: we combine modeled time costs with measured per-tensor accuracy costs and use a dynamic program to select a configuration under a latency or accuracy budget. We compare its configurations against byte-aware and sensitivity-only allocation.",
+  "authors": [
+    "Mukund Athmaram",
+    "Manoj Rao",
+    "Liang Ma"
+  ],
+  "candidate_id": "arxiv:2610.15629",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-11",
+    "latest_revision_date": "2026-10-11"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "The Price of Precision: A Calibrated Cost Model for Mixed-Precision LLM Serving",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15629"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.15629",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.15629v1",
+    "primary_category": "cs.LG"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "The Price of Precision: A Calibrated Cost Model for Mixed-Precision LLM Serving",
+  "versions": [
+    {
+      "date": "2026-10-11",
+      "identifier": "2610.15629v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.15629v1"
+    }
+  ]
+}

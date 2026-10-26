@@ -1,0 +1,62 @@
+{
+  "abstract": "Long contexts increase the memory cost of the key-value (KV) cache in large language model (LLM) inference. Sparse attention reduces attention computation and memory traffic by selecting historical tokens, but the retained KV cache must remain available for later decoding steps. We present UlaCache, a KV cache management system built around a unified logical address space spanning GPU KV pools and optional CPU memory. Stable logical references let the inference engine allocate and select KV independently of physical placement. Common allocation and sparse-access interfaces support data-parallel (DP) and tensor-parallel (TP) attention. For distributed storage, local GPU buffers retain selected KV across decoding steps, so only missing entries require transfers. When CPU storage is enabled, Parallel Bucketed LRU (PB-LRU) manages a GPU pool shared across requests. It updates recency metadata and selects eviction victims in parallel. UlaCache transfers KV and then updates the address mappings. With speculative decoding enabled under matched CPU and GPU memory budgets, UlaCache achieves peak decoding throughput speedups of 1.16 $\\times$ (DP) and 1.70 $\\times$ (TP) on H200, and 1.73 $\\times$ (DP) and 2.51 $\\times$ (TP) on B300, compared with the state-of-the-art baseline.",
+  "authors": [
+    "Isaac Zhu",
+    "Alan Cao",
+    "Hugh Yin",
+    "Rocky Wang",
+    "Orion Wang",
+    "Hscos Zhang",
+    "Jack Li",
+    "Jason Zhao"
+  ],
+  "candidate_id": "arxiv:2610.29820",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-21",
+    "latest_revision_date": "2026-10-21"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "UlaCache: Unified Logical Addressing for Sparse LLM Serving",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.29820"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.29820",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.29820v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "llm serving",
+      "kv cache"
+    ],
+    "primary_category": "AI-5",
+    "requires_human_confirmation": true
+  },
+  "title": "UlaCache: Unified Logical Addressing for Sparse LLM Serving",
+  "versions": [
+    {
+      "date": "2026-10-21",
+      "identifier": "2610.29820v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.29820v1"
+    }
+  ]
+}

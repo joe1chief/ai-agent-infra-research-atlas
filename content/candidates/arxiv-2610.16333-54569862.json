@@ -1,0 +1,58 @@
+{
+  "abstract": "As AI agents increasingly act through external tools, tool results are no longer simple outputs but execution artifacts that must remain correctly associated with the context that produced them. Yet as results persist across caches, recovery mechanisms, and shared runtime state, this association can break, causing a real and unmodified result to be consumed in an incompatible execution context and lead the agent to an unsafe action. We characterize this failure as tool-result misbinding. To systematically study this failure, we introduce ReplayBench, a benchmark that uses controlled tool-result replay to evaluate misbinding across 19 representative agent scenarios, 4 failure properties, and 3 replay mechanisms. Across eight LLMs, three agent frameworks, and diverse stateful workflows, we find widespread replay-induced failures, with a mean Final-State Error Rate of 0.649 under cross-task replay. Stage-wise analysis localizes these failures to model-side action generation. Further analyses show that replay susceptibility varies with task similarity, shows little dependence on object similarity, and remains high under result staleness and implicit environment changes. These findings motivate runtime validity mechanisms that eliminate final-state errors in our evaluated settings while preserving legitimate recovery. The results call for explicit contextual binding in tool-using agent runtimes. Our work is public at https://github.com/Phitooo/Replaybench.",
+  "authors": [
+    "Yutong Zhi",
+    "Jie Zhang",
+    "Xiuqi Lu",
+    "Jiayuan Xu",
+    "Jing Shao"
+  ],
+  "candidate_id": "arxiv:2610.16333",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-12",
+    "latest_revision_date": "2026-10-12"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "TRAP: Tool-result Replay Attack for Probing Misbinding in LLM Agents",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.16333"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.16333",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.16333v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent runtime"
+    ],
+    "primary_category": "AG-1",
+    "requires_human_confirmation": true
+  },
+  "title": "TRAP: Tool-result Replay Attack for Probing Misbinding in LLM Agents",
+  "versions": [
+    {
+      "date": "2026-10-12",
+      "identifier": "2610.16333v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.16333v1"
+    }
+  ]
+}

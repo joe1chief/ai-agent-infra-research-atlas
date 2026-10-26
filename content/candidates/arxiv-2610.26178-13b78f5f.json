@@ -1,0 +1,57 @@
+{
+  "abstract": "Training foundation models at the frontier typically requires large-scale dedicated and centralized clusters with fast interconnects - infrastructure that is prohibitively expensive and generally accessible only to well-resourced organizations. Decentralized training over pooled, geographically distributed GPUs offers an alternative, but introduces substantial heterogeneity in compute, memory, power, and network performance. Existing distributed training systems are primarily designed for clusters with fast, low-latency interconnects and typically use all available GPUs when configuring parallel training. In geo-distributed environments, however, slower devices and weak network links can become bottlenecks, while optimizing solely for throughput overlooks significant energy cost. We present GeoTrain, an automatic parallelism system that jointly optimizes training performance and energy consumption for heterogeneous geo-distributed GPU environments. GeoTrain simultaneously selects GPUs, partitions model layers, and determines pipeline configurations while accounting for heterogeneous compute, memory, power, and network constraints. To efficiently explore this large combinatorial search space, GeoTrain employs an optimized memetic algorithm with specialized genetic operators and local search. Experiments with decoder-only Transformer models on real-world and simulated heterogeneous topologies demonstrate that GeoTrain reduces iteration time and energy consumption by up to $61.4\\%$ and $11.7\\%$, respectively, over the existing state-of-the-art approaches. It also finds the exact optimum on verifiable instances and scales beyond exact methods as the number of GPUs increases, while exposing favorable energy-time trade-offs, including cases where its time-optimal distributed training plan is both faster and more energy-efficient than the baselines.",
+  "authors": [
+    "Bui-Khanh Hoang",
+    "TianZhang He",
+    "Mohammad Goudarzi"
+  ],
+  "candidate_id": "arxiv:2610.26178",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-19",
+    "latest_revision_date": "2026-10-19"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "GeoTrain: Energy-Aware Automatic Parallelism for Foundation Model Training on Heterogeneous Geo-Distributed Resources",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.26178"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.26178",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.26178v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training",
+      "parallel training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "GeoTrain: Energy-Aware Automatic Parallelism for Foundation Model Training on Heterogeneous Geo-Distributed Resources",
+  "versions": [
+    {
+      "date": "2026-10-19",
+      "identifier": "2610.26178v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.26178v1"
+    }
+  ]
+}

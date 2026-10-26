@@ -1,0 +1,60 @@
+{
+  "abstract": "Collective communication is a critical performance bottleneck in large-scale distributed training. Existing libraries and synthesis frameworks compute open-loop schedules once, assuming a static topology and peak link capacities. In production, however, persistent gray failures can silently degrade link throughput and latency for hours, causing pre-computed schedules to lose much of their efficiency during execution. In this paper, we present Measurement-based Collective Communication Library (MCCL), a collective communication library that closes the loop between runtime network measurement and dynamic schedule synthesis. MCCL passively measures GPU-to-GPU throughput, detects persistent degradation, re-synthesizes the affected communication-intensive schedules with warm-started synthesizers, and hot-swaps them without interrupting training. We validate the complete loop on a multi-node hardware prototype and use simulations to evaluate cluster-scale scenarios. In our experiments, MCCL incurs negligible overhead (<2%) while maintaining high measurement accuracy (<1.2% error) and low schedule hot-swap time (about 12 ms). Notably, under gray failures, MCCL reduces training time by up to 4.99x over static schedules on simulated training workloads for state-of-the-art LLMs such as Llama and DeepSeek.",
+  "authors": [
+    "Michele Ferrero",
+    "Gabriele Castellano",
+    "Paolo Medagliani",
+    "Sebastien Martin",
+    "Roberto Morabito",
+    "Massimo Gallo"
+  ],
+  "candidate_id": "arxiv:2610.17091",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-12",
+    "latest_revision_date": "2026-10-21"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "MCCL: Measurement-based Collective Communication Library",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.17091"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.17091",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "25 pages, 17 figures, 5 tables. Accepted for publication in Proceedings of the ACM on Networking (PACMNET), Vol. 4, No. CoNEXT4, Article 55, December 2026. DOI: 10.1145/3856969",
+    "pdf_url": "https://arxiv.org/pdf/2610.17091v2",
+    "primary_category": "cs.NI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training",
+      "collective communication"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "MCCL: Measurement-based Collective Communication Library",
+  "versions": [
+    {
+      "date": "2026-10-21",
+      "identifier": "2610.17091v2",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.17091v2"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "abstract": "",
+  "authors": [
+    "{'fullname': 'Jiho Kim', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Jiho%20Kim'}",
+    "{'fullname': 'Dongkwan Kim', 'username': '~Dongkwan_Kim2'}",
+    "{'fullname': 'HyungSeok Han', 'username': 'https://orcid.org/orcid-search/search?searchQuery=HyungSeok%20Han'}",
+    "{'fullname': 'Youngjoon Kim', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Youngjoon%20Kim'}",
+    "{'fullname': 'Soyeon Park', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Soyeon%20Park'}",
+    "{'fullname': 'Sangwoo Ji', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Sangwoo%20Ji'}",
+    "{'fullname': 'Joshua Wang', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Joshua%20Wang'}",
+    "{'fullname': 'Dae R. Jeong', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Dae%20R.%20Jeong'}",
+    "{'fullname': 'Taesoo Kim', 'username': 'https://orcid.org/orcid-search/search?searchQuery=Taesoo%20Kim'}"
+  ],
+  "candidate_id": "openreview:XtnE5PrcvC",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-07",
+    "latest_revision_date": "2026-10-26"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "CtxFuzz: Context-Aware Directed Fuzzing via Runtime Fuzzer-Agent Cooperation",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=XtnE5PrcvC"
+    }
+  ],
+  "identifiers": {
+    "arxiv": null,
+    "doi": null,
+    "openreview": "XtnE5PrcvC"
+  },
+  "raw": {
+    "invitations": [
+      "OpenReview.net/Public_Article/ORCID.org/-/Record",
+      "OpenReview.net/Public_Article/-/Edit"
+    ],
+    "venue": "Crossref",
+    "venue_id": "OpenReview.net/Public_Article"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "CtxFuzz: Context-Aware Directed Fuzzing via Runtime Fuzzer-Agent Cooperation",
+  "versions": [
+    {
+      "date": "2026-10-26",
+      "identifier": "XtnE5PrcvC",
+      "type": "openreview",
+      "url": "https://openreview.net/forum?id=XtnE5PrcvC"
+    }
+  ]
+}

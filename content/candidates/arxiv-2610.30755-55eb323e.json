@@ -1,0 +1,57 @@
+{
+  "abstract": "LLM memory is widely used in long-term conversation understanding. Agentic memory systems often use mutation, structural organization, learned retrieval strategies, or other complex operations. Is this complexity always necessary? We study Raw-RAG, a naive RAG baseline using dense retrieval and reranking over raw history to supply evidence to a reader LLM. Across LoCoMo, LongMemEval, MEME, and MemoryAgentBench, Raw-RAG ranks first among the compared memory systems in six of seven benchmark-model settings, outperforming the strongest compared agentic memory system by 0.13-5.53 points. We investigate why raw-history retrieval remains competitive. Evidence analysis shows that its higher coverage of necessary evidence can offset lower utilization. Useful evidence includes both answer values and the relations and dependency paths needed to derive them. Even complete access to transformed memory stores leaves an accuracy gap relative to raw evidence, highlighting the importance of preserving raw information. These findings challenge the necessity of complex agentic memory for the evaluated conversation tasks and establish naive RAG as an essential baseline.",
+  "authors": [
+    "Zhengye Bao",
+    "Shengtao Zhang",
+    "Haokai Zhang",
+    "Shiqi Lou",
+    "Muning Wen",
+    "Minnan Luo"
+  ],
+  "candidate_id": "arxiv:2610.30755",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-22",
+    "latest_revision_date": "2026-10-22"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.30755"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.30755",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "62 pages, 5 figures. Includes appendices",
+    "pdf_url": "https://arxiv.org/pdf/2610.30755v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [],
+    "primary_category": "AI-6",
+    "requires_human_confirmation": true
+  },
+  "title": "Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought",
+  "versions": [
+    {
+      "date": "2026-10-22",
+      "identifier": "2610.30755v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.30755v1"
+    }
+  ]
+}

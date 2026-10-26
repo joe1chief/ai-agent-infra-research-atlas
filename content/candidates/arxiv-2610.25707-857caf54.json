@@ -1,0 +1,59 @@
+{
+  "abstract": "Shared long-term memory lets an LLM agent serving one user inadvertently retrieve another user's credentials, but it is unclear when such exposure leads to actual harm. We introduce a three-stage audit that separates three events: a foreign credential reaches the prompt (exposure), the agent acts with it (behavior), and the other user's account changes (state). In AppWorld, a store that mixes 763 past logins from all users retrieves another user's credential for 84.7 percent of required apps, yet agents rarely act on it. Misuse appears in a stress test where memory lacks the user's own credential and presents a single foreign one as the user's record: seven agents then use it in 80 to 94 percent of runs and change the victim's account in up to 43 percent, sometimes passing the official check. Naming the owner before or inside each credential line prevents most of this: with all else fixed, misuse falls from 92 to 1 of 305 paired runs, also with name-free usernames, though owner-bound notes cost 3 to 5 successful tasks per model on clean memory. A wrongly written owner largely restores misuse; trailing owner tags and added safety instructions help only some models. Agent memory should consistently record whose credential it stores, and evaluations should measure behavior, not only exposure.",
+  "authors": [
+    "Hau-Sing So",
+    "Daixian Liu",
+    "Carl Hou",
+    "Yuhaohang He",
+    "Mengzhu Wang",
+    "Hai-Tao Zheng"
+  ],
+  "candidate_id": "arxiv:2610.25707",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-19",
+    "latest_revision_date": "2026-10-19"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "Whose Credential Is It? How Owner Attribution in Agent MemoryShapes Cross-User Account Misuse",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.25707"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.25707",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "19 pages, 14 figures, 12 tables",
+    "pdf_url": "https://arxiv.org/pdf/2610.25707v1",
+    "primary_category": "cs.AI"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "agent_infra",
+    "matched_keywords": [
+      "agent memory"
+    ],
+    "primary_category": "AG-2",
+    "requires_human_confirmation": true
+  },
+  "title": "Whose Credential Is It? How Owner Attribution in Agent MemoryShapes Cross-User Account Misuse",
+  "versions": [
+    {
+      "date": "2026-10-19",
+      "identifier": "2610.25707v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.25707v1"
+    }
+  ]
+}

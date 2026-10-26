@@ -1,0 +1,57 @@
+{
+  "abstract": "Allreduce is a fundamental communication primitive in large-scale distributed training, and torus interconnects remain widely deployed in high-performance systems. We introduce SP-allreduce, a new allreduce algorithm for $d$-dimensional tori that exploits the symmetry of the topology and routes only along shortest paths. We call an allreduce algorithm \\emph{fully bandwidth-optimal} if it incurs no bandwidth overhead, no multihop-induced traffic inflation, and achieves perfect per-round load balance. SP-allreduce is based on a family of carefully symmetrized shortest-path trees that guarantees full bandwidth optimality in the $α$--$β$ model. We prove that it uses the minimum possible number of rounds among all fully bandwidth-optimal allreduce algorithms on $d$-dimensional tori, and therefore the minimum running time in this class. In this sense, SP-allreduce refines Bucket allreduce: it preserves Bucket's key strengths while reducing the number of rounds by a factor of two. We further extend our approach to broader symmetric topologies and to communication trees of prescribed depths. Experimentally, the resulting algorithms improve over the best compared state-of-the-art algorithms for tori by up to $1.19\\times$ on square tori and $1.65\\times$ on rectangular tori across the tested configurations. On HyperX and spine-leaf networks, we demonstrate gains of up to $14.82\\times$ and $1.72\\times$, respectively, over the best evaluated baselines.",
+  "authors": [
+    "Mikhail Cherniavskii",
+    "Andrey Kupavskii",
+    "Georgy Mironov",
+    "Stanislav Moiseev"
+  ],
+  "candidate_id": "arxiv:2610.16387",
+  "curation_notes": [
+    "Verify that the work contributes reusable infrastructure rather than only model quality.",
+    "Complete the canonical bilingual fields and resolve version/venue identity before promotion."
+  ],
+  "dates": {
+    "first_public_date": "2026-10-12",
+    "latest_revision_date": "2026-10-12"
+  },
+  "discovered_at": "2026-10-26T07:58:12Z",
+  "discovery_method": "api_search",
+  "first_party_sources": [
+    {
+      "title": "SP-Allreduce: Symmetric Tree Schedules for Tori and Beyond",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.16387"
+    }
+  ],
+  "identifiers": {
+    "arxiv": "2610.16387",
+    "doi": null,
+    "openreview": null
+  },
+  "raw": {
+    "comment": "",
+    "pdf_url": "https://arxiv.org/pdf/2610.16387v1",
+    "primary_category": "cs.DC"
+  },
+  "review_reasons": [],
+  "review_status": "needs_review",
+  "seed_evidence": [],
+  "suggested_classification": {
+    "domain": "ai_infra",
+    "matched_keywords": [
+      "distributed training"
+    ],
+    "primary_category": "AI-2",
+    "requires_human_confirmation": true
+  },
+  "title": "SP-Allreduce: Symmetric Tree Schedules for Tori and Beyond",
+  "versions": [
+    {
+      "date": "2026-10-12",
+      "identifier": "2610.16387v1",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2610.16387v1"
+    }
+  ]
+}
